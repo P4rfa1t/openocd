@@ -71,45 +71,45 @@ static int target_gdb_fileio_end_default(struct target *target, int retcode,
 		int fileio_errno, bool ctrl_c);
 
 static struct target_type *target_types[] = {
-	&arm7tdmi_target,
-	&arm9tdmi_target,
-	&arm920t_target,
-	&arm720t_target,
-	&arm966e_target,
-	&arm946e_target,
-	&arm926ejs_target,
-	&fa526_target,
-	&feroceon_target,
-	&dragonite_target,
-	&xscale_target,
-	&xtensa_chip_target,
-	&cortexm_target,
-	&cortexa_target,
-	&cortexr4_target,
+	// Keep in alphabetic order this list of targets
+	&aarch64_target,
+	&arcv2_target,
 	&arm11_target,
-	&ls1_sap_target,
-	&mips_m4k_target,
+	&arm720t_target,
+	&arm7tdmi_target,
+	&arm920t_target,
+	&arm926ejs_target,
+	&arm946e_target,
+	&arm966e_target,
+	&arm9tdmi_target,
+	&armv8r_target,
+	&avr32_ap7k_target,
 	&avr_target,
+	&cortexa_target,
+	&cortexm_target,
+	&cortexr4_target,
+	&dragonite_target,
 	&dsp563xx_target,
 	&dsp5680xx_target,
-	&testee_target,
-	&avr32_ap7k_target,
-	&hla_target,
-	&esp32_target,
+	&esirisc_target,
 	&esp32s2_target,
 	&esp32s3_target,
-	&or1k_target,
-	&quark_x10xx_target,
-	&quark_d20xx_target,
-	&stm8_target,
-	&riscv_target,
+	&esp32_target,
+	&fa526_target,
+	&feroceon_target,
+	&hla_target,
+	&ls1_sap_target,
 	&mem_ap_target,
-	&esirisc_target,
-	&arcv2_target,
-	&aarch64_target,
-	&armv8r_target,
+	&mips_m4k_target,
 	&mips_mips64_target,
-	NULL,
+	&or1k_target,
+	&quark_d20xx_target,
+	&quark_x10xx_target,
+	&riscv_target,
+	&stm8_target,
+	&testee_target,
+	&xscale_target,
+	&xtensa_chip_target,
 };
 
 struct target *all_targets;
@@ -5707,7 +5707,6 @@ static const struct command_registration target_instance_command_handlers[] = {
 COMMAND_HANDLER(handle_target_create)
 {
 	int retval = ERROR_OK;
-	int x;
 
 	if (CMD_ARGC < 2)
 		return ERROR_COMMAND_SYNTAX_ERROR;
@@ -5731,15 +5730,16 @@ COMMAND_HANDLER(handle_target_create)
 		LOG_INFO("The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD");
 	}
 	/* now does target type exist */
-	for (x = 0 ; target_types[x] ; x++) {
+	size_t x;
+	for (x = 0 ; x < ARRAY_SIZE(target_types) ; x++) {
 		if (strcmp(cp, target_types[x]->name) == 0) {
 			/* found */
 			break;
 		}
 	}
-	if (!target_types[x]) {
+	if (x == ARRAY_SIZE(target_types)) {
 		char *all = NULL;
-		for (x = 0 ; target_types[x] ; x++) {
+		for (x = 0 ; x < ARRAY_SIZE(target_types) ; x++) {
 			char *prev = all;
 			if (all)
 				all = alloc_printf("%s, %s", all, target_types[x]->name);
@@ -5941,7 +5941,7 @@ COMMAND_HANDLER(handle_target_types)
 	if (CMD_ARGC != 0)
 		return ERROR_COMMAND_SYNTAX_ERROR;
 
-	for (unsigned int x = 0; target_types[x]; x++)
+	for (size_t x = 0; x < ARRAY_SIZE(target_types); x++)
 		command_print(CMD, "%s", target_types[x]->name);
 
 	return ERROR_OK;
