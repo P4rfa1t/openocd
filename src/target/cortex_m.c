@@ -139,6 +139,12 @@ static const struct cortex_m_part_info cortex_m_parts[] = {
 		.arch = ARM_ARCH_V8M,
 		.flags = CORTEX_M_F_HAS_FPV5,
 	},
+		{
+		.impl_part = REALTEK_M500_PARTNO,
+		.name = "Real-M500 (TM9)",
+		.arch = ARM_ARCH_V8M,
+		.flags = CORTEX_M_F_HAS_FPV5,
+	},
 };
 
 /* forward declarations */
