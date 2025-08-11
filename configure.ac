@@ -183,6 +183,9 @@ m4_define([XVC_ADAPTERS],
 m4_define([SERIAL_PORT_ADAPTERS],
 	[[[buspirate], [Bus Pirate], [BUS_PIRATE]]])
 
+m4_define([PARALLEL_PORT_ADAPTER],
+	[[[parport], [PC Parallel Port], [PARPORT]]])
+
 m4_define([LINUXSPIDEV_ADAPTER],
 	[[[linuxspidev], [Linux spidev driver], [LINUXSPIDEV]]])
 m4_define([VDEBUG_ADAPTER],
@@ -259,33 +262,20 @@ AS_IF([test "x$enable_gcov" = "xyes"], [
   AC_DEFINE([USE_GCOV], [0], [0 to leave coverage collection disabled.])
 ])
 
-# set default verbose options, overridden by following options
-debug_usb_io=no
+# set default for debug_usb_comms, overridden by following options
 debug_usb_comms=no
 
 AC_ARG_ENABLE([verbose],
   AS_HELP_STRING([--enable-verbose],
       [Enable verbose JTAG I/O messages (for debugging).]),
   [
-  debug_usb_io=$enableval
   debug_usb_comms=$enableval
   ], [])
-
-AC_ARG_ENABLE([verbose_usb_io],
-  AS_HELP_STRING([--enable-verbose-usb-io],
-      [Enable verbose USB I/O messages (for debugging)]),
-  [debug_usb_io=$enableval], [])
 
 AC_ARG_ENABLE([verbose_usb_comms],
   AS_HELP_STRING([--enable-verbose-usb-comms],
       [Enable verbose USB communication messages (for debugging)]),
   [debug_usb_comms=$enableval], [])
-
-AC_MSG_CHECKING([whether to enable verbose USB I/O messages]);
-AC_MSG_RESULT([$debug_usb_io])
-AS_IF([test "x$debug_usb_io" = "xyes"], [
-  AC_DEFINE([_DEBUG_USB_IO_],[1], [Print verbose USB I/O messages])
-])
 
 AC_MSG_CHECKING([whether to enable verbose USB communication messages]);
 AC_MSG_RESULT([$debug_usb_comms])
@@ -340,6 +330,7 @@ AC_ARG_ADAPTERS([
   ],[auto])
 
 AC_ARG_ADAPTERS([
+  PARALLEL_PORT_ADAPTER,
   AMTJTAGACCEL_ADAPTER
   ],[no])
 
@@ -352,10 +343,6 @@ AC_ARG_ADAPTERS([
 # a more flexible logic around.
 AC_ARG_ADAPTERS([HOST_ARM_BITBANG_ADAPTERS],[no])
 AC_ARG_ADAPTERS([HOST_ARM_OR_AARCH64_BITBANG_ADAPTERS],[no])
-
-AC_ARG_ENABLE([parport],
-  AS_HELP_STRING([--enable-parport], [Enable building the pc parallel port driver]),
-  [build_parport=$enableval], [build_parport=no])
 
 AC_ARG_ENABLE([parport_ppdev],
   AS_HELP_STRING([--disable-parport-ppdev],
@@ -388,7 +375,7 @@ AS_CASE([$host_os],
       ])
     ])
 
-    AS_IF([test "x$build_dmem" = "xyes"], [
+    AS_IF([test "x$enable_dmem" = "xyes"], [
       AC_MSG_ERROR([dmem is only available on linux])
     ])
 ])
@@ -410,9 +397,8 @@ AS_CASE(["${host_cpu}"],
   [i?86|x86*], [],
   [
     AS_IF([test "x$parport_use_ppdev" = "xno"], [
-      AC_MSG_WARN([--disable-parport-ppdev is not supported by the host CPU])
+      AC_MSG_ERROR([--disable-parport-ppdev is not supported by the host CPU])
     ])
-    parport_use_ppdev=yes
 ])
 
 can_build_buspirate=yes
@@ -433,7 +419,7 @@ AS_CASE([$host_os],
     ], [
       is_cygwin=yes
       # sys/io.h needed under cygwin for parport access
-      AS_IF([test "x$build_parport" = "xyes"], [
+      AS_IF([test "x$enable_parport" != "xno"], [
         AC_CHECK_HEADERS([sys/io.h],[],AC_MSG_ERROR([Please install the cygwin ioperm package]))
       ])
     ])
@@ -494,13 +480,6 @@ AS_IF([test "x$is_darwin" = "xyes"], [
     AC_DEFINE([IS_DARWIN], [1], [1 if building for Darwin.])
 ], [
     AC_DEFINE([IS_DARWIN], [0], [0 if not building for Darwin.])
-])
-
-AS_IF([test "x$build_parport" = "xyes"], [
-  build_bitbang=yes
-  AC_DEFINE([BUILD_PARPORT], [1], [1 if you want parport.])
-], [
-  AC_DEFINE([BUILD_PARPORT], [0], [0 if you don't want parport.])
 ])
 
 AS_IF([test "x$ADAPTER_VAR([dummy])" != "xno"], [
@@ -647,6 +626,7 @@ PROCESS_ADAPTERS([LIBJAYLINK_ADAPTERS], ["x$use_internal_libjaylink" = "xyes" -o
 PROCESS_ADAPTERS([XVC_ADAPTERS], ["x$is_linux" = "xyes" -a "x$ac_cv_header_linux_pci_h" = "xyes"], [Linux build])
 PROCESS_ADAPTERS([SERIAL_PORT_ADAPTERS], ["x$can_build_buspirate" = "xyes"],
                                          [internal error: validation should happen beforehand])
+PROCESS_ADAPTERS([PARALLEL_PORT_ADAPTER], [true], [unused])
 PROCESS_ADAPTERS([LINUXSPIDEV_ADAPTER], ["x$is_linux" = "xyes" -a "x$ac_cv_header_linux_spi_spidev_h" = "xyes"],
                                         [Linux spidev])
 PROCESS_ADAPTERS([VDEBUG_ADAPTER], [true], [unused])
@@ -724,7 +704,6 @@ AS_IF([test "x$enable_esp_usb_jtag" != "xno"], [
 ])
 
 AM_CONDITIONAL([RELEASE], [test "x$build_release" = "xyes"])
-AM_CONDITIONAL([PARPORT], [test "x$build_parport" = "xyes"])
 AM_CONDITIONAL([GIVEIO], [test "x$parport_use_giveio" = "xyes"])
 AM_CONDITIONAL([BITBANG], [test "x$build_bitbang" = "xyes"])
 AM_CONDITIONAL([USB_BLASTER_DRIVER], [test "x$enable_usb_blaster" != "xno" -o "x$enable_usb_blaster_2" != "xno"])
@@ -842,6 +821,7 @@ m4_foreach([adapterTuple], [USB1_ADAPTERS,
 	REMOTE_BITBANG_ADAPTER,
 	LIBJAYLINK_ADAPTERS, XVC_ADAPTERS,
 	SERIAL_PORT_ADAPTERS,
+	PARALLEL_PORT_ADAPTER,
 	LINUXSPIDEV_ADAPTER,
 	VDEBUG_ADAPTER,
 	JTAG_DPI_ADAPTER,
