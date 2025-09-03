@@ -52,9 +52,16 @@ const struct cmsis_dap_backend cmsis_dap_hid_backend = {
 };
 #endif
 
+#if BUILD_CMSIS_DAP_TCP == 0
+const struct cmsis_dap_backend cmsis_dap_tcp_backend = {
+	.name = "tcp"
+};
+#endif
+
 static const struct cmsis_dap_backend *const cmsis_dap_backends[] = {
 	&cmsis_dap_usb_backend,
 	&cmsis_dap_hid_backend,
+	&cmsis_dap_tcp_backend,
 };
 
 /* USB Config */
@@ -76,6 +83,7 @@ static uint16_t cmsis_dap_vid[MAX_USB_IDS + 1] = { 0 };
 static uint16_t cmsis_dap_pid[MAX_USB_IDS + 1] = { 0 };
 static int cmsis_dap_backend = -1;
 static bool swd_mode;
+static bool cmsis_dap_quirk_mode;  /* enable expensive workarounds */
 
 /* CMSIS-DAP General Commands */
 #define CMD_DAP_INFO              0x00
@@ -870,7 +878,7 @@ static void cmsis_dap_swd_write_from_queue(struct cmsis_dap *dap)
 		goto skip;
 	}
 
-	unsigned int packet_count = dap->quirk_mode ? 1 : dap->packet_count;
+	unsigned int packet_count = cmsis_dap_quirk_mode ? 1 : dap->packet_count;
 	dap->pending_fifo_put_idx = (dap->pending_fifo_put_idx + 1) % packet_count;
 	dap->pending_fifo_block_count++;
 	if (dap->pending_fifo_block_count > packet_count)
@@ -990,7 +998,7 @@ static void cmsis_dap_swd_read_process(struct cmsis_dap *dap, enum cmsis_dap_blo
 
 skip:
 	block->transfer_count = 0;
-	if (!dap->quirk_mode && dap->packet_count > 1)
+	if (!cmsis_dap_quirk_mode && dap->packet_count > 1)
 		dap->pending_fifo_get_idx = (dap->pending_fifo_get_idx + 1) % dap->packet_count;
 	dap->pending_fifo_block_count--;
 }
@@ -1086,7 +1094,7 @@ static void cmsis_dap_swd_queue_cmd(uint8_t cmd, uint32_t *dst, uint32_t data)
 		/* Not enough room in the queue. Run the queue. */
 		cmsis_dap_swd_write_from_queue(cmsis_dap_handle);
 
-		unsigned int packet_count = cmsis_dap_handle->quirk_mode ? 1 : cmsis_dap_handle->packet_count;
+		unsigned int packet_count = cmsis_dap_quirk_mode ? 1 : cmsis_dap_handle->packet_count;
 		if (cmsis_dap_handle->pending_fifo_block_count >= packet_count)
 			cmsis_dap_swd_read_process(cmsis_dap_handle, CMSIS_DAP_BLOCKING);
 	}
@@ -1230,7 +1238,7 @@ static int cmsis_dap_swd_switch_seq(enum swd_special_seq seq)
 	if (swd_mode)
 		queued_retval = cmsis_dap_swd_run_queue();
 
-	if (cmsis_dap_handle->quirk_mode && seq != LINE_RESET &&
+	if (cmsis_dap_quirk_mode && seq != LINE_RESET &&
 			(output_pins & (SWJ_PIN_SRST | SWJ_PIN_TRST))
 				== (SWJ_PIN_SRST | SWJ_PIN_TRST)) {
 		/* Following workaround deasserts reset on most adapters.
@@ -2238,11 +2246,13 @@ COMMAND_HANDLER(cmsis_dap_handle_quirk_command)
 	if (CMD_ARGC > 1)
 		return ERROR_COMMAND_SYNTAX_ERROR;
 
-	if (CMD_ARGC == 1)
-		COMMAND_PARSE_ENABLE(CMD_ARGV[0], cmsis_dap_handle->quirk_mode);
+	if (CMD_ARGC == 1) {
+		COMMAND_PARSE_ENABLE(CMD_ARGV[0], cmsis_dap_quirk_mode);
+		return ERROR_OK;
+	}
 
-	command_print(CMD, "CMSIS-DAP quirk workarounds %s",
-				  cmsis_dap_handle->quirk_mode ? "enabled" : "disabled");
+	command_print(CMD, "%s", cmsis_dap_quirk_mode ? "enabled" : "disabled");
+
 	return ERROR_OK;
 }
 
@@ -2272,8 +2282,8 @@ static const struct command_registration cmsis_dap_subcommand_handlers[] = {
 		.name = "backend",
 		.handler = &cmsis_dap_handle_backend_command,
 		.mode = COMMAND_CONFIG,
-		.help = "set the communication backend to use (USB bulk or HID).",
-		.usage = "(auto | usb_bulk | hid)",
+		.help = "set the communication backend to use (USB bulk or HID, or TCP).",
+		.usage = "(auto | usb_bulk | hid | tcp)",
 	},
 	{
 		.name = "quirk",
@@ -2288,6 +2298,15 @@ static const struct command_registration cmsis_dap_subcommand_handlers[] = {
 		.chain = cmsis_dap_usb_subcommand_handlers,
 		.mode = COMMAND_ANY,
 		.help = "USB bulk backend-specific commands",
+		.usage = "<cmd>",
+	},
+#endif
+#if BUILD_CMSIS_DAP_TCP
+	{
+		.name = "tcp",
+		.chain = cmsis_dap_tcp_subcommand_handlers,
+		.mode = COMMAND_ANY,
+		.help = "TCP backend-specific commands",
 		.usage = "<cmd>",
 	},
 #endif
