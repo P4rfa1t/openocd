@@ -633,6 +633,10 @@ This is deprecated from Linux v5.3; prefer using @b{linuxgpiod}.
 @item @b{esp_usb_jtag}
 @* A JTAG driver to communicate with builtin debug modules of Espressif ESP32-C3 and ESP32-S3 chips using OpenOCD.
 
+@item @b{ch347}
+@* A JTAG driver that works with the WCH CH347F and CH347T chips.
+When using the CH347T, it must be configured to operate in mode 3 (UART + JTAG).
+
 @end itemize
 
 @node About Jim Tcl
@@ -2554,9 +2558,70 @@ and a specific set of GPIOs is used.
 @c chooses among list of bit configs ... only one option
 @end deffn
 
+@deffn {Interface Driver} {ch347}
+Driver for WCH CH347F and CH347T chips.
+When using the CH347T, it must be configured to operate in mode 3 (UART + JTAG).
+
+@b{WARNING:} WCH CH347T chips have rather poor performance
+with respect to the USB HS connection. Upgrade firmware to the latest version!
+@itemize @bullet
+@item Chip version 2.41:
+@itemize @minus
+@item JTAG timing is very weird, some clock pulses are
+much shorter then the requested clock frequency.
+@item SWD is not implemented.
+@end itemize
+@item Chip version 4.41:
+@itemize @minus
+@item SWD clock is limited to 1 MHz maximum.
+@item SWD reading AP reg CH347 erroneously drives
+SWDIO to H for 392 ns after the last ACK bit. Some devices get so upset
+that send wrong data with parity error. A resistor in the SWDIO circuit
+mitigates the problem.
+@item A long SWD operation causes that USB host disconnects the adapter.
+@end itemize
+@item Chip version 5.44:
+@itemize @minus
+@item Maximal SWD clock speed is 5 MHz
+@item A long SWD operation causes that USB host disconnects the adapter.
+@end itemize
+@end itemize
+
+This driver has these driver-specific command:
+
+@deffn {Config Command} {ch347 vid_pid} [vid pid]+
+The vendor ID and product ID of the CH347F or CH347T device in mode 3. If not specified
+the driver will use vendor ID 0x1a86 and product ID 0x55dd.
+Currently, up to four [@var{vid}, @var{pid}] pairs may be given, e.g.
+@example
+ch347 vid_pid 0x1a86 0x55dd 0x1a86 0x55de
+@end example
+@end deffn
+
+@deffn {Config Command} {ch347 device_desc} description
+If specified connect to a device which exactly has this product description
+string. If not specified the first found device with the correct vendor
+and product ID will be connected.
+@example
+ch347 device_desc "EasyDevKit"
+@end example
+@end deffn
+
+@deffn {Config Command} {ch347 activity_led} [n]gpio_number
+If specified the drive let an activity LED blink during JTAG operations.
+The number is the GPIO number of the CH347T chip. If prefixed with "n",
+then this GPIO should be low active. The example configures GPIO4 as
+low active activity LED. For the CH347T chip only GPIO3 (Pin11 / SCL),
+GPIO4 (Pin15 / ACT), GPIO5 (Pin9 / TRST) and GPIO6 (Pin2 / CTS1) are possible.
+@example
+ch347 activity_led n4
+@end example
+@end deffn
+@end deffn
+
 @deffn {Interface Driver} {cmsis-dap}
 ARM CMSIS-DAP compliant based adapter v1 (USB HID based)
-or v2 (USB bulk).
+or v2 (USB bulk or TCP/IP).
 
 @deffn {Config Command} {cmsis-dap vid_pid} [vid pid]+
 The vendor ID and product ID of the CMSIS-DAP device. If not specified
@@ -2567,21 +2632,54 @@ cmsis-dap vid_pid 0xc251 0xf001 0x0d28 0x0204
 @end example
 @end deffn
 
-@deffn {Config Command} {cmsis-dap backend} [@option{auto}|@option{usb_bulk}|@option{hid}]
+@deffn {Config Command} {cmsis-dap backend} [@option{auto}|@option{usb_bulk}|@option{hid}|@option{tcp}]
 Specifies how to communicate with the adapter:
 
 @itemize @minus
-@item @option{hid} Use HID generic reports - CMSIS-DAP v1
+@item @option{hid} Use USB HID generic reports - CMSIS-DAP v1
 @item @option{usb_bulk} Use USB bulk - CMSIS-DAP v2
-@item @option{auto} First try USB bulk CMSIS-DAP v2, if not found try HID CMSIS-DAP v1.
-This is the default if @command{cmsis-dap backend} is not specified.
+@item @option{tcp} Use TCP/IP instead of USB
+@item @option{auto} First try USB bulk CMSIS-DAP v2, if not found try USB HID
+CMSIS-DAP v1, if not found try TCP (if @command{cmsis-dap tcp host} is
+configured). This is the default if @command{cmsis-dap backend} is not
+specified.
 @end itemize
 @end deffn
 
-@deffn {Config Command} {cmsis-dap usb interface} [number]
+@deffn {Config Command} {cmsis-dap usb interface} number
 Specifies the @var{number} of the USB interface to use in v2 mode (USB bulk).
 In most cases need not to be specified and interfaces are searched by
 interface string or for user class interface.
+@end deffn
+
+@deffn {Config Command} {cmsis-dap tcp host} hostname
+Specifies the @var{hostname} or IP address of the remote programmer. For use
+with 'tcp' backend only.
+@example
+cmsis-dap backend tcp
+cmsis-dap tcp host 192.168.1.4
+@end example
+@end deffn
+
+@deffn {Config Command} {cmsis-dap tcp port} port
+Specifies the TCP @var{port} number used by the remote programmer for DAP
+commands. The default port is 4441. For use with 'tcp' backend only.
+@example
+cmsis-dap backend tcp
+cmsis-dap tcp host 192.168.1.4
+cmsis-dap tcp port 4441
+@end example
+@end deffn
+
+@deffn {Config Command} {cmsis-dap tcp min_timeout} milliseconds
+Sets a lower bound on the requested timeout in @var{milliseconds} to wait for
+response packets from the remote programmer when using the 'tcp' backend. The
+user may want to use a larger value on slower networks, to avoid getting
+command mismatch errors. Default value is 150 milliseconds. For use with 'tcp'
+backend only.
+@example
+cmsis-dap tcp min_timeout 200
+@end example
 @end deffn
 
 @deffn {Command} {cmsis-dap quirk} [@option{enable}|@option{disable}]
@@ -6898,6 +6996,18 @@ This driver uses the same command names/syntax as @xref{at91sam3}.
 
 @example
 flash bank $_FLASHNAME atsamv 0x00400000 0 0 0 $_TARGETNAME
+@end example
+
+These families also have a user signature area located at the beginning
+of an embedded flash. This is a 512 bytes large page whose data are not
+erased by assering ERASE pin or by software ERASE command. It can be
+used to store configuration, keys, trimming values and so on. The area
+overlaps with the beginning of standard flash and uses special commands
+to perform write/read operations. OpenOCD locates the signature area
+at fake address above 32 bit address space, specifically at 0x100000000.
+
+@example
+flash bank $_SIGNATURENAME atsamv 0x100000000 0 0 0 $_TARGETNAME
 @end example
 
 @deffn {Command} {atsamv gpnvm} [@option{show} [@option{all}|number]]

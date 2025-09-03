@@ -45,26 +45,22 @@ static enum command_mode get_command_mode(Jim_Interp *interp, const char *cmd_na
 /* set of functions to wrap jimtcl internal data */
 static inline bool jimcmd_is_proc(Jim_Cmd *cmd)
 {
+#if defined(JIM_CMD_ISPROC)
+	// JIM_VERSION >= 84
+	return cmd->flags & JIM_CMD_ISPROC;
+#else
 	return cmd->isproc;
+#endif
 }
 
 bool jimcmd_is_oocd_command(Jim_Cmd *cmd)
 {
-	return !cmd->isproc && cmd->u.native.cmdProc == jim_command_dispatch;
+	return !jimcmd_is_proc(cmd) && cmd->u.native.cmdProc == jim_command_dispatch;
 }
 
 void *jimcmd_privdata(Jim_Cmd *cmd)
 {
-	return cmd->isproc ? NULL : cmd->u.native.privData;
-}
-
-static int command_retval_set(Jim_Interp *interp, int retval)
-{
-	int *return_retval = Jim_GetAssocData(interp, "retval");
-	if (return_retval)
-		*return_retval = retval;
-
-	return (retval == ERROR_OK) ? JIM_OK : retval;
+	return jimcmd_is_proc(cmd) ? NULL : cmd->u.native.privData;
 }
 
 extern struct command_context *global_cmd_ctx;
@@ -421,7 +417,7 @@ static bool command_can_run(struct command_context *cmd_ctx, struct command *c, 
 	return false;
 }
 
-static int exec_command(Jim_Interp *interp, struct command_context *context,
+static int jim_exec_command(Jim_Interp *interp, struct command_context *context,
 		struct command *c, int argc, Jim_Obj * const *argv)
 {
 	/* use c->handler */
@@ -470,7 +466,15 @@ static int exec_command(Jim_Interp *interp, struct command_context *context,
 	Jim_DecrRefCount(context->interp, cmd.output);
 
 	free(words);
-	return command_retval_set(interp, retval);
+
+	if (retval == ERROR_OK)
+		return JIM_OK;
+
+	// used by telnet server to close one connection
+	if (retval == ERROR_COMMAND_CLOSE_CONNECTION)
+		return JIM_EXIT;
+
+	return JIM_ERR;
 }
 
 int command_run_line(struct command_context *context, char *line)
@@ -480,7 +484,6 @@ int command_run_line(struct command_context *context, char *line)
 	 * results
 	 */
 	/* run the line thru a script engine */
-	int retval = ERROR_FAIL;
 	int retcode;
 	/* Beware! This code needs to be reentrant. It is also possible
 	 * for OpenOCD commands to be invoked directly from Tcl. This would
@@ -495,20 +498,17 @@ int command_run_line(struct command_context *context, char *line)
 	Jim_DeleteAssocData(interp, "context");
 	retcode = Jim_SetAssocData(interp, "context", NULL, context);
 	if (retcode == JIM_OK) {
-		/* associated the return value */
-		Jim_DeleteAssocData(interp, "retval");
-		retcode = Jim_SetAssocData(interp, "retval", NULL, &retval);
-		if (retcode == JIM_OK) {
-			retcode = Jim_Eval_Named(interp, line, NULL, 0);
-
-			Jim_DeleteAssocData(interp, "retval");
-		}
+		retcode = Jim_Eval_Named(interp, line, NULL, 0);
 		Jim_DeleteAssocData(interp, "context");
 		int inner_retcode = Jim_SetAssocData(interp, "context", NULL, old_context);
 		if (retcode == JIM_OK)
 			retcode = inner_retcode;
 	}
 	context->current_target_override = saved_target_override;
+
+	if (retcode == JIM_RETURN)
+		retcode = interp->returnCode;
+
 	if (retcode == JIM_OK) {
 		const char *result;
 		int reslen;
@@ -518,25 +518,19 @@ int command_run_line(struct command_context *context, char *line)
 			command_output_text(context, result);
 			command_output_text(context, "\n");
 		}
-		retval = ERROR_OK;
-	} else if (retcode == JIM_EXIT) {
-		/* ignore.
-		 * exit(Jim_GetExitCode(interp)); */
-	} else if (retcode == ERROR_COMMAND_CLOSE_CONNECTION) {
-		return retcode;
-	} else {
-		Jim_MakeErrorMessage(interp);
-		/* error is broadcast */
-		LOG_USER("%s", Jim_GetString(Jim_GetResult(interp), NULL));
-
-		if (retval == ERROR_OK) {
-			/* It wasn't a low level OpenOCD command that failed */
-			return ERROR_FAIL;
-		}
-		return retval;
+		return ERROR_OK;
 	}
 
-	return retval;
+	if (retcode == JIM_EXIT) {
+		// used by telnet server to close one connection
+		return ERROR_COMMAND_CLOSE_CONNECTION;
+	}
+
+	Jim_MakeErrorMessage(interp);
+	/* error is broadcast */
+	LOG_USER("%s", Jim_GetString(Jim_GetResult(interp), NULL));
+
+	return ERROR_FAIL;
 }
 
 int command_run_linef(struct command_context *context, const char *format, ...)
@@ -863,7 +857,7 @@ static int jim_command_dispatch(Jim_Interp *interp, int argc, Jim_Obj * const *a
 	if (c->jim_override_target)
 		cmd_ctx->current_target_override = c->jim_override_target;
 
-	int retval = exec_command(interp, cmd_ctx, c, argc, argv);
+	int retval = jim_exec_command(interp, cmd_ctx, c, argc, argv);
 
 	if (c->jim_override_target)
 		cmd_ctx->current_target_override = saved_target_override;

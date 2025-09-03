@@ -129,6 +129,7 @@ m4_define([ADAPTER_OPT], [m4_translit(ADAPTER_ARG($1), [_], [-])])
 
 m4_define([USB1_ADAPTERS],
 	[[[ftdi], [MPSSE mode of FTDI based devices], [FTDI]],
+	[[ch347], [Mode 3 of CH347 based devices], [CH347]],
 	[[stlink], [ST-Link Programmer], [HLADAPTER_STLINK]],
 	[[ti_icdi], [TI ICDI JTAG Programmer], [HLADAPTER_ICDI]],
 	[[ulink], [Keil ULINK JTAG Programmer], [ULINK]],
@@ -202,6 +203,9 @@ m4_define([RSHIM_ADAPTER],
 
 m4_define([AMTJTAGACCEL_ADAPTER],
 	[[[amtjtagaccel], [Amontec JTAG-Accelerator driver], [AMTJTAGACCEL]]])
+
+m4_define([CMSIS_DAP_TCP_ADAPTER],
+	[[[cmsis_dap_tcp], [CMSIS-DAP v2 compliant dongle (TCP)], [CMSIS_DAP_TCP]]])
 
 m4_define([HOST_ARM_BITBANG_ADAPTERS],
 	[[[ep93xx], [Bitbanging on EP93xx-based SBCs], [EP93XX]],
@@ -326,7 +330,8 @@ AC_ARG_ADAPTERS([
   JTAG_VPI_ADAPTER,
   RSHIM_ADAPTER,
   XVC_ADAPTERS,
-  LIBJAYLINK_ADAPTERS
+  LIBJAYLINK_ADAPTERS,
+  CMSIS_DAP_TCP_ADAPTER
   ],[auto])
 
 AC_ARG_ADAPTERS([
@@ -622,6 +627,7 @@ PROCESS_ADAPTERS([LIBGPIOD_ADAPTERS], ["x$use_libgpiod" = "xyes"], [Linux libgpi
 PROCESS_ADAPTERS([DMEM_ADAPTER], ["x$is_linux" = "xyes"], [Linux /dev/mem])
 PROCESS_ADAPTERS([SYSFSGPIO_ADAPTER], ["x$is_linux" = "xyes"], [Linux sysfs])
 PROCESS_ADAPTERS([REMOTE_BITBANG_ADAPTER], [true], [unused])
+PROCESS_ADAPTERS([CMSIS_DAP_TCP_ADAPTER], [true], [unused])
 PROCESS_ADAPTERS([LIBJAYLINK_ADAPTERS], ["x$use_internal_libjaylink" = "xyes" -o "x$use_libjaylink" = "xyes"], [libjaylink-0.2])
 PROCESS_ADAPTERS([XVC_ADAPTERS], ["x$is_linux" = "xyes" -a "x$ac_cv_header_linux_pci_h" = "xyes"], [Linux build])
 PROCESS_ADAPTERS([SERIAL_PORT_ADAPTERS], ["x$can_build_buspirate" = "xyes"],
@@ -681,6 +687,8 @@ AS_IF([test "x$enable_stlink" != "xno" -o "x$enable_ti_icdi" != "xno" -o "x$enab
 AM_CONDITIONAL([HLADAPTER_STLINK], [test "x$enable_stlink" != "xno"])
 AM_CONDITIONAL([HLADAPTER_ICDI], [test "x$enable_ti_icdi" != "xno"])
 AM_CONDITIONAL([HLADAPTER_NULINK], [test "x$enable_nulink" != "xno"])
+AM_CONDITIONAL([CMSIS_DAP_CORE],
+   [test "x$enable_cmsis_dap" != "xno" -o "x$enable_cmsis_dap_v2" != "xno" -o "x$enable_cmsis_dap_tcp" != "xno"])
 
 AS_IF([test "x$enable_jlink" != "xno"], [
   AS_IF([test "x$use_internal_libjaylink" = "xyes"], [
@@ -723,6 +731,7 @@ AM_CONDITIONAL([HAVE_CAPSTONE], [test "x$enable_capstone" != "xno"])
 AM_CONDITIONAL([INTERNAL_JIMTCL], [test "x$use_internal_jimtcl" = "xyes"])
 AM_CONDITIONAL([HAVE_JIMTCL_PKG_CONFIG], [test "x$have_jimtcl_pkg_config" = "xyes"])
 AM_CONDITIONAL([INTERNAL_LIBJAYLINK], [test "x$use_internal_libjaylink" = "xyes"])
+
 
 AM_CONDITIONAL([USE_GCOV], [test "x$enable_gcov" = "xyes"])
 
@@ -830,6 +839,7 @@ m4_foreach([adapterTuple], [USB1_ADAPTERS,
 	AMTJTAGACCEL_ADAPTER,
 	HOST_ARM_BITBANG_ADAPTERS,
 	HOST_ARM_OR_AARCH64_BITBANG_ADAPTERS,
+	CMSIS_DAP_TCP_ADAPTER,
 	DUMMY_ADAPTER,
 	OPTIONAL_LIBRARIES,
 	COVERAGE],
