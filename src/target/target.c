@@ -3561,20 +3561,20 @@ COMMAND_HANDLER(handle_mw_command)
 	struct target *target = get_current_target(CMD_CTX);
 	unsigned int wordsize;
 	switch (CMD_NAME[2]) {
-		case 'd':
-			wordsize = 8;
-			break;
-		case 'w':
-			wordsize = 4;
-			break;
-		case 'h':
-			wordsize = 2;
-			break;
-		case 'b':
-			wordsize = 1;
-			break;
-		default:
-			return ERROR_COMMAND_SYNTAX_ERROR;
+	case 'd':
+		wordsize = 8;
+		break;
+	case 'w':
+		wordsize = 4;
+		break;
+	case 'h':
+		wordsize = 2;
+		break;
+	case 'b':
+		wordsize = 1;
+		break;
+	default:
+		return ERROR_COMMAND_SYNTAX_ERROR;
 	}
 
 	return target_fill_mem(target, address, fn, wordsize, value, count);
@@ -3996,39 +3996,39 @@ COMMAND_HANDLER(handle_bp_command)
 	int hw = BKPT_SOFT;
 
 	switch (CMD_ARGC) {
-		case 0:
-			return handle_bp_command_list(CMD);
+	case 0:
+		return handle_bp_command_list(CMD);
 
-		case 2:
-			asid = 0;
-			COMMAND_PARSE_ADDRESS(CMD_ARGV[0], addr);
-			COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], length);
-			return handle_bp_command_set(CMD, addr, asid, length, hw);
+	case 2:
+		asid = 0;
+		COMMAND_PARSE_ADDRESS(CMD_ARGV[0], addr);
+		COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], length);
+		return handle_bp_command_set(CMD, addr, asid, length, hw);
 
-		case 3:
-			if (strcmp(CMD_ARGV[2], "hw") == 0) {
-				hw = BKPT_HARD;
-				COMMAND_PARSE_ADDRESS(CMD_ARGV[0], addr);
-				COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], length);
-				asid = 0;
-				return handle_bp_command_set(CMD, addr, asid, length, hw);
-			} else if (strcmp(CMD_ARGV[2], "hw_ctx") == 0) {
-				hw = BKPT_HARD;
-				COMMAND_PARSE_NUMBER(u32, CMD_ARGV[0], asid);
-				COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], length);
-				addr = 0;
-				return handle_bp_command_set(CMD, addr, asid, length, hw);
-			}
-			/* fallthrough */
-		case 4:
+	case 3:
+		if (strcmp(CMD_ARGV[2], "hw") == 0) {
 			hw = BKPT_HARD;
 			COMMAND_PARSE_ADDRESS(CMD_ARGV[0], addr);
-			COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], asid);
-			COMMAND_PARSE_NUMBER(u32, CMD_ARGV[2], length);
+			COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], length);
+			asid = 0;
 			return handle_bp_command_set(CMD, addr, asid, length, hw);
+		} else if (strcmp(CMD_ARGV[2], "hw_ctx") == 0) {
+			hw = BKPT_HARD;
+			COMMAND_PARSE_NUMBER(u32, CMD_ARGV[0], asid);
+			COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], length);
+			addr = 0;
+			return handle_bp_command_set(CMD, addr, asid, length, hw);
+		}
+		/* fallthrough */
+	case 4:
+		hw = BKPT_HARD;
+		COMMAND_PARSE_ADDRESS(CMD_ARGV[0], addr);
+		COMMAND_PARSE_NUMBER(u32, CMD_ARGV[1], asid);
+		COMMAND_PARSE_NUMBER(u32, CMD_ARGV[2], length);
+		return handle_bp_command_set(CMD, addr, asid, length, hw);
 
-		default:
-			return ERROR_COMMAND_SYNTAX_ERROR;
+	default:
+		return ERROR_COMMAND_SYNTAX_ERROR;
 	}
 }
 
@@ -4745,7 +4745,7 @@ COMMAND_HANDLER(handle_target_get_reg)
 
 		const char *reg_name = Jim_String(elem);
 
-		struct reg *reg = register_get_by_name(target->reg_cache, reg_name, false);
+		struct reg *reg = register_get_by_name(target->reg_cache, reg_name, true);
 
 		if (!reg || !reg->exist) {
 			command_print(CMD, "unknown register '%s'", reg_name);
@@ -4803,7 +4803,7 @@ COMMAND_HANDLER(handle_set_reg_command)
 	for (unsigned int i = 0; i < length; i += 2) {
 		const char *reg_name = Jim_String(dict[i]);
 		const char *reg_value = Jim_String(dict[i + 1]);
-		struct reg *reg = register_get_by_name(target->reg_cache, reg_name, false);
+		struct reg *reg = register_get_by_name(target->reg_cache, reg_name, true);
 
 		if (!reg || !reg->exist) {
 			command_print(CMD, "unknown register '%s'", reg_name);
@@ -6785,25 +6785,25 @@ static int target_register_user_commands(struct command_context *cmd_ctx)
 const char *target_debug_reason_str(enum target_debug_reason reason)
 {
 	switch (reason) {
-		case DBG_REASON_DBGRQ:
-			return "DBGRQ";
-		case DBG_REASON_BREAKPOINT:
-			return "BREAKPOINT";
-		case DBG_REASON_WATCHPOINT:
-			return "WATCHPOINT";
-		case DBG_REASON_WPTANDBKPT:
-			return "WPTANDBKPT";
-		case DBG_REASON_SINGLESTEP:
-			return "SINGLESTEP";
-		case DBG_REASON_NOTHALTED:
-			return "NOTHALTED";
-		case DBG_REASON_EXIT:
-			return "EXIT";
-		case DBG_REASON_EXC_CATCH:
-			return "EXC_CATCH";
-		case DBG_REASON_UNDEFINED:
-			return "UNDEFINED";
-		default:
-			return "UNKNOWN!";
+	case DBG_REASON_DBGRQ:
+		return "DBGRQ";
+	case DBG_REASON_BREAKPOINT:
+		return "BREAKPOINT";
+	case DBG_REASON_WATCHPOINT:
+		return "WATCHPOINT";
+	case DBG_REASON_WPTANDBKPT:
+		return "WPTANDBKPT";
+	case DBG_REASON_SINGLESTEP:
+		return "SINGLESTEP";
+	case DBG_REASON_NOTHALTED:
+		return "NOTHALTED";
+	case DBG_REASON_EXIT:
+		return "EXIT";
+	case DBG_REASON_EXC_CATCH:
+		return "EXC_CATCH";
+	case DBG_REASON_UNDEFINED:
+		return "UNDEFINED";
+	default:
+		return "UNKNOWN!";
 	}
 }
