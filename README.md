@@ -96,12 +96,17 @@ python tools/refine_survey.py     # 过滤噪声
 python tools/consolidate.py       # 跨仓去重
 bash tools/run_fetch.sh           # 抓取 + 自动校验
 python tools/resolve_deps.py --apply        # 补齐 source 引用依赖
-python tools/prune_upstream_duplicates.py   # 剔除与官方等价的重复
-python tools/prune_shadow.py                # 剔除遮蔽官方的同名扁平文件
 python tools/pin_commits.py                 # 回填 commit pin
 python tools/gen_report.py                  # 清单报告
 python tools/gen_licenses.py                # 许可证清单
 python tools/verify_overlay.py              # 完整性校验，必须 PASS
+```
+
+一键跑完整流水线（`--apply` 才会写入，默认只报告）：
+
+```bash
+python tools/pipeline.py --apply
+# 也支持：--tier 2（连 C 源码一起抓）、--deep-budget 300（深挖更多候选）
 ```
 
 官方重复由 `consolidate.py` **在写 manifest 时**剔除，所以 manifest 与 overlay
@@ -127,6 +132,17 @@ python tools/verify_overlay.py           # 必须 PASS 才提交
 
 `verify_overlay.py` 会把「与官方等价」的重复报为 **ERROR**。
 出现这类错误说明官方已经收编了该支持，应当从 overlay 删除，改用官方版本。
+
+```bash
+python tools/verify_overlay.py     # 看 ERROR 清单
+python tools/prune_upstream_duplicates.py   # 剔除「路径相同」与「改名后相同」
+python tools/prune_shadow.py                # 剔除「同名不同目录」的遮蔽
+python tools/verify_overlay.py     # 必须回到 errors: 0
+```
+
+> 注意第二种 `prune_shadow.py` 检不出「同名不同目录」—— 因为规范化比对会把
+> `am335x.cfg` 与 `ti/am335x.cfg` 折叠成同一键，而它们其实是两个不同的文件。
+> 早期就是漏掉了这一类，导致 16 个扁平文件留在 overlay 里遮蔽官方版本。
 
 ### 4. 提交前必须通过
 
