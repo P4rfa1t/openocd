@@ -57,15 +57,33 @@ sudo make install
 
 Windows 见上游 `README.Windows.md`（本仓库未改动）。
 
-### CI
+### CI：Windows 免安装包
 
-`.github/workflows/build.yml` 在 Linux（GCC）和 Windows（MSYS2 UCRT64）上各构建一次，
-构建产物作为 artifact 上传（`openocd-linux-x86_64`、`openocd-windows-x86_64`）。
+`.github/workflows/snapshot.yml` 就是**官方仓库自己的**那个 workflow
+（`openocd-org/openocd/.github/workflows/snapshot.yml`），内容原样照搬，只改了三处：
 
-因为 `tcl/` 的安装方式是 `find $(srcdir)/tcl -name '*.cfg'`，新增的 505 个配置
-**已经在这些二进制里生效**；`src/` 的 127 个 C 文件还没有注册进 `Makefile.am`，
-所以它们不参与编译 —— 也就是说 CI 通过只证明"上游代码 + 第三方 tcl 能编译"，
-不证明第三方 C 驱动能编译。
+| 改动 | 原因 |
+| --- | --- |
+| 目标平台 `i686-w64-mingw32` → `x86_64-w64-mingw32`，工具链包同步换成 `g++-mingw-w64-x86-64`，`libgcc_s_dw2-1.dll` → `libgcc_s_seh-1.dll` | 本仓库出 64 位包；x86_64 用 SEH 展开，DLL 名字跟着变 |
+| 删掉「打 tag + 发 Release + 删旧的 latest Release」两步 | 发 Release 要 tag，而且会往本仓库的 Releases 里写东西，CI 验证用不上 |
+| 触发方式加上 `workflow_dispatch` | 不提交也能手动重新跑 |
+
+其余全部是官方的：`contrib/cross-build.sh` 依次编 libusb、hidapi、libftdi、capstone、
+libjaylink、jimtcl 进 sysroot，交叉编译 OpenOCD，`make install-strip` 到 `usr/`，
+补三个工具链 DLL，再把整个 `usr/` 打包。所以包里是 **exe + 全部 DLL + 整份 `tcl/`**，
+解压即用，不需要额外装 libusb 之类的东西。
+
+跑完在 Actions 的 artifact 里拿 `openocd-<commit>-x86_64-w64-mingw32.tar.gz`。
+
+（早先手写的 `build.yml` 已删：它只把 `openocd.exe` 打进包，链接时却用了
+`-lusb-1.0 -lftdi1 -lhidapi`，DLL 一个都没带，解压后双击必然报缺 DLL；
+而且包里没有 `tcl/`，就算起来了也没有配置文件可加载。）
+
+关于第三方配置：`tcl/` 的安装方式是 `find $(srcdir)/tcl -name '*.cfg' -o -name '*.tcl'`，
+不是写死的文件清单，所以新增的 505 个 tcl 配置**自动**进包
+（其中 502 个在包内，3 个 `.xml` 内存映射文件不属于安装规则的范围，详见 `docs/`）。
+`src/` 的 127 个第三方 C 驱动还没有注册进 `Makefile.am`，不参与编译 ——
+也就是说 CI 通过证明的是"上游代码 + 第三方 tcl 能编译并打包"，不证明第三方 C 驱动能编译。
 
 验证用的上游基线（commit + 全量文件清单）记录在
 `manifest/upstream.json` 与 `manifest/upstream-index.txt`。
