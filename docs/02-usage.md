@@ -16,26 +16,26 @@
 ## 目录结构
 
 ```
-tcl/                     ← OpenOCD 配置树：官方配置 + 500 个第三方配置
+tcl/                     ← OpenOCD 配置树：官方配置 + 494 个第三方配置
   target/                     689  芯片目标配置（含 vendor 子目录）
   board/                      604  开发板配置（含 flash_algorithms/）
-  interface/                  213  调试器接口
+  interface/                  207  调试器接口
   cpld/                        23  CPLD 配置
   fpga/                        35  FPGA bitstream
   chip/                        28  芯片公共片段
   cpu/                         10  架构公共片段
 
-src/                     ← C 源码：官方源码 + 102 个第三方驱动/目标
+src/                     ← C 源码：官方源码 + 92 个第三方驱动/目标
   target/                     124  顶层 .c（其中 39 个是第三方新架构：ARC / NDS32 / LoongArch / C28x ...）
-  jtag/drivers/                73  顶层 .c（其中 5 个是已接入构建的第三方适配器）
+  jtag/drivers/                65  顶层 .c（其中 5 个是已接入构建的第三方适配器）
 
 manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            602  个文件的来源仓库/分支/commit/SHA-256/许可证
+  PROVENANCE.json            586  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
   repos.csv / repos.json      688 个候选仓库排名
-  licenses.csv               602  行许可证索引（逐文件）
+  licenses.csv               586  行许可证索引（逐文件）
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本

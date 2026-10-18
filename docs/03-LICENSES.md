@@ -6,22 +6,22 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 426 |
-| GPL-2.0 | 151 |
+| NOASSERTION | 411 |
+| GPL-2.0 | 150 |
 | UNRESOLVED | 25 |
 
-**451 个文件（75%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
+**436 个文件（74%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
 > 已知事实：OpenOCD 上游是 GPL-2.0-or-later，大多数 fork 继承该许可，所以实务上大概率都是 GPL。但 `NOASSERTION` 只表示「GitHub 没能解析出来」，**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。逐文件清单见 `manifest/licenses.csv` 与下方折叠区。
 
 ## tcl/ 配置（随树直接可用）
 
-文件数：**500**
+文件数：**494**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
 | [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | NOASSERTION(58), UNRESOLVED(10) | 68 |
-| [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(50), UNRESOLVED(1) | 51 |
+| [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(48), UNRESOLVED(1) | 49 |
 | [`rxmnjke/openocd`](https://github.com/rxmnjke/openocd) | NOASSERTION(48) | 48 |
 | [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | NOASSERTION(43) | 43 |
 | [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | GPL-2.0(34), UNRESOLVED(2) | 36 |
@@ -44,14 +44,13 @@
 | [`DCVostok/openocd-k1921vk`](https://github.com/DCVostok/openocd-k1921vk) | NOASSERTION(4), UNRESOLVED(1) | 5 |
 | [`OlivierVanWassenhove-Dekimo/openocd`](https://github.com/OlivierVanWassenhove-Dekimo/openocd) | NOASSERTION(4) | 4 |
 | [`hikob/openocd`](https://github.com/hikob/openocd) | GPL-2.0(4) | 4 |
-| [`ImproperCatGirl/openocd`](https://github.com/ImproperCatGirl/openocd) | NOASSERTION(4) | 4 |
 | [`David-lau/openocd-geehy`](https://github.com/David-lau/openocd-geehy) | NOASSERTION(4) | 4 |
 | [`sony/openocd-nuttx`](https://github.com/sony/openocd-nuttx) | GPL-2.0(2), UNRESOLVED(1) | 3 |
 | [`nmenon/openocd`](https://github.com/nmenon/openocd) | NOASSERTION(3) | 3 |
 | [`raspberrypi/openocd`](https://github.com/raspberrypi/openocd) | NOASSERTION(3) | 3 |
 | [`sysprogs/esp8266-openocd`](https://github.com/sysprogs/esp8266-openocd) | GPL-2.0(3) | 3 |
+| [`ImproperCatGirl/openocd`](https://github.com/ImproperCatGirl/openocd) | NOASSERTION(3) | 3 |
 | [`luyi1888/openocd`](https://github.com/luyi1888/openocd) | NOASSERTION(2) | 2 |
-| [`stacksmashing/openocd-tamarin`](https://github.com/stacksmashing/openocd-tamarin) | NOASSERTION(2) | 2 |
 | [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | GPL-2.0(2) | 2 |
 | [`Lichee-Pi/LicheeTang_openocd`](https://github.com/Lichee-Pi/LicheeTang_openocd) | GPL-2.0(2) | 2 |
 | [`loopj/openocd-efm32s2`](https://github.com/loopj/openocd-efm32s2) | NOASSERTION(2) | 2 |
@@ -59,11 +58,10 @@
 | [`os-fpga/openocd`](https://github.com/os-fpga/openocd) | NOASSERTION(1) | 1 |
 | [`snowcap-electronics/OpenOCD`](https://github.com/snowcap-electronics/OpenOCD) | GPL-2.0(1) | 1 |
 | [`Blinkinlabs/OpenOCD`](https://github.com/Blinkinlabs/OpenOCD) | GPL-2.0(1) | 1 |
-| [`AnlogicInfo/al_openocd`](https://github.com/AnlogicInfo/al_openocd) | NOASSERTION(1) | 1 |
 | [`kvth/openocd-swd-in-out`](https://github.com/kvth/openocd-swd-in-out) | NOASSERTION(1) | 1 |
-| [`tihmstar/openocd_colobus`](https://github.com/tihmstar/openocd_colobus) | NOASSERTION(1) | 1 |
 | [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
 | [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(1) | 1 |
+| [`stacksmashing/openocd-tamarin`](https://github.com/stacksmashing/openocd-tamarin) | NOASSERTION(1) | 1 |
 | [`matrix-io/matrix-creator-openocd`](https://github.com/matrix-io/matrix-creator-openocd) | GPL-2.0(1) | 1 |
 | [`HalfSweet/openocd`](https://github.com/HalfSweet/openocd) | NOASSERTION(1) | 1 |
 | [`mengfanyuc/openocd`](https://github.com/mengfanyuc/openocd) | NOASSERTION(1) | 1 |
@@ -72,15 +70,9 @@
 | [`go2sh/aurix-openocd`](https://github.com/go2sh/aurix-openocd) | NOASSERTION(1) | 1 |
 | [`padhialuo0426/openocd`](https://github.com/padhialuo0426/openocd) | NOASSERTION(1) | 1 |
 
-### ⚠️ 需人工审计（382 个文件无许可证信息）
+### ⚠️ 需人工审计（376 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
-
-<details><summary><code>AnlogicInfo/al_openocd</code> (1 个)</summary>
-
-- `tcl/interface/al_link.cfg`
-
-</details>
 
 <details><summary><code>DCVostok/openocd-k1921vk</code> (5 个)</summary>
 
@@ -122,9 +114,8 @@
 
 </details>
 
-<details><summary><code>ImproperCatGirl/openocd</code> (4 个)</summary>
+<details><summary><code>ImproperCatGirl/openocd</code> (3 个)</summary>
 
-- `tcl/interface/ddmi_demo.cfg`
 - `tcl/target/ch32x035.txt`
 - `tcl/target/rp2350-riscv.cfg`
 - `tcl/target/wch_min.cfg`
@@ -275,7 +266,7 @@
 
 </details>
 
-<details><summary><code>espressif/openocd-esp32</code> (51 个)</summary>
+<details><summary><code>espressif/openocd-esp32</code> (49 个)</summary>
 
 - `tcl/board/esp32c2-bridge.cfg`
 - `tcl/board/esp32c3-bridge.cfg`
@@ -313,8 +304,6 @@
 - `tcl/board/esp32s31-lpcore-bridge.cfg`
 - `tcl/board/esp32s31-lpcore-builtin.cfg`
 - `tcl/board/esp32s31-lpcore-ftdi.cfg`
-- `tcl/interface/esp_gpio_jtag.cfg`
-- `tcl/interface/esp_gpio_swd.cfg`
 - `tcl/interface/ftdi/esp_ftdi.cfg`
 - `tcl/interface/jtag_esp_remote.cfg`
 - `tcl/target/esp32-solo-1.cfg`
@@ -500,10 +489,9 @@
 
 </details>
 
-<details><summary><code>stacksmashing/openocd-tamarin</code> (2 个)</summary>
+<details><summary><code>stacksmashing/openocd-tamarin</code> (1 个)</summary>
 
 - `tcl/interface/faultier.cfg`
-- `tcl/interface/tamarin.cfg`
 
 </details>
 
@@ -552,12 +540,6 @@
 - `tcl/target/stm32g4x_alt.cfg`
 - `tcl/target/swj-dp-legacy.tcl`
 - `tcl/target/ti_tms570ls1224.cfg`
-
-</details>
-
-<details><summary><code>tihmstar/openocd_colobus</code> (1 个)</summary>
-
-- `tcl/interface/colobus.cfg`
 
 </details>
 
@@ -660,7 +642,7 @@
 
 ## src/ C 源码（需在构建系统注册）
 
-文件数：**102**
+文件数：**92**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
@@ -673,34 +655,20 @@
 | [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(6) | 6 |
 | [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | NOASSERTION(5) | 5 |
 | [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(4) | 4 |
-| [`AnlogicInfo/al_openocd`](https://github.com/AnlogicInfo/al_openocd) | NOASSERTION(3) | 3 |
-| [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(3) | 3 |
 | [`esden/openocd`](https://github.com/esden/openocd) | GPL-2.0(2) | 2 |
 | [`yottatsa/openocd`](https://github.com/yottatsa/openocd) | NOASSERTION(2) | 2 |
 | [`walmis/openocd-blackmagic`](https://github.com/walmis/openocd-blackmagic) | GPL-2.0(1) | 1 |
-| [`stacksmashing/openocd`](https://github.com/stacksmashing/openocd) | GPL-2.0(1) | 1 |
 | [`meriac/openocd`](https://github.com/meriac/openocd) | NOASSERTION(1) | 1 |
 | [`dynm/openocd-starbleed`](https://github.com/dynm/openocd-starbleed) | GPL-2.0(1) | 1 |
 | [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(1) | 1 |
-| [`tihmstar/openocd_colobus`](https://github.com/tihmstar/openocd_colobus) | NOASSERTION(1) | 1 |
-| [`ImproperCatGirl/openocd`](https://github.com/ImproperCatGirl/openocd) | NOASSERTION(1) | 1 |
 | [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
+| [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(1) | 1 |
 | [`intel/aji_openocd`](https://github.com/intel/aji_openocd) | NOASSERTION(1) | 1 |
-| [`stacksmashing/openocd-tamarin`](https://github.com/stacksmashing/openocd-tamarin) | NOASSERTION(1) | 1 |
-| [`riscv-collab/riscv-openocd`](https://github.com/riscv-collab/riscv-openocd) | NOASSERTION(1) | 1 |
 | [`andestech/nds-openocd`](https://github.com/andestech/nds-openocd) | NOASSERTION(1) | 1 |
 
-### ⚠️ 需人工审计（69 个文件无许可证信息）
+### ⚠️ 需人工审计（60 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
-
-<details><summary><code>AnlogicInfo/al_openocd</code> (3 个)</summary>
-
-- `src/jtag/drivers/al_link.c`
-- `src/jtag/drivers/al_link_cyusb.c`
-- `src/jtag/drivers/al_link_cyusb.h`
-
-</details>
 
 <details><summary><code>Icey7122/openocd</code> (7 个)</summary>
 
@@ -711,12 +679,6 @@
 - `src/target/loongarch_modules.h`
 - `src/target/loongarch_pracc.c`
 - `src/target/loongarch_pracc.h`
-
-</details>
-
-<details><summary><code>ImproperCatGirl/openocd</code> (1 个)</summary>
-
-- `src/jtag/drivers/ddmi_demo.c`
 
 </details>
 
@@ -745,10 +707,8 @@
 
 </details>
 
-<details><summary><code>espressif/openocd-esp32</code> (3 个)</summary>
+<details><summary><code>espressif/openocd-esp32</code> (1 个)</summary>
 
-- `src/jtag/drivers/esp_gpio.c`
-- `src/jtag/drivers/esp_gpio.h`
 - `src/jtag/drivers/jtag_esp_remote.c`
 
 </details>
@@ -776,27 +736,9 @@
 
 </details>
 
-<details><summary><code>riscv-collab/riscv-openocd</code> (1 个)</summary>
-
-- `src/jtag/drivers/xlnx-pcie-xvc.c`
-
-</details>
-
 <details><summary><code>stache3000/openocd-dirtyjtag</code> (1 个)</summary>
 
 - `src/jtag/drivers/dirtyjtag.c`
-
-</details>
-
-<details><summary><code>stacksmashing/openocd-tamarin</code> (1 个)</summary>
-
-- `src/jtag/drivers/tamarin.c`
-
-</details>
-
-<details><summary><code>tihmstar/openocd_colobus</code> (1 个)</summary>
-
-- `src/jtag/drivers/colobus.c`
 
 </details>
 

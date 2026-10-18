@@ -112,8 +112,7 @@ def main():
         "**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。"
         f"逐文件清单见 `manifest/licenses.csv` 与下方折叠区。\n")
 
-    # newline="" -- without it Python translates "
-" to os.linesep on
+    # newline="" -- without it Python translates LF to os.linesep on
     # Windows, rewriting the whole generated doc as CRLF and producing a
     # full-file diff on every regeneration.
     with open(OUT_MD, "w", encoding="utf-8", newline="") as f:

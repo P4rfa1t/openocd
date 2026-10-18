@@ -37,36 +37,6 @@
       "also_present_in": [],
       "sha256": "c14b14689e07f943fc681f88a30001d4512fa7d38eb18f3b7e0fd2764951870b"
     },
-    "src/jtag/drivers/al_link.c": {
-      "source_repo": "AnlogicInfo/al_openocd",
-      "source_branch": "master",
-      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
-      "source_path": "src/jtag/drivers/al_link.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 6,
-      "also_present_in": [],
-      "sha256": "8bcfc44433532371a5a3ea284d8a01b546f2972fe37da565a3592acdcaceb3d4"
-    },
-    "src/jtag/drivers/al_link_cyusb.c": {
-      "source_repo": "AnlogicInfo/al_openocd",
-      "source_branch": "master",
-      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
-      "source_path": "src/jtag/drivers/al_link_cyusb.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 6,
-      "also_present_in": [],
-      "sha256": "41ef971c8dee059f454a3e97680c0e995cd095d5189031874d387da5c08f04a1"
-    },
-    "src/jtag/drivers/al_link_cyusb.h": {
-      "source_repo": "AnlogicInfo/al_openocd",
-      "source_branch": "master",
-      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
-      "source_path": "src/jtag/drivers/al_link_cyusb.h",
-      "license": "NOASSERTION",
-      "stars_at_import": 6,
-      "also_present_in": [],
-      "sha256": "4a2b29f8028ca196a98153f6d338a675cc0740e39f5720359e5d6f45a9b094de"
-    },
     "src/jtag/drivers/arc_ftdi_cjtag.c": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
       "source_branch": "arc-2026.09",
@@ -96,16 +66,6 @@
       "stars_at_import": 15,
       "also_present_in": [],
       "sha256": "a3db3e575e04291ffe3909137e35036d32fbc3173dd8916c148433f78a4b4507"
-    },
-    "src/jtag/drivers/bonobo.c": {
-      "source_repo": "stacksmashing/openocd",
-      "source_branch": "tamarin",
-      "source_commit": "c6d4abbee68550dc4bd1cc39429df14ab4767b05",
-      "source_path": "src/jtag/drivers/bonobo.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 69,
-      "also_present_in": [],
-      "sha256": "f540fc69b66eaaba7db44b0eab8f9ad1e80a0df7e8b99625661d42bfea54c4a9"
     },
     "src/jtag/drivers/ch347_jtag.c": {
       "source_repo": "meriac/openocd",
@@ -163,26 +123,6 @@
       "also_present_in": [],
       "sha256": "5edd1b7115b53a59d5ec5619f18b06aa26e3e271be424cd8d405b260c8ad9c8d"
     },
-    "src/jtag/drivers/colobus.c": {
-      "source_repo": "tihmstar/openocd_colobus",
-      "source_branch": "master",
-      "source_commit": "7eab5ac160296c988b06ea058955030a99599025",
-      "source_path": "src/jtag/drivers/colobus.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 1,
-      "also_present_in": [],
-      "sha256": "5578ae357664ecc19c50de82739a039916f3f1d8d5fff179a0fe05a85657bcbc"
-    },
-    "src/jtag/drivers/ddmi_demo.c": {
-      "source_repo": "ImproperCatGirl/openocd",
-      "source_branch": "master",
-      "source_commit": "1f625f720c778900b393d23dc3b0eaa4549227af",
-      "source_path": "src/jtag/drivers/ddmi_demo.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 1,
-      "also_present_in": [],
-      "sha256": "698cb6990788723a6fd1dd2d11c62e757a9363c645c542c4fd88203df438992e"
-    },
     "src/jtag/drivers/dirtyjtag.c": {
       "source_repo": "stache3000/openocd-dirtyjtag",
       "source_branch": "master",
@@ -198,26 +138,6 @@
       "local_modifications": [
         "modified locally after import"
       ]
-    },
-    "src/jtag/drivers/esp_gpio.c": {
-      "source_repo": "espressif/openocd-esp32",
-      "source_branch": "master",
-      "source_commit": "a585825d4d0bbd5b8aff83e01816d2f2c04ffd84",
-      "source_path": "src/jtag/drivers/esp_gpio.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 471,
-      "also_present_in": [],
-      "sha256": "4018beb955622be3e868a9db272681d49b37b5218bd4c98d6701462728cc1372"
-    },
-    "src/jtag/drivers/esp_gpio.h": {
-      "source_repo": "espressif/openocd-esp32",
-      "source_branch": "master",
-      "source_commit": "a585825d4d0bbd5b8aff83e01816d2f2c04ffd84",
-      "source_path": "src/jtag/drivers/esp_gpio.h",
-      "license": "NOASSERTION",
-      "stars_at_import": 471,
-      "also_present_in": [],
-      "sha256": "0115d034ae9fa8cdc4b0f1789559af0de1078bf50ead739d4817d9727cfad059"
     },
     "src/jtag/drivers/ice1000.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -282,18 +202,6 @@
       ],
       "sha256": "bdce5eb1d007424c85d782ec1bcf778234fb31ea8e2d4581d4b83eed153f3081"
     },
-    "src/jtag/drivers/tamarin.c": {
-      "source_repo": "stacksmashing/openocd-tamarin",
-      "source_branch": "tamarin",
-      "source_commit": "eb5d44390a1e3d3fca72e67db94786598432432f",
-      "source_path": "src/jtag/drivers/tamarin.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 18,
-      "also_present_in": [
-        "stacksmashing/openocd"
-      ],
-      "sha256": "6925ac323e9e9cbf66b481c3cc8d6bc99b6391c0067854037e117f2569156a71"
-    },
     "src/jtag/drivers/usbmux.c": {
       "source_repo": "analogdevicesinc/openocd",
       "source_branch": "release/0.12.0-1.4.0",
@@ -316,63 +224,6 @@
       "stars_at_import": 29,
       "also_present_in": [],
       "sha256": "df525b4f191928b81589c070510220cc5e54bc15ba39d19ed35620dc37c31c97"
-    },
-    "src/jtag/drivers/xlnx-pcie-xvc.c": {
-      "source_repo": "riscv-collab/riscv-openocd",
-      "source_branch": "riscv",
-      "source_commit": "10b7a647da03cb64fd25db76261712c388ad6468",
-      "source_path": "src/jtag/drivers/xlnx-pcie-xvc.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 517,
-      "also_present_in": [
-        "AnlogicInfo/al_openocd",
-        "Blinkinlabs/OpenOCD",
-        "DCVostok/openocd-k1921vk",
-        "David-lau/openocd-geehy",
-        "Devilbinder/openocd",
-        "HalfSweet/openocd",
-        "KilyannBrault/openocd",
-        "STMicroelectronics/OpenOCD",
-        "Seneral/riscv-openocd-wch",
-        "TexasInstruments/ti-openocd",
-        "aesc-silicon/elements-openocd",
-        "andestech/nds-openocd",
-        "ciniml/openocd",
-        "cjacker/wch-openocd",
-        "dynm/openocd-starbleed",
-        "emard/openocd",
-        "encryptize/openocd-at32",
-        "fatalfeel/openocd_integrated",
-        "flipperdevices/openocd",
-        "fxsheep/openocd_wchlink-rv",
-        "go2sh/aurix-openocd",
-        "hackpascal/openocd",
-        "intel/aji_openocd",
-        "jeanthom/openocd-dirtyjtag",
-        "karlp/openocd-hacks",
-        "kprasadvnsi/riscv-openocd-wch",
-        "l0ud/openocd-puya",
-        "linux-msm/openocd",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "luyi1888/openocd",
-        "marisusis/openocd_hc32",
-        "mengfanyuc/openocd",
-        "meriac/openocd",
-        "nalajcie/openocd",
-        "neonkore/openocd",
-        "newbrain/riscv-openocd-wch",
-        "os-fpga/openocd",
-        "raspberrypi/openocd",
-        "stacksmashing/openocd-tamarin",
-        "tihmstar/openocd_colobus",
-        "tom-van/openocd-rp2350-riscv",
-        "transcelestial/openocd",
-        "xpack-dev-tools/openocd",
-        "yottatsa/openocd",
-        "zephyrproject-rtos/openocd"
-      ],
-      "sha256": "274823ef89d05afa6076c3359405742454d1bf03845cdac22890dbcfb7bf4cf1"
     },
     "src/target/aarch64_coproc_reg.c": {
       "source_repo": "linux-msm/openocd",
@@ -5912,16 +5763,6 @@
       "also_present_in": [],
       "sha256": "fb06d43f5de1ccb5c4e667ce865814169aa024ce8050199bff040ce33d706d81"
     },
-    "tcl/interface/al_link.cfg": {
-      "source_repo": "AnlogicInfo/al_openocd",
-      "source_branch": "master",
-      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
-      "source_path": "tcl/interface/al_link.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 6,
-      "also_present_in": [],
-      "sha256": "6862291d7c143e8ddb448f34447f9c5463cc42edc663d15c69a788a869f0f495"
-    },
     "tcl/interface/arc_sdp.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
       "source_branch": "arc-2026.09",
@@ -6121,26 +5962,6 @@
       "also_present_in": [],
       "sha256": "1c8c8b1d7b372a05ebb99f8daddbec4018f2606e860e9bc8f1932abf698cd787"
     },
-    "tcl/interface/colobus.cfg": {
-      "source_repo": "tihmstar/openocd_colobus",
-      "source_branch": "master",
-      "source_commit": "7eab5ac160296c988b06ea058955030a99599025",
-      "source_path": "tcl/interface/colobus.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 1,
-      "also_present_in": [],
-      "sha256": "3b48cd06b4630480ad468169db189f53d5dbd88db94c7b7949aa9035732ee6b4"
-    },
-    "tcl/interface/ddmi_demo.cfg": {
-      "source_repo": "ImproperCatGirl/openocd",
-      "source_branch": "master",
-      "source_commit": "1f625f720c778900b393d23dc3b0eaa4549227af",
-      "source_path": "tcl/interface/ddmi_demo.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 1,
-      "also_present_in": [],
-      "sha256": "e0e65d19dc33940ccf2b98d4f7751d708158e0aecc0fe376b3932637a42a408b"
-    },
     "tcl/interface/dirtyjtag-cjtag.cfg": {
       "source_repo": "luyi1888/openocd",
       "source_branch": "master",
@@ -6163,26 +5984,6 @@
         "luyi1888/openocd"
       ],
       "sha256": "5e8727d55f06705f10bfe56fbbf44f9a9ac20168b1eb8264eca7dd3b2f84f7a9"
-    },
-    "tcl/interface/esp_gpio_jtag.cfg": {
-      "source_repo": "espressif/openocd-esp32",
-      "source_branch": "master",
-      "source_commit": "a585825d4d0bbd5b8aff83e01816d2f2c04ffd84",
-      "source_path": "tcl/interface/esp_gpio_jtag.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 471,
-      "also_present_in": [],
-      "sha256": "c6941deef8b51e1840552e702f4fe6eb048a0ec233cd05c78c4557aea2aafae8"
-    },
-    "tcl/interface/esp_gpio_swd.cfg": {
-      "source_repo": "espressif/openocd-esp32",
-      "source_branch": "master",
-      "source_commit": "a585825d4d0bbd5b8aff83e01816d2f2c04ffd84",
-      "source_path": "tcl/interface/esp_gpio_swd.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 471,
-      "also_present_in": [],
-      "sha256": "069a396543bea365d52961083f608c60c392406c4755db0d16590954cfd00851"
     },
     "tcl/interface/eud.cfg": {
       "source_repo": "linux-msm/openocd",
@@ -6558,18 +6359,6 @@
       "stars_at_import": 18,
       "also_present_in": [],
       "sha256": "6c4621deea70663dea86c1e9c0ae37bccd2c96c486b1518d260fa298903798f7"
-    },
-    "tcl/interface/tamarin.cfg": {
-      "source_repo": "stacksmashing/openocd-tamarin",
-      "source_branch": "tamarin",
-      "source_commit": "eb5d44390a1e3d3fca72e67db94786598432432f",
-      "source_path": "tcl/interface/tamarin.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 18,
-      "also_present_in": [
-        "stacksmashing/openocd"
-      ],
-      "sha256": "9f0cd617ac6eb0c163fa082ba66574db4ef62cfdec7bc5dcb9b57ddbbb82e41d"
     },
     "tcl/interface/tas_client.cfg": {
       "source_repo": "zuyih/openocd",
