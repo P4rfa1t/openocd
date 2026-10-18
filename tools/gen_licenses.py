@@ -7,12 +7,12 @@ repository as a whole is NOT one project with one licence. OpenOCD itself is
 GPL-2.0-or-later, and almost every fork inherits that, but a minority ship
 headers that say otherwise and some carry no SPDX at all.
 
-`tools/verify_overlay.py` reports "N files with unresolved SPDX" as a warning.
+`tools/verify_tree.py` reports "N files with unresolved SPDX" as a warning.
 That warning is not actionable until you can see WHICH files and from WHERE, so
 this pass produces that table: repo -> licence -> file count -> file list.
 
 The output is intended to be read by a human before any commercial use, and to
-be regenerated whenever the overlay changes.
+be regenerated whenever the imported set changes.
 """
 
 import collections
@@ -31,8 +31,8 @@ def load(prov_path):
 
 def main():
     sources = [
-        ("第一层 overlay（可直接使用）", "overlay/PROVENANCE.json"),
-        ("第二层 C 源码（需打补丁）", "manifest/tier2/PROVENANCE.json"),
+        ("tcl/ 配置（随树直接可用）", "manifest/tier1-PROVENANCE.json"),
+        ("src/ C 源码（需在构建系统注册）", "manifest/tier2-PROVENANCE.json"),
     ]
 
     sections = []

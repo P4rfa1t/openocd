@@ -1,0 +1,6 @@
+{
+ "upstream": "openocd-org/openocd",
+ "commit": "bb5a52da599c3dac61ddc51d2fa8c1166ee795d0",
+ "file_count": 2201,
+ "index": "manifest/upstream-index.txt"
+}

@@ -1,192 +1,208 @@
-# OpenOCD 第三方支持整合层
+# openocd-third-party-support
 
-把散落在 GitHub 各家 fork 里、从未上游化的 OpenOCD 芯片/板级/烧录器支持
-收敛成**一个可增量维护的仓库**。
+**`openocd-org/openocd` 的 fork** —— 把散落在 GitHub 各家 fork 里、从未上游化的
+芯片 / 开发板 / 烧录器支持，直接合并进 OpenOCD 源码树。
 
-**它不是 OpenOCD 的 fork**，也不包含 OpenOCD 本身。它是一层**外挂**，
-配合官方 `openocd-org/openocd` 使用。
+上游文件原封不动躺在 `src/`、`tcl/`、`doc/`、`contrib/` 里；新增的第三方支持
+落在**它们本该在的位置**：
 
----
-
-## 为什么是「外挂」而不是「合并进源码」
-
-上游根 `Makefile.am` 用**通配符**安装 TCL 文件：
-
-```makefile
-TCL_FILES = find $(srcdir)/tcl -name '*.cfg' -o -name '*.tcl' -o -name '*.txt'
+```
+tcl/target/xxx.cfg            ← 芯片目标配置
+tcl/board/xxx.cfg             ← 开发板配置
+tcl/interface/xxx.cfg         ← 调试器接口
+src/jtag/drivers/xxx.c        ← 烧录器驱动
+src/target/xxx.c              ← 新架构支持
 ```
 
-没有硬编码文件清单，所以新增 `.cfg` **不需要改 `configure.ac`、不需要重新编译**。
-任何"自动生成构建条目"的方案都是凭空制造复杂度。
-
-于是分成两层：
-
-| 层 | 内容 | 数量 | 怎么用 |
-|---|---|---|---|
-| **第一层 overlay** | 纯 TCL 配置 | 505 | `openocd -s overlay -f board/xxx.cfg`，**立即可用** |
-| **第二层 worklist** | 新 C 驱动/新架构 | 127 | 需改源码并走上游 PR，**当前不可用** |
+没有外挂目录，没有搜索路径技巧，没有"先装官方、再叠一层"。更新时只需
+`git fetch upstream && git merge upstream/master` —— 上游重命名 TCL、加驱动、
+改构建脚本，冲突由 git 正常呈现，而不是被一份静默遮蔽的副本吞掉。
 
 ---
 
-## 快速开始
+## 合并了什么
+
+扫描 688 个 OpenOCD 相关仓库，跨仓去重、剔除与官方等价的副本后：
+
+| 内容 | 数量 | 位置 | 状态 |
+|---|---:|---|---|
+| `tcl/` 配置 | 505 | 与官方同一目录 | **随构建生效**（上游 `Makefile.am` 用 `find` 通配安装，无需改构建脚本） |
+| `src/` C 源码 | 127 | 与官方同一目录 | 已就位，**仍需在构建系统里注册**（见下文「未完成的部分」） |
+| 折叠掉的重复副本 | 4109 | — | 去重后只保留一个胜出版本 |
+| 与官方重复而剔除 | 99 | — | 上游已收编该支持 |
+
+全部 **632 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交：
 
 ```bash
-# 只用官方 OpenOCD + 本仓库的额外支持
-openocd -s /path/to/this-repo/overlay -f board/xxx.cfg
+python - <<'PY'
+import json
+f = json.load(open("manifest/PROVENANCE.json", encoding="utf-8"))["files"]
+p = f["tcl/target/nucleo_l552ze.cfg"]
+print(p["source_repo"], p["source_branch"], p["source_commit"], p["license"])
+PY
 ```
 
-搜索路径里 overlay 在前，官方目录在后：官方文件始终可用，
-overlay 只补官方没有的部分。
+## 构建
 
-复制进安装目录（会先报告哪些文件会覆盖官方内容）：
+就是标准的 OpenOCD 构建，没有额外步骤：
 
 ```bash
-python tools/install_overlay.py --kind windows            # 试运行
-python tools/install_overlay.py --kind windows --apply    # 实际写入
+git clone --recursive <this repo>
+cd openocd
+./bootstrap && ./configure && make -j
+sudo make install
 ```
 
-> ⚠️ 用 `-s` 搜索路径模式时 **overlay 优先于官方**。
-> 本仓库已剔除所有与官方等价或同名遮蔽的副本，但如果你手工往 overlay 里加文件，
-> 它会遮蔽官方版本。参见 `docs/02-usage.md` 的「已知风险」一节。
+Windows 见上游 `README.Windows.md`（本仓库未改动）。
 
----
+验证用的上游基线（commit + 全量文件清单）记录在
+`manifest/upstream.json` 与 `manifest/upstream-index.txt`。
+
+## 使用
+
+编译安装后，所有新配置都在标准搜索路径下：
+
+```bash
+openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
+```
+
+也可以直接从源码树运行未安装的版本：
+
+```bash
+./src/openocd -s tcl -f board/xxx.cfg
+```
 
 ## 目录
 
 ```
-overlay/            第一层：505 个可直接使用的 TCL 文件
-  tcl/target/       284  芯片目标配置
-  tcl/board/        137  开发板配置（含 flash_algorithms/ 10 个）
-  tcl/interface/     45  调试器接口
-  tcl/cpld/          14  CPLD 配置
-  ...               以及 FPGA bitstream、芯片/架构公共片段
-  PROVENANCE.json   逐文件来源：仓库 / 分支 / commit / SHA-256 / 许可证
+tcl/            OpenOCD 配置树（官方 + 505 个第三方配置）
+src/            C 源码（官方 + 127 个第三方驱动/目标）
+doc/ testing/ contrib/ jimtcl/   上游原有内容，未改动
 
-manifest/tier2/     第二层：127 个需要改 C 的文件（工作清单，非可直接使用）
-manifest/           全部中间产物与去重决策，可审计
+manifest/       合并过程的可审计产物（唯一事实来源）
+  PROVENANCE.json            632 个文件的来源仓库/分支/commit/SHA-256/许可证
+  tier1-PROVENANCE.json      └ tcl/ 部分（抓取器直接写出的中间产物）
+  tier2-PROVENANCE.json      └ src/ 部分
+  consolidated.json          去重决策：胜出者、被折叠的重复、上游重复项
+  upstream.json              本 fork 所基于的上游 commit
+  upstream-index.txt         该 commit 的全量文件清单，去重判定基准
+  repos.csv / repos.json     688 个候选仓库排名
+  survey.json                粗筛原始结果
+  licenses.csv               逐文件许可证索引
 
 docs/00-findings.md     调研结论 + 方法论修正记录（踩过的坑）
 docs/01-inventory.md    清单报告（自动生成）
-docs/02-usage.md        使用说明与已知缺口
+docs/02-usage.md        使用说明、构建、未完成的部分
 docs/03-LICENSES.md     许可证清单（自动生成）
 
 tools/              可复现的流水线，全部步骤幂等
 ```
 
-> **480** 是上游确实没有的独立支持项，来自 `manifest/consolidated.json`；
-> **505** 是磁盘文件数（额外含 25 个为满足 `source` 引用而补齐的依赖）。
-> `manifest/consolidated.json` 是**唯一的事实来源** —— 它对官方重复的剔除与
-> `overlay/` 的内容严格一致，重跑 `fetch_overlay.py` 不会重新引入已剔除的副本。
+> **480 vs 505**：`manifest/consolidated.json` 记录 480 个上游确实没有的独立支持项；
+> 磁盘上有 505 个 `tcl` 文件，差额 25 个是为满足 `source [find ...]` 引用而补齐的依赖。
+> 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
+> 不会把已剔除的副本再拉回来。
 
----
+## 维护
 
-## 维护：吸收新 fork / 跟上官方主线
-
-### 1. 定期同步官方，重新生成清单
-
-官方把 TCL 收进厂商子目录时会改文件名，所以**每次官方更新后都要重新核对**，
-否则 overlay 里的旧副本会长期遮蔽官方修复。
+### 跟上官方主线
 
 ```bash
-export GH_TOKEN=<token>          # 仅从环境变量读取
+git fetch upstream && git merge upstream/master
+python tools/sync_upstream.py            # 官方新增/删除了什么、哪些支持已被上游收编
+python tools/verify_tree.py              # 必须 VERIFY: PASS
+```
+
+`tools/sync_upstream.py` 纯离线，只用 git：
+
+- 对比 `manifest/upstream-index.txt` 与当前上游，列出官方新增 / 删除的文件；
+- 找出**本 fork 里有、而官方现在也提供的**文件 —— 这些是该删掉改用官方版本的支持，
+  退出码非 0，CI 里可以直接当门禁；
+- 找出官方对应路径被移动（改名）的导入文件，提醒复查。
+
+清理命令：
+
+```bash
+python tools/prune_upstream_dups.py    # 路径相同 / 改名后相同
+python tools/prune_shadow.py            # 同名但目录不同（如 am335x.cfg vs ti/am335x.cfg）
+python tools/build_provenance.py        # 重新汇总 PROVENANCE.json
+python tools/verify_tree.py             # 必须回到 errors: 0
+```
+
+> `prune_shadow.py` 必须独立存在：规范化比对会把 `am335x.cfg` 和
+> `ti/am335x.cfg` 折叠成同一个键，而它们是两个不同的文件。早期漏掉这一类，
+> 结果 16 个扁平副本长期遮蔽着官方版本。
+
+### 吸收新的 fork
+
+```bash
+export GH_TOKEN=<token>          # 仅从环境变量读取，绝不写入任何文件
 export PYTHONIOENCODING=utf-8    # 部分文件名含非 GBK 字符
 
 bash tools/run_mine.sh            # 扫描全部候选仓库
 python tools/refine_survey.py     # 过滤噪声
-python tools/consolidate.py       # 跨仓去重
-bash tools/run_fetch.sh           # 抓取 + 自动校验
-python tools/resolve_deps.py --apply        # 补齐 source 引用依赖
-python tools/pin_commits.py                 # 回填 commit pin
-python tools/gen_report.py                  # 清单报告
-python tools/gen_licenses.py                # 许可证清单
-python tools/verify_overlay.py              # 完整性校验，必须 PASS
+python tools/consolidate.py       # 跨仓去重 + 剔除官方已有
+python tools/run_fetch.sh         # 抓取（tier1→tcl/，tier2→src/）
+python tools/resolve_deps.py --apply    # 补齐 source 引用依赖，直到闭合
+python tools/pin_commits.py              # 回填 commit pin
+python tools/gen_report.py               # 清单报告
+python tools/gen_licenses.py             # 许可证清单
+python tools/build_provenance.py         # 汇总 PROVENANCE.json
+python tools/verify_tree.py              # 完整性校验，必须 PASS
 ```
 
-一键跑完整流水线（`--apply` 才会写入，默认只报告）：
+一键跑完整流水线（`--apply` 才写入，默认只报告）：
 
 ```bash
 python tools/pipeline.py --apply
-# 也支持：--tier 2（连 C 源码一起抓）、--deep-budget 300（深挖更多候选）
+python tools/pipeline.py --apply --tier 2     # 连 src/ 一起
 ```
 
-官方重复由 `consolidate.py` **在写 manifest 时**剔除，所以 manifest 与 overlay
-始终一致。早期版本在写完之后用 `prune_*.py` 事后剔除，导致两者数字对不上
-（610 条记录 vs 505 个文件），任何人重跑 `fetch_overlay.py` 都会把已删的重复
-重新拉回来。这两个脚本现在只作为**存量仓库的清理工具**保留。
+**增量性**：`consolidate.py` 按路径去重，抓取器默认不覆盖已有文件，
+重复跑只会补上新增的部分。
 
-**增量更新**：`consolidate.py` 按路径去重，`fetch_overlay.py` 默认不覆盖已有文件，
-所以重复跑只会补上新增的部分。
-
-### 2. 合并一个新的 fork
+### 提交前必须通过
 
 ```bash
-python tools/consolidate.py              # 重新计算唯一清单
-python tools/fetch_overlay.py --tier 1   # 抓取缺失文件
-python tools/verify_overlay.py           # 必须 PASS 才提交
+python tools/verify_tree.py      # VERIFY: PASS，且 errors: 0
 ```
 
-如果新 fork 带来的是 C 代码，会自动落到 `manifest/tier2/`，
-成为走 upstream PR 的候选。
+当前状态：
 
-### 3. 上游新增了某个支持 → 清理
-
-`verify_overlay.py` 会把「与官方等价」的重复报为 **ERROR**。
-出现这类错误说明官方已经收编了该支持，应当从 overlay 删除，改用官方版本。
-
-```bash
-python tools/verify_overlay.py     # 看 ERROR 清单
-python tools/prune_upstream_duplicates.py   # 剔除「路径相同」与「改名后相同」
-python tools/prune_shadow.py                # 剔除「同名不同目录」的遮蔽
-python tools/verify_overlay.py     # 必须回到 errors: 0
 ```
-
-> 注意第二种 `prune_shadow.py` 检不出「同名不同目录」—— 因为规范化比对会把
-> `am335x.cfg` 与 `ti/am335x.cfg` 折叠成同一键，而它们其实是两个不同的文件。
-> 早期就是漏掉了这一类，导致 16 个扁平文件留在 overlay 里遮蔽官方版本。
-
-### 4. 提交前必须通过
-
-```bash
-python tools/verify_overlay.py     # VERIFY: PASS，且 errors: 0
+recorded 632 / on disk 632 / pinned 632 / errors 0
 ```
-
----
 
 ## 完整性保证
 
-`tools/verify_overlay.py`（纯离线，可当 CI 检查）：
+`tools/verify_tree.py`（纯离线，可当 CI 检查）：
 
 - 每个 provenance 条目都有真实文件，**1:1 对账**
-- 每个文件的 SHA-256 与记录一致
+- 每个文件的 SHA-256 与记录一致（`.gitattributes` 已关闭 `tcl/`、`src/` 的
+  EOL 转换，否则 Windows 上的 `core.autocrlf` 会让校验全灭）
 - 没有「记录了但磁盘缺失」或「磁盘有但未记录」
 - 没有与官方等价或同名遮蔽的重复副本
 - 所有 `.cfg`/`.tcl` 的花括号与方括号在忽略注释和引号后平衡
 - 许可证覆盖率统计
 
-当前状态：
+## 未完成的部分
 
-```
-overlay    recorded 505 / on disk 505 / pinned 505 / errors 0
-tier2      recorded 127 / on disk 127 / pinned 127 / errors 0
-```
-
-**全部 632 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
-
----
-
-## 已知缺口
-
-| 缺口 | 规模 | 说明 |
+| 项目 | 规模 | 说明 |
 |---|---|---|
-| 未深挖的仓库 | 488 / 688 | 全部做过粗筛，只深挖了 star 靠前的 200 个 |
+| C 驱动未注册进构建 | 127 | 文件已在 `src/` 的正确位置，但 `configure.ac` / `Makefile.am` / `drivers.c` / `target.c` 里还没有对应条目，需要逐个评估能否编译后再注册 |
 | 无许可证信息 | 476 / 632（75%） | 商用前必须人工审计，见 [docs/03-LICENSES.md](docs/03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 7 个 | `dbgagent`、`aji_client`、`tas_client`、`ddmi_usb`、`aice`、`mpdbgagent`、`ice2000` |
 | Synopsys 板级不可用 | 4 个 | 依赖厂商内部构建产物 |
+| 未深挖的仓库 | 488 / 688 | 全部做过粗筛，只深挖了 star 靠前的 200 个 |
 | 无运行时验证 | 全部 | 校验全是静态的，未在真机上 `source` 过 |
-
----
 
 ## 安全
 
-`GH_TOKEN` 只从环境变量读取，**绝不写入任何文件**。
-所有工具脚本在缺少该变量时会直接失败而不是降级。
+`GH_TOKEN` 只从环境变量读取，**绝不写入任何文件**。所有工具脚本在缺少该变量时
+直接失败而不是降级成匿名限流运行。
+
+## 许可
+
+OpenOCD 上游是 GPL-2.0-or-later。**本仓库汇集了他人的 fork，整体许可并不统一**：
+156 个文件明确标注 GPL-2.0，451 个来自 GitHub 无法解析 SPDX 的仓库，25 个
+来源已知但未标注。逐文件清单见 [docs/03-LICENSES.md](docs/03-LICENSES.md)。

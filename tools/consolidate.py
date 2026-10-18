@@ -107,7 +107,7 @@ RESTRUCTURED_UPSTREAM = {
 
 
 def tier(path):
-    """1 = drop-in tcl overlay, 2 = new C chip support, 0 = not importable."""
+    """1 = tcl/ config, 2 = new C chip support, 0 = not importable."""
     if GLUE_RE.match(path):
         return 1
     if not path.startswith("src/"):
@@ -227,7 +227,7 @@ def norm_key(p):
 
 
 def upstream_conflict(path, up_exact, up_idx):
-    """Return the upstream path this overlay path duplicates, else None.
+    """Return the upstream path this imported path duplicates, else None.
 
     Three shapes, and all three must be rejected here rather than after the
     manifest is written:
@@ -242,8 +242,8 @@ def upstream_conflict(path, up_exact, up_idx):
     file the fork really contributed.
 
     Doing this in post-processing (prune_*.py) left the manifest and the disk
-    disagreeing: consolidated.json still listed 610 records while the overlay
-    held 505 files, so any re-run of fetch_overlay.py silently re-added all
+    disagreeing: consolidated.json still listed 610 records while the tree
+    held 505 files, so any re-run of fetch_third_party.py silently re-added all
     177 duplicates. The manifest has to be the single source of truth.
     """
     if not up_exact:
@@ -281,7 +281,7 @@ def main():
                 continue
             clash = upstream_conflict(p, up_exact, up_idx)
             if clash:
-                pruned.append({"overlay_path": p, "upstream_path": clash})
+                pruned.append({"imported_path": p, "upstream_path": clash})
                 continue
             by_path[fold_key(p)].append(
                 {"repo": r["full_name"], "repo_meta": meta, "path": p})
@@ -339,10 +339,10 @@ def main():
         # Recorded here so the manifest, not a side effect, is the source of
         # truth for what was dropped and why. Previously this filtering only
         # happened after the manifest was written, leaving consolidated.json
-        # (610 records) and the overlay (505 files) disagreeing - and any
-        # re-run of fetch_overlay.py re-added all 177 duplicates.
+        # (610 records) and the tree (505 files) disagreeing - and any
+        # re-run of fetch_third_party.py re-added all 177 duplicates.
         "pruned_as_upstream_redundant": sorted(
-            pruned, key=lambda e: e["overlay_path"]),
+            pruned, key=lambda e: e["imported_path"]),
         "pruned_upstream_duplicate_count": len(pruned),
         "contributors": {k: v for k, v in
                          sorted(contrib.items(),

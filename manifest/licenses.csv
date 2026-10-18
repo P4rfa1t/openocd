@@ -1,633 +1,633 @@
 tier,repo,licence,path,branch,commit
-第一层 overlay（可直接使用）,AnlogicInfo/al_openocd,NOASSERTION,tcl/interface/al_link.cfg,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
-第一层 overlay（可直接使用）,Blinkinlabs/OpenOCD,GPL-2.0,tcl/board/zy1000.cfg,master,bd1adcffe7f3e51f490bf57889e7454816661196
-第一层 overlay（可直接使用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/board/vostok_vg015_dev.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
-第一层 overlay（可直接使用）,DCVostok/openocd-k1921vk,UNRESOLVED,tcl/interface/ftdi/vostok_vg015_dev.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
-第一层 overlay（可直接使用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/target/k1921vg015.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
-第一层 overlay（可直接使用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/target/k1921vk028.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
-第一层 overlay（可直接使用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/target/k1921vk035.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
-第一层 overlay（可直接使用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32e1x.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
-第一层 overlay（可直接使用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32f003.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
-第一层 overlay（可直接使用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32f0xx.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
-第一层 overlay（可直接使用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32s1x.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
-第一层 overlay（可直接使用）,HalfSweet/openocd,NOASSERTION,tcl/target/air001.cfg,master,149c98b73d16c92f775dfec96bd67a40d7242cee
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/altera-max10.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc3s.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc4v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc4vfx_40_60_100_140.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc5v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc5vfx_100_130_200.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc6s.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc6v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xcu.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,Icey7122/openocd,NOASSERTION,tcl/target/loongson2k300.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第一层 overlay（可直接使用）,ImproperCatGirl/openocd,NOASSERTION,tcl/interface/ddmi_demo.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
-第一层 overlay（可直接使用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/ch32x035.txt,master,1f625f720c778900b393d23dc3b0eaa4549227af
-第一层 overlay（可直接使用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/rp2350-riscv.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
-第一层 overlay（可直接使用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/wch_min.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
-第一层 overlay（可直接使用）,Lichee-Pi/LicheeTang_openocd,GPL-2.0,tcl/target/cc26xx.cfg,riscv,3e52078a084bc4b645c3e7e9a3d4f9aaf2a7b510
-第一层 overlay（可直接使用）,Lichee-Pi/LicheeTang_openocd,GPL-2.0,tcl/target/xilinx_ultrascale.cfg,riscv,3e52078a084bc4b645c3e7e9a3d4f9aaf2a7b510
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_hsb.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_muc.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_muc_common.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_muc_reset.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/chip/motorola/hsb.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_jtag.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_swd.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_swd_reset.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
-第一层 overlay（可直接使用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
-第一层 overlay（可直接使用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10_niosv__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
-第一层 overlay（可直接使用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/1986Be1T.cfg,master,89788eb29026fc67691fa463876e64d097219371
-第一层 overlay（可直接使用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/k1879x61R.cfg,master,89788eb29026fc67691fa463876e64d097219371
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/busblaster.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/calao-usb-a9260-c01.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/calao-usb-a9260-c02.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/jtagkey-tiny.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,UNRESOLVED,tcl/interface/jtagkey.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/signalyzer-h2.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/signalyzer-h4.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/turtelizer2.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/target/numicroM0.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/target/numicroM23.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/target/numicroM23_NS.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-第一层 overlay（可直接使用）,STMicroelectronics/OpenOCD,NOASSERTION,tcl/target/stm32h7rx.cfg,openocd-cubeide-r7,c8d973bdad9a6fddb51459eda109b3b95d23b57a
-第一层 overlay（可直接使用）,STMicroelectronics/OpenOCD,NOASSERTION,tcl/target/stm32v8x.cfg,openocd-cubeide-r7,c8d973bdad9a6fddb51459eda109b3b95d23b57a
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_cc35x1e_launchpad.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2340r5.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2340r53.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2341.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2745P10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2745R74.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2745r10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755P10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755P20.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755R10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755R74.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2765R10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_mspm33_launchpad.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc2341.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc23xx.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc27xx.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc35x1e.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_lpf3.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_mspm33.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/interface/jtag_tcp.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/arty7_linux.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/arty7_uboot.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/briey.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/murax.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/murax_xip.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/saxon.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/saxon_linux.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/saxon_xip.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/ti_msp432p4xx.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/vexriscv_sim.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21835w_ev_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21835w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21846w_ev_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21846w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc573_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc589_ezbrd.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc589_minibrd.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc5xx_ezbrd.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc835w_ev_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc835w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc846w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc846w_mp_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/ev-sc594-som-consumer.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/ev-sc594-som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/ev-sc598-som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/2183x_otp.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/2184x_otp.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/algoFileFinder.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/is25wp02gg.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/is72wvo32m8Awo256.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/issi22tf16g.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/issi25lp512m.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/mx66u1g45g.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/s26kl512s.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/w25q128fv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/adi-dbgagent.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/adi-mpdbgagent.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/ice1000.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/ice1500.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/ice2000.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adi_proc_tracker.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adsp2183x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adsp2184x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc57x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc57x_memory_map.xml,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc57x_single_SHARC.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc58x_memory_map.xml,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc58x_single_SHARC.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x_a55.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x_memory_map.xml,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x_single_SHARC.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc5xx.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc83x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc84x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc84x_core0.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc8xx.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/aducm36x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32520.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32570.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32572.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32655_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32657.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32658.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32665.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32665_nsrst.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32666_nsrst.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32680_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32690_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32xxx.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78000.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78000_nsrst.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78000_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78002.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78002_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/xtensa-core-adspsc83x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/xtensa-core-adspsc84x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/board/open-bldc.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/efm32_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/kl25z_hla.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/nrf51_stlink.tcl,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stellaris_icdi.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f0x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f1x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f2x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f3x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f4x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32lx_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,ciniml/openocd,GPL-2.0,tcl/target/stm32w108_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
-第一层 overlay（可直接使用）,cjacker/wch-openocd,NOASSERTION,tcl/target/wch-riscv.cfg,main,2b6802dde74a9560bdfb6eeecb6aff8a13cf8139
-第一层 overlay（可直接使用）,esden/openocd,GPL-2.0,tcl/board/stm32f10x_128k_eval.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第一层 overlay（可直接使用）,esden/openocd,GPL-2.0,tcl/target/mega128.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第一层 overlay（可直接使用）,esden/openocd,GPL-2.0,tcl/target/netx500.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第一层 overlay（可直接使用）,esden/openocd,GPL-2.0,tcl/target/sam7se512.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第一层 overlay（可直接使用）,esden/openocd,GPL-2.0,tcl/target/sam7x256.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第一层 overlay（可直接使用）,esden/openocd,GPL-2.0,tcl/target/xba_revA3.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c2-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c3-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c61-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c61-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c61-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h2-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h2-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h21-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h21-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h21-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h4-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h4-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h4-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/interface/esp_gpio_jtag.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/interface/esp_gpio_swd.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,UNRESOLVED,tcl/interface/ftdi/esp_ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/interface/jtag_esp_remote.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32-solo-1.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c5-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c5.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c6-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c61.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32h21.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32h4.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32p4-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32p4.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32s31-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32s31.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx6d-1gb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx6q-2gb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx7d-1gb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx8-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx8.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx8m-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/nt98528-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/nt98528.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/rk3566-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/rk3566.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs101.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs102.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs36.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs38.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs47D.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs48.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v1.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.1.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.2.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.2_cjtag.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.3.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.3_cjtag.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_hsdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_hsdk_4xd.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_iotdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f030r8.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f334r8.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f401re.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f411re.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,UNRESOLVED,tcl/cpu/arc/arcompact.tcl,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/interface/arc_sdp.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,UNRESOLVED,tcl/interface/ftdi/arc_sdp.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc001.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc002.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs36.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs38.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs47D.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs48.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_em_sk_fpga.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk_4xd.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_iotdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/k1879h61ya.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32l.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32lx_dual_bank.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第一层 overlay（可直接使用）,go2sh/aurix-openocd,NOASSERTION,tcl/target/renesas_rz_g2.cfg,aurix_support,4fbdce8e2aa7270f2b2953bbb333b635effa1607
-第一层 overlay（可直接使用）,hikob/openocd,GPL-2.0,tcl/interface/arm-usb-ocd.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
-第一层 overlay（可直接使用）,hikob/openocd,GPL-2.0,tcl/interface/stlink-usb.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
-第一层 overlay（可直接使用）,hikob/openocd,GPL-2.0,tcl/target/stm32.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
-第一层 overlay（可直接使用）,hikob/openocd,GPL-2.0,tcl/target/stm32f2xxx.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_d2000.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_d2000_onboard.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_se.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/snps_axs101.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/snps_axs102.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_amla3.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_angel4.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_haps51.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_ml509.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,UNRESOLVED,tcl/interface/snps_sdp.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc11uxx.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1751.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1752.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1754.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1756.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1758.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1759.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1763.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1764.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1765.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1766.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1767.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1768.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1769.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1788.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/quark_d2000.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/quark_se.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_axc001.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_axc002.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_em_sk_lx45.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_ml509_arc600.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_ml509_arc700.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_starter_kit_arc-em.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_starter_kit_arc-em_eb.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第一层 overlay（可直接使用）,karlp/openocd-hacks,NOASSERTION,tcl/interface/wlink.cfg,mrs-wch-riscv-221010,266d7c8d3f6ceae5e600de13d39a1dedc6b1d604
-第一层 overlay（可直接使用）,kevinmehall/openOCD,GPL-2.0,tcl/interface/orsoc-jtag.cfg,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第一层 overlay（可直接使用）,kevinmehall/openOCD,GPL-2.0,tcl/target/vjtag.cfg,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第一层 overlay（可直接使用）,kvth/openocd-swd-in-out,NOASSERTION,tcl/interface/c20-swd.cfg,master,ba8e65d424062702194238b45f62bec34b9d7f50
-第一层 overlay（可直接使用）,linux-msm/openocd,NOASSERTION,tcl/interface/eud.cfg,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-第一层 overlay（可直接使用）,loopj/openocd-efm32s2,NOASSERTION,tcl/target/efm32s2.cfg,efm32s2,c9fd9f6a27c5d034f78b856ad6136127cebd5a8b
-第一层 overlay（可直接使用）,loopj/openocd-efm32s2,NOASSERTION,tcl/target/efm32s2_g23.cfg,efm32s2,c9fd9f6a27c5d034f78b856ad6136127cebd5a8b
-第一层 overlay（可直接使用）,luyi1888/openocd,NOASSERTION,tcl/interface/dirtyjtag-cjtag.cfg,master,0678540e99f708e06d09b34f23f9d1acaf4530c6
-第一层 overlay（可直接使用）,luyi1888/openocd,NOASSERTION,tcl/target/rv1106-mcu.cfg,master,0678540e99f708e06d09b34f23f9d1acaf4530c6
-第一层 overlay（可直接使用）,matrix-io/matrix-creator-openocd,GPL-2.0,tcl/interface/matrix-creator.cfg,master,3ecfa288430f46d6caa89e13f4224d2835b88dd8
-第一层 overlay（可直接使用）,mengfanyuc/openocd,NOASSERTION,tcl/target/ch32f2x.cfg,master,0288690dc95aca791a6b55434cf7982304ff97e4
-第一层 overlay（可直接使用）,nmenon/openocd,NOASSERTION,tcl/board/ti_am64xx_swd_native.cfg,master,ab22b0bf8f23924d8c76d3affd9e11528ba18438
-第一层 overlay（可直接使用）,nmenon/openocd,NOASSERTION,tcl/board/ti_j784s4_swd_native.cfg,master,ab22b0bf8f23924d8c76d3affd9e11528ba18438
-第一层 overlay（可直接使用）,nmenon/openocd,NOASSERTION,tcl/target/stm32wbax.cfg,master,ab22b0bf8f23924d8c76d3affd9e11528ba18438
-第一层 overlay（可直接使用）,os-fpga/openocd,NOASSERTION,tcl/board/gemini.cfg,master,31a77f2f4290a89bb7b3bb7b227226a20ddfa12e
-第一层 overlay（可直接使用）,padhialuo0426/openocd,NOASSERTION,tcl/target/ws63.cfg,ws63,4b5efe35b780327d59313e8caef2b7bc6a135d9a
-第一层 overlay（可直接使用）,pebble/openocd,GPL-2.0,tcl/target/m051.cfg,pebble_fork,0ff57c6f8f7440cda52e6a1847b0b28c91e5b558
-第一层 overlay（可直接使用）,raspberrypi/openocd,NOASSERTION,tcl/interface/raspberrypi-swd.cfg,rpi-common,acff23ffd100479d6481a1155123774b79a990b9
-第一层 overlay（可直接使用）,raspberrypi/openocd,NOASSERTION,tcl/target/rp2040-rescue.cfg,rpi-common,acff23ffd100479d6481a1155123774b79a990b9
-第一层 overlay（可直接使用）,raspberrypi/openocd,NOASSERTION,tcl/target/rp2350-rescue.cfg,rpi-common,acff23ffd100479d6481a1155123774b79a990b9
-第一层 overlay（可直接使用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/sifive-e31arty-cjtag.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-第一层 overlay（可直接使用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/sifive-e31arty-onboard-ftdi.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-第一层 overlay（可直接使用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/stm32mp13x_dk.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-第一层 overlay（可直接使用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/stm32mp15x_dk2.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-第一层 overlay（可直接使用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/target/nrf_common.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/cpld/xilinx-xcr3256.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32a403axx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32a423xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f011xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f402xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f402xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403_spim_type1_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403_spim_type2_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type1_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type1_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type2_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type2_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403axG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403axx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f405xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f405xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f407xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f407xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type1_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type1_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type2_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type2_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f415xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f421xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f422xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f423xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f425xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f426xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xG_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xM.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xM_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xG_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xM.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xM_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f45xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32l021xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32m412xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32m416xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32wb415xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
-第一层 overlay（可直接使用）,snowcap-electronics/OpenOCD,GPL-2.0,tcl/board/snowcap-stm32f4v1.cfg,snowcap-v0.9.0-2015-07-23,b59b331e82079ffb405dbbdb3d74794e4bc8f634
-第一层 overlay（可直接使用）,sony/openocd-nuttx,GPL-2.0,tcl/board/lc823450_xgevk.cfg,sony/master,b1f9b14b662fe729c1c5108fba402948aea508fc
-第一层 overlay（可直接使用）,sony/openocd-nuttx,UNRESOLVED,tcl/interface/ftdi/sony-ft232h-with-resistor.cfg,sony/master,b1f9b14b662fe729c1c5108fba402948aea508fc
-第一层 overlay（可直接使用）,sony/openocd-nuttx,GPL-2.0,tcl/target/lc823450.cfg,sony/master,b1f9b14b662fe729c1c5108fba402948aea508fc
-第一层 overlay（可直接使用）,stache3000/openocd-dirtyjtag,NOASSERTION,tcl/interface/dirtyjtag.cfg,master,d07856f7bfbac0c0f95ae0c9d91a82626cb394d8
-第一层 overlay（可直接使用）,stacksmashing/openocd-tamarin,NOASSERTION,tcl/interface/faultier.cfg,tamarin,eb5d44390a1e3d3fca72e67db94786598432432f
-第一层 overlay（可直接使用）,stacksmashing/openocd-tamarin,NOASSERTION,tcl/interface/tamarin.cfg,tamarin,eb5d44390a1e3d3fca72e67db94786598432432f
-第一层 overlay（可直接使用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/1986Ð²Ðµ1Ñ‚.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
-第一层 overlay（可直接使用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/esp8266.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
-第一层 overlay（可直接使用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/Ðº1879xÐ±1Ñ.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/board/rs14100.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/board/st_nucleo_l476rg.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/board/stm32mp25x_dk.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/board/twr-k40.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/interface/cc3200lp.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/interface/picoprobe.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/interface/ti-icdi-auto.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm3027.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm3029.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm302x.tcl,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm4050.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm4x50.tcl,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/bluenrg-lp.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/imx6_dual.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/imx6_quad.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/imxrt.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/ke02.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/ke04.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/ke06.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kex.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_128k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_1m.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_256k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_32k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_512k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_64k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_generic.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc1549.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc15xx.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc546xx.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc55sxx.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/pic32mm.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberry.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi2.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi3.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi3_single.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi4.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/rm57x.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/rs14100.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/stm32g0x_alt.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/stm32g4x_alt.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/swj-dp-legacy.tcl,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,sysprogs/openocd,NOASSERTION,tcl/target/ti_tms570ls1224.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第一层 overlay（可直接使用）,tihmstar/openocd_colobus,NOASSERTION,tcl/interface/colobus.cfg,master,7eab5ac160296c988b06ea058955030a99599025
-第一层 overlay（可直接使用）,transcelestial/openocd,NOASSERTION,tcl/target/lpc55xx.cfg,master,1e85644a52a21c60ebc4cafe4fe7284c97e6f03f
-第一层 overlay（可直接使用）,ut2or1/openocd,NOASSERTION,tcl/board/arty_s7.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,NOASSERTION,tcl/board/iar_lpc1768.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7v.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7vh580t.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7vh870t.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,UNRESOLVED,tcl/fpga/xilinx-dna.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,UNRESOLVED,tcl/fpga/xilinx-xc3s.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,ut2or1/openocd,NOASSERTION,tcl/target/zynq_7000.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/board/st_nucleo_l5.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/atlink.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/atlink_dap_v2.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/cmsis-dap_v2_aic8800.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/cmsis-dap_v2_aic8800m40.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/cmsis-dap_v2_aic8800mc.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/aic8800.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/aic8800m40.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/aic8800mc.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/py32f0xx.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
-第一层 overlay（可直接使用）,walmis/openocd-blackmagic,GPL-2.0,tcl/board/renesas_gen2_common.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
-第一层 overlay（可直接使用）,walmis/openocd-blackmagic,GPL-2.0,tcl/interface/blackmagic.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
-第一层 overlay（可直接使用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7790.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
-第一层 overlay（可直接使用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7791.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
-第一层 overlay（可直接使用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7794.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/interface/mchp-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/target/#U043a1879x#U04311#U044f.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/target/1986#U0432#U04351#U0442.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/target/dspic33-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/target/mchp-renode.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/target/mchp-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/target/pic18-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,xsession/openocd,NOASSERTION,tcl/target/pic32mz-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/board/nds32_xc5.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/board/snps_hsdk_smp.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/interface/nds32-aice.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/nds32v2.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/nds32v3.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/nds32v3m.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/rp2040-core0.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/rv32m1_ri5cy.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/rv32m1_zero_riscy.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/snps_hsdk_smp.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/vd_xtensa_jtag.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/art_pi2.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/atk_cnn647b.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/omap2420_h4.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/st_nucleo_c5.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/st_nucleo_h5.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_am625_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_am62a7_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_am62p_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beagleboard.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beagleboard_xm.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone-base.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone_black.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_j721e_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/board/ti_j722s_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,UNRESOLVED,tcl/gdb_helper.tcl,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/interface/ch347.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/interface/tas_client.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/ch32f1x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/ch579.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,UNRESOLVED,tcl/target/infineon/aurix_program.tcl,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/stm32c5x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/stm32h5x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/stm32l4plusx.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/stm32wb0x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/stm32wl3x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/stm32wl4x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第一层 overlay（可直接使用）,zuyih/openocd,NOASSERTION,tcl/target/xmc7xxx.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-第二层 C 源码（需打补丁）,AnlogicInfo/al_openocd,NOASSERTION,src/jtag/drivers/al_link.c,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
-第二层 C 源码（需打补丁）,AnlogicInfo/al_openocd,NOASSERTION,src/jtag/drivers/al_link_cyusb.c,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
-第二层 C 源码（需打补丁）,AnlogicInfo/al_openocd,NOASSERTION,src/jtag/drivers/al_link_cyusb.h,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
-第二层 C 源码（需打补丁）,AnlogicInfo/al_openocd,NOASSERTION,src/server/rbb_server.c,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
-第二层 C 源码（需打补丁）,AnlogicInfo/al_openocd,NOASSERTION,src/server/rbb_server.h,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
-第二层 C 源码（需打补丁）,Icey7122/openocd,NOASSERTION,src/target/loongarch.c,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第二层 C 源码（需打补丁）,Icey7122/openocd,NOASSERTION,src/target/loongarch.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第二层 C 源码（需打补丁）,Icey7122/openocd,NOASSERTION,src/target/loongarch_ejtag.c,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第二层 C 源码（需打补丁）,Icey7122/openocd,NOASSERTION,src/target/loongarch_ejtag.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第二层 C 源码（需打补丁）,Icey7122/openocd,NOASSERTION,src/target/loongarch_modules.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第二层 C 源码（需打补丁）,Icey7122/openocd,NOASSERTION,src/target/loongarch_pracc.c,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第二层 C 源码（需打补丁）,Icey7122/openocd,NOASSERTION,src/target/loongarch_pracc.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-第二层 C 源码（需打补丁）,ImproperCatGirl/openocd,NOASSERTION,src/jtag/drivers/ddmi_demo.c,master,1f625f720c778900b393d23dc3b0eaa4549227af
-第二层 C 源码（需打补丁）,ImproperCatGirl/openocd,NOASSERTION,src/jtag/drivers/ftdi_rvswd.c,master,1f625f720c778900b393d23dc3b0eaa4549227af
-第二层 C 源码（需打补丁）,Seneral/riscv-openocd-wch,NOASSERTION,src/jtag/drivers/wlinke.c,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
-第二层 C 源码（需打补丁）,Seneral/riscv-openocd-wch,NOASSERTION,src/target/wch_riscv-013.c,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
-第二层 C 源码（需打补丁）,Seneral/riscv-openocd-wch,NOASSERTION,src/target/wch_riscv.c,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
-第二层 C 源码（需打补丁）,Seneral/riscv-openocd-wch,NOASSERTION,src/target/wch_riscv.h,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
-第二层 C 源码（需打补丁）,aesc-silicon/elements-openocd,NOASSERTION,src/jtag/drivers/jtag_tcp.c,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第二层 C 源码（需打补丁）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv-csrs.h,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第二层 C 源码（需打补丁）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv.c,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第二层 C 源码（需打补丁）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv.h,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
-第二层 C 源码（需打补丁）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/adi_dbg_agent.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第二层 C 源码（需打补丁）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/ice1000.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第二层 C 源码（需打补丁）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/ice1500.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第二层 C 源码（需打补丁）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第二层 C 源码（需打补丁）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/jsmn.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget_cmd.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget_common.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_ace.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_ace.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_burner_server.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_cmd.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_profiling.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
-第二层 C 源码（需打补丁）,dynm/openocd-starbleed,GPL-2.0,src/jtag/drivers/cmsis_dap_usb.c,master,25c1d0466e04d905ece5c653fc6d11fb6d139650
-第二层 C 源码（需打补丁）,esden/openocd,GPL-2.0,src/target/cortex_a8.c,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第二层 C 源码（需打补丁）,esden/openocd,GPL-2.0,src/target/cortex_a8.h,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-第二层 C 源码（需打补丁）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/esp_gpio.c,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第二层 C 源码（需打补丁）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/esp_gpio.h,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第二层 C 源码（需打补丁）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/jtag_esp_remote.c,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/adi_v5_cmsis_dap.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc32.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc32.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_dbg.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_dbg.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_mntr.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_mntr.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_ocd.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_ocd.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_regs.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_regs.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-第二层 C 源码（需打补丁）,fxsheep/openocd_wchlink-rv,NOASSERTION,src/jtag/drivers/wlink.c,master,b32f25ee7cf834b2fba71ca4a437ffc282085d66
-第二层 C 源码（需打补丁）,fxsheep/openocd_wchlink-rv,NOASSERTION,src/jtag/drivers/wlink.h,master,b32f25ee7cf834b2fba71ca4a437ffc282085d66
-第二层 C 源码（需打补丁）,hackpascal/openocd,NOASSERTION,src/jtag/drivers/mpsse-d2xx.c,master,52af45ed0a1fb990f8bdac01f46980de72e5dd92
-第二层 C 源码（需打补丁）,hackpascal/openocd,NOASSERTION,src/jtag/drivers/mpsse-libusb.c,master,52af45ed0a1fb990f8bdac01f46980de72e5dd92
-第二层 C 源码（需打补丁）,hackpascal/openocd,NOASSERTION,src/jtag/drivers/mpsse-private.h,master,52af45ed0a1fb990f8bdac01f46980de72e5dd92
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/arc_core.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/arc_core.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/arc_trgt.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/arc_trgt.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/quark_d2000.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/quark_d2000.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/quark_se.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/OpenOCD,GPL-2.0,src/target/quark_se.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-第二层 C 源码（需打补丁）,intel/aji_openocd,NOASSERTION,src/jtag/drivers/jtag_usb_common.h,main,5173047ae18e8149e985856000c5bc4d20a2e6c8
-第二层 C 源码（需打补丁）,kevinmehall/openOCD,GPL-2.0,src/target/altera_virtual_jtag.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第二层 C 源码（需打补丁）,kevinmehall/openOCD,GPL-2.0,src/target/cortex_m3.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第二层 C 源码（需打补丁）,kevinmehall/openOCD,GPL-2.0,src/target/cortex_m3.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第二层 C 源码（需打补丁）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第二层 C 源码（需打补丁）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第二层 C 源码（需打补丁）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag_adv.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第二层 C 源码（需打补丁）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag_adv.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-第二层 C 源码（需打补丁）,linux-msm/openocd,NOASSERTION,src/target/aarch64_coproc_reg.c,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-第二层 C 源码（需打补丁）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-第二层 C 源码（需打补丁）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers_defs.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-第二层 C 源码（需打补丁）,linux-msm/openocd,NOASSERTION,src/target/hexagon.c,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-第二层 C 源码（需打补丁）,linux-msm/openocd,NOASSERTION,src/target/hexagon.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-第二层 C 源码（需打补丁）,linux-msm/openocd,NOASSERTION,src/target/stm8.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-第二层 C 源码（需打补丁）,mabl/openocd_chibios,GPL-2.0,src/target/stm32_stlink.c,chibios,4e001353f4128c12355a8200b7a95daa3cd2d4fe
-第二层 C 源码（需打补丁）,meriac/openocd,NOASSERTION,src/jtag/drivers/ch347_jtag.c,ch347,eeede198cdbc586cbe11041776d07589e1d5b5e6
-第二层 C 源码（需打补丁）,riscv-collab/riscv-openocd,NOASSERTION,src/jtag/drivers/xlnx-pcie-xvc.c,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-第二层 C 源码（需打补丁）,stache3000/openocd-dirtyjtag,NOASSERTION,src/jtag/drivers/dirtyjtag.c,master,d07856f7bfbac0c0f95ae0c9d91a82626cb394d8
-第二层 C 源码（需打补丁）,stacksmashing/openocd,GPL-2.0,src/jtag/drivers/bonobo.c,tamarin,c6d4abbee68550dc4bd1cc39429df14ab4767b05
-第二层 C 源码（需打补丁）,stacksmashing/openocd-tamarin,NOASSERTION,src/jtag/drivers/tamarin.c,tamarin,eb5d44390a1e3d3fca72e67db94786598432432f
-第二层 C 源码（需打补丁）,sysprogs/openocd,NOASSERTION,src/jtag/drivers/stlink_usb_hla_multicore.c,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第二层 C 源码（需打补丁）,sysprogs/openocd,NOASSERTION,src/target/hla_target_hla_multicore.c,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第二层 C 源码（需打补丁）,sysprogs/openocd,NOASSERTION,src/target/stm8_hla_multicore.c,master,6bb1477098889a29b8c53620763dacf1c61a0695
-第二层 C 源码（需打补丁）,tihmstar/openocd_colobus,NOASSERTION,src/jtag/drivers/colobus.c,master,7eab5ac160296c988b06ea058955030a99599025
-第二层 C 源码（需打补丁）,walmis/openocd-blackmagic,GPL-2.0,src/jtag/drivers/blackmagic.c,master,c9914b494085252d5938cd9192f90026fd4ffe47
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/c28x.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/c28x.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_bridge.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_bridge.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_native.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_native.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/tms320.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,xsession/openocd,NOASSERTION,src/target/tms320.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-第二层 C 源码（需打补丁）,yottatsa/openocd,NOASSERTION,src/target/vortex86.c,vortex86,6910de37c723fe3878012a92855f588741ae44b5
-第二层 C 源码（需打补丁）,yottatsa/openocd,NOASSERTION,src/target/vortex86.h,vortex86,6910de37c723fe3878012a92855f588741ae44b5
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_aice.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_aice.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_cmd.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_cmd.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_disassembler.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_disassembler.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_edm.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_insn.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_reg.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_reg.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_tlb.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_tlb.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v2.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v2.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3_common.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3_common.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3m.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3m.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-第二层 C 源码（需打补丁）,zuyih/openocd,NOASSERTION,src/jtag/drivers/cmsis_dap_wch.c,master,5422b51c81253e7d212c36775ded24f525f4c783
+src/ C 源码（需在构建系统注册）,AnlogicInfo/al_openocd,NOASSERTION,src/jtag/drivers/al_link.c,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
+src/ C 源码（需在构建系统注册）,AnlogicInfo/al_openocd,NOASSERTION,src/jtag/drivers/al_link_cyusb.c,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
+src/ C 源码（需在构建系统注册）,AnlogicInfo/al_openocd,NOASSERTION,src/jtag/drivers/al_link_cyusb.h,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
+src/ C 源码（需在构建系统注册）,AnlogicInfo/al_openocd,NOASSERTION,src/server/rbb_server.c,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
+src/ C 源码（需在构建系统注册）,AnlogicInfo/al_openocd,NOASSERTION,src/server/rbb_server.h,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
+src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch.c,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_ejtag.c,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_ejtag.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_modules.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_pracc.c,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_pracc.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,ImproperCatGirl/openocd,NOASSERTION,src/jtag/drivers/ddmi_demo.c,master,1f625f720c778900b393d23dc3b0eaa4549227af
+src/ C 源码（需在构建系统注册）,ImproperCatGirl/openocd,NOASSERTION,src/jtag/drivers/ftdi_rvswd.c,master,1f625f720c778900b393d23dc3b0eaa4549227af
+src/ C 源码（需在构建系统注册）,Seneral/riscv-openocd-wch,NOASSERTION,src/jtag/drivers/wlinke.c,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
+src/ C 源码（需在构建系统注册）,Seneral/riscv-openocd-wch,NOASSERTION,src/target/wch_riscv-013.c,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
+src/ C 源码（需在构建系统注册）,Seneral/riscv-openocd-wch,NOASSERTION,src/target/wch_riscv.c,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
+src/ C 源码（需在构建系统注册）,Seneral/riscv-openocd-wch,NOASSERTION,src/target/wch_riscv.h,wch-linke-sdi,bde507c1e98514162bdbe4275662027a46b98e55
+src/ C 源码（需在构建系统注册）,aesc-silicon/elements-openocd,NOASSERTION,src/jtag/drivers/jtag_tcp.c,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+src/ C 源码（需在构建系统注册）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv-csrs.h,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+src/ C 源码（需在构建系统注册）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv.c,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+src/ C 源码（需在构建系统注册）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv.h,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/adi_dbg_agent.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/ice1000.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/ice1500.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/jsmn.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget_cmd.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/nds_vtarget_common.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_ace.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_ace.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_burner_server.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_cmd.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/ndsv5_profiling.c,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
+src/ C 源码（需在构建系统注册）,dynm/openocd-starbleed,GPL-2.0,src/jtag/drivers/cmsis_dap_usb.c,master,25c1d0466e04d905ece5c653fc6d11fb6d139650
+src/ C 源码（需在构建系统注册）,esden/openocd,GPL-2.0,src/target/cortex_a8.c,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+src/ C 源码（需在构建系统注册）,esden/openocd,GPL-2.0,src/target/cortex_a8.h,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+src/ C 源码（需在构建系统注册）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/esp_gpio.c,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+src/ C 源码（需在构建系统注册）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/esp_gpio.h,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+src/ C 源码（需在构建系统注册）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/jtag_esp_remote.c,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/adi_v5_cmsis_dap.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc32.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc32.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_dbg.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_dbg.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_mntr.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_mntr.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_ocd.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_ocd.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_regs.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/target/arc_regs.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+src/ C 源码（需在构建系统注册）,fxsheep/openocd_wchlink-rv,NOASSERTION,src/jtag/drivers/wlink.c,master,b32f25ee7cf834b2fba71ca4a437ffc282085d66
+src/ C 源码（需在构建系统注册）,fxsheep/openocd_wchlink-rv,NOASSERTION,src/jtag/drivers/wlink.h,master,b32f25ee7cf834b2fba71ca4a437ffc282085d66
+src/ C 源码（需在构建系统注册）,hackpascal/openocd,NOASSERTION,src/jtag/drivers/mpsse-d2xx.c,master,52af45ed0a1fb990f8bdac01f46980de72e5dd92
+src/ C 源码（需在构建系统注册）,hackpascal/openocd,NOASSERTION,src/jtag/drivers/mpsse-libusb.c,master,52af45ed0a1fb990f8bdac01f46980de72e5dd92
+src/ C 源码（需在构建系统注册）,hackpascal/openocd,NOASSERTION,src/jtag/drivers/mpsse-private.h,master,52af45ed0a1fb990f8bdac01f46980de72e5dd92
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/arc_core.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/arc_core.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/arc_trgt.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/arc_trgt.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/quark_d2000.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/quark_d2000.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/quark_se.c,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/quark_se.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+src/ C 源码（需在构建系统注册）,intel/aji_openocd,NOASSERTION,src/jtag/drivers/jtag_usb_common.h,main,5173047ae18e8149e985856000c5bc4d20a2e6c8
+src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/altera_virtual_jtag.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/cortex_m3.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/cortex_m3.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag_adv.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag_adv.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_coproc_reg.c,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
+src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
+src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers_defs.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
+src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/hexagon.c,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
+src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/hexagon.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
+src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/stm8.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
+src/ C 源码（需在构建系统注册）,mabl/openocd_chibios,GPL-2.0,src/target/stm32_stlink.c,chibios,4e001353f4128c12355a8200b7a95daa3cd2d4fe
+src/ C 源码（需在构建系统注册）,meriac/openocd,NOASSERTION,src/jtag/drivers/ch347_jtag.c,ch347,eeede198cdbc586cbe11041776d07589e1d5b5e6
+src/ C 源码（需在构建系统注册）,riscv-collab/riscv-openocd,NOASSERTION,src/jtag/drivers/xlnx-pcie-xvc.c,riscv,10b7a647da03cb64fd25db76261712c388ad6468
+src/ C 源码（需在构建系统注册）,stache3000/openocd-dirtyjtag,NOASSERTION,src/jtag/drivers/dirtyjtag.c,master,d07856f7bfbac0c0f95ae0c9d91a82626cb394d8
+src/ C 源码（需在构建系统注册）,stacksmashing/openocd,GPL-2.0,src/jtag/drivers/bonobo.c,tamarin,c6d4abbee68550dc4bd1cc39429df14ab4767b05
+src/ C 源码（需在构建系统注册）,stacksmashing/openocd-tamarin,NOASSERTION,src/jtag/drivers/tamarin.c,tamarin,eb5d44390a1e3d3fca72e67db94786598432432f
+src/ C 源码（需在构建系统注册）,sysprogs/openocd,NOASSERTION,src/jtag/drivers/stlink_usb_hla_multicore.c,master,6bb1477098889a29b8c53620763dacf1c61a0695
+src/ C 源码（需在构建系统注册）,sysprogs/openocd,NOASSERTION,src/target/hla_target_hla_multicore.c,master,6bb1477098889a29b8c53620763dacf1c61a0695
+src/ C 源码（需在构建系统注册）,sysprogs/openocd,NOASSERTION,src/target/stm8_hla_multicore.c,master,6bb1477098889a29b8c53620763dacf1c61a0695
+src/ C 源码（需在构建系统注册）,tihmstar/openocd_colobus,NOASSERTION,src/jtag/drivers/colobus.c,master,7eab5ac160296c988b06ea058955030a99599025
+src/ C 源码（需在构建系统注册）,walmis/openocd-blackmagic,GPL-2.0,src/jtag/drivers/blackmagic.c,master,c9914b494085252d5938cd9192f90026fd4ffe47
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/c28x.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/c28x.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_bridge.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_bridge.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_native.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_native.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/tms320.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/tms320.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+src/ C 源码（需在构建系统注册）,yottatsa/openocd,NOASSERTION,src/target/vortex86.c,vortex86,6910de37c723fe3878012a92855f588741ae44b5
+src/ C 源码（需在构建系统注册）,yottatsa/openocd,NOASSERTION,src/target/vortex86.h,vortex86,6910de37c723fe3878012a92855f588741ae44b5
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_aice.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_aice.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_cmd.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_cmd.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_disassembler.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_disassembler.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_edm.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_insn.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_reg.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_reg.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_tlb.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_tlb.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v2.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v2.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3_common.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3_common.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3m.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3m.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zuyih/openocd,NOASSERTION,src/jtag/drivers/cmsis_dap_wch.c,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,AnlogicInfo/al_openocd,NOASSERTION,tcl/interface/al_link.cfg,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
+tcl/ 配置（随树直接可用）,Blinkinlabs/OpenOCD,GPL-2.0,tcl/board/zy1000.cfg,master,bd1adcffe7f3e51f490bf57889e7454816661196
+tcl/ 配置（随树直接可用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/board/vostok_vg015_dev.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
+tcl/ 配置（随树直接可用）,DCVostok/openocd-k1921vk,UNRESOLVED,tcl/interface/ftdi/vostok_vg015_dev.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
+tcl/ 配置（随树直接可用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/target/k1921vg015.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
+tcl/ 配置（随树直接可用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/target/k1921vk028.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
+tcl/ 配置（随树直接可用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/target/k1921vk035.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
+tcl/ 配置（随树直接可用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32e1x.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
+tcl/ 配置（随树直接可用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32f003.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
+tcl/ 配置（随树直接可用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32f0xx.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
+tcl/ 配置（随树直接可用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32s1x.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
+tcl/ 配置（随树直接可用）,HalfSweet/openocd,NOASSERTION,tcl/target/air001.cfg,master,149c98b73d16c92f775dfec96bd67a40d7242cee
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/altera-max10.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc3s.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc4v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc4vfx_40_60_100_140.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc5v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc5vfx_100_130_200.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc6s.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc6v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xcu.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/target/loongson2k300.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+tcl/ 配置（随树直接可用）,ImproperCatGirl/openocd,NOASSERTION,tcl/interface/ddmi_demo.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
+tcl/ 配置（随树直接可用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/ch32x035.txt,master,1f625f720c778900b393d23dc3b0eaa4549227af
+tcl/ 配置（随树直接可用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/rp2350-riscv.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
+tcl/ 配置（随树直接可用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/wch_min.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
+tcl/ 配置（随树直接可用）,Lichee-Pi/LicheeTang_openocd,GPL-2.0,tcl/target/cc26xx.cfg,riscv,3e52078a084bc4b645c3e7e9a3d4f9aaf2a7b510
+tcl/ 配置（随树直接可用）,Lichee-Pi/LicheeTang_openocd,GPL-2.0,tcl/target/xilinx_ultrascale.cfg,riscv,3e52078a084bc4b645c3e7e9a3d4f9aaf2a7b510
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_hsb.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_muc.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_muc_common.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_muc_reset.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/chip/motorola/hsb.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_jtag.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_swd.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_swd_reset.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
+tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
+tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10_niosv__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
+tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/1986Be1T.cfg,master,89788eb29026fc67691fa463876e64d097219371
+tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/k1879x61R.cfg,master,89788eb29026fc67691fa463876e64d097219371
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/busblaster.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/calao-usb-a9260-c01.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/calao-usb-a9260-c02.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/jtagkey-tiny.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,UNRESOLVED,tcl/interface/jtagkey.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/signalyzer-h2.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/signalyzer-h4.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/turtelizer2.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/target/numicroM0.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/target/numicroM23.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/target/numicroM23_NS.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
+tcl/ 配置（随树直接可用）,STMicroelectronics/OpenOCD,NOASSERTION,tcl/target/stm32h7rx.cfg,openocd-cubeide-r7,c8d973bdad9a6fddb51459eda109b3b95d23b57a
+tcl/ 配置（随树直接可用）,STMicroelectronics/OpenOCD,NOASSERTION,tcl/target/stm32v8x.cfg,openocd-cubeide-r7,c8d973bdad9a6fddb51459eda109b3b95d23b57a
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_cc35x1e_launchpad.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2340r5.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2340r53.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2341.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2745P10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2745R74.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2745r10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755P10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755P20.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755R10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2755R74.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_lp_em_cc2765R10.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/board/ti_mspm33_launchpad.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc2341.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc23xx.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc27xx.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_cc35x1e.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_lpf3.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,TexasInstruments/ti-openocd,NOASSERTION,tcl/target/ti_mspm33.cfg,ti-release,cb22a31e503b39820f0c758531cb9949300d014c
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/interface/jtag_tcp.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/arty7_linux.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/arty7_uboot.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/briey.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/murax.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/murax_xip.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/saxon.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/saxon_linux.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/saxon_xip.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/ti_msp432p4xx.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,aesc-silicon/elements-openocd,NOASSERTION,tcl/target/vexriscv_sim.cfg,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21835w_ev_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21835w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21846w_ev_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adsp21846w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc573_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc589_ezbrd.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc589_minibrd.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc5xx_ezbrd.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc835w_ev_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc835w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc846w_ev_som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/adspsc846w_mp_ezkit.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/ev-sc594-som-consumer.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/ev-sc594-som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/board/ev-sc598-som.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/2183x_otp.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/2184x_otp.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/algoFileFinder.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/is25wp02gg.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/is72wvo32m8Awo256.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/issi22tf16g.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/issi25lp512m.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/mx66u1g45g.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/s26kl512s.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,UNRESOLVED,tcl/board/flash_algorithms/w25q128fv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/adi-dbgagent.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/adi-mpdbgagent.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/ice1000.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/ice1500.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/interface/ice2000.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adi_proc_tracker.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adsp2183x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adsp2184x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc57x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc57x_memory_map.xml,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc57x_single_SHARC.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc58x_memory_map.xml,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc58x_single_SHARC.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x_a55.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x_memory_map.xml,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc59x_single_SHARC.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc5xx.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc83x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc84x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc84x_core0.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/adspsc8xx.tcl,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/aducm36x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32520.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32570.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32572.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32655_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32657.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32658.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32665.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32665_nsrst.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32666_nsrst.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32680_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32690_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max32xxx.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78000.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78000_nsrst.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78000_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78002.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/max78002_riscv.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/xtensa-core-adspsc83x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,analogdevicesinc/openocd,NOASSERTION,tcl/target/xtensa-core-adspsc84x.cfg,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/board/open-bldc.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/efm32_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/kl25z_hla.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/nrf51_stlink.tcl,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stellaris_icdi.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f0x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f1x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f2x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f3x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32f4x_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32lx_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,ciniml/openocd,GPL-2.0,tcl/target/stm32w108_stlink.cfg,master,5c9350d27fc52a0ab91f512570fef568039a4ed3
+tcl/ 配置（随树直接可用）,cjacker/wch-openocd,NOASSERTION,tcl/target/wch-riscv.cfg,main,2b6802dde74a9560bdfb6eeecb6aff8a13cf8139
+tcl/ 配置（随树直接可用）,esden/openocd,GPL-2.0,tcl/board/stm32f10x_128k_eval.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+tcl/ 配置（随树直接可用）,esden/openocd,GPL-2.0,tcl/target/mega128.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+tcl/ 配置（随树直接可用）,esden/openocd,GPL-2.0,tcl/target/netx500.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+tcl/ 配置（随树直接可用）,esden/openocd,GPL-2.0,tcl/target/sam7se512.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+tcl/ 配置（随树直接可用）,esden/openocd,GPL-2.0,tcl/target/sam7x256.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+tcl/ 配置（随树直接可用）,esden/openocd,GPL-2.0,tcl/target/xba_revA3.cfg,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c2-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c3-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c5-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c6-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c61-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c61-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32c61-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h2-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h2-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h21-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h21-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h21-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h4-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h4-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32h4-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32p4-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-lpcore-bridge.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-lpcore-builtin.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/board/esp32s31-lpcore-ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/interface/esp_gpio_jtag.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/interface/esp_gpio_swd.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,UNRESOLVED,tcl/interface/ftdi/esp_ftdi.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/interface/jtag_esp_remote.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32-solo-1.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c5-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c5.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c6-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32c61.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32h21.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32h4.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32p4-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32p4.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32s31-lpcore.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,espressif/openocd-esp32,NOASSERTION,tcl/target/esp32s31.cfg,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx6d-1gb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx6q-2gb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx7d-1gb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx8-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx8.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/imx8m-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/nt98528-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/nt98528.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/rk3566-ngb.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,fatalfeel/openocd_integrated,NOASSERTION,tcl/target/rk3566.cfg,master,c75ab40061b9f05a5b8d11ff5ee3604dbe122b33
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs101.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs102.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs36.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs38.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs47D.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_axs103_hs48.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v1.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.1.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.2.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.2_cjtag.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.3.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_em_sk_v2.3_cjtag.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_hsdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_hsdk_4xd.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/arc_iotdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f030r8.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f334r8.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f401re.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/board/st_nucleo_f411re.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,UNRESOLVED,tcl/cpu/arc/arcompact.tcl,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/interface/arc_sdp.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,UNRESOLVED,tcl/interface/ftdi/arc_sdp.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc001.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc002.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs36.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs38.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs47D.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_axc003_hs48.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_em_sk_fpga.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk_4xd.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_iotdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/k1879h61ya.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32l.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32lx_dual_bank.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
+tcl/ 配置（随树直接可用）,go2sh/aurix-openocd,NOASSERTION,tcl/target/renesas_rz_g2.cfg,aurix_support,4fbdce8e2aa7270f2b2953bbb333b635effa1607
+tcl/ 配置（随树直接可用）,hikob/openocd,GPL-2.0,tcl/interface/arm-usb-ocd.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
+tcl/ 配置（随树直接可用）,hikob/openocd,GPL-2.0,tcl/interface/stlink-usb.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
+tcl/ 配置（随树直接可用）,hikob/openocd,GPL-2.0,tcl/target/stm32.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
+tcl/ 配置（随树直接可用）,hikob/openocd,GPL-2.0,tcl/target/stm32f2xxx.cfg,master,80df024c806014885ce1a6524ba05352651c0ac3
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_d2000.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_d2000_onboard.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_se.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/snps_axs101.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/snps_axs102.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_amla3.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_angel4.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_haps51.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/synopsys_ml509.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,UNRESOLVED,tcl/interface/snps_sdp.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc11uxx.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1751.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1752.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1754.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1756.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1758.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1759.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1763.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1764.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1765.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1766.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1767.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1768.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1769.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1788.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/quark_d2000.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/quark_se.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_axc001.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_axc002.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_em_sk_lx45.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_ml509_arc600.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_ml509_arc700.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_starter_kit_arc-em.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/snps_starter_kit_arc-em_eb.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
+tcl/ 配置（随树直接可用）,karlp/openocd-hacks,NOASSERTION,tcl/interface/wlink.cfg,mrs-wch-riscv-221010,266d7c8d3f6ceae5e600de13d39a1dedc6b1d604
+tcl/ 配置（随树直接可用）,kevinmehall/openOCD,GPL-2.0,tcl/interface/orsoc-jtag.cfg,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+tcl/ 配置（随树直接可用）,kevinmehall/openOCD,GPL-2.0,tcl/target/vjtag.cfg,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
+tcl/ 配置（随树直接可用）,kvth/openocd-swd-in-out,NOASSERTION,tcl/interface/c20-swd.cfg,master,ba8e65d424062702194238b45f62bec34b9d7f50
+tcl/ 配置（随树直接可用）,linux-msm/openocd,NOASSERTION,tcl/interface/eud.cfg,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
+tcl/ 配置（随树直接可用）,loopj/openocd-efm32s2,NOASSERTION,tcl/target/efm32s2.cfg,efm32s2,c9fd9f6a27c5d034f78b856ad6136127cebd5a8b
+tcl/ 配置（随树直接可用）,loopj/openocd-efm32s2,NOASSERTION,tcl/target/efm32s2_g23.cfg,efm32s2,c9fd9f6a27c5d034f78b856ad6136127cebd5a8b
+tcl/ 配置（随树直接可用）,luyi1888/openocd,NOASSERTION,tcl/interface/dirtyjtag-cjtag.cfg,master,0678540e99f708e06d09b34f23f9d1acaf4530c6
+tcl/ 配置（随树直接可用）,luyi1888/openocd,NOASSERTION,tcl/target/rv1106-mcu.cfg,master,0678540e99f708e06d09b34f23f9d1acaf4530c6
+tcl/ 配置（随树直接可用）,matrix-io/matrix-creator-openocd,GPL-2.0,tcl/interface/matrix-creator.cfg,master,3ecfa288430f46d6caa89e13f4224d2835b88dd8
+tcl/ 配置（随树直接可用）,mengfanyuc/openocd,NOASSERTION,tcl/target/ch32f2x.cfg,master,0288690dc95aca791a6b55434cf7982304ff97e4
+tcl/ 配置（随树直接可用）,nmenon/openocd,NOASSERTION,tcl/board/ti_am64xx_swd_native.cfg,master,ab22b0bf8f23924d8c76d3affd9e11528ba18438
+tcl/ 配置（随树直接可用）,nmenon/openocd,NOASSERTION,tcl/board/ti_j784s4_swd_native.cfg,master,ab22b0bf8f23924d8c76d3affd9e11528ba18438
+tcl/ 配置（随树直接可用）,nmenon/openocd,NOASSERTION,tcl/target/stm32wbax.cfg,master,ab22b0bf8f23924d8c76d3affd9e11528ba18438
+tcl/ 配置（随树直接可用）,os-fpga/openocd,NOASSERTION,tcl/board/gemini.cfg,master,31a77f2f4290a89bb7b3bb7b227226a20ddfa12e
+tcl/ 配置（随树直接可用）,padhialuo0426/openocd,NOASSERTION,tcl/target/ws63.cfg,ws63,4b5efe35b780327d59313e8caef2b7bc6a135d9a
+tcl/ 配置（随树直接可用）,pebble/openocd,GPL-2.0,tcl/target/m051.cfg,pebble_fork,0ff57c6f8f7440cda52e6a1847b0b28c91e5b558
+tcl/ 配置（随树直接可用）,raspberrypi/openocd,NOASSERTION,tcl/interface/raspberrypi-swd.cfg,rpi-common,acff23ffd100479d6481a1155123774b79a990b9
+tcl/ 配置（随树直接可用）,raspberrypi/openocd,NOASSERTION,tcl/target/rp2040-rescue.cfg,rpi-common,acff23ffd100479d6481a1155123774b79a990b9
+tcl/ 配置（随树直接可用）,raspberrypi/openocd,NOASSERTION,tcl/target/rp2350-rescue.cfg,rpi-common,acff23ffd100479d6481a1155123774b79a990b9
+tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/sifive-e31arty-cjtag.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
+tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/sifive-e31arty-onboard-ftdi.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
+tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/stm32mp13x_dk.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
+tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/stm32mp15x_dk2.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
+tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/target/nrf_common.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/cpld/xilinx-xcr3256.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32a403axx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32a423xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f011xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f402xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f402xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403_spim_type1_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403_spim_type2_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type1_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type1_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type2_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403a_407_spim_type2_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403axG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403axx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f403xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f405xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f405xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f407xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f407xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type1_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type1_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type2_remap0.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413_spim_type2_remap1.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f413xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f415xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f421xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f422xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f423xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f425xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f426xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xG_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xM.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xM_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f435xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xG.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xG_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xM.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xM_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f437xx_qspi.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f45xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32l021xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32m412xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32m416xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32wb415xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
+tcl/ 配置（随树直接可用）,snowcap-electronics/OpenOCD,GPL-2.0,tcl/board/snowcap-stm32f4v1.cfg,snowcap-v0.9.0-2015-07-23,b59b331e82079ffb405dbbdb3d74794e4bc8f634
+tcl/ 配置（随树直接可用）,sony/openocd-nuttx,GPL-2.0,tcl/board/lc823450_xgevk.cfg,sony/master,b1f9b14b662fe729c1c5108fba402948aea508fc
+tcl/ 配置（随树直接可用）,sony/openocd-nuttx,UNRESOLVED,tcl/interface/ftdi/sony-ft232h-with-resistor.cfg,sony/master,b1f9b14b662fe729c1c5108fba402948aea508fc
+tcl/ 配置（随树直接可用）,sony/openocd-nuttx,GPL-2.0,tcl/target/lc823450.cfg,sony/master,b1f9b14b662fe729c1c5108fba402948aea508fc
+tcl/ 配置（随树直接可用）,stache3000/openocd-dirtyjtag,NOASSERTION,tcl/interface/dirtyjtag.cfg,master,d07856f7bfbac0c0f95ae0c9d91a82626cb394d8
+tcl/ 配置（随树直接可用）,stacksmashing/openocd-tamarin,NOASSERTION,tcl/interface/faultier.cfg,tamarin,eb5d44390a1e3d3fca72e67db94786598432432f
+tcl/ 配置（随树直接可用）,stacksmashing/openocd-tamarin,NOASSERTION,tcl/interface/tamarin.cfg,tamarin,eb5d44390a1e3d3fca72e67db94786598432432f
+tcl/ 配置（随树直接可用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/1986Ð²Ðµ1Ñ‚.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
+tcl/ 配置（随树直接可用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/esp8266.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
+tcl/ 配置（随树直接可用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/Ðº1879xÐ±1Ñ.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/board/rs14100.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/board/st_nucleo_l476rg.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/board/stm32mp25x_dk.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/board/twr-k40.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/interface/cc3200lp.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/interface/picoprobe.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/interface/ti-icdi-auto.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm3027.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm3029.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm302x.tcl,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm4050.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/aducm4x50.tcl,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/bluenrg-lp.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/imx6_dual.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/imx6_quad.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/imxrt.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/ke02.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/ke04.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/ke06.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kex.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_128k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_1m.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_256k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_32k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_512k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_64k.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/kinetis_generic.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc1549.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc15xx.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc546xx.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/lpc55sxx.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/pic32mm.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberry.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi2.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi3.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi3_single.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/raspberrypi4.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/rm57x.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/rs14100.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/stm32g0x_alt.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/stm32g4x_alt.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/swj-dp-legacy.tcl,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/target/ti_tms570ls1224.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
+tcl/ 配置（随树直接可用）,tihmstar/openocd_colobus,NOASSERTION,tcl/interface/colobus.cfg,master,7eab5ac160296c988b06ea058955030a99599025
+tcl/ 配置（随树直接可用）,transcelestial/openocd,NOASSERTION,tcl/target/lpc55xx.cfg,master,1e85644a52a21c60ebc4cafe4fe7284c97e6f03f
+tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/board/arty_s7.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/board/iar_lpc1768.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7v.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7vh580t.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7vh870t.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,UNRESOLVED,tcl/fpga/xilinx-dna.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,UNRESOLVED,tcl/fpga/xilinx-xc3s.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/target/zynq_7000.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/board/st_nucleo_l5.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/atlink.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/atlink_dap_v2.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/cmsis-dap_v2_aic8800.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/cmsis-dap_v2_aic8800m40.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/interface/cmsis-dap_v2_aic8800mc.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/aic8800.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/aic8800m40.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/aic8800mc.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/target/py32f0xx.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
+tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/board/renesas_gen2_common.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
+tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/interface/blackmagic.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
+tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7790.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
+tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7791.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
+tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7794.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/interface/mchp-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/#U043a1879x#U04311#U044f.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/1986#U0432#U04351#U0442.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/dspic33-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/mchp-renode.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/mchp-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/pic18-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/pic32mz-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/board/nds32_xc5.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/board/snps_hsdk_smp.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/interface/nds32-aice.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/nds32v2.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/nds32v3.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/nds32v3m.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/rp2040-core0.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/rv32m1_ri5cy.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/rv32m1_zero_riscy.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/snps_hsdk_smp.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/vd_xtensa_jtag.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/art_pi2.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/atk_cnn647b.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/omap2420_h4.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/st_nucleo_c5.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/st_nucleo_h5.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_am625_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_am62a7_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_am62p_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beagleboard.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beagleboard_xm.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone-base.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone_black.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_j721e_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_j722s_swd_native.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,UNRESOLVED,tcl/gdb_helper.tcl,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/interface/ch347.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/interface/tas_client.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/ch32f1x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/ch579.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,UNRESOLVED,tcl/target/infineon/aurix_program.tcl,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/stm32c5x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/stm32h5x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/stm32l4plusx.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/stm32wb0x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/stm32wl3x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/stm32wl4x.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
+tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/target/xmc7xxx.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783

@@ -1,0 +1,6 @@
+# Imported third-party content must survive checkout byte-for-byte: every file
+# under tcl/ and src/ is verified by SHA-256 against manifest/PROVENANCE.json, so
+# an EOL conversion on a Windows checkout (core.autocrlf=true) would fail the
+# integrity gate. -text disables EOL conversion for these trees.
+/tcl/** -text
+/src/** -text

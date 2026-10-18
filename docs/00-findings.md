@@ -89,15 +89,20 @@ ESP32 TCL、Nordic 全家桶、Kontron `k1921vk01t.cfg`、TI `stellaris.cfg`、`
 
 ## 6. 方案建议
 
-**两层架构。**
+**分层合并（已实现为单一源码树）。**
 
-- **第一层（立刻做）**：把纯 TCL 文件 overlay 安装到脚本搜索路径下的次级目录。
-  零重编译、零源码冲突、可随时回滚；也是唯一能处理**已归档**仓库（Intel、Flipper）
-  和许可证待审计仓库的方案。
-- **第二层（走上游 PR 路线）**：桶二的 C 代码，按厂商分别提 PR
-  （`at32xx.c`、`wchriscv.c`、`puyaf0x.c`、`esp32*.c`、`cc23xx/cc27xx/mspm33`）。
-  建议从 **Artery AT32** 和 **TI cc23xx/cc27xx** 入手 ——
-  它们是"单文件 flash 驱动 + 成熟通用内核"，价值/工作量比最高，也最可能被接受。
+- **`tcl/`**：纯 TCL 文件合并进官方配置树的对应目录。零重编译，
+  也是唯一能处理**已归档**仓库（Intel、Flipper）和许可证待审计仓库的方案。
+- **`src/`**：桶二的 C 代码合并进官方源码树的对应目录，但**不自动进构建**
+  —— 每个驱动仍需在 `configure.ac` / `Makefile.am` / `drivers.c` / `target.c`
+  里注册。可以按厂商分别提上游 PR（`at32xx.c`、`wchriscv.c`、`puyaf0x.c`、
+  `esp32*.c`、`cc23xx/cc27xx/mspm33`）。建议从 **Artery AT32** 和
+  **TI cc23xx/cc27xx** 入手 —— 它们是"单文件 flash 驱动 + 成熟通用内核"，
+  价值/工作量比最高，也最可能被接受。
+
+调研阶段曾判断「只能做成外挂层」，那是错的：上游根 `Makefile.am` 用通配符
+安装 TCL，新增文件不需要改构建脚本；C 代码放进 `src/` 后由 git 正常处理合并
+冲突，比一份静默遮蔽官方文件的 overlay 更适合长期维护。
 
 ## 7. 未能验证 / 需注意
 

@@ -1,3 +1,5 @@
+"tcl/target/1986\320\262\320\2651\321\202.cfg"
+"tcl/target/\320\2721879x\320\2611\321\217.cfg"
 .checkpatch.conf
 .editorconfig
 .github/workflows/snapshot.yml
@@ -394,6 +396,7 @@ doc/usb_adapters/stlink/0483_3755_stlinkv3pwr.txt
 doc/usb_adapters/stlink/0483_3757_stlinkv3pwr.txt
 doc/usb_adapters/xds110/0451_bef3_ti_xds110.txt
 guess-rev.sh
+jimtcl
 src/Makefile.am
 src/flash/Makefile.am
 src/flash/common.c
@@ -644,6 +647,7 @@ src/jtag/drivers/jtag_dpi.c
 src/jtag/drivers/jtag_vpi.c
 src/jtag/drivers/kitprog.c
 src/jtag/drivers/libftdi_helper.h
+src/jtag/drivers/libjaylink
 src/jtag/drivers/libusb_helper.c
 src/jtag/drivers/libusb_helper.h
 src/jtag/drivers/linuxgpiod.c
@@ -1752,7 +1756,6 @@ tcl/interface/xds110.cfg
 tcl/mem_helper.tcl
 tcl/memory.tcl
 tcl/mmr_helpers.tcl
-tcl/target/1986ве1т.cfg
 tcl/target/adsp-sc58x.cfg
 tcl/target/aduc702x.cfg
 tcl/target/aducm360.cfg
@@ -2160,7 +2163,6 @@ tcl/target/xtensa-core-esp32s3.cfg
 tcl/target/xtensa-core-nxp_rt600.cfg
 tcl/target/xtensa-core-xt8.cfg
 tcl/target/xtensa.cfg
-tcl/target/к1879xб1я.cfg
 tcl/test/selftest.cfg
 tcl/test/syntax1.cfg
 tcl/tools/firmware-recovery.tcl

@@ -7,12 +7,12 @@ idempotent, so this is safe to schedule. Without GH_TOKEN it stops at the first
 network stage instead of degrading into an unauthenticated rate-limited run.
 
   python tools/pipeline.py                 # everything, report only
-  python tools/pipeline.py --apply         # write to overlay/ and manifest/
-  python tools/pipeline.py --tier 2        # also fetch the C-source worklist
+  python tools/pipeline.py --apply         # write into the tree and manifest/
+  python tools/pipeline.py --tier 2        # also merge the C sources into src/
   python tools/pipeline.py --from 0        # deep-probe the first N candidates
                                          # (default all; 688 needs a PAT)
 
-Exit code is 0 only when `verify_overlay.py` reports VERIFY: PASS, which makes
+Exit code is 0 only when `verify_tree.py` reports VERIFY: PASS, which makes
 this usable as a CI check.
 """
 
@@ -39,9 +39,9 @@ def run(argv, env=None, check=True):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true",
-                    help="write to overlay/ and manifest/ (default: report only)")
+                    help="write into the tree and manifest/ (default: report only)")
     ap.add_argument("--tier", type=int, choices=(0, 1, 2), default=1,
-                    help="highest tier to fetch; 1 = overlay only (default)")
+                    help="highest tier to fetch; 1 = tcl/ only (default)")
     ap.add_argument("--deep-budget", type=int, default=200,
                     help="how many candidates to deep-probe")
     ap.add_argument("--wide-budget", type=int, default=700,
@@ -55,7 +55,7 @@ def main():
               "to disk. Without it the pipeline stops here.", file=sys.stderr)
         return 2
     if not args.apply:
-        print("Report-only run: nothing under overlay/ or manifest/ is "
+        print("Report-only run: nothing in the tree or under manifest/ is "
               "rewritten. Re-run with --apply.\n", file=sys.stderr)
 
     # 1. mine upstream's full recursive inventory and diff every candidate
@@ -72,13 +72,13 @@ def main():
     run([sys.executable, "consolidate.py"], env=env)
 
     if args.tier >= 1:
-        # 4. fetch the tier-1 overlay and verify it
-        run([sys.executable, "fetch_overlay.py", "--tier", "1"], env=env)
+        # 4. merge the tier-1 tcl files into tcl/ and verify them
+        run([sys.executable, "fetch_third_party.py", "--tier", "1"], env=env)
         if args.apply:
             run([sys.executable, "resolve_deps.py", "--apply"], env=env)
             run([sys.executable, "pin_commits.py"], env=env)
     if args.tier >= 2:
-        run([sys.executable, "fetch_overlay.py", "--tier", "2"], env=env)
+        run([sys.executable, "fetch_third_party.py", "--tier", "2"], env=env)
         if args.apply:
             run([sys.executable, "pin_commits.py"], env=env)
 
@@ -88,9 +88,10 @@ def main():
     # 5. regenerate the reports from the updated manifests
     run([sys.executable, "gen_report.py"], env=env)
     run([sys.executable, "gen_licenses.py"], env=env)
+    run([sys.executable, "build_provenance.py"], env=env)
 
     # 6. offline gate; must pass before anything is committed
-    run([sys.executable, "verify_overlay.py"], env=env)
+    run([sys.executable, "verify_tree.py"], env=env)
     print("\nVERIFY: PASS - safe to commit", flush=True)
     return 0
 

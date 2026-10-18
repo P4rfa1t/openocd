@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Resolve the overlay's internal `source [find ...]` graph to a fixed point.
+Resolve the imported tcl's internal `source [find ...]` graph to a fixed point.
 
 WHY THIS IS A SEPARATE PASS
 ----------------------------
 The mining sweep probes a fixed list of subtrees, so it can miss a whole
 directory. `tcl/board/flash_algorithms` was missing from that list, and the
-first finished overlay shipped board configs pointing at flash algorithms that
+The first finished import shipped board configs pointing at flash algorithms that
 were never imported. Every imported file still passed its own byte/balance
 checks, so nothing complained until a board was actually used.
 
@@ -36,10 +36,10 @@ import urllib.request
 
 API = "https://api.github.com"
 TOKEN = os.environ.get("GH_TOKEN", "")
-PROV = "overlay/PROVENANCE.json"
+PROV = "manifest/tier1-PROVENANCE.json"
 CONSOL = "manifest/consolidated.json"
 UPSTREAM = "manifest/upstream-index.txt"
-OVERLAY = "overlay"
+TREE = "."
 FIND_RE = re.compile(r"^\s*source\s+\[find\s+([^\]\s]+)\s*\]", re.M)
 RATE = {"n": 0}
 
@@ -94,7 +94,7 @@ def main():
     args = ap.parse_args()
 
     if not os.path.exists(PROV):
-        sys.exit(f"missing {PROV}; run fetch_overlay.py first")
+        sys.exit(f"missing {PROV}; run fetch_third_party.py first")
     doc = json.load(open(PROV, encoding="utf-8"))
     files = doc.get("files")
     if not isinstance(files, dict) or not files:
@@ -109,7 +109,7 @@ def main():
 
     imported_total = 0
     stuck = {}
-    # Track which repo supplied each already-present overlay file, so a nested
+    # Track which repo supplied each already-present imported file, so a nested
     # dependency is looked for in ITS OWN vendor tree.
     #
     # The first version only consulted `owner`, which maps consolidated records
@@ -138,18 +138,18 @@ def main():
         # Upstream duplicates must never be re-introduced. The resolver is
         # asked for files by their FORK path; if upstream already ships that
         # file under a different path, fetching the fork copy is pointless and
-        # harmful, because the overlay is searched first and the stale copy
+        # harmful, because the stale copy would shadow upstream's maintained one
         # would shadow upstream's maintained one. Pruning them afterwards was
         # not enough - the next run re-added three of them, because the
     # reference itself is satisfied by upstream only under the other name.
         up_exact = upstream
         up_norm = {normalise(p) for p in upstream}
-        for dp, _dn, names in os.walk(os.path.join(OVERLAY, "tcl")):
+        for dp, _dn, names in os.walk("tcl"):
             for n in names:
                 if not n.endswith((".cfg", ".tcl")):
                     continue
                 fp = os.path.join(dp, n)
-                rel = os.path.relpath(fp, OVERLAY).replace(os.sep, "/")
+                rel = os.path.relpath(fp).replace(os.sep, "/")
                 try:
                     txt = open(fp, encoding="utf-8").read()
                 except Exception:
@@ -225,7 +225,7 @@ def main():
             key = "tcl/" + ref
             repo_of[key] = repo
             branch_of[key] = branch
-            dest = os.path.join(OVERLAY, key)
+            dest = key
             if args.apply:
                 os.makedirs(os.path.dirname(dest), exist_ok=True)
                 with open(dest, "w", encoding="utf-8", newline="\n") as fh:
@@ -245,7 +245,7 @@ def main():
             print(f"   no progress this round; stopping")
             break
 
-    on_disk = sum(1 for p in files if os.path.exists(os.path.join(OVERLAY, p)))
+    on_disk = sum(1 for p in files if os.path.exists(p))
     doc["files"] = files
     doc["file_count"] = len(files)
     doc["integrity"] = {
@@ -258,7 +258,7 @@ def main():
                   ensure_ascii=False)
 
     print(f"\nimported this run : {imported_total}")
-    print(f"total overlay     : {len(files)} (on disk {on_disk})")
+    print(f"total imported tcl: {len(files)} (on disk {on_disk})")
     print(f"api calls         : {RATE['n']}")
     if stuck:
         print(f"unresolvable      : {len(stuck)}")

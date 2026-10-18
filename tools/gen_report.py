@@ -70,8 +70,8 @@ def main():
     A(f"| 扫描候选仓库 | {survey['repo_count']} |")
     A(f"| 完整深挖仓库 | {consol and len([r for r in repos.values() if r.get('deep_probed')])} |")
     A(f"| 去重后唯一新增路径 | {consol['unique_paths']} |")
-    A(f"| 第一层：可直接覆盖的 TCL | {consol['tier1_drop_in_tcl']} |")
-    A(f"| 第二层：需要改 C 源码 | {consol['tier2_needs_c_patch']} |")
+    A(f"| 第一层：合并进 `tcl/` 的配置 | {consol['tier1_drop_in_tcl']} |")
+    A(f"| 第二层：合并进 `src/` 的 C 源码 | {consol['tier2_needs_c_patch']} |")
     A(f"| 折叠掉的重复副本 | {consol['duplicates_collapsed']} |")
     A(f"| 判定为不可导入并排除 | {consol['excluded_from_import']['count']} |")
     A("")
@@ -93,7 +93,7 @@ def main():
     A("")
 
     A("## 3. 芯片家族覆盖\n")
-    A("| 家族 | overlay 文件数 | 主要来源 |")
+    A("| 家族 | tcl/ 文件数 | 主要来源 |")
     A("|---|---:|---|")
     for name, keys in CHIP_FAMILIES:
         hits = [r for r in t1

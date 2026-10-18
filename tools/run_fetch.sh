@@ -11,20 +11,20 @@ cd "$(dirname "$0")/.."
 # Some repos carry filenames that are not valid in the host code page (GBK).
 # Force UTF-8 so such paths survive printing and writing.
 export PYTHONIOENCODING=utf-8
-mkdir -p raw overlay manifest
+mkdir -p raw manifest
 
-echo "=== tier 1: drop-in overlay ==="
-python -u tools/fetch_overlay.py --tier 1 >raw/fetch1.log 2>&1
+echo "=== tier 1: tcl/ ==="
+python -u tools/fetch_third_party.py --tier 1 >raw/fetch1.log 2>&1
 echo "tier1 exit=$?"
 tail -14 raw/fetch1.log
 
 echo "=== tier 2: patch worklist ==="
-python -u tools/fetch_overlay.py --tier 2 >raw/fetch2.log 2>&1
+python -u tools/fetch_third_party.py --tier 2 >raw/fetch2.log 2>&1
 echo "tier2 exit=$?"
 tail -14 raw/fetch2.log
 
 echo "=== verify ==="
-python -u tools/verify_overlay.py >raw/verify.log 2>&1
+python -u tools/verify_tree.py >raw/verify.log 2>&1
 echo "verify exit=$?"
 tail -24 raw/verify.log
 

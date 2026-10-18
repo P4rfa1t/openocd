@@ -4,7 +4,7 @@ Backfill exact commit SHAs for every imported file.
 
 WHY
 ---
-`fetch_overlay.py` pins the HEAD commit of each source repo at fetch time, but
+`fetch_third_party.py` pins the HEAD commit of each source repo at fetch time, but
 `resolve_deps.py` and the dependency pass write empty `source_commit` fields
 because they resolve a file by name from a vendor tree that may have moved on.
 That leaves N files traceable only to a branch, which is not reproducible: a
@@ -133,8 +133,8 @@ def main():
     args = ap.parse_args()
 
     total_p = total_m = 0
-    for prov, label in (("overlay/PROVENANCE.json", "overlay"),
-                        ("manifest/tier2/PROVENANCE.json", "tier2")):
+    for prov, label in (("manifest/tier1-PROVENANCE.json", "tier1"),
+                        ("manifest/tier2-PROVENANCE.json", "tier2")):
         p, m = patch(prov, label, args.reverify)
         total_p += p
         total_m += m
