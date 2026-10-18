@@ -112,9 +112,11 @@ jobs:
           export OPENOCD_TAG=$OPENOCD_TAG
           export OPENOCD_SRC=$PWD
           # Enable the adapters contributed by merged third-party forks.
-          # ADI_* are "auto" and come in whenever libusb-1.x is present;
-          # --enable-usbmux is Linux-safe because configure rejects it on
-          # non-Windows hosts instead of silently building an empty stub.
+          # Option names come from configure.ac's AC_ARG_ADAPTERS/
+          # PROCESS_ADAPTERS macros, which m4_translit underscores to dashes,
+          # so adi_ice1000 becomes --enable-adi-ice1000.
+          # ADI_* need libusb-1.x; adi-usbmux only builds on Win32 hosts
+          # (it is #ifdef _WIN32 throughout) and this job targets mingw.
           export OPENOCD_CONFIG="--enable-dirtyjtag --enable-adi-ice1000 --enable-adi-ice1500 --enable-adi-dbgagent --enable-adi-usbmux"
           mkdir -p $BUILD_DIR &&  cd $BUILD_DIR
           bash $OPENOCD_SRC/contrib/cross-build.sh $HOST

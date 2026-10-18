@@ -7,7 +7,8 @@
 副本后，得到 **632 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
 - **505 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
-- **127 个 `src/` C 源文件** —— 已就位，但还需要在构建系统里注册才能编译进产物。
+- **127 个 `src/` C 源文件** —— 已就位，其中 **5 个已接入构建**并验证可编译，
+  其余 122 个仍需按上游现有 API 改写后才能注册。
 
 另有 **99 个与官方重复的文件已剔除**，**4109 个跨仓重复副本被折叠**
 （详见「已处理的重复问题」）。
@@ -73,7 +74,12 @@ TCL_FILES = find $(srcdir)/tcl -name '*.cfg' -o -name '*.tcl' -o -name '*.txt'
 ./bootstrap && ./configure && make -j && sudo make install
 ```
 
-Windows 见上游 `README.Windows.md`（本仓库未改动）。
+**预编译 Windows 包**：每次 push 由 GitHub Actions 打出
+`openocd-<tag>-x86_64-w64-mingw32.tar.gz`（含 openocd.exe、所需 DLL 与
+`share/openocd/scripts` 全套 TCL 配置），从 Actions 页面的 artifact 下载即可。
+构建流程是上游自带的 `contrib/cross-build.sh`，本仓库只加了驱动开关。
+
+Windows 手动编译见上游 `README.Windows.md`（本仓库未改动）。
 
 ## 怎么用
 
@@ -87,24 +93,74 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 ./src/openocd -s tcl -f board/xxx.cfg
 ```
 
-## 未完成：C 驱动还没进构建系统
+## C 驱动的接入状态
 
-`src/` 下 127 个第三方文件已经在正确的目录里，但**没有**在以下位置注册：
+`src/` 下原有的 127 个第三方文件里，**只有 5 个文件已经接入构建系统**，
+其余仍是「代码就位、未注册」的状态。
 
-- `configure.ac` —— 没有对应的 `AC_CHECK_LIB` / 特性检测；
-- `Makefile.am`、`src/Makefile.am`、`src/jtag/drivers/Makefile.am`、
-  `src/target/Makefile.am`、`src/server/Makefile.am` —— 没有源文件条目；
-- `src/jtag/drivers/drivers.c`、`src/target/target.c`、`src/server/server.c`
-  —— 没有驱动注册函数；
+### 已接入（5 个文件，4 个探针）
+
+| 探针名 | 源文件 | 说明 |
+|---|---|---|
+| `dirtyjtag` | `dirtyjtag.c` | DirtyJTAG，libusb 直连 |
+| `ice1000` / `ice2000` | `ice1000.c` | ADI ICE-1000、ICE-2000，一个文件注册两个 `adapter_driver` |
+| `ice1500` | `ice1500.c` | ADI ICE-1500 |
+| `dbgagent` | `adi_dbg_agent.c` | ADI Debug Agent |
+| `mpdbgagent` | `adi_dbg_agent.c` | 同上文件的第二个 `adapter_driver`，**已定义但未注册** |
+| — | `usbmux.c/h` | Windows 命名管道多路复用辅助层，供 ADI 在 `_ADI_USB_MUX_` 下选用 |
+
+接入点共五处，全部按上游的写法补齐：
+
+1. `configure.ac` —— `DIRTYJTAG_ADAPTER` / `ADI_ADAPTERS` / `ADI_USBMUX_HELPER`
+   三组 `m4_define`，加进 `AC_ARG_ADAPTERS` 列表、`PROCESS_ADAPTERS` 调用和
+   `configure` 末尾的汇总表。`dirtyjtag` 默认 auto。
+2. `src/jtag/drivers/Makefile.am` —— 5 条 `if <SYM>` / `DRIVERFILES +=`。
+3. `src/jtag/interface.h` —— 6 条 `extern struct adapter_driver ...;`，
+   字母序插入上游那块声明表。
+4. `src/jtag/interfaces.c` —— 5 条 `&<name>_adapter_driver,`，各由
+   `#if BUILD_<SYM> == 1` 包住。
+5. `.github/workflows/snapshot.yml` —— `OPENOCD_CONFIG` 里加
+   `--enable-dirtyjtag --enable-adi-ice1000 --enable-adi-ice1500
+   --enable-adi-dbgagent --enable-adi-usbmux`。
+
+CI 产物（`openocd-<tag>-x86_64-w64-mingw32.tar.gz`）实测：
+
+```
+$ ./bin/openocd.exe -c "adapter list" -c shutdown
+...
+dbgagent       { jtag }
+dirtyjtag      { jtag }
+ice1000        { jtag swd }
+ice2000        { jtag swd }
+ice1500        { jtag }
+```
+
+> 注意用 `-c` 而不是 `-f`。`-f` 的参数是**配置文件路径**，走的是 tcl 的
+> `find` proc 去磁盘里找文件，写成 `-f "adapter driver dirtyjtag"` 会报
+> `Can't find adapter driver`，看起来像驱动没编进去，其实是参数用错了。
+
+### 仍是「代码就位、未注册」（其余 122 个文件）
+
+- `configure.ac` —— 没有对应的特性检测；
+- `src/jtag/drivers/Makefile.am`、`src/target/Makefile.am`、
+  `src/server/Makefile.am` —— 没有源文件条目；
+- `src/jtag/interface.h` / `src/jtag/interfaces.c` —— 没有声明与注册项；
 - `config.h` —— 没有 `BUILD_*` 开关；
 - `doc/manual/` —— 没有手册章节。
 
-因此当前构建产物**只包含官方支持的驱动**，`tcl/` 里的配置对已编译的驱动
-立即可用，对尚未注册的驱动则会在运行时报告驱动不存在。要启用某个驱动，
-按上游 CONTRIBUTING 的方式补齐上面五处，逐个验证能编译后再提交。
+没接入的原因不是遗漏，而是**这些驱动依赖上游已删除的 API**，直接编译会失败：
 
-一个可行的起点：`tcl/jtag/` 与 `tcl/interface/` 里如果有对应的驱动配置，
-就说明该驱动在 fork 里是完整可用的，优先注册。
+| 依赖的旧 API | 上游现状 |
+|---|---|
+| `.transports` 字段 | 已改为 `unsigned int transport_ids` |
+| SDI 传输层（`struct sdi_driver`、`sdi_transports`） | 整个传输层已删除 |
+| `riscv_dmi_direct_register_provider()`、`TRANSPORT_DDMI` | 该私有 API 从未进上游 |
+| `hidapi.h` | 部分 fork 里是死 include |
+
+要接入某个驱动，得先按上游现有 API 重写，逐个验证能编译后再提交。
+`tools/` 下的 `patch_makefile.py`、`patch_interfaces.py`、`patch_interface_h.py`
+就是这次接入 5 个文件用的脚本，可作模板。
+
 
 ## 已知的 4 处悬空引用
 
@@ -159,10 +215,10 @@ python tools/pipeline.py --apply
 
 | 缺口 | 规模 | 说明 |
 |---|---|---|
-| C 驱动未注册进构建 | 127 | 见「未完成：C 驱动还没进构建系统」 |
+| C 驱动未注册进构建 | 122 | 见「C 驱动的接入状态」；卡点是它们依赖上游已删 API |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
 | 无许可证信息 | 476 / 632（75%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
-| 烧录器只有配置没有驱动 | 7 个 | `dbgagent`、`aji_client`、`tas_client`、`ddmi_usb`、`aice`、`mpdbgagent`、`ice2000` |
+| 烧录器只有配置没有驱动 | 4 个 | `aji_client`、`tas_client`、`ddmi_usb`、`aice`（`dbgagent`/`mpdbgagent`/`ice2000` 已随本次接入进产物） |
 | Synopsys 板级 | 4 个不可用 | 依赖厂商内部构建产物 |
 | 无运行时验证 | 全部 | 校验全是静态的，未在真机上 `source` 过 |
 
