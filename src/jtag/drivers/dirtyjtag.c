@@ -74,7 +74,7 @@ static struct libusb_device_handle *usb_handle;
 /**
  * Utils
  */
-static int min(int a, int b)
+static int djt_min(int a, int b)
 {
 	return (a < b) ? a : b;
 }
@@ -178,8 +178,8 @@ static void dirtyjtag_clk(int num_cycles, int tms, int tdi)
 	 * to send multiple clock commands.
 	 */
 	while (num_cycles > 0) {
-		command[2] = min(255, num_cycles);
-		num_cycles -= min(255, num_cycles);
+		command[2] = djt_min(255, num_cycles);
+		num_cycles -= djt_min(255, num_cycles);
 		dirtyjtag_buffer_append(command, sizeof(command)/sizeof(command[0]));
 	}
 }
@@ -403,7 +403,7 @@ static void syncbb_scan(bool ir_scan, enum scan_type type, uint8_t *buffer, int 
 	}
 
 	while (scan_size > 0) {
-		sent_bits = min(240, scan_size);
+		sent_bits = djt_min(240, scan_size);
 		sent_bytes = (sent_bits+7)/8;
 
 		if (type != SCAN_IN) {

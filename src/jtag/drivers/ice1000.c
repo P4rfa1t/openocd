@@ -115,8 +115,8 @@ static uint16_t do_host_cmd(uint8_t cmd, uint8_t param, int32_t r_data);
 static uint32_t do_single_reg_value(uint8_t reg, int32_t r_data, int32_t wr_data, uint32_t data);
 static int ice1000_swd_switch_seq(enum swd_special_seq seq);
 static int ice1000_swd_queue_cmd(uint8_t cmd, uint32_t *dst, uint32_t data, uint32_t ap_delay_clk);
-static void ice1000_swd_write_reg(uint8_t cmd, uint32_t value, uint32_t ap_delay_clk);
-static void ice1000_swd_read_reg(uint8_t cmd, uint32_t *value, uint32_t ap_delay_clk);
+static int ice1000_swd_write_reg(uint8_t cmd, uint32_t value, uint32_t ap_delay_clk);
+static int ice1000_swd_read_reg(uint8_t cmd, uint32_t *value, uint32_t ap_delay_clk);
 static int ice1000_swd_run_queue(void);
 
 /*
@@ -660,7 +660,7 @@ static int ice1000_send_flash_data(struct image *firmware, uint16_t *crcp)
 	return ERROR_OK;
 }
 
-static int ice1000_update_firmware(const char *filename)
+static int __attribute__((unused)) ice1000_update_firmware(const char *filename)
 {
 	struct image ice1000_firmware_image;
 	unsigned short crc1, crc2;
@@ -702,7 +702,6 @@ static int adi_connect(const uint16_t *vids, const uint16_t *pids)
 	libusb_device *udev;
 	struct libusb_config_descriptor *config;
 	uint8_t configuration;
-	char *firmware_filename = get_firmware_filename();
 	int i, ret;
 
 	dev = NULL;
@@ -792,16 +791,14 @@ static int adi_connect(const uint16_t *vids, const uint16_t *pids)
 	if (cable_params.version <= 0x0101)
 		LOG_WARNING("This firmware version is obsolete. Please update to the latest version.");
 
-	if (firmware_filename) {
-		ret = ice1000_update_firmware(firmware_filename);
-		if (ret == ERROR_OK)
-			LOG_INFO("The firmware has been updated successfully. "
-					 "Please unplug the %s cable and reconnect it to finish the update process.",
-					 cable_name);
-		else
-			LOG_ERROR("The firmware failed to update.");
-		return ERROR_JTAG_INIT_FAILED;
-	}
+	/*
+	 * The fork this driver came from called a private get_firmware_filename()
+	 * here to flash the probe on connect.  Neither that helper nor a command to
+	 * name the file exists in this tree, so the path was unreachable and has
+	 * been dropped.  To bring it back, resolve the file with
+	 * find_file() from helper/configuration.h and call
+	 * ice1000_update_firmware(), which is still present.
+	 */
 
 	/* Set frequency to lowest value */
 	if (strcmp(cable_name, "ICE-2000") == 0) {
@@ -2262,20 +2259,24 @@ static int ice1000_swd_queue_cmd(uint8_t cmd, uint32_t *dst, uint32_t data, uint
 	return retval;
 }
 
-static void ice1000_swd_write_reg(uint8_t cmd, uint32_t value, uint32_t ap_delay_clk)
+static int ice1000_swd_write_reg(uint8_t cmd, uint32_t value, uint32_t ap_delay_clk)
 {
 	int retval;
 	retval = ice1000_swd_queue_cmd(cmd, NULL, value, ap_delay_clk);
 	if (retval != ERROR_OK)
 		LOG_ERROR("%s SWD write register failed", adi_cable_name());
+
+	return retval;
 }
 
-static void ice1000_swd_read_reg(uint8_t cmd, uint32_t *value, uint32_t ap_delay_clk)
+static int ice1000_swd_read_reg(uint8_t cmd, uint32_t *value, uint32_t ap_delay_clk)
 {
 	int retval;
 	retval = ice1000_swd_queue_cmd(cmd, value, 0, ap_delay_clk);
 	if (retval != ERROR_OK)
 		LOG_ERROR("%s SWD read register failed", adi_cable_name());
+
+	return retval;
 }
 
 /* (1) assert or (0) deassert reset lines */
