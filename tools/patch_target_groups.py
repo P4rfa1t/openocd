@@ -52,8 +52,8 @@ HEADERS = [
     "vexriscv.h",
 ]
 
-BEGIN = "# --- third-party target architectures (tools/patch_target_groups.py) ---"
-END = "# --- end third-party target architectures ---"
+BEGIN = "/* --- third-party target architectures (tools/patch_target_groups.py) --- */"
+END = "/* --- end third-party target architectures --- */"
 
 
 def read_lf(path):
@@ -143,6 +143,21 @@ def patch_target_c():
     lines.append(END)
     lines.append("")
     block = "\n".join(lines)
+
+    # target.c has no declaration of its own for these; upstream declares the
+    # built-in ones in target_type.h.  Without an extern the compiler treats
+    # each `&foo_target` as an undeclared identifier.
+    decl = [BEGIN, "#if BUILD_TARGETS_ALL == 1"]
+    for s, _macro in syms:
+        decl.append(f"extern struct target_type {s};")
+    decl.append("#endif")
+    decl.append(END)
+    decl.append("")
+    decl_block = "\n".join(decl)
+
+    marker = "static struct target_type *target_types[] = {"
+    if decl_block not in text:
+        text = text.replace(marker, decl_block + "\n" + marker, 1)
 
     # Insert inside target_types[] rather than appending a second list: the
     # array is what `target create` consults.  Put the entries before the

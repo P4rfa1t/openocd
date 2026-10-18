@@ -72,6 +72,20 @@ static int target_get_gdb_fileio_info_default(struct target *target,
 static int target_gdb_fileio_end_default(struct target *target, int retcode,
 		int fileio_errno, bool ctrl_c);
 
+/* --- third-party target architectures (tools/patch_target_groups.py) --- */
+#if BUILD_TARGETS_ALL == 1
+extern struct target_type c28x_target;
+extern struct target_type tms320_target;
+extern struct target_type hexagon_target;
+extern struct target_type quark_d2000_target;
+extern struct target_type quark_se_target;
+extern struct target_type vortex86_target;
+extern struct target_type loongarch_target;
+extern struct target_type mchp_ri4_bridge_target;
+extern struct target_type vexriscv_target;
+#endif
+/* --- end third-party target architectures --- */
+
 static struct target_type *target_types[] = {
 	// Keep in alphabetic order this list of targets
 	&aarch64_target,
@@ -112,7 +126,7 @@ static struct target_type *target_types[] = {
 	&testee_target,
 	&xscale_target,
 	&xtensa_chip_target,
-# --- third-party target architectures (tools/patch_target_groups.py) ---
+/* --- third-party target architectures (tools/patch_target_groups.py) --- */
 #if BUILD_TARGETS_ALL == 1
 	&c28x_target,
 	&tms320_target,
@@ -124,7 +138,7 @@ static struct target_type *target_types[] = {
 	&mchp_ri4_bridge_target,
 	&vexriscv_target,
 #endif
-# --- end third-party target architectures ---
+/* --- end third-party target architectures --- */
 
 };
 
