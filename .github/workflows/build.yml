@@ -1,0 +1,104 @@
+name: build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    name: Linux (GCC)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Only jimtcl is needed for the build. src/jtag/drivers/libjaylink is
+      # optional (the J-Link driver is simply disabled without it), so it is
+      # deliberately not fetched from its GitLab origin.
+      - name: Fetch jimtcl submodule
+        run: git submodule update --init jimtcl
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential autoconf automake libtool pkg-config \
+            libusb-1.0-0-dev libftdi1-dev libhidapi-dev texinfo
+
+      - name: Bootstrap autotools
+        run: ./bootstrap
+
+      - name: Configure
+        run: |
+          ./configure \
+            --enable-internal-jimtcl \
+            --disable-werror \
+            --disable-doxygen-html \
+            --disable-doxygen-pdf
+
+      - name: Build
+        run: make -j"$(nproc)"
+
+      - name: Smoke test
+        run: ./src/openocd --version
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: openocd-linux-x86_64
+          path: |
+            src/openocd
+            src/openocd.exe
+
+  windows:
+    name: Windows (MSYS2 UCRT64)
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            base-devel
+            git
+            autoconf
+            automake
+            libtool
+            pkgconf
+            mingw-w64-ucrt-x86_64-toolchain
+            mingw-w64-ucrt-x86_64-libusb
+            mingw-w64-ucrt-x86_64-libftdi
+            mingw-w64-ucrt-x86_64-hidapi
+
+      - name: Fetch jimtcl submodule
+        run: git submodule update --init jimtcl
+
+      - name: Bootstrap autotools
+        run: ./bootstrap
+
+      - name: Configure
+        run: |
+          ./configure \
+            --enable-internal-jimtcl \
+            --disable-werror \
+            --disable-doxygen-html \
+            --disable-doxygen-pdf
+
+      - name: Build
+        run: make -j"$(nproc)"
+
+      - name: Smoke test
+        run: ./src/openocd.exe --version
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: openocd-windows-x86_64
+          path: |
+            src/openocd.exe
