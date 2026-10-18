@@ -138,7 +138,23 @@ def check(files, upstream=set(), upstream_norm=None):
         else:
             alt = upstream_norm.get(normalise(rel))
             if alt:
-                errors.append(f"renamed duplicate: {rel} == upstream {alt}")
+                # A normalised path collision is only a duplicate when the
+                # CONTENT is identical too. Stripping `_` and `-` is a coarse
+                # heuristic: `adsp-sc58x.cfg` (upstream: a 1.5 KB Cortex-A5
+                # only config) and `adspsc58x.cfg` (Analog Devices' own 8.8 KB
+                # dual-SHARC config) normalise to the same key while being
+                # genuinely different files. Flagging them would force us to
+                # delete a working vendor config.
+                try:
+                    same = open(rel, "rb").read() == open(alt, "rb").read()
+                except OSError:
+                    same = False
+                if same:
+                    errors.append(f"renamed duplicate: {rel} == upstream {alt}")
+                else:
+                    warns.append(
+                        f"name collides with upstream {alt} but content differs; kept"
+                    )
 
     for rel in sorted(on_disk - set(files)):
         errors.append(f"on disk but unrecorded: {rel}")
@@ -196,8 +212,17 @@ def main():
     for e in r["errors"][:15]:
         print(f"    ERROR {e}")
     print(f"warns    : {len(r['warns'])}")
-    for w in r["warns"][:5]:
+    # Print every warn whose text is not the high-volume "no SPDX resolved"
+    # class, then cap that class so the interesting warnings are never hidden
+    # behind 25 identical licence lines.
+    spdx = [w for w in r["warns"] if "no SPDX resolved" in w]
+    other = [w for w in r["warns"] if "no SPDX resolved" not in w]
+    for w in other:
         print(f"    warn  {w}")
+    for w in spdx[:5]:
+        print(f"    warn  {w}")
+    if len(spdx) > 5:
+        print(f"    ... and {len(spdx) - 5} more 'no SPDX resolved' warnings")
     print(f"licences : {r['licenses']}")
     print(f"licence-unresolved files: {r['licence_unresolved_files']}")
     print(f"copies-per-file histogram: {r['duplicate_providers']}")
