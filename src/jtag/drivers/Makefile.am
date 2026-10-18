@@ -223,7 +223,25 @@ if XVC
 DRIVERFILES += %D%/xvc.c
 endif
 
+# Third-party adapters merged into this tree (see configure.ac).
+if DIRTYJTAG
+DRIVERFILES += %D%/dirtyjtag.c
+endif
+if ADI_ICE1000
+DRIVERFILES += %D%/ice1000.c
+endif
+if ADI_ICE1500
+DRIVERFILES += %D%/ice1500.c
+endif
+if ADI_DBGAGENT
+DRIVERFILES += %D%/adi_dbg_agent.c
+endif
+if ADI_USBMUX
+DRIVERFILES += %D%/usbmux.c
+endif
+
 DRIVERHEADERS = \
+	%D%/usbmux.h \
 	%D%/bitbang.h \
 	%D%/bitq.h \
 	%D%/libftdi_helper.h \

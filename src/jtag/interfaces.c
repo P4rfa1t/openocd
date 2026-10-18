@@ -68,8 +68,14 @@ struct adapter_driver *adapter_drivers[] = {
 #if BUILD_CMSIS_DAP_USB == 1 || BUILD_CMSIS_DAP_HID == 1 || BUILD_CMSIS_DAP_TCP == 1
 		&cmsis_dap_adapter_driver,
 #endif
+#if BUILD_ADI_DBGAGENT == 1
+		&dbgagent_adapter_driver,
+#endif
 #if BUILD_DMEM == 1
 		&dmem_dap_adapter_driver,
+#endif
+#if BUILD_DIRTYJTAG == 1
+		&dirtyjtag_adapter_driver,
 #endif
 #if BUILD_DUMMY == 1
 		&dummy_adapter_driver,
@@ -94,6 +100,15 @@ struct adapter_driver *adapter_drivers[] = {
 #endif
 #if BUILD_HLADAPTER == 1
 		&hl_adapter_driver,
+#endif
+#if BUILD_ADI_ICE1000 == 1
+		&ice1000_adapter_driver,
+#endif
+#if BUILD_ADI_ICE1000 == 1
+		&ice2000_adapter_driver,
+#endif
+#if BUILD_ADI_ICE1500 == 1
+		&ice1500_adapter_driver,
 #endif
 #if BUILD_IMX_GPIO == 1
 		&imx_gpio_adapter_driver,

@@ -177,6 +177,23 @@ m4_define([SYSFSGPIO_ADAPTER],
 m4_define([REMOTE_BITBANG_ADAPTER],
 	[[[remote_bitbang], [Remote Bitbang driver], [REMOTE_BITBANG]]])
 
+# Adapters contributed by third-party forks and merged into this tree.
+# They are registered separately from upstream's own lists so that this fork's
+# additions stay easy to review and to remove.
+m4_define([DIRTYJTAG_ADAPTER],
+	[[[dirtyjtag], [DirtyJTAG Adapter], [DIRTYJTAG]]])
+
+m4_define([ADI_ADAPTERS],
+	[[[adi_ice1000], [Analog Devices ICE-1000/ICE-2000], [ADI_ICE1000]],
+	[[adi_ice1500], [Analog Devices ICE-1500], [ADI_ICE1500]],
+	[[adi_dbgagent], [Analog Devices Debug Agent], [ADI_DBGAGENT]]])
+
+# The Analog Devices USB MUX is a Windows-only helper that lets several
+# processes share one AD-USB-MUX device over a named pipe. It is built as a
+# separate helper, not as an adapter, so it lives in its own list below.
+m4_define([ADI_USBMUX_HELPER],
+	[[[adi_usbmux], [Analog Devices USB MUX pipe helper (Windows)], [ADI_USBMUX]]])
+
 m4_define([LIBJAYLINK_ADAPTERS],
 	[[[jlink], [SEGGER J-Link Programmer], [JLINK]]])
 
@@ -304,7 +321,10 @@ AC_ARG_ADAPTERS([
   XVC_ADAPTERS,
   LIBJAYLINK_ADAPTERS,
   CMSIS_DAP_TCP_ADAPTER,
-  NETWORK_ADAPTERS
+  NETWORK_ADAPTERS,
+  DIRTYJTAG_ADAPTER,
+  ADI_ADAPTERS,
+  ADI_USBMUX_HELPER
   ],[auto])
 
 AC_ARG_ADAPTERS([
@@ -623,6 +643,15 @@ PROCESS_ADAPTERS([LIBGPIOD_ADAPTERS], ["x$use_libgpiod" = "xyes"], [Linux libgpi
 PROCESS_ADAPTERS([DMEM_ADAPTER], ["x$is_linux" = "xyes" -a "x$ac_cv_header_sys_mman_h" = "xyes"], [Linux /dev/mem])
 PROCESS_ADAPTERS([SYSFSGPIO_ADAPTER], ["x$is_linux" = "xyes"], [Linux sysfs])
 PROCESS_ADAPTERS([REMOTE_BITBANG_ADAPTER], [true], [unused])
+# Third-party adapters merged into this tree.
+# DIRTYJTAG has no extra prerequisites beyond the base toolchain.
+# ADI_* need libusb-1.x (they talk to the probe through libusb).
+# ADI_USBMUX_HELPER implements a Win32 named-pipe protocol and is only buildable
+# on Windows.  Note that the ADI adapter drivers above do NOT require it: they
+# use the plain libusb path unless _ADI_USB_MUX_ is explicitly defined.
+PROCESS_ADAPTERS([DIRTYJTAG_ADAPTER], [true], [unused])
+PROCESS_ADAPTERS([ADI_ADAPTERS], ["x$use_libusb1" = "xyes"], [libusb-1.x])
+PROCESS_ADAPTERS([ADI_USBMUX_HELPER], ["x$is_win32" = "xyes"], [inherited Windows host support])
 PROCESS_ADAPTERS([CMSIS_DAP_TCP_ADAPTER], [true], [unused])
 PROCESS_ADAPTERS([LIBJAYLINK_ADAPTERS], ["x$use_internal_libjaylink" = "xyes" -o "x$use_libjaylink" = "xyes"], [libjaylink-0.2])
 PROCESS_ADAPTERS([XVC_ADAPTERS],
@@ -849,6 +878,9 @@ m4_foreach([adapter_driver], [USB1_ADAPTERS,
 	JTAG_DPI_ADAPTER,
 	JTAG_VPI_ADAPTER,
 	RSHIM_ADAPTER,
+	DIRTYJTAG_ADAPTER,
+	ADI_ADAPTERS,
+	ADI_USBMUX_HELPER,
 	AMTJTAGACCEL_ADAPTER,
 	HOST_ARM_BITBANG_ADAPTERS,
 	HOST_ARM_OR_AARCH64_BITBANG_ADAPTERS,

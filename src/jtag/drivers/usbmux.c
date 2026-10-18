@@ -72,7 +72,7 @@ void usbmux_close(HANDLE handle)
 	* @param endpoint The USB endpoint to communicate with
 	* @param timeout The USB read / write timeout
 	*/
-void usbmux_create_header(uint8_t *header, UsbMuxMessageType message_type, uint32_t num_bytes, uint32_t endpoint, uint32_t timeout)
+static void usbmux_create_header(uint8_t *header, UsbMuxMessageType message_type, uint32_t num_bytes, uint32_t endpoint, uint32_t timeout)
 {
 #ifdef _WIN32
 	if (!header)
