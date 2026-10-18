@@ -52,8 +52,13 @@ HEADERS = [
     "vexriscv.h",
 ]
 
-BEGIN = "/* --- third-party target architectures (tools/patch_target_groups.py) --- */"
-END = "/* --- end third-party target architectures --- */"
+# target.c is C and Makefile.am is automake, and they disagree about what a
+# comment looks like: /* */ inside a Makefile.am is a syntax error, and
+# "# ---" inside C is a stray preprocessing directive.  Keep both spellings.
+BEGIN_C = "/* --- third-party target architectures (tools/patch_target_groups.py) --- */"
+END_C = "/* --- end third-party target architectures --- */"
+BEGIN_MK = "# --- third-party target architectures (tools/patch_target_groups.py) ---"
+END_MK = "# --- end third-party target architectures ---"
 
 
 def read_lf(path):
@@ -83,10 +88,10 @@ def patch_makefile():
     text, eol = read_lf(path)
 
     # Drop a previous run so the script stays idempotent.
-    text = re.sub(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\n", "",
+    text = re.sub(re.escape(BEGIN_MK) + r".*?" + re.escape(END_MK) + r"\n", "",
                   text, flags=re.S)
 
-    src = [BEGIN, ""]
+    src = [BEGIN_MK, ""]
     for name, files, _syms, macro in GROUPS:
         var = f"{name}_SRC"
         src.append(f"{var} = \\")
@@ -102,7 +107,7 @@ def patch_makefile():
         sep = " \\" if i < len(HEADERS) - 1 else ""
         src.append(f"\t%D%/{h}{sep}")
     src.append("")
-    src.append(END)
+    src.append(END_MK)
     src.append("")
 
     block = "\n".join(src)
@@ -127,8 +132,8 @@ def patch_target_c():
     path = ROOT / "src/target/target.c"
     text, eol = read_lf(path)
 
-    if BEGIN in text:
-        text = re.sub(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\n", "",
+    if BEGIN_C in text:
+        text = re.sub(re.escape(BEGIN_C) + r".*?" + re.escape(END_C) + r"\n", "",
                       text, flags=re.S)
 
     syms = []
@@ -136,22 +141,22 @@ def patch_target_c():
         for s in tsyms:
             syms.append((s, macro))
 
-    lines = [BEGIN, "#if BUILD_TARGETS_ALL == 1"]
+    lines = [BEGIN_C, "#if BUILD_TARGETS_ALL == 1"]
     for s, macro in syms:
         lines.append(f"\t&{s},")
     lines.append("#endif")
-    lines.append(END)
+    lines.append(END_C)
     lines.append("")
     block = "\n".join(lines)
 
     # target.c has no declaration of its own for these; upstream declares the
     # built-in ones in target_type.h.  Without an extern the compiler treats
     # each `&foo_target` as an undeclared identifier.
-    decl = [BEGIN, "#if BUILD_TARGETS_ALL == 1"]
+    decl = [BEGIN_C, "#if BUILD_TARGETS_ALL == 1"]
     for s, _macro in syms:
         decl.append(f"extern struct target_type {s};")
     decl.append("#endif")
-    decl.append(END)
+    decl.append(END_C)
     decl.append("")
     decl_block = "\n".join(decl)
 

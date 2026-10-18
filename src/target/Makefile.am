@@ -243,7 +243,7 @@ include %D%/openrisc/Makefile.am
 include %D%/riscv/Makefile.am
 include %D%/xtensa/Makefile.am
 include %D%/espressif/Makefile.am
-/* --- third-party target architectures (tools/patch_target_groups.py) --- */
+# --- third-party target architectures (tools/patch_target_groups.py) ---
 
 C28X_SRC = \
 	%D%/c28x.c
@@ -315,4 +315,4 @@ VEXRISCV_SRC = \
 	%D%/mchp_ri4_native.h \
 	%D%/vexriscv.h
 
-/* --- end third-party target architectures --- */
+# --- end third-party target architectures ---
