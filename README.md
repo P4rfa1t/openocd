@@ -1,4 +1,6 @@
-# openocd-third-party-support
+# openocd
+
+[![build](https://github.com/P4rfa1t/openocd/actions/workflows/build.yml/badge.svg)](https://github.com/P4rfa1t/openocd/actions/workflows/build.yml)
 
 **`openocd-org/openocd` 的 fork** —— 把散落在 GitHub 各家 fork 里、从未上游化的
 芯片 / 开发板 / 烧录器支持，直接合并进 OpenOCD 源码树。
@@ -54,6 +56,16 @@ sudo make install
 ```
 
 Windows 见上游 `README.Windows.md`（本仓库未改动）。
+
+### CI
+
+`.github/workflows/build.yml` 在 Linux（GCC）和 Windows（MSYS2 UCRT64）上各构建一次，
+构建产物作为 artifact 上传（`openocd-linux-x86_64`、`openocd-windows-x86_64`）。
+
+因为 `tcl/` 的安装方式是 `find $(srcdir)/tcl -name '*.cfg'`，新增的 505 个配置
+**已经在这些二进制里生效**；`src/` 的 127 个 C 文件还没有注册进 `Makefile.am`，
+所以它们不参与编译 —— 也就是说 CI 通过只证明"上游代码 + 第三方 tcl 能编译"，
+不证明第三方 C 驱动能编译。
 
 验证用的上游基线（commit + 全量文件清单）记录在
 `manifest/upstream.json` 与 `manifest/upstream-index.txt`。
