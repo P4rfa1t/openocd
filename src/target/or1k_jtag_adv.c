@@ -37,7 +37,7 @@
 #include "helper/types.h"
 #include "jtag/jtag.h"
 #include "or1k_jtag.h"
-#include "or1k.h"
+#include "openrisc/or1k.h"
 #include "altera_virtual_jtag.h"
 #include "or1k_jtag_adv.h"
 

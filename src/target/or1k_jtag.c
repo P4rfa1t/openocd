@@ -26,7 +26,7 @@
 #include "helper/types.h"
 #include "jtag/jtag.h"
 #include "or1k_jtag.h"
-#include "or1k.h"
+#include "openrisc/or1k.h"
 
 
 static int or1k_jtag_inited = 0;

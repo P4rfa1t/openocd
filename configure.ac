@@ -616,7 +616,22 @@ m4_define([PROCESS_ADAPTERS], [
   m4_foreach([adapter_driver], [$1], [
 	AS_IF([test $2], [
 		AS_IF([test "x$ADAPTER_VAR([adapter_driver])" != "xno"], [
-			AC_DEFINE([BUILD_]ADAPTER_SYM([adapter_driver]), [1],
+			AC_ARG_ENABLE([third-party-targets],
+  AS_HELP_STRING([--disable-third-party-targets],
+    [do not build the merged third-party target architectures]),
+  [enable_third_party_targets=$enableval],
+  [enable_third_party_targets=yes])
+
+AS_IF([test "x$enable_third_party_targets" = xyes], [
+	AC_DEFINE([BUILD_TARGETS_ALL], [1],
+		[build the merged third-party target architectures])
+], [
+	AC_DEFINE([BUILD_TARGETS_ALL], [0],
+		[build the merged third-party target architectures])
+])
+AM_CONDITIONAL([TARGETS_ALL], [test "x$enable_third_party_targets" = xyes])
+
+AC_DEFINE([BUILD_]ADAPTER_SYM([adapter_driver]), [1],
 			          [1 if you want the ]ADAPTER_DESC([adapter_driver]).)
 		], [
 			AC_DEFINE([BUILD_]ADAPTER_SYM([adapter_driver]), [0],

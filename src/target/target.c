@@ -112,6 +112,20 @@ static struct target_type *target_types[] = {
 	&testee_target,
 	&xscale_target,
 	&xtensa_chip_target,
+# --- third-party target architectures (tools/patch_target_groups.py) ---
+#if BUILD_TARGETS_ALL == 1
+	&c28x_target,
+	&tms320_target,
+	&hexagon_target,
+	&quark_d2000_target,
+	&quark_se_target,
+	&vortex86_target,
+	&loongarch_target,
+	&mchp_ri4_bridge_target,
+	&vexriscv_target,
+#endif
+# --- end third-party target architectures ---
+
 };
 
 struct target *all_targets;
