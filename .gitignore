@@ -1,0 +1,22 @@
+# 抓取与中间日志，不入库
+raw/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 绝不入库：任何凭据
+*.env
+*token*
+*TOKEN*
+*credential*
+*secret*

@@ -1,0 +1,690 @@
+score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,description
+711.6,intel/OpenOCD,independent,12,2022-08-04T23:10:49Z,GPL-2.0,1,126,68,56,429,
+662.9,foss-for-mips-arc-processors/openocd,independent,16,2026-09-14T20:31:30Z,GPL-2.0,1,121,69,50,401,The development tree for OpenOCD for MIPS Atlas ARC® processors
+592.0,sysprogs/esp8266-openocd,independent,56,2019-12-20T16:22:21Z,GPL-2.0,1,89,39,48,367,A stable ESP8266 port of OpenOCD
+535.0,P4rfa1t/openocd,fork,0,2025-10-14T06:12:38Z,NOASSERTION,0,184,184,0,113,"Include some fork to one fork(if u want some fork ,can tell me) I'm not sure if it works on Linux or macOS."
+524.3,stacksmashing/openocd,independent,69,2022-08-31T11:25:57Z,GPL-2.0,1,79,39,39,218,
+514.2,OpenNuvoton/OpenOCD-Nuvoton,independent,56,2026-06-16T03:56:53Z,GPL-2.0,1,87,47,37,312,Customized OpenOCD for Nuvoton devices
+506.5,ilg-archived/openocd,independent,240,2019-09-27T18:59:19Z,GPL-2.0,1,76,37,38,230,The GNU MCU Eclipse OpenOCD
+487.7,AnlogicInfo/al_openocd,independent,6,2026-10-17T01:29:09Z,NOASSERTION,1,79,40,38,122,OpenOCD Debugger fork by Anlogic.
+469.3,MotorolaMobilityLLC/openocd,independent,6,2017-12-20T21:28:32Z,GPL-2.0,1,86,47,37,318,
+466.6,walmis/openocd-blackmagic,independent,15,2020-10-27T09:23:58Z,GPL-2.0,1,76,38,37,216,OpenOCD fork with blackmagic HLA support. Allows using blackmagic probe for debugging using OpenOCD. 
+462.4,arduino/OpenOCD,independent,133,2024-07-17T08:59:41Z,GPL-2.0,1,72,36,35,304,Fork of OpenOCD
+462.0,Lichee-Pi/LicheeTang_openocd,independent,24,2021-10-18T03:04:07Z,GPL-2.0,1,76,39,36,260,"forked from https://github.com/riscv/riscv-openocd.git,and add falsh support for LicheeTang"
+456.0,matrix-io/matrix-creator-openocd,independent,5,2021-09-13T17:34:21Z,GPL-2.0,1,82,43,37,320,The GNU ARM Eclipse OpenOCD.  Used to program the EM3588 SoC and the SAM3S microcontroller of the MATRIX Creator via Raspberry Pi.
+449.7,kendryte/openocd-kendryte,independent,24,2019-02-21T09:57:40Z,GPL-2.0,1,73,36,36,282,
+447.0,sandeepmistry/openocd-code-nrf5,independent,11,2016-04-10T15:19:05Z,GPL-2.0,1,77,38,37,320,
+444.9,bluespec/riscv-openocd,independent,7,2023-10-30T19:26:10Z,GPL-2.0,1,76,39,36,261,
+443.4,sony/openocd-nuttx,independent,25,2019-01-21T02:30:45Z,GPL-2.0,1,74,38,35,304,Fork of OpenOCD with NuttX thread support.
+441.9,andestech/nds-openocd,independent,7,2026-05-26T12:37:27Z,NOASSERTION,1,66,28,37,127,Fork from RISCV and add AndeStar V5 arch
+441.1,Broadcom/WICED-OpenOCD,independent,9,2016-01-14T11:37:42Z,GPL-2.0,1,76,37,37,326,Customised version of OpenOCD used by Broadcom WICED
+439.2,snowcap-electronics/OpenOCD,independent,13,2015-07-23T10:49:12Z,GPL-2.0,1,76,37,37,365,OpenOCD with SWD support
+435.1,daniel-k/openocd,independent,7,2016-09-04T22:53:49Z,GPL-2.0,1,76,37,37,353,My fork and contributions of OpenOCD
+430.4,erwango/openocd-stm32,independent,18,2017-10-30T10:04:23Z,GPL-2.0,1,72,36,35,304,Some scripts to flash and debug stm32 boards
+425.2,pebble/openocd,independent,2,2016-02-12T16:12:20Z,GPL-2.0,1,75,36,37,365,Openocd fork with support for our modified version of freertos
+423.4,jeanthom/openocd-dirtyjtag,independent,22,2022-11-19T04:05:51Z,GPL-2.0,1,68,34,33,204,OpenOCD fork with DirtyJTAG support (WIP)
+422.4,watr-li/OpenOCD,independent,1,2015-03-18T16:41:31Z,GPL-2.0,1,75,36,37,377,Fork of OpenOCD which includes CMSIS-DAP speed enhancements (http://openocd.zylin.com/#/c/2356/)
+420.9,satoshinm/openocd,independent,1,2017-12-19T04:38:18Z,GPL-2.0,1,71,34,36,281,fork of openocd (https://git.code.sf.net/p/openocd/code) with bp-swd patch
+420.4,marcelobarrosufu/openocd_nrf52,independent,12,2018-02-05T12:55:46Z,GPL-2.0,1,70,34,35,291,OpenOCD with integrated modifications to support nRF52 and STLink
+419.2,sanchox/openocd,independent,1,2018-01-23T12:02:09Z,GPL-2.0,1,70,33,36,272,fork openocd for beaglebone fast jtag swd pru debugger
+411.7,cjacker/wch-openocd,independent,10,2024-11-27T08:12:45Z,NOASSERTION,1,64,30,33,122,Latest (2024-11-26) source of official WCH OpenOCD
+403.7,Seneral/riscv-openocd-wch,independent,18,2026-02-07T20:28:44Z,NOASSERTION,1,61,28,32,122,"Snapshots of customised riscv-openocd versions from MounRiver Studio !! WCH-Link needs branch wch-link-swd, WCH-LinkE needs branch wch-linke-sdi !! Th"
+398.6,dynm/openocd-starbleed,independent,6,2022-04-22T03:36:38Z,GPL-2.0,1,67,34,32,196,
+392.7,kprasadvnsi/riscv-openocd-wch,independent,56,2022-03-29T03:09:01Z,NOASSERTION,1,57,28,28,142,OpenOCD source code for CH32V series MCUs released by Mounriver IDE
+386.5,zephyrproject-rtos/openocd,independent,47,2026-09-02T14:20:04Z,NOASSERTION,1,57,30,26,70,OpenOCD with Zephyr patches for building Zephyr SDK
+385.8,ciniml/openocd,independent,3,2021-02-20T11:20:22Z,GPL-2.0,1,66,34,31,195,A fork of OpenOCD for experimental use
+374.2,Blinkinlabs/OpenOCD,independent,3,2021-03-24T18:10:16Z,GPL-2.0,1,56,22,33,165,"This is a fork of http://openocd.org/repos/ , with changes we have made to support the JTAG Hat (https://github.com/blinkinlabs/jtag_hat). Please use "
+371.7,karlp/openocd-hacks,independent,23,2023-10-30T15:58:23Z,NOASSERTION,1,59,30,28,142,poking at openocd
+371.1,xpack-dev-tools/openocd,independent,61,2022-09-01T17:16:05Z,NOASSERTION,1,52,25,26,93,"A fork of the OpenOCD project, used to build the xPack OpenOCD"
+369.6,intel/aji_openocd,independent,12,2025-08-18T18:38:27Z,NOASSERTION,1,58,27,30,156,A customized copy of OpenOCD able to access the jtagd/jtagserver distributed with Quartus. At present it is restricted to accessing the ARM HPS. It wi
+363.0,fxsheep/openocd_wchlink-rv,independent,22,2022-02-01T12:02:52Z,NOASSERTION,1,54,24,29,140,A modern port of OpenOCD to WCH-Link RISC-V (see project wiki)
+360.7,newbrain/riscv-openocd-wch,independent,18,2022-08-11T03:50:53Z,NOASSERTION,1,57,28,28,142,"This is the OpenOCD source code modified to support WCHlink and CH32Vxxx MCUs, received from MounRiver after my GPL request, and published here as a s"
+358.1,fatalfeel/openocd_integrated,independent,6,2022-12-27T17:38:53Z,NOASSERTION,1,62,35,26,86,
+356.2,stacksmashing/openocd-tamarin,independent,18,2025-05-24T10:54:33Z,NOASSERTION,1,55,27,27,85,Fork of Microsoft's fork of OpenOCD - this one being with Tamarin support and pre-built binaries.
+351.6,sysprogs/openocd,independent,102,2026-05-02T23:27:11Z,NOASSERTION,1,73,61,12,9,OpenOCD shipped with VisualGDB. Built with CMake.
+343.2,yottatsa/openocd,fork,1,2023-01-25T16:55:47Z,NOASSERTION,1,54,25,28,85,Official OpenOCD Read-Only Mirror (no pull requests)
+330.2,l0ud/openocd-puya,fork,8,2023-05-11T19:03:09Z,NOASSERTION,1,52,25,26,85,OpenOCD fork with experimental puya32 flash support
+329.9,espressif/openocd-esp32,independent,471,2026-10-12T21:26:38Z,NOASSERTION,1,70,60,10,1,OpenOCD branch with ESP32 JTAG support
+323.2,Devilbinder/openocd,fork,1,2022-12-25T17:46:07Z,NOASSERTION,1,52,25,26,85,Official OpenOCD Read-Only Mirror (no pull requests)
+323.1,analogdevicesinc/openocd,independent,29,2026-07-29T15:56:43Z,NOASSERTION,1,82,75,7,6,ADI fork of OpenOCD
+322.2,KilyannBrault/openocd,fork,0,2026-09-08T14:19:00Z,NOASSERTION,1,52,25,26,85,Fork of the official OpenOCD Read-Only Mirror to patch the RISC-V target to account DTMCS idle cycles on DMI requests for my ZCU104 CVA6 implementatio
+290.9,vllogic/openocd_cmsis-dap_v2,independent,55,2026-08-14T10:46:07Z,NOASSERTION,1,76,74,2,7,支持CMSIS-DAP v2接口协议，支持ARM、RISCV、ESP32等目标芯片，详见Wiki及release
+239.0,Seeed-Studio/Seeed_Arduino_DAPLink,independent,39,2025-01-08T08:32:33Z,MIT,1,20,0,20,0,"An open-source DAPLink Arduino Library supports Keil MDK, IAR Embedded Workbench, OpenOCD, and other commonly used IDE."
+228.1,TheShed/OpenOCD-CMSIS-DAP,independent,35,2013-11-03T19:41:36Z,GPL-2.0,1,57,41,14,466,Development of CMSIS-DAP support for OpenOCD
+226.7,utlark/openocd,fork,0,2025-11-29T19:40:33Z,NOASSERTION,0,83,83,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+215.6,linux-msm/openocd,fork,26,2025-04-10T10:24:32Z,NOASSERTION,1,44,35,9,36,OpenOCD with Qualcomm patches (rebased)
+200.6,mowsong/openocd,fork,0,2025-03-08T13:13:44Z,NOASSERTION,0,73,73,0,123,"A fork of OpenOCD, adding generic cmsis flash driver from the Cypress fork."
+198.1,aesc-silicon/elements-openocd,independent,1,2026-10-16T14:13:21Z,NOASSERTION,1,51,44,7,33,VexRiscv OpenOCD fork
+195.9,corecode/openocd-swd,independent,6,2012-09-27T21:35:41Z,GPL-2.0,1,54,37,15,474,OpenOCD with patches for SWD
+195.4,mabl/openocd_chibios,independent,5,2012-10-09T12:56:54Z,GPL-2.0,1,54,37,15,471,"OBSOLETE: ChibiOS Support in OpenOCD, now merged upstream"
+193.8,STMicroelectronics/OpenOCD,independent,206,2026-09-01T13:37:57Z,NOASSERTION,1,42,37,4,48,STMicroelectronics customized version of OpenOCD supporting STM32 MCUs and MPUs
+191.7,TexasInstruments/ti-openocd,fork,9,2026-07-22T18:46:08Z,NOASSERTION,1,55,50,4,49,TI OpenOCD Fork
+190.0,lonehog/JTAGprobe,independent,102,2026-04-15T21:44:25Z,,1,14,0,14,0,Firmware for Raspberry Pico to work as JTAG debugger using OpenOCD
+189.8,riscv-collab/riscv-openocd,independent,517,2026-10-12T22:20:38Z,NOASSERTION,1,41,38,3,28,Fork of OpenOCD that has RISC-V support
+186.8,hikob/openocd,independent,18,2012-01-10T12:33:01Z,GPL-2.0,1,44,25,17,508,Improvements of OpenOCD by the HiKoB team
+185.8,raspberrypi/openocd,independent,223,2026-07-09T15:54:28Z,NOASSERTION,1,40,37,3,35,Raspberry Pi's downstream fork of OpenOCD for use with Pico-series devices.
+172.4,go2sh/aurix-openocd,independent,11,2024-11-26T23:18:41Z,NOASSERTION,1,42,36,6,44,
+157.2,xsession/openocd,fork,0,2026-09-22T13:21:56Z,NOASSERTION,1,34,26,8,5,Official OpenOCD Read-Only Mirror (no pull requests)
+156.7,hackpascal/openocd,fork,1,2024-04-01T15:45:31Z,NOASSERTION,1,39,31,7,49,OpenOCD with some modifications
+150.0,tihmstar/openocd_colobus,fork,1,2025-01-10T08:01:06Z,NOASSERTION,1,40,35,5,40,Openocd fork with colobus support
+149.4,punzik/openocd_vexriscv,independent,0,2025-02-13T14:53:17Z,NOASSERTION,0,58,58,0,164,"Fork of https://github.com/SpinalHDL/openocd_riscv, revision 058dfa50d625893bee9fecf8d604141911fac125. Submodules disabled."
+148.8,kevinmehall/openOCD,independent,5,2012-10-06T18:30:05Z,GPL-2.0,1,39,21,16,528,openOCD including OpenRISC with adv_debug_sys - patched to build on Ubuntu 12.04
+148.2,DCVostok/openocd-k1921vk,fork,12,2024-01-30T12:21:45Z,NOASSERTION,1,40,35,4,59,Fork Official OpenOCD with supporting k1921vk controllers
+145.7,luyi1888/openocd,fork,1,2024-05-22T23:33:10Z,NOASSERTION,1,40,34,5,49,Official OpenOCD Read-Only Mirror (no pull requests)
+144.0,rxmnjke/openocd,fork,0,2026-10-07T16:01:46Z,NOASSERTION,1,48,48,0,0,Official OpenOCD Read-Only Mirror with additional MCU support
+143.7,loopj/openocd-efm32s2,fork,2,2024-11-03T02:12:41Z,NOASSERTION,1,40,36,4,42,OpenOCD pre-patched with EFM32 Series 2 support
+139.9,David-lau/openocd-geehy,fork,3,2023-10-07T10:22:51Z,NOASSERTION,1,40,35,4,54,The official OpenOCD and adding support for Geehy MCU.
+139.7,meriac/openocd,fork,1,2024-04-25T12:16:02Z,NOASSERTION,1,38,32,5,49,Adds CH347 support to OpenOCD
+138.8,lnls-dig/openocd,independent,1,2024-07-16T15:47:52Z,NOASSERTION,1,39,35,4,48,OpenOCD fork with (1) XVC via TCP support and (2) fix for flashing AFCv3
+138.3,EyenixG/riscv-openocd,independent,0,2020-02-05T08:16:35Z,GPL-2.0,0,56,56,0,198,Fork of OpenOCD that has RISC-V support
+137.7,marisusis/openocd_hc32,independent,2,2024-02-16T18:42:44Z,NOASSERTION,1,37,31,5,49,OpenOCD fork with HC32 flash support
+137.2,GaloisInc/BESSPIN-riscv-openocd,independent,0,2021-05-26T22:13:49Z,GPL-2.0,0,56,56,0,205,"The BESSPIN fork of  riscv-openocd, a fork of OpenOCD that has RISC-V support."
+136.8,emard/openocd,fork,1,2025-01-01T19:49:30Z,NOASSERTION,1,38,34,4,41,"Official OpenOCD with ""espusbjtag"" driver fixed for FPGA (RUNTEST bugfix)"
+136.7,nalajcie/openocd,fork,1,2024-11-19T16:03:20Z,NOASSERTION,1,38,34,4,42,Unofficial OpenOCD Read-Only Mirror (no pull requests)
+136.5,nickfox-taterli/openocd,independent,0,2026-06-27T10:41:12Z,NOASSERTION,0,52,52,0,130,0.12.0+dev-00635-g0a084c293 fork from ST Repo
+134.2,nraynaud/openocd-semihosting-to-gdb,independent,0,2019-02-01T18:57:07Z,GPL-2.0,0,55,55,0,205,"openocd fork that displays semihosting messages in gdb. Useful for `target remote | openocd -c ""gdb_port pipe""`"
+134.2,hpaluch-pil/openocd-code,independent,0,2019-01-29T11:45:54Z,GPL-2.0,0,55,55,0,205,Fork of OpenOCD from sf.net
+134.1,RC-MODULE/openocd,independent,0,2021-02-04T08:06:19Z,GPL-2.0,0,54,54,0,186,OpenOCD fork with ppc476fp support
+133.7,rfoos/openocd,independent,0,2018-10-07T02:30:39Z,GPL-2.0,0,55,55,0,209,Temporary fork until upstream approved. Referenced by Docker-arm Embedded development with OpenOCD.
+133.5,kviver/openocd,independent,0,2023-04-12T11:43:26Z,GPL-2.0,0,55,55,0,210,fork of http://openocd.zylin.com project with nrf52/st-link support
+133.4,esden/openocd,independent,15,2010-12-01T03:42:05Z,GPL-2.0,1,38,24,13,557,"Free and Open On-Chip Debugging, In-System Programming and Boundary-Scan Testing"
+132.7,flipperdevices/openocd,fork,7,2025-01-30T13:18:31Z,NOASSERTION,1,36,31,4,49,Flipper Devices OpenOCD
+132.4,Adran-Marit/OpenOCD-DragonInjector-Fork,independent,0,2019-09-15T00:06:25Z,GPL-2.0,0,54,54,0,197,
+132.4,sirhcel/openocd,independent,0,2019-07-16T08:48:38Z,GPL-2.0,0,54,54,0,197,Fork of OpenOCD - Open On-Chip Debugger
+132.4,keith-packard/openocd,independent,0,2019-06-30T00:08:53Z,GPL-2.0,0,54,54,0,197,OpenOCD fork
+131.8,tom-van/openocd-rp2350-riscv,fork,5,2026-04-26T07:44:53Z,NOASSERTION,1,37,34,3,35,support for RP2350 with Cortex-M33/RISC-V Hazard3 slotted cores experimental switching
+131.6,NZSmartie/openocd,independent,0,2020-09-06T12:30:42Z,GPL-2.0,0,53,53,0,183,Fork of OpenOCD with ATSAML flash driver
+130.8,keirf/openocd,fork,0,2024-10-04T09:51:09Z,NOASSERTION,0,50,50,0,128,OpenOCD Fork for clean ArteryTek changes
+130.3,Giraut/openocd_with_microsemi_flash_drivers,fork,0,2024-07-02T20:29:58Z,NOASSERTION,0,50,50,0,131,Official OpenOCD with Microsemi flash drivers ported from the OpenOCD version 0.10.0-14 distributed by Microchip in SoftConsole v2022.2
+130.1,os-fpga/openocd,fork,2,2024-01-16T11:00:31Z,NOASSERTION,1,37,32,4,53,Official OpenOCD Read-Only Mirror (RapidSilicon Forked)
+130.0,Adancurusul/embedded-debugger-mcp,independent,205,2026-07-16T12:50:13Z,MIT,1,8,0,8,0,"MCP server + CLI + Codex/Claude skill for embedded debugging via probe-rs or OpenOCD — ARM Cortex-M, RISC-V, and Xtensa (ESP32), with AI crash diagnos"
+129.7,transcelestial/openocd,fork,1,2024-05-28T05:40:58Z,NOASSERTION,1,37,32,4,49,Official OpenOCD Read-Only Mirror (no pull requests)
+129.1,HalfSweet/openocd,fork,1,2024-01-03T12:07:48Z,NOASSERTION,1,37,32,4,53,Official OpenOCD Read-Only Mirror (no pull requests)
+129.1,mengfanyuc/openocd,fork,1,2023-11-26T14:05:07Z,NOASSERTION,1,37,32,4,53,openocd，ch32f205，fast write erase/read flash，write/read protect，write/read option data。 
+128.7,MarkFlickers/openocd_idm51,fork,0,2025-05-12T13:38:02Z,NOASSERTION,0,49,49,0,122,OpenOCD fork with idm51 support
+128.4,lopple/openocd-wch-ch32v003-bootfix,independent,0,2026-06-24T19:27:48Z,NOASSERTION,0,51,51,0,164,OpenOCD WCH CH32V003 BOOT write fix hard fork
+128.1,seeseemelk/openocd,independent,0,2021-03-11T14:48:15Z,GPL-2.0,0,52,52,0,186,A fork of OpenOCD that includes support for RIOT
+127.9,encryptize/openocd-at32,fork,3,2023-10-21T01:16:22Z,NOASSERTION,1,36,31,4,54,Fork of OpenOCD with support for AT32F415 in ScooterFlasher project
+127.2,DineshArasu-Microchip/openocd,fork,0,2026-04-30T05:13:47Z,NOASSERTION,0,48,48,0,112,Official OpenOCD Read-Only Mirror (no pull requests)
+126.7,neonkore/openocd,fork,1,2024-03-02T01:30:42Z,NOASSERTION,1,36,31,4,49,Open On Chip Debugger
+125.7,nickel110/openocd,fork,0,2026-07-08T08:42:10Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,kit-kch/psoc-openocd,independent,0,2025-06-11T15:18:45Z,NOASSERTION,0,48,48,0,122,OpenOCD fork for the KIT PSoC lab (Adding NeoRV32 JTAGSPI support)
+125.7,bkuschak/openocd,fork,0,2025-06-08T06:01:56Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,PoireauArchive/openocd,fork,0,2025-06-06T09:59:34Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,dengxbin/openocd,fork,0,2025-05-25T12:51:15Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,ruibiao/openocd,fork,0,2025-05-25T12:51:15Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,guohj2021/openocd,fork,0,2025-05-20T02:28:03Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,mothictech/openocd,fork,0,2025-05-19T10:42:14Z,NOASSERTION,0,48,48,0,122,OpenOCD
+125.7,metagur/openocd,fork,0,2025-05-17T14:08:24Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,smoonthsky/openocd,fork,0,2025-05-17T14:08:24Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,Wadym/openocd,fork,0,2025-05-17T14:08:24Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,oscardagrach/openocd_upstream,fork,0,2025-05-09T12:17:50Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,mhelektro/openocd_sysprog_flashplugin,fork,0,2025-05-02T08:55:47Z,NOASSERTION,0,48,48,0,122,Official OpenOCD mirror with sysprog FLASHPlugin so it can be used on Linux hosts
+125.7,max-dark/openocd-rp2040,fork,0,2025-04-30T17:35:37Z,NOASSERTION,0,48,48,0,122,[Fork]Official OpenOCD Read-Only Mirror (no pull requests)
+125.7,OffCourseOrg/openocd,fork,0,2025-04-30T13:35:09Z,NOASSERTION,0,48,48,0,122,Offcourse OpenOCD made for emscripten build
+125.7,AlexFabre/openocd,fork,0,2025-04-25T10:27:43Z,NOASSERTION,0,48,48,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,xboxoneresearch/openocd,fork,0,2026-04-23T05:47:45Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,jlehmke/openocd,fork,0,2025-04-19T09:25:26Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,redpack-kr/openocd,fork,0,2025-04-19T09:25:26Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,sukrutb/openocd,fork,0,2025-04-06T07:51:32Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,vnabiev/openocd,fork,0,2025-04-05T06:29:34Z,NOASSERTION,0,48,48,0,123,Fork of Official OpenOCD
+125.5,kcxt/openocd,fork,0,2025-04-01T04:54:54Z,NOASSERTION,0,48,48,0,123,OpenOCD with Qualcomm patches (rebased)
+125.5,ljw-95/openocd,fork,0,2025-03-29T22:12:57Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,jimmyadlink/openocd,fork,0,2025-03-20T03:55:40Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,fernicmarotta/openocd,fork,0,2025-03-15T10:38:59Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+125.5,ChrisMLawson/openocd,fork,0,2025-03-15T10:38:59Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror
+125.5,Hopeeia/openocd,fork,0,2025-03-15T10:38:59Z,NOASSERTION,0,48,48,0,123,OpenOCD  Mirror
+125.5,zhaozibo/openocd,fork,0,2025-03-09T13:31:40Z,NOASSERTION,0,48,48,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,sansyse/openocd,fork,0,2025-09-10T06:58:23Z,NOASSERTION,0,48,48,0,128,OpenOCD fork for changes
+124.8,DavidEGrayson/openocd,fork,0,2024-12-18T22:19:01Z,NOASSERTION,0,48,48,0,128,Keeps track of my changes to OpenOCD
+124.8,MarianoIT/openocd-faultier,fork,0,2024-10-30T13:42:31Z,NOASSERTION,0,48,48,0,128,OpenOCD para usar con Faultier
+124.8,amarentis/openocd,fork,0,2024-10-20T09:29:56Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,ljgabc/openocd,fork,0,2024-10-20T09:29:56Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,TerrisGO/openocd_fpga_rtos,fork,0,2024-10-20T09:29:56Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,rbneiman/openocd,fork,0,2024-10-16T14:20:31Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,2php/openocd,fork,0,2024-10-05T15:58:27Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,zoukai1988/openocd,fork,0,2024-10-01T04:00:35Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,Redrield/openocd,fork,0,2024-09-23T16:21:21Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,dayvydrn/openocd,fork,0,2024-09-21T09:09:43Z,NOASSERTION,0,48,48,0,128,Official OpenOCD Read-Only Mirror (no pull requests)
+124.8,ASU-SDSL/openocd,fork,0,2024-09-21T09:09:43Z,NOASSERTION,0,48,48,0,128,
+124.8,madprogrammer/openocd,fork,0,2024-09-18T15:03:08Z,NOASSERTION,0,48,48,0,128,
+124.8,zwizwa/openocd,independent,0,2021-12-06T04:27:45Z,GPL-2.0,0,51,51,0,188,OpenOCD fork with PDAP adapter support
+124.8,Vinggui/openocd,independent,0,2020-04-09T07:28:58Z,GPL-2.0,0,51,51,0,188,Fork of openocd. It fixes stm32 id problem.
+124.5,nvitya/openocd_nvitya,fork,0,2024-08-03T08:00:47Z,NOASSERTION,0,48,48,0,130,OpenOCD with nvitya Patches
+122.5,grayphoenix21/openocd,fork,0,2025-03-09T03:22:41Z,NOASSERTION,0,47,47,0,123,Official OpenOCD Read-Only Mirror (no pull requests)
+122.2,nmenon/openocd,independent,5,2026-05-29T17:39:15Z,NOASSERTION,1,35,33,2,12,
+122.1,murphyslemon/openocd,fork,0,2025-06-29T22:39:30Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,alexshi126/openocd,fork,0,2025-02-26T05:00:27Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,Sheldondxx/openocd,fork,0,2025-02-22T23:03:01Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,chen-2025/openocd,fork,0,2025-02-22T23:03:01Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,minhxuvi/openocd,fork,0,2025-02-22T23:03:01Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,embeddedadam/openocd,fork,0,2025-02-22T23:03:01Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,rhempel/openocd,fork,0,2025-02-21T03:41:39Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,DAR0001/openocd,fork,0,2025-01-31T03:26:24Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,samsong8610/openocd,fork,0,2025-01-12T11:13:44Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,MarkO-555/openocd,fork,0,2025-01-02T14:19:22Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.1,slvignesh05/openocd,fork,0,2024-12-29T07:28:06Z,NOASSERTION,0,47,47,0,126,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,NicolasDerumigny/openocd,fork,0,2025-07-03T12:41:32Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,luomoxiaoshui/openocd_new,fork,0,2025-01-09T04:12:34Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,WONGZEONJYU/openocd,fork,0,2024-12-21T22:41:50Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,vestas-wind-systems/openocd,fork,0,2024-12-19T09:16:07Z,NOASSERTION,0,47,47,0,127,
+122.0,odanis/openocd,fork,0,2024-12-14T11:30:18Z,NOASSERTION,0,47,47,0,127,Official OpenOCD + libswd
+122.0,colin-foster-in-advantage/openocd,fork,0,2024-12-12T19:29:09Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,et-zhou/openocd,fork,0,2024-11-30T17:16:01Z,NOASSERTION,0,47,47,0,127,"Official OpenOCD Read-Only Mirror (no pull requests), add support for YD-RP2040"
+122.0,hongbochen2015/openocd,fork,0,2024-11-23T13:59:10Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,nimish/openocd,fork,0,2024-11-23T13:59:10Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,junyang0412/openocd,fork,0,2024-11-23T13:59:10Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,4KiB/openocd,fork,0,2024-11-23T10:05:26Z,NOASSERTION,0,47,47,0,127,OpenOCD Fork for DirtyJTAG (RP2040)
+122.0,radovano-xlnx/openocd,fork,0,2024-11-20T17:16:29Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,gedicke-dev/openocd,fork,0,2024-11-18T19:52:35Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,JL2010/openocd,fork,0,2024-11-16T14:29:51Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
+122.0,wtf3505/openocd,fork,0,2024-11-02T21:10:53Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)开放式片上调试器 
+121.5,deGerard/openocd,fork,0,2025-10-28T15:03:29Z,NOASSERTION,0,47,47,0,130,OpenOCD Fork with stm32h5 support
+121.5,philgweber/openocd,fork,0,2024-09-11T16:26:34Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
+121.5,DSrinivasaReddy/openocd,fork,0,2024-09-07T11:46:30Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
+121.5,fanoush/openocd,fork,0,2024-09-03T07:53:55Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
+121.5,timksf/openocd,fork,0,2024-09-02T13:51:13Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
+121.5,SergeyKharenko/sk-openocd,fork,0,2024-08-26T11:32:58Z,NOASSERTION,0,47,47,0,130,OpenOCD restructure with EtherDAPLink
+121.5,interfect/openocd,fork,0,2024-08-26T02:56:20Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
+121.5,greyltc/openocd,fork,0,2024-08-16T22:26:50Z,NOASSERTION,0,47,47,0,130,greyltc's openocd fork
+121.5,xrmadman/openocd,fork,0,2024-08-06T14:35:56Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
+121.5,AnlangA/openocd,fork,0,2024-08-06T14:35:56Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,DmitryTyuphyakin/openocd,fork,0,2025-09-26T08:33:22Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,kingdomtechnologies/openocd,fork,0,2024-10-01T14:32:52Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,cyk21006223/openocd-for-gd32,fork,0,2024-08-01T07:15:19Z,NOASSERTION,0,47,47,0,131,添加对GD32的支持
+121.3,anshumaneducation/openocd,fork,0,2024-07-28T13:41:12Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,chang196700/openocd,fork,0,2024-07-25T23:48:33Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,Developers81828182/openocd,fork,0,2024-07-18T08:23:01Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,brainiostream/openocd,fork,0,2024-07-18T08:23:01Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,lixw668/openocd,fork,0,2024-07-13T22:35:53Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,cinnamondev/openocd,fork,0,2024-06-27T14:04:29Z,NOASSERTION,0,47,47,0,131,Mirror openocd-org/openocd (build releases linux windows vcpkg)
+121.3,nlshipp/openocd,fork,0,2024-06-24T02:59:25Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,cysin/openocd-gw,fork,0,2024-06-23T11:05:53Z,NOASSERTION,0,47,47,0,131,Only for flashing Game&Watch
+121.3,muhammadelmogy/openocd,fork,0,2024-06-19T22:06:18Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,pigmoral/openocd,fork,0,2024-06-14T06:41:31Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.3,jowinjohnchemban/openocd,fork,0,2024-06-08T09:24:22Z,NOASSERTION,0,47,47,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+121.2,OlegGalizin/openocd-for-py32f0xx,fork,1,2025-11-16T17:11:31Z,NOASSERTION,1,36,34,2,12,OpenOCD with patch for programming PY32f microcontrillers
+120.5,perigoso/openocd,fork,0,2022-08-03T18:20:54Z,NOASSERTION,0,48,48,0,157,OpenOCD Fork with WCH support rebased on top
+119.0,ingchips/openocd,fork,0,2025-12-24T11:01:59Z,NOASSERTION,0,45,45,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,ddi-ops/openocd-ftd2xx,fork,0,2026-08-05T17:06:18Z,NOASSERTION,0,47,47,0,149,
+118.7,mcicontainers/openocd-nrf52-only,fork,0,2025-12-15T12:12:53Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,Trickery710/openocd,fork,0,2024-01-29T05:35:11Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,kwagu14/openocd,fork,0,2023-01-11T08:53:41Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,vsfteam/openocd,fork,0,2022-12-23T01:41:13Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,rwalton-256/openocd,fork,0,2022-12-23T01:41:13Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,alexanderlarin/openocd,fork,0,2022-12-17T14:54:14Z,NOASSERTION,0,47,47,0,149,Official OpenOCD with WiringOP OrangePi support
+118.7,damianloew/openocd,fork,0,2022-12-06T13:04:28Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,mikyk10/openocd,fork,0,2022-12-03T09:33:04Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,dmcardle/openocd,fork,0,2022-11-29T21:42:48Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,barissahin2795/openocd,fork,0,2022-11-28T22:30:12Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,Huoleit/openocd,fork,0,2022-11-04T22:15:32Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,giuliof/openocd,fork,0,2022-11-03T19:40:10Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,yyjdelete/openocd,fork,0,2022-10-28T06:25:20Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,aswanepo/openocd,fork,0,2022-10-26T14:04:28Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,ThangQV/openocd,fork,0,2022-10-26T14:04:28Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,F1r3Hydr4nt/openocd,fork,0,2022-10-26T14:04:28Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,TimS-lab/openocd,fork,0,2022-10-26T14:04:28Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.7,szp35/openocd,fork,0,2022-10-21T18:30:54Z,NOASSERTION,0,47,47,0,149,Official OpenOCD Read-Only Mirror (no pull requests)
+118.5,rprasad12/openocd,fork,0,2022-10-15T16:05:41Z,NOASSERTION,0,47,47,0,150,Official OpenOCD Read-Only Mirror (no pull requests)
+118.5,sitedata/openocd,fork,0,2022-10-15T16:05:41Z,NOASSERTION,0,47,47,0,150,Official OpenOCD Read-Only Mirror (no pull requests)
+118.5,liligade4/openocd,fork,0,2022-09-27T08:55:38Z,NOASSERTION,0,47,47,0,150,Official OpenOCD Read-Only Mirror (no pull requests)
+118.5,Coldblackice/openocd,fork,0,2022-09-23T21:32:58Z,NOASSERTION,0,47,47,0,150,Official OpenOCD Read-Only Mirror (no pull requests)
+118.5,Litial/openocd,fork,0,2022-09-18T17:58:48Z,NOASSERTION,0,47,47,0,150,Official OpenOCD Read-Only Mirror (no pull requests)
+118.5,203Null/openocd,fork,0,2022-09-18T07:47:05Z,NOASSERTION,0,47,47,0,150,Official OpenOCD
+118.5,alphawaveip/openocd,fork,0,2022-09-13T22:25:23Z,NOASSERTION,0,47,47,0,150,Official OpenOCD Read-Only Mirror (no pull requests)
+118.5,cloudautotech-hub/openocd,fork,0,2022-09-13T22:25:23Z,NOASSERTION,0,47,47,0,150,Official OpenOCD Read-Only Mirror (no pull requests)
+118.3,autumn-qmj/openocd,fork,0,2024-04-12T13:45:24Z,NOASSERTION,0,46,46,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+118.2,LeeScenic/openocd,fork,1,2025-11-11T13:40:51Z,NOASSERTION,1,35,33,2,12,Official OpenOCD Read-Only Mirror (no pull requests)
+118.2,SundayKdr/openocd,fork,0,2022-09-08T09:38:01Z,NOASSERTION,0,47,47,0,152,Official OpenOCD Read-Only Mirror (no pull requests)
+118.2,r0oland/openocd,fork,0,2022-09-08T06:27:12Z,NOASSERTION,0,47,47,0,152,Official OpenOCD Read-Only Mirror (no pull requests)
+117.2,unrelatedlabs/openocd-code,independent,0,2016-09-03T19:11:11Z,GPL-2.0,0,51,51,0,239,openocd fork with STM32L433 Flash Support
+116.7,deepesh-agarawal-fermionic/openocd,fork,0,2025-06-09T09:25:12Z,NOASSERTION,0,45,45,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+116.2,paaull/openocd,independent,0,2022-05-04T10:24:22Z,NOASSERTION,0,47,47,0,165,openocd 0.11.0 fork with nrf91 flash driver
+115.3,barty78/openocd-nrf9160,fork,0,2024-05-15T05:39:20Z,NOASSERTION,0,45,45,0,131,Fork of openocd for purpose of adding nRF9160 support
+115.3,Hotakus/openocd,fork,0,2024-05-01T08:08:59Z,NOASSERTION,0,45,45,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+115.3,shianehao/openocd,fork,0,2024-03-12T12:17:16Z,NOASSERTION,0,45,45,0,131,Merge STM32 openOCD to Official OpenOCD 
+115.2,lopsided98/openocd-nrf53,fork,0,2024-03-30T02:54:27Z,NOASSERTION,0,45,45,0,132,OpenOCD with Nordic NRF53 support
+114.8,nickfox-taterli/openocd-v0.6.1-old,fork,0,2025-11-05T05:25:10Z,NOASSERTION,0,44,44,0,115,Official OpenOCD Read-Only Mirror (no pull requests)
+114.5,thomas-coding/openocd,fork,0,2023-03-21T01:39:17Z,NOASSERTION,0,46,46,0,157,Official OpenOCD Read-Only Mirror (no pull requests)
+114.5,wirenboard/openocd,fork,0,2022-08-19T15:02:28Z,NOASSERTION,0,46,46,0,157,Official OpenOCD Read-Only Mirror (no pull requests)
+114.5,augustofg/openocd,fork,0,2022-08-19T14:12:56Z,NOASSERTION,0,46,46,0,157,OpenOCD with XVC support
+114.5,dgonzalez97/openocd,fork,0,2022-08-15T13:32:11Z,NOASSERTION,0,46,46,0,157,Official OpenOCD Read-Only Mirror (no pull requests)
+114.5,zhaqian12/openocd,fork,0,2022-08-14T14:50:41Z,NOASSERTION,0,46,46,0,157,Official OpenOCD Read-Only Mirror (no pull requests)
+114.5,remme123/openocd,fork,0,2022-08-10T07:47:29Z,NOASSERTION,0,46,46,0,157,OpenOCD with some more chips support
+114.5,hugoleee/openocd,fork,0,2022-08-08T20:57:47Z,NOASSERTION,0,46,46,0,157,Official OpenOCD Read-Only Mirror (no pull requests)
+114.3,nmenon/nm-dmem-openocd,independent,0,2022-07-18T19:50:16Z,NOASSERTION,0,46,46,0,158,my personal fork of openocd
+113.8,heartacker/openocd,fork,0,2026-02-03T03:12:54Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,tearandfix/openocd-arc,fork,0,2025-07-23T06:44:41Z,NOASSERTION,0,44,44,0,121,OpenOCD for the Synopsys DesignWare ARC processor family
+113.8,Lesords/openocd,fork,0,2025-07-21T07:30:30Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,chgpalmer/openocd,fork,0,2025-07-06T16:29:19Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,tony-tan2/openocd,fork,0,2025-07-06T04:51:05Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,m00119022/openocd,fork,0,2025-07-06T04:51:05Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,IntelightRnd/openocd,fork,0,2025-07-06T04:51:05Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,jijichan/openocd,fork,0,2025-07-06T04:51:05Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,run-my-job/openocd,fork,0,2025-07-06T04:51:05Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,dashyr/openocd,fork,0,2025-07-02T12:26:04Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,LyricsWu/openocd,fork,0,2025-06-29T07:48:07Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,Kaushali08/openocd,fork,0,2025-06-25T07:59:43Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,arun-jyothish/openocd,fork,0,2025-06-21T07:43:49Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,Getty/openocd,fork,0,2025-06-21T07:43:49Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,Diltsman/openocd,fork,0,2025-06-21T07:43:49Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,wmjlovesyy/openocd,fork,0,2025-06-21T07:43:49Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,brucebiotech/iocd,fork,0,2025-06-18T17:52:08Z,NOASSERTION,0,44,44,0,121,OpenOCD fork to add support for io transport
+113.8,sigurasg/openocd,fork,0,2025-06-17T16:50:26Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.8,DebGith/openocd,fork,0,2025-06-14T14:01:46Z,NOASSERTION,0,44,44,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+113.7,specialshuai/openocd,fork,0,2025-06-07T10:29:35Z,NOASSERTION,0,44,44,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+113.7,DamonChen2026/openocd,fork,0,2025-06-07T10:29:35Z,NOASSERTION,0,44,44,0,122,Official OpenOCD Read-Only Mirror (no pull requests)
+113.7,YJBeetle/openocd-wch,fork,0,2024-01-25T13:31:24Z,NOASSERTION,0,46,46,0,162,openocd for wch
+113.1,timothy-lee2415/level-openocd,fork,0,2023-05-30T22:41:16Z,NOASSERTION,0,45,45,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,leofthirata/openocd,fork,0,2025-09-03T02:08:59Z,NOASSERTION,0,44,44,0,131,OpenOCD fork
+112.3,stevenwilson123/openocd,fork,0,2025-06-03T22:08:32Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,DannyVn2000/openocd,fork,0,2025-04-13T13:37:18Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,DIANA-IoT/OpenOCD-XVC-support,independent,0,2024-11-18T11:04:35Z,NOASSERTION,0,44,44,0,131,"[Pending reviewers' approval]: OpenOCD fork with support for XVC-compatible JTAG adapters using Wi-Fi interfaces. For the adapter firmware, refer to: "
+112.3,dumpit3315/openocd,fork,0,2024-07-09T03:38:21Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,nuffins/openocd,fork,0,2024-05-26T10:04:42Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,devcarbon-com/openocd,fork,0,2024-05-23T19:50:03Z,NOASSERTION,0,44,44,0,131,pico-custom-flash-device
+112.3,LittleNewton/openocd,fork,0,2024-05-11T11:59:36Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,1479319963/openocd,fork,0,2024-05-11T11:59:36Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,LaffeyOvO/openocd,fork,0,2024-05-08T23:44:30Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,pineapple-man/openocd,fork,0,2024-04-30T14:22:03Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,masayuki2009/openocd,fork,0,2024-04-29T03:30:59Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,sgraf/openocd,fork,0,2024-04-22T05:53:18Z,NOASSERTION,0,44,44,0,131,OpenOCD Fork
+112.3,Guido589/openocd,fork,0,2024-04-21T16:10:10Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,mhei/openocd,fork,0,2024-04-20T17:01:41Z,NOASSERTION,0,44,44,0,131,Fork of the Official OpenOCD Read-Only Mirror
+112.3,HeninHan/openocd,fork,0,2024-04-07T20:14:15Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,yangbonis/openocd,fork,0,2024-04-07T20:14:15Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,AoteJin/openocd,fork,0,2024-04-07T20:14:15Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,dansmiledan/openocd,fork,0,2024-04-06T15:37:44Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,Cataxk/openocd,fork,0,2024-04-01T05:55:53Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror
+112.3,RTK-jangid/openocd,fork,0,2024-03-24T13:46:14Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,OpenPuya/openocd,fork,0,2024-03-24T13:46:14Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,ningshao1945/openocd,fork,0,2024-03-10T17:58:46Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,844562078/openocd,fork,0,2024-03-02T11:09:49Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,saeidrezaei2023/openocd,fork,0,2024-02-24T13:45:04Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,VitalyS11/openocd,fork,0,2024-02-16T12:30:37Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,sullin/openocd,fork,0,2024-02-14T09:26:04Z,NOASSERTION,0,44,44,0,131,OpenOCD
+112.3,fainlabs/openocd,fork,0,2024-02-12T08:56:48Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,mzhong99/openocd,fork,0,2024-02-12T08:56:48Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,luyaocf/openocd,fork,0,2024-02-04T02:59:59Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,Cooler1989/openocd_custom,fork,0,2024-02-02T17:08:25Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,IridiumXOR/openocd,fork,0,2024-01-31T18:44:39Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
+112.3,10Ngg/openocd,fork,0,2024-01-28T14:23:35Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror 
+112.3,codepainters/openocd,fork,0,2024-01-15T11:39:30Z,NOASSERTION,0,44,44,0,131,OpenOCD fork - APM32F support on apm32 branch
+112.3,microcai/openocd-eg32,fork,0,2024-01-13T14:55:25Z,NOASSERTION,0,44,44,0,131,openocd fork to support EG6832
+112.2,lumagi/openocd,fork,0,2026-03-03T09:08:32Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,kariboter/openocd,fork,0,2025-10-28T08:32:11Z,NOASSERTION,0,43,43,0,112,
+112.2,TrekMax/openocd,fork,0,2023-12-30T08:53:01Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,arskell/openocd,fork,0,2023-12-24T14:31:27Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,cxping/openocd,fork,0,2023-12-19T13:29:15Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,the-mech/openocd,fork,0,2023-12-06T14:04:49Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,shenkegs/openocd-main,fork,0,2023-12-03T06:26:53Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,LongerVisionRobot/openocd,fork,0,2023-12-03T06:26:53Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,jehoffmann/openocd,fork,0,2023-11-26T10:30:42Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,pr1metine/openocd,fork,0,2023-11-13T09:36:32Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,Ryanf55/openocd,fork,0,2023-11-11T18:54:20Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,AnteviaNetworks/openocd,fork,0,2023-11-10T01:57:51Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,RomanAWS/openocd,fork,0,2023-10-19T21:41:00Z,NOASSERTION,0,44,44,0,132,Official OpenOCD for fake st-link 2.1
+112.2,ogilenkova/openocd,fork,0,2023-10-19T12:59:48Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,alitekin2fx/openocd,fork,0,2023-10-09T13:47:12Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,johnZhongxm/openocd,fork,0,2023-10-07T14:52:09Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,zchen-ambiq/openocd,fork,0,2023-10-07T14:52:09Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,TangatBaktybergen/openocd,fork,0,2023-10-07T14:52:09Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,tinic/openocd-nuvoton,fork,0,2023-10-01T20:38:07Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+112.2,enkiller/openocd,fork,0,2023-09-25T08:47:07Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
+110.4,Essenceia/openocd_ultrascale_plus,fork,1,2025-09-05T23:09:34Z,NOASSERTION,1,33,31,2,24,"OpenOCD fork, working on improving Xiling UltraScale+ support"
+110.1,husqvarnagroup/openocd,fork,0,2023-12-22T17:44:52Z,NOASSERTION,0,44,44,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+110.1,dron0gus/openocd,fork,0,2023-11-11T15:44:39Z,NOASSERTION,0,44,44,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+110.1,Willmish/openocd,fork,0,2023-06-05T14:33:43Z,NOASSERTION,0,44,44,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+110.1,web-logs2/openocd-6,fork,0,2023-05-30T07:34:21Z,NOASSERTION,0,44,44,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+110.1,weixiao007/openocd-1,fork,0,2023-05-29T22:22:37Z,NOASSERTION,0,44,44,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+110.1,andyjin90/openocd-org,fork,0,2023-05-29T22:22:37Z,NOASSERTION,0,44,44,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+110.1,RiseCai/openocd,fork,0,2023-05-27T06:56:25Z,NOASSERTION,0,44,44,0,146,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,SnotacusNexus/openocd,fork,0,2025-12-08T18:09:27Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,akkako/openocd,fork,0,2025-12-04T11:24:33Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,slhking/openocd,fork,0,2025-12-04T11:24:33Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,yjddkhgm/openocd,fork,0,2025-11-30T07:39:37Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,fullstackfpga/openocd,fork,0,2025-11-27T03:53:12Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,doujichao/openocd,fork,0,2025-11-25T12:00:24Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,AMzeo/openocd,fork,0,2025-11-24T14:09:08Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,Jaffar-74/openocd,fork,0,2025-11-17T15:43:37Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,StarSphere-1024/openocd,fork,0,2025-11-12T20:58:04Z,NOASSERTION,0,42,42,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,ErnestoRuiz26/openocd,fork,0,2023-06-16T18:09:33Z,NOASSERTION,0,44,44,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+110.0,5inf/openocd,fork,0,2023-02-09T15:20:54Z,NOASSERTION,0,44,44,0,147,OpenOCD fork for own development. I will try to merge useful stuff back to official OpenOCD. Do not use this repo!
+109.3,anobli/openocd,fork,0,2025-11-07T16:00:34Z,NOASSERTION,0,42,42,0,111,Official OpenOCD Read-Only Mirror (no pull requests)
+109.2,mura-aya/openocd,fork,0,2025-12-03T18:43:05Z,NOASSERTION,0,42,42,0,112,OpenOCD
+109.2,ddrobner/openocd,fork,0,2025-11-26T20:17:39Z,NOASSERTION,0,42,42,0,112,Official OpenOCD Read-Only Mirror with custom JTAG driver for the DUNE PTC
+109.2,kutukvpavel/openocd,fork,0,2025-10-27T18:10:48Z,NOASSERTION,0,42,42,0,112,Official OpenOCD Read-Only Mirror (no pull requests)
+109.2,Xuanzheng0901/openocd,fork,0,2025-10-25T12:53:41Z,NOASSERTION,0,42,42,0,112,Official OpenOCD Read-Only Mirror (no pull requests)
+109.2,mirsys/openocd,fork,0,2025-10-19T12:58:45Z,NOASSERTION,0,42,42,0,112,Official OpenOCD Read-Only Mirror (no pull requests)
+109.2,RagarrGeotab/openocd,fork,0,2025-10-18T09:06:06Z,NOASSERTION,0,42,42,0,112,Official OpenOCD Read-Only Mirror (no pull requests)
+109.2,faldor20/openocd,fork,0,2025-10-18T09:06:06Z,NOASSERTION,0,42,42,0,112,Official OpenOCD Read-Only Mirror (no pull requests)
+109.2,openbouffalo/openocd,fork,0,2025-10-13T14:21:18Z,NOASSERTION,0,42,42,0,112,OpenOCD fork with support for Bouffalo chips
+109.2,Krikie4/openocd,fork,0,2025-10-13T08:01:43Z,NOASSERTION,0,42,42,0,112,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,tokuden/openocd-win-ftd2xx,fork,1,2025-08-14T15:22:45Z,NOASSERTION,1,33,31,2,33,Windows version OpenOCD which uses FTD2XX proprietary driver instead of libusb/libftdi
+109.0,Indyuce/openocd-gecko5,independent,0,2025-12-29T22:05:06Z,NOASSERTION,0,42,42,0,113,OpenOCD fork for the Gecko5Education
+109.0,mmonsterski/openocd,fork,0,2025-11-04T11:57:52Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,sobuch/openocd,fork,0,2025-10-07T09:46:51Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,manocosta11/openocd,fork,0,2025-09-30T07:28:58Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,viktorstrigeus/openocd,fork,0,2025-09-30T07:28:58Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,adannenb/openocd,fork,0,2025-09-23T03:47:31Z,NOASSERTION,0,42,42,0,113,
+109.0,xingxinonline/s300-openocd,fork,0,2025-09-23T03:42:06Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,Gary-Fekete/openocd,fork,0,2025-09-20T23:01:37Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,JdumaresqSE/openocd,fork,0,2025-09-20T04:52:57Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,uniapi/openocd,fork,0,2025-09-20T04:52:57Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,vulcan1004/openocd,fork,0,2025-09-20T04:52:57Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,SalarSamani/openocd,fork,0,2025-09-13T12:13:04Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,gentooarch/openocd,fork,0,2025-09-06T11:47:53Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+109.0,MojoJojo/openocd,fork,0,2025-09-06T11:47:53Z,NOASSERTION,0,42,42,0,113,Official OpenOCD Read-Only Mirror (no pull requests)
+108.9,michallenc/openocd,fork,0,2025-09-04T11:39:43Z,NOASSERTION,0,42,42,0,114,Official OpenOCD Read-Only Mirror (no pull requests)
+108.9,fischpj/openocd,fork,0,2025-08-27T16:07:03Z,NOASSERTION,0,42,42,0,114,Official OpenOCD Read-Only Mirror (no pull requests)
+108.9,MichaelMazlin/openocd,fork,0,2025-08-26T20:05:31Z,NOASSERTION,0,42,42,0,114,Official OpenOCD Read-Only Mirror (no pull requests)
+108.8,ghostMan-pac/openocd,fork,0,2025-08-17T13:47:44Z,NOASSERTION,0,42,42,0,115,Official OpenOCD Read-Only Mirror (no pull requests)
+108.5,yongxing912/openocd,fork,0,2023-09-09T10:12:03Z,NOASSERTION,0,43,43,0,137,Official OpenOCD Read-Only Mirror (no pull requests)
+108.5,web-logs2/openocd-8,fork,0,2023-09-02T10:53:02Z,NOASSERTION,0,43,43,0,137,Official OpenOCD Read-Only Mirror (no pull requests)
+108.5,gberthou/openocd,fork,0,2023-08-27T18:15:40Z,NOASSERTION,0,43,43,0,137,OpenOCD fork with support for Cortex-M7 r1p1 + Cortex-M4 r0p1 architectures
+108.3,XXXCCCQ/11111,fork,0,2024-05-27T01:41:44Z,NOASSERTION,0,43,43,0,138,Official OpenOCD Read-Only Mirror (no pull requests)
+108.3,chcbaram/openocd,fork,0,2023-08-12T16:53:43Z,NOASSERTION,0,43,43,0,138,Official OpenOCD Read-Only Mirror (no pull requests)
+108.3,nka123/openocd,fork,0,2023-08-12T16:53:43Z,NOASSERTION,0,43,43,0,138,Official OpenOCD Read-Only Mirror (no pull requests)
+108.3,phuhavan/openocd,fork,0,2023-08-12T16:53:43Z,NOASSERTION,0,43,43,0,138,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,tridge/openocd,fork,0,2025-05-12T07:53:24Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,dragomirecky/openocd,fork,0,2023-08-28T16:01:24Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,hpsprger/openocd,fork,0,2023-08-08T06:17:40Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,danritchie-pcso/openocd,fork,0,2023-08-08T06:17:40Z,NOASSERTION,0,43,43,0,139,Fork of Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,sidprice/openocd,fork,0,2023-07-29T05:23:17Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,mrdude2478/openocd,fork,0,2023-07-29T05:23:17Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,noisycricket777/openocd,fork,0,2023-07-29T05:23:17Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,jrepp/openocd,fork,0,2023-07-11T08:17:38Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,evabits/openocd,fork,0,2023-07-10T07:34:08Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,casrya/openocd,fork,0,2023-07-03T14:13:31Z,NOASSERTION,0,43,43,0,139,OpenOCD ChibiosRT7
+108.2,InspireSemi/openocd,fork,0,2023-07-01T18:05:30Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,Roche85/openocd,fork,0,2023-07-01T18:05:30Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,weiern1997/openocd,fork,0,2023-07-01T18:05:30Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,jamestiotio/openocd,fork,0,2023-06-29T04:19:35Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,chenx97/openocd,fork,0,2023-06-20T02:40:44Z,NOASSERTION,0,43,43,0,139,Official OpenOCD Read-Only Mirror (no pull requests)
+108.2,litui/openocd,independent,0,2023-06-10T21:47:48Z,NOASSERTION,0,43,43,0,139,Up-to-date OpenOCD fork incorporating RTT race condition patch
+107.8,vfazio/openocd,fork,0,2025-08-18T15:01:07Z,NOASSERTION,0,42,42,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+107.8,variable667/openocd,fork,0,2025-08-04T09:15:25Z,NOASSERTION,0,42,42,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+107.8,JeevonDai/openocd,fork,0,2025-07-31T04:03:18Z,NOASSERTION,0,42,42,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+107.8,SiMu0430/openocd,fork,0,2025-07-25T16:58:50Z,NOASSERTION,0,42,42,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+107.8,wlbleaboy/openocd,fork,0,2025-07-25T16:58:50Z,NOASSERTION,0,42,42,0,121,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,mon/openocd,fork,0,2023-12-14T03:28:50Z,NOASSERTION,0,43,43,0,147,OpenOCD D2XX
+107.0,70p4z/openocd,fork,0,2023-07-10T07:34:04Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,reitowo/openocd,fork,0,2023-05-18T07:24:54Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,bieganski/openocd,fork,0,2023-05-06T13:39:39Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,jzarnstorff/openocd,fork,0,2023-04-28T14:56:50Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,DhruvaG2000/openocd,fork,0,2023-04-23T10:24:28Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,BensonLiou/openocd,fork,0,2023-04-14T15:24:00Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,mcai33/openocd,fork,0,2023-04-08T09:33:47Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,karakirimu/openocd,fork,0,2023-03-29T06:01:30Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,corum/openocd-1,fork,0,2023-03-22T15:47:12Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,jaygreco/openocd,fork,0,2023-03-22T01:56:16Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,andersm/openocd,fork,0,2023-03-21T21:34:59Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,panciyan/openocd,fork,0,2023-03-18T22:01:58Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,liansh2002/openocd_nations,fork,0,2023-03-05T16:18:40Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,iysheng/openocd,fork,0,2023-03-04T05:51:09Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,weixiao007/openocd,fork,0,2023-03-03T22:31:43Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,HanRunyu/openocd,fork,0,2023-02-23T16:43:47Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,gabriel-gehrke/openocd,fork,0,2023-02-12T09:09:36Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,ChenDudo/openocd,fork,0,2023-02-12T09:09:36Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,hodcarrier/openocd,fork,0,2023-02-12T09:09:36Z,NOASSERTION,0,43,43,0,147,
+107.0,via/openocd,fork,0,2023-02-06T01:59:36Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,CyberFlameGO/openocd,fork,0,2023-02-03T22:55:04Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,xyx0826/openocd,fork,0,2023-02-03T22:55:04Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,teabun/openocd,fork,0,2023-02-03T22:55:04Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,WilkenDK/openocd,fork,0,2023-01-21T23:03:52Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror
+107.0,mhv75/ATCWatch_openocd,fork,0,2023-01-15T15:19:44Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,cainiaoxiao/openocd,fork,0,2023-01-15T15:19:44Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+107.0,renosterboer/openocd,fork,0,2023-01-15T15:19:44Z,NOASSERTION,0,43,43,0,147,Official OpenOCD Read-Only Mirror (no pull requests)
+106.5,ImproperCatGirl/openocd,fork,1,2026-07-21T21:30:51Z,NOASSERTION,1,26,22,4,3,OpenOCD with direct DMI access for RISC-V
+106.5,euryecetelecom/openocd,independent,0,2017-09-04T19:35:20Z,GPL-2.0,0,47,47,0,230,Fork/clone from official openocd
+106.5,iottoolchain/OpenOCD,independent,0,2017-08-07T08:36:15Z,GPL-2.0,0,47,47,0,230,Fork of Official OpenOCD mirror repository: http://repo.or.cz/w/openocd.git
+105.9,haneefdm/openocd,independent,0,2021-07-22T16:38:58Z,NOASSERTION,0,44,44,0,174,Fork of OpenOCD on sourceforge
+103.0,Icey7122/openocd,fork,0,2026-10-04T10:16:14Z,NOASSERTION,1,18,11,7,0,OpenOCD For LoongArch
+102.5,bhuvanchandradv/openOCD_fork,independent,0,2016-12-01T10:05:56Z,GPL-2.0,0,47,47,0,257,The Open On-Chip Debugger
+99.5,PurpleAlien/openocd,independent,0,2015-08-05T23:43:34Z,GPL-2.0,0,46,46,0,257,OpenOCD Testing Fork
+99.5,tinylabs/openocd,independent,0,2015-05-15T18:38:25Z,GPL-2.0,0,46,46,0,257,OpenOCD fork with DCC server support
+98.0,zuyih/openocd,fork,0,2026-10-14T10:50:40Z,NOASSERTION,1,28,26,2,0,Official OpenOCD Read-Only Mirror (no pull requests)
+95.8,NXP-Horizon-Orshin/OpenOCD,independent,0,2025-07-15T08:52:14Z,GPL-2.0,0,41,41,0,181,Fork of OpenOCD (v0.11.0) with an adapter implementation based on Teensy MCU for high-speed debugger in modified CORE-V MCU
+95.8,sh1r4s3/openocd-gd32vf,independent,0,2020-12-11T15:16:43Z,GPL-2.0,0,41,41,0,181,Latest OpenOCD fork with gd32vf
+90.0,emsec/ConFuzz,independent,20,2026-04-01T06:20:19Z,MIT,1,7,0,7,0,ConFuzz is an advanced FPGA configuration engine fuzzing and rapid prototyping framework based on boofuzz and OpenOCD.
+90.0,prattmic/openocd,independent,0,2015-04-08T05:44:37Z,GPL-2.0,0,43,43,0,260,Personal fork of http://sourceforge.net/p/openocd/code/
+90.0,stache3000/openocd-dirtyjtag,fork,1,2026-03-31T02:25:16Z,NOASSERTION,1,23,20,3,7,Official OpenOCD Read-Only Mirror (no pull requests)
+88.5,zhao0079/openocd,independent,1,2011-06-08T10:40:36Z,GPL-2.0,1,32,19,11,530,Temporary OpenOCD fork working smoothly with STM32F2xx
+77.0,xerpi/openocd,fork,1,2026-07-02T08:11:35Z,NOASSERTION,1,21,19,2,7,Official OpenOCD Read-Only Mirror (no pull requests)
+75.0,coflery/openocd,fork,2,2026-05-03T19:38:05Z,NOASSERTION,1,20,18,2,7,OpenOCD with Qinheng CH347 chip patch
+65.8,ManniMetzger/openocd,fork,0,2026-09-19T06:13:49Z,NOASSERTION,1,15,12,3,1,Backport of AJI client support to current openocd
+65.2,scmrtos/openocd-scmrtos,independent,6,2026-06-11T10:19:07Z,NOASSERTION,1,20,20,0,5,
+57.3,hathach/openocd,fork,0,2026-07-28T04:26:17Z,NOASSERTION,0,24,24,0,98,"openOCD fork to include wch, analog, rp2040, rp2350 for TinyUSB HIL test"
+54.4,RigoLigoRLC/openocd,fork,1,2026-07-07T14:19:14Z,NOASSERTION,1,18,18,0,4,My fork of OpenOCD
+54.2,sanchuanhehe/openocd,fork,1,2026-06-13T14:55:21Z,NOASSERTION,1,18,18,0,5,Official OpenOCD Read-Only Mirror (no pull requests)
+53.7,ut2or1/openocd,fork,0,2026-10-16T21:19:46Z,NOASSERTION,1,18,18,0,2,Official OpenOCD Read-Only Mirror (no pull requests)
+51.9,OlivierVanWassenhove-Dekimo/openocd,fork,0,2026-10-06T16:04:42Z,NOASSERTION,1,15,14,1,1,OpenOCD fork suited for Altera Agilex HPS development
+50.0,xpack-dev-tools/openocd-xpack,independent,525,2026-10-17T19:00:57Z,MIT,1,0,0,0,0,A binary distribution of OpenOCD
+50.0,zszszszsz/.config,independent,363,2023-10-05T22:52:42Z,MIT,1,0,0,0,0,# # Automatically generated file; DO NOT EDIT. # OpenWrt Configuration # CONFIG_MODULES=y CONFIG_HAVE_DOT_CONFIG=y # CONFIG_TARGET_sunxi is not set # 
+50.0,elmot/clion-embedded-arm,independent,171,2019-03-25T11:12:33Z,NOASSERTION,1,0,0,0,0,OpenOCD + STM32CubeMX support for CLion
+50.0,wuxx/openocd-toolbox,independent,151,2026-06-25T08:05:23Z,GPL-3.0,1,0,0,0,0,OpenOCD工具箱 （温馨提示：请点击本页面右侧绿色按钮处下载zip压缩包）
+50.0,espressif/openocd-on-esp32,independent,105,2025-04-23T14:34:36Z,Apache-2.0,1,0,0,0,0,OpenOCD port running on ESP32-S3 microcontrollers
+50.0,ghidraninja/game-and-watch-flashloader,independent,76,2021-02-05T18:16:51Z,,1,0,0,0,0,A small tool to flash the SPI-flash using OpenOCD.
+50.0,ztakis/x3utils,independent,71,2026-10-16T14:33:54Z,MIT,1,0,0,0,0,Cross-platform OpenOCD flashing tools for 3rd gen Ninebot scooter controllers.
+50.0,bfmhno3/clion_for_stm32,independent,70,2026-02-12T13:11:13Z,MIT,1,0,0,0,0,本教程详细介绍了如何在 CLion 中配置开发 STM32 的环境，旨在替代传统的 Keil MDK，提供更优雅、高效的嵌入式开发体验。教程涵盖了从环境搭建到编译、烧录、调试的全流程，特别针对 OpenOCD、STM32CubeProgrammer 和 J-LINK 三种烧录方式进行了详细说明，并提
+50.0,lupyuen/pinetime-updater,independent,69,2022-10-07T11:47:28Z,Apache-2.0,1,0,0,0,0,Flash firmware to PineTime the friendly wired way with OpenOCD
+50.0,adafruit/ARM-toolchain-vagrant,independent,65,2020-03-10T05:43:27Z,MIT,1,0,0,0,0,Vagrantfile to create a Linux virtual machine with a full GCC ARM toolchain for compiling ARM code and flashing it with tools like OpenOCD & STLink.
+50.0,quartiq/bscan_spi_bitstreams,independent,63,2023-03-16T09:44:14Z,MIT,1,0,0,0,0,FPGA gateware and pre-build bitstreams that expose SPI over JTAG. The protocol is implemented (among others) by openocd.
+50.0,m3y54m/cjmcu-ft232hq-programmer,independent,59,2024-01-08T20:49:43Z,MIT,1,0,0,0,0,"FT232H-based JTAG, SWD, and AVR-ISP Programmer (Supported by OpenOCD and AVRDUDE)"
+50.0,rdiez/DebugDue,independent,52,2026-09-23T17:08:40Z,,1,0,0,0,0,Emulates a Bus Pirate OpenOCD JTAG adapter with an Arduino Due
+46.0,Klievan/jlink-mcp,independent,36,2026-10-09T19:05:32Z,MIT,1,1,0,1,0,"Give AI hands to touch silicon — an MCP server for SEGGER J-Link, OpenOCD and Black Magic probes. Flash, halt, step, stream RTT logs and decode ARM Co"
+44.0,adafruit/Adafruit_nRF51822_Flasher,independent,44,2016-08-02T05:10:01Z,,1,0,0,0,0,Wrapper for the Segger J-Link or STLink/V2 (via OpenOCD) to flash nRF51822 MCUs
+43.0,robertlong13/SWO-Parser,independent,43,2024-07-15T23:34:59Z,WTFPL,1,0,0,0,0,Simple parser for OpenOCD ITM trace messages on the 
+42.0,bkuschak/cmsis_dap_tcp_esp32,independent,42,2026-10-16T00:40:59Z,Apache-2.0,1,0,0,0,0,CMSIS-DAP programmer using TCP/IP rather than USB connection to the host.  Runs on ESP32 and connects over WiFi to OpenOCD using the cmsis-dap-tcp bac
+41.0,bbrown1867/stm32-makefile,independent,41,2026-01-03T17:35:15Z,BSD-3-Clause,1,0,0,0,0,"A small, simple example project demonstrating how to use an STM32 microcontroller with GNU Make, ARM GCC, and ST-Link/OpenOCD"
+40.0,MuratovAS/VScode_Docker_Stm32,independent,40,2023-02-26T20:34:16Z,Apache-2.0,1,0,0,0,0,"VScode и Docker, мощный набор для разработки под embedded system или VSCode + Docker (GCC-ARM + CMake + OpenOCD) = STM32 IDE"
+39.0,scooterteam/scooterflasher,independent,39,2026-09-11T23:39:40Z,GPL-3.0,1,0,0,0,0,ScooterFlasher is a simple wrapper for OpenOCD that allows you to easily reflash firmware on your scooter using ST-Link.
+39.0,mtk-openwrt/openocd-scripts,independent,39,2023-04-01T14:10:27Z,,1,0,0,0,0,
+38.0,Angelic47/MT7688-OpenOCD,independent,38,2018-04-08T10:08:24Z,,1,0,0,0,0,OpenOCD configuration for MT7688AN/MT7688KN/MT7628x
+37.0,esynr3z/openocd-svd,independent,37,2019-01-14T06:00:18Z,MIT,1,0,0,0,0,Standalone OpenOCD and CMSIS-SVD based peripheral register viewer written on Python
+35.9,galippi/openocd.STM32.Win7,fork,0,2026-09-27T09:28:19Z,NOASSERTION,1,12,12,0,1,"OpenOCD fork to support newest STM32 devices and provide Win7 application. Please drop me a message, if you need Windows or Linux (???) app for testin"
+32.9,kvth/openocd-swd-in-out,fork,0,2026-09-29T22:35:26Z,NOASSERTION,1,11,11,0,1,OpenOCD Fork with support for SWD bitbanging with separate pins for SWD input and output and scripts to build as static binaries for amd64 and arm64
+32.9,padhialuo0426/openocd,fork,0,2026-09-28T03:35:40Z,NOASSERTION,1,11,11,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+32.0,kilmu1337/DMA-Tool,independent,32,2025-04-22T21:21:53Z,MIT,1,0,0,0,0,"A modern Electron-based desktop application providing a sleek, fluent design interface for executing OpenOCD and PCIleech commands."
+30.9,ProtopointLLC/bobybytes-openocd,fork,1,2026-08-28T13:39:36Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,alphijiang/openocd,fork,0,2026-09-24T08:02:53Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,HaydenHu/openocd,fork,0,2026-09-20T14:33:12Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,W-M-R/openocd,fork,0,2026-09-18T09:44:21Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,xoriath/openocd,fork,0,2026-09-15T16:07:41Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,RevySR/openocd,fork,0,2026-09-14T21:40:01Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,IceZhangCoder/openocd,fork,0,2026-09-14T08:07:23Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,rusefi/openocd,fork,0,2026-09-13T15:08:30Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,jbitco/openocd,fork,0,2026-09-13T11:09:00Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,maux339-cpu/openocd,fork,0,2026-09-13T04:58:44Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+29.9,IRNAS/openocd,independent,0,2026-09-10T12:57:10Z,NOASSERTION,1,10,10,0,1,OpenOCD fork with AM243x/K3 R5 debug reset and JTAG clock fixes (mirror of Dewesoft realtime sandbox)
+29.9,liibin/openocd,fork,0,2026-09-08T08:20:09Z,NOASSERTION,1,10,10,0,1,Official OpenOCD Read-Only Mirror (no pull requests)
+28.0,knieriem/openocd-efm32-series2,independent,28,2023-12-14T16:47:19Z,NOASSERTION,1,0,0,0,0,A preliminary OpenOCD driver for EFM32 Series 2 MCUs
+27.0,martijnvwezel/pico-probe-programmer,independent,27,2022-07-20T09:38:31Z,MIT,1,0,0,0,0,"The simple pico can be used to program other devices. Raspberry pi made such an effort. However there is no board yet, that is open-source and can be "
+26.0,tomverbeure/vexriscv_ocd_blog,independent,26,2022-02-21T07:00:21Z,,1,0,0,0,0,Repo that shows how to use the VexRiscv with OpenOCD and semihosting.
+25.0,cyrozap/openocd-xilinx-loader,independent,25,2016-10-22T05:18:26Z,GPL-3.0,1,0,0,0,0,Some Python scripts to program Xilinx FPGAs using OpenOCD
+25.0,dpiegdon/STM32F767ZI-Nucleo-144,independent,15,2020-08-13T19:50:24Z,,1,1,0,1,0,"Small example project for STM32F767ZI-Nucleo-144 board using GCC, Make, GDB and st-link or openocd for debugging."
+24.4,openwch/openocd_wch,independent,25,2023-05-30T10:44:58Z,,1,0,0,0,4,OpenOCD for WCH CH32
+24.0,screwer/OpenOCD,independent,24,2018-03-04T16:25:00Z,,1,0,0,0,0,OpenOCD python library
+23.0,Adam-U/ESP32_VSCode_Debug,independent,23,2019-03-16T22:33:47Z,,1,0,0,0,0,A guide/example project for JTAG debugging on the ESP32 with VS Code using openocd.
+21.0,sperner/OpenOCD-QtGUI,independent,21,2014-03-17T11:50:38Z,GPL-3.0,1,0,0,0,0,Graphical frontend for OpenOCD - the Opensource On-Chip-Debugger for debugging and programming various Controllers & Processors - using the Qt Framewo
+20.7,PaiAE/openocd,fork,0,2026-06-02T01:58:06Z,NOASSERTION,0,12,12,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+20.0,xu7wong/openocd_wchlink,independent,20,2022-07-19T21:06:56Z,,1,0,0,0,0,openocd wchlink for WCH-Link firmware V2.4
+20.0,gd32-rs/gd32-openocd,independent,20,2022-02-12T13:53:46Z,MIT,1,0,0,0,0,This repo is to collect openocd config files for GD32 series MCU
+19.0,michaelniedermayr/clion_stm32_openocd,independent,19,2018-03-18T20:27:20Z,,1,0,0,0,0,Program and debug different STM32 boards with CLion.
+18.0,Peakors/STM32H750XBH6_Bootloader_APP_Template,independent,18,2026-10-15T10:53:02Z,GPL-2.0,1,0,0,0,0,基于反客STM32H750XBH6核心板(FK750M5-XBH6-SDRAM)的CLion + CubeMX + CMake + OpenOCD的外部Flash下载算法模板
+18.0,myelin/teensy-openocd-remote-bitbang,independent,18,2016-02-29T01:39:43Z,,1,0,0,0,0,OpenOCD remote_bitbang protocol implemented on the Teensy 3.2 via USB serial
+18.0,nanjo712/openocd-tools,independent,8,2025-12-06T07:32:56Z,MIT,1,1,0,1,0,
+16.0,riscv-mcu/openflashloader,independent,16,2025-05-13T06:27:55Z,Apache-2.0,1,0,0,0,0,Open Flashloader for DLink and OpenOCD
+16.0,kbeckmann/ubuntu-openocd-git-builder,independent,16,2024-10-06T18:31:02Z,,1,0,0,0,0,
+16.0,Wiz-IO/tool-pico-openocd,independent,16,2022-08-12T18:49:47Z,Apache-2.0,1,0,0,0,0,Raspberry Pi RP2040 OpenOCD
+15.0,emdnaia/OpenOCD,independent,15,2026-06-07T16:19:45Z,MIT,1,0,0,0,0,some config files
+15.0,NikLeberg/cosim_jtag,independent,15,2025-12-30T01:00:15Z,MIT,1,0,0,0,0,Connect to your VHDL simulation via JTAG! GDB <-TCP-> OpenOCD <-remote bitbang-> cosim_jtag <-VHPI or FLI-> VHDL simulator.
+15.0,Peakors/STM32H7B0VBT6_Template,independent,15,2025-07-14T07:44:58Z,,1,0,0,0,0,基于反客STM32H7B0VBT6核心板的CLion + CubeMX + CMake + OpenOCD的外部Flash下载算法模板
+15.0,maaaaz/openocd-windows-buspirate,independent,15,2017-11-24T21:22:04Z,,1,0,0,0,0,The great opencd tool compiled for Windows with Bus Pirate support
+13.0,ZephyrLabs/PinetimeFlasher,independent,13,2021-04-24T14:39:26Z,GPL-3.0,1,0,0,0,0,"GUI based app to help flash the pinetime with xpack-openOCD on windows, "
+13.0,papyDoctor/CC3200,independent,13,2017-06-10T13:08:10Z,,1,0,0,0,0,TI and open source projects converted to build/debug with Eclipse and OpenOCD
+13.0,csersoft/hi_sd5115_openocd_config,independent,13,2017-03-07T07:43:57Z,GPL-3.0,1,0,0,0,0,Hisilicon SD5115 OpenOCD Config file
+13.0,nopeppermint/openocd_efm32,independent,13,2014-06-16T22:02:22Z,,1,0,0,0,0,First steps with openocd and efm32 with STM32F4Discovery and Olimex EM-32G880F128-STK
+13.0,doceme/stm32_template,independent,13,2011-10-07T02:42:34Z,NOASSERTION,1,0,0,0,0,"This project is a template for building, flashing, and debugging code for the STM32 series of microcontrollers using open source tools like GCC and Op"
+12.0,MCUapps/mcutk,independent,12,2013-04-18T10:08:17Z,BSD-2-Clause,1,0,0,0,0,"MicroController Unit ToolKit -- embedded development with GCC, OpenOCD, CMake, and more"
+11.0,arduino/OpenOCD-build-script,independent,11,2022-02-21T09:36:35Z,,1,0,0,0,0,Build scripts for OpenOCD used in Arduino
+11.0,mjbots/openocd,independent,11,2021-11-29T13:50:00Z,,1,0,0,0,0,A fork of OpenOCD with support for STM32G4
+11.0,CryptoDragonLady/dashflasher,independent,11,2019-06-21T16:49:40Z,GPL-3.0,1,0,0,0,0,Bash script to make working with OpenOCD easier for flashing Segway-Ninebot dashboards via stlinkv2
+11.0,5inf/openocd-bs,independent,11,2019-05-17T22:33:47Z,,1,0,0,0,0,(A list of) Useful tools for performing boundary scans via openocd
+11.0,zmarvel/python-openocd,independent,11,2019-05-10T04:51:04Z,,1,0,0,0,0,Thin Python wrapper around OpenOCD telnet console.
+11.0,elmot/f4-blog,independent,11,2018-07-05T21:43:28Z,Unlicense,1,0,0,0,0,Clion + OpenOCD + My Plugin + STM32F4-Discovery example
+10.0,Infineon/openocd,independent,10,2026-10-05T14:44:39Z,,1,0,0,0,0,
+10.0,luiox/openocd-mcp,independent,10,2026-06-03T13:37:44Z,MIT,1,0,0,0,0,mcp server for openocd
+9.0,burakenez/gd32-tools-xpack-openocd,independent,9,2026-05-08T14:16:54Z,,1,0,0,0,0,This repository is created for xPack OpenOCD GD Version to be added as submodule to gd32-cmake repositories.
+9.0,Gbps/nitefury-openocd-flashing-guide,independent,9,2022-10-06T07:00:46Z,,1,0,0,0,0,OpenOCD flashing for the Nutefury II and Acorn CLE 215 FPGAs
+8.0,windowsair/openocd-elaphurelink,independent,8,2026-09-12T10:00:58Z,GPL-2.0,1,0,0,0,0,"OpenOCD for elaphureLink, provide  out of box experience."
+8.0,ranbaowirelessguard/openocd_efr32,independent,8,2017-09-14T23:48:27Z,MIT,1,0,0,0,0,Instruction of building OpenOCD 0.10 with EFR32 microcontroller support
+8.0,nathantsoi/openocd-configs,independent,8,2016-08-26T04:37:16Z,,1,0,0,0,0,known-good configs for openocd and stm32 development
+7.0,esynr3z/openocd-stuff,independent,7,2021-08-10T18:16:11Z,,1,0,0,0,0,Collection of openocd snippets and other usefull things
+7.0,mofosyne/stm32h7xx-cubemx-makefile-openocd-gdbgui-example,independent,7,2020-01-20T13:48:55Z,,1,0,0,0,0,This is an example of a stm32h7 cubemx makefile generated project that uses openocd and gdbgui. This is a workflow alternative/experiment to using a f
+7.0,nopeppermint/OpenOCD_EmBlocks_with_EFM32WG_STK3800,independent,7,2014-06-16T21:51:34Z,,1,0,0,0,0,"OpenOCD example with ST-Link/V2, EmBlocks and EFM32WG_STK3800"
+6.0,zw9629/OpenOCD-GUI-mod,independent,6,2024-04-21T16:24:41Z,GPL-3.0,1,0,0,0,0,OpenOCD的图形化界面
+6.0,emhlb/openocd-ch341a-patch,independent,6,2023-10-30T04:43:38Z,GPL-2.0,1,0,0,0,0,openocd ch341a port patch
+6.0,leech001/OpenOCD-CS32,independent,6,2020-01-11T16:58:22Z,,1,0,0,0,0,OpenOCD config for CS32F103C8T6 (CKSF103C8T6) 
+6.0,sandeepmistry/rtl8710-openocd,independent,6,2017-03-01T02:16:39Z,GPL-2.0,1,0,0,0,0,Unofficial mirror of https://bitbucket.org/rebane/rtl8710_openocd
+5.4,amoxu/tool-openocd-at32,independent,6,2026-07-10T11:41:25Z,,1,0,0,0,4,Crossplatform Binary Releases for at32-dev branch of https://github.com/amoxu/openocd
+5.0,HonzaMat/PyOpenocdClient,independent,5,2026-10-17T10:36:09Z,NOASSERTION,1,0,0,0,0,Python library for controlling OpenOCD
+5.0,royforlinux/openocd-mcu-mcp,independent,5,2026-05-24T03:09:59Z,MIT,1,0,0,0,0,OpenOCD-backed MCP server and CLI helpers for MCU debugging.
+5.0,R-onit/cortex-m-baremetal-gcc-openocd,independent,5,2025-11-07T01:10:08Z,MIT,1,0,0,0,0,"Minimal ARM Cortex-M bare-metal firmware from scratch — custom startup code, linker script, Makefile build system, and OpenOCD/GDB debugging. No IDEs,"
+5.0,binaryWJ/vscode-openocd-gd32f1_template,independent,5,2022-05-08T06:43:31Z,MIT,1,0,0,0,0,
+5.0,Dr-Sergey/arm-stm32-cube-qtcreator-openocd,independent,5,2018-08-23T08:25:01Z,,1,0,0,0,0,Tutorial and examples how to setup Qt Creator environment for bare metal devices (stm32 ARM)
+5.0,kekyo/OpenOCDonMinGW,independent,5,2018-02-04T12:11:58Z,MIT,1,0,0,0,0,OpenOCD binary builder on MSYS2/MinGW
+5.0,Protoneer/SAMD-OpenOCD-RaspberryPi3,independent,5,2017-03-14T06:38:05Z,Apache-2.0,1,0,0,0,0,Flush Arduino Zero bootloader to SAMD via OpenOCD on Raspberry Pi 3
+4.9,rahul-arasikere/openocd,fork,0,2026-03-16T12:53:26Z,NOASSERTION,0,7,7,0,107,OpenOCD fork
+4.9,kryksyh/openocd,fork,0,2026-01-10T17:51:21Z,NOASSERTION,0,7,7,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+4.9,busydoggo/openocd,fork,0,2026-01-08T18:25:43Z,NOASSERTION,0,7,7,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+4.9,amachronic/openocd-rockbox,fork,0,2025-12-31T17:59:09Z,NOASSERTION,0,7,7,0,107,Modified OpenOCD with support for Rockbox threads
+4.9,barkow/openocd,fork,0,2025-12-31T10:25:48Z,NOASSERTION,0,7,7,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+4.9,AbdulLiu/openocd,fork,0,2025-12-29T11:59:37Z,NOASSERTION,0,7,7,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+4.9,ogamespec/openocd,fork,0,2025-12-25T19:31:08Z,,0,7,7,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+4.9,elide-interfacees/openocd,fork,0,2025-12-17T17:53:42Z,NOASSERTION,0,7,7,0,107,OpenOcd fixed for macos
+4.9,equal1/openocd,fork,0,2025-12-15T16:05:26Z,NOASSERTION,0,7,7,0,107,OpenOCD with dirtyjtag support (based on jeanthom's work)
+4.9,Chewboko/openocd,fork,0,2025-12-14T20:58:09Z,NOASSERTION,0,7,7,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+4.9,wen-zijie/openocd,fork,0,2025-12-14T20:58:09Z,NOASSERTION,0,7,7,0,107,Official OpenOCD Read-Only Mirror (no pull requests)
+2.7,emolitor/openocd,fork,0,2026-02-28T11:31:15Z,NOASSERTION,0,6,6,0,102,EMulators OpenOCD Fork with WB32 Support
+2.7,davidlao2k/openocd,fork,0,2026-02-04T18:22:04Z,NOASSERTION,0,6,6,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+0.3,weixiaobai1937/openocd,fork,0,2026-08-13T05:48:16Z,NOASSERTION,0,5,5,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+0.0,andrewthecat/openocd-snr8503,fork,0,2026-07-06T03:32:06Z,NOASSERTION,0,5,5,0,100,Some dirty SNR8503 support for OpenOCD
+-0.1,Adlyq/openocd,fork,0,2026-06-22T06:49:33Z,NOASSERTION,0,5,5,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-0.3,shu-ox/openocd,fork,0,2026-04-30T16:30:20Z,NOASSERTION,0,5,5,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-0.3,jc2a/openocd,fork,0,2026-03-04T20:21:47Z,NOASSERTION,0,5,5,0,102,Open On-Chip Debugger
+-2.7,disdi/openocd,fork,0,2026-08-12T05:40:46Z,NOASSERTION,0,4,4,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-2.7,benitoss/openocd,fork,0,2026-08-11T02:44:52Z,NOASSERTION,0,4,4,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-2.7,ZhiyuanYuanNJ/openocd,fork,0,2026-08-10T09:11:51Z,NOASSERTION,0,4,4,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-2.7,lz-bro/openocd,fork,0,2026-07-30T03:01:25Z,NOASSERTION,0,4,4,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-2.7,kurby1996/openocd,fork,0,2026-07-28T19:12:49Z,NOASSERTION,0,4,4,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-2.7,xiaohuhuhuhu-code/openocd,fork,0,2026-07-25T10:47:33Z,NOASSERTION,0,4,4,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-2.8,ravvas/openocd,fork,0,2026-07-18T14:35:49Z,NOASSERTION,0,4,4,0,99,Official OpenOCD Read-Only Mirror (no pull requests)
+-2.8,wbeebe/openocd,fork,0,2026-07-16T02:20:37Z,NOASSERTION,0,4,4,0,99,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.0,Tachyum-Open-Source/openocd,fork,0,2026-07-08T18:59:14Z,NOASSERTION,0,4,4,0,100,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.0,scm-repo-mirror/openocd-org_openocd,fork,0,2026-07-08T18:59:14Z,NOASSERTION,0,4,4,0,100,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.0,HonestLocksmith/openocd,fork,0,2026-07-04T18:01:09Z,NOASSERTION,0,4,4,0,100,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,tms320/openocd,fork,0,2026-07-06T08:30:03Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,giraf-fe/openocd,fork,0,2026-07-03T02:29:19Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,CHERI-Alliance/openocd,fork,0,2026-07-02T10:37:08Z,NOASSERTION,0,4,4,0,101,
+-3.1,saravalkyrie2/openocd,fork,0,2026-06-26T02:23:16Z,NOASSERTION,0,4,4,0,101,OpenOCD Fork with Nations series chip support 
+-3.1,kripticni/openocd,fork,0,2026-06-22T01:45:39Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,YCH8899/openocd,fork,0,2026-06-21T18:45:32Z,NOASSERTION,0,4,4,0,101,Official OpenOCD fork
+-3.1,Futhark1393/openocd,fork,0,2026-06-21T18:45:32Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,Yuoek/openocd,fork,0,2026-06-21T18:45:32Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,Ankali-Aylina/openocd,fork,0,2026-06-21T18:45:32Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,zhangjiance/openocd,fork,0,2026-06-21T11:17:54Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,awanga/openocd,fork,0,2026-06-19T00:54:51Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.1,FMart-EOG/openocd,fork,0,2026-06-18T18:46:53Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,kthunder/openocd_cJTAG,fork,0,2026-06-28T06:20:42Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,3dmedium/openocd_ctm,fork,0,2026-06-09T10:41:29Z,NOASSERTION,0,4,4,0,102,OpenOCD Fork for Custom modifications
+-3.3,djmazure/openocd,fork,0,2026-06-08T14:37:04Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,Embeint/openocd,fork,0,2026-06-02T07:47:08Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,yeshuibo/openocd,fork,0,2026-05-30T18:22:14Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,KritskiyM/openocd-programmer,fork,0,2026-05-30T18:22:14Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,AndersBNielsen/openocd,fork,0,2026-05-27T16:12:47Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,h4tr3d/openocd-mdr,fork,0,2026-05-27T14:47:41Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,paul-jvb/openocd,fork,0,2026-05-26T12:34:53Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,danielecattaneo/miosix-openocd,fork,0,2026-05-22T03:25:52Z,NOASSERTION,0,4,4,0,102,OpenOCD with support for Miosix RTOS
+-3.3,will-tm/openocd,fork,0,2026-05-22T01:16:00Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,FuminDU3620/openocd-qx,fork,0,2026-05-17T21:03:55Z,NOASSERTION,0,4,4,0,102,OpenOCD for cJTAG
+-3.3,heeen/openocd,fork,0,2026-05-15T09:57:41Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,Liu-Bingxu/openocd,independent,0,2026-05-14T09:19:42Z,NOASSERTION,0,4,4,0,102,fork 自 openocd 拓展了部分功能
+-3.3,bdmihai/openocd,fork,0,2026-05-13T19:27:29Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,tinyloop/openocd,fork,0,2026-05-08T17:20:06Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,JonahLiu/openocd,fork,0,2026-05-08T17:20:06Z,NOASSERTION,0,4,4,0,102,Fix branch from openocd-org/openocd
+-3.3,flightng/openocd,fork,0,2026-05-08T12:32:00Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,cx1524/openocd,fork,0,2026-05-08T09:34:42Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,weizx208/openocd,fork,0,2026-05-05T02:58:32Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,kuopinghsu/openocd,fork,0,2026-05-03T12:06:35Z,NOASSERTION,0,4,4,0,102,openocd patch for cJTAG VPI
+-3.3,VladTop46/openocd,fork,0,2026-05-01T20:03:29Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,itshuaikun/openocd,fork,0,2026-04-29T11:35:03Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,vjardin/openocd,fork,0,2026-04-26T16:27:51Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,AddisonH/openocd,fork,0,2026-04-26T06:32:57Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,a7v7/openocd,fork,0,2026-04-24T14:46:11Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,takumiando/openocd,fork,0,2026-04-24T07:57:09Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,jerry-0824/openocd,fork,0,2026-04-23T08:09:48Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,rcitach/openocd,fork,0,2026-04-23T06:07:46Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,MKesenheimer/openocd,fork,0,2026-04-16T10:10:48Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,KobusG/openocd,fork,0,2026-04-13T14:01:15Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,kendallgoto/openocd,fork,0,2026-04-08T18:31:43Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,echatzip/openocd,fork,0,2026-04-08T14:56:27Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,zhoukai-ne/openocd,fork,0,2026-04-07T08:30:37Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,liuqiaoping7/openocd,fork,0,2026-04-06T16:54:43Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,apator-metrix/openocd-mcu,fork,0,2026-04-02T11:57:40Z,NOASSERTION,0,4,4,0,102,OpenOCD fork for MCU enablement
+-3.3,FanX-Tek/openocd,fork,0,2026-03-29T07:54:03Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,bberberov/openocd,fork,0,2026-03-27T17:43:23Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,AlexeyGorbushin/openocd_lpc55s69,fork,0,2026-03-19T13:59:05Z,NOASSERTION,0,4,4,0,102,OpenOCD with LPC55s69 support
+-3.3,LukasLendvorsky/openocd,fork,0,2026-03-16T16:34:45Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,grotzeck/openocd-miosix,fork,0,2026-03-12T15:17:14Z,NOASSERTION,0,4,4,0,102,OpenOCD witth Miosix support
+-3.3,DanLangas/openocd,fork,0,2026-03-08T10:29:55Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,luigicalligaris/openocd,fork,0,2026-03-08T10:29:55Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,jimjin/openocd,fork,0,2026-03-08T10:29:55Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,OpenCUTE/openocd,fork,0,2026-03-06T14:40:29Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,hsoffar/openocd-TC3xx,fork,0,2026-03-05T21:36:18Z,NOASSERTION,0,4,4,0,102,Fork of Openocd for building an openocd for Aurix TC3XX
+-3.3,Timmmm/openocd,fork,0,2026-03-02T12:26:47Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,balintf/openocd,fork,0,2026-02-24T00:22:41Z,NOASSERTION,0,4,4,0,102,OpenOCD Fork with multi-core CTI/CTM support for 32-bit ARM targets
+-3.3,RisingEdge19/openocd_at32,fork,0,2026-02-18T17:06:18Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,wt2017/openocd-fork,fork,0,2026-02-18T13:10:39Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,hitHuang/openocd,fork,0,2026-02-06T15:39:31Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,embview/openocd,fork,0,2026-02-01T15:05:15Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-3.3,peterlin0709/openocd,fork,0,2026-01-25T09:33:24Z,NOASSERTION,0,4,4,0,102,Official OpenOCD Read-Only Mirror (no pull requests)
+-5.7,EBREAK/openocd,fork,0,2026-09-06T07:27:09Z,NOASSERTION,0,3,3,0,98,my fork
+-5.7,steffchen/openocd,fork,0,2026-09-03T20:29:31Z,NOASSERTION,0,3,3,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-5.7,saahinduran/openocd,fork,0,2026-08-30T15:51:29Z,NOASSERTION,0,3,3,0,98,OpenOCD with customized CMSIS-DAP
+-5.7,spacemit-com/openocd,fork,0,2026-08-29T06:49:29Z,NOASSERTION,0,3,3,0,98,SpacemiT's downstream fork of OpenOCD
+-5.7,ppisa/openocd,fork,0,2026-08-27T08:31:56Z,NOASSERTION,0,3,3,0,98,Local development OpenOCD copy - TMS570 WIP for now
+-5.7,maxiaogood/openocd,fork,0,2026-08-27T03:15:44Z,NOASSERTION,0,3,3,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-5.7,sessions-matthew/openocd,fork,0,2026-08-25T02:51:15Z,NOASSERTION,0,3,3,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-5.7,syabyr/openocd,fork,0,2026-08-20T04:50:53Z,NOASSERTION,0,3,3,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-5.7,anabatic-semi/openocd,fork,0,2026-08-18T15:11:48Z,NOASSERTION,0,3,3,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-13.7,marekbujko/openocd,fork,1,2026-09-29T23:37:38Z,NOASSERTION,0,0,0,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.5,geeksblock/openocd,fork,0,2026-10-16T16:21:10Z,NOASSERTION,0,0,0,0,97,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.5,cempsi/openocd,fork,0,2026-10-16T08:03:18Z,NOASSERTION,0,0,0,0,97,OpenOCD
+-14.5,mishnock/openocd,fork,0,2026-10-16T08:03:01Z,NOASSERTION,0,0,0,0,97,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.5,jerryzj/openocd,fork,0,2026-10-16T05:55:33Z,NOASSERTION,0,0,0,0,97,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.5,CHERIoT-Platform/openocd,fork,0,2026-10-14T14:45:54Z,NOASSERTION,0,0,0,0,97,Fork of OpenOCD with some additional CHERIoT support
+-14.5,andrei-edward-popa/openocd,fork,0,2026-10-13T22:30:05Z,NOASSERTION,0,0,0,0,97,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.5,hpmicro/openocd,fork,0,2026-10-11T10:09:24Z,NOASSERTION,0,0,0,0,97,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.5,we-devices/openocd,fork,0,2026-10-09T15:17:46Z,NOASSERTION,0,0,0,0,97,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.7,sgstreet/rtoskit-openocd,fork,0,2026-10-01T22:12:15Z,NOASSERTION,0,0,0,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.7,kavionic/openocd-pados,fork,0,2026-09-29T17:51:08Z,NOASSERTION,0,0,0,0,98,Fork of OpenOCD for the PadOS port.
+-14.7,tangsangsimida/openocd,fork,0,2026-09-27T07:30:23Z,NOASSERTION,0,0,0,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.7,jnnycn007/openocd,fork,0,2026-09-26T21:35:10Z,NOASSERTION,0,0,0,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-14.7,AndrewDaws/openocd,fork,0,2026-09-26T19:51:35Z,NOASSERTION,0,0,0,0,98,Official OpenOCD Read-Only Mirror (no pull requests)
+-59.3,the-last-openocd-fork/the-last-openocd-fork.github.io,independent,2,2026-09-07T20:04:55Z,,0,0,0,0,409,The Last OpenOCD Fork
+-60.3,DIANA-IoT/XVC-server-ESP32,independent,1,2025-05-16T08:19:22Z,GPL-3.0,0,0,0,0,409,Server and JTAG adapter firmware for an XVC and OpenOCD-compatible Wi-Fi debugger interface. OpenOCD fork is located here: https://github.com/DIANA-Io
+-61.3,PawelReich/openocd-stmicro-flake,independent,0,2026-10-10T19:15:56Z,,0,0,0,0,409,Nix flake for STMicroelectronics' OpenOCD fork
+-61.3,darknightghost/openbcd-gd,independent,0,2026-10-02T19:14:54Z,,0,0,0,0,409,GigaDevice fork of OpenOCD with native GDLink V3 support for arch linux.
+-61.3,SoC-Labs/soclabs-openocd,independent,0,2026-09-27T12:23:29Z,,0,0,0,0,409,Builds upstream OpenOCD at a pinned revision with SoC Labs flash/adapter drivers registered in. Not a fork: drivers are overlaid from the repos that o
+-61.3,blog2i2j/openocd-org.._..openocd,fork,0,2026-05-08T23:01:08Z,NOASSERTION,0,0,0,0,409,Official OpenOCD Read-Only Mirror (no pull requests)
+-61.3,borges-ie/st-openocd,independent,0,2025-07-25T10:59:40Z,,0,0,0,0,409,ST fork of openOCD as a flake STMicroelectronics/OpenOCD/
+-61.3,StumHuang/openocd,fork,0,2025-03-15T10:38:59Z,NOASSERTION,0,0,0,0,409,Official OpenOCD Read-Only Mirror (no pull requests)
+-61.3,66my/openocd,fork,0,2024-11-02T21:10:53Z,NOASSERTION,0,0,0,0,409,官方只读镜像
+-61.3,wires-se/openocd,fork,0,2024-04-19T12:09:22Z,,0,0,0,0,409,Addiva point branches of OpenOCD
+-61.3,dashboardijo/openocd-8,fork,0,2023-08-12T16:53:43Z,NOASSERTION,0,0,0,0,409,Official OpenOCD Read-Only Mirror (no pull requests)
+-61.3,zhugengyu/openocd,fork,0,2023-07-29T05:23:17Z,NOASSERTION,0,0,0,0,409,Official OpenOCD Read-Only Mirror (no pull requests)
+-61.3,dashboardijo/openocd-6,fork,0,2023-05-30T07:34:21Z,NOASSERTION,0,0,0,0,409,Official OpenOCD Read-Only Mirror (no pull requests)
+-61.3,YixingShen/openocd-fork,independent,0,2022-04-29T03:26:00Z,,0,0,0,0,409,
+-61.3,Joker-Di9/riscvp,independent,0,2022-04-17T16:37:51Z,,0,0,0,0,409,Fork of OpenOCD that has RISC-V support
+-61.3,singthi4079f/riscvp,independent,0,2022-03-18T12:03:26Z,,0,0,0,0,409,Fork of OpenOCD that has RISC-V support
