@@ -58,6 +58,14 @@ jobs:
       run:
         shell: msys2 {0}
     steps:
+      # Must run before checkout: windows-latest ships core.autocrlf=true, and a
+      # CRLF configure.ac makes aclocal abort. The committed .gitattributes
+      # already forces eol=lf, but this also keeps the jimtcl submodule (a
+      # separate repository with its own settings) LF-only.
+      - name: Disable CRLF conversion
+        shell: bash
+        run: git config --global core.autocrlf false
+
       - uses: actions/checkout@v4
 
       - uses: msys2/setup-msys2@v2
