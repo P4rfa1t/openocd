@@ -312,6 +312,24 @@ def main():
     t1 = [r for r in records if r["tier"] == 1]
     t2 = [r for r in records if r["tier"] == 2]
 
+    # Which of the candidate paths actually made it into the tree?
+    #
+    # consolidated.json is a SURVEY of what the forks offered. The tree is
+    # the subset that was imported. The two are not the same set: files were
+    # dropped on purpose (nds32, hexagon, or1k_jtag, WCH RISC-V, ...) and
+    # files were dropped because upstream already ships them. Without this
+    # marker the survey silently claims 607 imported files while the tree
+    # holds 546, and every re-run of the import step wants to re-add them.
+    imported = 0
+    not_imported: list[str] = []
+    for r in records:
+        if os.path.exists(r["path"]):
+            r["imported"] = True
+            imported += 1
+        else:
+            r["imported"] = False
+            not_imported.append(r["path"])
+
     # Which repos contributed the winning files? That is the real "shortlist".
     contrib = defaultdict(lambda: {"tier1": 0, "tier2": 0})
     for r in records:
@@ -325,6 +343,9 @@ def main():
         "upstream": data["upstream"],
         "upstream_branch": data["upstream_branch"],
         "unique_paths": len(records),
+        "imported_paths": imported,
+        "not_imported_paths": len(not_imported),
+        "not_imported": sorted(not_imported),
         "tier1_drop_in_tcl": len(t1),
         "tier2_needs_c_patch": len(t2),
         "duplicates_collapsed": dup_count,
@@ -349,19 +370,23 @@ def main():
                                 key=lambda kv: -(kv[1]["tier1"] + kv[1]["tier2"]))},
         "records": records,
     }
-    json.dump(out, open(OUT_JSON, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    json.dump(out, open(OUT_JSON, "w", encoding="utf-8", newline="\n"),
+              indent=1, ensure_ascii=False)
 
     with open(OUT_CSV, "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["tier", "kind", "path", "winner_repo", "branch",
-                    "license", "stars", "copies", "also_in"])
+                    "license", "stars", "copies", "also_in", "imported"])
         for r in sorted(records, key=lambda x: (x["tier"], x["kind"], x["path"])):
             w.writerow([r["tier"], r["kind"], r["path"], r["winner"],
                         r["winner_branch"], r["winner_license"],
                         r["winner_stars"], r["sources"],
-                        " ".join(r["also_in"])])
+                        " ".join(r["also_in"]),
+                        "yes" if r["imported"] else "no"])
 
     print(f"unique paths consolidated : {len(records)}")
+    print(f"  imported into the tree  : {imported}")
+    print(f"  not imported            : {len(not_imported)}")
     print(f"  tier 1 (drop-in .cfg)   : {len(t1)}")
     print(f"  tier 2 (needs C patch)  : {len(t2)}")
     print(f"duplicates collapsed      : {dup_count}")

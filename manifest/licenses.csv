@@ -15,10 +15,7 @@ src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/ice1500.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-src/ C 源码（需在构建系统注册）,andestech/nds-openocd,NOASSERTION,src/target/jsmn.h,ast-v5_4_0-branch,bc405bee657ef911a380f8fc1949d9d9e22a63df
 src/ C 源码（需在构建系统注册）,dynm/openocd-starbleed,GPL-2.0,src/jtag/drivers/cmsis_dap_usb.c,master,25c1d0466e04d905ece5c653fc6d11fb6d139650
-src/ C 源码（需在构建系统注册）,esden/openocd,GPL-2.0,src/target/cortex_a8.c,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
-src/ C 源码（需在构建系统注册）,esden/openocd,GPL-2.0,src/target/cortex_a8.h,master,6356604382698463dd0bc0e8d71cb6d5f480ecaa
 src/ C 源码（需在构建系统注册）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/jtag_esp_remote.c,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
 src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
@@ -43,17 +40,9 @@ src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/qua
 src/ C 源码（需在构建系统注册）,intel/OpenOCD,GPL-2.0,src/target/quark_se.h,master,728ddf7eb96106f917804a1174fb4e9bdb078293
 src/ C 源码（需在构建系统注册）,intel/aji_openocd,NOASSERTION,src/jtag/drivers/jtag_usb_common.h,main,5173047ae18e8149e985856000c5bc4d20a2e6c8
 src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/altera_virtual_jtag.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/cortex_m3.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/cortex_m3.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag_adv.c,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
-src/ C 源码（需在构建系统注册）,kevinmehall/openOCD,GPL-2.0,src/target/or1k_jtag_adv.h,master,187f984ae3d1cd7d3d11c7d63bee74b332b8c0ef
 src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_coproc_reg.c,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
 src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
 src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers_defs.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/hexagon.c,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/hexagon.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
 src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/stm8.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
 src/ C 源码（需在构建系统注册）,meriac/openocd,NOASSERTION,src/jtag/drivers/ch347_jtag.c,ch347,eeede198cdbc586cbe11041776d07589e1d5b5e6
 src/ C 源码（需在构建系统注册）,stache3000/openocd-dirtyjtag,NOASSERTION,src/jtag/drivers/dirtyjtag.c,master,d07856f7bfbac0c0f95ae0c9d91a82626cb394d8
@@ -68,28 +57,6 @@ src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/tar
 src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/tms320.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 src/ C 源码（需在构建系统注册）,yottatsa/openocd,NOASSERTION,src/target/vortex86.c,vortex86,6910de37c723fe3878012a92855f588741ae44b5
 src/ C 源码（需在构建系统注册）,yottatsa/openocd,NOASSERTION,src/target/vortex86.h,vortex86,6910de37c723fe3878012a92855f588741ae44b5
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_aice.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_aice.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_cmd.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_cmd.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_disassembler.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_disassembler.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_edm.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_insn.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_reg.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_reg.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_tlb.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_tlb.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v2.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v2.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3_common.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3_common.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3m.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
-src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/nds32_v3m.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
 src/ C 源码（需在构建系统注册）,zuyih/openocd,NOASSERTION,src/jtag/drivers/cmsis_dap_wch.c,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,Blinkinlabs/OpenOCD,GPL-2.0,tcl/board/zy1000.cfg,master,bd1adcffe7f3e51f490bf57889e7454816661196
 tcl/ 配置（随树直接可用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/board/vostok_vg015_dev.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f
@@ -127,8 +94,6 @@ tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/i
 tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_swd_reset.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
 tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
 tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10_niosv__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
-tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/1986Be1T.cfg,master,89788eb29026fc67691fa463876e64d097219371
-tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/k1879x61R.cfg,master,89788eb29026fc67691fa463876e64d097219371
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/busblaster.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/calao-usb-a9260-c01.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/calao-usb-a9260-c02.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
@@ -351,7 +316,6 @@ tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk_4xd.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_iotdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/k1879h61ya.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32l.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32lx_dual_bank.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,go2sh/aurix-openocd,NOASSERTION,tcl/target/renesas_rz_g2.cfg,aurix_support,4fbdce8e2aa7270f2b2953bbb333b635effa1607
@@ -467,9 +431,7 @@ tcl/ 配置（随树直接可用）,sony/openocd-nuttx,UNRESOLVED,tcl/interface/
 tcl/ 配置（随树直接可用）,sony/openocd-nuttx,GPL-2.0,tcl/target/lc823450.cfg,sony/master,b1f9b14b662fe729c1c5108fba402948aea508fc
 tcl/ 配置（随树直接可用）,stache3000/openocd-dirtyjtag,NOASSERTION,tcl/interface/dirtyjtag.cfg,master,d07856f7bfbac0c0f95ae0c9d91a82626cb394d8
 tcl/ 配置（随树直接可用）,stacksmashing/openocd-tamarin,NOASSERTION,tcl/interface/faultier.cfg,tamarin,eb5d44390a1e3d3fca72e67db94786598432432f
-tcl/ 配置（随树直接可用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/1986Ð²Ðµ1Ñ‚.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
 tcl/ 配置（随树直接可用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/esp8266.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
-tcl/ 配置（随树直接可用）,sysprogs/esp8266-openocd,GPL-2.0,tcl/target/Ðº1879xÐ±1Ñ.cfg,master,d1603f2d9c5ad074010d2abdb44bca6f3851202e
 tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/board/rs14100.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
 tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/board/st_nucleo_l476rg.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
 tcl/ 配置（随树直接可用）,sysprogs/openocd,NOASSERTION,tcl/board/stm32mp25x_dk.cfg,master,6bb1477098889a29b8c53620763dacf1c61a0695
@@ -539,8 +501,6 @@ tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target
 tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7791.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
 tcl/ 配置（随树直接可用）,walmis/openocd-blackmagic,GPL-2.0,tcl/target/renesas_r8a7794.cfg,master,c9914b494085252d5938cd9192f90026fd4ffe47
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/interface/mchp-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/#U043a1879x#U04311#U044f.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/1986#U0432#U04351#U0442.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/dspic33-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/mchp-renode.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/mchp-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183

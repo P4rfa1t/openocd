@@ -76,8 +76,26 @@ def upstream_ref(explicit=None):
 
 
 def upstream_files(ref):
-    out = git("ls-tree", "-r", "--name-only", ref)
-    return {l.strip() for l in out.splitlines() if l.strip()}
+    """Every file path in `ref`, exactly as it exists in the tree.
+
+    `-z` is not optional here. Without it git applies core.quotePath and
+    rewrites any path containing a non-ASCII byte into a double-quoted
+    C-style escape, e.g.
+
+        "tcl/target/1986\\320\\262\\320\\2651\\321\\202.cfg"
+
+    That escaped form is not a path that exists in the tree, so the index
+    would never match the file it claims to describe, and every
+    non-ASCII upstream path would be invisible to the duplicate checks
+    in prune_upstream_dups.py / verify_tree.py. Split the NUL-separated
+    stream instead of the line-separated one.
+    """
+    p = subprocess.run(["git", "ls-tree", "-r", "-z", "--name-only", ref],
+                       cwd=ROOT, capture_output=True)
+    if p.returncode != 0:
+        sys.exit(f"git ls-tree failed:\n{p.stderr.decode('utf-8', 'replace').strip()}")
+    return {b.decode("utf-8", "surrogateescape")
+            for b in p.stdout.split(b"\x00") if b}
 
 
 def norm(p):

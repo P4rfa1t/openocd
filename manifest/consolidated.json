@@ -2,6 +2,97 @@
  "upstream": "openocd-org/openocd",
  "upstream_branch": "master",
  "unique_paths": 607,
+ "imported_paths": 520,
+ "not_imported_paths": 87,
+ "not_imported": [
+  "src/jtag/drivers/al_link.c",
+  "src/jtag/drivers/al_link_cyusb.c",
+  "src/jtag/drivers/al_link_cyusb.h",
+  "src/jtag/drivers/bonobo.c",
+  "src/jtag/drivers/colobus.c",
+  "src/jtag/drivers/ddmi_demo.c",
+  "src/jtag/drivers/esp_gpio.c",
+  "src/jtag/drivers/esp_gpio.h",
+  "src/jtag/drivers/ftdi_rvswd.c",
+  "src/jtag/drivers/mpsse-d2xx.c",
+  "src/jtag/drivers/mpsse-libusb.c",
+  "src/jtag/drivers/mpsse-private.h",
+  "src/jtag/drivers/stlink_usb_hla_multicore.c",
+  "src/jtag/drivers/tamarin.c",
+  "src/jtag/drivers/wlink.c",
+  "src/jtag/drivers/wlink.h",
+  "src/jtag/drivers/wlinke.c",
+  "src/jtag/drivers/xlnx-pcie-xvc.c",
+  "src/server/rbb_server.c",
+  "src/server/rbb_server.h",
+  "src/target/cortex_a8.c",
+  "src/target/cortex_a8.h",
+  "src/target/cortex_m3.c",
+  "src/target/cortex_m3.h",
+  "src/target/hexagon.c",
+  "src/target/hexagon.h",
+  "src/target/hla_target_hla_multicore.c",
+  "src/target/jsmn.h",
+  "src/target/nds32.c",
+  "src/target/nds32.h",
+  "src/target/nds32_aice.c",
+  "src/target/nds32_aice.h",
+  "src/target/nds32_cmd.c",
+  "src/target/nds32_cmd.h",
+  "src/target/nds32_disassembler.c",
+  "src/target/nds32_disassembler.h",
+  "src/target/nds32_edm.h",
+  "src/target/nds32_insn.h",
+  "src/target/nds32_reg.c",
+  "src/target/nds32_reg.h",
+  "src/target/nds32_tlb.c",
+  "src/target/nds32_tlb.h",
+  "src/target/nds32_v2.c",
+  "src/target/nds32_v2.h",
+  "src/target/nds32_v3.c",
+  "src/target/nds32_v3.h",
+  "src/target/nds32_v3_common.c",
+  "src/target/nds32_v3_common.h",
+  "src/target/nds32_v3m.c",
+  "src/target/nds32_v3m.h",
+  "src/target/nds_vtarget.c",
+  "src/target/nds_vtarget.h",
+  "src/target/nds_vtarget_cmd.c",
+  "src/target/nds_vtarget_common.h",
+  "src/target/ndsv5_ace.c",
+  "src/target/ndsv5_ace.h",
+  "src/target/ndsv5_burner_server.c",
+  "src/target/ndsv5_cmd.c",
+  "src/target/ndsv5_profiling.c",
+  "src/target/or1k_jtag.c",
+  "src/target/or1k_jtag.h",
+  "src/target/or1k_jtag_adv.c",
+  "src/target/or1k_jtag_adv.h",
+  "src/target/stm32_stlink.c",
+  "src/target/stm8_hla_multicore.c",
+  "src/target/wch_riscv-013.c",
+  "src/target/wch_riscv.c",
+  "src/target/wch_riscv.h",
+  "tcl/board/synopsys_amla3.cfg",
+  "tcl/board/synopsys_angel4.cfg",
+  "tcl/board/synopsys_haps51.cfg",
+  "tcl/board/synopsys_ml509.cfg",
+  "tcl/interface/al_link.cfg",
+  "tcl/interface/colobus.cfg",
+  "tcl/interface/ddmi_demo.cfg",
+  "tcl/interface/esp_gpio_jtag.cfg",
+  "tcl/interface/esp_gpio_swd.cfg",
+  "tcl/interface/tamarin.cfg",
+  "tcl/interface/wlink.cfg",
+  "tcl/target/#U043a1879x#U04311#U044f.cfg",
+  "tcl/target/1986#U0432#U04351#U0442.cfg",
+  "tcl/target/1986Be1T.cfg",
+  "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
+  "tcl/target/k1879h61ya.cfg",
+  "tcl/target/k1879x61R.cfg",
+  "tcl/target/wch-riscv.cfg",
+  "tcl/target/Ðº1879xÐ±1Ñ.cfg"
+ ],
  "tier1_drop_in_tcl": 480,
  "tier2_needs_c_patch": 127,
  "duplicates_collapsed": 4109,
@@ -127,399 +218,399 @@
  },
  "pruned_as_upstream_redundant": [
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/board/olimex_LPC2378STK.cfg",
+   "imported_path": "tcl/board/olimex_LPC2378STK.cfg",
    "upstream_path": "tcl/board/olimex/lpc2378-stk.cfg"
   },
   {
-   "overlay_path": "tcl/target/at91sam3uXX.cfg",
+   "imported_path": "tcl/target/at91sam3uXX.cfg",
    "upstream_path": "tcl/target/at91sam3uxx.cfg"
   },
   {
-   "overlay_path": "tcl/target/at91sam3uXX.cfg",
+   "imported_path": "tcl/target/at91sam3uXX.cfg",
    "upstream_path": "tcl/target/at91sam3uxx.cfg"
   },
   {
-   "overlay_path": "tcl/target/at91sam3uXX.cfg",
+   "imported_path": "tcl/target/at91sam3uXX.cfg",
    "upstream_path": "tcl/target/at91sam3uxx.cfg"
   },
   {
-   "overlay_path": "tcl/target/numicroM4.cfg",
+   "imported_path": "tcl/target/numicroM4.cfg",
    "upstream_path": "tcl/target/numicro_m4.cfg"
   }
  ],
@@ -789,7 +880,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/al_link.c",
@@ -801,7 +893,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/al_link_cyusb.c",
@@ -813,7 +906,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/al_link_cyusb.h",
@@ -825,7 +919,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/arc_ftdi_cjtag.c",
@@ -837,7 +932,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/arc_ftdi_cjtag.h",
@@ -849,7 +945,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/blackmagic.c",
@@ -861,7 +958,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/bonobo.c",
@@ -873,7 +971,8 @@
    "winner_stars": 69,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/ch347_jtag.c",
@@ -885,7 +984,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/cmsis_dap_usb.c",
@@ -923,7 +1023,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 26,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/cmsis_dap_wch.c",
@@ -935,7 +1036,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/colobus.c",
@@ -947,7 +1049,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/ddmi_demo.c",
@@ -959,7 +1062,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/dirtyjtag.c",
@@ -974,7 +1078,8 @@
     "luyi1888/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/esp_gpio.c",
@@ -986,7 +1091,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/esp_gpio.h",
@@ -998,7 +1104,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/ftdi_rvswd.c",
@@ -1010,7 +1117,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/ice1000.c",
@@ -1022,7 +1130,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/ice1500.c",
@@ -1034,7 +1143,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/jtag_esp_remote.c",
@@ -1046,7 +1156,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/jtag_tcp.c",
@@ -1060,7 +1171,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/jtag_usb_common.h",
@@ -1080,7 +1192,8 @@
     "walmis/openocd-blackmagic"
    ],
    "sources": 8,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/mpsse-d2xx.c",
@@ -1092,7 +1205,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/mpsse-libusb.c",
@@ -1104,7 +1218,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/mpsse-private.h",
@@ -1116,7 +1231,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/stlink_usb_hla_multicore.c",
@@ -1128,7 +1244,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/tamarin.c",
@@ -1142,7 +1259,8 @@
     "stacksmashing/openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/usbmux.c",
@@ -1154,7 +1272,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/usbmux.h",
@@ -1166,7 +1285,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/wlink.c",
@@ -1182,7 +1302,8 @@
     "newbrain/riscv-openocd-wch"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/wlink.h",
@@ -1194,7 +1315,8 @@
    "winner_stars": 22,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/wlinke.c",
@@ -1208,7 +1330,8 @@
     "cjacker/wch-openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/jtag/drivers/xlnx-pcie-xvc.c",
@@ -1267,7 +1390,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 47,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/server/rbb_server.c",
@@ -1279,7 +1403,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/server/rbb_server.h",
@@ -1291,7 +1416,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/aarch64_coproc_reg.c",
@@ -1303,7 +1429,8 @@
    "winner_stars": 26,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/aarch64_system_registers.h",
@@ -1315,7 +1442,8 @@
    "winner_stars": 26,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/aarch64_system_registers_defs.h",
@@ -1327,7 +1455,8 @@
    "winner_stars": 26,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/adi_v5_cmsis_dap.c",
@@ -1341,7 +1470,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/altera_virtual_jtag.h",
@@ -1353,7 +1483,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc32.c",
@@ -1367,7 +1498,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc32.h",
@@ -1381,7 +1513,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_core.c",
@@ -1393,7 +1526,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_core.h",
@@ -1405,7 +1539,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_dbg.c",
@@ -1419,7 +1554,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_dbg.h",
@@ -1433,7 +1569,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_mntr.c",
@@ -1447,7 +1584,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_mntr.h",
@@ -1461,7 +1599,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_ocd.c",
@@ -1475,7 +1614,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_ocd.h",
@@ -1489,7 +1629,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_regs.c",
@@ -1503,7 +1644,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_regs.h",
@@ -1517,7 +1659,8 @@
     "intel/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_trgt.c",
@@ -1529,7 +1672,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/arc_trgt.h",
@@ -1541,7 +1685,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/c28x.c",
@@ -1553,7 +1698,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/c28x.h",
@@ -1565,7 +1711,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/cortex_a8.c",
@@ -1577,7 +1724,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/cortex_a8.h",
@@ -1589,7 +1737,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/cortex_m3.c",
@@ -1604,7 +1753,8 @@
     "zhao0079/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/cortex_m3.h",
@@ -1619,7 +1769,8 @@
     "zhao0079/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/hexagon.c",
@@ -1631,7 +1782,8 @@
    "winner_stars": 26,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/hexagon.h",
@@ -1643,7 +1795,8 @@
    "winner_stars": 26,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/hla_target_hla_multicore.c",
@@ -1655,7 +1808,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/jsmn.h",
@@ -1667,7 +1821,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/loongarch.c",
@@ -1679,7 +1834,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/loongarch.h",
@@ -1691,7 +1847,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/loongarch_ejtag.c",
@@ -1703,7 +1860,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/loongarch_ejtag.h",
@@ -1715,7 +1873,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/loongarch_modules.h",
@@ -1727,7 +1886,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/loongarch_pracc.c",
@@ -1739,7 +1899,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/loongarch_pracc.h",
@@ -1751,7 +1912,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/mchp_ri4_bridge.c",
@@ -1763,7 +1925,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/mchp_ri4_bridge.h",
@@ -1775,7 +1938,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/mchp_ri4_native.c",
@@ -1787,7 +1951,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/mchp_ri4_native.h",
@@ -1799,7 +1964,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/nds32.c",
@@ -1856,7 +2022,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32.h",
@@ -1913,7 +2080,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_aice.c",
@@ -1970,7 +2138,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_aice.h",
@@ -2027,7 +2196,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_cmd.c",
@@ -2084,7 +2254,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_cmd.h",
@@ -2141,7 +2312,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_disassembler.c",
@@ -2198,7 +2370,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_disassembler.h",
@@ -2255,7 +2428,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_edm.h",
@@ -2312,7 +2486,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_insn.h",
@@ -2369,7 +2544,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_reg.c",
@@ -2426,7 +2602,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_reg.h",
@@ -2483,7 +2660,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_tlb.c",
@@ -2540,7 +2718,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_tlb.h",
@@ -2597,7 +2776,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v2.c",
@@ -2654,7 +2834,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v2.h",
@@ -2711,7 +2892,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v3.c",
@@ -2768,7 +2950,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v3.h",
@@ -2825,7 +3008,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v3_common.c",
@@ -2882,7 +3066,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v3_common.h",
@@ -2939,7 +3124,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v3m.c",
@@ -2996,7 +3182,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds32_v3m.h",
@@ -3053,7 +3240,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds_vtarget.c",
@@ -3065,7 +3253,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds_vtarget.h",
@@ -3077,7 +3266,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds_vtarget_cmd.c",
@@ -3089,7 +3279,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/nds_vtarget_common.h",
@@ -3101,7 +3292,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/ndsv5_ace.c",
@@ -3113,7 +3305,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/ndsv5_ace.h",
@@ -3125,7 +3318,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/ndsv5_burner_server.c",
@@ -3137,7 +3331,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/ndsv5_cmd.c",
@@ -3149,7 +3344,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/ndsv5_profiling.c",
@@ -3161,7 +3357,8 @@
    "winner_stars": 7,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/or1k_jtag.c",
@@ -3173,7 +3370,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/or1k_jtag.h",
@@ -3185,7 +3383,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/or1k_jtag_adv.c",
@@ -3197,7 +3396,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/or1k_jtag_adv.h",
@@ -3209,7 +3409,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/quark_d2000.c",
@@ -3221,7 +3422,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/quark_d2000.h",
@@ -3233,7 +3435,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/quark_se.c",
@@ -3245,7 +3448,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/quark_se.h",
@@ -3257,7 +3461,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/stm32_stlink.c",
@@ -3272,7 +3477,8 @@
     "hikob/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/stm8.h",
@@ -3335,7 +3541,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 51,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/stm8_hla_multicore.c",
@@ -3347,7 +3554,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/tms320.c",
@@ -3359,7 +3567,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/tms320.h",
@@ -3371,7 +3580,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/vexriscv-csrs.h",
@@ -3385,7 +3595,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/vexriscv.c",
@@ -3399,7 +3610,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/vexriscv.h",
@@ -3413,7 +3625,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/vortex86.c",
@@ -3425,7 +3638,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/vortex86.h",
@@ -3437,7 +3651,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "src/target/wch_riscv-013.c",
@@ -3451,7 +3666,8 @@
     "cjacker/wch-openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/wch_riscv.c",
@@ -3465,7 +3681,8 @@
     "cjacker/wch-openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "src/target/wch_riscv.h",
@@ -3479,7 +3696,8 @@
     "cjacker/wch-openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/board/adsp21835w_ev_ezkit.cfg",
@@ -3491,7 +3709,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adsp21835w_ev_som.cfg",
@@ -3503,7 +3722,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adsp21846w_ev_ezkit.cfg",
@@ -3515,7 +3735,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adsp21846w_ev_som.cfg",
@@ -3527,7 +3748,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc573_ezkit.cfg",
@@ -3539,7 +3761,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc589_ezbrd.cfg",
@@ -3551,7 +3774,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc589_minibrd.cfg",
@@ -3563,7 +3787,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc5xx_ezbrd.tcl",
@@ -3575,7 +3800,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc835w_ev_ezkit.cfg",
@@ -3587,7 +3813,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc835w_ev_som.cfg",
@@ -3599,7 +3826,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc846w_ev_som.cfg",
@@ -3611,7 +3839,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/adspsc846w_mp_ezkit.cfg",
@@ -3623,7 +3852,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/altera_arria10__aji_client.cfg",
@@ -3638,7 +3868,8 @@
     "intel/aji_openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/altera_arria10_niosv__aji_client.cfg",
@@ -3653,7 +3884,8 @@
     "intel/aji_openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_axs101.cfg",
@@ -3665,7 +3897,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_axs102.cfg",
@@ -3677,7 +3910,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_axs103_hs36.cfg",
@@ -3689,7 +3923,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_axs103_hs38.cfg",
@@ -3701,7 +3936,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_axs103_hs47D.cfg",
@@ -3713,7 +3949,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_axs103_hs48.cfg",
@@ -3725,7 +3962,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_em_sk.cfg",
@@ -3737,7 +3975,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_em_sk_v1.cfg",
@@ -3749,7 +3988,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_em_sk_v2.1.cfg",
@@ -3761,7 +4001,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_em_sk_v2.2.cfg",
@@ -3773,7 +4014,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_em_sk_v2.2_cjtag.cfg",
@@ -3785,7 +4027,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_em_sk_v2.3.cfg",
@@ -3797,7 +4040,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_em_sk_v2.3_cjtag.cfg",
@@ -3809,7 +4053,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_hsdk.cfg",
@@ -3821,7 +4066,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_hsdk_4xd.cfg",
@@ -3833,7 +4079,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arc_iotdk.cfg",
@@ -3845,7 +4092,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/art_pi2.cfg",
@@ -3857,7 +4105,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/arty_s7.cfg",
@@ -3936,7 +4185,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 67,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/atk_cnn647b.cfg",
@@ -3948,7 +4198,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c2-bridge.cfg",
@@ -3960,7 +4211,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c3-bridge.cfg",
@@ -3972,7 +4224,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c5-bridge.cfg",
@@ -3984,7 +4237,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c5-builtin.cfg",
@@ -3996,7 +4250,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c5-ftdi.cfg",
@@ -4008,7 +4263,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c5-lpcore-bridge.cfg",
@@ -4020,7 +4276,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c5-lpcore-builtin.cfg",
@@ -4032,7 +4289,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c5-lpcore-ftdi.cfg",
@@ -4044,7 +4302,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c6-bridge.cfg",
@@ -4056,7 +4315,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c6-ftdi.cfg",
@@ -4068,7 +4328,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c6-lpcore-bridge.cfg",
@@ -4080,7 +4341,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c6-lpcore-builtin.cfg",
@@ -4092,7 +4354,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c6-lpcore-ftdi.cfg",
@@ -4104,7 +4367,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c61-bridge.cfg",
@@ -4116,7 +4380,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c61-builtin.cfg",
@@ -4128,7 +4393,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32c61-ftdi.cfg",
@@ -4140,7 +4406,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h2-bridge.cfg",
@@ -4152,7 +4419,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h2-ftdi.cfg",
@@ -4164,7 +4432,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h21-bridge.cfg",
@@ -4176,7 +4445,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h21-builtin.cfg",
@@ -4188,7 +4458,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h21-ftdi.cfg",
@@ -4200,7 +4471,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h4-bridge.cfg",
@@ -4212,7 +4484,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h4-builtin.cfg",
@@ -4224,7 +4497,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32h4-ftdi.cfg",
@@ -4236,7 +4510,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32p4-bridge.cfg",
@@ -4248,7 +4523,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32p4-builtin.cfg",
@@ -4260,7 +4536,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32p4-ftdi.cfg",
@@ -4272,7 +4549,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32p4-lpcore-bridge.cfg",
@@ -4284,7 +4562,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32p4-lpcore-builtin.cfg",
@@ -4296,7 +4575,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32p4-lpcore-ftdi.cfg",
@@ -4308,7 +4588,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32s31-bridge.cfg",
@@ -4320,7 +4601,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32s31-builtin.cfg",
@@ -4332,7 +4614,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32s31-ftdi.cfg",
@@ -4344,7 +4627,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32s31-lpcore-bridge.cfg",
@@ -4356,7 +4640,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32s31-lpcore-builtin.cfg",
@@ -4368,7 +4653,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/esp32s31-lpcore-ftdi.cfg",
@@ -4380,7 +4666,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ev-sc594-som-consumer.cfg",
@@ -4392,7 +4679,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ev-sc594-som.cfg",
@@ -4404,7 +4692,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ev-sc598-som.cfg",
@@ -4416,7 +4705,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/gemini.cfg",
@@ -4428,7 +4718,8 @@
    "winner_stars": 2,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/iar_lpc1768.cfg",
@@ -4535,7 +4826,8 @@
     "zhao0079/openocd"
    ],
    "sources": 95,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/lc823450_xgevk.cfg",
@@ -4547,7 +4839,8 @@
    "winner_stars": 25,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/moto_mdk_hsb.cfg",
@@ -4559,7 +4852,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/moto_mdk_muc.cfg",
@@ -4571,7 +4865,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/moto_mdk_muc_common.cfg",
@@ -4583,7 +4878,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/moto_mdk_muc_reset.cfg",
@@ -4595,7 +4891,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/nds32_xc5.cfg",
@@ -4652,7 +4949,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/omap2420_h4.cfg",
@@ -4748,7 +5046,8 @@
     "zhao0079/openocd"
    ],
    "sources": 84,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/open-bldc.cfg",
@@ -4794,7 +5093,8 @@
     "zhao0079/openocd"
    ],
    "sources": 34,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/quark_d2000.cfg",
@@ -4806,7 +5106,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/quark_d2000_onboard.cfg",
@@ -4818,7 +5119,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/quark_se.cfg",
@@ -4830,7 +5132,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/renesas_gen2_common.cfg",
@@ -4845,7 +5148,8 @@
     "stacksmashing/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/rs14100.cfg",
@@ -4857,7 +5161,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/sifive-e31arty-cjtag.cfg",
@@ -4877,7 +5182,8 @@
     "newbrain/riscv-openocd-wch"
    ],
    "sources": 8,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/sifive-e31arty-onboard-ftdi.cfg",
@@ -4897,7 +5203,8 @@
     "newbrain/riscv-openocd-wch"
    ],
    "sources": 8,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/snowcap-stm32f4v1.cfg",
@@ -4909,7 +5216,8 @@
    "winner_stars": 13,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/snps_axs101.cfg",
@@ -4921,7 +5229,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/snps_axs102.cfg",
@@ -4933,7 +5242,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/snps_hsdk_smp.cfg",
@@ -4945,7 +5255,8 @@
    "winner_stars": 47,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_c5.cfg",
@@ -4957,7 +5268,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_f030r8.cfg",
@@ -4969,7 +5281,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_f334r8.cfg",
@@ -4981,7 +5294,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_f401re.cfg",
@@ -4993,7 +5307,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_f411re.cfg",
@@ -5005,7 +5320,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_h5.cfg",
@@ -5021,7 +5337,8 @@
     "scmrtos/openocd-scmrtos"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_l476rg.cfg",
@@ -5044,7 +5361,8 @@
     "sony/openocd-nuttx"
    ],
    "sources": 11,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/st_nucleo_l5.cfg",
@@ -5108,7 +5426,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 52,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/stm32f10x_128k_eval.cfg",
@@ -5120,7 +5439,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/stm32mp13x_dk.cfg",
@@ -5174,7 +5494,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 42,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/stm32mp15x_dk2.cfg",
@@ -5232,7 +5553,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 46,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/stm32mp25x_dk.cfg",
@@ -5244,7 +5566,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/synopsys_amla3.cfg",
@@ -5256,7 +5579,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/board/synopsys_angel4.cfg",
@@ -5268,7 +5592,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/board/synopsys_haps51.cfg",
@@ -5280,7 +5605,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/board/synopsys_ml509.cfg",
@@ -5292,7 +5618,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/board/ti_am625_swd_native.cfg",
@@ -5336,7 +5663,8 @@
     "transcelestial/openocd"
    ],
    "sources": 32,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_am62a7_swd_native.cfg",
@@ -5365,7 +5693,8 @@
     "tom-van/openocd-rp2350-riscv"
    ],
    "sources": 17,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_am62p_swd_native.cfg",
@@ -5394,7 +5723,8 @@
     "tom-van/openocd-rp2350-riscv"
    ],
    "sources": 17,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_am64xx_swd_native.cfg",
@@ -5409,7 +5739,8 @@
     "OlegGalizin/openocd-for-py32f0xx"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_beagleboard.cfg",
@@ -5505,7 +5836,8 @@
     "zhao0079/openocd"
    ],
    "sources": 84,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_beagleboard_xm.cfg",
@@ -5601,7 +5933,8 @@
     "zhao0079/openocd"
    ],
    "sources": 84,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_beaglebone-base.cfg",
@@ -5675,7 +6008,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_beaglebone.cfg",
@@ -5767,7 +6101,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 80,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_beaglebone_black.cfg",
@@ -5841,7 +6176,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_cc35x1e_launchpad.cfg",
@@ -5853,7 +6189,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_j721e_swd_native.cfg",
@@ -5897,7 +6234,8 @@
     "transcelestial/openocd"
    ],
    "sources": 32,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_j722s_swd_native.cfg",
@@ -5926,7 +6264,8 @@
     "tom-van/openocd-rp2350-riscv"
    ],
    "sources": 17,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_j784s4_swd_native.cfg",
@@ -5941,7 +6280,8 @@
     "OlegGalizin/openocd-for-py32f0xx"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2340r5.cfg",
@@ -5953,7 +6293,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2340r53.cfg",
@@ -5965,7 +6306,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2341.cfg",
@@ -5977,7 +6319,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2745P10.cfg",
@@ -5989,7 +6332,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2745r10.cfg",
@@ -6001,7 +6345,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2745R74.cfg",
@@ -6013,7 +6358,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2755P10.cfg",
@@ -6025,7 +6371,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2755P20.cfg",
@@ -6037,7 +6384,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2755R10.cfg",
@@ -6049,7 +6397,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2755R74.cfg",
@@ -6061,7 +6410,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2765R10.cfg",
@@ -6073,7 +6423,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/ti_mspm33_launchpad.cfg",
@@ -6085,7 +6436,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/twr-k40.cfg",
@@ -6097,7 +6449,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/vostok_vg015_dev.cfg",
@@ -6109,7 +6462,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/board/zy1000.cfg",
@@ -6156,7 +6510,8 @@
     "zhao0079/openocd"
    ],
    "sources": 35,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/altera-max10.cfg",
@@ -6230,7 +6585,8 @@
     "xsession/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc3s.cfg",
@@ -6304,7 +6660,8 @@
     "xsession/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc4v.cfg",
@@ -6378,7 +6735,8 @@
     "xsession/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc4vfx_40_60_100_140.cfg",
@@ -6452,7 +6810,8 @@
     "xsession/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc5v.cfg",
@@ -6526,7 +6885,8 @@
     "xsession/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc5vfx_100_130_200.cfg",
@@ -6600,7 +6960,8 @@
     "xsession/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc6s.cfg",
@@ -6713,7 +7074,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 101,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc6v.cfg",
@@ -6787,7 +7149,8 @@
     "xsession/openocd"
    ],
    "sources": 62,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc7.cfg",
@@ -6881,7 +7244,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 82,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc7v.cfg",
@@ -6936,7 +7300,8 @@
     "xsession/openocd"
    ],
    "sources": 43,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc7vh580t.cfg",
@@ -6991,7 +7356,8 @@
     "xsession/openocd"
    ],
    "sources": 43,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xc7vh870t.cfg",
@@ -7046,7 +7412,8 @@
     "xsession/openocd"
    ],
    "sources": 43,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xcr3256.cfg",
@@ -7173,7 +7540,8 @@
     "zhao0079/openocd"
    ],
    "sources": 115,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/cpld/xilinx-xcu.cfg",
@@ -7273,7 +7641,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 88,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/adi-dbgagent.cfg",
@@ -7285,7 +7654,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/adi-mpdbgagent.cfg",
@@ -7297,7 +7667,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/al_link.cfg",
@@ -7309,7 +7680,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/interface/arc_sdp.cfg",
@@ -7321,7 +7693,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/arm-usb-ocd.cfg",
@@ -7337,7 +7710,8 @@
     "zhao0079/openocd"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/atlink.cfg",
@@ -7349,7 +7723,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/atlink_dap_v2.cfg",
@@ -7361,7 +7736,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/blackmagic.cfg",
@@ -7373,7 +7749,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/busblaster.cfg",
@@ -7400,7 +7777,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 15,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/c20-swd.cfg",
@@ -7412,7 +7790,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/calao-usb-a9260-c01.cfg",
@@ -7443,7 +7822,8 @@
     "zhao0079/openocd"
    ],
    "sources": 19,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/calao-usb-a9260-c02.cfg",
@@ -7474,7 +7854,8 @@
     "zhao0079/openocd"
    ],
    "sources": 19,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/cc3200lp.cfg",
@@ -7486,7 +7867,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/ch347.cfg",
@@ -7500,7 +7882,8 @@
     "meriac/openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/cmsis-dap_v2_aic8800.cfg",
@@ -7512,7 +7895,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/cmsis-dap_v2_aic8800m40.cfg",
@@ -7524,7 +7908,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/cmsis-dap_v2_aic8800mc.cfg",
@@ -7536,7 +7921,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/colobus.cfg",
@@ -7548,7 +7934,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/interface/ddmi_demo.cfg",
@@ -7560,7 +7947,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/interface/dirtyjtag-cjtag.cfg",
@@ -7572,7 +7960,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/dirtyjtag.cfg",
@@ -7587,7 +7976,8 @@
     "luyi1888/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/esp_gpio_jtag.cfg",
@@ -7599,7 +7989,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/interface/esp_gpio_swd.cfg",
@@ -7611,7 +8002,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/interface/eud.cfg",
@@ -7623,7 +8015,8 @@
    "winner_stars": 26,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/faultier.cfg",
@@ -7635,7 +8028,8 @@
    "winner_stars": 18,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/ice1000.cfg",
@@ -7647,7 +8041,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/ice1500.cfg",
@@ -7659,7 +8054,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/ice2000.cfg",
@@ -7671,7 +8067,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/jtag_esp_remote.cfg",
@@ -7683,7 +8080,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/jtag_tcp.cfg",
@@ -7697,7 +8095,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/jtagkey-tiny.cfg",
@@ -7728,7 +8127,8 @@
     "zhao0079/openocd"
    ],
    "sources": 19,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/matrix-creator.cfg",
@@ -7740,7 +8140,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/mchp-ri4.cfg",
@@ -7752,7 +8153,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/nds32-aice.cfg",
@@ -7809,7 +8211,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/orsoc-jtag.cfg",
@@ -7821,7 +8224,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/picoprobe.cfg",
@@ -7835,7 +8239,8 @@
     "stacksmashing/openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/raspberrypi-swd.cfg",
@@ -7847,7 +8252,8 @@
    "winner_stars": 223,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/signalyzer-h2.cfg",
@@ -7878,7 +8284,8 @@
     "zhao0079/openocd"
    ],
    "sources": 19,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/signalyzer-h4.cfg",
@@ -7909,7 +8316,8 @@
     "zhao0079/openocd"
    ],
    "sources": 19,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/stlink-usb.cfg",
@@ -7921,7 +8329,8 @@
    "winner_stars": 18,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/tamarin.cfg",
@@ -7935,7 +8344,8 @@
     "stacksmashing/openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/interface/tas_client.cfg",
@@ -7949,7 +8359,8 @@
     "go2sh/aurix-openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/ti-icdi-auto.cfg",
@@ -7961,7 +8372,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/turtelizer2.cfg",
@@ -7992,7 +8404,8 @@
     "zhao0079/openocd"
    ],
    "sources": 19,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/interface/wlink.cfg",
@@ -8004,7 +8417,8 @@
    "winner_stars": 23,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/target/#U043a1879x#U04311#U044f.cfg",
@@ -8016,7 +8430,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/target/1986#U0432#U04351#U0442.cfg",
@@ -8028,7 +8443,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/target/1986Be1T.cfg",
@@ -8058,7 +8474,8 @@
    "path_spellings": [
     "tcl/target/1986BE1T.cfg",
     "tcl/target/1986Be1T.cfg"
-   ]
+   ],
+   "imported": false
   },
   {
    "path": "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
@@ -8070,7 +8487,8 @@
    "winner_stars": 56,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/target/adi_proc_tracker.tcl",
@@ -8082,7 +8500,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adsp2183x.cfg",
@@ -8094,7 +8513,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adsp2184x.cfg",
@@ -8106,7 +8526,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc57x.cfg",
@@ -8118,7 +8539,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc57x_memory_map.xml",
@@ -8130,7 +8552,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc57x_single_SHARC.cfg",
@@ -8142,7 +8565,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc58x_memory_map.xml",
@@ -8154,7 +8578,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc58x_single_SHARC.cfg",
@@ -8166,7 +8591,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc59x.cfg",
@@ -8178,7 +8604,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc59x_a55.cfg",
@@ -8190,7 +8617,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc59x_memory_map.xml",
@@ -8202,7 +8630,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc59x_single_SHARC.cfg",
@@ -8214,7 +8643,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc5xx.tcl",
@@ -8226,7 +8656,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc83x.cfg",
@@ -8238,7 +8669,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc84x.cfg",
@@ -8250,7 +8682,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc84x_core0.cfg",
@@ -8262,7 +8695,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/adspsc8xx.tcl",
@@ -8274,7 +8708,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aducm3027.cfg",
@@ -8286,7 +8721,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aducm3029.cfg",
@@ -8298,7 +8734,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aducm302x.tcl",
@@ -8310,7 +8747,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aducm36x.cfg",
@@ -8322,7 +8760,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aducm4050.cfg",
@@ -8334,7 +8773,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aducm4x50.tcl",
@@ -8346,7 +8786,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aic8800.cfg",
@@ -8358,7 +8799,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aic8800m40.cfg",
@@ -8370,7 +8812,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/aic8800mc.cfg",
@@ -8382,7 +8825,8 @@
    "winner_stars": 55,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/air001.cfg",
@@ -8394,7 +8838,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/apm32e1x.cfg",
@@ -8406,7 +8851,8 @@
    "winner_stars": 3,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/apm32f003.cfg",
@@ -8418,7 +8864,8 @@
    "winner_stars": 3,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/apm32f0xx.cfg",
@@ -8430,7 +8877,8 @@
    "winner_stars": 3,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/apm32s1x.cfg",
@@ -8442,7 +8890,8 @@
    "winner_stars": 3,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_axc001.cfg",
@@ -8454,7 +8903,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_axc002.cfg",
@@ -8466,7 +8916,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_axc003_hs36.cfg",
@@ -8478,7 +8929,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_axc003_hs38.cfg",
@@ -8490,7 +8942,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_axc003_hs47D.cfg",
@@ -8502,7 +8955,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_axc003_hs48.cfg",
@@ -8514,7 +8968,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_em_sk_fpga.cfg",
@@ -8526,7 +8981,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_hsdk.cfg",
@@ -8538,7 +8994,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_hsdk_4xd.cfg",
@@ -8550,7 +9007,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arc_iotdk.cfg",
@@ -8562,7 +9020,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arty7_linux.cfg",
@@ -8576,7 +9035,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/arty7_uboot.cfg",
@@ -8590,7 +9050,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32a403axx.cfg",
@@ -8604,7 +9065,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32a423xx.cfg",
@@ -8618,7 +9080,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f011xx.cfg",
@@ -8630,7 +9093,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f402xx.cfg",
@@ -8644,7 +9108,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f402xx_qspi.cfg",
@@ -8658,7 +9123,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403_spim_type1_remap0.cfg",
@@ -8672,7 +9138,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403_spim_type2_remap0.cfg",
@@ -8686,7 +9153,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403a_407_spim_type1_remap0.cfg",
@@ -8700,7 +9168,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403a_407_spim_type1_remap1.cfg",
@@ -8714,7 +9183,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403a_407_spim_type2_remap0.cfg",
@@ -8728,7 +9198,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403a_407_spim_type2_remap1.cfg",
@@ -8742,7 +9213,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403axG.cfg",
@@ -8756,7 +9228,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403axx.cfg",
@@ -8770,7 +9243,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403xG.cfg",
@@ -8784,7 +9258,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f403xx.cfg",
@@ -8798,7 +9273,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f405xx.cfg",
@@ -8812,7 +9288,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f405xx_qspi.cfg",
@@ -8826,7 +9303,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f407xG.cfg",
@@ -8840,7 +9318,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f407xx.cfg",
@@ -8854,7 +9333,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f413_spim_type1_remap0.cfg",
@@ -8868,7 +9348,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f413_spim_type1_remap1.cfg",
@@ -8882,7 +9363,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f413_spim_type2_remap0.cfg",
@@ -8896,7 +9378,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f413_spim_type2_remap1.cfg",
@@ -8910,7 +9393,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f413xx.cfg",
@@ -8924,7 +9408,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f415xx.cfg",
@@ -8938,7 +9423,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f421xx.cfg",
@@ -8952,7 +9438,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f422xx.cfg",
@@ -8966,7 +9453,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f423xx.cfg",
@@ -8980,7 +9468,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f425xx.cfg",
@@ -8994,7 +9483,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f426xx.cfg",
@@ -9008,7 +9498,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f435xG.cfg",
@@ -9022,7 +9513,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f435xG_qspi.cfg",
@@ -9036,7 +9528,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f435xM.cfg",
@@ -9050,7 +9543,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f435xM_qspi.cfg",
@@ -9064,7 +9558,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f435xx.cfg",
@@ -9078,7 +9573,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f435xx_qspi.cfg",
@@ -9092,7 +9588,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f437xG.cfg",
@@ -9106,7 +9603,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f437xG_qspi.cfg",
@@ -9120,7 +9618,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f437xM.cfg",
@@ -9134,7 +9633,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f437xM_qspi.cfg",
@@ -9148,7 +9648,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f437xx.cfg",
@@ -9162,7 +9663,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f437xx_qspi.cfg",
@@ -9176,7 +9678,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32f45xx.cfg",
@@ -9190,7 +9693,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32l021xx.cfg",
@@ -9204,7 +9708,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32m412xx.cfg",
@@ -9218,7 +9723,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32m416xx.cfg",
@@ -9232,7 +9738,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/at32wb415xx.cfg",
@@ -9246,7 +9753,8 @@
     "vllogic/openocd_cmsis-dap_v2"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/bluenrg-lp.cfg",
@@ -9258,7 +9766,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/briey.cfg",
@@ -9272,7 +9781,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/cc26xx.cfg",
@@ -9303,7 +9813,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 19,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ch32f1x.cfg",
@@ -9317,7 +9828,8 @@
     "cjacker/wch-openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ch32f2x.cfg",
@@ -9329,7 +9841,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ch32x035.txt",
@@ -9341,7 +9854,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ch579.cfg",
@@ -9353,7 +9867,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/dspic33-ri4.cfg",
@@ -9365,7 +9880,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/efm32_stlink.cfg",
@@ -9405,7 +9921,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 28,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/efm32s2.cfg",
@@ -9417,7 +9934,8 @@
    "winner_stars": 2,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/efm32s2_g23.cfg",
@@ -9429,7 +9947,8 @@
    "winner_stars": 2,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32-solo-1.cfg",
@@ -9441,7 +9960,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32c5-lpcore.cfg",
@@ -9453,7 +9973,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32c5.cfg",
@@ -9465,7 +9986,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32c6-lpcore.cfg",
@@ -9477,7 +9999,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32c61.cfg",
@@ -9489,7 +10012,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32h21.cfg",
@@ -9501,7 +10025,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32h4.cfg",
@@ -9513,7 +10038,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32p4-lpcore.cfg",
@@ -9525,7 +10051,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32p4.cfg",
@@ -9537,7 +10064,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32s31-lpcore.cfg",
@@ -9549,7 +10077,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp32s31.cfg",
@@ -9561,7 +10090,8 @@
    "winner_stars": 471,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/esp8266.cfg",
@@ -9573,7 +10103,8 @@
    "winner_stars": 56,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx6_dual.cfg",
@@ -9585,7 +10116,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx6_quad.cfg",
@@ -9597,7 +10129,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx6d-1gb.cfg",
@@ -9609,7 +10142,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx6q-2gb.cfg",
@@ -9621,7 +10155,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx7d-1gb.cfg",
@@ -9633,7 +10168,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx8-ngb.cfg",
@@ -9645,7 +10181,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx8.cfg",
@@ -9657,7 +10194,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imx8m-ngb.cfg",
@@ -9669,7 +10207,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/imxrt.cfg",
@@ -9681,7 +10220,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/k1879h61ya.cfg",
@@ -9693,7 +10233,8 @@
    "winner_stars": 16,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/target/k1879x61R.cfg",
@@ -9721,7 +10262,8 @@
    "path_spellings": [
     "tcl/target/K1879x61R.cfg",
     "tcl/target/k1879x61R.cfg"
-   ]
+   ],
+   "imported": false
   },
   {
    "path": "tcl/target/k1921vg015.cfg",
@@ -9733,7 +10275,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/k1921vk028.cfg",
@@ -9745,7 +10288,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/k1921vk035.cfg",
@@ -9757,7 +10301,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ke02.cfg",
@@ -9776,7 +10321,8 @@
     "sony/openocd-nuttx"
    ],
    "sources": 7,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ke04.cfg",
@@ -9795,7 +10341,8 @@
     "sony/openocd-nuttx"
    ],
    "sources": 7,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ke06.cfg",
@@ -9814,7 +10361,8 @@
     "sony/openocd-nuttx"
    ],
    "sources": 7,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kex.cfg",
@@ -9833,7 +10381,8 @@
     "sony/openocd-nuttx"
    ],
    "sources": 7,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kinetis_128k.cfg",
@@ -9845,7 +10394,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kinetis_1m.cfg",
@@ -9857,7 +10407,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kinetis_256k.cfg",
@@ -9869,7 +10420,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kinetis_32k.cfg",
@@ -9881,7 +10433,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kinetis_512k.cfg",
@@ -9893,7 +10446,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kinetis_64k.cfg",
@@ -9905,7 +10459,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kinetis_generic.cfg",
@@ -9917,7 +10472,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/kl25z_hla.cfg",
@@ -9956,7 +10512,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 27,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lc823450.cfg",
@@ -9968,7 +10525,8 @@
    "winner_stars": 25,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/loongson2k300.cfg",
@@ -9980,7 +10538,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc11uxx.cfg",
@@ -9992,7 +10551,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1549.cfg",
@@ -10004,7 +10564,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc15xx.cfg",
@@ -10016,7 +10577,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1751.cfg",
@@ -10032,7 +10594,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1752.cfg",
@@ -10048,7 +10611,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1754.cfg",
@@ -10064,7 +10628,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1756.cfg",
@@ -10080,7 +10645,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1758.cfg",
@@ -10096,7 +10662,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1759.cfg",
@@ -10112,7 +10679,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1763.cfg",
@@ -10128,7 +10696,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1764.cfg",
@@ -10144,7 +10713,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1765.cfg",
@@ -10160,7 +10730,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1766.cfg",
@@ -10176,7 +10747,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1767.cfg",
@@ -10192,7 +10764,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1768.cfg",
@@ -10212,7 +10785,8 @@
     "zhao0079/openocd"
    ],
    "sources": 8,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1769.cfg",
@@ -10228,7 +10802,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc1788.cfg",
@@ -10242,7 +10817,8 @@
     "TheShed/OpenOCD-CMSIS-DAP"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc546xx.cfg",
@@ -10254,7 +10830,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc55sxx.cfg",
@@ -10266,7 +10843,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/lpc55xx.cfg",
@@ -10278,7 +10856,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/m051.cfg",
@@ -10294,7 +10873,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32520.cfg",
@@ -10306,7 +10886,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32570.cfg",
@@ -10318,7 +10899,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32572.cfg",
@@ -10330,7 +10912,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32655_riscv.cfg",
@@ -10342,7 +10925,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32657.cfg",
@@ -10354,7 +10938,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32658.cfg",
@@ -10366,7 +10951,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32665.cfg",
@@ -10378,7 +10964,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32665_nsrst.cfg",
@@ -10390,7 +10977,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32666_nsrst.cfg",
@@ -10402,7 +10990,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32680_riscv.cfg",
@@ -10414,7 +11003,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32690_riscv.cfg",
@@ -10426,7 +11016,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max32xxx.cfg",
@@ -10438,7 +11029,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max78000.cfg",
@@ -10450,7 +11042,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max78000_nsrst.cfg",
@@ -10462,7 +11055,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max78000_riscv.cfg",
@@ -10474,7 +11068,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max78002.cfg",
@@ -10486,7 +11081,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/max78002_riscv.cfg",
@@ -10498,7 +11094,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/mchp-renode.cfg",
@@ -10510,7 +11107,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/mchp-ri4.cfg",
@@ -10522,7 +11120,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/mega128.cfg",
@@ -10534,7 +11133,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/murax.cfg",
@@ -10548,7 +11148,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/murax_xip.cfg",
@@ -10562,7 +11163,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/nds32v2.cfg",
@@ -10619,7 +11221,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/nds32v3.cfg",
@@ -10676,7 +11279,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/nds32v3m.cfg",
@@ -10733,7 +11337,8 @@
     "yottatsa/openocd"
    ],
    "sources": 45,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/netx500.cfg",
@@ -10745,7 +11350,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/nrf51_stlink.tcl",
@@ -10783,7 +11389,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 26,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/nrf_common.cfg",
@@ -10804,7 +11411,8 @@
     "tom-van/openocd-rp2350-riscv"
    ],
    "sources": 9,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/nt98528-ngb.cfg",
@@ -10816,7 +11424,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/nt98528.cfg",
@@ -10828,7 +11437,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/numicroM0.cfg",
@@ -10840,7 +11450,8 @@
    "winner_stars": 56,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/numicroM23.cfg",
@@ -10852,7 +11463,8 @@
    "winner_stars": 56,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/numicroM23_NS.cfg",
@@ -10864,7 +11476,8 @@
    "winner_stars": 56,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/pic18-ri4.cfg",
@@ -10876,7 +11489,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/pic32mm.cfg",
@@ -10888,7 +11502,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/pic32mz-ri4.cfg",
@@ -10900,7 +11515,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/py32f0xx.cfg",
@@ -10914,7 +11530,8 @@
     "OlegGalizin/openocd-for-py32f0xx"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/quark_d2000.cfg",
@@ -10926,7 +11543,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/quark_se.cfg",
@@ -10938,7 +11556,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/raspberry.cfg",
@@ -10950,7 +11569,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/raspberrypi2.cfg",
@@ -10962,7 +11582,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/raspberrypi3.cfg",
@@ -10974,7 +11595,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/raspberrypi3_single.cfg",
@@ -10986,7 +11608,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/raspberrypi4.cfg",
@@ -10998,7 +11621,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/renesas_r8a7790.cfg",
@@ -11015,7 +11639,8 @@
     "stacksmashing/openocd"
    ],
    "sources": 5,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/renesas_r8a7791.cfg",
@@ -11032,7 +11657,8 @@
     "stacksmashing/openocd"
    ],
    "sources": 5,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/renesas_r8a7794.cfg",
@@ -11047,7 +11673,8 @@
     "stacksmashing/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/renesas_rz_g2.cfg",
@@ -11093,7 +11720,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 34,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rk3566-ngb.cfg",
@@ -11105,7 +11733,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rk3566.cfg",
@@ -11117,7 +11746,8 @@
    "winner_stars": 6,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rm57x.cfg",
@@ -11129,7 +11759,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rp2040-core0.cfg",
@@ -11158,7 +11789,8 @@
     "yottatsa/openocd"
    ],
    "sources": 17,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rp2040-rescue.cfg",
@@ -11170,7 +11802,8 @@
    "winner_stars": 223,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rp2350-rescue.cfg",
@@ -11182,7 +11815,8 @@
    "winner_stars": 223,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rp2350-riscv.cfg",
@@ -11196,7 +11830,8 @@
     "raspberrypi/openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rs14100.cfg",
@@ -11208,7 +11843,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rv1106-mcu.cfg",
@@ -11220,7 +11856,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rv32m1_ri5cy.cfg",
@@ -11232,7 +11869,8 @@
    "winner_stars": 47,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/rv32m1_zero_riscy.cfg",
@@ -11244,7 +11882,8 @@
    "winner_stars": 47,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/sam7se512.cfg",
@@ -11256,7 +11895,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/sam7x256.cfg",
@@ -11268,7 +11908,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/saxon.cfg",
@@ -11282,7 +11923,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/saxon_linux.cfg",
@@ -11296,7 +11938,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/saxon_xip.cfg",
@@ -11310,7 +11953,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_axc001.cfg",
@@ -11322,7 +11966,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_axc002.cfg",
@@ -11334,7 +11979,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_em_sk_lx45.cfg",
@@ -11346,7 +11992,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_hsdk_smp.cfg",
@@ -11358,7 +12005,8 @@
    "winner_stars": 47,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_ml509_arc600.cfg",
@@ -11370,7 +12018,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_ml509_arc700.cfg",
@@ -11382,7 +12031,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_starter_kit_arc-em.cfg",
@@ -11394,7 +12044,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/snps_starter_kit_arc-em_eb.cfg",
@@ -11406,7 +12057,8 @@
    "winner_stars": 12,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stellaris_icdi.cfg",
@@ -11446,7 +12098,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 28,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32.cfg",
@@ -11462,7 +12115,8 @@
     "zhao0079/openocd"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32_stlink.cfg",
@@ -11505,7 +12159,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 31,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32c5x.cfg",
@@ -11519,7 +12174,8 @@
     "STMicroelectronics/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32f0x_stlink.cfg",
@@ -11561,7 +12217,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 30,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32f1x_stlink.cfg",
@@ -11604,7 +12261,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 31,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32f2x_stlink.cfg",
@@ -11647,7 +12305,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 31,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32f2xxx.cfg",
@@ -11662,7 +12321,8 @@
     "zhao0079/openocd"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32f3x_stlink.cfg",
@@ -11704,7 +12364,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 30,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32f4x_stlink.cfg",
@@ -11747,7 +12408,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 31,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32g0x_alt.cfg",
@@ -11759,7 +12421,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32g4x_alt.cfg",
@@ -11771,7 +12434,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32h5x.cfg",
@@ -11787,7 +12451,8 @@
     "scmrtos/openocd-scmrtos"
    ],
    "sources": 4,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32h7rx.cfg",
@@ -11799,7 +12464,8 @@
    "winner_stars": 206,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32l.cfg",
@@ -11817,7 +12483,8 @@
     "mabl/openocd_chibios"
    ],
    "sources": 6,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32l4plusx.cfg",
@@ -11829,7 +12496,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32lx_dual_bank.cfg",
@@ -11844,7 +12512,8 @@
     "intel/OpenOCD"
    ],
    "sources": 3,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32lx_stlink.cfg",
@@ -11887,7 +12556,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 31,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32v8x.cfg",
@@ -11899,7 +12569,8 @@
    "winner_stars": 206,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32w108_stlink.cfg",
@@ -11938,7 +12609,8 @@
     "watr-li/OpenOCD"
    ],
    "sources": 27,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32wb0x.cfg",
@@ -11950,7 +12622,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32wbax.cfg",
@@ -11994,7 +12667,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 32,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32wl3x.cfg",
@@ -12006,7 +12680,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/stm32wl4x.cfg",
@@ -12020,7 +12695,8 @@
     "STMicroelectronics/OpenOCD"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/swj-dp-legacy.tcl",
@@ -12032,7 +12708,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_cc2341.cfg",
@@ -12044,7 +12721,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_cc23xx.cfg",
@@ -12056,7 +12734,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_cc27xx.cfg",
@@ -12068,7 +12747,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_cc35x1e.cfg",
@@ -12080,7 +12760,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_lpf3.cfg",
@@ -12092,7 +12773,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_msp432p4xx.cfg",
@@ -12117,7 +12799,8 @@
     "sony/openocd-nuttx"
    ],
    "sources": 13,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_mspm33.cfg",
@@ -12129,7 +12812,8 @@
    "winner_stars": 9,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ti_tms570ls1224.cfg",
@@ -12141,7 +12825,8 @@
    "winner_stars": 102,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/vd_xtensa_jtag.cfg",
@@ -12161,7 +12846,8 @@
     "yottatsa/openocd"
    ],
    "sources": 8,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/vexriscv_sim.cfg",
@@ -12175,7 +12861,8 @@
     "AnlogicInfo/al_openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/vjtag.cfg",
@@ -12187,7 +12874,8 @@
    "winner_stars": 5,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/wch-riscv.cfg",
@@ -12201,7 +12889,8 @@
     "karlp/openocd-hacks"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   },
   {
    "path": "tcl/target/wch_min.cfg",
@@ -12213,7 +12902,8 @@
    "winner_stars": 1,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/ws63.cfg",
@@ -12225,7 +12915,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/xba_revA3.cfg",
@@ -12237,7 +12928,8 @@
    "winner_stars": 15,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/xilinx_ultrascale.cfg",
@@ -12251,7 +12943,8 @@
     "bluespec/riscv-openocd"
    ],
    "sources": 2,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/xmc7xxx.cfg",
@@ -12263,7 +12956,8 @@
    "winner_stars": 0,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/xtensa-core-adspsc83x.cfg",
@@ -12275,7 +12969,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/xtensa-core-adspsc84x.cfg",
@@ -12287,7 +12982,8 @@
    "winner_stars": 29,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/zynq_7000.cfg",
@@ -12386,7 +13082,8 @@
     "zephyrproject-rtos/openocd"
    ],
    "sources": 87,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": true
   },
   {
    "path": "tcl/target/Ðº1879xÐ±1Ñ.cfg",
@@ -12398,7 +13095,8 @@
    "winner_stars": 56,
    "also_in": [],
    "sources": 1,
-   "path_spellings": []
+   "path_spellings": [],
+   "imported": false
   }
  ]
 }

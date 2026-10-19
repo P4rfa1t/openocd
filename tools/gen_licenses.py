@@ -119,8 +119,12 @@ def main():
         f.write("\n".join(head) + "\n" + "\n".join(sections))
     with open(OUT_CSV, "w", encoding="utf-8", newline="") as f:
         import csv
+        # lineterminator="\n": the default is "\r\n", which would rewrite the
+        # whole generated CSV on Windows and produce a full-file diff on
+        # every regeneration.
         w = csv.DictWriter(f, fieldnames=["tier", "repo", "licence", "path",
-                                           "branch", "commit"])
+                                           "branch", "commit"],
+                           lineterminator="\n")
         w.writeheader()
         w.writerows(sorted(rows, key=lambda r: (r["tier"], r["repo"], r["path"])))
 

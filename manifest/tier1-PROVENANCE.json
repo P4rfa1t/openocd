@@ -2,11 +2,11 @@
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
   "tier": 1,
-  "file_count": 505,
+  "file_count": 487,
   "integrity": {
-    "recorded": 505,
-    "on_disk": 505,
-    "pinned": 505,
+    "recorded": 487,
+    "on_disk": 487,
+    "pinned": 487,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "files": {
@@ -4031,61 +4031,6 @@
       ],
       "sha256": "85f1717d3da020a0378a8abf561b1bf4a7607846c7e9afdcc14d10f3e1b954e2"
     },
-    "tcl/target/#U043a1879x#U04311#U044f.cfg": {
-      "source_repo": "xsession/openocd",
-      "source_branch": "master",
-      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
-      "source_path": "tcl/target/#U043a1879x#U04311#U044f.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [],
-      "sha256": "0a4a1bea7641102f571348bc8b64dcfbe58161e1aef01d9be346469cde343d37"
-    },
-    "tcl/target/1986#U0432#U04351#U0442.cfg": {
-      "source_repo": "xsession/openocd",
-      "source_branch": "master",
-      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
-      "source_path": "tcl/target/1986#U0432#U04351#U0442.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [],
-      "sha256": "f198c92f63e7e02262c1eb7342e5d51d3c4695d5704c0e4da55bc8495b36fec3"
-    },
-    "tcl/target/1986Be1T.cfg": {
-      "source_repo": "OlivierVanWassenhove-Dekimo/openocd",
-      "source_branch": "master",
-      "source_commit": "89788eb29026fc67691fa463876e64d097219371",
-      "source_path": "tcl/target/1986Be1T.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "AnlogicInfo/al_openocd",
-        "Lichee-Pi/LicheeTang_openocd",
-        "Seneral/riscv-openocd-wch",
-        "andestech/nds-openocd",
-        "bluespec/riscv-openocd",
-        "cjacker/wch-openocd",
-        "foss-for-mips-arc-processors/openocd",
-        "intel/OpenOCD",
-        "intel/aji_openocd",
-        "karlp/openocd-hacks",
-        "kendryte/openocd-kendryte",
-        "kprasadvnsi/riscv-openocd-wch",
-        "newbrain/riscv-openocd-wch",
-        "riscv-collab/riscv-openocd"
-      ],
-      "sha256": "598b3d8d7d074438ba68c4e86cfc5ca670df862ef9c2404fcd11bd2d1d18143d"
-    },
-    "tcl/target/1986Ð²Ðµ1Ñ‚.cfg": {
-      "source_repo": "sysprogs/esp8266-openocd",
-      "source_branch": "master",
-      "source_commit": "d1603f2d9c5ad074010d2abdb44bca6f3851202e",
-      "source_path": "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
-      "license": "GPL-2.0",
-      "stars_at_import": 56,
-      "also_present_in": [],
-      "sha256": "a51092764d7db9d226d6ea8ec7ba27d84f1c56330259d0042431868701f62b80"
-    },
     "tcl/target/adi_proc_tracker.tcl": {
       "source_repo": "analogdevicesinc/openocd",
       "source_branch": "release/0.12.0-1.4.0",
@@ -5452,39 +5397,6 @@
       "stars_at_import": 102,
       "also_present_in": [],
       "sha256": "36dbb5dbd408530c978fc4c2cc4033d0f0a928d86eddd1e1a6a4106b381dad87"
-    },
-    "tcl/target/k1879h61ya.cfg": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "tcl/target/k1879h61ya.cfg",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [],
-      "sha256": "71e40bf1d38629287eb5438a04d0557452498f861efe54b4e1e745e9645f192f"
-    },
-    "tcl/target/k1879x61R.cfg": {
-      "source_repo": "OlivierVanWassenhove-Dekimo/openocd",
-      "source_branch": "master",
-      "source_commit": "89788eb29026fc67691fa463876e64d097219371",
-      "source_path": "tcl/target/k1879x61R.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "AnlogicInfo/al_openocd",
-        "Lichee-Pi/LicheeTang_openocd",
-        "Seneral/riscv-openocd-wch",
-        "andestech/nds-openocd",
-        "bluespec/riscv-openocd",
-        "cjacker/wch-openocd",
-        "intel/aji_openocd",
-        "karlp/openocd-hacks",
-        "kendryte/openocd-kendryte",
-        "kprasadvnsi/riscv-openocd-wch",
-        "newbrain/riscv-openocd-wch",
-        "riscv-collab/riscv-openocd"
-      ],
-      "sha256": "3887108538c2903a3191c0ac305de0262426a04cae33f75d6693c1ade49c639d"
     },
     "tcl/target/k1921vg015.cfg": {
       "source_repo": "DCVostok/openocd-k1921vk",
@@ -7829,16 +7741,6 @@
       ],
       "sha256": "c6c75ef496034d60d32f5ea538c5541740c7d5a9010d9ea4c5e53ce1ed9c16ec"
     },
-    "tcl/target/Ðº1879xÐ±1Ñ.cfg": {
-      "source_repo": "sysprogs/esp8266-openocd",
-      "source_branch": "master",
-      "source_commit": "d1603f2d9c5ad074010d2abdb44bca6f3851202e",
-      "source_path": "tcl/target/Ðº1879xÐ±1Ñ.cfg",
-      "license": "GPL-2.0",
-      "stars_at_import": 56,
-      "also_present_in": [],
-      "sha256": "71e40bf1d38629287eb5438a04d0557452498f861efe54b4e1e745e9645f192f"
-    },
     "tcl/board/flash_algorithms/2183x_otp.cfg": {
       "source_repo": "analogdevicesinc/openocd",
       "source_branch": "release/0.12.0-1.4.0",
@@ -8144,5 +8046,49 @@
       "openocd-org/openocd"
     ]
   },
-  "pruned_as_upstream_redundant": []
+  "pruned_as_upstream_redundant": [],
+  "removed_from_tree": [
+    {
+      "path": "tcl/target/#U043a1879x#U04311#U044f.cfg",
+      "reason": "upstream ships this file as tcl/target/к1879xб1я.cfg; the mangled copy was dropped",
+      "upstream_path": "tcl/target/к1879xб1я.cfg",
+      "sha256_at_removal": "0a4a1bea7641102f571348bc8b64dcfbe58161e1aef01d9be346469cde343d37"
+    },
+    {
+      "path": "tcl/target/1986#U0432#U04351#U0442.cfg",
+      "reason": "upstream ships this file as tcl/target/1986ве1т.cfg; the mangled copy was dropped",
+      "upstream_path": "tcl/target/1986ве1т.cfg",
+      "sha256_at_removal": "f198c92f63e7e02262c1eb7342e5d51d3c4695d5704c0e4da55bc8495b36fec3"
+    },
+    {
+      "path": "tcl/target/1986Be1T.cfg",
+      "reason": "upstream ships this file as tcl/target/1986ве1т.cfg; the mangled copy was dropped",
+      "upstream_path": "tcl/target/1986ве1т.cfg",
+      "sha256_at_removal": "598b3d8d7d074438ba68c4e86cfc5ca670df862ef9c2404fcd11bd2d1d18143d"
+    },
+    {
+      "path": "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
+      "reason": "upstream ships this file as tcl/target/1986ве1т.cfg; the mangled copy was dropped",
+      "upstream_path": "tcl/target/1986ве1т.cfg",
+      "sha256_at_removal": "a51092764d7db9d226d6ea8ec7ba27d84f1c56330259d0042431868701f62b80"
+    },
+    {
+      "path": "tcl/target/k1879h61ya.cfg",
+      "reason": "upstream ships this file as tcl/target/к1879xб1я.cfg; the mangled copy was dropped",
+      "upstream_path": "tcl/target/к1879xб1я.cfg",
+      "sha256_at_removal": "71e40bf1d38629287eb5438a04d0557452498f861efe54b4e1e745e9645f192f"
+    },
+    {
+      "path": "tcl/target/k1879x61R.cfg",
+      "reason": "upstream ships this file as tcl/target/к1879xб1я.cfg; the mangled copy was dropped",
+      "upstream_path": "tcl/target/к1879xб1я.cfg",
+      "sha256_at_removal": "3887108538c2903a3191c0ac305de0262426a04cae33f75d6693c1ade49c639d"
+    },
+    {
+      "path": "tcl/target/Ðº1879xÐ±1Ñ.cfg",
+      "reason": "upstream ships this file as tcl/target/к1879xб1я.cfg; the mangled copy was dropped",
+      "upstream_path": "tcl/target/к1879xб1я.cfg",
+      "sha256_at_removal": "71e40bf1d38629287eb5438a04d0557452498f861efe54b4e1e745e9645f192f"
+    }
+  ]
 }

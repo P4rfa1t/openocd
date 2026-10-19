@@ -1,26 +1,62 @@
-This repository is a CONSOLIDATION LAYER. It contains no OpenOCD source code
-of its own; it redistributes TCL configuration files and a C-source worklist
-collected from public third-party OpenOCD forks.
+OpenOCD Third-Party Support
+===========================
 
-THEREFORE NO SINGLE LICENCE APPLIES TO THE WHOLE REPOSITORY.
+This repository is a FORK of OpenOCD (upstream: https://github.com/openocd-org/openocd).
 
-  * Upstream OpenOCD is GPL-2.0-or-later (openocd-org/openocd).
-  * Most collected files are expected to carry the same terms, but their
-    per-file provenance records a source licence of NOASSERTION for most of
-    them, which means GitHub could not determine the terms - NOT that the
-    terms are permissive.
-  * Some source repositories carry proprietary notices. For example
-    analogdevicesinc/openocd flash algorithms state "This software is
-    proprietary to Analog Devices, Inc."
+It is a complete, buildable OpenOCD source tree. The difference from upstream is
+that it additionally carries chip, board and probe support that lives only in
+third-party OpenOCD forks and has never been accepted upstream.
+
+    Upstream tree            : openocd-org/openocd, GPL-2.0-or-later
+    Third-party additions    : imported from 53 public forks, 546 files
+    Layout                   : identical to upstream (in-tree, no overlay)
+
+The layout is deliberately identical to upstream so that the fork can be
+updated with a plain merge and so that a file can be traced back to its
+origin without a mapping table:
+
+    git fetch upstream
+    git merge upstream/master
+
+Every imported file is recorded in manifest/PROVENANCE.json together with the
+source repository, branch, commit and SHA-256 digest it was taken from.
+
+LICENCE
+------
+
+The OpenOCD source code in this tree is provided under the terms of the GNU
+General Public License version 2 or later (GPL-2.0-or-later), as provided in
+LICENSES/preferred/GPL-2.0. The OpenOCD documentation is provided under the
+terms of the GNU Free Documentation License version 1.2 or later without
+Invariant Sections (GFDL-1.2-no-invariants-or-later). See COPYING and
+LICENSES/license-rules.txt for the full statement and the per-file rules.
+
+The third-party files added by this fork are NOT covered by that blanket
+statement, and no single licence applies to the whole repository:
+
+  * Most forks inherit GPL-2.0-or-later from upstream, but only 139 of the
+    546 imported files carry a licence field that GitHub could resolve as
+    GPL-2.0.
+  * 382 files record NOASSERTION. That means "GitHub could not determine the
+    terms" - it does NOT mean the terms are permissive. Some of these files
+    carry proprietary notices, for example the flash algorithms in
+    analogdevicesinc/openocd, which state "This software is proprietary to
+    Analog Devices, Inc."
+  * 25 files carry no licence information at all.
 
 BEFORE ANY COMMERCIAL USE you must audit the licence header of every file you
 intend to redistribute. The machine-readable index is:
 
-    manifest/licenses.csv            every file -> repo / branch / commit /
-                                      licence
-    docs/03-LICENSES.md              human-readable version of the same data
-    overlay/PROVENANCE.json          authoritative provenance, first layer
-    manifest/tier2/PROVENANCE.json   authoritative provenance, second layer
+    manifest/licenses.csv       every imported file -> repo / branch /
+                                 commit / licence
+    docs/03-LICENSES.md         human-readable version of the same data
+    manifest/PROVENANCE.json    authoritative provenance for all 546 files
+    manifest/tier1-PROVENANCE.json
+    manifest/tier2-PROVENANCE.json
+                                 the same data, split by import layer
 
-This repository is distributed WITHOUT ANY WARRANTY, to the extent permitted
-by law.
+Files that were imported and then deliberately removed from this fork are
+listed with the reason in the "removed_from_tree" section of the provenance
+manifests, so the audit trail is complete in both directions.
+
+This fork is distributed WITHOUT ANY WARRANTY, to the extent permitted by law.
