@@ -49,7 +49,7 @@
 
 extern struct command_context *global_cmd_ctx;
 
-int quark_d2000_target_create(struct target *t, Jim_Interp *interp)
+int quark_d2000_target_create(struct target *t)
 {
 	struct x86_32_common *x86_32 = calloc(1, sizeof(struct x86_32_common));
 	if (x86_32 == NULL) {
@@ -159,7 +159,7 @@ static int quark_d2000_target_reset(struct target *t)
 
 	/* resume target if reset mode is run */
 	if (!t->reset_halt) {
-		retval = lakemont_resume(t, 1, 0, 0, 0);
+		retval = lakemont_resume(t, true, 0, false, false);
 		if (retval != ERROR_OK) {
 			LOG_ERROR("%s could not resume target", __func__);
 			return retval;
@@ -197,8 +197,8 @@ static int quark_d2000_wait_flash_mask(struct target *t, uint32_t addr, uint32_t
 int quark_d2000_flash_write(struct target *t, uint32_t addr,
 			uint32_t size, uint32_t count, const uint8_t *buf)
 {
-	LOG_DEBUG("addr=0x%08" PRIx32 ", size=%" PRIu32 ", count=0x%" PRIx32 ", buf=%p",
-				addr, size, count, buf);
+	LOG_DEBUG("addr=0x%08" PRIx64 ", size=%" PRIu32 ", count=0x%" PRIx32 ", buf=%p",
+				(uint64_t)addr, size, count, buf);
 
 	/* FLASH and ROM Control Registers */
 	uint32_t FC_SUPPORT_ADDR; /* Register Field to specify if WR is enabled */
@@ -313,11 +313,12 @@ int quark_d2000_flash_write(struct target *t, uint32_t addr,
 	if  (t->running_alg == 0) {
 		struct breakpoint *iter = t->breakpoints;
 		while (iter != NULL) {
-			if ((iter->set != 0) && (iter->type == BKPT_SOFT) &&
+			if ((iter->is_set != 0) && (iter->type == BKPT_SOFT) &&
 					((iter->address >= FC_START_ADDR) && (iter->address <= FC_LIMIT_ADDR)) &&
 					((iter->address >= addr) && (iter->address <= addr + (size * count)))) {
-				LOG_USER("Breakpoint at address 0x%08" PRIx32 " will be overwritten!!", iter->address);
-				iter->set = 0;
+				LOG_USER("Breakpoint at address 0x%08" PRIx64 " will be overwritten!!",
+					(uint64_t)iter->address);
+				iter->is_set = 0;
 			}
 			iter = iter->next;
 		}
@@ -432,16 +433,16 @@ int quark_d2000_flash_write(struct target *t, uint32_t addr,
 	return ERROR_OK;
 }
 
-int quark_d2000_write_memory(struct target *t, uint32_t addr, uint32_t size,
+int quark_d2000_write_memory(struct target *t, target_addr_t addr, uint32_t size,
 			uint32_t count, const uint8_t *buf)
 {
-	LOG_DEBUG("addr=0x%08" PRIx32 ", size=%" PRIu32 ", count=0x%" PRIx32 ", buf=%p",
-				addr, size, count, buf);
+	LOG_DEBUG("addr=0x%08" PRIx64 ", size=%" PRIu32 ", count=0x%" PRIx32 ", buf=%p",
+				(uint64_t)addr, size, count, buf);
 	if (check_not_halted(t))
 		return ERROR_TARGET_NOT_HALTED;
 	if (!count || !buf) {
-		LOG_ERROR("%s invalid params count=0x%" PRIx32 ", buf=%p, addr=0x%08" PRIx32,
-					__func__, count, buf, addr);
+		LOG_ERROR("%s invalid params count=0x%" PRIx32 ", buf=%p, addr=0x%08" PRIx64,
+					__func__, count, buf, (uint64_t)addr);
 		return ERROR_COMMAND_ARGUMENT_INVALID;
 	}
 

@@ -616,22 +616,7 @@ m4_define([PROCESS_ADAPTERS], [
   m4_foreach([adapter_driver], [$1], [
 	AS_IF([test $2], [
 		AS_IF([test "x$ADAPTER_VAR([adapter_driver])" != "xno"], [
-			AC_ARG_ENABLE([third-party-targets],
-  AS_HELP_STRING([--disable-third-party-targets],
-    [do not build the merged third-party target architectures]),
-  [enable_third_party_targets=$enableval],
-  [enable_third_party_targets=yes])
-
-AS_IF([test "x$enable_third_party_targets" = xyes], [
-	AC_DEFINE([BUILD_TARGETS_ALL], [1],
-		[build the merged third-party target architectures])
-], [
-	AC_DEFINE([BUILD_TARGETS_ALL], [0],
-		[build the merged third-party target architectures])
-])
-AM_CONDITIONAL([TARGETS_ALL], [test "x$enable_third_party_targets" = xyes])
-
-AC_DEFINE([BUILD_]ADAPTER_SYM([adapter_driver]), [1],
+			AC_DEFINE([BUILD_]ADAPTER_SYM([adapter_driver]), [1],
 			          [1 if you want the ]ADAPTER_DESC([adapter_driver]).)
 		], [
 			AC_DEFINE([BUILD_]ADAPTER_SYM([adapter_driver]), [0],
@@ -648,6 +633,69 @@ AC_DEFINE([BUILD_]ADAPTER_SYM([adapter_driver]), [1],
 	AM_CONDITIONAL(ADAPTER_SYM([adapter_driver]), [test "x$ADAPTER_VAR([adapter_driver])" != "xno"])
   ])
 ])
+
+# --- third-party targets: configure switches (tools/patch_target_groups.py) ---
+# One switch for the whole merged set.  BUILD_TARGETS_ALL has to be
+# defined in both branches: the guards in target.c are
+# `#if BUILD_TARGETS_ALL == 1`, and an undefined macro evaluates to
+# 0, which would silently drop every new architecture instead of
+# failing loudly.
+AC_ARG_ENABLE([third-party-targets],
+  AS_HELP_STRING([--disable-third-party-targets],
+    [do not build the merged third-party target architectures]),
+  [enable_third_party_targets=$enableval],
+  [enable_third_party_targets=yes])
+
+AS_IF([test "x$enable_third_party_targets" = xyes], [
+	AC_DEFINE([BUILD_TARGETS_ALL], [1],
+		[build the merged third-party target architectures])
+], [
+	AC_DEFINE([BUILD_TARGETS_ALL], [0],
+		[build the merged third-party target architectures])
+])
+AM_CONDITIONAL([TARGETS_ALL], [test "x$enable_third_party_targets" = xyes])
+
+# The RI4 bridge talks to the probe over raw USB, so it needs
+# libusb-1.x.  Upstream allows a build without libusb, so the group
+# gets its own guard instead of riding on BUILD_TARGETS_ALL.
+AS_IF([test "x$enable_third_party_targets" = xyes -a "x$use_libusb1" = xyes], [
+	AC_DEFINE([BUILD_MCHP_RI4], [1],
+		[build the Microchip RI4 target])
+], [
+	AC_DEFINE([BUILD_MCHP_RI4], [0],
+		[build the Microchip RI4 target])
+])
+
+# VexRiscv parses a YAML blob via libyaml.  Without it the target
+# is simply not built, so this is a soft dependency: no
+# AC_MSG_ERROR.
+PKG_CHECK_MODULES([LIBYAML], [yaml-0.1],
+	[use_libyaml=yes], [use_libyaml=no])
+AM_CONDITIONAL([HAVE_LIBYAML], [test "x$use_libyaml" = xyes])
+AS_IF([test "x$use_libyaml" = xyes], [
+	AC_DEFINE([HAVE_LIBYAML], [1], [define if libyaml is available])
+], [
+	AC_DEFINE([HAVE_LIBYAML], [0], [define if libyaml is available])
+])
+AS_IF([test "x$enable_third_party_targets" = xyes -a "x$use_libyaml" = xyes], [
+	AC_DEFINE([BUILD_VEXRISCV], [1],
+		[build the VexRiscv target])
+], [
+	AC_DEFINE([BUILD_VEXRISCV], [0],
+		[build the VexRiscv target])
+])
+
+# zlib unpacks the gzipped probe firmware catalogue the RI4
+# loader reads.  Soft dependency for the same reason as libyaml.
+PKG_CHECK_MODULES([ZLIB], [zlib],
+	[use_zlib=yes], [use_zlib=no])
+AM_CONDITIONAL([HAVE_ZLIB], [test "x$use_zlib" = xyes])
+AS_IF([test "x$use_zlib" = xyes], [
+	AC_DEFINE([HAVE_ZLIB], [1], [define if zlib is available])
+], [
+	AC_DEFINE([HAVE_ZLIB], [0], [define if zlib is available])
+])
+# --- third-party targets: end of configure switches ---
 
 PROCESS_ADAPTERS([USB1_ADAPTERS], ["x$use_libusb1" = "xyes"], [libusb-1.x])
 PROCESS_ADAPTERS([HIDAPI_ADAPTERS], ["x$use_hidapi" = "xyes"], [hidapi])

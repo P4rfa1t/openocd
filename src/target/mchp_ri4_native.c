@@ -22,7 +22,7 @@
 #ifdef HAVE_LIBUSB1
 #include <libusb.h>
 #endif
-#ifdef HAVE_ZLIB
+#if HAVE_ZLIB
 #include <zlib.h>
 #endif
 
@@ -93,16 +93,15 @@ static int ri4_read_catalog(const char *path, char **text_out, size_t *length_ou
 {
 	char *buffer = NULL;
 	size_t used = 0;
-	size_t allocated = 0;
 
 	if (ri4_ends_with(path, ".gz")) {
-#ifdef HAVE_ZLIB
+#if HAVE_ZLIB
+		size_t allocated = 1024U * 1024U;
 		gzFile file = gzopen(path, "rb");
 		if (!file) {
 			LOG_ERROR("mchp_ri4: cannot open compressed script catalog '%s'", path);
 			return ERROR_FAIL;
 		}
-		allocated = 1024U * 1024U;
 		buffer = malloc(allocated + 1U);
 		if (!buffer) {
 			gzclose(file);
@@ -497,7 +496,7 @@ static int ri4_check_reply(const uint8_t *reply, size_t length, bool ack)
 // waiting for data from a target that isn't responding), we need to send
 // RI4_NUCLEAR_RESET (0x86) to the side channel, then fully reconnect the USB
 // handle. The nuclear reset causes the PICkit4 to re-enumerate on USB.
-static int ri4_usb_reconnect(struct mchp_ri4_native *session)
+static __attribute__((unused)) int ri4_usb_reconnect(struct mchp_ri4_native *session)
 {
 #ifdef HAVE_LIBUSB1
 	if (!session || !session->usb || !session->usb_context)
@@ -669,7 +668,7 @@ static void ri4_recover(struct mchp_ri4_native *session, uint32_t flush)
 	// If we got a valid reply header, check for pending data channel bytes.
 	// The reply might be small (e.g., 18 bytes: 16 header + 2 payload) but
 	// ocount at offset 12 indicates how many bytes are on the data channel.
-	if (rc == LIBUSB_SUCCESS && ntransferred >= RI4_HEADER_SIZE) {
+	if (rc == LIBUSB_SUCCESS && ntransferred >= (int)RI4_HEADER_SIZE) {
 		uint32_t ocount = ri4_get_u32(reply + 12);
 		if (ocount > 0 && ocount <= 2048) {
 			uint8_t ddrain[2048];
@@ -814,7 +813,11 @@ static int ri4_run_raw_with_status(struct mchp_ri4_native *session,
 	memcpy(payload + 8U + param_count * 4U, script_data, script_length);
 
 	// Execute the transfer with status capture
+#ifdef HAVE_LIBUSB1
 	int result = ri4_transfer(session, transfer_type, payload, payload_length, NULL, 0);
+#else
+	int result = ERROR_FAIL;
+#endif
 	if (status_out) {
 		// ri4_transfer returns ERROR_OK if status=0, ERROR_FAIL otherwise
 		// We can't easily extract the actual status code without modifying ri4_transfer
@@ -825,7 +828,7 @@ static int ri4_run_raw_with_status(struct mchp_ri4_native *session,
 }
 
 // Wrapper that logs the result
-static int ri4_run_raw(struct mchp_ri4_native *session,
+static __attribute__((unused)) int ri4_run_raw(struct mchp_ri4_native *session,
 	const uint8_t *script_data, size_t script_length,
 	const char *name, uint32_t transfer_type)
 {
@@ -840,7 +843,7 @@ static int ri4_run_raw(struct mchp_ri4_native *session,
 }
 
 // Build a 16-bit voltage value as little-endian (2 bytes + 2 zero padding).
-static void ri4_u16_le(uint8_t *buf, uint16_t value)
+static __attribute__((unused)) void ri4_u16_le(uint8_t *buf, uint16_t value)
 {
 	buf[0] = value & 0xFF;
 	buf[1] = (value >> 8) & 0xFF;

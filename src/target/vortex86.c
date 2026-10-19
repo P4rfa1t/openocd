@@ -169,7 +169,7 @@ static void vortex86_reset(struct target *target)
 	LOG_DEBUG("Executing VORTEX low-level reset");
 	usleep(50000);
 	// TAP_IDLE doesn't happen here, just making it so it wont cry
-	tap_state_t path[] = {TAP_IDLE, TAP_DRSELECT, TAP_IRSELECT, TAP_RESET};
+	enum tap_state path[] = {TAP_IDLE, TAP_DRSELECT, TAP_IRSELECT, TAP_RESET};
 	interface_jtag_add_pathmove(ARRAY_SIZE(path), path);
 	//jtag_execute_queue();
 	jtag_add_tlr();
@@ -215,7 +215,7 @@ static int testee_reset_deassert(struct target *target)
 	return ERROR_OK;
 }
 
-static int vortex86_target_create(struct target *t, Jim_Interp *interp)
+static int vortex86_target_create(struct target *t)
 {
 	struct vortex86_common *vortex86 = calloc(1, sizeof(*vortex86));
 

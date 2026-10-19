@@ -76,12 +76,15 @@ static int target_gdb_fileio_end_default(struct target *target, int retcode,
 #if BUILD_TARGETS_ALL == 1
 extern struct target_type c28x_target;
 extern struct target_type tms320_target;
-extern struct target_type hexagon_target;
 extern struct target_type quark_d2000_target;
 extern struct target_type quark_se_target;
 extern struct target_type vortex86_target;
 extern struct target_type loongarch_target;
+#endif
+#if BUILD_MCHP_RI4 == 1
 extern struct target_type mchp_ri4_bridge_target;
+#endif
+#if BUILD_VEXRISCV == 1
 extern struct target_type vexriscv_target;
 #endif
 /* --- end third-party target architectures --- */
@@ -130,12 +133,15 @@ static struct target_type *target_types[] = {
 #if BUILD_TARGETS_ALL == 1
 	&c28x_target,
 	&tms320_target,
-	&hexagon_target,
 	&quark_d2000_target,
 	&quark_se_target,
 	&vortex86_target,
 	&loongarch_target,
+#endif
+#if BUILD_MCHP_RI4 == 1
 	&mchp_ri4_bridge_target,
+#endif
+#if BUILD_VEXRISCV == 1
 	&vexriscv_target,
 #endif
 /* --- end third-party target architectures --- */

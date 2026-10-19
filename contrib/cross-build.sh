@@ -43,6 +43,8 @@ WORK_DIR=$PWD
 : ${CAPSTONE_SRC:=/path/to/capstone}
 : ${LIBJAYLINK_SRC:=/path/to/libjaylink}
 : ${JIMTCL_SRC:=/path/to/jimtcl}
+: ${LIBYAML_SRC:=/path/to/libyaml}
+: ${ZLIB_SRC:=/path/to/zlib}
 
 OPENOCD_SRC=`readlink -m $OPENOCD_SRC`
 LIBUSB1_SRC=`readlink -m $LIBUSB1_SRC`
@@ -51,6 +53,8 @@ LIBFTDI_SRC=`readlink -m $LIBFTDI_SRC`
 CAPSTONE_SRC=`readlink -m $CAPSTONE_SRC`
 LIBJAYLINK_SRC=`readlink -m $LIBJAYLINK_SRC`
 JIMTCL_SRC=`readlink -m $JIMTCL_SRC`
+LIBYAML_SRC=`readlink -m $LIBYAML_SRC`
+ZLIB_SRC=`readlink -m $ZLIB_SRC`
 
 HOST_TRIPLET=$1
 BUILD_DIR=$WORK_DIR/$HOST_TRIPLET-build
@@ -60,6 +64,8 @@ LIBFTDI_BUILD_DIR=$BUILD_DIR/libftdi
 CAPSTONE_BUILD_DIR=$BUILD_DIR/capstone
 LIBJAYLINK_BUILD_DIR=$BUILD_DIR/libjaylink
 JIMTCL_BUILD_DIR=$BUILD_DIR/jimtcl
+LIBYAML_BUILD_DIR=$BUILD_DIR/libyaml
+ZLIB_BUILD_DIR=$BUILD_DIR/zlib
 OPENOCD_BUILD_DIR=$BUILD_DIR/openocd
 
 ## Root of host file tree
@@ -184,6 +190,53 @@ if [ -d $JIMTCL_SRC ] ; then
   make -j $MAKE_JOBS
   # Running "make" does not create this file for static builds on Windows but "make install" still expects it
   touch $JIMTCL_BUILD_DIR/build-jim-ext
+  make install DESTDIR=$SYSROOT
+fi
+
+# libyaml build & install into sysroot
+# Needed only by the merged VexRiscv target, which parses the "debugReport"
+# yaml blob the core exposes.  Configure leaves vexriscv out when libyaml is
+# absent, so this block is optional -- but without it that target is missing
+# from the package.
+#
+# Built statically on purpose: a static archive needs no extra dll
+# copied into the package afterwards.  The release tarball carries a
+# pre-generated configure script plus config/config.guess, so no
+# autoreconf run is needed here; a checkout of the git tag instead
+# needs ./bootstrap first, which puts config.guess in the same place.
+if [ -d $LIBYAML_SRC ] ; then
+  mkdir -p $LIBYAML_BUILD_DIR
+  cd $LIBYAML_BUILD_DIR
+  $LIBYAML_SRC/configure --build=`$LIBYAML_SRC/config/config.guess` --host=$HOST_TRIPLET \
+    --prefix=$PREFIX \
+    --enable-static --disable-shared \
+    $LIBYAML_CONFIG
+  make -j $MAKE_JOBS
+  make install DESTDIR=$SYSROOT
+fi
+
+# zlib build & install into sysroot
+# Needed by the merged Microchip RI4 target, which unpacks the gzipped
+# probe firmware catalogue.  Configure leaves the .gz support out when
+# zlib is absent, so this block is optional -- but without it the RI4
+# loader cannot read a compressed catalogue.
+#
+# zlib's own configure has no --host and no --with-sysroot, and it
+# rejects unknown options outright, so the cross compiler is selected
+# through the CHOST environment variable instead.  --static keeps the
+# package free of another dll.
+if [ -d $ZLIB_SRC ] ; then
+  mkdir -p $ZLIB_BUILD_DIR
+  cd $ZLIB_BUILD_DIR
+  CHOST=$HOST_TRIPLET \
+  CC=$HOST_TRIPLET-gcc \
+  AR=$HOST_TRIPLET-ar \
+  RANLIB=$HOST_TRIPLET-ranlib \
+  NM=$HOST_TRIPLET-nm \
+  $ZLIB_SRC/configure --prefix=$PREFIX --static
+  # Only the archive is needed; "make" alone would also link the example
+  # and minigzip test programs, which are of no use in a package.
+  make -j $MAKE_JOBS libz.a
   make install DESTDIR=$SYSROOT
 fi
 

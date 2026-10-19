@@ -197,7 +197,7 @@ static int vexriscv_create_reg_list(struct target *target)
 }
 
 
-static int vexriscv_target_create(struct target *target, Jim_Interp *interp)
+static int vexriscv_target_create(struct target *target)
 {
 	LOG_DEBUG("vexriscv_target_create\n");
 	if (target->tap == NULL)
@@ -1715,8 +1715,8 @@ static int vexriscv_resume_or_step(struct target *target, int current,
 	return ERROR_OK;
 }
 
-static int vexriscv_resume(struct target *target, int current,
-		target_addr_t address, int handle_breakpoints, int debug_execution)
+static int vexriscv_resume(struct target *target, bool current,
+		target_addr_t address, bool handle_breakpoints, bool debug_execution)
 {
 	return vexriscv_resume_or_step(target, current, address,
 				   handle_breakpoints,
@@ -1724,8 +1724,8 @@ static int vexriscv_resume(struct target *target, int current,
 				   NO_SINGLE_STEP);
 }
 
-static int vexriscv_step(struct target *target, int current,
-		target_addr_t address, int handle_breakpoints)
+static int vexriscv_step(struct target *target, bool current,
+		target_addr_t address, bool handle_breakpoints)
 {
 	return vexriscv_resume_or_step(target, current, address,
 				   handle_breakpoints,
@@ -1877,7 +1877,7 @@ static int vexriscv_run_and_wait(struct target *target, target_addr_t entry_poin
 int vexriscv_run_algorithm(struct target *target, int num_mem_params,
 			struct mem_param *mem_params, int num_reg_params,
 			struct reg_param *reg_params, target_addr_t entry_point,
-			target_addr_t exit_point, int timeout_ms, void *arch_info){
+			target_addr_t exit_point, unsigned int timeout_ms, void *arch_info){
 	struct vexriscv_common *vexriscv = target_to_vexriscv(target);
 	int retval;
 	LOG_DEBUG("Running algorithm");

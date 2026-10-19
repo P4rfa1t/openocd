@@ -245,6 +245,8 @@ include %D%/xtensa/Makefile.am
 include %D%/espressif/Makefile.am
 # --- third-party target architectures (tools/patch_target_groups.py) ---
 
+if TARGETS_ALL
+
 C28X_SRC = \
 	%D%/c28x.c
 
@@ -254,11 +256,6 @@ TMS320_SRC = \
 	%D%/tms320.c
 
 %C%_libtarget_la_SOURCES += $(TMS320_SRC)
-
-HEXAGON_SRC = \
-	%D%/hexagon.c
-
-%C%_libtarget_la_SOURCES += $(HEXAGON_SRC)
 
 QUARK_SRC = \
 	%D%/quark_d2000.c \
@@ -271,12 +268,6 @@ VORTEX86_SRC = \
 
 %C%_libtarget_la_SOURCES += $(VORTEX86_SRC)
 
-OR1K_JTAG_SRC = \
-	%D%/or1k_jtag.c \
-	%D%/or1k_jtag_adv.c
-
-%C%_libtarget_la_SOURCES += $(OR1K_JTAG_SRC)
-
 LOONGARCH_SRC = \
 	%D%/loongarch.c \
 	%D%/loongarch_ejtag.c \
@@ -284,35 +275,50 @@ LOONGARCH_SRC = \
 
 %C%_libtarget_la_SOURCES += $(LOONGARCH_SRC)
 
+if USE_LIBUSB1
 MCHP_RI4_SRC = \
 	%D%/mchp_ri4_bridge.c \
 	%D%/mchp_ri4_native.c
 
 %C%_libtarget_la_SOURCES += $(MCHP_RI4_SRC)
 
+%C%_libtarget_la_CPPFLAGS += $(LIBUSB1_CFLAGS)
+%C%_libtarget_la_LIBADD += $(LIBUSB1_LIBS)
+
+endif
+
+if HAVE_LIBYAML
 VEXRISCV_SRC = \
 	%D%/vexriscv.c
 
 %C%_libtarget_la_SOURCES += $(VEXRISCV_SRC)
 
+%C%_libtarget_la_CPPFLAGS += $(LIBYAML_CFLAGS)
+%C%_libtarget_la_LIBADD += $(LIBYAML_LIBS)
+
+endif
+
+if HAVE_ZLIB
+%C%_libtarget_la_CPPFLAGS += $(ZLIB_CFLAGS)
+%C%_libtarget_la_LIBADD += $(ZLIB_LIBS)
+endif
+
 # Headers, so `make dist` ships them.
 %C%_libtarget_la_SOURCES += \
 	%D%/c28x.h \
-	%D%/tms320.h \
-	%D%/hexagon.h \
-	%D%/lakemont.h \
-	%D%/quark_d2000.h \
-	%D%/quark_se.h \
-	%D%/x86_32_common.h \
-	%D%/vortex86.h \
-	%D%/or1k_jtag.h \
-	%D%/or1k_jtag_adv.h \
 	%D%/loongarch.h \
 	%D%/loongarch_ejtag.h \
-	%D%/loongarch_pracc.h \
 	%D%/loongarch_modules.h \
+	%D%/loongarch_pracc.h \
 	%D%/mchp_ri4_bridge.h \
 	%D%/mchp_ri4_native.h \
-	%D%/vexriscv.h
+	%D%/quark_d2000.h \
+	%D%/quark_se.h \
+	%D%/tms320.h \
+	%D%/vexriscv-csrs.h \
+	%D%/vexriscv.h \
+	%D%/vortex86.h
+
+endif
 
 # --- end third-party target architectures ---
