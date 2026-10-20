@@ -8,19 +8,19 @@
 |---|---|
 | 扫描候选仓库 | 688 |
 | 完整深挖仓库 | 200 |
-| 去重后唯一新增路径 | 607 |
+| 去重后唯一新增路径 | 625 |
 | 第一层：合并进 `tcl/` 的配置 | 480 |
-| 第二层：合并进 `src/` 的 C 源码 | 127 |
+| 第二层：合并进 `src/` 的 C 源码 | 145 |
 | 折叠掉的重复副本 | 4109 |
-| 判定为不可导入并排除 | 107 |
+| 判定为不可导入并排除 | 108 |
 
 按目录分布：
 
 | 目录 | 文件数 |
 |---|---|
 | `target` | 284 |
+| `src` | 145 |
 | `board` | 137 |
-| `src` | 127 |
 | `interface` | 45 |
 | `cpld` | 14 |
 
@@ -28,13 +28,13 @@
 
 | 仓库 | 第一层 TCL | 第二层 C | 落后上游文件数 | SPDX |
 |---|---:|---:|---:|---|
-| [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | 57 | 5 | 6 | NOASSERTION |
+| [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | 57 | 15 | 6 | NOASSERTION |
 | [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | 50 | 3 | 1 | NOASSERTION |
 | [`rxmnjke/openocd`](https://github.com/rxmnjke/openocd) | 48 | 0 | 0 | NOASSERTION |
 | [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | 34 | 13 | 401 | GPL-2.0 |
 | [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | 43 | 3 | 9 | NOASSERTION |
+| [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | 11 | 30 | 70 | NOASSERTION |
 | [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | 33 | 8 | 429 | GPL-2.0 |
-| [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | 11 | 22 | 70 | NOASSERTION |
 | [`zuyih/openocd`](https://github.com/zuyih/openocd) | 26 | 1 | 0 | NOASSERTION |
 | [`TexasInstruments/ti-openocd`](https://github.com/TexasInstruments/ti-openocd) | 19 | 0 | 49 | NOASSERTION |
 | [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | 10 | 7 | 0 | NOASSERTION |
@@ -82,14 +82,14 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 451 |
+| NOASSERTION | 469 |
 | GPL-2.0 | 156 |
 
-> ⚠️ **451 个文件**来自 GitHub 未解析出 SPDX 的仓库，导入前需人工审计头部许可声明。
+> ⚠️ **469 个文件**来自 GitHub 未解析出 SPDX 的仓库，导入前需人工审计头部许可声明。
 
 ## 5. 排除项说明
 
-共排除 107 个路径，原因：
+共排除 108 个路径，原因：
 
 build-system files, non-C payloads, and core internals that exist upstream under the same name and therefore need a real diff rather than a file copy
 
@@ -114,6 +114,9 @@ build-system files, non-C payloads, and core internals that exist upstream under
 |---|---:|---|
 | `src/target/` | 92 | `zephyrproject-rtos/openocd`(22), `foss-for-mips-arc-processors/openocd`(11) |
 | `src/jtag/drivers/` | 33 | `analogdevicesinc/openocd`(5), `AnlogicInfo/al_openocd`(3) |
+| `src/target/rvmax/` | 10 | `analogdevicesinc/openocd`(10) |
+| `src/target/rv32m1/` | 6 | `zephyrproject-rtos/openocd`(6) |
+| `src/flash/nor/` | 2 | `zephyrproject-rtos/openocd`(2) |
 | `src/server/` | 2 | `AnlogicInfo/al_openocd`(2) |
 
 ### 6.1 值得优先上游化的驱动
@@ -122,6 +125,8 @@ build-system files, non-C payloads, and core internals that exist upstream under
 
 | 文件 | 来源 | 落后上游 |
 |---|---|---:|
+| `src/flash/nor/rp2040.c` | `zephyrproject-rtos/openocd` | 70 |
+| `src/flash/nor/rv32m1.c` | `zephyrproject-rtos/openocd` | 70 |
 | `src/jtag/drivers/adi_dbg_agent.c` | `analogdevicesinc/openocd` | 6 |
 | `src/jtag/drivers/al_link.c` | `AnlogicInfo/al_openocd` | 122 |
 | `src/jtag/drivers/al_link_cyusb.c` | `AnlogicInfo/al_openocd` | 122 |
@@ -145,6 +150,4 @@ build-system files, non-C payloads, and core internals that exist upstream under
 | `src/jtag/drivers/stlink_usb_hla_multicore.c` | `sysprogs/openocd` | 9 |
 | `src/jtag/drivers/tamarin.c` | `stacksmashing/openocd-tamarin` | 85 |
 | `src/jtag/drivers/usbmux.c` | `analogdevicesinc/openocd` | 6 |
-| `src/jtag/drivers/wlink.c` | `fxsheep/openocd_wchlink-rv` | 140 |
-| `src/jtag/drivers/wlinke.c` | `Seneral/riscv-openocd-wch` | 122 |
 

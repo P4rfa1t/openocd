@@ -6,11 +6,11 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 382 |
+| NOASSERTION | 398 |
 | GPL-2.0 | 139 |
 | UNRESOLVED | 25 |
 
-**407 个文件（75%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
+**423 个文件（75%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
 > 已知事实：OpenOCD 上游是 GPL-2.0-or-later，大多数 fork 继承该许可，所以实务上大概率都是 GPL。但 `NOASSERTION` 只表示「GitHub 没能解析出来」，**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。逐文件清单见 `manifest/licenses.csv` 与下方折叠区。
 
@@ -638,15 +638,16 @@
 
 ## src/ C 源码（需在构建系统注册）
 
-文件数：**59**
+文件数：**75**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
+| [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | NOASSERTION(14) | 14 |
 | [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | GPL-2.0(13) | 13 |
 | [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | GPL-2.0(8) | 8 |
 | [`xsession/openocd`](https://github.com/xsession/openocd) | NOASSERTION(8) | 8 |
+| [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | NOASSERTION(7) | 7 |
 | [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | NOASSERTION(7) | 7 |
-| [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | NOASSERTION(5) | 5 |
 | [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(4) | 4 |
 | [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(4) | 4 |
 | [`yottatsa/openocd`](https://github.com/yottatsa/openocd) | NOASSERTION(2) | 2 |
@@ -659,7 +660,7 @@
 | [`intel/aji_openocd`](https://github.com/intel/aji_openocd) | NOASSERTION(1) | 1 |
 | [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | GPL-2.0(1) | 1 |
 
-### ⚠️ 需人工审计（35 个文件无许可证信息）
+### ⚠️ 需人工审计（51 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
 
@@ -684,13 +685,22 @@
 
 </details>
 
-<details><summary><code>analogdevicesinc/openocd</code> (5 个)</summary>
+<details><summary><code>analogdevicesinc/openocd</code> (14 个)</summary>
 
 - `src/jtag/drivers/adi_dbg_agent.c`
 - `src/jtag/drivers/ice1000.c`
 - `src/jtag/drivers/ice1500.c`
 - `src/jtag/drivers/usbmux.c`
 - `src/jtag/drivers/usbmux.h`
+- `src/target/rvmax/encoding.h`
+- `src/target/rvmax/gdb_regs.h`
+- `src/target/rvmax/opcodes.h`
+- `src/target/rvmax/rvmax.c`
+- `src/target/rvmax/rvmax.h`
+- `src/target/rvmax/rvmax_du.h`
+- `src/target/rvmax/rvmax_du_adv.c`
+- `src/target/rvmax/rvmax_tap.h`
+- `src/target/rvmax/rvmax_tap_mohor.c`
 
 </details>
 
@@ -744,6 +754,18 @@
 
 - `src/target/vortex86.c`
 - `src/target/vortex86.h`
+
+</details>
+
+<details><summary><code>zephyrproject-rtos/openocd</code> (7 个)</summary>
+
+- `src/flash/nor/rv32m1.c`
+- `src/target/rv32m1/rv32m1.c`
+- `src/target/rv32m1/rv32m1.h`
+- `src/target/rv32m1/rv32m1_du.h`
+- `src/target/rv32m1/rv32m1_du_adv.c`
+- `src/target/rv32m1/rv32m1_tap.h`
+- `src/target/rv32m1/rv32m1_tap_mohor.c`
 
 </details>
 

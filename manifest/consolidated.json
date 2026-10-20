@@ -1,10 +1,11 @@
 {
  "upstream": "openocd-org/openocd",
  "upstream_branch": "master",
- "unique_paths": 607,
- "imported_paths": 520,
- "not_imported_paths": 87,
+ "unique_paths": 625,
+ "imported_paths": 536,
+ "not_imported_paths": 89,
  "not_imported": [
+  "src/flash/nor/rp2040.c",
   "src/jtag/drivers/al_link.c",
   "src/jtag/drivers/al_link_cyusb.c",
   "src/jtag/drivers/al_link_cyusb.h",
@@ -68,6 +69,7 @@
   "src/target/or1k_jtag.h",
   "src/target/or1k_jtag_adv.c",
   "src/target/or1k_jtag_adv.h",
+  "src/target/rvmax/debug_defines.h",
   "src/target/stm32_stlink.c",
   "src/target/stm8_hla_multicore.c",
   "src/target/wch_riscv-013.c",
@@ -94,17 +96,17 @@
   "tcl/target/Ðº1879xÐ±1Ñ.cfg"
  ],
  "tier1_drop_in_tcl": 480,
- "tier2_needs_c_patch": 127,
+ "tier2_needs_c_patch": 145,
  "duplicates_collapsed": 4109,
  "by_kind": {
-  "src": 127,
+  "src": 145,
   "board": 137,
   "cpld": 14,
   "interface": 45,
   "target": 284
  },
  "excluded_from_import": {
-  "count": 107,
+  "count": 108,
   "note": "build-system files, non-C payloads, and core internals that exist upstream under the same name and therefore need a real diff rather than a file copy",
   "paths": [
    "contrib/60-openocd-nuvoton.rules",
@@ -200,6 +202,7 @@
    "src/target/a64_disassembler.h",
    "src/target/oocd_trace.c",
    "src/target/oocd_trace.h",
+   "src/target/rvmax/Makefile.am",
    "src/target/test.tcl",
    "src/target/wch_riscv-013.zip",
    "src/target_reset.h",
@@ -618,7 +621,7 @@
  "contributors": {
   "analogdevicesinc/openocd": {
    "tier1": 57,
-   "tier2": 5
+   "tier2": 15
   },
   "espressif/openocd-esp32": {
    "tier1": 50,
@@ -636,13 +639,13 @@
    "tier1": 43,
    "tier2": 3
   },
+  "zephyrproject-rtos/openocd": {
+   "tier1": 11,
+   "tier2": 30
+  },
   "intel/OpenOCD": {
    "tier1": 33,
    "tier2": 8
-  },
-  "zephyrproject-rtos/openocd": {
-   "tier1": 11,
-   "tier2": 22
   },
   "zuyih/openocd": {
    "tier1": 26,
@@ -870,6 +873,32 @@
   }
  },
  "records": [
+  {
+   "path": "src/flash/nor/rp2040.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": false
+  },
+  {
+   "path": "src/flash/nor/rv32m1.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
   {
    "path": "src/jtag/drivers/adi_dbg_agent.c",
    "tier": 2,
@@ -3459,6 +3488,214 @@
    "winner_branch": "master",
    "winner_license": "GPL-2.0",
    "winner_stars": 12,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rv32m1/rv32m1.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rv32m1/rv32m1.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rv32m1/rv32m1_du.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rv32m1/rv32m1_du_adv.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rv32m1/rv32m1_tap.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rv32m1/rv32m1_tap_mohor.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "zephyrproject-rtos/openocd",
+   "winner_branch": "zephyr-20250213",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 47,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/debug_defines.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": false
+  },
+  {
+   "path": "src/target/rvmax/encoding.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/gdb_regs.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/opcodes.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/rvmax.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/rvmax.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/rvmax_du.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/rvmax_du_adv.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/rvmax_tap.h",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
+   "also_in": [],
+   "sources": 1,
+   "path_spellings": [],
+   "imported": true
+  },
+  {
+   "path": "src/target/rvmax/rvmax_tap_mohor.c",
+   "tier": 2,
+   "kind": "src",
+   "winner": "analogdevicesinc/openocd",
+   "winner_branch": "release/0.12.0-1.4.0",
+   "winner_license": "NOASSERTION",
+   "winner_stars": 29,
    "also_in": [],
    "sources": 1,
    "path_spellings": [],

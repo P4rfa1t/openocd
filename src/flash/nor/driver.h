@@ -316,6 +316,7 @@ extern const struct flash_driver read_only_flash;
 extern const struct flash_driver renesas_rpchf_flash;
 extern const struct flash_driver ro_alias_flash;
 extern const struct flash_driver rp2xxx_flash;
+extern const struct flash_driver rv32m1_flash;
 extern const struct flash_driver rsl10_flash;
 extern const struct flash_driver sh_qspi_flash;
 extern const struct flash_driver sim3x_flash;

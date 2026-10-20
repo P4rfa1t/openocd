@@ -51,21 +51,21 @@ git merge upstream/master
 | | 数量 | 说明 |
 |---|---:|---|
 | `tcl/` 脚本文件 | 487 | 472 个 `.cfg` + 15 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
-| `src/` C 源码 | 59 | 30 个已接入构建，29 个已就位但未注册 |
+| `src/` C 源码 | 75 | 39 个 `.c` 加 36 个 `.h`；**46 个已接入构建**，29 个已就位但未注册 |
 | 折叠掉的重复副本 | 4109 | 每条路径只保留一个胜出版本 |
 | 与官方重复而剔除 | 99 | 上游已经收编 |
 | 判定不可用而排除 | 107 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
 
-扫描识别出的 607 条唯一路径里，**520 条进了树**，87 条没进：68 个需要逐后端移植
+扫描识别出的 625 条唯一路径里，**536 条进了树**，89 条没进：70 个需要逐后端移植
 的 C 源码，以及 19 个引用了上游从未发布的 target 或 interface 的 TCL 文件
 （4 个 board、7 个 interface、8 个 target）—— 其中就包括下面说的四份
 Synopsys bring-up 板级配置。另有 26 个文件是作为依赖进来的 —— 一个配置
 `source` 另一个配置时，被引用的文件会一起被带进来 —— 所以树里一共
-546 个文件，每个都有自己的来源记录。
+562 个文件，每个都有自己的来源记录。
 
-上游共 2203 个文件，本树 2798 个。
+上游共 2203 个文件，本树 2799 个。
 
-**全部 546 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+**全部 562 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -93,14 +93,24 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 
 ### `src/` 文件分两种状态
 
-59 个新 C 源文件里有 30 个已接入构建，能注册出可用的 `target_type` 或
-`adapter_driver`：
+75 个新 C 源文件与头文件里有 46 个已接入构建 —— 23 个能注册出可用的
+`target_type` 或 `adapter_driver` 的 `.c`，加上它们需要的头文件：
 
 | 组 | 后端 | 构建开关 |
 |---|---|---|
-| `TARGETS_ALL` | `c28x`、`tms320`、`quark_d2000`、`quark_se`、`vortex86`、`loongarch` | `--disable-third-party-targets` 可整组关掉 |
+| `TARGETS_ALL` | `c28x`、`tms320`、`quark_d2000`、`quark_se`、`vortex86`、`loongarch`、`rvmax`、`rv32m1` | `--disable-third-party-targets` 可整组关掉 |
 | `MCHP_RI4` | `mchp_ri4_bridge` | 还需要 libusb1 |
 | `VEXRISCV` | `vexriscv` | 还需要 libyaml |
+
+新增的 target type 一共 10 个，adapter driver 6 个 —— `dirtyjtag`、`ice1000`、
+`ice2000`、`ice1500`、`dbgagent`、`mp_dbgagent` —— 跟上游的 38 个 target type、
+45 个 adapter driver 并列注册。
+
+`rvmax` 与 `rv32m1` 的命令都带架构前缀 —— `rvmax_tap_select`、
+`rv32m1_du_select`、`rv32m1_core_select` 等等。上游 `or1k` 后端注册的是没有前缀的
+`tap_select` / `du_select` / `addreg`，而 OpenOCD 对重复的命令名是**静默忽略**的：
+后注册的会沿用前一个的 handler。如果不加前缀，第二个后端就会被第一个的 handler
+接管。加上前缀之后，三者可以共存。
 
 剩下 29 个 —— `arc32` 家族、`adi_v5_cmsis_dap`、`aarch64_coproc_reg`、
 `blackmagic` / `ch347_jtag` / `cmsis_dap_usb` / `jtag_tcp` 驱动，以及几个头文件
@@ -166,9 +176,9 @@ jimtcl、libyaml、zlib）和构建配方都是上游的。
 这个区分是必要的。本仓库的某一版曾对自己的完整性检查报出 543 处不匹配 —— 那
 棵树是在 Windows 上以文本模式重建的，每个导入文件都被悄悄存成了 CRLF，而
 manifest 描述的是 LF 原件。门禁分不清"这个文件被改过"和"这个文件是在 Windows
-上检出的"。现在两边都修好了：树里全是 LF，517 个文件与发布方摘要逐字节吻合，
-2 个被标为仅行尾符差异，27 个带真实本地编辑 —— target API 移植、重定位后的
-`source [find ...]` 路径修正，以及第三方驱动的修复。
+上检出的"。现在两边都修好了：树里全是 LF，523 个文件与发布方摘要逐字节吻合，
+2 个被标为仅行尾符差异，37 个带真实本地编辑 —— target API 移植、重定位后的
+`source [find ...]` 路径修正、第三方驱动的修复，以及 `rvmax` / `rv32m1` 两个后端。
 
 被有意移除的文件仍留在 manifest 的 `removed_from_tree` 段里，连同移除原因和
 移除它的那次提交。审计链是双向的。
@@ -180,8 +190,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 546
-on disk  : 546
+recorded : 562
+on disk  : 562
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -208,6 +218,10 @@ GitHub 解析不出许可证的文件。
 | `tools/patch_target_groups.py` | 幂等地把 target 组接进 `configure.ac`、`src/target/Makefile.am`、`src/target/target.c` |
 | `tools/patch_interfaces.py`、`tools/patch_interface_h.py`、`tools/patch_makefile.py`、`tools/patch_usbmux.py` | 同类的适配器驱动幂等接线 |
 | `tools/check_target_signatures.py` | 把第三方后端的回调签名与上游 `target_type` 逐个比对 |
+| `tools/port_new_archs.py` | 只读：断言 rvmax / rv32m1 的移植项全部到位，且旧写法没有残留 |
+| `tools/stage_new_archs.py` | 把暂存的 rvmax / rv32m1 源码逐字节复制到树内对应位置 |
+| `tools/stage_new_imports.py` | 把新批准的第三方文件下载到暂存目录，不直接进树 |
+| `tools/stage_symbol_check.py`、`tools/deep_link_check.py` | 只读：找出暂存文件用到但上游没有定义的标识符 |
 | `tools/fix_target_apis.py`、`tools/fix_driver_apis.py` | 把导入的后端移植过上游 API 漂移 |
 | `tools/fix_relocated_sources.py` | 修复仍指向旧扁平路径的 `source [find ...]` 引用 |
 | `tools/audit_dangling_refs.py` | 只读：找出解析不到任何文件的 `source [find X]` 引用 |
@@ -229,7 +243,7 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 546 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 562 个导入文件的机器可读来源记录 |
 
 ---
 
@@ -238,8 +252,8 @@ GitHub 解析不出许可证的文件。
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 546 个文件里，GitHub 解析出
-139 个为 GPL-2.0，382 个为 `NOASSERTION`（意思是*GitHub 判定不出许可证*，不是
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 562 个文件里，GitHub 解析出
+139 个为 GPL-2.0，398 个为 `NOASSERTION`（意思是*GitHub 判定不出许可证*，不是
 说它宽松），25 个无法解析。有些 `NOASSERTION` 文件自带专有声明，例如 Analog
 Devices 的 flash 算法，写着 "This software is proprietary to Analog Devices,
 Inc."。
@@ -252,8 +266,8 @@ Inc."。
 
 ## 已知限制
 
-- **59 个新 C 源文件里有 29 个没被编译。** 它们带着完整来源记录躺在树里，但
-  针对的是已经改过接口的上游 API。要注册需要逐个后端做移植。
+- **75 个新 C 源文件与头文件里有 29 个没被编译。** 它们带着完整来源记录躺在树里，
+  但针对的是已经改过接口的上游 API。要注册需要逐个后端做移植。
 - **四份 Synopsys 板级配置没导入。** `board/synopsys_amla3.cfg`、
   `board/synopsys_angel4.cfg`、`board/synopsys_haps51.cfg`、
   `board/synopsys_ml509.cfg` 发布在 `intel/OpenOCD` 里，但任何公开仓库都没有

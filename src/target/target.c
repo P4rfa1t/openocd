@@ -80,6 +80,8 @@ extern struct target_type quark_d2000_target;
 extern struct target_type quark_se_target;
 extern struct target_type vortex86_target;
 extern struct target_type loongarch_target;
+extern struct target_type rvmax_target;
+extern struct target_type rv32m1_target;
 #endif
 #if BUILD_MCHP_RI4 == 1
 extern struct target_type mchp_ri4_bridge_target;
@@ -137,6 +139,8 @@ static struct target_type *target_types[] = {
 	&quark_se_target,
 	&vortex86_target,
 	&loongarch_target,
+	&rvmax_target,
+	&rv32m1_target,
 #endif
 #if BUILD_MCHP_RI4 == 1
 	&mchp_ri4_bridge_target,

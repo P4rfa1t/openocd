@@ -2,7 +2,7 @@
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
   "tier": 2,
-  "file_count": 59,
+  "file_count": 75,
   "integrity": {
     "recorded": 59,
     "on_disk": 59,
@@ -11,6 +11,20 @@
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "files": {
+    "src/flash/nor/rv32m1.c": {
+      "source_repo": "zephyrproject-rtos/openocd",
+      "source_branch": "zephyr-20250213",
+      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
+      "source_path": "src/flash/nor/rv32m1.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 47,
+      "also_present_in": [],
+      "sha256": "e017d1478554bad885161f3c851e226040b54b9d630425665ce559df2460d99a",
+      "pristine_sha256": "52cdab6c3a3a813bd98bde9e4292afaeea6ebe106ab9a8848dca9bbcee0ee732",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
     "src/jtag/drivers/adi_dbg_agent.c": {
       "source_repo": "analogdevicesinc/openocd",
       "source_branch": "release/0.12.0-1.4.0",
@@ -522,7 +536,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "960ec01cb7af6cdc5e5c220c41a7065a3fd445a8344ad59e727125b82bd0127e"
+      "sha256": "f52f7d5d556695ec96706d0a9b2a9c37d8b20a53d27a96496a8e9c96d2ed6108",
+      "pristine_sha256": "960ec01cb7af6cdc5e5c220c41a7065a3fd445a8344ad59e727125b82bd0127e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/mchp_ri4_bridge.h": {
       "source_repo": "xsession/openocd",
@@ -605,6 +623,176 @@
       "stars_at_import": 12,
       "also_present_in": [],
       "sha256": "6f83b2ce34c511ae3a920e2b04b331ab96e167163e54c457688be34ffbdcf936"
+    },
+    "src/target/rv32m1/rv32m1.c": {
+      "source_repo": "zephyrproject-rtos/openocd",
+      "source_branch": "zephyr-20250213",
+      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
+      "source_path": "src/target/rv32m1/rv32m1.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 47,
+      "also_present_in": [],
+      "sha256": "b3b4ffae120007d53eda25214125fc79c1cf42a8f0aab3cde5146b2d24b2e067",
+      "pristine_sha256": "ddc62f62ea8bd9a82fc2ba72eccd6e6232ffc7f82a2b14834d2b6ee8f5bff63e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "src/target/rv32m1/rv32m1.h": {
+      "source_repo": "zephyrproject-rtos/openocd",
+      "source_branch": "zephyr-20250213",
+      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
+      "source_path": "src/target/rv32m1/rv32m1.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 47,
+      "also_present_in": [],
+      "sha256": "fae7287ef169b5215ae5dc94e6383c68fd6fd30a8fdc9806fa44e616448c3e1e"
+    },
+    "src/target/rv32m1/rv32m1_du.h": {
+      "source_repo": "zephyrproject-rtos/openocd",
+      "source_branch": "zephyr-20250213",
+      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
+      "source_path": "src/target/rv32m1/rv32m1_du.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 47,
+      "also_present_in": [],
+      "sha256": "2271097b0b37115ee4a2e1f5f646a63d1e9c6b3cf381e929ba21c4b020033040"
+    },
+    "src/target/rv32m1/rv32m1_du_adv.c": {
+      "source_repo": "zephyrproject-rtos/openocd",
+      "source_branch": "zephyr-20250213",
+      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
+      "source_path": "src/target/rv32m1/rv32m1_du_adv.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 47,
+      "also_present_in": [],
+      "sha256": "3cb1f2a1dad5361ecff18fcf15f3f81298f0a22f4ea3ab4829dc552c10ba86fb"
+    },
+    "src/target/rv32m1/rv32m1_tap.h": {
+      "source_repo": "zephyrproject-rtos/openocd",
+      "source_branch": "zephyr-20250213",
+      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
+      "source_path": "src/target/rv32m1/rv32m1_tap.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 47,
+      "also_present_in": [],
+      "sha256": "4d598a82874b086547e9744ce2b1f7ca5d4c0c5bbfc762d99200bc55ac8ac90e"
+    },
+    "src/target/rv32m1/rv32m1_tap_mohor.c": {
+      "source_repo": "zephyrproject-rtos/openocd",
+      "source_branch": "zephyr-20250213",
+      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
+      "source_path": "src/target/rv32m1/rv32m1_tap_mohor.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 47,
+      "also_present_in": [],
+      "sha256": "d30fd49218ce70390ccc401e909dff6b4347f2410faf919af12d85a3de29793d"
+    },
+    "src/target/rvmax/encoding.h": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/encoding.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "343b99a2ff130c6c8eb53d53382e4200bb7a55f59c5f8ad9e2202a28f88fed12",
+      "pristine_sha256": "b49bd2ebb8c3073adff2d4e181c52ba8a559e4e52094724f5b4ef72cadec60c0",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "src/target/rvmax/gdb_regs.h": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/gdb_regs.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "b4e6613c002b71484f11f9da53b32ffb4fda7a6900abda80827a74d122d93f38",
+      "pristine_sha256": "e36ac8483126b7bf9c5664630b9fa525e36281455e90cbf901f523c38fc56af9",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "src/target/rvmax/opcodes.h": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/opcodes.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "d1c55dee1ead27039a2b5bfffdd717688fc26d073d24fad8d41a4e32e3537f24",
+      "pristine_sha256": "6e6c87e7ab719d25297023721dbd4267e0e1a8c0b70f9cbf47ba03906731c334",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "src/target/rvmax/rvmax.c": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/rvmax.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "35075c83cbde2dcaff4fb09b20fa46389218eb0f8e4487f1b20cf2b5d95f71c6",
+      "pristine_sha256": "305ffebd8657fbd6a373123b2426eda4cad6383bf375ad1266546455ff6a12a6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "src/target/rvmax/rvmax.h": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/rvmax.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "681a2c66223adcfe07935f0ebd3604b1e95301353dabc1bdb904b337ae344a62"
+    },
+    "src/target/rvmax/rvmax_du.h": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/rvmax_du.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "09c5a450578a1219a926cb7702697d4fa239abdf94bd9c181ae04329f9ddf349"
+    },
+    "src/target/rvmax/rvmax_du_adv.c": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/rvmax_du_adv.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "494134af03a1df7a486420204afac029dfbbf30fdad64aaae26490fa769dec90"
+    },
+    "src/target/rvmax/rvmax_tap.h": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/rvmax_tap.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "37a7e97bb64e4bf881e3b5d91eedf180ef9772e5fc310f18747d525791e2c908"
+    },
+    "src/target/rvmax/rvmax_tap_mohor.c": {
+      "source_repo": "analogdevicesinc/openocd",
+      "source_branch": "release/0.12.0-1.4.0",
+      "source_commit": "ad75bfb79b509634b92646b9e65b958f3ea1d8bf",
+      "source_path": "src/target/rvmax/rvmax_tap_mohor.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "21b250a77fe10f99b3b6c2eca8bf4a72d51c9d4eb178b272ec46c57d9d003943"
     },
     "src/target/stm8.h": {
       "source_repo": "linux-msm/openocd",

@@ -6071,7 +6071,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "26e54e4af0e3a9b9558878de7d9375f3ccc809a8ed9b3614be6f862104f4c768"
+      "sha256": "71f0575246e7a4e882e85b629d127134f965f86707d8390270fdf01297d59442",
+      "pristine_sha256": "26e54e4af0e3a9b9558878de7d9375f3ccc809a8ed9b3614be6f862104f4c768",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/max32xxx.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -6791,7 +6795,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 47,
       "also_present_in": [],
-      "sha256": "70d2a6bb0e465f06503b576bebc67b578737bba602db6c58a2b29cd44938ada8"
+      "sha256": "1e00f2e1e499bef3dd5d5362247755852bda13c11963e54e5bd9824e52fbe459",
+      "pristine_sha256": "70d2a6bb0e465f06503b576bebc67b578737bba602db6c58a2b29cd44938ada8",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/rv32m1_zero_riscy.cfg": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -6801,7 +6809,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 47,
       "also_present_in": [],
-      "sha256": "ca312c19584b3835c647f8bf1a384c694da67ee94e67083a481fa94e45662a53"
+      "sha256": "17572ea68ea25631278ea11c1f9a590cba8e4ae809cbbbffd6b403371bb590d7",
+      "pristine_sha256": "ca312c19584b3835c647f8bf1a384c694da67ee94e67083a481fa94e45662a53",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/sam7se512.cfg": {
       "source_repo": "esden/openocd",

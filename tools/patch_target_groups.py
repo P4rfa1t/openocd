@@ -44,6 +44,15 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 #              compiled at all (None -> always, inside the TARGETS_ALL block)
 #   cppflags  extra CPPFLAGS the group needs
 #   libadd    extra LIBADD the group needs
+#   subdir    optional directory below src/target/ that holds the sources
+#             (upstream uses the same layout for riscv/, xtensa/, ...)
+#   headers   optional extra headers of the group that do not share a
+#             basename with one of the sources
+#
+# The subdir support exists because rvmax and rv32m1 ship four headers each
+# whose names collide with upstream's src/target/riscv/ (encoding.h,
+# opcodes.h, gdb_regs.h).  Putting them in their own directory keeps the
+# relative #includes local, and lets the include guards be renamed.
 GROUPS = [
     {
         "name": "C28X",
@@ -104,6 +113,29 @@ GROUPS = [
         "cppflags": ["$(LIBYAML_CFLAGS)"],
         "libadd": ["$(LIBYAML_LIBS)"],
     },
+    {
+        # rvmax is the RISC-V debug transport of the Analog Devices MAX32
+        # parts.  The sources live in their own directory because four of
+        # its headers share a name with upstream's src/target/riscv/.
+        "name": "RVMAX",
+        "files": ["rvmax.c", "rvmax_du_adv.c", "rvmax_tap_mohor.c"],
+        "symbols": ["rvmax_target"],
+        "c_guard": "BUILD_TARGETS_ALL == 1",
+        "mk_guard": None,
+        "subdir": "rvmax",
+        "headers": ["encoding.h", "gdb_regs.h", "opcodes.h", "rvmax.h",
+                    "rvmax_du.h", "rvmax_tap.h"],
+    },
+    {
+        # rv32m1 is the debug transport of the Andes/SiFive RV32M1 cores.
+        "name": "RV32M1",
+        "files": ["rv32m1.c", "rv32m1_du_adv.c", "rv32m1_tap_mohor.c"],
+        "symbols": ["rv32m1_target"],
+        "c_guard": "BUILD_TARGETS_ALL == 1",
+        "mk_guard": None,
+        "subdir": "rv32m1",
+        "headers": ["rv32m1.h", "rv32m1_du.h", "rv32m1_tap.h"],
+    },
 ]
 
 # Headers that no single source file owns, so the "same basename" rule cannot
@@ -117,6 +149,16 @@ EXTRA_HEADERS = ["loongarch_modules.h", "vexriscv-csrs.h"]
 def all_headers():
     seen = []
     for g in GROUPS:
+        if "headers" in g:
+            # The group lists its headers explicitly.  The "same basename"
+            # rule cannot be used here: rv32m1_du_adv.c and
+            # rv32m1_tap_mohor.c have no header of their own, and the
+            # subdirectory groups ship headers whose names do not match a
+            # source file at all.
+            for h in g["headers"]:
+                if h not in seen:
+                    seen.append(h)
+            continue
         for f in g["files"]:
             h = f.rsplit(".", 1)[0] + ".h"
             if h not in seen:
@@ -124,7 +166,33 @@ def all_headers():
     for h in EXTRA_HEADERS:
         if h not in seen:
             seen.append(h)
-    return sorted(seen)
+    # Sort by the path the header will actually be listed under, not by its
+    # bare name: a subdirectory group's headers keep their own prefix, and
+    # sorting by basename would interleave them with the top-level ones.
+    return sorted(seen, key=header_path)
+
+
+def group_dir(g):
+    """Directory below src/target/ that holds the group's sources."""
+    return g.get("subdir") or ""
+
+
+def group_path(g, name):
+    """Path of a group member, relative to src/target/."""
+    d = group_dir(g)
+    return ("%s/%s" % (d, name)) if d else name
+
+
+def header_path(h):
+    """Path of a header, relative to src/target/.
+
+    A header that belongs to a subdirectory group is listed under that
+    directory; the plain ones stay at the top of src/target/.
+    """
+    for g in GROUPS:
+        if group_dir(g) and h in g.get("headers", []):
+            return group_path(g, h)
+    return h
 
 
 HEADERS = all_headers()
@@ -306,7 +374,7 @@ def patch_makefile():
         files = g["files"]
         for i, f in enumerate(files):
             sep = " \\" if i < len(files) - 1 else ""
-            src.append("\t%%D%%/%s%s" % (f, sep))
+            src.append("\t%%D%%/%s%s" % (group_path(g, f), sep))
         src.append("")
         src.append("%%C%%_libtarget_la_SOURCES += $(%s)" % var)
         src.append("")
@@ -333,7 +401,7 @@ def patch_makefile():
     src.append("%C%_libtarget_la_SOURCES += \\")
     for i, h in enumerate(HEADERS):
         sep = " \\" if i < len(HEADERS) - 1 else ""
-        src.append("\t%%D%%/%s%s" % (h, sep))
+        src.append("\t%%D%%/%s%s" % (header_path(h), sep))
     src.append("")
 
     src.append("endif")
@@ -354,19 +422,21 @@ def patch_makefile():
     # The sources are added through +=, so they must not appear twice.
     for g in GROUPS:
         for f in g["files"]:
-            hits = re.findall(r"^\s*%%D%%/%s\s*\\?$" % re.escape(f), final, re.M)
+            rel = group_path(g, f)
+            hits = re.findall(r"^\s*%%D%%/%s\s*\\?$" % re.escape(rel), final, re.M)
             if len(hits) > 1:
                 sys.exit("%s is listed %d times in src/target/Makefile.am"
-                         % (f, len(hits)))
+                         % (rel, len(hits)))
 
     # The same is true for the headers.  Upstream already lists lakemont.h
     # and x86_32_common.h, so a stale copy of this list would make automake
     # fail with "duplicate source" -- catch it here instead.
     for h in HEADERS:
-        hits = re.findall(r"^\s*%%D%%/%s\s*\\?$" % re.escape(h), final, re.M)
+        rel = header_path(h)
+        hits = re.findall(r"^\s*%%D%%/%s\s*\\?$" % re.escape(rel), final, re.M)
         if len(hits) > 1:
             sys.exit("%s is listed %d times in src/target/Makefile.am"
-                     % (h, len(hits)))
+                     % (rel, len(hits)))
 
     print("  src/target/Makefile.am  patched")
 
@@ -545,11 +615,14 @@ def verify_files_exist():
     missing = []
     for g in GROUPS:
         for f in g["files"]:
-            if not (ROOT / "src/target" / f).exists():
-                missing.append("src/target/%s" % f)
+            if not (ROOT / "src/target" / group_path(g, f)).exists():
+                missing.append("src/target/%s" % group_path(g, f))
+        for h in g.get("headers", []):
+            if not (ROOT / "src/target" / group_path(g, h)).exists():
+                missing.append("src/target/%s" % group_path(g, h))
     for h in HEADERS:
-        if not (ROOT / "src/target" / h).exists():
-            missing.append("src/target/%s" % h)
+        if not (ROOT / "src/target" / header_path(h)).exists():
+            missing.append("src/target/%s" % header_path(h))
     if missing:
         sys.exit("these files are listed but do not exist:\n  " +
                  "\n  ".join(missing))

@@ -298,6 +298,20 @@ VEXRISCV_SRC = \
 
 endif
 
+RVMAX_SRC = \
+	%D%/rvmax/rvmax.c \
+	%D%/rvmax/rvmax_du_adv.c \
+	%D%/rvmax/rvmax_tap_mohor.c
+
+%C%_libtarget_la_SOURCES += $(RVMAX_SRC)
+
+RV32M1_SRC = \
+	%D%/rv32m1/rv32m1.c \
+	%D%/rv32m1/rv32m1_du_adv.c \
+	%D%/rv32m1/rv32m1_tap_mohor.c
+
+%C%_libtarget_la_SOURCES += $(RV32M1_SRC)
+
 if HAVE_ZLIB
 %C%_libtarget_la_CPPFLAGS += $(ZLIB_CFLAGS)
 %C%_libtarget_la_LIBADD += $(ZLIB_LIBS)
@@ -314,6 +328,15 @@ endif
 	%D%/mchp_ri4_native.h \
 	%D%/quark_d2000.h \
 	%D%/quark_se.h \
+	%D%/rv32m1/rv32m1.h \
+	%D%/rv32m1/rv32m1_du.h \
+	%D%/rv32m1/rv32m1_tap.h \
+	%D%/rvmax/encoding.h \
+	%D%/rvmax/gdb_regs.h \
+	%D%/rvmax/opcodes.h \
+	%D%/rvmax/rvmax.h \
+	%D%/rvmax/rvmax_du.h \
+	%D%/rvmax/rvmax_tap.h \
 	%D%/tms320.h \
 	%D%/vexriscv-csrs.h \
 	%D%/vexriscv.h \

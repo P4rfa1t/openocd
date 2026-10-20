@@ -4,10 +4,10 @@
 
 本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **688 个** OpenOCD
 相关仓库（499 个官方 fork + 搜索命中的 189 个独立仓），跨仓去重、剔除与官方等价的
-副本后，得到 **546 个文件**的第三方支持，全部合并在**它们本该在的位置**：
+副本后，得到 **562 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
 - **487 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
-- **59 个 `src/` C 源文件** —— 已就位，其中 **30 个已接入构建**，
+- **75 个 `src/` C 源文件与头文件** —— 已就位，其中 **46 个已接入构建**，
   其余 29 个仍需按上游现有 API 改写后才能注册。
 
 另有 **99 个与官方重复的文件已剔除**，**4109 个跨仓重复副本被折叠**
@@ -25,17 +25,20 @@ tcl/                     ← OpenOCD 配置树：官方配置 + 487 个第三方
   chip/                        28  芯片公共片段
   cpu/                         10  架构公共片段
 
-src/                     ← C 源码：官方源码 + 59 个第三方驱动/目标
+src/                     ← C 源码：官方源码 + 75 个第三方驱动/目标
   target/                     109  顶层 .c（其中 20 个是第三方新架构：ARC32 / LoongArch / C28x / TMS320 / Vortex86 / VexRiscv / Quark / Microchip RI4 ...）
+  target/rvmax/                3  .c（ADI RVMAX 后端）
+  target/rv32m1/               3  .c（SiFive RV32M1 后端）
   jtag/drivers/                65  顶层 .c（其中 13 个是第三方适配器）
+  flash/nor/                    1  第三方 NOR 驱动（rv32m1）
 
 manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            546  个文件的来源仓库/分支/commit/SHA-256/许可证
+  PROVENANCE.json            562  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
   repos.csv / repos.json      688 个候选仓库排名
-  licenses.csv               546  行许可证索引（逐文件）
+  licenses.csv               562  行许可证索引（逐文件）
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本
@@ -49,7 +52,7 @@ tools/                   全部工具脚本
 > 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
 > 不会把已剔除的副本再拉回来。
 >
-> **全部 546 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
+> **全部 562 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
 
 ## 为什么直接合并，而不是外挂一层
 
@@ -87,7 +90,7 @@ TCL_FILES = find $(srcdir)/tcl -name '*.cfg' -o -name '*.tcl' -o -name '*.txt'
 
 **第三方 target 开关**：`--enable-third-party-targets`（默认开）控制
 `c28x` / `tms320` / `quark_d2000` / `quark_se` / `vortex86` / `loongarch` /
-`mchp_ri4_bridge` / `vexriscv` 这 8 个新架构。
+`rvmax` / `rv32m1` / `mchp_ri4_bridge` / `vexriscv` 这 10 个新架构。
 `--disable-third-party-targets` 会把它们从构建里完全拿掉（`src/target/Makefile.am`
 整块包在 `if TARGETS_ALL` 里，所以是真的关，不是摆设）。
 
@@ -114,10 +117,10 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 
 ## C 驱动的接入状态
 
-`src/` 下 59 个第三方文件里，**30 个已经接入构建系统**，
+`src/` 下 75 个第三方文件里（39 个 `.c` + 36 个 `.h`），**46 个已经接入构建系统**，
 其余 29 个仍是「代码就位、未注册」的状态。
 
-### 已接入的适配器（5 个文件，5 个探针名）
+### 已接入的适配器（5 个文件，6 个探针名）
 
 | 探针名 | 源文件 | 说明 |
 |---|---|---|
@@ -125,26 +128,27 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 | `ice1000` / `ice2000` | `ice1000.c` | ADI ICE-1000、ICE-2000，一个文件注册两个 `adapter_driver` |
 | `ice1500` | `ice1500.c` | ADI ICE-1500 |
 | `dbgagent` | `adi_dbg_agent.c` | ADI Debug Agent |
+| `mpdbgagent` | `adi_dbg_agent.c` | ADI 多核 Debug Agent，同一个编译单元里的第二个 `adapter_driver` |
 | — | `usbmux.c/h` | Windows 命名管道多路复用辅助层，供 ADI 在 `_ADI_USB_MUX_` 下选用 |
 
 接入点共五处，全部按上游的写法补齐：
 
 1. `configure.ac` —— `DIRTYJTAG_ADAPTER` / `ADI_ADAPTERS` / `ADI_USBMUX_HELPER`
-   三组 `m4_define`（第 183–195 行），加进 `AC_ARG_ADAPTERS` 列表、
+   三组 `m4_define`（第 183–196 行），加进 `AC_ARG_ADAPTERS` 列表、
    `PROCESS_ADAPTERS` 调用（`:715`–`:717`）和 `configure` 末尾的汇总表。
-   `dirtyjtag` 默认 auto；ADI 三件套要求 libusb-1.x；usbmux 仅 Windows。
-2. `src/jtag/drivers/Makefile.am` —— 5 条 `if <SYM>` / `DRIVERFILES +=`（`:227`–`:239`）。
-3. `src/jtag/interface.h` —— 6 条 `extern struct adapter_driver ...;`（`:386`–`:431`），
+   `dirtyjtag` 默认 auto；ADI 四件套要求 libusb-1.x；usbmux 仅 Windows。
+2. `src/jtag/drivers/Makefile.am` —— 6 条 `if <SYM>` / `DRIVERFILES +=`（`:227`–`:248`）。
+3. `src/jtag/interface.h` —— 6 条 `extern struct adapter_driver ...;`（`:386`–`:436`），
    字母序插入上游那块声明表。
-4. `src/jtag/interfaces.c` —— 5 条 `&<name>_adapter_driver,`，各由
-   `#if BUILD_<SYM> == 1` 包住（`:71`–`:116`）。
+4. `src/jtag/interfaces.c` —— 6 条 `&<name>_adapter_driver,`，各由
+   `#if BUILD_<SYM> == 1` 包住（`:72`–`:135`）。
 5. `.github/workflows/snapshot.yml` —— `OPENOCD_CONFIG` 里加
    `--enable-dirtyjtag --enable-adi-ice1000 --enable-adi-ice1500
-   --enable-adi-dbgagent --enable-adi-usbmux`。
+   --enable-adi-dbgagent --enable-adi-mpdbgagent --enable-adi-usbmux`。
 
 > `mp_dbgagent_adapter_driver`（`adi_dbg_agent.c` 里的第二个 `adapter_driver`）
-> 已在 `interface.h` 声明并有实现，但**没有**在 `interfaces.c` 注册，
-> 所以 `adapter list` 里看不到它。这是当前状态，不是 bug。
+> 已在 `interface.h` 声明、在 `interfaces.c` 注册（`:135`），
+> 并有独立的 `--enable-adi-mpdbgagent` 开关。
 
 CI 产物（`openocd-<tag>-x86_64-w64-mingw32.tar.gz`）实测：
 
@@ -162,7 +166,7 @@ ice1500        { jtag }
 > `find` proc 去磁盘里找文件，写成 `-f "adapter driver dirtyjtag"` 会报
 > `Can't find adapter driver`，看起来像驱动没编进去，其实是参数用错了。
 
-### 已接入的芯片架构（8 个 target_type）
+### 已接入的芯片架构（10 个 target_type）
 
 这一批是本 fork 新增的**芯片架构**，不只是探针。接线点同样在五个地方，
 但入口换成 `--enable-third-party-targets`（默认开）：
@@ -177,6 +181,8 @@ ice1500        { jtag }
 | `loongarch` | `loongarch.c` + `loongarch_ejtag.c` + `loongarch_pracc.c` | `tcl/target/loongson2k300.cfg` |
 | `mchp_ri4_bridge` | `mchp_ri4_bridge.c` + `mchp_ri4_native.c` | `tcl/target/mchp-ri4.cfg`、`dspic33-ri4.cfg`、`pic18-ri4.cfg`、`pic32mz-ri4.cfg` |
 | `vexriscv` | `vexriscv.c` | `tcl/target/arty7_*.cfg`、`murax*.cfg`、`saxon*.cfg`、`briey.cfg`、`vexriscv_sim.cfg` |
+| `rvmax` | `rvmax/rvmax.c` + `rvmax_du_adv.c` + `rvmax_tap_mohor.c` | `tcl/target/max32655_riscv.cfg`、`max32680_riscv.cfg`、`max32690_riscv.cfg`、`max78000_riscv.cfg`、`max78002_riscv.cfg` |
+| `rv32m1` | `rv32m1/rv32m1.c` + `rv32m1_du_adv.c` + `rv32m1_tap_mohor.c` | `tcl/target/rv32m1_ri5cy.cfg`、`rv32m1_zero_riscy.cfg` |
 
 接线细节：
 
@@ -187,7 +193,10 @@ ice1500        { jtag }
 2. `src/target/Makefile.am` —— 整块包在 `if TARGETS_ALL` 里（`--disable-third-party-targets`
    真的能关掉）；`MCHP_RI4_SRC` 再包一层 `if USE_LIBUSB1`，
    `VEXRISCV_SRC` 再包一层 `if HAVE_LIBYAML`。
-3. `src/target/target.c` —— extern 块（`:75`–`:90`）和 `target_types[]`（`:92` 起）
+   `RVMAX_SRC` / `RV32M1_SRC` 直接列 `%D%/rvmax/xxx.c` 这样的子目录路径
+   —— 上游 `src/jtag/drivers/Makefile.am` 里的 `versaloon` 就是同一种写法，
+   且 `configure.ac:19` 已开 `subdir-objects`。
+3. `src/target/target.c` —— extern 块（`:75`–`:92`）和 `target_types[]`（`:94` 起）
    各加一组，**三组分别用 `BUILD_TARGETS_ALL` / `BUILD_MCHP_RI4` / `BUILD_VEXRISCV`
    守卫**，与 Makefile 的条件严格对应 —— 否则没有 libyaml 的机器会在链接期
    找不到 `vexriscv_target`。
@@ -197,6 +206,11 @@ ice1500        { jtag }
 5. `tools/patch_target_groups.py` 是这部分的唯一可信来源，**幂等**：连跑 3 次
    `configure.ac` / `src/target/Makefile.am` / `src/target/target.c` 字节完全一致。
    改了上面任何一处都要改脚本，不要手改生成结果。
+6. `rvmax` 与 `rv32m1` 的命令都带架构前缀（`rvmax_tap_select`、
+   `rv32m1_du_select`、`rv32m1_core_select` 等）。上游 `or1k` 注册的是无前缀的
+   `tap_select` / `du_select` / `addreg`，而 OpenOCD 对重名命令是**静默忽略**的
+   （`src/helper/command.c` 的 `register_command()` 命中已有名字就复用它），
+   所以无前缀的第二个后端会被前一个的 handler 接管。加前缀后三者可共存。
 
 ### 仍是「代码就位、未注册」（其余 29 个文件）
 
@@ -246,7 +260,7 @@ target 在任何公开仓库里都不存在（属于 Synopsys 内部交付）：
 ## 许可证提醒
 
 - `GPL-2.0`：139 个文件，来源明确。
-- `NOASSERTION`：382 个文件，GitHub 未能解析 SPDX。
+- `NOASSERTION`：398 个文件，GitHub 未能解析 SPDX。
 - `UNRESOLVED`：25 个文件，即依赖闭包补充的文件，来源已知但未单独解析。
 
 后两类在商用前需人工审计头部声明 —— `NOASSERTION` **不等于**宽松许可，
@@ -294,7 +308,7 @@ python tools/pipeline.py --apply
 |---|---|---|
 | C 驱动未注册进构建 | 29 | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
-| 无许可证信息 | 407 / 546（75%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
+| 无许可证信息 | 423 / 562（75%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 4 个 | `aji_client`、`tas_client`、`ddmi_usb`、`aice`（`dbgagent`/`ice2000` 已随本次接入进产物） |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 板级配置开箱即用不了 | 3 个 cfg | `arc_axc001/002/003_hs36.cfg` 需要的 `arc600`/`arc700` 来自未接入的 `arc32.c` 一族 |

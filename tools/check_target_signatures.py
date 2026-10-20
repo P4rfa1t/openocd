@@ -21,7 +21,9 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TT = ROOT / "src" / "target" / "target_type.h"
 
-# Files that install a struct target_type of their own.
+# Files that install a struct target_type of their own.  Paths are relative
+# to src/target; the two new architectures live in their own subdirectory
+# because their private headers collide with upstream's src/target/riscv/.
 BACKENDS = [
     "c28x.c",
     "tms320.c",
@@ -31,6 +33,8 @@ BACKENDS = [
     "loongarch.c",
     "mchp_ri4_bridge.c",
     "vexriscv.c",
+    "rvmax/rvmax.c",
+    "rv32m1/rv32m1.c",
 ]
 
 # Pointer/array/function declarators we do not want to treat as a type.

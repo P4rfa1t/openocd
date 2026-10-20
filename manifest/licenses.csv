@@ -15,6 +15,15 @@ src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/ice1500.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/jtag/drivers/usbmux.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/encoding.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/gdb_regs.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/opcodes.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax_du.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax_du_adv.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax_tap.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
+src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax_tap_mohor.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
 src/ C 源码（需在构建系统注册）,dynm/openocd-starbleed,GPL-2.0,src/jtag/drivers/cmsis_dap_usb.c,master,25c1d0466e04d905ece5c653fc6d11fb6d139650
 src/ C 源码（需在构建系统注册）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/jtag_esp_remote.c,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
 src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
@@ -57,6 +66,13 @@ src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/tar
 src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/tms320.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 src/ C 源码（需在构建系统注册）,yottatsa/openocd,NOASSERTION,src/target/vortex86.c,vortex86,6910de37c723fe3878012a92855f588741ae44b5
 src/ C 源码（需在构建系统注册）,yottatsa/openocd,NOASSERTION,src/target/vortex86.h,vortex86,6910de37c723fe3878012a92855f588741ae44b5
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/flash/nor/rv32m1.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1_du.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1_du_adv.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1_tap.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1_tap_mohor.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
 src/ C 源码（需在构建系统注册）,zuyih/openocd,NOASSERTION,src/jtag/drivers/cmsis_dap_wch.c,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,Blinkinlabs/OpenOCD,GPL-2.0,tcl/board/zy1000.cfg,master,bd1adcffe7f3e51f490bf57889e7454816661196
 tcl/ 配置（随树直接可用）,DCVostok/openocd-k1921vk,NOASSERTION,tcl/board/vostok_vg015_dev.cfg,master,7352db9493f02be44f641a6ced05e8edd607325f

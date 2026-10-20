@@ -479,6 +479,8 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/xtensa-core-adspsc84x.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,target,tcl/target/zynq_7000.cfg,ut2or1/openocd,master,NOASSERTION,0,87,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd ImproperCatGirl/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton RigoLigoRLC/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd aesc-silicon/elements-openocd analogdevicesinc/openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd coflery/openocd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sanchuanhehe/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd scmrtos/openocd-scmrtos snowcap-electronics/OpenOCD sony/openocd-nuttx stache3000/openocd-dirtyjtag stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd vllogic/openocd_cmsis-dap_v2 walmis/openocd-blackmagic watr-li/OpenOCD xerpi/openocd xpack-dev-tools/openocd xsession/openocd yottatsa/openocd zephyrproject-rtos/openocd,yes
 1,target,tcl/target/Ðº1879xÐ±1Ñ.cfg,sysprogs/esp8266-openocd,master,GPL-2.0,56,1,,no
+2,src,src/flash/nor/rp2040.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,no
+2,src,src/flash/nor/rv32m1.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
 2,src,src/jtag/drivers/adi_dbg_agent.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 2,src,src/jtag/drivers/al_link.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
 2,src,src/jtag/drivers/al_link_cyusb.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
@@ -593,6 +595,22 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/target/quark_d2000.h,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 2,src,src/target/quark_se.c,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 2,src,src/target/quark_se.h,intel/OpenOCD,master,GPL-2.0,12,1,,yes
+2,src,src/target/rv32m1/rv32m1.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
+2,src,src/target/rv32m1/rv32m1.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
+2,src,src/target/rv32m1/rv32m1_du.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
+2,src,src/target/rv32m1/rv32m1_du_adv.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
+2,src,src/target/rv32m1/rv32m1_tap.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
+2,src,src/target/rv32m1/rv32m1_tap_mohor.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
+2,src,src/target/rvmax/debug_defines.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/target/rvmax/encoding.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/gdb_regs.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/opcodes.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/rvmax.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/rvmax.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/rvmax_du.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/rvmax_du_adv.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/rvmax_tap.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/target/rvmax/rvmax_tap_mohor.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 2,src,src/target/stm32_stlink.c,mabl/openocd_chibios,chibios,GPL-2.0,5,3,corecode/openocd-swd hikob/openocd,no
 2,src,src/target/stm8.h,linux-msm/openocd,eud-rebased,NOASSERTION,26,51,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd HalfSweet/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd andestech/nds-openocd bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 fatalfeel/openocd_integrated flipperdevices/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch os-fpga/openocd sanchox/openocd satoshinm/openocd stacksmashing/openocd stacksmashing/openocd-tamarin tihmstar/openocd_colobus transcelestial/openocd walmis/openocd-blackmagic xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,yes
 2,src,src/target/stm8_hla_multicore.c,sysprogs/openocd,master,NOASSERTION,102,1,,no

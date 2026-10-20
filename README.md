@@ -56,22 +56,22 @@ and stripped of files that are equivalent to what upstream already ships.
 | | count | notes |
 |---|---:|---|
 | `tcl/` script files | 487 | 472 `.cfg` plus 15 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
-| `src/` C sources | 59 | 30 wired into the build, 29 staged but not yet registered |
+| `src/` C sources | 75 | 39 `.c` plus 36 `.h`; **46 wired into the build**, 29 staged but not yet registered |
 | duplicate copies collapsed | 4109 | one winner kept per path |
 | files dropped as upstream-equivalent | 99 | upstream already has them |
-| candidates rejected as unusable | 107 | build-system files, non-C payloads and core internals that exist upstream under the same name |
+| candidates rejected as unusable | 108 | build-system files, non-C payloads and core internals that exist upstream under the same name |
 
-Of the 607 unique paths the survey identified, **520 landed in the tree** and
-87 did not: 68 C sources that need per-backend porting, and 19 TCL files that
+Of the 625 unique paths the survey identified, **536 landed in the tree** and
+89 did not: 70 C sources that need per-backend porting, and 19 TCL files that
 reference a target or interface upstream never published (4 board, 7 interface,
-8 target) — the four Synopsys bring-up boards among them. A further 26 files
+8 target) — the four Synopsys bring-up boards among them. A further 25 files
 came in as dependencies — a config that `source`s another config pulls the
-referenced file in with it — so the tree holds 546 files in total, each one
+referenced file in with it — so the tree holds 562 files in total, each one
 with its own provenance entry.
 
-Upstream ships 2203 files; this tree ships 2798.
+Upstream ships 2203 files; this tree ships 2799.
 
-**All 546 imported files are pinned to the exact commit they came from.** Any
+**All 562 imported files are pinned to the exact commit they came from.** Any
 file can be traced back to the fork and the commit that published it:
 
 ```bash
@@ -101,14 +101,27 @@ exist.
 
 ### The `src/` files are split
 
-30 of the 59 new C sources are wired into the build and register a working
-`target_type` or `adapter_driver`:
+46 of the 75 new C sources and headers are wired into the build — 23 `.c`
+files that register a working `target_type` or `adapter_driver`, plus the
+headers they need:
 
 | group | backends | build switch |
 |---|---|---|
-| `TARGETS_ALL` | `c28x`, `tms320`, `quark_d2000`, `quark_se`, `vortex86`, `loongarch` | `--disable-third-party-targets` turns the group off |
+| `TARGETS_ALL` | `c28x`, `tms320`, `quark_d2000`, `quark_se`, `vortex86`, `loongarch`, `rvmax`, `rv32m1` | `--disable-third-party-targets` turns the group off |
 | `MCHP_RI4` | `mchp_ri4_bridge` | also needs libusb1 |
 | `VEXRISCV` | `vexriscv` | also needs libyaml |
+
+Ten target types in total are new to this tree, and six adapter drivers —
+`dirtyjtag`, `ice1000`, `ice2000`, `ice1500`, `dbgagent`, `mp_dbgagent` — are
+registered alongside upstream's 38 target types and 45 adapter drivers.
+
+The `rvmax` and `rv32m1` backends register their commands with an
+architecture prefix — `rvmax_tap_select`, `rv32m1_du_select`,
+`rv32m1_core_select` and so on. Upstream's `or1k` backend registers the
+unprefixed `tap_select` / `du_select` / `addreg` names, and OpenOCD silently
+ignores a second registration of an existing command name, so an unprefixed
+second backend would have been driven by the first one's handler. With the
+prefixes, all three coexist.
 
 The remaining 29 — the `arc32` family, `adi_v5_cmsis_dap`,
 `aarch64_coproc_reg`, the `blackmagic` / `ch347_jtag` / `cmsis_dap_usb` /
@@ -182,10 +195,10 @@ integrity check with 543 mismatches, because the tree had been rebuilt in
 text mode on Windows and every imported file was silently stored with CRLF
 while the manifest described the LF original. The gate could not tell "this
 was edited" from "this was checked out on a Windows host". Both are fixed now:
-the tree is LF everywhere, 517 files match their published digest byte for
-byte, 2 are labelled as terminator-only differences, and 27 carry real local
-edits — the target API ports, the relocated `source [find ...]` paths and the
-third-party driver fixes.
+the tree is LF everywhere, 523 files match their published digest byte for
+byte, 2 are labelled as terminator-only differences, and 37 carry real local
+edits — the target API ports, the relocated `source [find ...]` paths, the
+third-party driver fixes and the `rvmax` / `rv32m1` backends.
 
 Files that were deliberately removed stay in the manifests under
 `removed_from_tree`, with the reason and the commit that removed them. The
@@ -198,8 +211,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 546
-on disk  : 546
+recorded : 562
+on disk  : 562
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -222,11 +235,16 @@ could not resolve.
 | `tools/prune_shadow.py` | drop shadow copies of files upstream moved to another directory |
 | `tools/build_provenance.py` | merge the two tier manifests into the combined one |
 | `tools/consolidate.py` | rebuild the consolidation index from the survey data |
+| `tools/survey_nested_src.py` | repair the survey for source files in a subdirectory of a probed directory |
 | `tools/gen_licenses.py` | regenerate `docs/03-LICENSES.md` and `manifest/licenses.csv` |
 | `tools/gen_report.py` | regenerate `docs/01-inventory.md` |
 | `tools/patch_target_groups.py` | idempotent wiring of the target groups into `configure.ac`, `src/target/Makefile.am` and `src/target/target.c` |
 | `tools/patch_interfaces.py`, `tools/patch_interface_h.py`, `tools/patch_makefile.py`, `tools/patch_usbmux.py` | the same kind of idempotent wiring for the adapter drivers |
 | `tools/check_target_signatures.py` | compare the third-party backends' callback signatures against upstream's `target_type` |
+| `tools/port_new_archs.py` | read-only: assert that the rvmax / rv32m1 port is complete and that no pre-port form survived |
+| `tools/stage_new_archs.py` | copy the staged rvmax / rv32m1 sources into their in-tree locations, byte for byte |
+| `tools/stage_new_imports.py` | download newly approved third-party files into a staging directory, never into the tree |
+| `tools/stage_symbol_check.py`, `tools/deep_link_check.py` | read-only: find identifiers the staged files use that upstream does not define |
 | `tools/fix_target_apis.py`, `tools/fix_driver_apis.py` | port the imported backends across upstream API drift |
 | `tools/fix_relocated_sources.py` | repair `source [find ...]` references left pointing at a flat path upstream has since reorganised |
 | `tools/audit_dangling_refs.py` | read-only: find `source [find X]` references that resolve to nothing |
@@ -249,7 +267,7 @@ every block it owns so the script can find and replace its own work.
 | [`docs/01-inventory.md`](docs/01-inventory.md) | the inventory: how many repositories, how many files, where they came from |
 | [`docs/02-usage.md`](docs/02-usage.md) | usage notes, and the list of known limitations |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | per-file license table |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 546 imported files |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 562 imported files |
 
 ---
 
@@ -259,7 +277,7 @@ The OpenOCD sources inherited from upstream are GPL-2.0-or-later; the
 documentation is GFDL-1.2-no-invariants-or-later. See `COPYING` and `LICENSES/`.
 
 **The imported third-party files are not covered by that blanket statement.**
-Of 546 files, GitHub resolved 139 as GPL-2.0, 382 as `NOASSERTION` (which
+Of 562 files, GitHub resolved 139 as GPL-2.0, 398 as `NOASSERTION` (which
 means *GitHub could not determine a license* — not that it is permissive) and
 25 as unresolvable. Some `NOASSERTION` files carry their own proprietary
 notices, for example the Analog Devices flash algorithms, which state that the
@@ -273,9 +291,9 @@ first. The `LICENSE` file spells this out in full.
 
 ## Known limitations
 
-- **29 of the 59 new C sources are not compiled.** They are staged in the tree
-  with their provenance intact, but they target upstream APIs that have moved.
-  Registering them needs per-backend porting work.
+- **29 of the 75 new C sources and headers are not compiled.** They are staged
+  in the tree with their provenance intact, but they target upstream APIs that
+  have moved. Registering them needs per-backend porting work.
 - **Four Synopsys board configs were left out.** `board/synopsys_amla3.cfg`,
   `board/synopsys_angel4.cfg`, `board/synopsys_haps51.cfg` and
   `board/synopsys_ml509.cfg` are published in `intel/OpenOCD` but have no
