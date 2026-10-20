@@ -676,6 +676,7 @@ static const struct command_registration mchp_ri4_command_handlers[] = {
 		.mode = COMMAND_ANY,
 		.help = "native Microchip PICkit 4 / ICD 4 RI4 commands",
 		.chain = mchp_ri4_exec_command_handlers,
+		.usage = "",
 	},
 	COMMAND_REGISTRATION_DONE
 };
