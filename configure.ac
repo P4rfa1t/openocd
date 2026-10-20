@@ -186,7 +186,8 @@ m4_define([DIRTYJTAG_ADAPTER],
 m4_define([ADI_ADAPTERS],
 	[[[adi_ice1000], [Analog Devices ICE-1000/ICE-2000], [ADI_ICE1000]],
 	[[adi_ice1500], [Analog Devices ICE-1500], [ADI_ICE1500]],
-	[[adi_dbgagent], [Analog Devices Debug Agent], [ADI_DBGAGENT]]])
+	[[adi_dbgagent], [Analog Devices Debug Agent], [ADI_DBGAGENT]],
+	[[adi_mpdbgagent], [Analog Devices Multi-processor Debug Agent], [ADI_MPDBGAGENT]]])
 
 # The Analog Devices USB MUX is a Windows-only helper that lets several
 # processes share one AD-USB-MUX device over a named pipe. It is built as a

@@ -233,8 +233,15 @@ endif
 if ADI_ICE1500
 DRIVERFILES += %D%/ice1500.c
 endif
+# adi_dbg_agent.c provides two adapter drivers: "dbgagent" and "mpdbgagent".
+# Both live in the same translation unit, so the file is added exactly once
+# when either of the two configure switches is enabled.
 if ADI_DBGAGENT
 DRIVERFILES += %D%/adi_dbg_agent.c
+else
+if ADI_MPDBGAGENT
+DRIVERFILES += %D%/adi_dbg_agent.c
+endif
 endif
 if ADI_USBMUX
 DRIVERFILES += %D%/usbmux.c

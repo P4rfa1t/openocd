@@ -137,7 +137,7 @@ jobs:
           # so adi_ice1000 becomes --enable-adi-ice1000.
           # ADI_* need libusb-1.x; adi-usbmux only builds on Win32 hosts
           # (it is #ifdef _WIN32 throughout) and this job targets mingw.
-          export OPENOCD_CONFIG="--enable-dirtyjtag --enable-adi-ice1000 --enable-adi-ice1500 --enable-adi-dbgagent --enable-adi-usbmux"
+          export OPENOCD_CONFIG="--enable-dirtyjtag --enable-adi-ice1000 --enable-adi-ice1500 --enable-adi-dbgagent --enable-adi-mpdbgagent --enable-adi-usbmux"
           mkdir -p $BUILD_DIR &&  cd $BUILD_DIR
           bash $OPENOCD_SRC/contrib/cross-build.sh $HOST
           # add missing dlls

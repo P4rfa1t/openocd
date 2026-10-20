@@ -19,6 +19,7 @@ ENTRY = "\t\t&{drv},"
 # (sort key used to place it, BUILD symbol, driver variable)
 ENTRIES = [
     ("d", "ADI_DBGAGENT", "dbgagent_adapter_driver"),      # adi_* ... after "cklink"/"cmsis"? see note
+    ("d", "ADI_MPDBGAGENT", "mp_dbgagent_adapter_driver"),
     ("d", "ADI_ICE1000", "ice1000_adapter_driver"),
     ("d", "ADI_ICE1000", "ice2000_adapter_driver"),
     ("d", "ADI_ICE1500", "ice1500_adapter_driver"),
@@ -31,6 +32,7 @@ ENTRIES = [
 ANCHORS = {
     "dbgagent_adapter_driver": "dmem_dap_adapter_driver",
     "dirtyjtag_adapter_driver": "dmem_dap_adapter_driver",   # 'dirty' > 'dmem'? no -> handled below
+    "mp_dbgagent_adapter_driver": "opendous_adapter_driver",
     "ice1000_adapter_driver": "jlink_adapter_driver",
     "ice2000_adapter_driver": "jlink_adapter_driver",
     "ice1500_adapter_driver": "jlink_adapter_driver",
@@ -50,6 +52,10 @@ ORDER = [
         ("ADI_ICE1000", "ice1000_adapter_driver"),
         ("ADI_ICE1000", "ice2000_adapter_driver"),
         ("ADI_ICE1500", "ice1500_adapter_driver"),
+    ]),
+    # 'mpdbgagent' sorts after 'linuxspidev' and before 'opendous'.
+    ("opendous_adapter_driver", [
+        ("ADI_MPDBGAGENT", "mp_dbgagent_adapter_driver"),
     ]),
 ]
 
