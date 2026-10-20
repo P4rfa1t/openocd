@@ -1,238 +1,325 @@
-# openocd
+# OpenOCD Third-Party Support
 
-[![build](https://github.com/P4rfa1t/openocd/actions/workflows/build.yml/badge.svg)](https://github.com/P4rfa1t/openocd/actions/workflows/build.yml)
+[![snapshot](https://github.com/P4rfa1t/openocd/actions/workflows/snapshot.yml/badge.svg)](https://github.com/P4rfa1t/openocd/actions/workflows/snapshot.yml)
 
-**`openocd-org/openocd` 的 fork** —— 把散落在 GitHub 各家 fork 里、从未上游化的
-芯片 / 开发板 / 烧录器支持，直接合并进 OpenOCD 源码树。
+A fork of [`openocd-org/openocd`](https://github.com/openocd-org/openocd) that folds
+chip, board and programmer support from community forks **into the source tree
+itself** — the same directories, the same build system, the same `git merge`.
 
-上游文件原封不动躺在 `src/`、`tcl/`、`doc/`、`contrib/` 里；新增的第三方支持
-落在**它们本该在的位置**：
-
-```
-tcl/target/xxx.cfg            ← 芯片目标配置
-tcl/board/xxx.cfg             ← 开发板配置
-tcl/interface/xxx.cfg         ← 调试器接口
-src/jtag/drivers/xxx.c        ← 烧录器驱动
-src/target/xxx.c              ← 新架构支持
-```
-
-没有外挂目录，没有搜索路径技巧，没有"先装官方、再叠一层"。更新时只需
-`git fetch upstream && git merge upstream/master` —— 上游重命名 TCL、加驱动、
-改构建脚本，冲突由 git 正常呈现，而不是被一份静默遮蔽的副本吞掉。
+> A Chinese-language version of this document lives in [`README.zh-CN.md`](README.zh-CN.md).
 
 ---
 
-## 合并了什么
+## Why this exists
 
-扫描 688 个 OpenOCD 相关仓库，跨仓去重、剔除与官方等价的副本后：
+OpenOCD's upstream has always been conservative about new targets. A chip
+support usually lives in a maintainer's fork for years — sometimes forever —
+because the pull request never arrives. Meanwhile the same board config gets
+copy-pasted between 40 repositories, each with a slightly different spelling,
+and `openocd -f board/whatever.cfg` works on one machine and not the next.
 
-| 内容 | 数量 | 位置 | 状态 |
-|---|---:|---|---|
-| `tcl/` 配置 | 505 | 与官方同一目录 | **随构建生效**（上游 `Makefile.am` 用 `find` 通配安装，无需改构建脚本） |
-| `src/` C 源码 | 127 | 与官方同一目录 | 已就位，**仍需在构建系统里注册**（见下文「未完成的部分」） |
-| 折叠掉的重复副本 | 4109 | — | 去重后只保留一个胜出版本 |
-| 与官方重复而剔除 | 99 | — | 上游已收编该支持 |
+Collecting those forks into a separate overlay directory does not fix this.
+An overlay has to shadow the official file search path, so a later upstream
+rename silently keeps serving the stale copy. There is no merge, only
+overwrite.
 
-全部 **632 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交：
+**This repository is a real fork.** Upstream files sit in `src/`, `tcl/`,
+`doc/`, `contrib/` exactly where upstream put them. Third-party support sits
+in the directories it belongs in:
+
+```
+tcl/target/xxx.cfg        ← chip target config
+tcl/board/xxx.cfg         ← board config
+tcl/interface/xxx.cfg     ← debug probe interface
+src/jtag/drivers/xxx.c    ← programmer driver
+src/target/xxx.c          ← new architecture backend
+```
+
+Updating is one command, and the conflicts are real conflicts you can read:
+
+```bash
+git fetch upstream
+git merge upstream/master
+```
+
+When upstream reorganises a directory, git shows you the conflict. It does not
+silently keep serving a stale duplicate from a shadowed search path.
+
+---
+
+## What was merged
+
+688 candidate repositories were surveyed — 499 forks of upstream plus 189
+independent repositories found by search — deduplicated across repositories,
+and stripped of files that are equivalent to what upstream already ships.
+
+| | count | notes |
+|---|---:|---|
+| `tcl/` script files | 487 | 472 `.cfg` plus 15 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
+| `src/` C sources | 59 | 30 wired into the build, 29 staged but not yet registered |
+| duplicate copies collapsed | 4109 | one winner kept per path |
+| files dropped as upstream-equivalent | 99 | upstream already has them |
+| candidates rejected as unusable | 107 | build-system files, non-C payloads and core internals that exist upstream under the same name |
+
+Of the 607 unique paths the survey identified, **520 landed in the tree** and
+87 did not: 68 C sources that need per-backend porting, and 19 TCL files that
+reference a target or interface upstream never published (4 board, 7 interface,
+8 target) — the four Synopsys bring-up boards among them. A further 26 files
+came in as dependencies — a config that `source`s another config pulls the
+referenced file in with it — so the tree holds 546 files in total, each one
+with its own provenance entry.
+
+Upstream ships 2203 files; this tree ships 2798.
+
+**All 546 imported files are pinned to the exact commit they came from.** Any
+file can be traced back to the fork and the commit that published it:
 
 ```bash
 python - <<'PY'
 import json
-f = json.load(open("manifest/PROVENANCE.json", encoding="utf-8"))["files"]
-p = f["tcl/target/nucleo_l552ze.cfg"]
-print(p["source_repo"], p["source_branch"], p["source_commit"], p["license"])
+files = json.load(open("manifest/PROVENANCE.json", encoding="utf-8"))["files"]
+entry = files["tcl/target/nucleo_l552ze.cfg"]
+print(entry["source_repo"], entry["source_branch"], entry["source_commit"], entry["license"])
 PY
 ```
 
-## 构建
+The survey covered **53 distinct source repositories**.
 
-就是标准的 OpenOCD 构建，没有额外步骤：
+### The `tcl/` files work immediately
+
+Upstream's root `Makefile.am` installs TCL with a wildcard, not a hardcoded
+list:
+
+```makefile
+TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '*.txt'
+```
+
+So a new `.cfg` is picked up by `make install` with **no change to
+`configure.ac` or `Makefile.am` and no recompilation**. Any scheme that
+generates build entries for these files is inventing complexity that does not
+exist.
+
+### The `src/` files are split
+
+30 of the 59 new C sources are wired into the build and register a working
+`target_type` or `adapter_driver`:
+
+| group | backends | build switch |
+|---|---|---|
+| `TARGETS_ALL` | `c28x`, `tms320`, `quark_d2000`, `quark_se`, `vortex86`, `loongarch` | `--disable-third-party-targets` turns the group off |
+| `MCHP_RI4` | `mchp_ri4_bridge` | also needs libusb1 |
+| `VEXRISCV` | `vexriscv` | also needs libyaml |
+
+The remaining 29 — the `arc32` family, `adi_v5_cmsis_dap`,
+`aarch64_coproc_reg`, the `blackmagic` / `ch347_jtag` / `cmsis_dap_usb` /
+`jtag_tcp` drivers, and a few headers — are **present in the tree but not
+compiled**. They target upstream APIs that have since moved, and registering
+them would need the same porting work described below. Shipping them
+unregistered is deliberate: the code is there, visible, reviewable, and
+harmless until it is wired up.
+
+---
+
+## Building
+
+This is a standard OpenOCD tree. There is no extra step.
 
 ```bash
-git clone --recursive <this repo>
+git clone --recursive https://github.com/P4rfa1t/openocd.git
 cd openocd
 ./bootstrap && ./configure && make -j
 sudo make install
 ```
 
-Windows 见上游 `README.Windows.md`（本仓库未改动）。
-
-### CI：Windows 免安装包
-
-`.github/workflows/snapshot.yml` 就是**官方仓库自己的**那个 workflow
-（`openocd-org/openocd/.github/workflows/snapshot.yml`），内容原样照搬，只改了三处：
-
-| 改动 | 原因 |
-| --- | --- |
-| 目标平台 `i686-w64-mingw32` → `x86_64-w64-mingw32`，工具链包同步换成 `g++-mingw-w64-x86-64`，`libgcc_s_dw2-1.dll` → `libgcc_s_seh-1.dll` | 本仓库出 64 位包；x86_64 用 SEH 展开，DLL 名字跟着变 |
-| 删掉「打 tag + 发 Release + 删旧的 latest Release」两步 | 发 Release 要 tag，而且会往本仓库的 Releases 里写东西，CI 验证用不上 |
-| 触发方式加上 `workflow_dispatch` | 不提交也能手动重新跑 |
-
-其余全部是官方的：`contrib/cross-build.sh` 依次编 libusb、hidapi、libftdi、capstone、
-libjaylink、jimtcl 进 sysroot，交叉编译 OpenOCD，`make install-strip` 到 `usr/`，
-补三个工具链 DLL，再把整个 `usr/` 打包。所以包里是 **exe + 全部 DLL + 整份 `tcl/`**，
-解压即用，不需要额外装 libusb 之类的东西。
-
-跑完在 Actions 的 artifact 里拿 `openocd-<commit>-x86_64-w64-mingw32.tar.gz`。
-
-（早先手写的 `build.yml` 已删：它只把 `openocd.exe` 打进包，链接时却用了
-`-lusb-1.0 -lftdi1 -lhidapi`，DLL 一个都没带，解压后双击必然报缺 DLL；
-而且包里没有 `tcl/`，就算起来了也没有配置文件可加载。）
-
-关于第三方配置：`tcl/` 的安装方式是 `find $(srcdir)/tcl -name '*.cfg' -o -name '*.tcl'`，
-不是写死的文件清单，所以新增的 505 个 tcl 配置**自动**进包
-（其中 502 个在包内，3 个 `.xml` 内存映射文件不属于安装规则的范围，详见 `docs/`）。
-`src/` 的 127 个第三方 C 驱动还没有注册进 `Makefile.am`，不参与编译 ——
-也就是说 CI 通过证明的是"上游代码 + 第三方 tcl 能编译并打包"，不证明第三方 C 驱动能编译。
-
-验证用的上游基线（commit + 全量文件清单）记录在
-`manifest/upstream.json` 与 `manifest/upstream-index.txt`。
-
-## 使用
-
-编译安装后，所有新配置都在标准搜索路径下：
+Third-party target architectures are on by default. To build upstream's tree
+only:
 
 ```bash
-openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
+./configure --disable-third-party-targets
 ```
 
-也可以直接从源码树运行未安装的版本：
+Three optional dependencies are probed, not required. A missing library only
+removes the group that needs it; `configure` never fails because of them.
+
+| dependency | enables |
+|---|---|
+| `libusb-1.0` | the `mchp_ri4_bridge` USB backend and every ADI probe |
+| `libyaml-0.1` | the `vexriscv` target |
+| `zlib` | `mchp_ri4` firmware download (`.gz` script bundles) |
+
+Windows: see upstream's `README.Windows.md`. This fork does not change it.
+
+### CI: prebuilt Windows package
+
+`.github/workflows/snapshot.yml` cross-compiles an x86_64 Windows package with
+MinGW and uploads it as a workflow artifact. It is upstream's own workflow with
+the target triplet and the release-publishing step adjusted; the dependency
+list (libusb1, hidapi, libftdi, capstone, libjaylink, jimtcl, libyaml, zlib)
+and the build recipe are upstream's.
+
+---
+
+## Tracking every change
+
+### Provenance
+
+`manifest/PROVENANCE.json` records, per file: the source repository, the
+branch, the exact commit, the license as GitHub resolved it, the SHA-256 of
+the file as published, and any local divergence. Two per-tier manifests
+(`manifest/tier1-PROVENANCE.json`, `manifest/tier2-PROVENANCE.json`) hold the
+same data before it is merged.
+
+Divergence is recorded in two distinct forms, because they mean different
+things:
+
+- `content edited in this fork` — a real change: a port to a newer upstream
+  API, a repaired `source [find ...]` path, a build-system fix.
+- `line endings normalised to LF` — the content is byte-identical to what the
+  fork published; only the terminators differ.
+
+The distinction matters. An earlier revision of this repository failed its own
+integrity check with 543 mismatches, because the tree had been rebuilt in
+text mode on Windows and every imported file was silently stored with CRLF
+while the manifest described the LF original. The gate could not tell "this
+was edited" from "this was checked out on a Windows host". Both are fixed now:
+the tree is LF everywhere, 517 files match their published digest byte for
+byte, 2 are labelled as terminator-only differences, and 27 carry real local
+edits — the target API ports, the relocated `source [find ...]` paths and the
+third-party driver fixes.
+
+Files that were deliberately removed stay in the manifests under
+`removed_from_tree`, with the reason and the commit that removed them. The
+audit trail is bidirectional.
+
+### Verifying
 
 ```bash
-./src/openocd -s tcl -f board/xxx.cfg
+python tools/verify_tree.py
 ```
 
-## 目录
-
 ```
-tcl/            OpenOCD 配置树（官方 + 505 个第三方配置）
-src/            C 源码（官方 + 127 个第三方驱动/目标）
-doc/ testing/ contrib/ jimtcl/   上游原有内容，未改动
-
-manifest/       合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            632 个文件的来源仓库/分支/commit/SHA-256/许可证
-  tier1-PROVENANCE.json      └ tcl/ 部分（抓取器直接写出的中间产物）
-  tier2-PROVENANCE.json      └ src/ 部分
-  consolidated.json          去重决策：胜出者、被折叠的重复、上游重复项
-  upstream.json              本 fork 所基于的上游 commit
-  upstream-index.txt         该 commit 的全量文件清单，去重判定基准
-  repos.csv / repos.json     688 个候选仓库排名
-  survey.json                粗筛原始结果
-  licenses.csv               逐文件许可证索引
-
-docs/00-findings.md     调研结论 + 方法论修正记录（踩过的坑）
-docs/01-inventory.md    清单报告（自动生成）
-docs/02-usage.md        使用说明、构建、未完成的部分
-docs/03-LICENSES.md     许可证清单（自动生成）
-
-tools/              可复现的流水线，全部步骤幂等
+recorded : 546
+on disk  : 546
+errors   : 0
+warns    : 26
+VERIFY: PASS
 ```
 
-> **480 vs 505**：`manifest/consolidated.json` 记录 480 个上游确实没有的独立支持项；
-> 磁盘上有 505 个 `tcl` 文件，差额 25 个是为满足 `source [find ...]` 引用而补齐的依赖。
-> 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
-> 不会把已剔除的副本再拉回来。
+The 26 warnings are one file whose name collides with an upstream file but
+whose content differs (kept, deliberately) and 25 files whose license GitHub
+could not resolve.
 
-## 维护
+### Other tools
 
-### 跟上官方主线
+| tool | what it does |
+|---|---|
+| `tools/verify_tree.py` | offline integrity gate: every recorded file present, digests match, no upstream duplicates, TCL braces balanced |
+| `tools/refresh_provenance.py` | refresh digests after a deliberate edit, keeping the original under `pristine_sha256` |
+| `tools/normalize_eol.py` | normalise text files to LF, skipping binaries by the same 8 KiB NUL heuristic git uses |
+| `tools/sync_upstream.py` | report what upstream added, removed or absorbed since the pinned commit |
+| `tools/prune_deleted.py` | drop manifest records for files intentionally removed from the tree |
+| `tools/prune_upstream_dups.py` | drop imported files upstream now has |
+| `tools/prune_shadow.py` | drop shadow copies of files upstream moved to another directory |
+| `tools/build_provenance.py` | merge the two tier manifests into the combined one |
+| `tools/consolidate.py` | rebuild the consolidation index from the survey data |
+| `tools/gen_licenses.py` | regenerate `docs/03-LICENSES.md` and `manifest/licenses.csv` |
+| `tools/gen_report.py` | regenerate `docs/01-inventory.md` |
+| `tools/patch_target_groups.py` | idempotent wiring of the target groups into `configure.ac`, `src/target/Makefile.am` and `src/target/target.c` |
+| `tools/patch_interfaces.py`, `tools/patch_interface_h.py`, `tools/patch_makefile.py`, `tools/patch_usbmux.py` | the same kind of idempotent wiring for the adapter drivers |
+| `tools/check_target_signatures.py` | compare the third-party backends' callback signatures against upstream's `target_type` |
+| `tools/fix_target_apis.py`, `tools/fix_driver_apis.py` | port the imported backends across upstream API drift |
+| `tools/fix_relocated_sources.py` | repair `source [find ...]` references left pointing at a flat path upstream has since reorganised |
+| `tools/audit_dangling_refs.py` | read-only: find `source [find X]` references that resolve to nothing |
+| `tools/audit_target_headers.py` | read-only: check every third-party target's includes against the tree |
+| `tools/fetch_third_party.py`, `tools/fetch_missing_tcl.py` | re-fetch imported files from their pinned commits |
+| `tools/mine_github.py`, `tools/refine_survey.py`, `tools/resolve_deps.py`, `tools/pin_commits.py` | the survey stage: discover, classify and pin the candidate repositories |
+| `tools/pipeline.py`, `tools/run_mine.sh`, `tools/run_fetch.sh` | the survey pipeline end to end |
 
-```bash
-git fetch upstream && git merge upstream/master
-python tools/sync_upstream.py            # 官方新增/删除了什么、哪些支持已被上游收编
-python tools/verify_tree.py              # 必须 VERIFY: PASS
-```
+`tools/patch_target_groups.py` is idempotent by design — running it twice
+produces byte-identical files, and the tree carries a sentinel comment marking
+every block it owns so the script can find and replace its own work.
 
-`tools/sync_upstream.py` 纯离线，只用 git：
+---
 
-- 对比 `manifest/upstream-index.txt` 与当前上游，列出官方新增 / 删除的文件；
-- 找出**本 fork 里有、而官方现在也提供的**文件 —— 这些是该删掉改用官方版本的支持，
-  退出码非 0，CI 里可以直接当门禁；
-- 找出官方对应路径被移动（改名）的导入文件，提醒复查。
+## Documentation
 
-清理命令：
+| file | contents |
+|---|---|
+| [`docs/00-findings.md`](docs/00-findings.md) | the research phase: what the mechanism is, what was tried, what was wrong |
+| [`docs/01-inventory.md`](docs/01-inventory.md) | the inventory: how many repositories, how many files, where they came from |
+| [`docs/02-usage.md`](docs/02-usage.md) | usage notes, and the list of known limitations |
+| [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | per-file license table |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 546 imported files |
 
-```bash
-python tools/prune_upstream_dups.py    # 路径相同 / 改名后相同
-python tools/prune_shadow.py            # 同名但目录不同（如 am335x.cfg vs ti/am335x.cfg）
-python tools/build_provenance.py        # 重新汇总 PROVENANCE.json
-python tools/verify_tree.py             # 必须回到 errors: 0
-```
+---
 
-> `prune_shadow.py` 必须独立存在：规范化比对会把 `am335x.cfg` 和
-> `ti/am335x.cfg` 折叠成同一个键，而它们是两个不同的文件。早期漏掉这一类，
-> 结果 16 个扁平副本长期遮蔽着官方版本。
+## License
 
-### 吸收新的 fork
+The OpenOCD sources inherited from upstream are GPL-2.0-or-later; the
+documentation is GFDL-1.2-no-invariants-or-later. See `COPYING` and `LICENSES/`.
 
-```bash
-export GH_TOKEN=<token>          # 仅从环境变量读取，绝不写入任何文件
-export PYTHONIOENCODING=utf-8    # 部分文件名含非 GBK 字符
+**The imported third-party files are not covered by that blanket statement.**
+Of 546 files, GitHub resolved 139 as GPL-2.0, 382 as `NOASSERTION` (which
+means *GitHub could not determine a license* — not that it is permissive) and
+25 as unresolvable. Some `NOASSERTION` files carry their own proprietary
+notices, for example the Analog Devices flash algorithms, which state that the
+software is proprietary to Analog Devices, Inc.
 
-bash tools/run_mine.sh            # 扫描全部候选仓库
-python tools/refine_survey.py     # 过滤噪声
-python tools/consolidate.py       # 跨仓去重 + 剔除官方已有
-python tools/run_fetch.sh         # 抓取（tier1→tcl/，tier2→src/）
-python tools/resolve_deps.py --apply    # 补齐 source 引用依赖，直到闭合
-python tools/pin_commits.py              # 回填 commit pin
-python tools/gen_report.py               # 清单报告
-python tools/gen_licenses.py             # 许可证清单
-python tools/build_provenance.py         # 汇总 PROVENANCE.json
-python tools/verify_tree.py              # 完整性校验，必须 PASS
-```
+This repository therefore has **no single license of its own**. If you intend
+to redistribute it, read `manifest/licenses.csv` and `docs/03-LICENSES.md`
+first. The `LICENSE` file spells this out in full.
 
-一键跑完整流水线（`--apply` 才写入，默认只报告）：
+---
 
-```bash
-python tools/pipeline.py --apply
-python tools/pipeline.py --apply --tier 2     # 连 src/ 一起
-```
+## Known limitations
 
-**增量性**：`consolidate.py` 按路径去重，抓取器默认不覆盖已有文件，
-重复跑只会补上新增的部分。
+- **29 of the 59 new C sources are not compiled.** They are staged in the tree
+  with their provenance intact, but they target upstream APIs that have moved.
+  Registering them needs per-backend porting work.
+- **Four Synopsys board configs were left out.** `board/synopsys_amla3.cfg`,
+  `board/synopsys_angel4.cfg`, `board/synopsys_haps51.cfg` and
+  `board/synopsys_ml509.cfg` are published in `intel/OpenOCD` but have no
+  matching target file in any public repository — they are bring-up boards
+  that need a Synopsys-internal build. The files that *would* have referenced
+  them were therefore not imported either, so no dangling reference is left
+  behind. They are listed in `manifest/consolidated.json` under
+  `not_imported`.
+- **Upstream naming drift is preserved, not fixed.** Where a fork published
+  several spellings of the same board, the winning spelling was kept and the
+  others were collapsed — the losers are recorded in
+  `manifest/consolidated.json` under `path_spellings`.
+- **The upstream baseline is pinned.** `manifest/upstream.json` records the
+  upstream commit the tree was forked from. `tools/sync_upstream.py` reports
+  the delta against any other ref.
+- **Three ARC board configs will not work yet.** `arc_axc001.cfg`,
+  `arc_axc002.cfg` and `arc_axc003_hs36.cfg` create targets named `arc600`,
+  `arc700` and `arcv2`. Upstream's rewritten `src/target/arc.c` only provides
+  `arcv2`; the other two come from the `arc32` family that is staged but not
+  compiled. Wiring that family up is what fixes these three configs.
 
-### 提交前必须通过
+---
 
-```bash
-python tools/verify_tree.py      # VERIFY: PASS，且 errors: 0
-```
+## Contributing
 
-当前状态：
+Pull requests are welcome, and the bar is specific:
 
-```
-recorded 632 / on disk 632 / pinned 632 / errors 0
-```
+1. **Do not add a copy of a file upstream already has.** Check first; the
+   survey found 4109 such duplicates and 99 files that upstream had since
+   absorbed.
+2. **If you change an imported file, refresh the manifest.** Run
+   `python tools/refresh_provenance.py` and commit the result, so the digest
+   matches the file and the change is recorded rather than hidden.
+3. **If you port a backend, wire it up in `tools/patch_target_groups.py`,**
+   not by hand-editing `configure.ac` and `src/target/Makefile.am`. The script
+   owns those blocks and will otherwise overwrite your change.
+4. **Keep the tree LF.** `.gitattributes` enforces it; `tools/normalize_eol.py`
+   fixes a tree that has drifted.
 
-## 完整性保证
+---
 
-`tools/verify_tree.py`（纯离线，可当 CI 检查）：
+## Acknowledgements
 
-- 每个 provenance 条目都有真实文件，**1:1 对账**
-- 每个文件的 SHA-256 与记录一致（`.gitattributes` 已关闭 `tcl/`、`src/` 的
-  EOL 转换，否则 Windows 上的 `core.autocrlf` 会让校验全灭）
-- 没有「记录了但磁盘缺失」或「磁盘有但未记录」
-- 没有与官方等价或同名遮蔽的重复副本
-- 所有 `.cfg`/`.tcl` 的花括号与方括号在忽略注释和引号后平衡
-- 许可证覆盖率统计
-
-## 未完成的部分
-
-| 项目 | 规模 | 说明 |
-|---|---|---|
-| C 驱动未注册进构建 | 127 | 文件已在 `src/` 的正确位置，但 `configure.ac` / `Makefile.am` / `drivers.c` / `target.c` 里还没有对应条目，需要逐个评估能否编译后再注册 |
-| 无许可证信息 | 476 / 632（75%） | 商用前必须人工审计，见 [docs/03-LICENSES.md](docs/03-LICENSES.md) |
-| 烧录器只有配置没有驱动 | 7 个 | `dbgagent`、`aji_client`、`tas_client`、`ddmi_usb`、`aice`、`mpdbgagent`、`ice2000` |
-| Synopsys 板级不可用 | 4 个 | 依赖厂商内部构建产物 |
-| 未深挖的仓库 | 488 / 688 | 全部做过粗筛，只深挖了 star 靠前的 200 个 |
-| 无运行时验证 | 全部 | 校验全是静态的，未在真机上 `source` 过 |
-
-## 安全
-
-`GH_TOKEN` 只从环境变量读取，**绝不写入任何文件**。所有工具脚本在缺少该变量时
-直接失败而不是降级成匿名限流运行。
-
-## 许可
-
-OpenOCD 上游是 GPL-2.0-or-later。**本仓库汇集了他人的 fork，整体许可并不统一**：
-156 个文件明确标注 GPL-2.0，451 个来自 GitHub 无法解析 SPDX 的仓库，25 个
-来源已知但未标注。逐文件清单见 [docs/03-LICENSES.md](docs/03-LICENSES.md)。
+This tree exists because 53 repositories of other people published chip
+support that upstream would not take. Their commits, their code and their
+license statements are preserved in `manifest/`. The original authors of
+upstream OpenOCD did the work this fork is built on.
