@@ -889,9 +889,9 @@ static int rv32m1_add_breakpoint(struct target *target,
 
 		/* Detect Instruction length at breakpoint address again
 		   Some older version GDB dose not handle compressed instruction correct */
-		int instruction_len = rv32m1_chk_instruction_len(data);
+		uint32_t instruction_len = rv32m1_chk_instruction_len(data);
 
-		if (instruction_len <= 0)
+		if (instruction_len == 0)
 		{
 			LOG_ERROR("Error while detecting instruction length at 0x%08" TARGET_PRIxADDR ", instruction 0x%08x",
 					breakpoint->address, data);

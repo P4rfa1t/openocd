@@ -135,3 +135,7 @@ Thumbs.db
 *TOKEN*
 *credential*
 *secret*
+
+# Scratch files left behind by file-editing tooling.
+.dsh-ops-update-*.lock
+*.lock
