@@ -269,6 +269,37 @@ Inc."。
   `arc_axc003_hs36.cfg` 创建的是 `arc600`、`arc700`、`arcv2` 三种 target。
   上游重写过的 `src/target/arc.c` 只提供 `arcv2`，另外两个来自那族已就位但
   未接线的 `arc32` 源码。把那族接进构建，这三份配置就能用了。
+- **192 个导入的配置还在用已废弃的 `-chain-position`。** 上游的 `tcl/` 里已经
+  一处不剩；`src/target/arm_dap.c` 和 `src/target/target.c` 都会打印
+  `DEPRECATED! '-chain-position' will be removed in the future, use '-tap'
+  instead`，PLD 驱动那边也会警告。导入的文件保留了它们各自 fork 里发布的
+  写法。机械替换只能自动处理 219 处里的 49 处 —— 多数文件的 TAP 是在另一个
+  配置里定义的，对应的 `-tap` 名字得从那个文件里读出来，剩下的要人工过一遍。
+  目前不影响使用，这个选项还有效，但改到哪个配置就顺手改掉哪个。
+- **`adi-usbmux` 开关是空的。** `src/jtag/drivers/usbmux.c` 是 Win32 命名管道
+  helper，不是 adapter driver，但它现在被挂在 `PROCESS_ADAPTERS` 上，于是
+  `--enable-adi-usbmux` 存在，而树里根本没有叫 `usbmux` 的 `adapter_driver`。
+  更麻烦的是 `dbgagent` 驱动用来判断「要不要走 mux」的那个宏
+  `_ADI_USB_MUX_` 全仓从未定义，所以 `adi_dbg_agent.c` 里的 mux 代码被编译
+  掉了，`use_usbmux` 命令实际是空操作。源 fork 的做法是把它当成普通的
+  `AC_ARG_ENABLE([usbmux])` helper，用 `USE_USBMUX` 包起来 —— 应该改回那个
+  形态。
+- **三组导入候选被卡在上游，而不是被卡在这棵树上。** 扫描发现了 ESP32 GPIO
+  bit-bang 探针、WCH RISC-V 调试探针和 Anlogic AL-Link 探针的支持，文件也已经
+  取回来分析过，但三组都没法原样落地：
+  - `esp_gpio.c` / `esp_gpio.h` 依赖整套 ESP-IDF 的 GPIO 与 dedicated-GPIO
+    HAL（`driver/gpio.h`、`hal/gpio_ll.h`），OpenOCD 树里根本不存在。
+  - `wlinke.c` 需要一整套 SDI transport 层 —— `src/jtag/` 下的 `sdi.c` /
+    `sdi.h` 一对文件，外加 `struct adapter_driver` 上的 `sdi_ops` 成员，
+    上游没有；
+    而 `wch_riscv.c` 是上游 `riscv.c` 的私有分叉，依赖上游标成 `static`
+    的符号。
+  - `al_link.c` 需要 `JTAG_TDI` 命令类型、`DEBUG_CAP_TDI_SEQ` 能力位和
+    `jtag_add_tdi_seq()` —— 上游一个都没有 —— 而且它用的 CyUSB 后端只支持
+    Windows。
+
+  它们仍然记录在 `manifest/consolidated.json` 的 `not_imported` 里，连同来源
+  commit，工作不会白做。
 
 ---
 

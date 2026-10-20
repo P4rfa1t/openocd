@@ -299,6 +299,9 @@ python tools/pipeline.py --apply
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 板级配置开箱即用不了 | 3 个 cfg | `arc_axc001/002/003_hs36.cfg` 需要的 `arc600`/`arc700` 来自未接入的 `arc32.c` 一族 |
 | 无运行时验证 | 全部 | 校验全是静态的，未在真机上 `source` 过 |
+| `-chain-position` 旧写法 | 192 个文件 / 219 处 | 上游 `tcl/` 已清零；机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
+| `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
+| 三组导入候选被上游阻塞 | 14 个文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows） |
 
 ## 已处理的重复问题
 

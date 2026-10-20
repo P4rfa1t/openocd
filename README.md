@@ -296,6 +296,42 @@ first. The `LICENSE` file spells this out in full.
   `arc700` and `arcv2`. Upstream's rewritten `src/target/arc.c` only provides
   `arcv2`; the other two come from the `arc32` family that is staged but not
   compiled. Wiring that family up is what fixes these three configs.
+- **192 imported config files still use the deprecated `-chain-position`
+  option.** Upstream has no occurrence left in `tcl/`; it prints
+  `DEPRECATED! '-chain-position' will be removed in the future, use '-tap'
+  instead` from `src/target/arm_dap.c` and `src/target/target.c`, and the PLD
+  drivers warn as well. The imported files kept the spelling their fork
+  published. A mechanical rewrite only resolves 49 of the 219 occurrences
+  automatically, because most files define their TAP in another config and
+  the right `-tap` name has to be read off that file; the rest need a human
+  pass. Nothing is broken today — the option still works — but it is the
+  first thing to fix when a config is touched.
+- **The `adi-usbmux` switch is inert.** `src/jtag/drivers/usbmux.c` is a
+  Win32 named-pipe helper, not an adapter driver, but it is currently wired
+  through `PROCESS_ADAPTERS`, so `--enable-adi-usbmux` exists without there
+  being any `adapter_driver` called `usbmux`. Worse, `_ADI_USB_MUX_` — the
+  macro the `dbgagent` driver checks to route traffic through the mux — is
+  never defined anywhere, so the mux code in `adi_dbg_agent.c` compiles out
+  and the `use_usbmux` command is a no-op. The source fork treats it as a
+  plain `AC_ARG_ENABLE([usbmux])` helper guarded by `USE_USBMUX`; that is
+  the shape this should go back to.
+- **Three import candidates are blocked on upstream, not on this tree.**
+  The survey found support for the ESP32 GPIO bit-bang probe, the WCH
+  RISC-V debug probe and the Anlogic AL-Link probe, and they were fetched
+  and analysed. None of them can be dropped in as-is:
+  - `esp_gpio.c` / `esp_gpio.h` need the ESP-IDF GPIO and dedicated-GPIO HAL
+    (`driver/gpio.h`, `hal/gpio_ll.h`), which is not part of the OpenOCD
+    tree at all.
+  - `wlinke.c` needs a whole SDI transport layer — an `sdi.c` / `sdi.h` pair
+    under `src/jtag/` and an `sdi_ops` member on `struct adapter_driver` —
+    that upstream does not have, and `wch_riscv.c` is a private fork of
+    upstream's `riscv.c` that expects symbols upstream keeps `static`.
+  - `al_link.c` needs a `JTAG_TDI` command type, a `DEBUG_CAP_TDI_SEQ`
+    capability bit and `jtag_add_tdi_seq()` — upstream has none of them —
+    and the CyUSB backend it uses is Windows-only.
+
+  They stay in `manifest/consolidated.json` under `not_imported`, with the
+  commits they came from, so the work is not lost.
 
 ---
 
