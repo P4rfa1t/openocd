@@ -134,7 +134,11 @@
         "jeanthom/openocd-dirtyjtag",
         "luyi1888/openocd"
       ],
-      "sha256": "0b7440181fd6bbbe3c72e23a4def477a92e35e11a0f282b765319447acaed6a2"
+      "sha256": "65c90c9d09bb4bd0ae48a9d619b373830d0732a25b5b49bb977537dea2a29119",
+      "pristine_sha256": "0b7440181fd6bbbe3c72e23a4def477a92e35e11a0f282b765319447acaed6a2",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/jtag/drivers/ice1000.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -144,7 +148,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "d68619f14b149a1cf3d2187733f83817a30a7f4e9df10f01d186e9f719fc4f9d"
+      "sha256": "6af41e297c0447781d303ea126c9ea45b4b47920fa7167c62eed1f5899d50617",
+      "pristine_sha256": "d68619f14b149a1cf3d2187733f83817a30a7f4e9df10f01d186e9f719fc4f9d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/jtag/drivers/ice1500.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -204,7 +212,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "7d1f83c9eb73506cff265559e717e80c86055d28442bf6f72076d7e4905747f6"
+      "sha256": "62a58c6c55dbc66e252714a8a22cf37022aaeaede389be84d88ce66271596d65",
+      "pristine_sha256": "7d1f83c9eb73506cff265559e717e80c86055d28442bf6f72076d7e4905747f6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/jtag/drivers/usbmux.h": {
       "source_repo": "analogdevicesinc/openocd",
@@ -546,7 +558,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "bdce9571a53e1dafef09e164d567b5dbd05ddf71a7287d9c44c8b5ea8ea05037"
+      "sha256": "a4c01b0457dd331fc8e0d1052f2d144bd39402f1abf76fca06fdb7e4dd2d90da",
+      "pristine_sha256": "bdce9571a53e1dafef09e164d567b5dbd05ddf71a7287d9c44c8b5ea8ea05037",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/mchp_ri4_native.h": {
       "source_repo": "xsession/openocd",
@@ -566,7 +582,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "9bd5625fd4d1d9924f4e1ee126ca8aacff5fad2758cc62fa6c5a3c7877854401"
+      "sha256": "73c4569b9ce689d8134243caaf58f29cb90497be09479bfe544b7856e6122567",
+      "pristine_sha256": "9bd5625fd4d1d9924f4e1ee126ca8aacff5fad2758cc62fa6c5a3c7877854401",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/quark_d2000.h": {
       "source_repo": "intel/OpenOCD",
@@ -586,7 +606,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "ec07f40e6c5be8d31e7f0805d63ca56eaa17238b3b8129837f2aa39cf0e38bcc"
+      "sha256": "830b6007bc8b9c55684d94537c2868a9d16b392058db8fce9bdf2f1a726cd519",
+      "pristine_sha256": "ec07f40e6c5be8d31e7f0805d63ca56eaa17238b3b8129837f2aa39cf0e38bcc",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/quark_se.h": {
       "source_repo": "intel/OpenOCD",
@@ -701,7 +725,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "af62d1e6758df493a0c49d1e9e6830ca9b5f977bfd4ee092f0c9e090d6c51fa1"
+      "sha256": "cc8c51b53f95b67c6643186e83ed3302c777001b40f4117480c7443dd84d1d89",
+      "pristine_sha256": "af62d1e6758df493a0c49d1e9e6830ca9b5f977bfd4ee092f0c9e090d6c51fa1",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/vexriscv.h": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -723,7 +751,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 1,
       "also_present_in": [],
-      "sha256": "6f2da3c3442b38d5b25acd30bf085f46b6375235d3b4ba48fac5a12c55e6804d"
+      "sha256": "faf375674f61b06a52da49a074be310296649fce27923a36e1da00aee1d81080",
+      "pristine_sha256": "6f2da3c3442b38d5b25acd30bf085f46b6375235d3b4ba48fac5a12c55e6804d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/vortex86.h": {
       "source_repo": "yottatsa/openocd",
@@ -1950,7 +1982,11 @@
         "zephyrproject-rtos/openocd",
         "zhao0079/openocd"
       ],
-      "sha256": "1cb70475dd4268ffb27ab902d119c6eccb384aa665a86cf79d9747d47980752b"
+      "sha256": "d5034f2b23b877e7fb2d634edc940726c2363fcbfd2cfcbf7f2679209e790863",
+      "pristine_sha256": "1cb70475dd4268ffb27ab902d119c6eccb384aa665a86cf79d9747d47980752b",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/open-bldc.cfg": {
       "source_repo": "ciniml/openocd",
@@ -2332,7 +2368,11 @@
         "yottatsa/openocd",
         "zephyrproject-rtos/openocd"
       ],
-      "sha256": "84d4f6f753363b27e6bca5d07a63f5de6d7c8c3e4e9ca835dfdffafdd7cc629d"
+      "sha256": "83633f2d41936c34b4960ebe7f29643e31d9557a2fd4826e3a8536b6a374ca2e",
+      "pristine_sha256": "84d4f6f753363b27e6bca5d07a63f5de6d7c8c3e4e9ca835dfdffafdd7cc629d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/stm32mp15x_dk2.cfg": {
       "source_repo": "riscv-collab/riscv-openocd",
@@ -2388,7 +2428,11 @@
         "yottatsa/openocd",
         "zephyrproject-rtos/openocd"
       ],
-      "sha256": "7a74ec95d2799791ed1ef9d2732774ca3c37aa76baa78bb7ba15ff777a5dd9fd"
+      "sha256": "85d588fd315cd60eba91deaafc8cf9fd3959424ed0ba06c7f2da56a817d27265",
+      "pristine_sha256": "7a74ec95d2799791ed1ef9d2732774ca3c37aa76baa78bb7ba15ff777a5dd9fd",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/stm32mp25x_dk.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -2398,7 +2442,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "838ab7c66c5f959f899b77463582c788b93ec39a8a912d3d333acc81e2676513"
+      "sha256": "9ca5cecc1e810587319c1d05801e4899c13cb5e60ec9bf408963a14e0240de48",
+      "pristine_sha256": "838ab7c66c5f959f899b77463582c788b93ec39a8a912d3d333acc81e2676513",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_am625_swd_native.cfg": {
       "source_repo": "zuyih/openocd",
@@ -2440,7 +2488,11 @@
         "tom-van/openocd-rp2350-riscv",
         "transcelestial/openocd"
       ],
-      "sha256": "48e14a329b16796cf774a374f73e521bc3ae5703bea2ad821bfc2daea51af0d5"
+      "sha256": "566d386ca9edf2a837cba435effdb8eb02b522193d6a56f74f665f13d52953a9",
+      "pristine_sha256": "48e14a329b16796cf774a374f73e521bc3ae5703bea2ad821bfc2daea51af0d5",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_am62a7_swd_native.cfg": {
       "source_repo": "zuyih/openocd",
@@ -2467,7 +2519,11 @@
         "tokuden/openocd-win-ftd2xx",
         "tom-van/openocd-rp2350-riscv"
       ],
-      "sha256": "698959394a20a9757035d868f623cde7099c2b66677b6a40550b87e0e4a088d7"
+      "sha256": "79a1f8291f5e12718686a8a2a13778b04c532ab04b7d6333686ebc4c5c01e4b0",
+      "pristine_sha256": "698959394a20a9757035d868f623cde7099c2b66677b6a40550b87e0e4a088d7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_am62p_swd_native.cfg": {
       "source_repo": "zuyih/openocd",
@@ -2494,7 +2550,11 @@
         "tokuden/openocd-win-ftd2xx",
         "tom-van/openocd-rp2350-riscv"
       ],
-      "sha256": "560a5aa8615456325803a558c935d54f4d676c60108cce109229dbacae3fb943"
+      "sha256": "509bbe80185b54734b4e0c8d25a45e641e24a65f88d63aebe22f472844748f0f",
+      "pristine_sha256": "560a5aa8615456325803a558c935d54f4d676c60108cce109229dbacae3fb943",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_am64xx_swd_native.cfg": {
       "source_repo": "nmenon/openocd",
@@ -2507,7 +2567,11 @@
         "LeeScenic/openocd",
         "OlegGalizin/openocd-for-py32f0xx"
       ],
-      "sha256": "b15025cad61ffbaec0cdbb24fa54a5818baba5f095383c345edcc5426813936f"
+      "sha256": "e93fe01d2d106877b094e229625f04e07c5a12dadb72a55862622c63047f8dc9",
+      "pristine_sha256": "b15025cad61ffbaec0cdbb24fa54a5818baba5f095383c345edcc5426813936f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_beagleboard.cfg": {
       "source_repo": "zuyih/openocd",
@@ -2601,7 +2665,11 @@
         "zephyrproject-rtos/openocd",
         "zhao0079/openocd"
       ],
-      "sha256": "13d3fe3d9e1a820a9e661a160ea35ce9fe3a4ea7dfd7d35bb05339a2a3054ab7"
+      "sha256": "d6d51e68c45c3522a02bfdd8187b8ed5187fe14ba3fea036ea7ab0f6aa4fd61d",
+      "pristine_sha256": "13d3fe3d9e1a820a9e661a160ea35ce9fe3a4ea7dfd7d35bb05339a2a3054ab7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_beagleboard_xm.cfg": {
       "source_repo": "zuyih/openocd",
@@ -2695,7 +2763,11 @@
         "zephyrproject-rtos/openocd",
         "zhao0079/openocd"
       ],
-      "sha256": "6c70da27bc14ddbbf6f71475d06eb2afa4c4280292a58f32991814a3eb73c6c7"
+      "sha256": "20fc81cd0579d6cee0a2a2bb709252bbeff469979db01483942edab7a9386739",
+      "pristine_sha256": "6c70da27bc14ddbbf6f71475d06eb2afa4c4280292a58f32991814a3eb73c6c7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_beaglebone-base.cfg": {
       "source_repo": "zuyih/openocd",
@@ -2767,7 +2839,11 @@
         "yottatsa/openocd",
         "zephyrproject-rtos/openocd"
       ],
-      "sha256": "0c1eb941dd9f54f870a468892eee864d9fb05a6fcc27e72dd0c697dda6a172f3"
+      "sha256": "00b5410472e170d7d0b22e7293757bb2cff3e4f9f0a1f0b7317b7b50796e74a6",
+      "pristine_sha256": "0c1eb941dd9f54f870a468892eee864d9fb05a6fcc27e72dd0c697dda6a172f3",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_beaglebone.cfg": {
       "source_repo": "zuyih/openocd",
@@ -2981,7 +3057,11 @@
         "tom-van/openocd-rp2350-riscv",
         "transcelestial/openocd"
       ],
-      "sha256": "acb4e6a8370397fd1da3823dc3bd8afc823c9120a77477ea7b664ca32535a4d7"
+      "sha256": "0b71b2d0dbc9f3ad3880d16aaa53b4055ad81fd2bc666dc141e62850af7f1640",
+      "pristine_sha256": "acb4e6a8370397fd1da3823dc3bd8afc823c9120a77477ea7b664ca32535a4d7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_j722s_swd_native.cfg": {
       "source_repo": "zuyih/openocd",
@@ -3008,7 +3088,11 @@
         "tokuden/openocd-win-ftd2xx",
         "tom-van/openocd-rp2350-riscv"
       ],
-      "sha256": "9d068c903d9ad8dd9c81384e363de76e8b0859d049a1b40879cd576d681a6d81"
+      "sha256": "6df8515a37aba812bea7a2d40ba197602bd06e616e7e0063601f9f6cb13924cd",
+      "pristine_sha256": "9d068c903d9ad8dd9c81384e363de76e8b0859d049a1b40879cd576d681a6d81",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_j784s4_swd_native.cfg": {
       "source_repo": "nmenon/openocd",
@@ -3021,7 +3105,11 @@
         "LeeScenic/openocd",
         "OlegGalizin/openocd-for-py32f0xx"
       ],
-      "sha256": "edfc119757c46db23d6fb017a7f5abc8c118806285fa5723eed9b23e184318db"
+      "sha256": "d2ab08a708f5651b5849b2d2b711cd28cd19ee6f546fc1d35f293523089e93e5",
+      "pristine_sha256": "edfc119757c46db23d6fb017a7f5abc8c118806285fa5723eed9b23e184318db",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2340r5.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -4569,7 +4657,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 55,
       "also_present_in": [],
-      "sha256": "1c8c8b1d7b372a05ebb99f8daddbec4018f2606e860e9bc8f1932abf698cd787"
+      "sha256": "7ad5ad3e4d4fbe537915210b327b1fdb04a21046d4ee7c674ddc1e963a7f2a61",
+      "pristine_sha256": "1c8c8b1d7b372a05ebb99f8daddbec4018f2606e860e9bc8f1932abf698cd787",
+      "local_modifications": [
+        "line endings normalised to LF; content byte-identical to the published file"
+      ]
     },
     "tcl/interface/dirtyjtag-cjtag.cfg": {
       "source_repo": "luyi1888/openocd",
@@ -4602,7 +4694,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 26,
       "also_present_in": [],
-      "sha256": "77ef7f660f6b12d17479972f587eab2adc3fb78904f1fb4913cf0ebb837b984c"
+      "sha256": "4d8138d15bd6051697316574d566d53c9560f6345d1c909eb01ccf4312729c80",
+      "pristine_sha256": "77ef7f660f6b12d17479972f587eab2adc3fb78904f1fb4913cf0ebb837b984c",
+      "local_modifications": [
+        "line endings normalised to LF; content byte-identical to the published file"
+      ]
     },
     "tcl/interface/faultier.cfg": {
       "source_repo": "stacksmashing/openocd-tamarin",
@@ -6076,7 +6172,11 @@
         "sysprogs/esp8266-openocd",
         "watr-li/OpenOCD"
       ],
-      "sha256": "d7c63bd5c033f3e8303ac405f4cf607931539b188a622a86b19fdba90209ea38"
+      "sha256": "16adaefa6fd34b2b7f0dffecbb3dda7d9917e542bea6a1ab6a5dcdb9cb7b8a11",
+      "pristine_sha256": "d7c63bd5c033f3e8303ac405f4cf607931539b188a622a86b19fdba90209ea38",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/ch32f1x.cfg": {
       "source_repo": "zuyih/openocd",
@@ -7339,7 +7439,11 @@
         "walmis/openocd-blackmagic",
         "watr-li/OpenOCD"
       ],
-      "sha256": "d4c063800d22d033169ed58ab84c06c65fa54a8cde8939c196e20215bfd7eaa7"
+      "sha256": "b41abacf7d0ebd5e1bda89006e8993625ff18df28a4f287a8ad88d1e21ab49ee",
+      "pristine_sha256": "d4c063800d22d033169ed58ab84c06c65fa54a8cde8939c196e20215bfd7eaa7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/nrf_common.cfg": {
       "source_repo": "riscv-collab/riscv-openocd",
@@ -7637,7 +7741,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "3b9f69409166f39134bcde9396707ce6d2a21e96713dc17af3041b1b3910cd74"
+      "sha256": "795bac73b6efd6b4089afbf87a02475ecd1beef72cd3df380873bf65d52c24e2",
+      "pristine_sha256": "3b9f69409166f39134bcde9396707ce6d2a21e96713dc17af3041b1b3910cd74",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/rp2040-core0.cfg": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -7910,7 +8018,11 @@
         "walmis/openocd-blackmagic",
         "watr-li/OpenOCD"
       ],
-      "sha256": "c53a1f35175b845edcca2fc1506b4124d5f11d7fb57c7036b1923eb5d9ab4e67"
+      "sha256": "fdb3287090bbdb0ede0652f2d2e7fe8deb7b04fd5083f0639dc0b546468ae564",
+      "pristine_sha256": "c53a1f35175b845edcca2fc1506b4124d5f11d7fb57c7036b1923eb5d9ab4e67",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/stm32.cfg": {
       "source_repo": "hikob/openocd",
@@ -8541,7 +8653,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "515a94a8cb3a70389345adfb0a5d50e8d6687925b74fe48a19fbe33bfecdaa06"
+      "sha256": "945230624b17bab204fb482d32e02d6c59c7751d212b65b3c58e95168664736b",
+      "pristine_sha256": "515a94a8cb3a70389345adfb0a5d50e8d6687925b74fe48a19fbe33bfecdaa06",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/vd_xtensa_jtag.cfg": {
       "source_repo": "zephyrproject-rtos/openocd",

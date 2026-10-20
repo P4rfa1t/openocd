@@ -118,7 +118,11 @@
         "jeanthom/openocd-dirtyjtag",
         "luyi1888/openocd"
       ],
-      "sha256": "0b7440181fd6bbbe3c72e23a4def477a92e35e11a0f282b765319447acaed6a2"
+      "sha256": "65c90c9d09bb4bd0ae48a9d619b373830d0732a25b5b49bb977537dea2a29119",
+      "pristine_sha256": "0b7440181fd6bbbe3c72e23a4def477a92e35e11a0f282b765319447acaed6a2",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/jtag/drivers/ice1000.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -128,7 +132,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "d68619f14b149a1cf3d2187733f83817a30a7f4e9df10f01d186e9f719fc4f9d"
+      "sha256": "6af41e297c0447781d303ea126c9ea45b4b47920fa7167c62eed1f5899d50617",
+      "pristine_sha256": "d68619f14b149a1cf3d2187733f83817a30a7f4e9df10f01d186e9f719fc4f9d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/jtag/drivers/ice1500.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -188,7 +196,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "7d1f83c9eb73506cff265559e717e80c86055d28442bf6f72076d7e4905747f6"
+      "sha256": "62a58c6c55dbc66e252714a8a22cf37022aaeaede389be84d88ce66271596d65",
+      "pristine_sha256": "7d1f83c9eb73506cff265559e717e80c86055d28442bf6f72076d7e4905747f6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/jtag/drivers/usbmux.h": {
       "source_repo": "analogdevicesinc/openocd",
@@ -530,7 +542,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "bdce9571a53e1dafef09e164d567b5dbd05ddf71a7287d9c44c8b5ea8ea05037"
+      "sha256": "a4c01b0457dd331fc8e0d1052f2d144bd39402f1abf76fca06fdb7e4dd2d90da",
+      "pristine_sha256": "bdce9571a53e1dafef09e164d567b5dbd05ddf71a7287d9c44c8b5ea8ea05037",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/mchp_ri4_native.h": {
       "source_repo": "xsession/openocd",
@@ -550,7 +566,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "9bd5625fd4d1d9924f4e1ee126ca8aacff5fad2758cc62fa6c5a3c7877854401"
+      "sha256": "73c4569b9ce689d8134243caaf58f29cb90497be09479bfe544b7856e6122567",
+      "pristine_sha256": "9bd5625fd4d1d9924f4e1ee126ca8aacff5fad2758cc62fa6c5a3c7877854401",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/quark_d2000.h": {
       "source_repo": "intel/OpenOCD",
@@ -570,7 +590,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "ec07f40e6c5be8d31e7f0805d63ca56eaa17238b3b8129837f2aa39cf0e38bcc"
+      "sha256": "830b6007bc8b9c55684d94537c2868a9d16b392058db8fce9bdf2f1a726cd519",
+      "pristine_sha256": "ec07f40e6c5be8d31e7f0805d63ca56eaa17238b3b8129837f2aa39cf0e38bcc",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/quark_se.h": {
       "source_repo": "intel/OpenOCD",
@@ -685,7 +709,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "af62d1e6758df493a0c49d1e9e6830ca9b5f977bfd4ee092f0c9e090d6c51fa1"
+      "sha256": "cc8c51b53f95b67c6643186e83ed3302c777001b40f4117480c7443dd84d1d89",
+      "pristine_sha256": "af62d1e6758df493a0c49d1e9e6830ca9b5f977bfd4ee092f0c9e090d6c51fa1",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/vexriscv.h": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -707,7 +735,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 1,
       "also_present_in": [],
-      "sha256": "6f2da3c3442b38d5b25acd30bf085f46b6375235d3b4ba48fac5a12c55e6804d"
+      "sha256": "faf375674f61b06a52da49a074be310296649fce27923a36e1da00aee1d81080",
+      "pristine_sha256": "6f2da3c3442b38d5b25acd30bf085f46b6375235d3b4ba48fac5a12c55e6804d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/vortex86.h": {
       "source_repo": "yottatsa/openocd",

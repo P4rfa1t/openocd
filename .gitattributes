@@ -1,6 +1,5 @@
-# Checkout must be byte-identical on every platform.
-#
-# Two separate reasons:
+# Line endings must be identical on every platform, and the bytes stored in
+# the object database must be the bytes we published.
 #
 # 1. autoconf treats CR as data. With core.autocrlf=true (the GitHub Actions
 #    default on windows-latest) configure.ac landed with CRLF and aclocal died
@@ -8,9 +7,18 @@
 #    AC_CONFIG_FILES. eol=lf pins the worktree to LF regardless of the
 #    user's autocrlf setting.
 #
-# 2. Everything under tcl/ and src/ is verified by SHA-256 against
-#    manifest/PROVENANCE.json, so any EOL conversion would fail the integrity
-#    gate. -text disables conversion entirely for those trees.
+# 2. Everything imported from the third-party forks is verified by SHA-256
+#    against manifest/PROVENANCE.json. Those digests describe the files as
+#    the forks published them, and every one of those files is LF. With
+#    "text=auto" git normalises the worktree copy to LF on commit and checks
+#    out LF everywhere, so the stored blob is the published file again and
+#    the integrity gate can tell a real edit from a checkout artefact.
+#
+# 3. The three binary objects must never be touched. "text=auto" already
+#    detects them by the NUL byte, but they are listed explicitly as well so
+#    the intent is obvious and so a future heuristic change cannot break it.
 * text=auto eol=lf
-/tcl/** -text
-/src/** -text
+
+*.png   -text
+*.bit   -text
+*.bin   -text
