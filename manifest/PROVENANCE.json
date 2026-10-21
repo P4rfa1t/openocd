@@ -1,11 +1,11 @@
 {
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
-  "file_count": 562,
+  "file_count": 563,
   "integrity": {
-    "recorded": 562,
-    "on_disk": 562,
-    "pinned": 562,
+    "recorded": 563,
+    "on_disk": 563,
+    "pinned": 563,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "unresolved_references": {
@@ -37,6 +37,20 @@
       "also_present_in": [],
       "sha256": "e017d1478554bad885161f3c851e226040b54b9d630425665ce559df2460d99a",
       "pristine_sha256": "52cdab6c3a3a813bd98bde9e4292afaeea6ebe106ab9a8848dca9bbcee0ee732",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "src/flash/nor/stldr_driver.c": {
+      "source_repo": "STMicroelectronics/OpenOCD",
+      "source_branch": "openocd-cubeide-r7",
+      "source_commit": "c8d973bdad9a6fddb51459eda109b3b95d23b57a",
+      "source_path": "src/flash/nor/stldr_driver.c",
+      "license": "GPL-2.0-or-later",
+      "stars_at_import": 29,
+      "also_present_in": [],
+      "sha256": "c3ccb672633fee69cafb882c5b3ea77ac5672f16b348fd960f9586dc88f450fa",
+      "pristine_sha256": "2ef5869423f23490f37b503f712563c13c6c400aab4ce07a300dd17099c6e92b",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
       ]
