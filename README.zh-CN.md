@@ -51,21 +51,39 @@ git merge upstream/master
 | | 数量 | 说明 |
 |---|---:|---|
 | `tcl/` 脚本文件 | 487 | 472 个 `.cfg` + 15 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
-| `src/` C 源码 | 75 | 39 个 `.c` 加 36 个 `.h`；**46 个已接入构建**，29 个已就位但未注册 |
-| 折叠掉的重复副本 | 4109 | 每条路径只保留一个胜出版本 |
-| 与官方重复而剔除 | 99 | 上游已经收编 |
-| 判定不可用而排除 | 107 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
+| `src/` C 源码 | 76 | 40 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，29 个已就位但未注册 |
+| 折叠掉的重复副本 | 6910 | 每条路径只保留一个胜出版本 |
+| 与官方重复而剔除 | 7376 | 上游已经收编，或上游已把它挪到子目录 |
+| 判定不可用而排除 | 621 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
 
-扫描识别出的 625 条唯一路径里，**536 条进了树**，89 条没进：70 个需要逐后端移植
-的 C 源码，以及 19 个引用了上游从未发布的 target 或 interface 的 TCL 文件
-（4 个 board、7 个 interface、8 个 target）—— 其中就包括下面说的四份
-Synopsys bring-up 板级配置。另有 26 个文件是作为依赖进来的 —— 一个配置
-`source` 另一个配置时，被引用的文件会一起被带进来 —— 所以树里一共
-562 个文件，每个都有自己的来源记录。
+扫描识别出的 1298 条唯一路径里，**557 条进了树**，741 条没进。
 
-上游共 2203 个文件，本树 2799 个。
+没进来的 328 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
+是照着旧版 OpenOCD 的 API 写的。其中 `src/flash/nor` 最大（96 个），其次是
+`src/target`（52 个）和 `src/jtag/drivers`（19 个）。
 
-**全部 562 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+没进来的 413 个 TCL 文件分这样：
+
+| | 数量 | 原因 |
+|---|---:|---|
+| 上游已经收编 | 73 | 上游把它们挪进了子目录 —— 其中 15 个除 `source [find ...]` 路径外完全一致，另外 58 个上游后来又改过 |
+| 树里已有同内容文件 | 3 | 某个 fork 拷贝了一份这里已经有的文件，只是换了名字 |
+| **原样就能导入** | **253** | 它们的 `source [find ...]` 引用全部可解析，且所需的驱动、target type、flash 算法树里都已经有了 |
+| 缺一个树里没有的后端 | 42 | 它们驱动的是 C 代码从未公开的探针或芯片族 —— ST-LINK 外部加载器家族、Infineon TriCore、WCH RISC-V、ESP32 GPIO 探针、Anlogic `al_link` 探针之类 |
+| 依赖上面那 42 个 | 34 | 架在那种后端之上的板级配置 |
+| 其它 | 8 | 四份目标定义从未公开的 Synopsys bring-up 板级配置，以及四份上游西里尔字母配置被转码错乱后的副本 |
+
+另外两组补齐了 **563 个文件**这个数，每个都有自己的来源记录：
+
+- **25 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
+  文件会一起被带进来；manifest 里标为 `imported_as: dependency`。
+- **1 个文件上游也有同名版本** —— `tcl/target/adspsc58x.cfg`，内容与上游的
+  `tcl/target/adsp-sc58x.cfg` 不同。树里保留第三方版本，
+  `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
+
+上游共 2203 个文件，本树 2822 个。
+
+**全部 563 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -93,7 +111,7 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 
 ### `src/` 文件分两种状态
 
-75 个新 C 源文件与头文件里有 46 个已接入构建 —— 23 个能注册出可用的
+76 个新 C 源文件与头文件里有 47 个已接入构建 —— 24 个能注册出可用的
 `target_type` 或 `adapter_driver` 的 `.c`，加上它们需要的头文件：
 
 | 组 | 后端 | 构建开关 |
@@ -117,6 +135,35 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 —— **在树里，但没被编译**。它们针对的是上游已经改过接口的 API，要注册它们，
 得先做下面说的那套移植。故意这样交付：代码在树里、可见、可审阅，在接上之前
 完全无害。
+
+### ST-LINK 外部加载器驱动
+
+`src/flash/nor/stldr_driver.c` 是 STMicroelectronics 的外部加载器驱动，从
+`STMicroelectronics/OpenOCD` 的 `openocd-cubeide-r7` 分支导入。它让一个 flash
+bank 可以由 ST-LINK 固件 blob 来烧写，而不是靠专用 flash 算法 —— 较新的 STM32
+系列就是这样烧的。
+
+驱动基本按厂商原样导入，只改了两处：
+
+- **ELF 结构在文件内自带定义。** `.stldr` 是个 ELF32 object，驱动自己手工遍历
+  section header 和符号表，没走 OpenOCD 通用的 image 层。`<elf.h>` 并非每个构建
+  宿主都有 —— Windows 发布版是用 MinGW 交叉编译的，那里没有 `elf.h` —— 所以文件
+  自带它需要的 `Elf32_Shdr` / `Elf32_Sym` 定义，并包在 `#ifndef HAVE_ELF_H` 里，
+  有 elf.h 的宿主仍然用系统的。
+- **超时参数改成无符号。** `stldr_exec_function()` 原本是 `int`，而
+  `target_run_algorithm()` 的形参是 `unsigned int`。
+
+**`.stldr` 加载器二进制本身不在本仓库里。** 它们是 ST 发布的专有 blob，用到它们
+的四份导入配置会在运行时去 `loaders/stldr/...` 找：
+
+| 配置 | 需要的加载器 |
+|---|---|
+| `tcl/target/stm32v8x.cfg` | 按板子用 `stldr set_loader` 指定 |
+| `tcl/target/stm32l4plusx.cfg` | 按板子用 `stldr set_loader` 指定 |
+| `tcl/board/art_pi2.cfg` | `loaders/stldr/ART-Pi2_ST_winbond_64MB.stldr` |
+| `tcl/board/atk_cnn647b.cfg` | `loaders/stldr/MX25UM25645G_ATK-CNN647B_ExtMemLoader.stldr` |
+
+把需要的加载器复制到 `openocd` 可执行文件旁边的 share 目录，再让配置指过去。
 
 ---
 
@@ -177,7 +224,7 @@ jimtcl、libyaml、zlib）和构建配方都是上游的。
 棵树是在 Windows 上以文本模式重建的，每个导入文件都被悄悄存成了 CRLF，而
 manifest 描述的是 LF 原件。门禁分不清"这个文件被改过"和"这个文件是在 Windows
 上检出的"。现在两边都修好了：树里全是 LF，523 个文件与发布方摘要逐字节吻合，
-2 个被标为仅行尾符差异，37 个带真实本地编辑 —— target API 移植、重定位后的
+2 个被标为仅行尾符差异，38 个带真实本地编辑 —— target API 移植、重定位后的
 `source [find ...]` 路径修正、第三方驱动的修复，以及 `rvmax` / `rv32m1` 两个后端。
 
 被有意移除的文件仍留在 manifest 的 `removed_from_tree` 段里，连同移除原因和
@@ -190,8 +237,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 562
-on disk  : 562
+recorded : 563
+on disk  : 563
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -213,6 +260,9 @@ GitHub 解析不出许可证的文件。
 | `tools/prune_shadow.py` | 删掉上游换目录后残留的影子副本 |
 | `tools/build_provenance.py` | 把两个分层 manifest 合并成总表 |
 | `tools/consolidate.py` | 从扫描原始数据重建整合索引 |
+| `tools/survey_nested_src.py` | 修补扫描：被探测目录下的**子目录**里的源文件 |
+| `tools/expand_subtrees.py` | 修补扫描：递归走 trees API 当成不透明条目的那些子目录 |
+| `tools/sync_doc_numbers.py` | 按 manifest 重写文档里手写的数字，让它们不会漂移 |
 | `tools/gen_licenses.py` | 重新生成 `docs/03-LICENSES.md` 与 `manifest/licenses.csv` |
 | `tools/gen_report.py` | 重新生成 `docs/01-inventory.md` |
 | `tools/patch_target_groups.py` | 幂等地把 target 组接进 `configure.ac`、`src/target/Makefile.am`、`src/target/target.c` |
@@ -243,7 +293,7 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 562 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 563 个导入文件的机器可读来源记录 |
 
 ---
 
@@ -252,7 +302,7 @@ GitHub 解析不出许可证的文件。
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 562 个文件里，GitHub 解析出
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 563 个文件里，GitHub 解析出
 139 个为 GPL-2.0，398 个为 `NOASSERTION`（意思是*GitHub 判定不出许可证*，不是
 说它宽松），25 个无法解析。有些 `NOASSERTION` 文件自带专有声明，例如 Analog
 Devices 的 flash 算法，写着 "This software is proprietary to Analog Devices,
@@ -266,7 +316,13 @@ Inc."。
 
 ## 已知限制
 
-- **75 个新 C 源文件与头文件里有 29 个没被编译。** 它们带着完整来源记录躺在树里，
+- **253 个 TCL 文件原样就能导入，但还没导。** 补齐扫描的子目录盲区之后重新评估了
+  全部候选：有 253 个配置文件的 `source [find ...]` 引用全部可解析，所需的驱动、
+  target type、flash 算法树里也都已经有了，一个 C 文件都不用改，只要把文件本身放
+  进来。另有 42 个需要树里还没有的后端，34 个架在它们之上。逐项分类见
+  `manifest/consolidated.json` 的 `not_imported` 段，文件级分析见
+  `manifest/nor-driver-scan.json`。
+- **76 个新 C 源文件与头文件里有 29 个没被编译。** 它们带着完整来源记录躺在树里，
   但针对的是已经改过接口的上游 API。要注册需要逐个后端做移植。
 - **四份 Synopsys 板级配置没导入。** `board/synopsys_amla3.cfg`、
   `board/synopsys_angel4.cfg`、`board/synopsys_haps51.cfg`、
@@ -321,8 +377,8 @@ Inc."。
 
 欢迎提 PR，标准很具体：
 
-1. **不要加一份上游已有的文件的副本。** 先查；本次扫描找到 4109 份这样的
-   重复，以及 99 个上游后来已经收编的文件。
+1. **不要加一份上游已有的文件的副本。** 先查；本次扫描找到 6910 份这样的
+   重复，以及 7376 个上游后来已经收编的文件。
 2. **改了导入文件就刷新 manifest。** 跑
    `python tools/refresh_provenance.py` 并把结果一起提交，让摘要与文件一致，
    改动被记录而不是被掩盖。

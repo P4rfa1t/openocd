@@ -13,6 +13,7 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,board,tcl/board/adspsc846w_mp_ezkit.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,board,tcl/board/altera_arria10__aji_client.cfg,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,yes
 1,board,tcl/board/altera_arria10_niosv__aji_client.cfg,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,yes
+1,board,tcl/board/am3517evm.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
 1,board,tcl/board/arc_axs101.cfg,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,1,,yes
 1,board,tcl/board/arc_axs102.cfg,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,1,,yes
 1,board,tcl/board/arc_axs103_hs36.cfg,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,1,,yes
@@ -32,6 +33,20 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,board,tcl/board/art_pi2.cfg,zuyih/openocd,master,NOASSERTION,0,1,,yes
 1,board,tcl/board/arty_s7.cfg,ut2or1/openocd,master,NOASSERTION,0,67,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd ImproperCatGirl/openocd KilyannBrault/openocd LeeScenic/openocd OlegGalizin/openocd-for-py32f0xx RigoLigoRLC/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd aesc-silicon/elements-openocd analogdevicesinc/openocd andestech/nds-openocd ciniml/openocd cjacker/wch-openocd coflery/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 fatalfeel/openocd_integrated flipperdevices/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchuanhehe/openocd scmrtos/openocd-scmrtos stache3000/openocd-dirtyjtag stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd vllogic/openocd_cmsis-dap_v2 walmis/openocd-blackmagic xerpi/openocd xpack-dev-tools/openocd xsession/openocd yottatsa/openocd zephyrproject-rtos/openocd,yes
 1,board,tcl/board/atk_cnn647b.cfg,zuyih/openocd,master,NOASSERTION,0,1,,yes
+1,board,tcl/board/da850evm.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/dm355evm.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/dm365evm.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/dm6446evm.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/ek-lm3s1968.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/ek-lm3s3748.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/ek-lm3s6965.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/ek-lm3s811-revb.cfg,zuyih/openocd,master,NOASSERTION,0,80,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,no
+1,board,tcl/board/ek-lm3s811.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/ek-lm3s8962.cfg,zuyih/openocd,master,NOASSERTION,0,79,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,no
+1,board,tcl/board/ek-lm3s9b9x.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/ek-lm3s9d92.cfg,zuyih/openocd,master,NOASSERTION,0,79,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,no
+1,board,tcl/board/ek-lm4f120xl.cfg,zuyih/openocd,master,NOASSERTION,0,78,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,no
+1,board,tcl/board/ek-lm4f232.cfg,zuyih/openocd,master,NOASSERTION,0,81,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,no
 1,board,tcl/board/esp32c2-bridge.cfg,espressif/openocd-esp32,master,NOASSERTION,471,1,,yes
 1,board,tcl/board/esp32c3-bridge.cfg,espressif/openocd-esp32,master,NOASSERTION,471,1,,yes
 1,board,tcl/board/esp32c5-bridge.cfg,espressif/openocd-esp32,master,NOASSERTION,471,1,,yes
@@ -73,6 +88,18 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,board,tcl/board/ev-sc598-som.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,board,tcl/board/gemini.cfg,os-fpga/openocd,master,NOASSERTION,2,1,,yes
 1,board,tcl/board/iar_lpc1768.cfg,ut2or1/openocd,master,NOASSERTION,0,95,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd ImproperCatGirl/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton RigoLigoRLC/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd analogdevicesinc/openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd coflery/openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sanchuanhehe/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd scmrtos/openocd-scmrtos snowcap-electronics/OpenOCD sony/openocd-nuttx stache3000/openocd-dirtyjtag stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd vllogic/openocd_cmsis-dap_v2 walmis/openocd-blackmagic watr-li/OpenOCD xerpi/openocd xpack-dev-tools/openocd xsession/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,yes
+1,board,tcl/board/infineon/appkit_tc277_tft.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_a2g_tc366_5v_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_a2g_tc375_lite.cfg,zuyih/openocd,master,NOASSERTION,0,2,go2sh/aurix-openocd,no
+1,board,tcl/board/infineon/kit_a2g_tc377tx_3v3_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_a2g_tc387_3v3_tft.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_a2g_tc387_3v3_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_a2g_tc397_5v_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_a3g_tc4d7_lite.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_aurix_tc297_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_tc489_com_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_tc4d7xp_com_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/infineon/kit_tc4x9_std_trb.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
 1,board,tcl/board/lc823450_xgevk.cfg,sony/openocd-nuttx,sony/master,GPL-2.0,25,1,,yes
 1,board,tcl/board/moto_mdk_hsb.cfg,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,yes
 1,board,tcl/board/moto_mdk_muc.cfg,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,yes
@@ -81,9 +108,13 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,board,tcl/board/nds32_xc5.cfg,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,yes
 1,board,tcl/board/omap2420_h4.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,yes
 1,board,tcl/board/open-bldc.cfg,ciniml/openocd,master,GPL-2.0,3,34,Broadcom/WICED-OpenOCD Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton TheShed/OpenOCD-CMSIS-DAP arduino/OpenOCD bluespec/riscv-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD jeanthom/openocd-dirtyjtag kendryte/openocd-kendryte kevinmehall/openOCD mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD zhao0079/openocd,yes
+1,board,tcl/board/osk5912.cfg,zuyih/openocd,master,NOASSERTION,0,84,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,board,tcl/board/pic-p32mx.cfg,ut2or1/openocd,master,NOASSERTION,0,95,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd ImproperCatGirl/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton RigoLigoRLC/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd analogdevicesinc/openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd coflery/openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sanchuanhehe/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd scmrtos/openocd-scmrtos snowcap-electronics/OpenOCD sony/openocd-nuttx stache3000/openocd-dirtyjtag stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd vllogic/openocd_cmsis-dap_v2 walmis/openocd-blackmagic watr-li/OpenOCD xerpi/openocd xpack-dev-tools/openocd xsession/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
 1,board,tcl/board/quark_d2000.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 1,board,tcl/board/quark_d2000_onboard.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 1,board,tcl/board/quark_se.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
+1,board,tcl/board/redbee-econotag.cfg,kevinmehall/openOCD,master,GPL-2.0,5,3,esden/openocd zhao0079/openocd,no
+1,board,tcl/board/redbee-usb.cfg,kevinmehall/openOCD,master,GPL-2.0,5,3,esden/openocd zhao0079/openocd,no
 1,board,tcl/board/renesas_gen2_common.cfg,walmis/openocd-blackmagic,master,GPL-2.0,15,3,ilg-archived/openocd stacksmashing/openocd,yes
 1,board,tcl/board/rs14100.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,yes
 1,board,tcl/board/sifive-e31arty-cjtag.cfg,riscv-collab/riscv-openocd,riscv,NOASSERTION,517,8,AnlogicInfo/al_openocd Seneral/riscv-openocd-wch andestech/nds-openocd cjacker/wch-openocd karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,yes
@@ -108,6 +139,33 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,board,tcl/board/synopsys_angel4.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,no
 1,board,tcl/board/synopsys_haps51.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,no
 1,board,tcl/board/synopsys_ml509.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,no
+1,board,tcl/board/ti/cc35x1e-launchpad.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/launchxl-f28069m-xds100v2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2340r5.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2340r53.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2341.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2745p10.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2745r10.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2745r74.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2755p10.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2755p20.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2755r10.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2755r74.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/lp-em-cc2765r10.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/mspm0c1103-cmsis-dap.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/mspm0c1103-xds110.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/mspm33-launchpad.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f280049-xds100v2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f280049-xds100v3.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f280049-xds110.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28069-xds100v2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28069-xds100v3.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28069-xds110.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28m35x-dual-core-xds100v2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28m35x-dual-core-xds100v3.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28m35x-xds100v2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28m35x-xds100v3.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,board,tcl/board/ti/tms320f28m35x-xds110.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
 1,board,tcl/board/ti_am625_swd_native.cfg,zuyih/openocd,master,NOASSERTION,0,32,DCVostok/openocd-k1921vk David-lau/openocd-geehy Essenceia/openocd_ultrascale_plus HalfSweet/openocd LeeScenic/openocd OlegGalizin/openocd-for-py32f0xx STMicroelectronics/OpenOCD TexasInstruments/ti-openocd aesc-silicon/elements-openocd emard/openocd encryptize/openocd-at32 flipperdevices/openocd go2sh/aurix-openocd hackpascal/openocd linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd nmenon/openocd os-fpga/openocd raspberrypi/openocd riscv-collab/riscv-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd,yes
 1,board,tcl/board/ti_am62a7_swd_native.cfg,zuyih/openocd,master,NOASSERTION,0,17,Essenceia/openocd_ultrascale_plus LeeScenic/openocd OlegGalizin/openocd-for-py32f0xx aesc-silicon/elements-openocd emard/openocd go2sh/aurix-openocd linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 nalajcie/openocd nmenon/openocd raspberrypi/openocd riscv-collab/riscv-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv,yes
 1,board,tcl/board/ti_am62p_swd_native.cfg,zuyih/openocd,master,NOASSERTION,0,17,Essenceia/openocd_ultrascale_plus LeeScenic/openocd OlegGalizin/openocd-for-py32f0xx aesc-silicon/elements-openocd emard/openocd go2sh/aurix-openocd linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 nalajcie/openocd nmenon/openocd raspberrypi/openocd riscv-collab/riscv-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv,yes
@@ -150,6 +208,16 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,cpld,tcl/cpld/xilinx-xc7vh870t.cfg,ut2or1/openocd,master,NOASSERTION,0,43,DCVostok/openocd-k1921vk David-lau/openocd-geehy Essenceia/openocd_ultrascale_plus HalfSweet/openocd ImproperCatGirl/openocd LeeScenic/openocd OlegGalizin/openocd-for-py32f0xx RigoLigoRLC/openocd STMicroelectronics/OpenOCD TexasInstruments/ti-openocd aesc-silicon/elements-openocd analogdevicesinc/openocd coflery/openocd emard/openocd encryptize/openocd-at32 flipperdevices/openocd go2sh/aurix-openocd hackpascal/openocd linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd nmenon/openocd os-fpga/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchuanhehe/openocd scmrtos/openocd-scmrtos stache3000/openocd-dirtyjtag sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd vllogic/openocd_cmsis-dap_v2 xerpi/openocd xsession/openocd,yes
 1,cpld,tcl/cpld/xilinx-xcr3256.cfg,rxmnjke/openocd,master,NOASSERTION,0,115,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd HaydenHu/openocd IRNAS/openocd IceZhangCoder/openocd Icey7122/openocd ImproperCatGirl/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd ManniMetzger/openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OlivierVanWassenhove-Dekimo/openocd OpenNuvoton/OpenOCD-Nuvoton ProtopointLLC/bobybytes-openocd RevySR/openocd RigoLigoRLC/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP W-M-R/openocd aesc-silicon/elements-openocd alphijiang/openocd analogdevicesinc/openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd coflery/openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd espressif/openocd-esp32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv galippi/openocd.STM32.Win7 go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jbitco/openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch kvth/openocd-swd-in-out l0ud/openocd-puya liibin/openocd linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd maux339-cpu/openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd padhialuo0426/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd rusefi/openocd sanchox/openocd sanchuanhehe/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd scmrtos/openocd-scmrtos snowcap-electronics/OpenOCD sony/openocd-nuttx stache3000/openocd-dirtyjtag stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd ut2or1/openocd vllogic/openocd_cmsis-dap_v2 walmis/openocd-blackmagic watr-li/OpenOCD xerpi/openocd xoriath/openocd xpack-dev-tools/openocd xsession/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,yes
 1,cpld,tcl/cpld/xilinx-xcu.cfg,Icey7122/openocd,master,NOASSERTION,0,88,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd HaydenHu/openocd IRNAS/openocd IceZhangCoder/openocd ImproperCatGirl/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd ManniMetzger/openocd OlegGalizin/openocd-for-py32f0xx OlivierVanWassenhove-Dekimo/openocd ProtopointLLC/bobybytes-openocd RevySR/openocd RigoLigoRLC/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd W-M-R/openocd aesc-silicon/elements-openocd alphijiang/openocd analogdevicesinc/openocd andestech/nds-openocd bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd coflery/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 espressif/openocd-esp32 fatalfeel/openocd_integrated flipperdevices/openocd fxsheep/openocd_wchlink-rv galippi/openocd.STM32.Win7 go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/aji_openocd jbitco/openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch kvth/openocd-swd-in-out l0ud/openocd-puya liibin/openocd linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 maux339-cpu/openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd padhialuo0426/openocd raspberrypi/openocd riscv-collab/riscv-openocd rusefi/openocd sanchuanhehe/openocd scmrtos/openocd-scmrtos stache3000/openocd-dirtyjtag stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd ut2or1/openocd vllogic/openocd_cmsis-dap_v2 walmis/openocd-blackmagic xerpi/openocd xoriath/openocd xpack-dev-tools/openocd xsession/openocd yottatsa/openocd zephyrproject-rtos/openocd,yes
+1,flash_algorithms,tcl/board/flash_algorithms/2183x_otp.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/2184x_otp.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/algoFileFinder.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/is25wp02gg.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/is72wvo32m8Awo256.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/issi22tf16g.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/issi25lp512m.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/mx66u1g45g.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/s26kl512s.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,flash_algorithms,tcl/board/flash_algorithms/w25q128fv.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,interface,tcl/interface/adi-dbgagent.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,interface,tcl/interface/adi-mpdbgagent.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,interface,tcl/interface/al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
@@ -157,44 +225,129 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,interface,tcl/interface/arm-usb-ocd.cfg,hikob/openocd,master,GPL-2.0,18,4,esden/openocd kevinmehall/openOCD zhao0079/openocd,yes
 1,interface,tcl/interface/atlink.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,yes
 1,interface,tcl/interface/atlink_dap_v2.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,yes
+1,interface,tcl/interface/axm0432.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/blackmagic.cfg,walmis/openocd-blackmagic,master,GPL-2.0,15,1,,yes
 1,interface,tcl/interface/busblaster.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,15,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,yes
 1,interface,tcl/interface/c20-swd.cfg,kvth/openocd-swd-in-out,master,NOASSERTION,0,1,,yes
 1,interface,tcl/interface/calao-usb-a9260-c01.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,yes
 1,interface,tcl/interface/calao-usb-a9260-c02.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,yes
+1,interface,tcl/interface/calao-usb-a9260.cfg,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,52,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch TheShed/OpenOCD-CMSIS-DAP andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zhao0079/openocd,no
 1,interface,tcl/interface/cc3200lp.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,yes
 1,interface,tcl/interface/ch347.cfg,zuyih/openocd,master,NOASSERTION,0,2,meriac/openocd,yes
+1,interface,tcl/interface/chameleon.cfg,zuyih/openocd,master,NOASSERTION,0,81,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
 1,interface,tcl/interface/cmsis-dap_v2_aic8800.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,yes
 1,interface,tcl/interface/cmsis-dap_v2_aic8800m40.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,yes
 1,interface,tcl/interface/cmsis-dap_v2_aic8800mc.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,yes
 1,interface,tcl/interface/colobus.cfg,tihmstar/openocd_colobus,master,NOASSERTION,1,1,,no
+1,interface,tcl/interface/cortino.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/ddmi_demo.cfg,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+1,interface,tcl/interface/digilent-hs1.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,15,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+1,interface,tcl/interface/digilent-hs2.cfg,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,2,intel/OpenOCD,no
 1,interface,tcl/interface/dirtyjtag-cjtag.cfg,luyi1888/openocd,master,NOASSERTION,1,1,,yes
 1,interface,tcl/interface/dirtyjtag.cfg,stache3000/openocd-dirtyjtag,master,NOASSERTION,1,3,jeanthom/openocd-dirtyjtag luyi1888/openocd,yes
+1,interface,tcl/interface/dlp-usb1232h.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,16,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+1,interface,tcl/interface/dp_busblaster.cfg,hikob/openocd,master,GPL-2.0,18,1,,no
 1,interface,tcl/interface/esp_gpio_jtag.cfg,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
 1,interface,tcl/interface/esp_gpio_swd.cfg,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
 1,interface,tcl/interface/eud.cfg,linux-msm/openocd,eud-rebased,NOASSERTION,26,1,,yes
 1,interface,tcl/interface/faultier.cfg,stacksmashing/openocd-tamarin,tamarin,NOASSERTION,18,1,,yes
+1,interface,tcl/interface/flashlink.cfg,zuyih/openocd,master,NOASSERTION,0,81,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd TheShed/OpenOCD-CMSIS-DAP aesc-silicon/elements-openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 esden/openocd fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd hikob/openocd ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kevinmehall/openOCD kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd zhao0079/openocd,no
+1,interface,tcl/interface/flossjtag-noeeprom.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/flossjtag.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/flyswatter.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/flyswatter2.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,16,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+1,interface,tcl/interface/ftdi/alinx.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,1,,no
+1,interface,tcl/interface/ftdi/arc_sdp.cfg,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,1,,yes
+1,interface,tcl/interface/ftdi/arty-onboard-ftdi.cfg,riscv-collab/riscv-openocd,riscv,NOASSERTION,517,8,AnlogicInfo/al_openocd Seneral/riscv-openocd-wch andestech/nds-openocd cjacker/wch-openocd karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+1,interface,tcl/interface/ftdi/c232hm_ddhsl_0.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+1,interface,tcl/interface/ftdi/calao-usb-a9260-c01.cfg,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,48,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch TheShed/OpenOCD-CMSIS-DAP andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
+1,interface,tcl/interface/ftdi/calao-usb-a9260-c02.cfg,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,48,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch TheShed/OpenOCD-CMSIS-DAP andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd corecode/openocd-swd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya mabl/openocd_chibios marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
+1,interface,tcl/interface/ftdi/cc3200lp.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,no
+1,interface,tcl/interface/ftdi/digilent-hs2-cjtag.cfg,riscv-collab/riscv-openocd,riscv,NOASSERTION,517,4,AnlogicInfo/al_openocd Seneral/riscv-openocd-wch cjacker/wch-openocd,no
+1,interface,tcl/interface/ftdi/digilent-nexys4-ddr.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,1,,no
+1,interface,tcl/interface/ftdi/esp_ftdi.cfg,espressif/openocd-esp32,master,NOASSERTION,471,1,,yes
+1,interface,tcl/interface/ftdi/ft2232h_breakout.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+1,interface,tcl/interface/ftdi/kt-link-swd.cfg,corecode/openocd-swd,master,GPL-2.0,6,1,,no
+1,interface,tcl/interface/ftdi/moto_mdk_jtag.cfg,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,yes
+1,interface,tcl/interface/ftdi/moto_mdk_swd.cfg,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,yes
+1,interface,tcl/interface/ftdi/moto_mdk_swd_reset.cfg,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,yes
+1,interface,tcl/interface/ftdi/np1167.cfg,tokuden/openocd-win-ftd2xx,master,NOASSERTION,1,1,,no
+1,interface,tcl/interface/ftdi/olimex-arm-usb-ocd-h-swd.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,no
+1,interface,tcl/interface/ftdi/phytec-dh-006.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,1,,no
+1,interface,tcl/interface/ftdi/sony-ft232h-with-resistor.cfg,sony/openocd-nuttx,sony/master,GPL-2.0,25,1,,yes
+1,interface,tcl/interface/ftdi/vostok_vg015_dev.cfg,DCVostok/openocd-k1921vk,master,NOASSERTION,12,1,,yes
+1,interface,tcl/interface/ftdi/wch-rvswd.cfg,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+1,interface,tcl/interface/ftdi/wch-swio.cfg,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+1,interface,tcl/interface/ftdi/xds100.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/hilscher_nxhx10_etm.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,18,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/hilscher_nxhx500_etm.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,18,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/hilscher_nxhx500_re.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,18,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/hilscher_nxhx50_etm.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,18,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/hilscher_nxhx50_re.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,18,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/hitex_str9-comstick.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/ice1000.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,interface,tcl/interface/ice1500.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,interface,tcl/interface/ice2000.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+1,interface,tcl/interface/icebear.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/jtag-lock-pick_tiny_2.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,15,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
 1,interface,tcl/interface/jtag_esp_remote.cfg,espressif/openocd-esp32,master,NOASSERTION,471,1,,yes
 1,interface,tcl/interface/jtag_tcp.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,yes
 1,interface,tcl/interface/jtagkey-tiny.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,yes
+1,interface,tcl/interface/jtagkey.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,yes
+1,interface,tcl/interface/jtagkey2.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/jtagkey2p.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/kt-link.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/lisa-l.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/luminary-icdi.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/luminary-lm3s811.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/luminary.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/matrix-creator.cfg,matrix-io/matrix-creator-openocd,master,GPL-2.0,5,1,,yes
 1,interface,tcl/interface/mchp-ri4.cfg,xsession/openocd,master,NOASSERTION,0,1,,yes
+1,interface,tcl/interface/microchip/icd4-cmsis-dap.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/microchip/pickit4-cmsis-dap.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/minimodule.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,17,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
 1,interface,tcl/interface/nds32-aice.cfg,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,yes
+1,interface,tcl/interface/neodb.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/ngxtech.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/olimex-arm-usb-ocd-h.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/olimex-arm-usb-ocd.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/olimex-arm-usb-tiny-h.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/olimex-jtag-tiny.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/oocdlink.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/opendous_ftdi.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,13,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP daniel-k/openocd foss-for-mips-arc-processors/openocd intel/OpenOCD matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+1,interface,tcl/interface/openocd-usb-hs.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,15,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+1,interface,tcl/interface/openocd-usb.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/openrd.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/orsoc-jtag.cfg,kevinmehall/openOCD,master,GPL-2.0,5,1,,yes
 1,interface,tcl/interface/picoprobe.cfg,sysprogs/openocd,master,NOASSERTION,102,2,stacksmashing/openocd,yes
 1,interface,tcl/interface/raspberrypi-swd.cfg,raspberrypi/openocd,rpi-common,NOASSERTION,223,1,,yes
+1,interface,tcl/interface/redbee-econotag.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,16,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+1,interface,tcl/interface/redbee-usb.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,16,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+1,interface,tcl/interface/sheevaplug.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/signalyzer-h2.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,yes
 1,interface,tcl/interface/signalyzer-h4.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,yes
+1,interface,tcl/interface/signalyzer-lite.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/signalyzer.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+1,interface,tcl/interface/snps_sdp.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 1,interface,tcl/interface/stlink-usb.cfg,hikob/openocd,master,GPL-2.0,18,1,,yes
+1,interface,tcl/interface/stm32-stick.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/tamarin.cfg,stacksmashing/openocd-tamarin,tamarin,NOASSERTION,18,2,stacksmashing/openocd,no
 1,interface,tcl/interface/tas_client.cfg,zuyih/openocd,master,NOASSERTION,0,2,go2sh/aurix-openocd,yes
 1,interface,tcl/interface/ti-icdi-auto.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,yes
+1,interface,tcl/interface/ti/cmsis-dap.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/msp-fet.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/ti-icdi.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/unsupported-closed.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/xds100.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/xds100v2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/xds100v3.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/xds110.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/xds200.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,interface,tcl/interface/ti/xds560.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
 1,interface,tcl/interface/turtelizer2.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,yes
+1,interface,tcl/interface/vpaclink.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,interface,tcl/interface/wlink.cfg,karlp/openocd-hacks,mrs-wch-riscv-221010,NOASSERTION,23,1,,no
+1,interface,tcl/interface/xds100v2.cfg,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,18,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
 1,target,tcl/target/#U043a1879x#U04311#U044f.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
 1,target,tcl/target/1986#U0432#U04351#U0442.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
 1,target,tcl/target/1986Be1T.cfg,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,15,AnlogicInfo/al_openocd Lichee-Pi/LicheeTang_openocd Seneral/riscv-openocd-wch andestech/nds-openocd bluespec/riscv-openocd cjacker/wch-openocd foss-for-mips-arc-processors/openocd intel/OpenOCD intel/aji_openocd karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch riscv-collab/riscv-openocd,no
@@ -226,6 +379,29 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/aic8800m40.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,yes
 1,target,tcl/target/aic8800mc.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,yes
 1,target,tcl/target/air001.cfg,HalfSweet/openocd,master,NOASSERTION,1,1,,yes
+1,target,tcl/target/anlogic/al_fpga.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1m35.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1m350.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1m350_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1m35_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1m90.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1m90_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1p104.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1p104_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1ps.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1ps_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1v90.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/dr1v90_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/init.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/onecable.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/ph1p100.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/ph1p100_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/ph1p35.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/ph1p35_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/sf1.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/sf1_al_link.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/softcore_cached.yaml,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/anlogic/softcore_direct.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
 1,target,tcl/target/apm32e1x.cfg,David-lau/openocd-geehy,master,NOASSERTION,3,1,,yes
 1,target,tcl/target/apm32f003.cfg,David-lau/openocd-geehy,master,NOASSERTION,3,1,,yes
 1,target,tcl/target/apm32f0xx.cfg,David-lau/openocd-geehy,master,NOASSERTION,3,1,,yes
@@ -296,6 +472,10 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/ch32f2x.cfg,mengfanyuc/openocd,master,NOASSERTION,1,1,,yes
 1,target,tcl/target/ch32x035.txt,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,yes
 1,target,tcl/target/ch579.cfg,zuyih/openocd,master,NOASSERTION,0,1,,yes
+1,target,tcl/target/chip_debugger/6100.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/chip_debugger/6200.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/chip_debugger/9000.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+1,target,tcl/target/chip_debugger/at0012.cfg,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
 1,target,tcl/target/dspic33-ri4.cfg,xsession/openocd,master,NOASSERTION,0,1,,yes
 1,target,tcl/target/efm32_stlink.cfg,ciniml/openocd,master,GPL-2.0,3,28,Broadcom/WICED-OpenOCD Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton TheShed/OpenOCD-CMSIS-DAP arduino/OpenOCD bluespec/riscv-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 foss-for-mips-arc-processors/openocd ilg-archived/openocd intel/OpenOCD jeanthom/openocd-dirtyjtag kendryte/openocd-kendryte marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD,yes
 1,target,tcl/target/efm32s2.cfg,loopj/openocd-efm32s2,efm32s2,NOASSERTION,2,1,,yes
@@ -321,6 +501,17 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/imx8.cfg,fatalfeel/openocd_integrated,master,NOASSERTION,6,1,,yes
 1,target,tcl/target/imx8m-ngb.cfg,fatalfeel/openocd_integrated,master,NOASSERTION,6,1,,yes
 1,target,tcl/target/imxrt.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,yes
+1,target,tcl/target/infineon/aurix_program.tcl,zuyih/openocd,master,NOASSERTION,0,1,,yes
+1,target,tcl/target/infineon/tc27x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc29x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc36x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc37x.cfg,zuyih/openocd,master,NOASSERTION,0,2,go2sh/aurix-openocd,no
+1,target,tcl/target/infineon/tc37x_EXT.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc38x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc39x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc48x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc49x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/infineon/tc4dx.cfg,zuyih/openocd,master,NOASSERTION,0,1,,no
 1,target,tcl/target/k1879h61ya.cfg,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,1,,no
 1,target,tcl/target/k1879x61R.cfg,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,13,AnlogicInfo/al_openocd Lichee-Pi/LicheeTang_openocd Seneral/riscv-openocd-wch andestech/nds-openocd bluespec/riscv-openocd cjacker/wch-openocd intel/aji_openocd karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch riscv-collab/riscv-openocd,no
 1,target,tcl/target/k1921vg015.cfg,DCVostok/openocd-k1921vk,master,NOASSERTION,12,1,,yes
@@ -380,6 +571,16 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/max78002_riscv.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,target,tcl/target/mchp-renode.cfg,xsession/openocd,master,NOASSERTION,0,1,,yes
 1,target,tcl/target/mchp-ri4.cfg,xsession/openocd,master,NOASSERTION,0,1,,yes
+1,target,tcl/target/mediatek/memc.tcl,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mmio.tcl,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7620.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7621.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7622.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7628.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7629.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7981.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7986.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
+1,target,tcl/target/mediatek/mt7988.cfg,hackpascal/openocd,master,NOASSERTION,1,1,,no
 1,target,tcl/target/mega128.cfg,esden/openocd,master,GPL-2.0,15,1,,yes
 1,target,tcl/target/murax.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,yes
 1,target,tcl/target/murax_xip.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,yes
@@ -398,6 +599,7 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/pic32mm.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,yes
 1,target,tcl/target/pic32mz-ri4.cfg,xsession/openocd,master,NOASSERTION,0,1,,yes
 1,target,tcl/target/py32f0xx.cfg,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,2,OlegGalizin/openocd-for-py32f0xx,yes
+1,target,tcl/target/qualcomm/qcom.cfg,linux-msm/openocd,eud-rebased,NOASSERTION,26,1,,no
 1,target,tcl/target/quark_d2000.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 1,target,tcl/target/quark_se.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 1,target,tcl/target/raspberry.cfg,sysprogs/openocd,master,NOASSERTION,102,1,,yes
@@ -425,6 +627,7 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/saxon.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,yes
 1,target,tcl/target/saxon_linux.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,yes
 1,target,tcl/target/saxon_xip.cfg,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,yes
+1,target,tcl/target/smdk6410.cfg,esden/openocd,master,GPL-2.0,15,1,,no
 1,target,tcl/target/snps_axc001.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 1,target,tcl/target/snps_axc002.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 1,target,tcl/target/snps_em_sk_lx45.cfg,intel/OpenOCD,master,GPL-2.0,12,1,,yes
@@ -458,6 +661,217 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/stm32wl3x.cfg,zuyih/openocd,master,NOASSERTION,0,1,,yes
 1,target,tcl/target/stm32wl4x.cfg,zuyih/openocd,master,NOASSERTION,0,2,STMicroelectronics/OpenOCD,yes
 1,target,tcl/target/swj-dp-legacy.tcl,sysprogs/openocd,master,NOASSERTION,102,1,,yes
+1,target,tcl/target/ti/c2000-icepick-scan.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/cc2341.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/cc23xx.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/cc27xx.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/cc35x1e.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/lpf3.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/mspm0c1103.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/mspm33.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320-generic-scan.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c55xx.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c620x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c621x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c646x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c64xp.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c64xx.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c66xx.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c670x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c671x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c672x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c674x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c71x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c71x_v2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/family/c75x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2e05.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2g01.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2g02.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2g12.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2h06.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2h12.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2h14.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/66ak2l06.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am273x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5706.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5708.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5716.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5718.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5726.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5726_reva.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5728.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5728_reva.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5729.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5746.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5748.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5749.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5766.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/am5768.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/awr1642.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/awr1843.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/awr2943.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/awr2944.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/awr6843.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/awr6843aop.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m35e20b1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m35h22c1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m35h52c1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m35m20b1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m35m22c1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m35m52c1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m36h33b2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m36h33c2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m36h53b2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m36h53c2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m36p53c2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/f28m36p63c2.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/iwr1642.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/iwr1843.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/iwr1843aop.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/iwr6843.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/iwr6843aop.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tci6630k2l.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tci6634k2k.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tci6636k2h.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tci6638k2k.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c2801.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c2802.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c2810.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c2811.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c2812.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c28341.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c28342.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c28343.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c28344.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c28345.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320c28346.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800132.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800133.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800135.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800137.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800153.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800155.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800155_q1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800157.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2800157_q1.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280021.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280022.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280023.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280023c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280024.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280024c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280025.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280025c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280033.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280034.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280036.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280036c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280037.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280037c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280038.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280038c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280039.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280039c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280040.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280040c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280041.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280041c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280045.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280048.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280048c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280049.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280049c.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280049m.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2801.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28015.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28016.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2802.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28020.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280200.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28021.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28022.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280220.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28023.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280230.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28026.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280260.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28027.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f280270.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28030.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28031.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28032.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28033.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28034.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28035.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28044.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28050.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28051.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28052.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28052f.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28052m.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28053.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28054.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28054f.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28054m.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28055.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2806.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28062.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28063.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28064.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28065.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28066.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28067.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28068.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28069.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28074.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28075.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28076.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28079.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2808.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2809.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2810.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2811.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2812.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28232.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28234.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28235.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28332.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28333.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28334.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28335.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28374d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28374s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28375d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28375s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28376d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28376s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28377d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28377s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28378d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28378s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28379d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28379s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f2837hd.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28384d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28384s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28386d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28386s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28388d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28388s.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28plc83.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28plc84.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28plc85.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28plc90d.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28plc93.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320f28plc95.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320r2810.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tms320r2812.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/generated/tpr12.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320/index.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320f280049.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320f28069.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320f28m35x-dual-core.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
+1,target,tcl/target/ti/tms320f28m35x.cfg,xsession/openocd,master,NOASSERTION,0,1,,no
 1,target,tcl/target/ti_cc2341.cfg,TexasInstruments/ti-openocd,ti-release,NOASSERTION,9,1,,yes
 1,target,tcl/target/ti_cc23xx.cfg,TexasInstruments/ti-openocd,ti-release,NOASSERTION,9,1,,yes
 1,target,tcl/target/ti_cc27xx.cfg,TexasInstruments/ti-openocd,ti-release,NOASSERTION,9,1,,yes
@@ -479,12 +893,151 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 1,target,tcl/target/xtensa-core-adspsc84x.cfg,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 1,target,tcl/target/zynq_7000.cfg,ut2or1/openocd,master,NOASSERTION,0,87,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd ImproperCatGirl/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OlegGalizin/openocd-for-py32f0xx OpenNuvoton/OpenOCD-Nuvoton RigoLigoRLC/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd aesc-silicon/elements-openocd analogdevicesinc/openocd andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd coflery/openocd daniel-k/openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 erwango/openocd-stm32 fatalfeel/openocd_integrated flipperdevices/openocd foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marcelobarrosufu/openocd_nrf52 marisusis/openocd_hc32 matrix-io/matrix-creator-openocd mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch nmenon/openocd os-fpga/openocd pebble/openocd raspberrypi/openocd riscv-collab/riscv-openocd sanchox/openocd sanchuanhehe/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd scmrtos/openocd-scmrtos snowcap-electronics/OpenOCD sony/openocd-nuttx stache3000/openocd-dirtyjtag stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd sysprogs/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd vllogic/openocd_cmsis-dap_v2 walmis/openocd-blackmagic watr-li/OpenOCD xerpi/openocd xpack-dev-tools/openocd xsession/openocd yottatsa/openocd zephyrproject-rtos/openocd,yes
 1,target,tcl/target/Ðº1879xÐ±1Ñ.cfg,sysprogs/esp8266-openocd,master,GPL-2.0,56,1,,no
-2,src,src/flash/nor/rp2040.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,no
+2,src,src/flash/nor/adsp/adsp218xx.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/adsp218xx.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/adsp_helper.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/adsp_helper.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/adspsc59x_a55_dma.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/adspsc5xx_a5.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/adspsc5xx_a5.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_2183x_regs.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_regs_common.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_sc59x_regs.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_spi.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_spi.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_spi_dbg.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_spi_dbg.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_spi_device.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/adsp/spi/adsp_spi_device.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,no
+2,src,src/flash/nor/aducm302x.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,2,sysprogs/openocd,no
+2,src,src/flash/nor/aic8800.c,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,no
+2,src,src/flash/nor/aic8800m40.c,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,no
+2,src,src/flash/nor/aic8800mc.c,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,1,,no
+2,src,src/flash/nor/air001.c,HalfSweet/openocd,master,NOASSERTION,1,1,,no
+2,src,src/flash/nor/am13e230x.h,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/apm32f003.c,David-lau/openocd-geehy,master,NOASSERTION,3,1,,no
+2,src,src/flash/nor/apm32f1x.c,David-lau/openocd-geehy,master,NOASSERTION,3,1,,no
+2,src,src/flash/nor/apm32f4x.c,David-lau/openocd-geehy,master,NOASSERTION,3,1,,no
+2,src,src/flash/nor/at32f4xx.c,rxmnjke/openocd,master,NOASSERTION,0,2,vllogic/openocd_cmsis-dap_v2,no
+2,src,src/flash/nor/at32qspi.c,rxmnjke/openocd,master,NOASSERTION,0,2,vllogic/openocd_cmsis-dap_v2,no
+2,src,src/flash/nor/at32qspi.h,rxmnjke/openocd,master,NOASSERTION,0,2,vllogic/openocd_cmsis-dap_v2,no
+2,src,src/flash/nor/at32xx.c,rxmnjke/openocd,master,NOASSERTION,0,2,vllogic/openocd_cmsis-dap_v2,no
+2,src,src/flash/nor/at32xx.h,rxmnjke/openocd,master,NOASSERTION,0,2,vllogic/openocd_cmsis-dap_v2,no
+2,src,src/flash/nor/aurix_eflash.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/cadence_qspi.c,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/cc23xx.c,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/cc23xx.h,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/cc27xx.c,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/cc27xx.h,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/cc_lpf3_base.c,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/cc_lpf3_base.h,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/cc_lpf3_flash.c,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/cc_lpf3_flash.h,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/ch32f2x.c,mengfanyuc/openocd,master,NOASSERTION,1,1,,no
+2,src,src/flash/nor/ch32h417.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/flash/nor/ch32v30x.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/flash/nor/ch32x035.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/flash/nor/ch32x035_flash_algo_blob.h,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/flash/nor/ch579.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/devs/devs.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/devs/general_spi.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/dwcssi/dwcssi.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/dwcssi/dwcssi.h,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/dwcssi/dwcssi_90.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/dwcssi/dwcssi_91.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/dwcssi/dwcssi_flash.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/dwcssi/dwcssi_flash.h,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/ecos.c,hikob/openocd,master,GPL-2.0,18,4,esden/openocd kevinmehall/openOCD zhao0079/openocd,no
+2,src,src/flash/nor/efm32s2.c,loopj/openocd-efm32s2,efm32s2,NOASSERTION,2,1,,no
+2,src,src/flash/nor/esp32.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32c2.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32c3.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32c5.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32c6.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32c61.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32h2.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32h21.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32h4.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32p4.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32s2.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32s3.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp32s31.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp_flash.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp_flash.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp_riscv.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp_riscv.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp_stub_config.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp_xtensa.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/esp_xtensa.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/flash/nor/gd32vf103.c,karlp/openocd-hacks,mrs-wch-riscv-221010,NOASSERTION,23,3,kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/flash/nor/genspi.c,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,no
+2,src,src/flash/nor/genspi.h,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,no
+2,src,src/flash/nor/hc32.c,marisusis/openocd_hc32,hc32,NOASSERTION,2,1,,no
+2,src,src/flash/nor/hsbspi.c,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,no
+2,src,src/flash/nor/k1921vg015.c,DCVostok/openocd-k1921vk,master,NOASSERTION,12,1,,no
+2,src,src/flash/nor/k1921vk028.c,DCVostok/openocd-k1921vk,master,NOASSERTION,12,1,,no
+2,src,src/flash/nor/k1921vk035.c,DCVostok/openocd-k1921vk,master,NOASSERTION,12,1,,no
+2,src,src/flash/nor/lc823450.c,sony/openocd-nuttx,sony/master,GPL-2.0,25,1,,no
+2,src,src/flash/nor/lc823450_spifi.h,sony/openocd-nuttx,sony/master,GPL-2.0,25,1,,no
+2,src,src/flash/nor/lpc55xx.c,transcelestial/openocd,master,NOASSERTION,1,1,,no
+2,src,src/flash/nor/mchp_ri4.c,xsession/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/mini51.c,pebble/openocd,pebble_fork,GPL-2.0,2,6,foss-for-mips-arc-processors/openocd intel/OpenOCD snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+2,src,src/flash/nor/msp432p4.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
+2,src,src/flash/nor/msp432p4.h,sysprogs/openocd,master,NOASSERTION,102,1,,no
+2,src,src/flash/nor/mspm33.c,xsession/openocd,master,NOASSERTION,0,2,TexasInstruments/ti-openocd,no
+2,src,src/flash/nor/nds_spiflash.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/flash/nor/ndsspi200.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/flash/nor/nrf51.c,marcelobarrosufu/openocd_nrf52,master,GPL-2.0,12,15,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton arduino/OpenOCD daniel-k/openocd erwango/openocd-stm32 foss-for-mips-arc-processors/openocd matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sony/openocd-nuttx sysprogs/esp8266-openocd watr-li/OpenOCD,no
+2,src,src/flash/nor/nrf52.c,marcelobarrosufu/openocd_nrf52,master,GPL-2.0,12,1,,no
+2,src,src/flash/nor/nuc1x.c,pebble/openocd,pebble_fork,GPL-2.0,2,6,foss-for-mips-arc-processors/openocd intel/OpenOCD snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
+2,src,src/flash/nor/nuspi.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/flash/nor/pic32mm.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
+2,src,src/flash/nor/puyaf0x.c,vllogic/openocd_cmsis-dap_v2,support_3rd_chip,NOASSERTION,55,3,OlegGalizin/openocd-for-py32f0xx l0ud/openocd-puya,no
+2,src,src/flash/nor/rp2040.c,linux-msm/openocd,eud-rebased,NOASSERTION,26,39,AnlogicInfo/al_openocd DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd HalfSweet/openocd KilyannBrault/openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd andestech/nds-openocd cjacker/wch-openocd emard/openocd encryptize/openocd-at32 fatalfeel/openocd_integrated flipperdevices/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd intel/aji_openocd karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch os-fpga/openocd stacksmashing/openocd-tamarin tihmstar/openocd_colobus transcelestial/openocd xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,no
+2,src,src/flash/nor/rs14100.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
 2,src,src/flash/nor/rv32m1.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
+2,src,src/flash/nor/stldr_driver.c,zuyih/openocd,master,NOASSERTION,0,2,STMicroelectronics/OpenOCD,yes
+2,src,src/flash/nor/stm32c5x.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/stm32c5x.h,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/stm32f2xxx.c,kevinmehall/openOCD,master,GPL-2.0,5,2,zhao0079/openocd,no
+2,src,src/flash/nor/stm32g0x.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
+2,src,src/flash/nor/stm32g4x.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
+2,src,src/flash/nor/stm32h5x.c,zuyih/openocd,master,NOASSERTION,0,4,STMicroelectronics/OpenOCD galippi/openocd.STM32.Win7 scmrtos/openocd-scmrtos,no
+2,src,src/flash/nor/stm32h5x.h,zuyih/openocd,master,NOASSERTION,0,4,STMicroelectronics/OpenOCD galippi/openocd.STM32.Win7 scmrtos/openocd-scmrtos,no
+2,src,src/flash/nor/stm32l5x.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
+2,src,src/flash/nor/stm32spi.c,MotorolaMobilityLLC/openocd,master,GPL-2.0,6,1,,no
+2,src,src/flash/nor/stm32x.c,kevinmehall/openOCD,master,GPL-2.0,5,3,esden/openocd zhao0079/openocd,no
+2,src,src/flash/nor/tc3xx.c,go2sh/aurix-openocd,aurix_support,NOASSERTION,11,1,,no
+2,src,src/flash/nor/tc4x_rram.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/ti_f28004x_serial.c,xsession/openocd,master,NOASSERTION,0,1,,no
+2,src,src/flash/nor/vexriscv_algo/vexriscv_nor_spi.h,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+2,src,src/flash/nor/vexriscv_algo/vexriscv_nor_spi_read.c,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+2,src,src/flash/nor/vexriscv_algo/vexriscv_nor_spi_read.h,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+2,src,src/flash/nor/vexriscv_algo/vexriscv_nor_spi_write.c,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+2,src,src/flash/nor/vexriscv_algo/vexriscv_nor_spi_write.h,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+2,src,src/flash/nor/vexriscv_nor_spi.c,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,no
+2,src,src/flash/nor/wcharm.c,zuyih/openocd,master,NOASSERTION,0,6,Seneral/riscv-openocd-wch cjacker/wch-openocd karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/flash/nor/wchriscv.c,Seneral/riscv-openocd-wch,wch-linke-sdi,NOASSERTION,18,5,cjacker/wch-openocd karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/flash/nor/ws63.c,padhialuo0426/openocd,ws63,NOASSERTION,0,1,,no
+2,src,src/flash/nor/xmc7xxx.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/jtag/drivers/OpenULINK/include/shorttypes.h,kevinmehall/openOCD,master,GPL-2.0,5,1,,no
 2,src,src/jtag/drivers/adi_dbg_agent.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
+2,src,src/jtag/drivers/aji_client/aji/aji.h,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji/c_aji.h,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji/c_jtag_client_gnuaji.c,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji/c_jtag_client_gnuaji.h,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji/c_jtag_client_gnuaji_lib64.c,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji/c_jtag_client_gnuaji_lib64.h,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji/c_jtag_client_gnuaji_win64.c,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji/c_jtag_client_gnuaji_win64.h,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji_client.c,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/aji_client_tcl.c,ManniMetzger/openocd,master,NOASSERTION,0,1,,no
+2,src,src/jtag/drivers/aji_client/jtagservice.c,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
+2,src,src/jtag/drivers/aji_client/jtagservice.h,OlivierVanWassenhove-Dekimo/openocd,master,NOASSERTION,0,3,ManniMetzger/openocd intel/aji_openocd,no
 2,src,src/jtag/drivers/al_link.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
 2,src,src/jtag/drivers/al_link_cyusb.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
 2,src,src/jtag/drivers/al_link_cyusb.h,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/jtag/drivers/angie/include/msgtypes.h,riscv-collab/riscv-openocd,riscv,NOASSERTION,517,27,DCVostok/openocd-k1921vk David-lau/openocd-geehy HalfSweet/openocd STMicroelectronics/OpenOCD TexasInstruments/ti-openocd aesc-silicon/elements-openocd emard/openocd encryptize/openocd-at32 flipperdevices/openocd go2sh/aurix-openocd hackpascal/openocd linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd os-fpga/openocd raspberrypi/openocd tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd,no
 2,src,src/jtag/drivers/arc_ftdi_cjtag.c,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,1,,yes
 2,src,src/jtag/drivers/arc_ftdi_cjtag.h,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,1,,yes
 2,src,src/jtag/drivers/blackmagic.c,walmis/openocd-blackmagic,master,GPL-2.0,15,1,,yes
@@ -497,17 +1050,53 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/jtag/drivers/dirtyjtag.c,stache3000/openocd-dirtyjtag,master,NOASSERTION,1,3,jeanthom/openocd-dirtyjtag luyi1888/openocd,yes
 2,src,src/jtag/drivers/esp_gpio.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
 2,src,src/jtag/drivers/esp_gpio.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/jtag/drivers/ftd2xx/WinTypes.h,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/jtag/drivers/ftd2xx/ftd2xx.h,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
 2,src,src/jtag/drivers/ftdi_rvswd.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
 2,src,src/jtag/drivers/ice1000.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 2,src,src/jtag/drivers/ice1500.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 2,src,src/jtag/drivers/jtag_esp_remote.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,yes
 2,src,src/jtag/drivers/jtag_tcp.c,aesc-silicon/elements-openocd,main,NOASSERTION,1,2,AnlogicInfo/al_openocd,yes
 2,src,src/jtag/drivers/jtag_usb_common.h,intel/aji_openocd,main,NOASSERTION,12,8,Blinkinlabs/OpenOCD ciniml/openocd dynm/openocd-starbleed ilg-archived/openocd jeanthom/openocd-dirtyjtag stacksmashing/openocd walmis/openocd-blackmagic,yes
+2,src,src/jtag/drivers/libjaylink/config.h,fatalfeel/openocd_integrated,master,NOASSERTION,6,1,,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/buffer.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/core.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/device.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/discovery.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/discovery_tcp.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/discovery_usb.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/emucom.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/error.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/fileio.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/jtag.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/libjaylink-internal.h,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/libjaylink.h,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/list.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/log.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/socket.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/strutil.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/swd.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/swo.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/target.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/transport.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/transport_tcp.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/transport_usb.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/util.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/version.c,fatalfeel/openocd_integrated,master,NOASSERTION,6,4,cjacker/wch-openocd kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
+2,src,src/jtag/drivers/libjaylink/libjaylink/version.h,fatalfeel/openocd_integrated,master,NOASSERTION,6,1,,no
 2,src,src/jtag/drivers/mpsse-d2xx.c,hackpascal/openocd,master,NOASSERTION,1,1,,no
 2,src,src/jtag/drivers/mpsse-libusb.c,hackpascal/openocd,master,NOASSERTION,1,1,,no
 2,src,src/jtag/drivers/mpsse-private.h,hackpascal/openocd,master,NOASSERTION,1,1,,no
 2,src,src/jtag/drivers/stlink_usb_hla_multicore.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
 2,src,src/jtag/drivers/tamarin.c,stacksmashing/openocd-tamarin,tamarin,NOASSERTION,18,2,stacksmashing/openocd,no
+2,src,src/jtag/drivers/tas_client/tas_am15_am14.h,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/jtag/drivers/tas_client/tas_client.c,zuyih/openocd,master,NOASSERTION,0,2,go2sh/aurix-openocd,no
+2,src,src/jtag/drivers/tas_client/tas_device_family.h,go2sh/aurix-openocd,aurix_support,NOASSERTION,11,1,,no
+2,src,src/jtag/drivers/tas_client/tas_pkt.h,zuyih/openocd,master,NOASSERTION,0,2,go2sh/aurix-openocd,no
+2,src,src/jtag/drivers/tas_client/tas_protocol.c,zuyih/openocd,master,NOASSERTION,0,2,go2sh/aurix-openocd,no
+2,src,src/jtag/drivers/tas_client/tas_protocol.h,zuyih/openocd,master,NOASSERTION,0,2,go2sh/aurix-openocd,no
+2,src,src/jtag/drivers/usb_blaster.c,TheShed/OpenOCD-CMSIS-DAP,master,GPL-2.0,35,6,corecode/openocd-swd esden/openocd hikob/openocd mabl/openocd_chibios zhao0079/openocd,no
+2,src,src/jtag/drivers/usb_blaster/ublast_access_ftd2xx.c,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,13,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd daniel-k/openocd foss-for-mips-arc-processors/openocd intel/OpenOCD kevinmehall/openOCD matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD,no
 2,src,src/jtag/drivers/usbmux.c,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 2,src,src/jtag/drivers/usbmux.h,analogdevicesinc/openocd,release/0.12.0-1.4.0,NOASSERTION,29,1,,yes
 2,src,src/jtag/drivers/wlink.c,fxsheep/openocd_wchlink-rv,master,NOASSERTION,22,4,karlp/openocd-hacks kprasadvnsi/riscv-openocd-wch newbrain/riscv-openocd-wch,no
@@ -521,6 +1110,10 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/target/aarch64_system_registers_defs.h,linux-msm/openocd,eud-rebased,NOASSERTION,26,1,,yes
 2,src,src/target/adi_v5_cmsis_dap.c,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,2,intel/OpenOCD,yes
 2,src,src/target/altera_virtual_jtag.h,kevinmehall/openOCD,master,GPL-2.0,5,1,,yes
+2,src,src/target/anlogic/at0012.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/target/anlogic/dwcphy.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/target/anlogic/jtag2apb.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
+2,src,src/target/anlogic/pstap.c,AnlogicInfo/al_openocd,master,NOASSERTION,6,1,,no
 2,src,src/target/arc32.c,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,2,intel/OpenOCD,yes
 2,src,src/target/arc32.h,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,2,intel/OpenOCD,yes
 2,src,src/target/arc_core.c,intel/OpenOCD,master,GPL-2.0,12,1,,yes
@@ -535,12 +1128,40 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/target/arc_regs.h,foss-for-mips-arc-processors/openocd,arc-2026.09,GPL-2.0,16,2,intel/OpenOCD,yes
 2,src,src/target/arc_trgt.c,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 2,src,src/target/arc_trgt.h,intel/OpenOCD,master,GPL-2.0,12,1,,yes
+2,src,src/target/aurix/aurix.c,go2sh/aurix-openocd,aurix_support,NOASSERTION,11,1,,no
+2,src,src/target/aurix/aurix.h,go2sh/aurix-openocd,aurix_support,NOASSERTION,11,1,,no
+2,src,src/target/aurix/aurix_device_family.h,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/target/aurix/aurix_ocds.c,go2sh/aurix-openocd,aurix_support,NOASSERTION,11,1,,no
+2,src,src/target/aurix/aurix_ocds.h,go2sh/aurix-openocd,aurix_support,NOASSERTION,11,1,,no
+2,src,src/target/aurix/ifxdap.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/target/aurix/ocmts.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/target/aurix/ocmts.h,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/target/aurix/tricore.c,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/target/aurix/tricore.h,zuyih/openocd,master,NOASSERTION,0,1,,no
+2,src,src/target/aurix/tricore_register.h,zuyih/openocd,master,NOASSERTION,0,1,,no
 2,src,src/target/c28x.c,xsession/openocd,master,NOASSERTION,0,1,,yes
 2,src,src/target/c28x.h,xsession/openocd,master,NOASSERTION,0,1,,yes
 2,src,src/target/cortex_a8.c,esden/openocd,master,GPL-2.0,15,1,,no
 2,src,src/target/cortex_a8.h,esden/openocd,master,GPL-2.0,15,1,,no
 2,src,src/target/cortex_m3.c,kevinmehall/openOCD,master,GPL-2.0,5,3,esden/openocd zhao0079/openocd,no
 2,src,src/target/cortex_m3.h,kevinmehall/openOCD,master,GPL-2.0,5,3,esden/openocd zhao0079/openocd,no
+2,src,src/target/espressif/esp32c2.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32c3.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32c5.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32c6.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32c61.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32h2.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32h21.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32h4.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32p4.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp32s31.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp_riscv.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp_riscv.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp_riscv_algorithm.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp_riscv_algorithm.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp_riscv_apptrace.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp_riscv_apptrace.h,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
+2,src,src/target/espressif/esp_ui_dispatcher.c,espressif/openocd-esp32,master,NOASSERTION,471,1,,no
 2,src,src/target/hexagon.c,linux-msm/openocd,eud-rebased,NOASSERTION,26,1,,no
 2,src,src/target/hexagon.h,linux-msm/openocd,eud-rebased,NOASSERTION,26,1,,no
 2,src,src/target/hla_target_hla_multicore.c,sysprogs/openocd,master,NOASSERTION,102,1,,no
@@ -566,6 +1187,36 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/target/nds32_disassembler.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
 2,src,src/target/nds32_edm.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
 2,src,src/target/nds32_insn.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
+2,src,src/target/nds32_new/bytecode-ax.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/bytecode-ax.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/gdb_fileio.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_ace.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_ace.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_aice.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_burner_server.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_cmd.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_cmd.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_disassembler.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_disassembler.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_edm.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_insn.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_log.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_reg.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_reg.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_tlb.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_tlb.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_tracer.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_tracer.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v2.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v2.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v3.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v3.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v3_common.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v3_common.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v3m.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/nds32_new/nds32_v3m.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
 2,src,src/target/nds32_reg.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
 2,src,src/target/nds32_reg.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
 2,src,src/target/nds32_tlb.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,45,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD Broadcom/WICED-OpenOCD Devilbinder/openocd KilyannBrault/openocd Lichee-Pi/LicheeTang_openocd MotorolaMobilityLLC/openocd OpenNuvoton/OpenOCD-Nuvoton Seneral/riscv-openocd-wch andestech/nds-openocd arduino/OpenOCD bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd daniel-k/openocd dynm/openocd-starbleed erwango/openocd-stm32 fatalfeel/openocd_integrated foss-for-mips-arc-processors/openocd fxsheep/openocd_wchlink-rv ilg-archived/openocd intel/OpenOCD intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya marcelobarrosufu/openocd_nrf52 matrix-io/matrix-creator-openocd newbrain/riscv-openocd-wch pebble/openocd sanchox/openocd sandeepmistry/openocd-code-nrf5 satoshinm/openocd snowcap-electronics/OpenOCD sony/openocd-nuttx stacksmashing/openocd stacksmashing/openocd-tamarin sysprogs/esp8266-openocd walmis/openocd-blackmagic watr-li/OpenOCD xpack-dev-tools/openocd yottatsa/openocd,no
@@ -587,6 +1238,8 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/target/ndsv5_burner_server.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
 2,src,src/target/ndsv5_cmd.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
 2,src,src/target/ndsv5_profiling.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/or1k.c,kevinmehall/openOCD,master,GPL-2.0,5,1,,no
+2,src,src/target/or1k.h,kevinmehall/openOCD,master,GPL-2.0,5,1,,no
 2,src,src/target/or1k_jtag.c,kevinmehall/openOCD,master,GPL-2.0,5,1,,no
 2,src,src/target/or1k_jtag.h,kevinmehall/openOCD,master,GPL-2.0,5,1,,no
 2,src,src/target/or1k_jtag_adv.c,kevinmehall/openOCD,master,GPL-2.0,5,1,,no
@@ -595,6 +1248,23 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/target/quark_d2000.h,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 2,src,src/target/quark_se.c,intel/OpenOCD,master,GPL-2.0,12,1,,yes
 2,src,src/target/quark_se.h,intel/OpenOCD,master,GPL-2.0,12,1,,yes
+2,src,src/target/riscv/asm.h,nmenon/openocd,master,NOASSERTION,5,56,AnlogicInfo/al_openocd Blinkinlabs/OpenOCD DCVostok/openocd-k1921vk David-lau/openocd-geehy Devilbinder/openocd Essenceia/openocd_ultrascale_plus HalfSweet/openocd KilyannBrault/openocd LeeScenic/openocd Lichee-Pi/LicheeTang_openocd STMicroelectronics/OpenOCD Seneral/riscv-openocd-wch TexasInstruments/ti-openocd aesc-silicon/elements-openocd andestech/nds-openocd bluespec/riscv-openocd ciniml/openocd cjacker/wch-openocd dynm/openocd-starbleed emard/openocd encryptize/openocd-at32 fatalfeel/openocd_integrated flipperdevices/openocd fxsheep/openocd_wchlink-rv go2sh/aurix-openocd hackpascal/openocd ilg-archived/openocd intel/aji_openocd jeanthom/openocd-dirtyjtag karlp/openocd-hacks kendryte/openocd-kendryte kprasadvnsi/riscv-openocd-wch l0ud/openocd-puya linux-msm/openocd lnls-dig/openocd loopj/openocd-efm32s2 luyi1888/openocd marisusis/openocd_hc32 mengfanyuc/openocd meriac/openocd nalajcie/openocd neonkore/openocd newbrain/riscv-openocd-wch os-fpga/openocd raspberrypi/openocd stacksmashing/openocd stacksmashing/openocd-tamarin tihmstar/openocd_colobus tokuden/openocd-win-ftd2xx tom-van/openocd-rp2350-riscv transcelestial/openocd walmis/openocd-blackmagic xpack-dev-tools/openocd yottatsa/openocd zephyrproject-rtos/openocd,no
+2,src,src/target/riscv/debug_defines_ncetrace.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/riscv/dmi.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/dmi.h,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/dtm.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/dtm.h,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/dtm/adi_ap.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/dtm/ddmi.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/dtm/internal.h,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/dtm/jtag.c,ImproperCatGirl/openocd,master,NOASSERTION,1,1,,no
+2,src,src/target/riscv/kendryte_loh.h,kendryte/openocd-kendryte,master,GPL-2.0,24,1,,no
+2,src,src/target/riscv/ndsv5-013.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/riscv/ndsv5-trace.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/riscv/ndsv5.c,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/riscv/ndsv5.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/riscv/ndsv5_encoding.h,andestech/nds-openocd,ast-v5_4_0-branch,NOASSERTION,7,1,,no
+2,src,src/target/riscv/ws63_insn.h,padhialuo0426/openocd,ws63,NOASSERTION,0,1,,no
 2,src,src/target/rv32m1/rv32m1.c,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
 2,src,src/target/rv32m1/rv32m1.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
 2,src,src/target/rv32m1/rv32m1_du.h,zephyrproject-rtos/openocd,zephyr-20250213,NOASSERTION,47,1,,yes
@@ -624,3 +1294,6 @@ tier,kind,path,winner_repo,branch,license,stars,copies,also_in,imported
 2,src,src/target/wch_riscv-013.c,Seneral/riscv-openocd-wch,wch-linke-sdi,NOASSERTION,18,2,cjacker/wch-openocd,no
 2,src,src/target/wch_riscv.c,Seneral/riscv-openocd-wch,wch-linke-sdi,NOASSERTION,18,2,cjacker/wch-openocd,no
 2,src,src/target/wch_riscv.h,Seneral/riscv-openocd-wch,wch-linke-sdi,NOASSERTION,18,2,cjacker/wch-openocd,no
+2,src,src/target/xscale/protocol.h,OpenNuvoton/OpenOCD-Nuvoton,master,GPL-2.0,56,19,Broadcom/WICED-OpenOCD MotorolaMobilityLLC/openocd TheShed/OpenOCD-CMSIS-DAP corecode/openocd-swd daniel-k/openocd esden/openocd foss-for-mips-arc-processors/openocd hikob/openocd intel/OpenOCD kevinmehall/openOCD mabl/openocd_chibios matrix-io/matrix-creator-openocd pebble/openocd sandeepmistry/openocd-code-nrf5 snowcap-electronics/OpenOCD sysprogs/esp8266-openocd watr-li/OpenOCD zhao0079/openocd,no
+2,src,src/target/xtensa.c,sysprogs/esp8266-openocd,master,GPL-2.0,56,1,,no
+2,src,src/target/xtensa.h,sysprogs/esp8266-openocd,master,GPL-2.0,56,1,,no

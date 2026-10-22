@@ -8,56 +8,57 @@
 |---|---|
 | 扫描候选仓库 | 688 |
 | 完整深挖仓库 | 200 |
-| 去重后唯一新增路径 | 625 |
-| 第一层：合并进 `tcl/` 的配置 | 480 |
-| 第二层：合并进 `src/` 的 C 源码 | 145 |
-| 折叠掉的重复副本 | 4109 |
-| 判定为不可导入并排除 | 108 |
+| 去重后唯一新增路径 | 1298 |
+| 第一层：合并进 `tcl/` 的配置 | 894 |
+| 第二层：合并进 `src/` 的 C 源码 | 404 |
+| 折叠掉的重复副本 | 6910 |
+| 判定为不可导入并排除 | 621 |
 
 按目录分布：
 
 | 目录 | 文件数 |
 |---|---|
-| `target` | 284 |
-| `src` | 145 |
-| `board` | 137 |
-| `interface` | 45 |
+| `target` | 545 |
+| `src` | 404 |
+| `board` | 195 |
+| `interface` | 130 |
 | `cpld` | 14 |
+| `flash_algorithms` | 10 |
 
 ## 2. 贡献来源（去重后独占胜出的文件数）
 
 | 仓库 | 第一层 TCL | 第二层 C | 落后上游文件数 | SPDX |
 |---|---:|---:|---:|---|
-| [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | 57 | 15 | 6 | NOASSERTION |
-| [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | 50 | 3 | 1 | NOASSERTION |
-| [`rxmnjke/openocd`](https://github.com/rxmnjke/openocd) | 48 | 0 | 0 | NOASSERTION |
-| [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | 34 | 13 | 401 | GPL-2.0 |
-| [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | 43 | 3 | 9 | NOASSERTION |
-| [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | 11 | 30 | 70 | NOASSERTION |
-| [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | 33 | 8 | 429 | GPL-2.0 |
-| [`zuyih/openocd`](https://github.com/zuyih/openocd) | 26 | 1 | 0 | NOASSERTION |
+| [`xsession/openocd`](https://github.com/xsession/openocd) | 259 | 20 | 5 | NOASSERTION |
+| [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | 67 | 32 | 6 | NOASSERTION |
+| [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | 51 | 40 | 1 | NOASSERTION |
+| [`zuyih/openocd`](https://github.com/zuyih/openocd) | 67 | 23 | 0 | NOASSERTION |
+| [`OpenNuvoton/OpenOCD-Nuvoton`](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) | 54 | 2 | 312 | GPL-2.0 |
+| [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | 45 | 10 | 9 | NOASSERTION |
+| [`rxmnjke/openocd`](https://github.com/rxmnjke/openocd) | 48 | 5 | 0 | NOASSERTION |
+| [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | 36 | 13 | 401 | GPL-2.0 |
+| [`AnlogicInfo/al_openocd`](https://github.com/AnlogicInfo/al_openocd) | 28 | 20 | 122 | NOASSERTION |
+| [`andestech/nds-openocd`](https://github.com/andestech/nds-openocd) | 0 | 48 | 127 | NOASSERTION |
+| [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | 14 | 29 | 70 | NOASSERTION |
+| [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | 34 | 8 | 429 | GPL-2.0 |
+| [`fatalfeel/openocd_integrated`](https://github.com/fatalfeel/openocd_integrated) | 10 | 26 | 86 | NOASSERTION |
+| [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | 16 | 10 | 33 | NOASSERTION |
+| [`ImproperCatGirl/openocd`](https://github.com/ImproperCatGirl/openocd) | 6 | 14 | 3 | NOASSERTION |
 | [`TexasInstruments/ti-openocd`](https://github.com/TexasInstruments/ti-openocd) | 19 | 0 | 49 | NOASSERTION |
 | [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | 10 | 7 | 0 | NOASSERTION |
-| [`xsession/openocd`](https://github.com/xsession/openocd) | 8 | 8 | 5 | NOASSERTION |
-| [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | 11 | 4 | 33 | NOASSERTION |
+| [`OlivierVanWassenhove-Dekimo/openocd`](https://github.com/OlivierVanWassenhove-Dekimo/openocd) | 4 | 12 | 1 | NOASSERTION |
+| [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | 4 | 12 | 528 | GPL-2.0 |
+| [`vllogic/openocd_cmsis-dap_v2`](https://github.com/vllogic/openocd_cmsis-dap_v2) | 10 | 4 | 7 | NOASSERTION |
+| [`hackpascal/openocd`](https://github.com/hackpascal/openocd) | 10 | 3 | 49 | NOASSERTION |
 | [`ciniml/openocd`](https://github.com/ciniml/openocd) | 13 | 0 | 195 | GPL-2.0 |
-| [`andestech/nds-openocd`](https://github.com/andestech/nds-openocd) | 0 | 10 | 127 | NOASSERTION |
-| [`vllogic/openocd_cmsis-dap_v2`](https://github.com/vllogic/openocd_cmsis-dap_v2) | 10 | 0 | 7 | NOASSERTION |
-| [`OpenNuvoton/OpenOCD-Nuvoton`](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) | 10 | 0 | 312 | GPL-2.0 |
-| [`fatalfeel/openocd_integrated`](https://github.com/fatalfeel/openocd_integrated) | 10 | 0 | 86 | NOASSERTION |
-| [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | 2 | 7 | 528 | GPL-2.0 |
-| [`esden/openocd`](https://github.com/esden/openocd) | 6 | 2 | 557 | GPL-2.0 |
-| [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | 1 | 6 | 36 | NOASSERTION |
-| [`ut2or1/openocd`](https://github.com/ut2or1/openocd) | 7 | 0 | 2 | NOASSERTION |
-| [`AnlogicInfo/al_openocd`](https://github.com/AnlogicInfo/al_openocd) | 1 | 5 | 122 | NOASSERTION |
-| [`walmis/openocd-blackmagic`](https://github.com/walmis/openocd-blackmagic) | 5 | 1 | 216 | GPL-2.0 |
-| [`ImproperCatGirl/openocd`](https://github.com/ImproperCatGirl/openocd) | 4 | 2 | 3 | NOASSERTION |
-| [`riscv-collab/riscv-openocd`](https://github.com/riscv-collab/riscv-openocd) | 5 | 1 | 28 | NOASSERTION |
-| [`Seneral/riscv-openocd-wch`](https://github.com/Seneral/riscv-openocd-wch) | 0 | 4 | 122 | NOASSERTION |
-| [`OlivierVanWassenhove-Dekimo/openocd`](https://github.com/OlivierVanWassenhove-Dekimo/openocd) | 4 | 0 | 1 | NOASSERTION |
-| [`MotorolaMobilityLLC/openocd`](https://github.com/MotorolaMobilityLLC/openocd) | 4 | 0 | 318 | GPL-2.0 |
-| [`DCVostok/openocd-k1921vk`](https://github.com/DCVostok/openocd-k1921vk) | 4 | 0 | 59 | NOASSERTION |
-| [`hikob/openocd`](https://github.com/hikob/openocd) | 4 | 0 | 508 | GPL-2.0 |
+| [`MotorolaMobilityLLC/openocd`](https://github.com/MotorolaMobilityLLC/openocd) | 7 | 4 | 318 | GPL-2.0 |
+| [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | 2 | 7 | 36 | NOASSERTION |
+| [`riscv-collab/riscv-openocd`](https://github.com/riscv-collab/riscv-openocd) | 7 | 2 | 28 | NOASSERTION |
+| [`esden/openocd`](https://github.com/esden/openocd) | 7 | 2 | 557 | GPL-2.0 |
+| [`DCVostok/openocd-k1921vk`](https://github.com/DCVostok/openocd-k1921vk) | 5 | 3 | 59 | NOASSERTION |
+| [`ut2or1/openocd`](https://github.com/ut2or1/openocd) | 8 | 0 | 2 | NOASSERTION |
+| [`David-lau/openocd-geehy`](https://github.com/David-lau/openocd-geehy) | 4 | 3 | 54 | NOASSERTION |
+| [`go2sh/aurix-openocd`](https://github.com/go2sh/aurix-openocd) | 1 | 6 | 44 | NOASSERTION |
 
 ## 3. 芯片家族覆盖
 
@@ -69,8 +70,8 @@
 | Puya PY32 | 1 | `vllogic/openocd_cmsis-dap_v2`(1) |
 | Nuvoton N76K | 0 | — |
 | AndesTech NDS | 5 | `zephyrproject-rtos/openocd`(5) |
-| Infineon AURIX | 0 | — |
-| Synopsys ARC | 29 | `foss-for-mips-arc-processors/openocd`(27), `intel/OpenOCD`(2) |
+| Infineon AURIX | 13 | `zuyih/openocd`(13) |
+| Synopsys ARC | 30 | `foss-for-mips-arc-processors/openocd`(28), `intel/OpenOCD`(2) |
 | Analog Devices ADuC/ADSC | 6 | `sysprogs/openocd`(5), `analogdevicesinc/openocd`(1) |
 | LicheeTang | 0 | — |
 | Nordic nRF | 2 | `ciniml/openocd`(1), `riscv-collab/riscv-openocd`(1) |
@@ -82,14 +83,14 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 469 |
-| GPL-2.0 | 156 |
+| NOASSERTION | 1064 |
+| GPL-2.0 | 234 |
 
-> ⚠️ **469 个文件**来自 GitHub 未解析出 SPDX 的仓库，导入前需人工审计头部许可声明。
+> ⚠️ **1064 个文件**来自 GitHub 未解析出 SPDX 的仓库，导入前需人工审计头部许可声明。
 
 ## 5. 排除项说明
 
-共排除 108 个路径，原因：
+共排除 621 个路径，原因：
 
 build-system files, non-C payloads, and core internals that exist upstream under the same name and therefore need a real diff rather than a file copy
 
@@ -112,12 +113,33 @@ build-system files, non-C payloads, and core internals that exist upstream under
 
 | 目录 | 文件数 | 主要来源 |
 |---|---:|---|
-| `src/target/` | 92 | `zephyrproject-rtos/openocd`(22), `foss-for-mips-arc-processors/openocd`(11) |
-| `src/jtag/drivers/` | 33 | `analogdevicesinc/openocd`(5), `AnlogicInfo/al_openocd`(3) |
+| `src/flash/nor/` | 98 | `espressif/openocd-esp32`(20), `xsession/openocd`(12) |
+| `src/target/` | 96 | `zephyrproject-rtos/openocd`(22), `foss-for-mips-arc-processors/openocd`(11) |
+| `src/jtag/drivers/` | 34 | `analogdevicesinc/openocd`(5), `AnlogicInfo/al_openocd`(3) |
+| `src/target/nds32_new/` | 30 | `andestech/nds-openocd`(30) |
+| `src/jtag/drivers/libjaylink/libjaylink/` | 25 | `fatalfeel/openocd_integrated`(25) |
+| `src/target/espressif/` | 17 | `espressif/openocd-esp32`(17) |
+| `src/target/riscv/` | 13 | `andestech/nds-openocd`(6), `ImproperCatGirl/openocd`(4) |
+| `src/target/aurix/` | 11 | `zuyih/openocd`(7), `go2sh/aurix-openocd`(4) |
 | `src/target/rvmax/` | 10 | `analogdevicesinc/openocd`(10) |
+| `src/flash/nor/adsp/spi/` | 9 | `analogdevicesinc/openocd`(9) |
+| `src/jtag/drivers/aji_client/aji/` | 8 | `OlivierVanWassenhove-Dekimo/openocd`(8) |
+| `src/flash/nor/adsp/` | 7 | `analogdevicesinc/openocd`(7) |
+| `src/flash/nor/dwcssi/` | 6 | `AnlogicInfo/al_openocd`(6) |
+| `src/jtag/drivers/tas_client/` | 6 | `zuyih/openocd`(5), `go2sh/aurix-openocd`(1) |
 | `src/target/rv32m1/` | 6 | `zephyrproject-rtos/openocd`(6) |
-| `src/flash/nor/` | 2 | `zephyrproject-rtos/openocd`(2) |
+| `src/flash/nor/vexriscv_algo/` | 5 | `aesc-silicon/elements-openocd`(5) |
+| `src/jtag/drivers/aji_client/` | 4 | `OlivierVanWassenhove-Dekimo/openocd`(3), `ManniMetzger/openocd`(1) |
+| `src/target/anlogic/` | 4 | `AnlogicInfo/al_openocd`(4) |
+| `src/target/riscv/dtm/` | 4 | `ImproperCatGirl/openocd`(4) |
+| `src/flash/nor/devs/` | 2 | `AnlogicInfo/al_openocd`(2) |
+| `src/jtag/drivers/ftd2xx/` | 2 | `AnlogicInfo/al_openocd`(2) |
 | `src/server/` | 2 | `AnlogicInfo/al_openocd`(2) |
+| `src/jtag/drivers/angie/include/` | 1 | `riscv-collab/riscv-openocd`(1) |
+| `src/jtag/drivers/libjaylink/` | 1 | `fatalfeel/openocd_integrated`(1) |
+| `src/jtag/drivers/OpenULINK/include/` | 1 | `kevinmehall/openOCD`(1) |
+| `src/jtag/drivers/usb_blaster/` | 1 | `OpenNuvoton/OpenOCD-Nuvoton`(1) |
+| `src/target/xscale/` | 1 | `OpenNuvoton/OpenOCD-Nuvoton`(1) |
 
 ### 6.1 值得优先上游化的驱动
 
@@ -125,29 +147,29 @@ build-system files, non-C payloads, and core internals that exist upstream under
 
 | 文件 | 来源 | 落后上游 |
 |---|---|---:|
-| `src/flash/nor/rp2040.c` | `zephyrproject-rtos/openocd` | 70 |
-| `src/flash/nor/rv32m1.c` | `zephyrproject-rtos/openocd` | 70 |
-| `src/jtag/drivers/adi_dbg_agent.c` | `analogdevicesinc/openocd` | 6 |
-| `src/jtag/drivers/al_link.c` | `AnlogicInfo/al_openocd` | 122 |
-| `src/jtag/drivers/al_link_cyusb.c` | `AnlogicInfo/al_openocd` | 122 |
-| `src/jtag/drivers/arc_ftdi_cjtag.c` | `foss-for-mips-arc-processors/openocd` | 401 |
-| `src/jtag/drivers/blackmagic.c` | `walmis/openocd-blackmagic` | 216 |
-| `src/jtag/drivers/bonobo.c` | `stacksmashing/openocd` | 218 |
-| `src/jtag/drivers/ch347_jtag.c` | `meriac/openocd` | 49 |
-| `src/jtag/drivers/cmsis_dap_usb.c` | `dynm/openocd-starbleed` | 196 |
-| `src/jtag/drivers/cmsis_dap_wch.c` | `zuyih/openocd` | 0 |
-| `src/jtag/drivers/colobus.c` | `tihmstar/openocd_colobus` | 40 |
-| `src/jtag/drivers/ddmi_demo.c` | `ImproperCatGirl/openocd` | 3 |
-| `src/jtag/drivers/dirtyjtag.c` | `stache3000/openocd-dirtyjtag` | 7 |
-| `src/jtag/drivers/esp_gpio.c` | `espressif/openocd-esp32` | 1 |
-| `src/jtag/drivers/ftdi_rvswd.c` | `ImproperCatGirl/openocd` | 3 |
-| `src/jtag/drivers/ice1000.c` | `analogdevicesinc/openocd` | 6 |
-| `src/jtag/drivers/ice1500.c` | `analogdevicesinc/openocd` | 6 |
-| `src/jtag/drivers/jtag_esp_remote.c` | `espressif/openocd-esp32` | 1 |
-| `src/jtag/drivers/jtag_tcp.c` | `aesc-silicon/elements-openocd` | 33 |
-| `src/jtag/drivers/mpsse-d2xx.c` | `hackpascal/openocd` | 49 |
-| `src/jtag/drivers/mpsse-libusb.c` | `hackpascal/openocd` | 49 |
-| `src/jtag/drivers/stlink_usb_hla_multicore.c` | `sysprogs/openocd` | 9 |
-| `src/jtag/drivers/tamarin.c` | `stacksmashing/openocd-tamarin` | 85 |
-| `src/jtag/drivers/usbmux.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/adsp/adsp218xx.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/adsp/adsp_helper.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/adsp/adspsc59x_a55_dma.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/adsp/adspsc5xx_a5.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/adsp/spi/adsp_spi.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/adsp/spi/adsp_spi_dbg.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/adsp/spi/adsp_spi_device.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/aducm302x.c` | `analogdevicesinc/openocd` | 6 |
+| `src/flash/nor/aic8800.c` | `vllogic/openocd_cmsis-dap_v2` | 7 |
+| `src/flash/nor/aic8800m40.c` | `vllogic/openocd_cmsis-dap_v2` | 7 |
+| `src/flash/nor/aic8800mc.c` | `vllogic/openocd_cmsis-dap_v2` | 7 |
+| `src/flash/nor/air001.c` | `HalfSweet/openocd` | 53 |
+| `src/flash/nor/apm32f003.c` | `David-lau/openocd-geehy` | 54 |
+| `src/flash/nor/apm32f1x.c` | `David-lau/openocd-geehy` | 54 |
+| `src/flash/nor/apm32f4x.c` | `David-lau/openocd-geehy` | 54 |
+| `src/flash/nor/at32f4xx.c` | `rxmnjke/openocd` | 0 |
+| `src/flash/nor/at32qspi.c` | `rxmnjke/openocd` | 0 |
+| `src/flash/nor/at32xx.c` | `rxmnjke/openocd` | 0 |
+| `src/flash/nor/aurix_eflash.c` | `zuyih/openocd` | 0 |
+| `src/flash/nor/cadence_qspi.c` | `OlivierVanWassenhove-Dekimo/openocd` | 1 |
+| `src/flash/nor/cc23xx.c` | `xsession/openocd` | 5 |
+| `src/flash/nor/cc27xx.c` | `xsession/openocd` | 5 |
+| `src/flash/nor/cc_lpf3_base.c` | `xsession/openocd` | 5 |
+| `src/flash/nor/cc_lpf3_flash.c` | `xsession/openocd` | 5 |
+| `src/flash/nor/ch32f2x.c` | `mengfanyuc/openocd` | 53 |
 

@@ -4,13 +4,13 @@
 
 本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **688 个** OpenOCD
 相关仓库（499 个官方 fork + 搜索命中的 189 个独立仓），跨仓去重、剔除与官方等价的
-副本后，得到 **562 个文件**的第三方支持，全部合并在**它们本该在的位置**：
+副本后，得到 **563 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
 - **487 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
-- **75 个 `src/` C 源文件与头文件** —— 已就位，其中 **46 个已接入构建**，
+- **76 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
   其余 29 个仍需按上游现有 API 改写后才能注册。
 
-另有 **99 个与官方重复的文件已剔除**，**4109 个跨仓重复副本被折叠**
+另有 **7376 个与官方重复的文件已剔除**，**6910 个跨仓重复副本被折叠**
 （详见「已处理的重复问题」）。
 
 ## 目录结构
@@ -25,20 +25,20 @@ tcl/                     ← OpenOCD 配置树：官方配置 + 487 个第三方
   chip/                        28  芯片公共片段
   cpu/                         10  架构公共片段
 
-src/                     ← C 源码：官方源码 + 75 个第三方驱动/目标
+src/                     ← C 源码：官方源码 + 76 个第三方驱动/目标
   target/                     109  顶层 .c（其中 20 个是第三方新架构：ARC32 / LoongArch / C28x / TMS320 / Vortex86 / VexRiscv / Quark / Microchip RI4 ...）
   target/rvmax/                3  .c（ADI RVMAX 后端）
   target/rv32m1/               3  .c（SiFive RV32M1 后端）
   jtag/drivers/                65  顶层 .c（其中 13 个是第三方适配器）
-  flash/nor/                    1  第三方 NOR 驱动（rv32m1）
+  flash/nor/                    2  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）
 
 manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            562  个文件的来源仓库/分支/commit/SHA-256/许可证
+  PROVENANCE.json            563  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
   repos.csv / repos.json      688 个候选仓库排名
-  licenses.csv               562  行许可证索引（逐文件）
+  licenses.csv               563  行许可证索引（逐文件）
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本
@@ -46,13 +46,22 @@ tools/                   全部工具脚本
 
 > **480 vs 487**：`manifest/consolidated.json` 里有 480 条 tier-1 记录（上游确实没有的
 > 独立 TCL 支持项），其中 **461 条进了树**，19 条因引用了从未公开的 target/interface 而没进。
-> 另有 **26 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的文件
+> 另有 **25 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的文件
 > 会一起被带进来（如 `tcl/interface/ftdi/*.cfg`、`tcl/board/flash_algorithms/*.cfg`）。
-> 所以 `tcl/` 下的第三方文件数是 461 + 26 = **487**。
+> 再加 1 个与上游同名的第三方文件 `tcl/target/adspsc58x.cfg`（内容与上游的
+> `adsp-sc58x.cfg` 不同，保留第三方版并由 `verify_tree.py` 报一条 warning）。
+> 所以 `tcl/` 下的第三方文件数是 461 + 25 + 1 = **487**。
+>
+> **还有 253 个 TCL 候选原样就能导入。** 上一轮扫描补齐了子目录盲区之后，
+> 重新评估了所有没进树的候选：253 个文件的 `source [find ...]` 引用全部可解析，
+> 且它们依赖的驱动、target type、flash 算法树里都已有，不需要任何 C 代码改动。
+> 另有 42 个需要树里还没有的后端（ST-LINK 外部加载器家族、Infineon TriCore、
+> WCH RISC-V、ESP32 GPIO 探针、Anlogic `al_link` 探针等），34 个架在它们之上。
+> 详细的分类与逐项清单见 `manifest/nor-driver-scan.json` 与本文件的「已知缺口」一节。
 > 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
 > 不会把已剔除的副本再拉回来。
 >
-> **全部 562 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
+> **全部 563 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
 
 ## 为什么直接合并，而不是外挂一层
 
@@ -117,7 +126,7 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 
 ## C 驱动的接入状态
 
-`src/` 下 75 个第三方文件里（39 个 `.c` + 36 个 `.h`），**46 个已经接入构建系统**，
+`src/` 下 76 个第三方文件里（40 个 `.c` + 36 个 `.h`），**47 个已经接入构建系统**，
 其余 29 个仍是「代码就位、未注册」的状态。
 
 ### 已接入的适配器（5 个文件，6 个探针名）
@@ -165,6 +174,45 @@ ice1500        { jtag }
 > 注意用 `-c` 而不是 `-f`。`-f` 的参数是**配置文件路径**，走的是 tcl 的
 > `find` proc 去磁盘里找文件，写成 `-f "adapter driver dirtyjtag"` 会报
 > `Can't find adapter driver`，看起来像驱动没编进去，其实是参数用错了。
+
+### 已接入的 flash 驱动（2 个文件）
+
+| 驱动名 | 源文件 | 说明 |
+|---|---|---|
+| `rv32m1` | `src/flash/nor/rv32m1.c` | SiFive RV32M1 内部 flash |
+| `stldr` | `src/flash/nor/stldr_driver.c` | STMicroelectronics 外部加载器（ST-LINK 固件 blob） |
+
+`stldr` 来自 `STMicroelectronics/OpenOCD` 的 `openocd-cubeide-r7` 分支。
+它让一个 flash bank 由 ST-LINK 固件 blob 烧写，而不是靠专用 flash 算法 ——
+较新的 STM32 系列就是这样烧的。
+
+按厂商原样导入，只改了两处：
+
+1. **ELF 结构在文件内自带定义。** `.stldr` 是 ELF32 object，驱动自己手工遍历
+   section header 与符号表，没走 OpenOCD 通用的 image 层。`<elf.h>` 并非每个构建
+   宿主都有 —— Windows 发布版用 MinGW 交叉编译，那里没有 `elf.h` —— 所以文件
+   自带所需的 `Elf32_Shdr` / `Elf32_Sym`，并以 `#ifndef HAVE_ELF_H` 守卫，
+   有 elf.h 的宿主仍用系统头。
+2. **超时参数改为无符号。** `stldr_exec_function()` 原本取 `int`，而
+   `target_run_algorithm()` 的形参是 `unsigned int`。
+
+接线三处，全部按字母序插入上游的 NOR 驱动表：
+
+- `src/flash/nor/Makefile.am` 的 `NOR_DRIVERS`（`%D%/stmsmi.c` 之后）；
+- `src/flash/nor/driver.h` 的 `extern const struct flash_driver ...` 声明表；
+- `src/flash/nor/drivers.c` 的 `flash_drivers[]` 数组。
+
+> **`.stldr` 加载器二进制不在本仓库里** —— 它们是 ST 发布的专有 blob。
+> 四份导入配置会在运行时去 `loaders/stldr/...` 找：
+>
+> | 配置 | 需要的加载器 |
+> |---|---|
+> | `tcl/target/stm32v8x.cfg` | 按板子用 `stldr set_loader` 指定 |
+> | `tcl/target/stm32l4plusx.cfg` | 按板子用 `stldr set_loader` 指定 |
+> | `tcl/board/art_pi2.cfg` | `loaders/stldr/ART-Pi2_ST_winbond_64MB.stldr` |
+> | `tcl/board/atk_cnn647b.cfg` | `loaders/stldr/MX25UM25645G_ATK-CNN647B_ExtMemLoader.stldr` |
+>
+> 把需要的加载器复制到 `openocd` 可执行文件旁边的 share 目录，再让配置指过去。
 
 ### 已接入的芯片架构（10 个 target_type）
 
@@ -308,7 +356,7 @@ python tools/pipeline.py --apply
 |---|---|---|
 | C 驱动未注册进构建 | 29 | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
-| 无许可证信息 | 423 / 562（75%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
+| 无许可证信息 | 423 / 563（75%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 4 个 | `aji_client`、`tas_client`、`ddmi_usb`、`aice`（`dbgagent`/`ice2000` 已随本次接入进产物） |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 板级配置开箱即用不了 | 3 个 cfg | `arc_axc001/002/003_hs36.cfg` 需要的 `arc600`/`arc700` 来自未接入的 `arc32.c` 一族 |
@@ -316,6 +364,8 @@ python tools/pipeline.py --apply
 | `-chain-position` 旧写法 | 192 个文件 / 219 处 | 上游 `tcl/` 已清零；机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
 | 三组导入候选被上游阻塞 | 14 个文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows） |
+| `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |
+| 扫描漏掉了子目录里的文件 | 97 个 NOR 驱动 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里是看不见的。`tools/expand_subtrees.py` 已补上；补出来的 97 个驱动（`esp32*.c` 18 个、`stm32h5x.c`、`tc3xx.c`、`wcharm.c` 等）**尚未逐个做 API 漂移分析，因此还没接进构建** |
 
 ## 已处理的重复问题
 

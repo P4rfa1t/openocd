@@ -9,6 +9,7 @@
 | NOASSERTION | 398 |
 | GPL-2.0 | 139 |
 | UNRESOLVED | 25 |
+| GPL-2.0-or-later | 1 |
 
 **423 个文件（75%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
@@ -638,7 +639,7 @@
 
 ## src/ C 源码（需在构建系统注册）
 
-文件数：**75**
+文件数：**76**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
@@ -651,6 +652,7 @@
 | [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(4) | 4 |
 | [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(4) | 4 |
 | [`yottatsa/openocd`](https://github.com/yottatsa/openocd) | NOASSERTION(2) | 2 |
+| [`STMicroelectronics/OpenOCD`](https://github.com/STMicroelectronics/OpenOCD) | GPL-2.0-or-later(1) | 1 |
 | [`walmis/openocd-blackmagic`](https://github.com/walmis/openocd-blackmagic) | GPL-2.0(1) | 1 |
 | [`meriac/openocd`](https://github.com/meriac/openocd) | NOASSERTION(1) | 1 |
 | [`dynm/openocd-starbleed`](https://github.com/dynm/openocd-starbleed) | GPL-2.0(1) | 1 |

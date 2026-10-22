@@ -6,6 +6,7 @@ src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/tar
 src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_modules.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
 src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_pracc.c,master,987f9a1b553fbe70940ac28a642af7a740df21dd
 src/ C 源码（需在构建系统注册）,Icey7122/openocd,NOASSERTION,src/target/loongarch_pracc.h,master,987f9a1b553fbe70940ac28a642af7a740df21dd
+src/ C 源码（需在构建系统注册）,STMicroelectronics/OpenOCD,GPL-2.0-or-later,src/flash/nor/stldr_driver.c,openocd-cubeide-r7,c8d973bdad9a6fddb51459eda109b3b95d23b57a
 src/ C 源码（需在构建系统注册）,aesc-silicon/elements-openocd,NOASSERTION,src/jtag/drivers/jtag_tcp.c,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
 src/ C 源码（需在构建系统注册）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv-csrs.h,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21
 src/ C 源码（需在构建系统注册）,aesc-silicon/elements-openocd,NOASSERTION,src/target/vexriscv.c,main,c888d1cf4b1f12d40cabc4cca813dcd03802ef21

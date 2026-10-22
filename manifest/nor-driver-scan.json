@@ -1,0 +1,739 @@
+{
+ "scanned_repos": 103,
+ "repos_with_novel_nor_drivers": 69,
+ "unique_nor_drivers": 99,
+ "by_repo": {
+  "espressif/openocd-esp32": [
+   "CMakeLists.txt",
+   "esp32.c",
+   "esp32c2.c",
+   "esp32c3.c",
+   "esp32c5.c",
+   "esp32c6.c",
+   "esp32c61.c",
+   "esp32h2.c",
+   "esp32h21.c",
+   "esp32h4.c",
+   "esp32p4.c",
+   "esp32s2.c",
+   "esp32s3.c",
+   "esp32s31.c",
+   "esp_flash.c",
+   "esp_flash.h",
+   "esp_riscv.c",
+   "esp_riscv.h",
+   "esp_stub_config.h",
+   "esp_xtensa.c",
+   "esp_xtensa.h"
+  ],
+  "sysprogs/openocd": [
+   "CMakeLists.txt",
+   "aducm302x.c",
+   "msp432p4.c",
+   "msp432p4.h",
+   "pic32mm.c",
+   "rs14100.c",
+   "stm32g0x.c",
+   "stm32g4x.c",
+   "stm32l5x.c"
+  ],
+  "analogdevicesinc/openocd": [
+   "aducm302x.c"
+  ],
+  "vllogic/openocd_cmsis-dap_v2": [
+   "aic8800.c",
+   "aic8800m40.c",
+   "aic8800mc.c",
+   "at32f4xx.c",
+   "at32qspi.c",
+   "at32qspi.h",
+   "at32xx.c",
+   "at32xx.h",
+   "puyaf0x.c"
+  ],
+  "xsession/openocd": [
+   "am13e230x.h",
+   "cc23xx.c",
+   "cc23xx.h",
+   "cc27xx.c",
+   "cc27xx.h",
+   "cc_lpf3_base.c",
+   "cc_lpf3_base.h",
+   "cc_lpf3_flash.c",
+   "cc_lpf3_flash.h",
+   "mchp_ri4.c",
+   "mspm33.c",
+   "ti_f28004x_serial.c"
+  ],
+  "zephyrproject-rtos/openocd": [
+   "rp2040.c",
+   "rv32m1.c"
+  ],
+  "AnlogicInfo/al_openocd": [
+   "nuspi.c",
+   "rp2040.c",
+   "vexriscv_nor_spi.c"
+  ],
+  "stacksmashing/openocd-tamarin": [
+   "rp2040.c"
+  ],
+  "fatalfeel/openocd_integrated": [
+   "rp2040.c"
+  ],
+  "yottatsa/openocd": [
+   "rp2040.c"
+  ],
+  "ImproperCatGirl/openocd": [
+   "ch32h417.c",
+   "ch32v30x.c",
+   "ch32x035.c",
+   "ch32x035_flash_algo_blob.h"
+  ],
+  "linux-msm/openocd": [
+   "rp2040.c"
+  ],
+  "l0ud/openocd-puya": [
+   "puyaf0x.c",
+   "rp2040.c"
+  ],
+  "zuyih/openocd": [
+   "aurix_eflash.c",
+   "ch579.c",
+   "stldr_driver.c",
+   "stm32c5x.c",
+   "stm32c5x.h",
+   "stm32h5x.c",
+   "stm32h5x.h",
+   "tc4x_rram.c",
+   "wcharm.c",
+   "xmc7xxx.c"
+  ],
+  "xpack-dev-tools/openocd": [
+   "rp2040.c"
+  ],
+  "andestech/nds-openocd": [
+   "nds_spiflash.c",
+   "ndsspi200.c",
+   "rp2040.c"
+  ],
+  "Devilbinder/openocd": [
+   "rp2040.c"
+  ],
+  "KilyannBrault/openocd": [
+   "rp2040.c"
+  ],
+  "aesc-silicon/elements-openocd": [
+   "vexriscv_nor_spi.c"
+  ],
+  "cjacker/wch-openocd": [
+   "rp2040.c",
+   "wcharm.c",
+   "wchriscv.c"
+  ],
+  "Seneral/riscv-openocd-wch": [
+   "rp2040.c",
+   "wcharm.c",
+   "wchriscv.c"
+  ],
+  "OlegGalizin/openocd-for-py32f0xx": [
+   "puyaf0x.c"
+  ],
+  "kprasadvnsi/riscv-openocd-wch": [
+   "gd32vf103.c",
+   "rp2040.c",
+   "wcharm.c",
+   "wchriscv.c"
+  ],
+  "fxsheep/openocd_wchlink-rv": [
+   "rp2040.c"
+  ],
+  "karlp/openocd-hacks": [
+   "gd32vf103.c",
+   "rp2040.c",
+   "wcharm.c",
+   "wchriscv.c"
+  ],
+  "newbrain/riscv-openocd-wch": [
+   "gd32vf103.c",
+   "rp2040.c",
+   "wcharm.c",
+   "wchriscv.c"
+  ],
+  "go2sh/aurix-openocd": [
+   "rp2040.c",
+   "tc3xx.c"
+  ],
+  "intel/aji_openocd": [
+   "rp2040.c"
+  ],
+  "TexasInstruments/ti-openocd": [
+   "am13e230x.h",
+   "cc23xx.c",
+   "cc23xx.h",
+   "cc27xx.c",
+   "cc27xx.h",
+   "cc_lpf3_base.c",
+   "cc_lpf3_base.h",
+   "cc_lpf3_flash.c",
+   "cc_lpf3_flash.h",
+   "mspm33.c",
+   "rp2040.c"
+  ],
+  "STMicroelectronics/OpenOCD": [
+   "rp2040.c",
+   "stldr_driver.c",
+   "stm32h5x.c",
+   "stm32h5x.h"
+  ],
+  "tihmstar/openocd_colobus": [
+   "rp2040.c"
+  ],
+  "hackpascal/openocd": [
+   "rp2040.c"
+  ],
+  "loopj/openocd-efm32s2": [
+   "efm32s2.c",
+   "rp2040.c"
+  ],
+  "emard/openocd": [
+   "rp2040.c"
+  ],
+  "luyi1888/openocd": [
+   "rp2040.c"
+  ],
+  "nalajcie/openocd": [
+   "rp2040.c"
+  ],
+  "meriac/openocd": [
+   "rp2040.c"
+  ],
+  "intel/OpenOCD": [
+   "mini51.c",
+   "nuc1x.c"
+  ],
+  "marisusis/openocd_hc32": [
+   "hc32.c",
+   "rp2040.c"
+  ],
+  "foss-for-mips-arc-processors/openocd": [
+   "mini51.c",
+   "nrf51.c",
+   "nuc1x.c"
+  ],
+  "lnls-dig/openocd": [
+   "rp2040.c"
+  ],
+  "sysprogs/esp8266-openocd": [
+   "CMakeLists.txt",
+   "Makefile.in",
+   "mini51.c",
+   "nrf51.c",
+   "nuc1x.c"
+  ],
+  "OpenNuvoton/OpenOCD-Nuvoton": [
+   "nrf51.c"
+  ],
+  "flipperdevices/openocd": [
+   "rp2040.c"
+  ],
+  "OlivierVanWassenhove-Dekimo/openocd": [
+   "cadence_qspi.c"
+  ],
+  "David-lau/openocd-geehy": [
+   "apm32f003.c",
+   "apm32f1x.c",
+   "apm32f4x.c",
+   "rp2040.c"
+  ],
+  "transcelestial/openocd": [
+   "lpc55xx.c",
+   "rp2040.c"
+  ],
+  "DCVostok/openocd-k1921vk": [
+   "k1921vg015.c",
+   "k1921vk028.c",
+   "k1921vk035.c",
+   "rp2040.c"
+  ],
+  "neonkore/openocd": [
+   "rp2040.c"
+  ],
+  "MotorolaMobilityLLC/openocd": [
+   "genspi.c",
+   "genspi.h",
+   "hsbspi.c",
+   "nrf51.c",
+   "stm32spi.c"
+  ],
+  "os-fpga/openocd": [
+   "rp2040.c"
+  ],
+  "arduino/OpenOCD": [
+   "nrf51.c"
+  ],
+  "HalfSweet/openocd": [
+   "air001.c",
+   "rp2040.c"
+  ],
+  "mengfanyuc/openocd": [
+   "ch32f2x.c",
+   "rp2040.c"
+  ],
+  "marcelobarrosufu/openocd_nrf52": [
+   "nrf51.c",
+   "nrf52.c"
+  ],
+  "sony/openocd-nuttx": [
+   "lc823450.c",
+   "lc823450_spifi.h",
+   "nrf51.c"
+  ],
+  "matrix-io/matrix-creator-openocd": [
+   "nrf51.c"
+  ],
+  "encryptize/openocd-at32": [
+   "rp2040.c"
+  ],
+  "sandeepmistry/openocd-code-nrf5": [
+   "nrf51.c"
+  ],
+  "erwango/openocd-stm32": [
+   "nrf51.c"
+  ],
+  "Broadcom/WICED-OpenOCD": [
+   "nrf51.c"
+  ],
+  "daniel-k/openocd": [
+   "nrf51.c"
+  ],
+  "snowcap-electronics/OpenOCD": [
+   "mini51.c",
+   "nrf51.c",
+   "nuc1x.c"
+  ],
+  "pebble/openocd": [
+   "mini51.c",
+   "nrf51.c",
+   "nuc1x.c"
+  ],
+  "watr-li/OpenOCD": [
+   "mini51.c",
+   "nrf51.c",
+   "nuc1x.c"
+  ],
+  "hikob/openocd": [
+   "ecos.c"
+  ],
+  "kevinmehall/openOCD": [
+   "ecos.c",
+   "stm32f2xxx.c",
+   "stm32x.c"
+  ],
+  "esden/openocd": [
+   "ecos.c",
+   "stm32x.c"
+  ],
+  "zhao0079/openocd": [
+   "ecos.c",
+   "stm32f2xxx.c",
+   "stm32x.c"
+  ]
+ },
+ "by_path": {
+  "src/flash/nor/CMakeLists.txt": [
+   "espressif/openocd-esp32",
+   "sysprogs/esp8266-openocd",
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/Makefile.in": [
+   "sysprogs/esp8266-openocd"
+  ],
+  "src/flash/nor/aducm302x.c": [
+   "analogdevicesinc/openocd",
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/aic8800.c": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/aic8800m40.c": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/aic8800mc.c": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/air001.c": [
+   "HalfSweet/openocd"
+  ],
+  "src/flash/nor/am13e230x.h": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/apm32f003.c": [
+   "David-lau/openocd-geehy"
+  ],
+  "src/flash/nor/apm32f1x.c": [
+   "David-lau/openocd-geehy"
+  ],
+  "src/flash/nor/apm32f4x.c": [
+   "David-lau/openocd-geehy"
+  ],
+  "src/flash/nor/at32f4xx.c": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/at32qspi.c": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/at32qspi.h": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/at32xx.c": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/at32xx.h": [
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/aurix_eflash.c": [
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/cadence_qspi.c": [
+   "OlivierVanWassenhove-Dekimo/openocd"
+  ],
+  "src/flash/nor/cc23xx.c": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/cc23xx.h": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/cc27xx.c": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/cc27xx.h": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/cc_lpf3_base.c": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/cc_lpf3_base.h": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/cc_lpf3_flash.c": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/cc_lpf3_flash.h": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/ch32f2x.c": [
+   "mengfanyuc/openocd"
+  ],
+  "src/flash/nor/ch32h417.c": [
+   "ImproperCatGirl/openocd"
+  ],
+  "src/flash/nor/ch32v30x.c": [
+   "ImproperCatGirl/openocd"
+  ],
+  "src/flash/nor/ch32x035.c": [
+   "ImproperCatGirl/openocd"
+  ],
+  "src/flash/nor/ch32x035_flash_algo_blob.h": [
+   "ImproperCatGirl/openocd"
+  ],
+  "src/flash/nor/ch579.c": [
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/ecos.c": [
+   "esden/openocd",
+   "hikob/openocd",
+   "kevinmehall/openOCD",
+   "zhao0079/openocd"
+  ],
+  "src/flash/nor/efm32s2.c": [
+   "loopj/openocd-efm32s2"
+  ],
+  "src/flash/nor/esp32.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32c2.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32c3.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32c5.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32c6.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32c61.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32h2.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32h21.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32h4.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32p4.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32s2.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32s3.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp32s31.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp_flash.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp_flash.h": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp_riscv.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp_riscv.h": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp_stub_config.h": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp_xtensa.c": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/esp_xtensa.h": [
+   "espressif/openocd-esp32"
+  ],
+  "src/flash/nor/gd32vf103.c": [
+   "karlp/openocd-hacks",
+   "kprasadvnsi/riscv-openocd-wch",
+   "newbrain/riscv-openocd-wch"
+  ],
+  "src/flash/nor/genspi.c": [
+   "MotorolaMobilityLLC/openocd"
+  ],
+  "src/flash/nor/genspi.h": [
+   "MotorolaMobilityLLC/openocd"
+  ],
+  "src/flash/nor/hc32.c": [
+   "marisusis/openocd_hc32"
+  ],
+  "src/flash/nor/hsbspi.c": [
+   "MotorolaMobilityLLC/openocd"
+  ],
+  "src/flash/nor/k1921vg015.c": [
+   "DCVostok/openocd-k1921vk"
+  ],
+  "src/flash/nor/k1921vk028.c": [
+   "DCVostok/openocd-k1921vk"
+  ],
+  "src/flash/nor/k1921vk035.c": [
+   "DCVostok/openocd-k1921vk"
+  ],
+  "src/flash/nor/lc823450.c": [
+   "sony/openocd-nuttx"
+  ],
+  "src/flash/nor/lc823450_spifi.h": [
+   "sony/openocd-nuttx"
+  ],
+  "src/flash/nor/lpc55xx.c": [
+   "transcelestial/openocd"
+  ],
+  "src/flash/nor/mchp_ri4.c": [
+   "xsession/openocd"
+  ],
+  "src/flash/nor/mini51.c": [
+   "foss-for-mips-arc-processors/openocd",
+   "intel/OpenOCD",
+   "pebble/openocd",
+   "snowcap-electronics/OpenOCD",
+   "sysprogs/esp8266-openocd",
+   "watr-li/OpenOCD"
+  ],
+  "src/flash/nor/msp432p4.c": [
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/msp432p4.h": [
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/mspm33.c": [
+   "TexasInstruments/ti-openocd",
+   "xsession/openocd"
+  ],
+  "src/flash/nor/nds_spiflash.c": [
+   "andestech/nds-openocd"
+  ],
+  "src/flash/nor/ndsspi200.c": [
+   "andestech/nds-openocd"
+  ],
+  "src/flash/nor/nrf51.c": [
+   "Broadcom/WICED-OpenOCD",
+   "MotorolaMobilityLLC/openocd",
+   "OpenNuvoton/OpenOCD-Nuvoton",
+   "arduino/OpenOCD",
+   "daniel-k/openocd",
+   "erwango/openocd-stm32",
+   "foss-for-mips-arc-processors/openocd",
+   "marcelobarrosufu/openocd_nrf52",
+   "matrix-io/matrix-creator-openocd",
+   "pebble/openocd",
+   "sandeepmistry/openocd-code-nrf5",
+   "snowcap-electronics/OpenOCD",
+   "sony/openocd-nuttx",
+   "sysprogs/esp8266-openocd",
+   "watr-li/OpenOCD"
+  ],
+  "src/flash/nor/nrf52.c": [
+   "marcelobarrosufu/openocd_nrf52"
+  ],
+  "src/flash/nor/nuc1x.c": [
+   "foss-for-mips-arc-processors/openocd",
+   "intel/OpenOCD",
+   "pebble/openocd",
+   "snowcap-electronics/OpenOCD",
+   "sysprogs/esp8266-openocd",
+   "watr-li/OpenOCD"
+  ],
+  "src/flash/nor/nuspi.c": [
+   "AnlogicInfo/al_openocd"
+  ],
+  "src/flash/nor/pic32mm.c": [
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/puyaf0x.c": [
+   "OlegGalizin/openocd-for-py32f0xx",
+   "l0ud/openocd-puya",
+   "vllogic/openocd_cmsis-dap_v2"
+  ],
+  "src/flash/nor/rp2040.c": [
+   "AnlogicInfo/al_openocd",
+   "DCVostok/openocd-k1921vk",
+   "David-lau/openocd-geehy",
+   "Devilbinder/openocd",
+   "HalfSweet/openocd",
+   "KilyannBrault/openocd",
+   "STMicroelectronics/OpenOCD",
+   "Seneral/riscv-openocd-wch",
+   "TexasInstruments/ti-openocd",
+   "andestech/nds-openocd",
+   "cjacker/wch-openocd",
+   "emard/openocd",
+   "encryptize/openocd-at32",
+   "fatalfeel/openocd_integrated",
+   "flipperdevices/openocd",
+   "fxsheep/openocd_wchlink-rv",
+   "go2sh/aurix-openocd",
+   "hackpascal/openocd",
+   "intel/aji_openocd",
+   "karlp/openocd-hacks",
+   "kprasadvnsi/riscv-openocd-wch",
+   "l0ud/openocd-puya",
+   "linux-msm/openocd",
+   "lnls-dig/openocd",
+   "loopj/openocd-efm32s2",
+   "luyi1888/openocd",
+   "marisusis/openocd_hc32",
+   "mengfanyuc/openocd",
+   "meriac/openocd",
+   "nalajcie/openocd",
+   "neonkore/openocd",
+   "newbrain/riscv-openocd-wch",
+   "os-fpga/openocd",
+   "stacksmashing/openocd-tamarin",
+   "tihmstar/openocd_colobus",
+   "transcelestial/openocd",
+   "xpack-dev-tools/openocd",
+   "yottatsa/openocd",
+   "zephyrproject-rtos/openocd"
+  ],
+  "src/flash/nor/rs14100.c": [
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/rv32m1.c": [
+   "zephyrproject-rtos/openocd"
+  ],
+  "src/flash/nor/stldr_driver.c": [
+   "STMicroelectronics/OpenOCD",
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/stm32c5x.c": [
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/stm32c5x.h": [
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/stm32f2xxx.c": [
+   "kevinmehall/openOCD",
+   "zhao0079/openocd"
+  ],
+  "src/flash/nor/stm32g0x.c": [
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/stm32g4x.c": [
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/stm32h5x.c": [
+   "STMicroelectronics/OpenOCD",
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/stm32h5x.h": [
+   "STMicroelectronics/OpenOCD",
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/stm32l5x.c": [
+   "sysprogs/openocd"
+  ],
+  "src/flash/nor/stm32spi.c": [
+   "MotorolaMobilityLLC/openocd"
+  ],
+  "src/flash/nor/stm32x.c": [
+   "esden/openocd",
+   "kevinmehall/openOCD",
+   "zhao0079/openocd"
+  ],
+  "src/flash/nor/tc3xx.c": [
+   "go2sh/aurix-openocd"
+  ],
+  "src/flash/nor/tc4x_rram.c": [
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/ti_f28004x_serial.c": [
+   "xsession/openocd"
+  ],
+  "src/flash/nor/vexriscv_nor_spi.c": [
+   "AnlogicInfo/al_openocd",
+   "aesc-silicon/elements-openocd"
+  ],
+  "src/flash/nor/wcharm.c": [
+   "Seneral/riscv-openocd-wch",
+   "cjacker/wch-openocd",
+   "karlp/openocd-hacks",
+   "kprasadvnsi/riscv-openocd-wch",
+   "newbrain/riscv-openocd-wch",
+   "zuyih/openocd"
+  ],
+  "src/flash/nor/wchriscv.c": [
+   "Seneral/riscv-openocd-wch",
+   "cjacker/wch-openocd",
+   "karlp/openocd-hacks",
+   "kprasadvnsi/riscv-openocd-wch",
+   "newbrain/riscv-openocd-wch"
+  ],
+  "src/flash/nor/xmc7xxx.c": [
+   "zuyih/openocd"
+  ]
+ }
+}
