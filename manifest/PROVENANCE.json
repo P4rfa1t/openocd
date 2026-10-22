@@ -1,11 +1,11 @@
 {
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
-  "file_count": 563,
+  "file_count": 815,
   "integrity": {
-    "recorded": 563,
-    "on_disk": 563,
-    "pinned": 563,
+    "recorded": 815,
+    "on_disk": 815,
+    "pinned": 815,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "unresolved_references": {
@@ -2650,6 +2650,66 @@
         "content edited in this fork; digest refreshed"
       ]
     },
+    "tcl/board/ti/cc35x1e-launchpad.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/board/ti/cc35x1e-launchpad.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "7e336d65534ba378abbf2b527e258b8d347a0bb77ae9ccd16d111eddfda82e65"
+    },
+    "tcl/board/ti/mspm0c1103-cmsis-dap.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/board/ti/mspm0c1103-cmsis-dap.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2df430af03b196ff5a7a34a587a17ddd5cdb4605fe7b4ef3c58c7b5a9a9aca50"
+    },
+    "tcl/board/ti/mspm0c1103-xds110.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/board/ti/mspm0c1103-xds110.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "93779097738aaf817d029319cfccfca726c40d7d9458631cb373c80a412e5b31"
+    },
+    "tcl/board/ti/tms320f280049-xds110.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/board/ti/tms320f280049-xds110.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "b59920e78eed974a10c1f4674065754793ac41e31d355d4a8a18a40ddeda3bff"
+    },
+    "tcl/board/ti/tms320f28069-xds110.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/board/ti/tms320f28069-xds110.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2ec30b3810c38a78e7b69a4d4e6673e2e46ef8c6b8e11a20b98f090c2339bbd0"
+    },
+    "tcl/board/ti/tms320f28m35x-xds110.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/board/ti/tms320f28m35x-xds110.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "437461651741f723687daf8e568c37d21e0918d3df24e6d372a556bf7058003d"
+    },
     "tcl/board/ti_am625_swd_native.cfg": {
       "source_repo": "zuyih/openocd",
       "source_branch": "master",
@@ -4865,6 +4925,16 @@
         "line endings normalised to LF; content byte-identical to the published file"
       ]
     },
+    "tcl/interface/colobus.cfg": {
+      "source_repo": "tihmstar/openocd_colobus",
+      "source_branch": "master",
+      "source_commit": "7eab5ac160296c988b06ea058955030a99599025",
+      "source_path": "tcl/interface/colobus.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "b46bd67644cc42bb30934b957f50c2ac6935e174b8614c38398d27ee6c39cae5"
+    },
     "tcl/interface/dirtyjtag-cjtag.cfg": {
       "source_repo": "luyi1888/openocd",
       "source_branch": "master",
@@ -4912,6 +4982,16 @@
       "also_present_in": [],
       "sha256": "9c1ec9255bb2a10284a19bf88536072c9772ad1fafd7df6c16b7846c80ad526e"
     },
+    "tcl/interface/ftdi/alinx.cfg": {
+      "source_repo": "aesc-silicon/elements-openocd",
+      "source_branch": "main",
+      "source_commit": "c888d1cf4b1f12d40cabc4cca813dcd03802ef21",
+      "source_path": "tcl/interface/ftdi/alinx.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "2a1d7531c2d9b83c3fddd14ce509e1aa4233848966a363b454c379fde94ec9d9"
+    },
     "tcl/interface/ftdi/arc_sdp.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
       "source_branch": "arc-2026.09",
@@ -4923,6 +5003,60 @@
       "sha256": "7d42b7de48deca1ea09e3e476f6149e38f112f5cf1db2316e07e3d584740aacc",
       "imported_as": "dependency"
     },
+    "tcl/interface/ftdi/arty-onboard-ftdi.cfg": {
+      "source_repo": "riscv-collab/riscv-openocd",
+      "source_branch": "riscv",
+      "source_commit": "10b7a647da03cb64fd25db76261712c388ad6468",
+      "source_path": "tcl/interface/ftdi/arty-onboard-ftdi.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 517,
+      "also_present_in": [
+        "AnlogicInfo/al_openocd",
+        "Seneral/riscv-openocd-wch",
+        "andestech/nds-openocd",
+        "cjacker/wch-openocd",
+        "karlp/openocd-hacks",
+        "kprasadvnsi/riscv-openocd-wch",
+        "newbrain/riscv-openocd-wch"
+      ],
+      "sha256": "be41adcd4e841e4a285582b314b0b27411b430ad618a0c1e570d1cb4bfbd8266"
+    },
+    "tcl/interface/ftdi/c232hm_ddhsl_0.cfg": {
+      "source_repo": "aesc-silicon/elements-openocd",
+      "source_branch": "main",
+      "source_commit": "c888d1cf4b1f12d40cabc4cca813dcd03802ef21",
+      "source_path": "tcl/interface/ftdi/c232hm_ddhsl_0.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [
+        "AnlogicInfo/al_openocd"
+      ],
+      "sha256": "3d78dace24785ba7ea48b4646dc8fd81103f4e617156edadaa4d9c685280f4c1"
+    },
+    "tcl/interface/ftdi/digilent-hs2-cjtag.cfg": {
+      "source_repo": "riscv-collab/riscv-openocd",
+      "source_branch": "riscv",
+      "source_commit": "10b7a647da03cb64fd25db76261712c388ad6468",
+      "source_path": "tcl/interface/ftdi/digilent-hs2-cjtag.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 517,
+      "also_present_in": [
+        "AnlogicInfo/al_openocd",
+        "Seneral/riscv-openocd-wch",
+        "cjacker/wch-openocd"
+      ],
+      "sha256": "51fd019096b4b72e3944688958f5c9dfaf4dcb36c8f23a0340d613f02e9df6b2"
+    },
+    "tcl/interface/ftdi/digilent-nexys4-ddr.cfg": {
+      "source_repo": "aesc-silicon/elements-openocd",
+      "source_branch": "main",
+      "source_commit": "c888d1cf4b1f12d40cabc4cca813dcd03802ef21",
+      "source_path": "tcl/interface/ftdi/digilent-nexys4-ddr.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "4cbd878ca0fbe24cfae5f3a807f71de33199beb78a333cfac574c650e4492f2b"
+    },
     "tcl/interface/ftdi/esp_ftdi.cfg": {
       "source_repo": "espressif/openocd-esp32",
       "source_branch": "master",
@@ -4933,6 +5067,28 @@
       "also_present_in": [],
       "sha256": "fa4585b77d5e787341133b70555fdc2ee1ae496bea43a8d125904ee7cf0fe536",
       "imported_as": "dependency"
+    },
+    "tcl/interface/ftdi/ft2232h_breakout.cfg": {
+      "source_repo": "aesc-silicon/elements-openocd",
+      "source_branch": "main",
+      "source_commit": "c888d1cf4b1f12d40cabc4cca813dcd03802ef21",
+      "source_path": "tcl/interface/ftdi/ft2232h_breakout.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [
+        "AnlogicInfo/al_openocd"
+      ],
+      "sha256": "c6eba80cd07d25439254a7ebd71200ed3ef5ee6371c38030a0c41c123b21b8a4"
+    },
+    "tcl/interface/ftdi/kt-link-swd.cfg": {
+      "source_repo": "corecode/openocd-swd",
+      "source_branch": "master",
+      "source_commit": "ad7a9dd8bf54e395929f56db4bfe12eaa8d784b4",
+      "source_path": "tcl/interface/ftdi/kt-link-swd.cfg",
+      "license": "GPL-2.0",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "eeeaabe63c6340e91ac7ced9a9ae66d247db5d75cf2bf23568246d7ab55ab64b"
     },
     "tcl/interface/ftdi/moto_mdk_jtag.cfg": {
       "source_repo": "MotorolaMobilityLLC/openocd",
@@ -4967,6 +5123,40 @@
       "sha256": "7d30b512fe9f48366455f24302cd77353b80b9f34eef88127fa8de1984ff2a38",
       "imported_as": "dependency"
     },
+    "tcl/interface/ftdi/np1167.cfg": {
+      "source_repo": "tokuden/openocd-win-ftd2xx",
+      "source_branch": "master",
+      "source_commit": "900e78405f1335dcb671393dedb053cfe95f0f0a",
+      "source_path": "tcl/interface/ftdi/np1167.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "4e7d49064eeca2954bcf4aeb9260823d87311156fc4edac10259066fd3f51bc1",
+      "pristine_sha256": "76252dc932332cf17ce2f03e9b338d65c78948868fb95a5215794b1924d7a70f",
+      "local_modifications": [
+        "line endings normalised to LF; content byte-identical to the published file"
+      ]
+    },
+    "tcl/interface/ftdi/olimex-arm-usb-ocd-h-swd.cfg": {
+      "source_repo": "sysprogs/openocd",
+      "source_branch": "master",
+      "source_commit": "6bb1477098889a29b8c53620763dacf1c61a0695",
+      "source_path": "tcl/interface/ftdi/olimex-arm-usb-ocd-h-swd.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 102,
+      "also_present_in": [],
+      "sha256": "6b33a49e0602cb54fc25f0d19a891afa8caecfa1f0f3e37bb644396466e1dafa"
+    },
+    "tcl/interface/ftdi/phytec-dh-006.cfg": {
+      "source_repo": "aesc-silicon/elements-openocd",
+      "source_branch": "main",
+      "source_commit": "c888d1cf4b1f12d40cabc4cca813dcd03802ef21",
+      "source_path": "tcl/interface/ftdi/phytec-dh-006.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "d67795aa999e4cc57a6864db5f97d87f037120914d49fb5a200eaef45985dfb6"
+    },
     "tcl/interface/ftdi/sony-ft232h-with-resistor.cfg": {
       "source_repo": "sony/openocd-nuttx",
       "source_branch": "sony/master",
@@ -4988,6 +5178,16 @@
       "also_present_in": [],
       "sha256": "f4d080a5253f4af9148361ce32ef476cf95c54ec5a966ea57e683cbaa3c75079",
       "imported_as": "dependency"
+    },
+    "tcl/interface/ftdi/xds100.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/ftdi/xds100.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1559ab98c0bbfe9f58970fb81bfcdd395e4b22665c24b02e32592a1163aea5dc"
     },
     "tcl/interface/ice1000.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -5100,6 +5300,26 @@
       "stars_at_import": 0,
       "also_present_in": [],
       "sha256": "e67d03bd40c2c6c0d7f9a73f5fb2efc398a80f0f10b242849ae156826a262417"
+    },
+    "tcl/interface/microchip/icd4-cmsis-dap.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/microchip/icd4-cmsis-dap.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "457fbc64d3d4c1bdc9f8b4c8054cf7e2357888e7fbb95536e44074dae4129c45"
+    },
+    "tcl/interface/microchip/pickit4-cmsis-dap.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/microchip/pickit4-cmsis-dap.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "c867295c1557decf8cd9b279a33666b44449b19764b3fb5b49f16a489f291ddc"
     },
     "tcl/interface/nds32-aice.cfg": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -5267,6 +5487,18 @@
       "also_present_in": [],
       "sha256": "85788b0b6e5620200d78a8f11d2db09a83ea5fc81209a967d61496dc31803854"
     },
+    "tcl/interface/tamarin.cfg": {
+      "source_repo": "stacksmashing/openocd-tamarin",
+      "source_branch": "tamarin",
+      "source_commit": "eb5d44390a1e3d3fca72e67db94786598432432f",
+      "source_path": "tcl/interface/tamarin.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 18,
+      "also_present_in": [
+        "stacksmashing/openocd"
+      ],
+      "sha256": "9c1ec9255bb2a10284a19bf88536072c9772ad1fafd7df6c16b7846c80ad526e"
+    },
     "tcl/interface/tas_client.cfg": {
       "source_repo": "zuyih/openocd",
       "source_branch": "master",
@@ -5288,6 +5520,56 @@
       "stars_at_import": 102,
       "also_present_in": [],
       "sha256": "8a153d40dcce1417f1ff90cb90a079e055ae59848f983f8c1fdbb2bd15cbf90c"
+    },
+    "tcl/interface/ti/msp-fet.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/ti/msp-fet.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "85eee7fa7b37a3cb67f03646a1a3e0c04c6ceea84ecec3562cef55b5296f450e"
+    },
+    "tcl/interface/ti/unsupported-closed.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/ti/unsupported-closed.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "5ff069f1613d377c09915b7cc20e422d3a5aad77cdf3a255be12908e95233a28"
+    },
+    "tcl/interface/ti/xds100.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/ti/xds100.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "c2b37cbafb163ea4bd9e372e145d20e04c81d45abc8d13bd96deadb69b7069c4"
+    },
+    "tcl/interface/ti/xds200.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/ti/xds200.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "85eee7fa7b37a3cb67f03646a1a3e0c04c6ceea84ecec3562cef55b5296f450e"
+    },
+    "tcl/interface/ti/xds560.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/interface/ti/xds560.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "85eee7fa7b37a3cb67f03646a1a3e0c04c6ceea84ecec3562cef55b5296f450e"
     },
     "tcl/interface/turtelizer2.cfg": {
       "source_repo": "OpenNuvoton/OpenOCD-Nuvoton",
@@ -5317,6 +5599,31 @@
         "zhao0079/openocd"
       ],
       "sha256": "85f1717d3da020a0378a8abf561b1bf4a7607846c7e9afdcc14d10f3e1b954e2"
+    },
+    "tcl/target/1986Be1T.cfg": {
+      "source_repo": "OlivierVanWassenhove-Dekimo/openocd",
+      "source_branch": "master",
+      "source_commit": "89788eb29026fc67691fa463876e64d097219371",
+      "source_path": "tcl/target/1986Be1T.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [
+        "AnlogicInfo/al_openocd",
+        "Lichee-Pi/LicheeTang_openocd",
+        "Seneral/riscv-openocd-wch",
+        "andestech/nds-openocd",
+        "bluespec/riscv-openocd",
+        "cjacker/wch-openocd",
+        "foss-for-mips-arc-processors/openocd",
+        "intel/OpenOCD",
+        "intel/aji_openocd",
+        "karlp/openocd-hacks",
+        "kendryte/openocd-kendryte",
+        "kprasadvnsi/riscv-openocd-wch",
+        "newbrain/riscv-openocd-wch",
+        "riscv-collab/riscv-openocd"
+      ],
+      "sha256": "598b3d8d7d074438ba68c4e86cfc5ca670df862ef9c2404fcd11bd2d1d18143d"
     },
     "tcl/target/adi_proc_tracker.tcl": {
       "source_repo": "analogdevicesinc/openocd",
@@ -5598,6 +5905,56 @@
       "stars_at_import": 1,
       "also_present_in": [],
       "sha256": "edd66cda1c25a30552949865440d64573c89114d048ccf259b4aa4e3a4e705d1"
+    },
+    "tcl/target/anlogic/al_fpga.cfg": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "tcl/target/anlogic/al_fpga.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "82eacbbf4a116b5499e751313a9ce009ee1270a5398defb6f43906f7face6286"
+    },
+    "tcl/target/anlogic/init.cfg": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "tcl/target/anlogic/init.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "2987d50259fc2b4040794badd331fb95c672df382886bbd59fc89ebcad9ebd60"
+    },
+    "tcl/target/anlogic/onecable.cfg": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "tcl/target/anlogic/onecable.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "0f9c910472914938e5f0f1a9080ff44aeefa123dd151907b86def1dad9ba2c03"
+    },
+    "tcl/target/anlogic/sf1.cfg": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "tcl/target/anlogic/sf1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "24e271af6e82f04feba67be8dc6edab8f84954fe52ff3d7125d4fd4dcd6f30b4"
+    },
+    "tcl/target/anlogic/softcore_direct.cfg": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "tcl/target/anlogic/softcore_direct.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "2b9abe0466e68e9b9f8442b5c7cf1f7c9db1c2f4ff1a273fea5bcb338e0ad942"
     },
     "tcl/target/apm32e1x.cfg": {
       "source_repo": "David-lau/openocd-geehy",
@@ -6711,6 +7068,39 @@
       "sha256": "53c719c48eaeb3494e97aad8aa7b1cc76e2dd5d107c66974d6bef04e20e025b3",
       "imported_as": "dependency"
     },
+    "tcl/target/k1879h61ya.cfg": {
+      "source_repo": "foss-for-mips-arc-processors/openocd",
+      "source_branch": "arc-2026.09",
+      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
+      "source_path": "tcl/target/k1879h61ya.cfg",
+      "license": "GPL-2.0",
+      "stars_at_import": 16,
+      "also_present_in": [],
+      "sha256": "71e40bf1d38629287eb5438a04d0557452498f861efe54b4e1e745e9645f192f"
+    },
+    "tcl/target/k1879x61R.cfg": {
+      "source_repo": "OlivierVanWassenhove-Dekimo/openocd",
+      "source_branch": "master",
+      "source_commit": "89788eb29026fc67691fa463876e64d097219371",
+      "source_path": "tcl/target/k1879x61R.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [
+        "AnlogicInfo/al_openocd",
+        "Lichee-Pi/LicheeTang_openocd",
+        "Seneral/riscv-openocd-wch",
+        "andestech/nds-openocd",
+        "bluespec/riscv-openocd",
+        "cjacker/wch-openocd",
+        "intel/aji_openocd",
+        "karlp/openocd-hacks",
+        "kendryte/openocd-kendryte",
+        "kprasadvnsi/riscv-openocd-wch",
+        "newbrain/riscv-openocd-wch",
+        "riscv-collab/riscv-openocd"
+      ],
+      "sha256": "3887108538c2903a3191c0ac305de0262426a04cae33f75d6693c1ade49c639d"
+    },
     "tcl/target/k1921vg015.cfg": {
       "source_repo": "DCVostok/openocd-k1921vk",
       "source_branch": "master",
@@ -7402,6 +7792,110 @@
       "also_present_in": [],
       "sha256": "03b78e3b3b2e032cae17180eafda6063d3f0022883bc89562be02238f24bbf31"
     },
+    "tcl/target/mediatek/memc.tcl": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/memc.tcl",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "64d218a339406864d6a31051684f01c353ebd1c51cc66816e4f29e2ac187833c",
+      "pristine_sha256": "2cf6efaa631e2cc1b142ffb64918cb9f05eb9afe78a492fa93a2dab198f16cc0",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "tcl/target/mediatek/mmio.tcl": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mmio.tcl",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "3c03258e8992400d1f951e152d98b930663e308f345e0eedee36863456505485"
+    },
+    "tcl/target/mediatek/mt7620.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7620.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "edbb187c451e996497964ac1b8039fd4da5836d7cc57cf0a13a5aa0b15ef9c61"
+    },
+    "tcl/target/mediatek/mt7621.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7621.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "ee6bed70a5a0cfa90ae01facc4998acd8edc2be90067abc1bd270333a0f7f8ca"
+    },
+    "tcl/target/mediatek/mt7622.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7622.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "a1814efcdfff98694aefb85ae73e24b989db6fa1b64b790188e1d5c665d5fcfe"
+    },
+    "tcl/target/mediatek/mt7628.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7628.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "2131300040e4bf7af64a48f5f0de089db565005cd5a982fa1444af8685379f1f"
+    },
+    "tcl/target/mediatek/mt7629.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7629.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "be655093198330f231991fd6c542346b4357389a396e42696cd4f625ad0beceb"
+    },
+    "tcl/target/mediatek/mt7981.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7981.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "f097b640ae1493010d1acebd66cc7822f5f2809b8f4aaef47890deeeb74cb503"
+    },
+    "tcl/target/mediatek/mt7986.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7986.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "a454c056937f1573909f032bb2ef71099d31830c5a70ab50afed71e9e58b23a4"
+    },
+    "tcl/target/mediatek/mt7988.cfg": {
+      "source_repo": "hackpascal/openocd",
+      "source_branch": "master",
+      "source_commit": "52af45ed0a1fb990f8bdac01f46980de72e5dd92",
+      "source_path": "tcl/target/mediatek/mt7988.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 1,
+      "also_present_in": [],
+      "sha256": "ffbde0995bd8ae148fda5ccba42507ce7aad87bbdf8968f06ed3771b205c0cba"
+    },
     "tcl/target/mega128.cfg": {
       "source_repo": "esden/openocd",
       "source_branch": "master",
@@ -7761,6 +8255,20 @@
         "OlegGalizin/openocd-for-py32f0xx"
       ],
       "sha256": "6b33b90a288bf4482567e888b5e7a8ecba83baa81ec4a2be0bffdef344eda258"
+    },
+    "tcl/target/qualcomm/qcom.cfg": {
+      "source_repo": "linux-msm/openocd",
+      "source_branch": "eud-rebased",
+      "source_commit": "880c11c56b5bc5e8acd2adef5c97ab37b3ca9349",
+      "source_path": "tcl/target/qualcomm/qcom.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 26,
+      "also_present_in": [],
+      "sha256": "ed5788ad5992c23df97b3bae1813ff40ee04bd467e0f5443d6d2dce954f44d9a",
+      "pristine_sha256": "795bff16258bc5694f555cb37b3f6420af08886a508fdcd5162b14810a510c8d",
+      "local_modifications": [
+        "line endings normalised to LF; content byte-identical to the published file"
+      ]
     },
     "tcl/target/quark_d2000.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -8776,6 +9284,2084 @@
       "also_present_in": [],
       "sha256": "8c4ff1c8275ebe76d96b87a3a3fc8ab495e288b2b1bb6476e8982619766689bd"
     },
+    "tcl/target/ti/c2000-icepick-scan.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/c2000-icepick-scan.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "eabb79c141790cf254737cd2fcf084909e916059621cb6980aa1d66a5b8e1b11"
+    },
+    "tcl/target/ti/cc35x1e.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/cc35x1e.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "72a78e6782037612025fa86dc05af2cf52a04095e82e95b6a4e822dbecb369e4",
+      "pristine_sha256": "e11d08a377b5f4018cce71346058b37e8800f8ce6ce3276897c1baeb5ee5f0f6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "tcl/target/ti/lpf3.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/lpf3.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "bbd5c020c258196ac733deb8db3fa5cfa40692d0f5298f9fb71b6d75af066ca0"
+    },
+    "tcl/target/ti/mspm0c1103.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/mspm0c1103.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d6fbc9312ef537d0b18d9a6c68b579d8930147f6db5eea8ad05bbd3c21c5f1c5"
+    },
+    "tcl/target/ti/tms320-generic-scan.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320-generic-scan.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "05dbd412fa6350a84b82f3b46d210ef52c865a868e32bec925b1f4ab5656f275"
+    },
+    "tcl/target/ti/tms320/family/c55xx.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c55xx.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "237efa1c40cdb0d3970b3dffe922cdf7c681221ef580473c541b25a406eaa375"
+    },
+    "tcl/target/ti/tms320/family/c620x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c620x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1cb4d007be8484be37b1566b2a6114ccb82b0fc7ccd2c3ecca4fdf142d994fac"
+    },
+    "tcl/target/ti/tms320/family/c621x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c621x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "4efc20303d876ee61bc197e64492073a9d1b0a13da6373dd0fddb9e738594bd7"
+    },
+    "tcl/target/ti/tms320/family/c646x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c646x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "11d0ebc90ccc585d3e8deb10833d0afa5ab13281d0c8e9af0854c3e29ae96c08"
+    },
+    "tcl/target/ti/tms320/family/c64xp.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c64xp.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "c61cad4c74741b7e12892a6c28ef0206a5b76ffd9052f1489bfc12e1dfa3d17d"
+    },
+    "tcl/target/ti/tms320/family/c64xx.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c64xx.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "c75e6fd366b7018e450c9f4ed5895528d617bee7dc31025e2fdfe9388a766129"
+    },
+    "tcl/target/ti/tms320/family/c66xx.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c66xx.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2191291937c1dd747534a36fe7e3bf972e28bdbf393adf38b4c4392757096617"
+    },
+    "tcl/target/ti/tms320/family/c670x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c670x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "78ab0f4248b76735c5e7e49a41f25656d43e1f04d68f91104b2ca205b1198eae"
+    },
+    "tcl/target/ti/tms320/family/c671x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c671x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9ba064c0c28fc5e9af75d6f0f81bfe82d059aa7e8820d36b96c4cfc3509c2d80"
+    },
+    "tcl/target/ti/tms320/family/c672x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c672x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6a99107dc3cc0d91177e603812dff680504e9b36eff7b2ef8261f7a12ff2c2fa"
+    },
+    "tcl/target/ti/tms320/family/c674x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c674x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "12c725e234bf03817869a4c23c395ceeac7a81f110fc95e2720b59425797ec50"
+    },
+    "tcl/target/ti/tms320/family/c71x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c71x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1bbdbec4ed91661d0c173ebf5224be90e28fcd22a8e34324a5f56a4209a93f42"
+    },
+    "tcl/target/ti/tms320/family/c71x_v2.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c71x_v2.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "247b3bcaa349c16805134be149215fb3bf0d5a8b36cb979ca1bffc1256d51aa1"
+    },
+    "tcl/target/ti/tms320/family/c75x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/family/c75x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "787d9e6cebbecaca84431b06600ed79620f5d43004fd85ded84fb2d17932c8ac"
+    },
+    "tcl/target/ti/tms320/generated/66ak2e05.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2e05.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d6aa5d8c0576fe8b74ec11a75abde69f6b81026442bd4d22353e034b23fe6cb2"
+    },
+    "tcl/target/ti/tms320/generated/66ak2g01.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2g01.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1c3ca4b942b3018ddd98cd3df6ad1e1b4172b4c0fec493b480832187454b823a"
+    },
+    "tcl/target/ti/tms320/generated/66ak2g02.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2g02.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "713236ea61c183577600908138d13e68a8fcc092c5d74b9d85cceeff041b88f2"
+    },
+    "tcl/target/ti/tms320/generated/66ak2g12.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2g12.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f103d6d556ce8de7e75db9d2e74e041ee341d5e0e6979d020c42a4400407b21c"
+    },
+    "tcl/target/ti/tms320/generated/66ak2h06.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2h06.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "8f828e40aed85fccd97327a341b692e0616187fc2084b891ade8c97e3f8d2a7c"
+    },
+    "tcl/target/ti/tms320/generated/66ak2h12.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2h12.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "8c4275021d121d2be4e232ed839865abade6cd4cc8d4886719c5a30a7ad208ce"
+    },
+    "tcl/target/ti/tms320/generated/66ak2h14.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2h14.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "bd334f7ea4c9a7610d90c5fbff1b6ea2d594a9799e27d629605b38ce46139ba7"
+    },
+    "tcl/target/ti/tms320/generated/66ak2l06.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/66ak2l06.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "240d203aba75a24b05550cbec0c07f70f03eac8017ad30a5521a54d09179db29"
+    },
+    "tcl/target/ti/tms320/generated/am273x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am273x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "94be90590fc01688b35d5bab503cfe276f11ba905585ff0bd9f5aec0719bd900"
+    },
+    "tcl/target/ti/tms320/generated/am5706.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5706.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "e98207a3d0e3fbd4baf06b81fb3bc218d623b1202dea7be29337262ebe584c61"
+    },
+    "tcl/target/ti/tms320/generated/am5708.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5708.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6debdc58a91266d19d4f3f03417c54b227b68c88919e8f3a655a6b6937522870"
+    },
+    "tcl/target/ti/tms320/generated/am5716.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5716.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "980c413310f9659c29f035d65a9c8d0245e5b0152a86242f28c6184e5ae77160"
+    },
+    "tcl/target/ti/tms320/generated/am5718.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5718.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "03fe733f622fe41a1bde336757abef5ff8e26591b293a98361f6c21c8d35233e"
+    },
+    "tcl/target/ti/tms320/generated/am5726.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5726.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d12626b264aaff1856b26c755ccaded4f8102d25d9f3ffd045a9a7778ea3e569"
+    },
+    "tcl/target/ti/tms320/generated/am5726_reva.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5726_reva.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6f64b8d7c0f96849a368f9d3f11eb1d87bc5a74354fdadc49154afc14edc8f82"
+    },
+    "tcl/target/ti/tms320/generated/am5728.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5728.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1ff6b5dc7deb115ffa40e46eb1fb0fc31aa0596df4c13166158ce93745f3220e"
+    },
+    "tcl/target/ti/tms320/generated/am5728_reva.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5728_reva.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "ada7d234e6becfe758b181be891479849cf98965e0cafd9583d08142125d562c"
+    },
+    "tcl/target/ti/tms320/generated/am5729.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5729.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "5a0e37b54b0900cebe5376db9ebab5ba77d4aaf9adc0c4e1ad71b948c5720276"
+    },
+    "tcl/target/ti/tms320/generated/am5746.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5746.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "7228423c898193e490a1665738c9e3d1c2512aacd768ac0e8934deeb0d3a421a"
+    },
+    "tcl/target/ti/tms320/generated/am5748.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5748.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2697f36636f6f0494e1e978b2e2daddd681fb385831aafcf3a971337a4b81601"
+    },
+    "tcl/target/ti/tms320/generated/am5749.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5749.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f91a4234915c578d047ae76e1fb0b60c98b1b0fdecfd82350f60b64e7491c942"
+    },
+    "tcl/target/ti/tms320/generated/am5766.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5766.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "a03ad75c0d2a1050d5961c345c49319a86d5cdfada7c8c603ae44f0140573e77"
+    },
+    "tcl/target/ti/tms320/generated/am5768.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/am5768.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "43195644b352d9676bcfdf4b3ec96f459d040e9afd19154c23a016ae1027a414"
+    },
+    "tcl/target/ti/tms320/generated/awr1642.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/awr1642.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "eb84012d21851c04387a6f63bd0be96b3e4b3d5bcfe458e5bfc5cc9c11601c83"
+    },
+    "tcl/target/ti/tms320/generated/awr1843.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/awr1843.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "4589db5c566f81c5629f0b0576952fb50c9f19d8642e60ba634b09117f456182"
+    },
+    "tcl/target/ti/tms320/generated/awr2943.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/awr2943.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "cd9c825bfbae969a9f017ac6d5dfd35dc2d7fd84590873087f9fc7ca90662af9"
+    },
+    "tcl/target/ti/tms320/generated/awr2944.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/awr2944.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "8f683e686b6fe246a59fcaa32b7acef96283ce8fd543b61e597c87acae2a629d"
+    },
+    "tcl/target/ti/tms320/generated/awr6843.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/awr6843.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "47d01e101c35ddce7141ff8ffe51d77feb0d1e1e75dc8b975b872040b44ca24e"
+    },
+    "tcl/target/ti/tms320/generated/awr6843aop.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/awr6843aop.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "47e22d0fa295ee4803350e2bc5b5ef33113483df117a9128b141754d828e6974"
+    },
+    "tcl/target/ti/tms320/generated/f28m35e20b1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m35e20b1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d1cf7be411b0f93bdbb5c44493729fbaf761aab883ad0f5b67f763ae6bada7aa"
+    },
+    "tcl/target/ti/tms320/generated/f28m35h22c1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m35h22c1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2e8a55502382bac80ed4630d0700a8f7a6097b2875549fd8be9218a0ddf13ce2"
+    },
+    "tcl/target/ti/tms320/generated/f28m35h52c1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m35h52c1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6d12df7ff571bd4bdcfb51747248ec354f8f51d4c1afa51c95674f0f16571a10"
+    },
+    "tcl/target/ti/tms320/generated/f28m35m20b1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m35m20b1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "7424aabd9aa7d232cdc37db86f5e526b151cd1d78a05ab0829c16b400c7ad8dc"
+    },
+    "tcl/target/ti/tms320/generated/f28m35m22c1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m35m22c1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6e2c0165e60cab40c450f89394e009ee44c6fe4ae2d088dac22669cb2808e87e"
+    },
+    "tcl/target/ti/tms320/generated/f28m35m52c1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m35m52c1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "ab8f54366b6f41d511ee5c2080b3bd7d2da6e6ff5e5bfba2eb9586818670ba60"
+    },
+    "tcl/target/ti/tms320/generated/f28m36h33b2.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m36h33b2.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d8fc3675457f1245c54e72e3089dd61641c1158e910bc5693e4c67cc32b985a9"
+    },
+    "tcl/target/ti/tms320/generated/f28m36h33c2.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m36h33c2.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "587455e7299881a63edc92f57870a77f73d84eb51e97dc60eb24b6495cc2747e"
+    },
+    "tcl/target/ti/tms320/generated/f28m36h53b2.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m36h53b2.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "5130ea4ac31150bd7c2bf788cbae7193536525515a1ba015149f0e3f3baec2f5"
+    },
+    "tcl/target/ti/tms320/generated/f28m36h53c2.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m36h53c2.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2210d3b66051e0e2ed61a203e0cdab08b9d7353b3bd508d1548acd2fa1a3c5d3"
+    },
+    "tcl/target/ti/tms320/generated/f28m36p53c2.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m36p53c2.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "3fec479e057bc1b6d6786c7070c8fcb4acf5493f6556c2da5d4467306d57c55b"
+    },
+    "tcl/target/ti/tms320/generated/f28m36p63c2.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/f28m36p63c2.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "4516204b3f4e0889d20835b6821fd6a4a436add61ebab4ce406f7bf58bfedbac"
+    },
+    "tcl/target/ti/tms320/generated/iwr1642.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/iwr1642.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "cd714c81dd3dbe2c92c895dc6c463387cf9f814ce53441afed8a22914aa14d48"
+    },
+    "tcl/target/ti/tms320/generated/iwr1843.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/iwr1843.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "385bb93f520d476c4186b976383eb509c75197b8e3d42dd719590511c6260b8c"
+    },
+    "tcl/target/ti/tms320/generated/iwr1843aop.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/iwr1843aop.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "fff6d9f1b34d250a220384c86724f0d12c78e5135f4ab743c39107dbfe3c56a6"
+    },
+    "tcl/target/ti/tms320/generated/iwr6843.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/iwr6843.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "695f1075de5b9f7acf97394c536cb7c1d8d7fe894f5bbf4584fd97f1216d3a01"
+    },
+    "tcl/target/ti/tms320/generated/iwr6843aop.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/iwr6843aop.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "edc20292ecaf87a3225c3c24598f3ba442c612f3917f2368e99364096a0bf48f"
+    },
+    "tcl/target/ti/tms320/generated/tci6630k2l.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tci6630k2l.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "67a514036a1a449e02bac2efa1a50ec9cbd30dc96a4a423ac64b2a61e71ab5bb"
+    },
+    "tcl/target/ti/tms320/generated/tci6634k2k.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tci6634k2k.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "de5443de65d48eeb23232817d488dd86dbb1078f81d8c2a172027c81025504b1"
+    },
+    "tcl/target/ti/tms320/generated/tci6636k2h.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tci6636k2h.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "a6256202c250d47285920140c0ec83251394bd7e5579fdda0896958ecf4bd4e4"
+    },
+    "tcl/target/ti/tms320/generated/tci6638k2k.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tci6638k2k.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "11c8ca0594d3e92a15bdff4c32fcc591888e3a59814bd4f3dd7f65e547b082e5"
+    },
+    "tcl/target/ti/tms320/generated/tms320c2801.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c2801.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "0add026c07384064f7d4209a4ab80a026732807609ca4cb00e562720438b7684"
+    },
+    "tcl/target/ti/tms320/generated/tms320c2802.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c2802.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "ebcf7d2bd96110d245899b119d43eb28d03c9212842621255855d98c8f5950ba"
+    },
+    "tcl/target/ti/tms320/generated/tms320c2810.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c2810.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f50af57c393f75ee4761945acf36bba6560a4be79266fc1cc51e6cd868e203a9"
+    },
+    "tcl/target/ti/tms320/generated/tms320c2811.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c2811.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "e8eda91db6aa1921b57a7d4e51145500c091c798a7e02bc7df82a9eb7f43412e"
+    },
+    "tcl/target/ti/tms320/generated/tms320c2812.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c2812.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "73d402d0d0547eff7969cb4e05538370d337d697fe97039f088573fc772e1e75"
+    },
+    "tcl/target/ti/tms320/generated/tms320c28341.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c28341.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "ee06293500f7eaf7da19cf323c084e7192169b0ef0d08ae2ae10b88d142f0486"
+    },
+    "tcl/target/ti/tms320/generated/tms320c28342.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c28342.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "3a4c4a0380f534ae9519567277f2949ba316a7d7138ac93e5b98a1a7bb95470c"
+    },
+    "tcl/target/ti/tms320/generated/tms320c28343.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c28343.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "74ed5a7dc5e3e52998244d7bf1312692e3e6695f9023e0d8ecaf513c58c9e289"
+    },
+    "tcl/target/ti/tms320/generated/tms320c28344.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c28344.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9e73425017d256a29bf95797454ddd849cba120be7fcc6fa9ac81a81464a7fc4"
+    },
+    "tcl/target/ti/tms320/generated/tms320c28345.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c28345.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "3e07a19ac4ddb7d4cf77d9f2969b31a9bdf2247ac89bf32035a023d0a675acce"
+    },
+    "tcl/target/ti/tms320/generated/tms320c28346.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320c28346.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "21148ff6b1afca86668f652f85f89927b985fdb3ec4a42129feea55778b53cd1"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800132.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800132.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6252d8bf0bc8c5bdcc4368675d5531de7cf8b2c783996874eb95461a3771cc2a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800133.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800133.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "bd7ca547d4a1a2f70df43ccde91282095f04c0736302144e2353c2c603ed7b01"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800135.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800135.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f6254341a1f9cc383025abbc70518e7c2fb0dc822a6c22573ba01293658be22f"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800137.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800137.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "05ea88df8c2433dd935ae6e332d76ae46b4050f78b6bfb4aab8aa1d46d95ccb9"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800153.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800153.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1148b19429953091d3c5700e4400cdefeb6ac018976f2c63948ce059c0e734bb"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800155.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800155.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "91c7e80c31ec46669d6c7fe9b813b4db9473f8c5ba578c0772b30cb2c4086625"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800155_q1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800155_q1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "a4cecdf3cd6d5781dbd871cc64b240a5cd15f5f165667de425c23aef7ae3aab3"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800157.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800157.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "3b6750215efbe755d968a0e27f3deae86ac678cd8cabff31f0679c33ef2bbaaf"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2800157_q1.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2800157_q1.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1e10ec79c1ae8c0c0022a83fbb5c35a39897bbf8ef087b076b4f9233f9cc30fe"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280021.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280021.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "44739d4ece1b16d03d65451814d9e8e2e0b73a26e3423dbe814cea09aca48fa8"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280022.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280022.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "de8e506149cfb76d82f44066c6d81f4a59aa829551a77309791b8876aeca0c0c"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280023.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280023.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1d77f5213932d87ef38baf8ac6000bfdd9568025cda5619287b55e1e5b2b18b8"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280023c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280023c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2a75ed773e7ce54afb3e4aaad721d2a666a1cf1fb50594239a5ef7cb10e4882a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280024.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280024.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "c764f0d5f05c96ebbdd0c0c3b2c86335f9e9f5c1f766f4bf3c76546ce9650fa7"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280024c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280024c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "ca55bc3e58bd9ae44614313b20710897d3bfe24d5f6a320882b53c9864592800"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280025.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280025.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "11c311b528187ddead41c350e400ed186a5ec5acdd7ce48fb343e797e46afe38"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280025c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280025c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9620265de92c2caf0105e9f8484f09c2153e7f3a916855d8f19429807296b847"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280033.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280033.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9f5eb91dd23465ba8cb5d785b74b69f9ea7d00a350506058dfe03a3427651adb"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280034.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280034.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2bae851446c19eab70ee8be59cf4386e7762200af54d2061eccc05ccf6be95d6"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280036.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280036.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6a679b46371863eb41424f6e85416e445a683092bc93bb416c956ec6c7e1f524"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280036c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280036c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "0fd039089469daa82f3c81bfe262432ba174b060ec10d9c41bf7e4c4765a463b"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280037.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280037.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "afa8e8ecee9c87dad30dc2261ab0a408a1719926945afe881c72f0ea9b12acb9"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280037c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280037c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "326c28d710cf97e1ee86b9a245b0c7ae577e92c2eef59c2429ad395622ccadbf"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280038.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280038.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2d374c1e8eeb9aa93d7cd54f0f0bf1991bd0a6b810853199a3d34918af8b832a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280038c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280038c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "db64c7263792a15afb60319247f658a2cfe8b75cdfec5f278c3bdbd31f4bf976"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280039.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280039.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "8bc2cd7f8c876e6d22facb9e048042d5cae6a637a664160e61b4d3bf529b47d9"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280039c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280039c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "eaa9e7aa27eb640c8be3cd9bf7e35afd9525b1b2847bd0d1e967b91f085829b8"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280040.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280040.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "818671555d29c8714cefee05e1e6a09b4e8d9dacd17be45e14fd961b1feff0fd"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280040c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280040c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d9ff5048e2dfbc00dc47330d486a751c0c2f53cfa433773a2ee11f4c90348eb1"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280041.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280041.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f0044722b1feb0b900c750f5c88f9526719c984970dd486cd4a7b67f8dc746ef"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280041c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280041c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d7826f6af1379db75730cdcaeb9ce0ee06f36d19b9fb67c576247fb7659d5f8a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280045.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280045.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "eb45c2e8df11575b0a72b6c8e69126dc669398431409c7cf5407935b3cf14d0f"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280048.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280048.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f67a5c3cea12f03645672c6be4b575bdb910adc0257bf41d847af21bfd968a7c"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280048c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280048c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "a0b10821a3125da8dbb1d005cee5155a4aa3d1391547abbdf34f0c1a8069d484"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280049.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280049.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "fb23774b6ef14cac3c2e1f6bbe777786c8778e1f64274f01d2919f2e2d286353"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280049c.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280049c.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d32877fb4e9fbfe693ccc27d68724936a4c5e2ddd04c3f74fbd8568a62ac450e"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280049m.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280049m.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "975535b61305bcd5daeabcfafe2ef1f5ac4e716c46e7f6548f7783a2105e85e6"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2801.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2801.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "391bf943d0b4b41ec823ababb5497f69e767f6dff4d5623dc9ec87687f4751ac"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28015.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28015.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "eeb509e0ca2c7f6ac1fc923b5a5ecec8997086ff58e81c9415615477a7169842"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28016.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28016.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2958d26c9225c3b819351a93c63d0c29aa7c077bf1e53d807ddf43473f15e038"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2802.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2802.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6a38cdc2d4966019c1a6a43be5afa24fe223dede872077cb08831c98103ca058"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28020.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28020.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "da89d5429796b47bd7a517b61da21b8bb5152201772a27cfc57e71f64e360f6b"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280200.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280200.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "a1730e841251078ae85e4e755b30d6e534eec1ad47a1d762f11149f8e5efa492"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28021.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28021.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9d1a2cce2a398701680b8396c0929b3b04d3482ebcdff0a1eb682fb34e229ac6"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28022.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28022.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "7307179c2d0f34534f7bb14e6a20f491b2be2953d35cac833e1df2b70a6f55e6"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280220.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280220.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "b6ed6a66b2393e60084bf49f723961a4aaeff95410230756dec81eb241d54637"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28023.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28023.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "c0561f3f7ab4151e7677a637c11f6a4e06390f76d5649b8ce130c54e3e23b4b9"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280230.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280230.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "aff94449536582ae26242adcf2da35be557e767e57badb78a7d3e5778c24df0d"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28026.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28026.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1634f81a51066d291afa291d594c272cb6cc7a980371d0c1aac9ad0bf5ad0c70"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280260.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280260.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "60b16e299e4c37fda4a28174c9e43a8bca93eb2e189854837eb673ee3949ec99"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28027.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28027.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "575e8d78924139117153a358ec64889a6689bcb7401ecdd1f06d829ff2b3a1a3"
+    },
+    "tcl/target/ti/tms320/generated/tms320f280270.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f280270.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "fe3cf3320e291daf8df4fa3854beaf9da6057505b1f7a4da074910d59be74c3f"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28030.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28030.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9638b15a8f5b708eb47c42ed43f1df49a10dea41116ce42ddfe09c07489be183"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28031.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28031.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6d7f8407c9d5f1630743b3da76ed318709c8ece949747c2ab5e5fd69703b1d1d"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28032.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28032.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d2fe3c6b7c98ba82f15ff0817cd3f112d35b43a13fde8db9ef14a2b20276e549"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28033.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28033.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9eaa2b29160fea058a706c623d15f5e86fc09866976e81c08ad1f58ca20efaaa"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28034.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28034.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "97f1c5ee87662f132bfcf275d2afee2b0c8fb139139282f2711ffbd9f57061d8"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28035.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28035.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "11c2c5234ccb40d1adc374b04d0de56cf9bbdeb682b8e6af789fc81dc6277f8b"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28044.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28044.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "73166e27f546fb166c62f6cd1fa34c0c97544efbacfcf2ef437ca6161395a2d6"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28050.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28050.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "10e6f217ad10da40d18fce0b5e1392d25e6e054662d31a824368f2cea869af7f"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28051.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28051.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "5c4137902130f3fea91161757575728436915f12d9700725e082284d4b404369"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28052.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28052.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9c1c8be60fc592f3e97c7708e24e36fe5127e9eafb2ece354b26431aabc1e4c8"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28052f.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28052f.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "af55bb992e2bec8ea9a77f1b3b1094be00fe772525332cffcc259c6b7e291ccd"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28052m.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28052m.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "5e8d0e46848fcc76b5789a32faa9c4717a96f34c0227d460d537ef341f089afe"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28053.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28053.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "b3576f0bcb528c13aac384bae4b5668af26e573322d4001507ff156d35a34dfc"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28054.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28054.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "8387bf79cfa02a3ac21a19d744396b97e1be60c904f1a4648ff14ae323ecaa96"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28054f.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28054f.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d3d88b08caf474bb21949f3183d1bf8a756f72d13270d0ae05baab904de6fc17"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28054m.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28054m.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "08f524bd3f39dae8a94303dd8f74f57fc96c8bf92844743e6ce5a4331856307e"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28055.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28055.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "87b2dda154363e9aeb2fb551dca61046ea7cbcbfbdbff47e3d59f3f8ca76554f"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2806.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2806.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "07bb07a62250f3a5631363e45a7f54feeb2a8d8984bdf54ef0ac840cf015a8d7"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28062.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28062.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "5a4ce3c66b00a2314b02d7feb590719cc0fb9be3b624a1950dde52a023687440"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28063.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28063.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "0de7b2c9273cae16350910a2f47137bc11d914230f37b39107fc0e28f78b3eb0"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28064.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28064.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d383467fb4d23114374f35526b8c2c827fdac3a345da464c66958ecf01cb2b38"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28065.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28065.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6d8ba710f7bea3c707e8665733c244dbab5f108497e8079dfffa9789e8abf30a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28066.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28066.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "082ad8faeef09a838ef2ee19f302ae197804a7ac0c8e14a4e0cb1053943333ec"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28067.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28067.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "a931f20bb6b87b1c936b4898376559d02e55648ddbafd2dd74f10845ec422d41"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28068.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28068.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2ddd0e3fee827404649bd174cfb2277160d86cbd4d07b10ccba505923e536acc"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28069.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28069.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2f4a347d868f826c63e759cf02e316292294c0206bd6a6389dc5bd83b5cb8583"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28074.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28074.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6c784989832cd66c4b842a6d6dbdb1e2204344369d8b2d061c2499bf51aca383"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28075.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28075.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "95a38bbdcadcce92460c16eae1b26845dd9513fc6904b2e250d1779077d2b45b"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28076.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28076.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "b34a24a60ad9b72fcee4c1a9fe95de9cc79a0d90462fc3967861866ee8759843"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28079.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28079.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "6645a396d9a10c45da7704996e6ffe6ac0fe07c072a78a83282049659276b6fe"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2808.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2808.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9eee5f20d46279adbe16bed7a28c49b8f6ee8f103065200f42dfad70938b34f7"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2809.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2809.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d9bf6d2b61d806417316e31fa567af91b73e01847c0a24627125ced03419de5f"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2810.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2810.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "0d594555379ecd8746bad352e0d7c4a61fbea92c561f416ac6be264d81a76abb"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2811.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2811.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "fac83d5606195ad093902718c75aec2520908c3880fc88765d20addf87197bcb"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2812.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2812.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "dbad9521e0c99956c973e19f47d20e236abb7707aba73fc36f1badda7980228a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28232.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28232.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f0bfe1dd16b67a13f930e3089c7eaacd1a3cf5485c3d4a494202b09e8c7122d9"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28234.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28234.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "52a3311affce1c80e3d0f3b1bd38b1c10c7f98aa26342611e889d29651f42508"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28235.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28235.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "68d4b3f2aa17c7b9d0470c41cb1c2c9708a9ff6d865729877a6d7299108df3c4"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28332.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28332.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "66de7c5b04fd967d4ee0bde230c79ca8855e07b211de9285e5729c12714c0ca0"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28333.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28333.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "8d37b1617a156e4a52a8b23d4ffe26b8efd7e0a692fca8aefc908f91698bb700"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28334.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28334.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "622965ccb03080c58a48b167cae16ab0698d828de1cd8c4a7dfbdd57619cf925"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28335.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28335.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "739f410fa4a32e8e70ba3ee9a5500196576a112d7f57a750fc9a31ae4664e59a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28374d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28374d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "36ab425c729c758352fce83602dedef549d818622e568ac45d2d8219dc1ffcc5"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28374s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28374s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "13a1ac57f1d62c0405c41dbfa533ece25b3ffea97b50ac943736fba78ac68a10"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28375d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28375d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9c2d5f7b3b80c843b99707e1ba1c81337115f9021f14b61d1e1220d087cf6c45"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28375s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28375s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "3455212d3a5f9fefd9a1532683f35e07ab0b81cd94668b65b98b6ff0171432a0"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28376d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28376d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "48a699c7dba73b44f51745207b05fead9dba288b1461e9de8e981234bc4e5ff3"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28376s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28376s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "5e8fa62df89a6dc3a60d69012dddedf850fb56dccfe954f831cd932fe9092337"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28377d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28377d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "b29fc1b4fd69173beb7b66dc9b2824ebcbabf9e7a9fc5c10c2e15feb3b892d23"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28377s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28377s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "2fc9a68c7ca63fca747b05c1a7e3773f90d72c71710e83fa0776f01ddad9b09a"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28378d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28378d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "84932e9bcd8b454598d3a77fe99cf9b689dd9016763c3a131f10b300d96debbc"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28378s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28378s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "ceccece66b0cfe294cbc9a2bf1a0ec838ec3b1b2d40e941ad2789699bd731817"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28379d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28379d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "07efdba0245d6d33d30314cbae83de9ca776ffdfd953966e55e5526678aa3d03"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28379s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28379s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d1ff988fba9b89c545165b270f75a8e788e789ebacc56936a6d7f4a16cbc4088"
+    },
+    "tcl/target/ti/tms320/generated/tms320f2837hd.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f2837hd.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "0ddaf49d000463fac7610fcf2b10de84cedbfff25a575c50d7326d04a27e46d3"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28384d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28384d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d8025062e93f4e7f09c4875bcdf87c097f5fa61497685bf8480300e7415bd2e1"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28384s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28384s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1388c41dac65b25a000049069377a4d88bb73b954a64b537fe82868032bb4fd4"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28386d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28386d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "c0a8e28fa0e815d3a4d7786005ead0776ad8968ed041641796056baff961d910"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28386s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28386s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "1ba9677cea5f93edffdb9a127856c9ee874f071453197b342534fbbf855234dd"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28388d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28388d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f7ec0a01bde4e8cdc1a4de4e270e73a54278e9db245e6ceec7476cd8f30fa373"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28388s.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28388s.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "66249a5cca0c12c98ffc750834c7f167245eee16e37ef2baffeecef5024cbafd"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28plc83.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28plc83.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "4ab517292e4457b74bc2acdb84a1bd88d3390b2016d39be88f026f2478a5f4e6"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28plc84.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28plc84.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d32eb9735aaf20dc13f77cfae8cdeed8ccca477e631f075dd69449d2bfd896e5"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28plc85.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28plc85.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "d5008f8de1edcdae4a6acb659ded221df70176ff789a063475a09c2def60231e"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28plc90d.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28plc90d.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "dd8ba794bdbed1e47c82e4961d72403ad01818ef742d58cda01278eabf66a21c"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28plc93.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28plc93.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "43553bff48893bc6bd66301726121c08b0fbd7b0e6c10a8cdb4722581a5d0714"
+    },
+    "tcl/target/ti/tms320/generated/tms320f28plc95.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320f28plc95.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "407ff44d80db562a657f2079a2769cfc32b4a331131b240013c6fd0dbe7859f1"
+    },
+    "tcl/target/ti/tms320/generated/tms320r2810.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320r2810.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "7b8b2b9f3bb73090d22f60cc11abf33538c4244655a4263f803ebc75bc56827c"
+    },
+    "tcl/target/ti/tms320/generated/tms320r2812.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tms320r2812.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "f6171ee08ac7112c8556225f4b6ebdbc29e3d4722703b781b979fad13f682490"
+    },
+    "tcl/target/ti/tms320/generated/tpr12.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/generated/tpr12.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "b262b58cd000d7091808fa42095352eef86c6d0501488130c928cc39699d27f4"
+    },
+    "tcl/target/ti/tms320/index.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320/index.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "9f6e1ef9c3d415d17cd4177d50574f1a9b2ff1fe25effa9eff343aa23eeabea1"
+    },
+    "tcl/target/ti/tms320f280049.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320f280049.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "b74d89e19cd9857be092b2c488e72b9ddbd379a53379100971da1433309e49b2"
+    },
+    "tcl/target/ti/tms320f28069.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320f28069.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "4f83bcb6d4e7b71828a29e4ddb7e2a9f80a196bf8895e02259d71a499624e2f2",
+      "pristine_sha256": "d0586d0aaf2277805effabef6b03b3adb1503a48a07b1049936fa3ed0ce4cb6f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
+    },
+    "tcl/target/ti/tms320f28m35x-dual-core.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320f28m35x-dual-core.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "590a5fcfe16020ad534dfb83b8b917d6b17a6eb27ea1140faef63927f8431097"
+    },
+    "tcl/target/ti/tms320f28m35x.cfg": {
+      "source_repo": "xsession/openocd",
+      "source_branch": "master",
+      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
+      "source_path": "tcl/target/ti/tms320f28m35x.cfg",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [],
+      "sha256": "539eba99d127358efa753fd58498a91e2ab76feae1bf919d017e6686efc642d6"
+    },
     "tcl/target/ti_cc2341.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
       "source_branch": "ti-release",
@@ -8814,7 +11400,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "dc5ea9d9e1e56d647412d34df1df22760c738c224a67239547d7e16ce6a7a1d8"
+      "sha256": "8f01edd1dbfd6b781203e291d36f51fa684560370c4436a1195ba4bb5fe80690",
+      "pristine_sha256": "dc5ea9d9e1e56d647412d34df1df22760c738c224a67239547d7e16ce6a7a1d8",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/ti_lpf3.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",

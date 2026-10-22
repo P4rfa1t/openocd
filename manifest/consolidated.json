@@ -2,8 +2,8 @@
  "upstream": "openocd-org/openocd",
  "upstream_branch": "master",
  "unique_paths": 1298,
- "imported_paths": 557,
- "not_imported_paths": 741,
+ "imported_paths": 809,
+ "not_imported_paths": 489,
  "not_imported": [
   "src/flash/nor/adsp/adsp218xx.c",
   "src/flash/nor/adsp/adsp218xx.h",
@@ -368,7 +368,6 @@
   "tcl/board/synopsys_angel4.cfg",
   "tcl/board/synopsys_haps51.cfg",
   "tcl/board/synopsys_ml509.cfg",
-  "tcl/board/ti/cc35x1e-launchpad.cfg",
   "tcl/board/ti/launchxl-f28069m-xds100v2.cfg",
   "tcl/board/ti/lp-em-cc2340r5.cfg",
   "tcl/board/ti/lp-em-cc2340r53.cfg",
@@ -381,25 +380,19 @@
   "tcl/board/ti/lp-em-cc2755r10.cfg",
   "tcl/board/ti/lp-em-cc2755r74.cfg",
   "tcl/board/ti/lp-em-cc2765r10.cfg",
-  "tcl/board/ti/mspm0c1103-cmsis-dap.cfg",
-  "tcl/board/ti/mspm0c1103-xds110.cfg",
   "tcl/board/ti/mspm33-launchpad.cfg",
   "tcl/board/ti/tms320f280049-xds100v2.cfg",
   "tcl/board/ti/tms320f280049-xds100v3.cfg",
-  "tcl/board/ti/tms320f280049-xds110.cfg",
   "tcl/board/ti/tms320f28069-xds100v2.cfg",
   "tcl/board/ti/tms320f28069-xds100v3.cfg",
-  "tcl/board/ti/tms320f28069-xds110.cfg",
   "tcl/board/ti/tms320f28m35x-dual-core-xds100v2.cfg",
   "tcl/board/ti/tms320f28m35x-dual-core-xds100v3.cfg",
   "tcl/board/ti/tms320f28m35x-xds100v2.cfg",
   "tcl/board/ti/tms320f28m35x-xds100v3.cfg",
-  "tcl/board/ti/tms320f28m35x-xds110.cfg",
   "tcl/interface/al_link.cfg",
   "tcl/interface/axm0432.cfg",
   "tcl/interface/calao-usb-a9260.cfg",
   "tcl/interface/chameleon.cfg",
-  "tcl/interface/colobus.cfg",
   "tcl/interface/cortino.cfg",
   "tcl/interface/ddmi_demo.cfg",
   "tcl/interface/digilent-hs1.cfg",
@@ -413,22 +406,11 @@
   "tcl/interface/flossjtag.cfg",
   "tcl/interface/flyswatter.cfg",
   "tcl/interface/flyswatter2.cfg",
-  "tcl/interface/ftdi/alinx.cfg",
-  "tcl/interface/ftdi/arty-onboard-ftdi.cfg",
-  "tcl/interface/ftdi/c232hm_ddhsl_0.cfg",
   "tcl/interface/ftdi/calao-usb-a9260-c01.cfg",
   "tcl/interface/ftdi/calao-usb-a9260-c02.cfg",
   "tcl/interface/ftdi/cc3200lp.cfg",
-  "tcl/interface/ftdi/digilent-hs2-cjtag.cfg",
-  "tcl/interface/ftdi/digilent-nexys4-ddr.cfg",
-  "tcl/interface/ftdi/ft2232h_breakout.cfg",
-  "tcl/interface/ftdi/kt-link-swd.cfg",
-  "tcl/interface/ftdi/np1167.cfg",
-  "tcl/interface/ftdi/olimex-arm-usb-ocd-h-swd.cfg",
-  "tcl/interface/ftdi/phytec-dh-006.cfg",
   "tcl/interface/ftdi/wch-rvswd.cfg",
   "tcl/interface/ftdi/wch-swio.cfg",
-  "tcl/interface/ftdi/xds100.cfg",
   "tcl/interface/hilscher_nxhx10_etm.cfg",
   "tcl/interface/hilscher_nxhx500_etm.cfg",
   "tcl/interface/hilscher_nxhx500_re.cfg",
@@ -444,8 +426,6 @@
   "tcl/interface/luminary-icdi.cfg",
   "tcl/interface/luminary-lm3s811.cfg",
   "tcl/interface/luminary.cfg",
-  "tcl/interface/microchip/icd4-cmsis-dap.cfg",
-  "tcl/interface/microchip/pickit4-cmsis-dap.cfg",
   "tcl/interface/minimodule.cfg",
   "tcl/interface/neodb.cfg",
   "tcl/interface/ngxtech.cfg",
@@ -464,25 +444,17 @@
   "tcl/interface/signalyzer-lite.cfg",
   "tcl/interface/signalyzer.cfg",
   "tcl/interface/stm32-stick.cfg",
-  "tcl/interface/tamarin.cfg",
   "tcl/interface/ti/cmsis-dap.cfg",
-  "tcl/interface/ti/msp-fet.cfg",
   "tcl/interface/ti/ti-icdi.cfg",
-  "tcl/interface/ti/unsupported-closed.cfg",
-  "tcl/interface/ti/xds100.cfg",
   "tcl/interface/ti/xds100v2.cfg",
   "tcl/interface/ti/xds100v3.cfg",
   "tcl/interface/ti/xds110.cfg",
-  "tcl/interface/ti/xds200.cfg",
-  "tcl/interface/ti/xds560.cfg",
   "tcl/interface/vpaclink.cfg",
   "tcl/interface/wlink.cfg",
   "tcl/interface/xds100v2.cfg",
   "tcl/target/#U043a1879x#U04311#U044f.cfg",
   "tcl/target/1986#U0432#U04351#U0442.cfg",
-  "tcl/target/1986Be1T.cfg",
   "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
-  "tcl/target/anlogic/al_fpga.cfg",
   "tcl/target/anlogic/dr1m35.cfg",
   "tcl/target/anlogic/dr1m350.cfg",
   "tcl/target/anlogic/dr1m350_al_link.cfg",
@@ -495,16 +467,12 @@
   "tcl/target/anlogic/dr1ps_al_link.cfg",
   "tcl/target/anlogic/dr1v90.cfg",
   "tcl/target/anlogic/dr1v90_al_link.cfg",
-  "tcl/target/anlogic/init.cfg",
-  "tcl/target/anlogic/onecable.cfg",
   "tcl/target/anlogic/ph1p100.cfg",
   "tcl/target/anlogic/ph1p100_al_link.cfg",
   "tcl/target/anlogic/ph1p35.cfg",
   "tcl/target/anlogic/ph1p35_al_link.cfg",
-  "tcl/target/anlogic/sf1.cfg",
   "tcl/target/anlogic/sf1_al_link.cfg",
   "tcl/target/anlogic/softcore_cached.yaml",
-  "tcl/target/anlogic/softcore_direct.cfg",
   "tcl/target/chip_debugger/6100.cfg",
   "tcl/target/chip_debugger/6200.cfg",
   "tcl/target/chip_debugger/9000.cfg",
@@ -519,231 +487,11 @@
   "tcl/target/infineon/tc48x.cfg",
   "tcl/target/infineon/tc49x.cfg",
   "tcl/target/infineon/tc4dx.cfg",
-  "tcl/target/k1879h61ya.cfg",
-  "tcl/target/k1879x61R.cfg",
-  "tcl/target/mediatek/memc.tcl",
-  "tcl/target/mediatek/mmio.tcl",
-  "tcl/target/mediatek/mt7620.cfg",
-  "tcl/target/mediatek/mt7621.cfg",
-  "tcl/target/mediatek/mt7622.cfg",
-  "tcl/target/mediatek/mt7628.cfg",
-  "tcl/target/mediatek/mt7629.cfg",
-  "tcl/target/mediatek/mt7981.cfg",
-  "tcl/target/mediatek/mt7986.cfg",
-  "tcl/target/mediatek/mt7988.cfg",
-  "tcl/target/qualcomm/qcom.cfg",
   "tcl/target/smdk6410.cfg",
-  "tcl/target/ti/c2000-icepick-scan.cfg",
   "tcl/target/ti/cc2341.cfg",
   "tcl/target/ti/cc23xx.cfg",
   "tcl/target/ti/cc27xx.cfg",
-  "tcl/target/ti/cc35x1e.cfg",
-  "tcl/target/ti/lpf3.cfg",
-  "tcl/target/ti/mspm0c1103.cfg",
   "tcl/target/ti/mspm33.cfg",
-  "tcl/target/ti/tms320-generic-scan.cfg",
-  "tcl/target/ti/tms320/family/c55xx.cfg",
-  "tcl/target/ti/tms320/family/c620x.cfg",
-  "tcl/target/ti/tms320/family/c621x.cfg",
-  "tcl/target/ti/tms320/family/c646x.cfg",
-  "tcl/target/ti/tms320/family/c64xp.cfg",
-  "tcl/target/ti/tms320/family/c64xx.cfg",
-  "tcl/target/ti/tms320/family/c66xx.cfg",
-  "tcl/target/ti/tms320/family/c670x.cfg",
-  "tcl/target/ti/tms320/family/c671x.cfg",
-  "tcl/target/ti/tms320/family/c672x.cfg",
-  "tcl/target/ti/tms320/family/c674x.cfg",
-  "tcl/target/ti/tms320/family/c71x.cfg",
-  "tcl/target/ti/tms320/family/c71x_v2.cfg",
-  "tcl/target/ti/tms320/family/c75x.cfg",
-  "tcl/target/ti/tms320/generated/66ak2e05.cfg",
-  "tcl/target/ti/tms320/generated/66ak2g01.cfg",
-  "tcl/target/ti/tms320/generated/66ak2g02.cfg",
-  "tcl/target/ti/tms320/generated/66ak2g12.cfg",
-  "tcl/target/ti/tms320/generated/66ak2h06.cfg",
-  "tcl/target/ti/tms320/generated/66ak2h12.cfg",
-  "tcl/target/ti/tms320/generated/66ak2h14.cfg",
-  "tcl/target/ti/tms320/generated/66ak2l06.cfg",
-  "tcl/target/ti/tms320/generated/am273x.cfg",
-  "tcl/target/ti/tms320/generated/am5706.cfg",
-  "tcl/target/ti/tms320/generated/am5708.cfg",
-  "tcl/target/ti/tms320/generated/am5716.cfg",
-  "tcl/target/ti/tms320/generated/am5718.cfg",
-  "tcl/target/ti/tms320/generated/am5726.cfg",
-  "tcl/target/ti/tms320/generated/am5726_reva.cfg",
-  "tcl/target/ti/tms320/generated/am5728.cfg",
-  "tcl/target/ti/tms320/generated/am5728_reva.cfg",
-  "tcl/target/ti/tms320/generated/am5729.cfg",
-  "tcl/target/ti/tms320/generated/am5746.cfg",
-  "tcl/target/ti/tms320/generated/am5748.cfg",
-  "tcl/target/ti/tms320/generated/am5749.cfg",
-  "tcl/target/ti/tms320/generated/am5766.cfg",
-  "tcl/target/ti/tms320/generated/am5768.cfg",
-  "tcl/target/ti/tms320/generated/awr1642.cfg",
-  "tcl/target/ti/tms320/generated/awr1843.cfg",
-  "tcl/target/ti/tms320/generated/awr2943.cfg",
-  "tcl/target/ti/tms320/generated/awr2944.cfg",
-  "tcl/target/ti/tms320/generated/awr6843.cfg",
-  "tcl/target/ti/tms320/generated/awr6843aop.cfg",
-  "tcl/target/ti/tms320/generated/f28m35e20b1.cfg",
-  "tcl/target/ti/tms320/generated/f28m35h22c1.cfg",
-  "tcl/target/ti/tms320/generated/f28m35h52c1.cfg",
-  "tcl/target/ti/tms320/generated/f28m35m20b1.cfg",
-  "tcl/target/ti/tms320/generated/f28m35m22c1.cfg",
-  "tcl/target/ti/tms320/generated/f28m35m52c1.cfg",
-  "tcl/target/ti/tms320/generated/f28m36h33b2.cfg",
-  "tcl/target/ti/tms320/generated/f28m36h33c2.cfg",
-  "tcl/target/ti/tms320/generated/f28m36h53b2.cfg",
-  "tcl/target/ti/tms320/generated/f28m36h53c2.cfg",
-  "tcl/target/ti/tms320/generated/f28m36p53c2.cfg",
-  "tcl/target/ti/tms320/generated/f28m36p63c2.cfg",
-  "tcl/target/ti/tms320/generated/iwr1642.cfg",
-  "tcl/target/ti/tms320/generated/iwr1843.cfg",
-  "tcl/target/ti/tms320/generated/iwr1843aop.cfg",
-  "tcl/target/ti/tms320/generated/iwr6843.cfg",
-  "tcl/target/ti/tms320/generated/iwr6843aop.cfg",
-  "tcl/target/ti/tms320/generated/tci6630k2l.cfg",
-  "tcl/target/ti/tms320/generated/tci6634k2k.cfg",
-  "tcl/target/ti/tms320/generated/tci6636k2h.cfg",
-  "tcl/target/ti/tms320/generated/tci6638k2k.cfg",
-  "tcl/target/ti/tms320/generated/tms320c2801.cfg",
-  "tcl/target/ti/tms320/generated/tms320c2802.cfg",
-  "tcl/target/ti/tms320/generated/tms320c2810.cfg",
-  "tcl/target/ti/tms320/generated/tms320c2811.cfg",
-  "tcl/target/ti/tms320/generated/tms320c2812.cfg",
-  "tcl/target/ti/tms320/generated/tms320c28341.cfg",
-  "tcl/target/ti/tms320/generated/tms320c28342.cfg",
-  "tcl/target/ti/tms320/generated/tms320c28343.cfg",
-  "tcl/target/ti/tms320/generated/tms320c28344.cfg",
-  "tcl/target/ti/tms320/generated/tms320c28345.cfg",
-  "tcl/target/ti/tms320/generated/tms320c28346.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800132.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800133.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800135.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800137.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800153.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800155.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800155_q1.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800157.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2800157_q1.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280021.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280022.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280023.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280023c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280024.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280024c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280025.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280025c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280033.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280034.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280036.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280036c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280037.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280037c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280038.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280038c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280039.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280039c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280040.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280040c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280041.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280041c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280045.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280048.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280048c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280049.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280049c.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280049m.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2801.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28015.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28016.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2802.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28020.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280200.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28021.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28022.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280220.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28023.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280230.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28026.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280260.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28027.cfg",
-  "tcl/target/ti/tms320/generated/tms320f280270.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28030.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28031.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28032.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28033.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28034.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28035.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28044.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28050.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28051.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28052.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28052f.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28052m.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28053.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28054.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28054f.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28054m.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28055.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2806.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28062.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28063.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28064.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28065.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28066.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28067.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28068.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28069.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28074.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28075.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28076.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28079.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2808.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2809.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2810.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2811.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2812.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28232.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28234.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28235.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28332.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28333.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28334.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28335.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28374d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28374s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28375d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28375s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28376d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28376s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28377d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28377s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28378d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28378s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28379d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28379s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f2837hd.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28384d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28384s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28386d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28386s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28388d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28388s.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28plc83.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28plc84.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28plc85.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28plc90d.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28plc93.cfg",
-  "tcl/target/ti/tms320/generated/tms320f28plc95.cfg",
-  "tcl/target/ti/tms320/generated/tms320r2810.cfg",
-  "tcl/target/ti/tms320/generated/tms320r2812.cfg",
-  "tcl/target/ti/tms320/generated/tpr12.cfg",
-  "tcl/target/ti/tms320/index.cfg",
-  "tcl/target/ti/tms320f280049.cfg",
-  "tcl/target/ti/tms320f28069.cfg",
-  "tcl/target/ti/tms320f28m35x-dual-core.cfg",
-  "tcl/target/ti/tms320f28m35x.cfg",
   "tcl/target/wch-riscv.cfg",
   "tcl/target/Ðº1879xÐ±1Ñ.cfg"
  ],
@@ -41899,7 +41647,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti/launchxl-f28069m-xds100v2.cfg",
@@ -42068,7 +41816,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti/mspm0c1103-xds110.cfg",
@@ -42081,7 +41829,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti/mspm33-launchpad.cfg",
@@ -42133,7 +41881,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti/tms320f28069-xds100v2.cfg",
@@ -42172,7 +41920,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti/tms320f28m35x-dual-core-xds100v2.cfg",
@@ -42237,7 +41985,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_am625_swd_native.cfg",
@@ -44744,7 +44492,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/cortino.cfg",
@@ -45187,7 +44935,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/arc_sdp.cfg",
@@ -45221,7 +44969,7 @@
    ],
    "sources": 8,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/c232hm_ddhsl_0.cfg",
@@ -45236,7 +44984,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/calao-usb-a9260-c01.cfg",
@@ -45388,7 +45136,7 @@
    ],
    "sources": 4,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/digilent-nexys4-ddr.cfg",
@@ -45401,7 +45149,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/esp_ftdi.cfg",
@@ -45429,7 +45177,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/kt-link-swd.cfg",
@@ -45442,7 +45190,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/moto_mdk_jtag.cfg",
@@ -45494,7 +45242,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/olimex-arm-usb-ocd-h-swd.cfg",
@@ -45507,7 +45255,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/phytec-dh-006.cfg",
@@ -45520,7 +45268,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ftdi/sony-ft232h-with-resistor.cfg",
@@ -45585,7 +45333,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/hilscher_nxhx10_etm.cfg",
@@ -46226,7 +45974,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/microchip/pickit4-cmsis-dap.cfg",
@@ -46239,7 +45987,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/minimodule.cfg",
@@ -47001,7 +46749,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/tas_client.cfg",
@@ -47055,7 +46803,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ti/ti-icdi.cfg",
@@ -47081,7 +46829,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ti/xds100.cfg",
@@ -47094,7 +46842,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ti/xds100v2.cfg",
@@ -47146,7 +46894,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/ti/xds560.cfg",
@@ -47159,7 +46907,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/turtelizer2.cfg",
@@ -47324,7 +47072,7 @@
     "tcl/target/1986BE1T.cfg",
     "tcl/target/1986Be1T.cfg"
    ],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
@@ -47701,7 +47449,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/anlogic/dr1m35.cfg",
@@ -47870,7 +47618,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/anlogic/onecable.cfg",
@@ -47883,7 +47631,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/anlogic/ph1p100.cfg",
@@ -47948,7 +47696,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/anlogic/sf1_al_link.cfg",
@@ -47987,7 +47735,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/apm32e1x.cfg",
@@ -49579,7 +49327,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/k1879x61R.cfg",
@@ -49608,7 +49356,7 @@
     "tcl/target/K1879x61R.cfg",
     "tcl/target/k1879x61R.cfg"
    ],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/k1921vg015.cfg",
@@ -50479,7 +50227,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mmio.tcl",
@@ -50492,7 +50240,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7620.cfg",
@@ -50505,7 +50253,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7621.cfg",
@@ -50518,7 +50266,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7622.cfg",
@@ -50531,7 +50279,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7628.cfg",
@@ -50544,7 +50292,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7629.cfg",
@@ -50557,7 +50305,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7981.cfg",
@@ -50570,7 +50318,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7986.cfg",
@@ -50583,7 +50331,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mediatek/mt7988.cfg",
@@ -50596,7 +50344,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/mega128.cfg",
@@ -51019,7 +50767,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/quark_d2000.cfg",
@@ -52223,7 +51971,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/cc2341.cfg",
@@ -52275,7 +52023,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/lpf3.cfg",
@@ -52288,7 +52036,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/mspm0c1103.cfg",
@@ -52301,7 +52049,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/mspm33.cfg",
@@ -52327,7 +52075,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c55xx.cfg",
@@ -52340,7 +52088,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c620x.cfg",
@@ -52353,7 +52101,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c621x.cfg",
@@ -52366,7 +52114,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c646x.cfg",
@@ -52379,7 +52127,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c64xp.cfg",
@@ -52392,7 +52140,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c64xx.cfg",
@@ -52405,7 +52153,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c66xx.cfg",
@@ -52418,7 +52166,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c670x.cfg",
@@ -52431,7 +52179,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c671x.cfg",
@@ -52444,7 +52192,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c672x.cfg",
@@ -52457,7 +52205,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c674x.cfg",
@@ -52470,7 +52218,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c71x.cfg",
@@ -52483,7 +52231,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c71x_v2.cfg",
@@ -52496,7 +52244,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/family/c75x.cfg",
@@ -52509,7 +52257,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2e05.cfg",
@@ -52522,7 +52270,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2g01.cfg",
@@ -52535,7 +52283,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2g02.cfg",
@@ -52548,7 +52296,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2g12.cfg",
@@ -52561,7 +52309,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2h06.cfg",
@@ -52574,7 +52322,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2h12.cfg",
@@ -52587,7 +52335,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2h14.cfg",
@@ -52600,7 +52348,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/66ak2l06.cfg",
@@ -52613,7 +52361,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am273x.cfg",
@@ -52626,7 +52374,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5706.cfg",
@@ -52639,7 +52387,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5708.cfg",
@@ -52652,7 +52400,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5716.cfg",
@@ -52665,7 +52413,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5718.cfg",
@@ -52678,7 +52426,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5726.cfg",
@@ -52691,7 +52439,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5726_reva.cfg",
@@ -52704,7 +52452,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5728.cfg",
@@ -52717,7 +52465,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5728_reva.cfg",
@@ -52730,7 +52478,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5729.cfg",
@@ -52743,7 +52491,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5746.cfg",
@@ -52756,7 +52504,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5748.cfg",
@@ -52769,7 +52517,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5749.cfg",
@@ -52782,7 +52530,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5766.cfg",
@@ -52795,7 +52543,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/am5768.cfg",
@@ -52808,7 +52556,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/awr1642.cfg",
@@ -52821,7 +52569,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/awr1843.cfg",
@@ -52834,7 +52582,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/awr2943.cfg",
@@ -52847,7 +52595,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/awr2944.cfg",
@@ -52860,7 +52608,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/awr6843.cfg",
@@ -52873,7 +52621,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/awr6843aop.cfg",
@@ -52886,7 +52634,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m35e20b1.cfg",
@@ -52899,7 +52647,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m35h22c1.cfg",
@@ -52912,7 +52660,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m35h52c1.cfg",
@@ -52925,7 +52673,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m35m20b1.cfg",
@@ -52938,7 +52686,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m35m22c1.cfg",
@@ -52951,7 +52699,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m35m52c1.cfg",
@@ -52964,7 +52712,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m36h33b2.cfg",
@@ -52977,7 +52725,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m36h33c2.cfg",
@@ -52990,7 +52738,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m36h53b2.cfg",
@@ -53003,7 +52751,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m36h53c2.cfg",
@@ -53016,7 +52764,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m36p53c2.cfg",
@@ -53029,7 +52777,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/f28m36p63c2.cfg",
@@ -53042,7 +52790,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/iwr1642.cfg",
@@ -53055,7 +52803,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/iwr1843.cfg",
@@ -53068,7 +52816,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/iwr1843aop.cfg",
@@ -53081,7 +52829,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/iwr6843.cfg",
@@ -53094,7 +52842,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/iwr6843aop.cfg",
@@ -53107,7 +52855,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tci6630k2l.cfg",
@@ -53120,7 +52868,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tci6634k2k.cfg",
@@ -53133,7 +52881,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tci6636k2h.cfg",
@@ -53146,7 +52894,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tci6638k2k.cfg",
@@ -53159,7 +52907,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c2801.cfg",
@@ -53172,7 +52920,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c2802.cfg",
@@ -53185,7 +52933,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c2810.cfg",
@@ -53198,7 +52946,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c2811.cfg",
@@ -53211,7 +52959,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c2812.cfg",
@@ -53224,7 +52972,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c28341.cfg",
@@ -53237,7 +52985,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c28342.cfg",
@@ -53250,7 +52998,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c28343.cfg",
@@ -53263,7 +53011,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c28344.cfg",
@@ -53276,7 +53024,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c28345.cfg",
@@ -53289,7 +53037,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320c28346.cfg",
@@ -53302,7 +53050,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800132.cfg",
@@ -53315,7 +53063,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800133.cfg",
@@ -53328,7 +53076,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800135.cfg",
@@ -53341,7 +53089,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800137.cfg",
@@ -53354,7 +53102,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800153.cfg",
@@ -53367,7 +53115,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800155.cfg",
@@ -53380,7 +53128,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800155_q1.cfg",
@@ -53393,7 +53141,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800157.cfg",
@@ -53406,7 +53154,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2800157_q1.cfg",
@@ -53419,7 +53167,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280021.cfg",
@@ -53432,7 +53180,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280022.cfg",
@@ -53445,7 +53193,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280023.cfg",
@@ -53458,7 +53206,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280023c.cfg",
@@ -53471,7 +53219,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280024.cfg",
@@ -53484,7 +53232,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280024c.cfg",
@@ -53497,7 +53245,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280025.cfg",
@@ -53510,7 +53258,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280025c.cfg",
@@ -53523,7 +53271,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280033.cfg",
@@ -53536,7 +53284,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280034.cfg",
@@ -53549,7 +53297,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280036.cfg",
@@ -53562,7 +53310,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280036c.cfg",
@@ -53575,7 +53323,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280037.cfg",
@@ -53588,7 +53336,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280037c.cfg",
@@ -53601,7 +53349,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280038.cfg",
@@ -53614,7 +53362,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280038c.cfg",
@@ -53627,7 +53375,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280039.cfg",
@@ -53640,7 +53388,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280039c.cfg",
@@ -53653,7 +53401,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280040.cfg",
@@ -53666,7 +53414,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280040c.cfg",
@@ -53679,7 +53427,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280041.cfg",
@@ -53692,7 +53440,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280041c.cfg",
@@ -53705,7 +53453,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280045.cfg",
@@ -53718,7 +53466,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280048.cfg",
@@ -53731,7 +53479,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280048c.cfg",
@@ -53744,7 +53492,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280049.cfg",
@@ -53757,7 +53505,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280049c.cfg",
@@ -53770,7 +53518,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280049m.cfg",
@@ -53783,7 +53531,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2801.cfg",
@@ -53796,7 +53544,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28015.cfg",
@@ -53809,7 +53557,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28016.cfg",
@@ -53822,7 +53570,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2802.cfg",
@@ -53835,7 +53583,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28020.cfg",
@@ -53848,7 +53596,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280200.cfg",
@@ -53861,7 +53609,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28021.cfg",
@@ -53874,7 +53622,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28022.cfg",
@@ -53887,7 +53635,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280220.cfg",
@@ -53900,7 +53648,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28023.cfg",
@@ -53913,7 +53661,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280230.cfg",
@@ -53926,7 +53674,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28026.cfg",
@@ -53939,7 +53687,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280260.cfg",
@@ -53952,7 +53700,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28027.cfg",
@@ -53965,7 +53713,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f280270.cfg",
@@ -53978,7 +53726,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28030.cfg",
@@ -53991,7 +53739,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28031.cfg",
@@ -54004,7 +53752,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28032.cfg",
@@ -54017,7 +53765,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28033.cfg",
@@ -54030,7 +53778,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28034.cfg",
@@ -54043,7 +53791,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28035.cfg",
@@ -54056,7 +53804,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28044.cfg",
@@ -54069,7 +53817,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28050.cfg",
@@ -54082,7 +53830,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28051.cfg",
@@ -54095,7 +53843,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28052.cfg",
@@ -54108,7 +53856,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28052f.cfg",
@@ -54121,7 +53869,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28052m.cfg",
@@ -54134,7 +53882,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28053.cfg",
@@ -54147,7 +53895,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28054.cfg",
@@ -54160,7 +53908,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28054f.cfg",
@@ -54173,7 +53921,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28054m.cfg",
@@ -54186,7 +53934,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28055.cfg",
@@ -54199,7 +53947,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2806.cfg",
@@ -54212,7 +53960,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28062.cfg",
@@ -54225,7 +53973,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28063.cfg",
@@ -54238,7 +53986,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28064.cfg",
@@ -54251,7 +53999,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28065.cfg",
@@ -54264,7 +54012,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28066.cfg",
@@ -54277,7 +54025,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28067.cfg",
@@ -54290,7 +54038,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28068.cfg",
@@ -54303,7 +54051,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28069.cfg",
@@ -54316,7 +54064,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28074.cfg",
@@ -54329,7 +54077,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28075.cfg",
@@ -54342,7 +54090,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28076.cfg",
@@ -54355,7 +54103,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28079.cfg",
@@ -54368,7 +54116,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2808.cfg",
@@ -54381,7 +54129,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2809.cfg",
@@ -54394,7 +54142,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2810.cfg",
@@ -54407,7 +54155,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2811.cfg",
@@ -54420,7 +54168,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2812.cfg",
@@ -54433,7 +54181,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28232.cfg",
@@ -54446,7 +54194,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28234.cfg",
@@ -54459,7 +54207,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28235.cfg",
@@ -54472,7 +54220,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28332.cfg",
@@ -54485,7 +54233,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28333.cfg",
@@ -54498,7 +54246,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28334.cfg",
@@ -54511,7 +54259,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28335.cfg",
@@ -54524,7 +54272,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28374d.cfg",
@@ -54537,7 +54285,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28374s.cfg",
@@ -54550,7 +54298,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28375d.cfg",
@@ -54563,7 +54311,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28375s.cfg",
@@ -54576,7 +54324,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28376d.cfg",
@@ -54589,7 +54337,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28376s.cfg",
@@ -54602,7 +54350,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28377d.cfg",
@@ -54615,7 +54363,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28377s.cfg",
@@ -54628,7 +54376,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28378d.cfg",
@@ -54641,7 +54389,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28378s.cfg",
@@ -54654,7 +54402,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28379d.cfg",
@@ -54667,7 +54415,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28379s.cfg",
@@ -54680,7 +54428,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f2837hd.cfg",
@@ -54693,7 +54441,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28384d.cfg",
@@ -54706,7 +54454,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28384s.cfg",
@@ -54719,7 +54467,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28386d.cfg",
@@ -54732,7 +54480,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28386s.cfg",
@@ -54745,7 +54493,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28388d.cfg",
@@ -54758,7 +54506,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28388s.cfg",
@@ -54771,7 +54519,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28plc83.cfg",
@@ -54784,7 +54532,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28plc84.cfg",
@@ -54797,7 +54545,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28plc85.cfg",
@@ -54810,7 +54558,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28plc90d.cfg",
@@ -54823,7 +54571,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28plc93.cfg",
@@ -54836,7 +54584,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320f28plc95.cfg",
@@ -54849,7 +54597,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320r2810.cfg",
@@ -54862,7 +54610,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tms320r2812.cfg",
@@ -54875,7 +54623,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/generated/tpr12.cfg",
@@ -54888,7 +54636,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320/index.cfg",
@@ -54901,7 +54649,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320f280049.cfg",
@@ -54914,7 +54662,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320f28069.cfg",
@@ -54927,7 +54675,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320f28m35x-dual-core.cfg",
@@ -54940,7 +54688,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti/tms320f28m35x.cfg",
@@ -54953,7 +54701,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/ti_cc2341.cfg",

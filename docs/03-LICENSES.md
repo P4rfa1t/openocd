@@ -6,51 +6,55 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 398 |
-| GPL-2.0 | 139 |
+| NOASSERTION | 648 |
+| GPL-2.0 | 141 |
 | UNRESOLVED | 25 |
 | GPL-2.0-or-later | 1 |
 
-**423 个文件（75%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
+**673 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
 > 已知事实：OpenOCD 上游是 GPL-2.0-or-later，大多数 fork 继承该许可，所以实务上大概率都是 GPL。但 `NOASSERTION` 只表示「GitHub 没能解析出来」，**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。逐文件清单见 `manifest/licenses.csv` 与下方折叠区。
 
 ## tcl/ 配置（随树直接可用）
 
-文件数：**487**
+文件数：**739**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
+| [`xsession/openocd`](https://github.com/xsession/openocd) | NOASSERTION(227) | 227 |
 | [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | NOASSERTION(58), UNRESOLVED(10) | 68 |
 | [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(48), UNRESOLVED(1) | 49 |
 | [`rxmnjke/openocd`](https://github.com/rxmnjke/openocd) | NOASSERTION(48) | 48 |
-| [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | NOASSERTION(43) | 43 |
-| [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | GPL-2.0(33), UNRESOLVED(2) | 35 |
+| [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | NOASSERTION(44) | 44 |
+| [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | GPL-2.0(34), UNRESOLVED(2) | 36 |
 | [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | GPL-2.0(29), UNRESOLVED(1) | 30 |
 | [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(26), UNRESOLVED(2) | 28 |
 | [`TexasInstruments/ti-openocd`](https://github.com/TexasInstruments/ti-openocd) | NOASSERTION(19) | 19 |
+| [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(16) | 16 |
 | [`ciniml/openocd`](https://github.com/ciniml/openocd) | GPL-2.0(13) | 13 |
 | [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | NOASSERTION(11) | 11 |
 | [`OpenNuvoton/OpenOCD-Nuvoton`](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) | GPL-2.0(10), UNRESOLVED(1) | 11 |
-| [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(11) | 11 |
 | [`vllogic/openocd_cmsis-dap_v2`](https://github.com/vllogic/openocd_cmsis-dap_v2) | NOASSERTION(10) | 10 |
 | [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | NOASSERTION(10) | 10 |
 | [`fatalfeel/openocd_integrated`](https://github.com/fatalfeel/openocd_integrated) | NOASSERTION(10) | 10 |
+| [`hackpascal/openocd`](https://github.com/hackpascal/openocd) | NOASSERTION(10) | 10 |
 | [`ut2or1/openocd`](https://github.com/ut2or1/openocd) | NOASSERTION(7), UNRESOLVED(2) | 9 |
 | [`MotorolaMobilityLLC/openocd`](https://github.com/MotorolaMobilityLLC/openocd) | GPL-2.0(4), UNRESOLVED(4) | 8 |
+| [`riscv-collab/riscv-openocd`](https://github.com/riscv-collab/riscv-openocd) | NOASSERTION(7) | 7 |
 | [`esden/openocd`](https://github.com/esden/openocd) | GPL-2.0(6) | 6 |
-| [`xsession/openocd`](https://github.com/xsession/openocd) | NOASSERTION(6) | 6 |
 | [`walmis/openocd-blackmagic`](https://github.com/walmis/openocd-blackmagic) | GPL-2.0(5) | 5 |
-| [`riscv-collab/riscv-openocd`](https://github.com/riscv-collab/riscv-openocd) | NOASSERTION(5) | 5 |
 | [`DCVostok/openocd-k1921vk`](https://github.com/DCVostok/openocd-k1921vk) | NOASSERTION(4), UNRESOLVED(1) | 5 |
+| [`AnlogicInfo/al_openocd`](https://github.com/AnlogicInfo/al_openocd) | NOASSERTION(5) | 5 |
+| [`OlivierVanWassenhove-Dekimo/openocd`](https://github.com/OlivierVanWassenhove-Dekimo/openocd) | NOASSERTION(4) | 4 |
 | [`hikob/openocd`](https://github.com/hikob/openocd) | GPL-2.0(4) | 4 |
 | [`David-lau/openocd-geehy`](https://github.com/David-lau/openocd-geehy) | NOASSERTION(4) | 4 |
 | [`sony/openocd-nuttx`](https://github.com/sony/openocd-nuttx) | GPL-2.0(2), UNRESOLVED(1) | 3 |
 | [`nmenon/openocd`](https://github.com/nmenon/openocd) | NOASSERTION(3) | 3 |
 | [`raspberrypi/openocd`](https://github.com/raspberrypi/openocd) | NOASSERTION(3) | 3 |
 | [`ImproperCatGirl/openocd`](https://github.com/ImproperCatGirl/openocd) | NOASSERTION(3) | 3 |
-| [`OlivierVanWassenhove-Dekimo/openocd`](https://github.com/OlivierVanWassenhove-Dekimo/openocd) | NOASSERTION(2) | 2 |
 | [`luyi1888/openocd`](https://github.com/luyi1888/openocd) | NOASSERTION(2) | 2 |
+| [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(2) | 2 |
+| [`stacksmashing/openocd-tamarin`](https://github.com/stacksmashing/openocd-tamarin) | NOASSERTION(2) | 2 |
 | [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | GPL-2.0(2) | 2 |
 | [`Lichee-Pi/LicheeTang_openocd`](https://github.com/Lichee-Pi/LicheeTang_openocd) | GPL-2.0(2) | 2 |
 | [`loopj/openocd-efm32s2`](https://github.com/loopj/openocd-efm32s2) | NOASSERTION(2) | 2 |
@@ -59,9 +63,10 @@
 | [`snowcap-electronics/OpenOCD`](https://github.com/snowcap-electronics/OpenOCD) | GPL-2.0(1) | 1 |
 | [`Blinkinlabs/OpenOCD`](https://github.com/Blinkinlabs/OpenOCD) | GPL-2.0(1) | 1 |
 | [`kvth/openocd-swd-in-out`](https://github.com/kvth/openocd-swd-in-out) | NOASSERTION(1) | 1 |
+| [`tihmstar/openocd_colobus`](https://github.com/tihmstar/openocd_colobus) | NOASSERTION(1) | 1 |
 | [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
-| [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(1) | 1 |
-| [`stacksmashing/openocd-tamarin`](https://github.com/stacksmashing/openocd-tamarin) | NOASSERTION(1) | 1 |
+| [`corecode/openocd-swd`](https://github.com/corecode/openocd-swd) | GPL-2.0(1) | 1 |
+| [`tokuden/openocd-win-ftd2xx`](https://github.com/tokuden/openocd-win-ftd2xx) | NOASSERTION(1) | 1 |
 | [`matrix-io/matrix-creator-openocd`](https://github.com/matrix-io/matrix-creator-openocd) | GPL-2.0(1) | 1 |
 | [`HalfSweet/openocd`](https://github.com/HalfSweet/openocd) | NOASSERTION(1) | 1 |
 | [`mengfanyuc/openocd`](https://github.com/mengfanyuc/openocd) | NOASSERTION(1) | 1 |
@@ -71,9 +76,19 @@
 | [`go2sh/aurix-openocd`](https://github.com/go2sh/aurix-openocd) | NOASSERTION(1) | 1 |
 | [`padhialuo0426/openocd`](https://github.com/padhialuo0426/openocd) | NOASSERTION(1) | 1 |
 
-### ⚠️ 需人工审计（372 个文件无许可证信息）
+### ⚠️ 需人工审计（622 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
+
+<details><summary><code>AnlogicInfo/al_openocd</code> (5 个)</summary>
+
+- `tcl/target/anlogic/al_fpga.cfg`
+- `tcl/target/anlogic/init.cfg`
+- `tcl/target/anlogic/onecable.cfg`
+- `tcl/target/anlogic/sf1.cfg`
+- `tcl/target/anlogic/softcore_direct.cfg`
+
+</details>
 
 <details><summary><code>DCVostok/openocd-k1921vk</code> (5 个)</summary>
 
@@ -132,10 +147,12 @@
 
 </details>
 
-<details><summary><code>OlivierVanWassenhove-Dekimo/openocd</code> (2 个)</summary>
+<details><summary><code>OlivierVanWassenhove-Dekimo/openocd</code> (4 个)</summary>
 
 - `tcl/board/altera_arria10__aji_client.cfg`
 - `tcl/board/altera_arria10_niosv__aji_client.cfg`
+- `tcl/target/1986Be1T.cfg`
+- `tcl/target/k1879x61R.cfg`
 
 </details>
 
@@ -176,8 +193,13 @@
 
 </details>
 
-<details><summary><code>aesc-silicon/elements-openocd</code> (11 个)</summary>
+<details><summary><code>aesc-silicon/elements-openocd</code> (16 个)</summary>
 
+- `tcl/interface/ftdi/alinx.cfg`
+- `tcl/interface/ftdi/c232hm_ddhsl_0.cfg`
+- `tcl/interface/ftdi/digilent-nexys4-ddr.cfg`
+- `tcl/interface/ftdi/ft2232h_breakout.cfg`
+- `tcl/interface/ftdi/phytec-dh-006.cfg`
 - `tcl/interface/jtag_tcp.cfg`
 - `tcl/target/arty7_linux.cfg`
 - `tcl/target/arty7_uboot.cfg`
@@ -347,6 +369,21 @@
 
 </details>
 
+<details><summary><code>hackpascal/openocd</code> (10 个)</summary>
+
+- `tcl/target/mediatek/memc.tcl`
+- `tcl/target/mediatek/mmio.tcl`
+- `tcl/target/mediatek/mt7620.cfg`
+- `tcl/target/mediatek/mt7621.cfg`
+- `tcl/target/mediatek/mt7622.cfg`
+- `tcl/target/mediatek/mt7628.cfg`
+- `tcl/target/mediatek/mt7629.cfg`
+- `tcl/target/mediatek/mt7981.cfg`
+- `tcl/target/mediatek/mt7986.cfg`
+- `tcl/target/mediatek/mt7988.cfg`
+
+</details>
+
 <details><summary><code>intel/OpenOCD</code> (1 个)</summary>
 
 - `tcl/interface/snps_sdp.cfg`
@@ -359,9 +396,10 @@
 
 </details>
 
-<details><summary><code>linux-msm/openocd</code> (1 个)</summary>
+<details><summary><code>linux-msm/openocd</code> (2 个)</summary>
 
 - `tcl/interface/eud.cfg`
+- `tcl/target/qualcomm/qcom.cfg`
 
 </details>
 
@@ -413,12 +451,14 @@
 
 </details>
 
-<details><summary><code>riscv-collab/riscv-openocd</code> (5 个)</summary>
+<details><summary><code>riscv-collab/riscv-openocd</code> (7 个)</summary>
 
 - `tcl/board/sifive-e31arty-cjtag.cfg`
 - `tcl/board/sifive-e31arty-onboard-ftdi.cfg`
 - `tcl/board/stm32mp13x_dk.cfg`
 - `tcl/board/stm32mp15x_dk2.cfg`
+- `tcl/interface/ftdi/arty-onboard-ftdi.cfg`
+- `tcl/interface/ftdi/digilent-hs2-cjtag.cfg`
 - `tcl/target/nrf_common.cfg`
 
 </details>
@@ -488,19 +528,21 @@
 
 </details>
 
-<details><summary><code>stacksmashing/openocd-tamarin</code> (1 个)</summary>
+<details><summary><code>stacksmashing/openocd-tamarin</code> (2 个)</summary>
 
 - `tcl/interface/faultier.cfg`
+- `tcl/interface/tamarin.cfg`
 
 </details>
 
-<details><summary><code>sysprogs/openocd</code> (43 个)</summary>
+<details><summary><code>sysprogs/openocd</code> (44 个)</summary>
 
 - `tcl/board/rs14100.cfg`
 - `tcl/board/st_nucleo_l476rg.cfg`
 - `tcl/board/stm32mp25x_dk.cfg`
 - `tcl/board/twr-k40.cfg`
 - `tcl/interface/cc3200lp.cfg`
+- `tcl/interface/ftdi/olimex-arm-usb-ocd-h-swd.cfg`
 - `tcl/interface/picoprobe.cfg`
 - `tcl/interface/ti-icdi-auto.cfg`
 - `tcl/target/aducm3027.cfg`
@@ -542,6 +584,18 @@
 
 </details>
 
+<details><summary><code>tihmstar/openocd_colobus</code> (1 个)</summary>
+
+- `tcl/interface/colobus.cfg`
+
+</details>
+
+<details><summary><code>tokuden/openocd-win-ftd2xx</code> (1 个)</summary>
+
+- `tcl/interface/ftdi/np1167.cfg`
+
+</details>
+
 <details><summary><code>transcelestial/openocd</code> (1 个)</summary>
 
 - `tcl/target/lpc55xx.cfg`
@@ -577,14 +631,235 @@
 
 </details>
 
-<details><summary><code>xsession/openocd</code> (6 个)</summary>
+<details><summary><code>xsession/openocd</code> (227 个)</summary>
 
+- `tcl/board/ti/cc35x1e-launchpad.cfg`
+- `tcl/board/ti/mspm0c1103-cmsis-dap.cfg`
+- `tcl/board/ti/mspm0c1103-xds110.cfg`
+- `tcl/board/ti/tms320f280049-xds110.cfg`
+- `tcl/board/ti/tms320f28069-xds110.cfg`
+- `tcl/board/ti/tms320f28m35x-xds110.cfg`
+- `tcl/interface/ftdi/xds100.cfg`
 - `tcl/interface/mchp-ri4.cfg`
+- `tcl/interface/microchip/icd4-cmsis-dap.cfg`
+- `tcl/interface/microchip/pickit4-cmsis-dap.cfg`
+- `tcl/interface/ti/msp-fet.cfg`
+- `tcl/interface/ti/unsupported-closed.cfg`
+- `tcl/interface/ti/xds100.cfg`
+- `tcl/interface/ti/xds200.cfg`
+- `tcl/interface/ti/xds560.cfg`
 - `tcl/target/dspic33-ri4.cfg`
 - `tcl/target/mchp-renode.cfg`
 - `tcl/target/mchp-ri4.cfg`
 - `tcl/target/pic18-ri4.cfg`
 - `tcl/target/pic32mz-ri4.cfg`
+- `tcl/target/ti/c2000-icepick-scan.cfg`
+- `tcl/target/ti/cc35x1e.cfg`
+- `tcl/target/ti/lpf3.cfg`
+- `tcl/target/ti/mspm0c1103.cfg`
+- `tcl/target/ti/tms320-generic-scan.cfg`
+- `tcl/target/ti/tms320/family/c55xx.cfg`
+- `tcl/target/ti/tms320/family/c620x.cfg`
+- `tcl/target/ti/tms320/family/c621x.cfg`
+- `tcl/target/ti/tms320/family/c646x.cfg`
+- `tcl/target/ti/tms320/family/c64xp.cfg`
+- `tcl/target/ti/tms320/family/c64xx.cfg`
+- `tcl/target/ti/tms320/family/c66xx.cfg`
+- `tcl/target/ti/tms320/family/c670x.cfg`
+- `tcl/target/ti/tms320/family/c671x.cfg`
+- `tcl/target/ti/tms320/family/c672x.cfg`
+- `tcl/target/ti/tms320/family/c674x.cfg`
+- `tcl/target/ti/tms320/family/c71x.cfg`
+- `tcl/target/ti/tms320/family/c71x_v2.cfg`
+- `tcl/target/ti/tms320/family/c75x.cfg`
+- `tcl/target/ti/tms320/generated/66ak2e05.cfg`
+- `tcl/target/ti/tms320/generated/66ak2g01.cfg`
+- `tcl/target/ti/tms320/generated/66ak2g02.cfg`
+- `tcl/target/ti/tms320/generated/66ak2g12.cfg`
+- `tcl/target/ti/tms320/generated/66ak2h06.cfg`
+- `tcl/target/ti/tms320/generated/66ak2h12.cfg`
+- `tcl/target/ti/tms320/generated/66ak2h14.cfg`
+- `tcl/target/ti/tms320/generated/66ak2l06.cfg`
+- `tcl/target/ti/tms320/generated/am273x.cfg`
+- `tcl/target/ti/tms320/generated/am5706.cfg`
+- `tcl/target/ti/tms320/generated/am5708.cfg`
+- `tcl/target/ti/tms320/generated/am5716.cfg`
+- `tcl/target/ti/tms320/generated/am5718.cfg`
+- `tcl/target/ti/tms320/generated/am5726.cfg`
+- `tcl/target/ti/tms320/generated/am5726_reva.cfg`
+- `tcl/target/ti/tms320/generated/am5728.cfg`
+- `tcl/target/ti/tms320/generated/am5728_reva.cfg`
+- `tcl/target/ti/tms320/generated/am5729.cfg`
+- `tcl/target/ti/tms320/generated/am5746.cfg`
+- `tcl/target/ti/tms320/generated/am5748.cfg`
+- `tcl/target/ti/tms320/generated/am5749.cfg`
+- `tcl/target/ti/tms320/generated/am5766.cfg`
+- `tcl/target/ti/tms320/generated/am5768.cfg`
+- `tcl/target/ti/tms320/generated/awr1642.cfg`
+- `tcl/target/ti/tms320/generated/awr1843.cfg`
+- `tcl/target/ti/tms320/generated/awr2943.cfg`
+- `tcl/target/ti/tms320/generated/awr2944.cfg`
+- `tcl/target/ti/tms320/generated/awr6843.cfg`
+- `tcl/target/ti/tms320/generated/awr6843aop.cfg`
+- `tcl/target/ti/tms320/generated/f28m35e20b1.cfg`
+- `tcl/target/ti/tms320/generated/f28m35h22c1.cfg`
+- `tcl/target/ti/tms320/generated/f28m35h52c1.cfg`
+- `tcl/target/ti/tms320/generated/f28m35m20b1.cfg`
+- `tcl/target/ti/tms320/generated/f28m35m22c1.cfg`
+- `tcl/target/ti/tms320/generated/f28m35m52c1.cfg`
+- `tcl/target/ti/tms320/generated/f28m36h33b2.cfg`
+- `tcl/target/ti/tms320/generated/f28m36h33c2.cfg`
+- `tcl/target/ti/tms320/generated/f28m36h53b2.cfg`
+- `tcl/target/ti/tms320/generated/f28m36h53c2.cfg`
+- `tcl/target/ti/tms320/generated/f28m36p53c2.cfg`
+- `tcl/target/ti/tms320/generated/f28m36p63c2.cfg`
+- `tcl/target/ti/tms320/generated/iwr1642.cfg`
+- `tcl/target/ti/tms320/generated/iwr1843.cfg`
+- `tcl/target/ti/tms320/generated/iwr1843aop.cfg`
+- `tcl/target/ti/tms320/generated/iwr6843.cfg`
+- `tcl/target/ti/tms320/generated/iwr6843aop.cfg`
+- `tcl/target/ti/tms320/generated/tci6630k2l.cfg`
+- `tcl/target/ti/tms320/generated/tci6634k2k.cfg`
+- `tcl/target/ti/tms320/generated/tci6636k2h.cfg`
+- `tcl/target/ti/tms320/generated/tci6638k2k.cfg`
+- `tcl/target/ti/tms320/generated/tms320c2801.cfg`
+- `tcl/target/ti/tms320/generated/tms320c2802.cfg`
+- `tcl/target/ti/tms320/generated/tms320c2810.cfg`
+- `tcl/target/ti/tms320/generated/tms320c2811.cfg`
+- `tcl/target/ti/tms320/generated/tms320c2812.cfg`
+- `tcl/target/ti/tms320/generated/tms320c28341.cfg`
+- `tcl/target/ti/tms320/generated/tms320c28342.cfg`
+- `tcl/target/ti/tms320/generated/tms320c28343.cfg`
+- `tcl/target/ti/tms320/generated/tms320c28344.cfg`
+- `tcl/target/ti/tms320/generated/tms320c28345.cfg`
+- `tcl/target/ti/tms320/generated/tms320c28346.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800132.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800133.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800135.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800137.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800153.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800155.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800155_q1.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800157.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2800157_q1.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280021.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280022.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280023.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280023c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280024.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280024c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280025.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280025c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280033.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280034.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280036.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280036c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280037.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280037c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280038.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280038c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280039.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280039c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280040.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280040c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280041.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280041c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280045.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280048.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280048c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280049.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280049c.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280049m.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2801.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28015.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28016.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2802.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28020.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280200.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28021.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28022.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280220.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28023.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280230.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28026.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280260.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28027.cfg`
+- `tcl/target/ti/tms320/generated/tms320f280270.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28030.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28031.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28032.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28033.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28034.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28035.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28044.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28050.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28051.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28052.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28052f.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28052m.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28053.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28054.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28054f.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28054m.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28055.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2806.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28062.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28063.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28064.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28065.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28066.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28067.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28068.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28069.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28074.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28075.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28076.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28079.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2808.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2809.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2810.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2811.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2812.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28232.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28234.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28235.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28332.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28333.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28334.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28335.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28374d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28374s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28375d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28375s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28376d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28376s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28377d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28377s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28378d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28378s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28379d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28379s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f2837hd.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28384d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28384s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28386d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28386s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28388d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28388s.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28plc83.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28plc84.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28plc85.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28plc90d.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28plc93.cfg`
+- `tcl/target/ti/tms320/generated/tms320f28plc95.cfg`
+- `tcl/target/ti/tms320/generated/tms320r2810.cfg`
+- `tcl/target/ti/tms320/generated/tms320r2812.cfg`
+- `tcl/target/ti/tms320/generated/tpr12.cfg`
+- `tcl/target/ti/tms320/index.cfg`
+- `tcl/target/ti/tms320f280049.cfg`
+- `tcl/target/ti/tms320f28069.cfg`
+- `tcl/target/ti/tms320f28m35x-dual-core.cfg`
+- `tcl/target/ti/tms320f28m35x.cfg`
 
 </details>
 
