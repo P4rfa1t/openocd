@@ -55,35 +55,34 @@ and stripped of files that are equivalent to what upstream already ships.
 
 | | count | notes |
 |---|---:|---|
-| `tcl/` script files | 487 | 472 `.cfg` plus 15 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
+| `tcl/` script files | 739 | 722 `.cfg` plus 17 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
 | `src/` C sources | 76 | 40 `.c` plus 36 `.h`; **47 wired into the build**, 29 staged but not yet registered |
 | duplicate copies collapsed | 6910 | one winner kept per path |
 | files dropped as upstream-equivalent | 7376 | upstream already ships them, or ships them under another path |
 | candidates rejected as unusable | 621 | build-system files, non-C payloads and core internals that exist upstream under the same name |
 
-Of the 1298 unique paths the survey identified, **557 landed in the tree** and
-741 did not.
+Of the 1298 unique paths the survey identified, **809 landed in the tree** and
+489 did not.
 
 The 328 C sources that did not land all need per-backend porting: they are
 complete implementations of a driver or an architecture, but written against
-an older OpenOCD API. `src/flash/nor` holds the largest group (96 files),
-then `src/target` (52) and `src/jtag/drivers` (19).
+an older OpenOCD API. `src/target` holds the largest group (133 files),
+then `src/flash` (125), `src/jtag` (68) and `src/server` (2).
 
-The 413 TCL files that did not land break down as:
+The 161 TCL files that did not land break down as:
 
 | | count | why |
 |---|---:|---|
-| upstream already ships them | 73 | upstream moved them into a subdirectory — 15 are identical apart from the `source [find ...]` path, the other 58 have since been edited upstream |
-| duplicate of a file already in the tree | 3 | a fork copied a file that is already here under a different name |
-| **ready to import as they stand** | **253** | their `source [find ...]` references all resolve and every driver, target type and flash algorithm they need is already in the tree |
-| needs a backend this tree does not have | 42 | they drive a probe or a chip family whose C code was never published — the ST-LINK external loader family, Infineon TriCore, WCH RISC-V, the ESP32 GPIO probe, the Anlogic `al_link` probe, and similar |
-| depends on one of those 42 | 34 | they are the board files that sit on top of such a backend |
-| neither | 8 | four Synopsys bring-up boards whose target definition was never published, and four copies of upstream's Cyrillic-named configs under mangled names |
+| upstream already ships them | 73 | upstream moved them into a subdirectory, so the survey saw them under a flat name |
+| needs a backend this tree does not have | 46 | they drive a probe or a chip family whose C code was never published — Infineon TriCore, the Anlogic `al_link` probe, WCH RISC-V, the ESP32 GPIO probe, the ST-LINK external loader family, and similar |
+| depends on a file that is itself missing | 25 | a `source [find ...]` line points at a config that did not land |
+| **ready to import as they stand** | **12** | their `source [find ...]` references all resolve and every driver, target type and flash algorithm they need is already in the tree |
+| not retrievable from the survey cache | 5 | the survey recorded the path but the file body was never fetched |
 
-Three more groups complete the count of **563 files**, each with its own
+Two more groups complete the count of **815 files**, each with its own
 provenance entry:
 
-- **25 files pulled in as dependencies** — a config that `source`s another
+- **5 files pulled in as dependencies** — a config that `source`s another
   config brings the referenced file along with it. They are marked
   `imported_as: dependency` in the manifest.
 - **1 file that upstream also ships under the same name** —
@@ -91,9 +90,9 @@ provenance entry:
   `tcl/target/adsp-sc58x.cfg`. The tree keeps the third-party version and
   `tools/verify_tree.py` reports the collision as a warning.
 
-Upstream ships 2203 files; this tree ships 2822.
+Upstream ships 2203 files; this tree ships 3077.
 
-**All 563 imported files are pinned to the exact commit they came from.** Any
+**All 815 imported files are pinned to the exact commit they came from.** Any
 file can be traced back to the fork and the commit that published it:
 
 ```bash
@@ -105,7 +104,7 @@ print(entry["source_repo"], entry["source_branch"], entry["source_commit"], entr
 PY
 ```
 
-The survey covered **688 candidate repositories**; 53 of them
+The survey covered **688 candidate repositories**; 58 of them
 contributed at least one file that ended up in the tree.
 
 ### The `tcl/` files work immediately
@@ -252,8 +251,8 @@ integrity check with 543 mismatches, because the tree had been rebuilt in
 text mode on Windows and every imported file was silently stored with CRLF
 while the manifest described the LF original. The gate could not tell "this
 was edited" from "this was checked out on a Windows host". Both are fixed now:
-the tree is LF everywhere, 523 files match their published digest byte for
-byte, 2 are labelled as terminator-only differences, and 38 carry real local
+the tree is LF everywhere, 769 files match their published digest byte for
+byte, 4 are labelled as terminator-only differences, and 42 carry real local
 edits — the target API ports, the relocated `source [find ...]` paths, the
 third-party driver fixes and the `rvmax` / `rv32m1` backends.
 
@@ -268,8 +267,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 563
-on disk  : 563
+recorded : 815
+on disk  : 815
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -326,7 +325,7 @@ every block it owns so the script can find and replace its own work.
 | [`docs/01-inventory.md`](docs/01-inventory.md) | the inventory: how many repositories, how many files, where they came from |
 | [`docs/02-usage.md`](docs/02-usage.md) | usage notes, and the list of known limitations |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | per-file license table |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 563 imported files |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 815 imported files |
 
 ---
 
@@ -336,11 +335,11 @@ The OpenOCD sources inherited from upstream are GPL-2.0-or-later; the
 documentation is GFDL-1.2-no-invariants-or-later. See `COPYING` and `LICENSES/`.
 
 **The imported third-party files are not covered by that blanket statement.**
-Of 563 files, GitHub resolved 139 as GPL-2.0, 398 as `NOASSERTION` (which
-means *GitHub could not determine a license* — not that it is permissive) and
-25 as unresolvable. Some `NOASSERTION` files carry their own proprietary
-notices, for example the Analog Devices flash algorithms, which state that the
-software is proprietary to Analog Devices, Inc.
+Of 815 files, GitHub resolved 141 as GPL-2.0, 1 as GPL-2.0-or-later, 648 as
+`NOASSERTION` (which means *GitHub could not determine a license* — not that it
+is permissive) and 25 as unresolvable. Some `NOASSERTION` files carry their own
+proprietary notices, for example the Analog Devices flash algorithms, which
+state that the software is proprietary to Analog Devices, Inc.
 
 This repository therefore has **no single license of its own**. If you intend
 to redistribute it, read `manifest/licenses.csv` and `docs/03-LICENSES.md`
@@ -353,15 +352,17 @@ first. The `LICENSE` file spells this out in full.
 - **29 of the 76 new C sources and headers are not compiled.** They are staged
   in the tree with their provenance intact, but they target upstream APIs that
   have moved. Registering them needs per-backend porting work.
-- **253 further TCL files are ready to import but have not been.** A second
-  pass over the survey — after the subdirectory blind spot was fixed —
-  found 253 config files whose `source [find ...]` references all resolve and
-  whose drivers, target types and flash algorithms are already in this tree.
-  They need no C changes at all, only the files themselves. Another 42 need
-  a backend this tree does not have, and 34 more sit on top of those 42.
-  The full breakdown is in `manifest/consolidated.json` under `not_imported`;
-  the per-file analysis is in `manifest/nor-driver-scan.json`.
-- **Four Synopsys board configs were left out.** `board/synopsys_amla3.cfg`,
+- **12 further TCL files are ready to import but have not been.** After the
+  subdirectory blind spot was fixed and 252 configs were imported, a fresh
+  pass over the 161 configs that still have no file in the tree found 12 whose
+  `source [find ...]` references all resolve and whose drivers, target types
+  and flash algorithms are already here. They need no C changes at all, only
+  the files themselves. Another 46 need a backend this tree does not have
+  (Infineon TriCore, Anlogic `al_link`, WCH RISC-V, the ESP32 GPIO probe, the
+  ST-LINK external loader family), 25 sit on a config that itself did not land,
+  and 5 were never fetched from the survey cache. The full breakdown is in
+  `manifest/consolidated.json` under `not_imported`; the per-file analysis of
+  the missing C backends is in `manifest/nor-driver-scan.json`.- **Four Synopsys board configs were left out.** `board/synopsys_amla3.cfg`,
   `board/synopsys_angel4.cfg`, `board/synopsys_haps51.cfg` and
   `board/synopsys_ml509.cfg` are published in `intel/OpenOCD` but have no
   matching target file in any public repository — they are bring-up boards
@@ -440,7 +441,7 @@ Pull requests are welcome, and the bar is specific:
 
 ## Acknowledgements
 
-This tree exists because 53 repositories of other people published chip
+This tree exists because 58 repositories of other people published chip
 support that upstream would not take. Their commits, their code and their
 license statements are preserved in `manifest/`. The original authors of
 upstream OpenOCD did the work this fork is built on.

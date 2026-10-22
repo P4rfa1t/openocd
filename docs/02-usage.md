@@ -4,9 +4,9 @@
 
 本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **688 个** OpenOCD
 相关仓库（499 个官方 fork + 搜索命中的 189 个独立仓），跨仓去重、剔除与官方等价的
-副本后，得到 **563 个文件**的第三方支持，全部合并在**它们本该在的位置**：
+副本后，得到 **815 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
-- **487 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
+- **739 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
 - **76 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
   其余 29 个仍需按上游现有 API 改写后才能注册。
 
@@ -16,10 +16,10 @@
 ## 目录结构
 
 ```
-tcl/                     ← OpenOCD 配置树：官方配置 + 487 个第三方配置
-  target/                     688  芯片目标配置（含 vendor 子目录）
-  board/                      605  开发板配置（含 flash_algorithms/）
-  interface/                  207  调试器接口
+tcl/                     ← OpenOCD 配置树：官方配置 + 739 个第三方配置
+  target/                     914  芯片目标配置（含 vendor 子目录）
+  board/                      611  开发板配置（含 flash_algorithms/）
+  interface/                  227  调试器接口
   cpld/                        23  CPLD 配置
   fpga/                        35  FPGA bitstream
   chip/                        28  芯片公共片段
@@ -33,35 +33,35 @@ src/                     ← C 源码：官方源码 + 76 个第三方驱动/目
   flash/nor/                    2  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）
 
 manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            563  个文件的来源仓库/分支/commit/SHA-256/许可证
+  PROVENANCE.json            815  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
   repos.csv / repos.json      688 个候选仓库排名
-  licenses.csv               563  行许可证索引（逐文件）
+  licenses.csv               815  行许可证索引（逐文件）
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本
 ```
 
-> **480 vs 487**：`manifest/consolidated.json` 里有 480 条 tier-1 记录（上游确实没有的
-> 独立 TCL 支持项），其中 **461 条进了树**，19 条因引用了从未公开的 target/interface 而没进。
-> 另有 **25 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的文件
-> 会一起被带进来（如 `tcl/interface/ftdi/*.cfg`、`tcl/board/flash_algorithms/*.cfg`）。
-> 再加 1 个与上游同名的第三方文件 `tcl/target/adspsc58x.cfg`（内容与上游的
-> `adsp-sc58x.cfg` 不同，保留第三方版并由 `verify_tree.py` 报一条 warning）。
-> 所以 `tcl/` 下的第三方文件数是 461 + 25 + 1 = **487**。
+> **894 vs 739**：`manifest/consolidated.json` 里有 894 条 tier-1 记录（上游确实没有的
+> 独立 TCL 支持项），其中 **733 条进了树**，161 条没进（分类见下）。
+> 一个配置 `source` 另一个配置时，被引用的文件会一起被带进来
+> （如 `tcl/interface/ftdi/*.cfg`、`tcl/board/flash_algorithms/*.cfg`）。
+> 所以 `tcl/` 下的第三方文件数是 733 + 5 个「只作为依赖进来、不在 imported 记录里」
+> + 1 个与上游同名的 `tcl/target/adspsc58x.cfg` = **739**。
 >
-> **还有 253 个 TCL 候选原样就能导入。** 上一轮扫描补齐了子目录盲区之后，
-> 重新评估了所有没进树的候选：253 个文件的 `source [find ...]` 引用全部可解析，
-> 且它们依赖的驱动、target type、flash 算法树里都已有，不需要任何 C 代码改动。
-> 另有 42 个需要树里还没有的后端（ST-LINK 外部加载器家族、Infineon TriCore、
-> WCH RISC-V、ESP32 GPIO 探针、Anlogic `al_link` 探针等），34 个架在它们之上。
+> **还有 12 个 TCL 候选原样就能导入。** 补齐子目录盲区并导入 252 个配置之后，
+> 对剩下 161 个还没进树的配置重新评估：12 个文件的 `source [find ...]` 引用全部
+> 可解析，且它们依赖的驱动、target type、flash 算法树里都已有，不需要任何 C 代码
+> 改动。另有 46 个需要树里还没有的后端（Infineon TriCore、Anlogic `al_link`、
+> WCH RISC-V、ESP32 GPIO 探针、ST-LINK 外部加载器家族等），25 个依赖的配置本身
+> 没进树，5 个在扫描缓存里没有文件体。
 > 详细的分类与逐项清单见 `manifest/nor-driver-scan.json` 与本文件的「已知缺口」一节。
 > 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
 > 不会把已剔除的副本再拉回来。
 >
-> **全部 563 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
+> **全部 815 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
 
 ## 为什么直接合并，而不是外挂一层
 
@@ -307,8 +307,9 @@ target 在任何公开仓库里都不存在（属于 Synopsys 内部交付）：
 
 ## 许可证提醒
 
-- `GPL-2.0`：139 个文件，来源明确。
-- `NOASSERTION`：398 个文件，GitHub 未能解析 SPDX。
+- `GPL-2.0`：141 个文件，来源明确。
+- `GPL-2.0-or-later`：1 个文件（`src/flash/nor/stldr_driver.c`，来自 STMicroelectronics/OpenOCD）。
+- `NOASSERTION`：648 个文件，GitHub 未能解析 SPDX。
 - `UNRESOLVED`：25 个文件，即依赖闭包补充的文件，来源已知但未单独解析。
 
 后两类在商用前需人工审计头部声明 —— `NOASSERTION` **不等于**宽松许可，
@@ -356,11 +357,11 @@ python tools/pipeline.py --apply
 |---|---|---|
 | C 驱动未注册进构建 | 29 | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
-| 无许可证信息 | 423 / 563（75%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
+| 无许可证信息 | 673 / 815（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 4 个 | `aji_client`、`tas_client`、`ddmi_usb`、`aice`（`dbgagent`/`ice2000` 已随本次接入进产物） |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 板级配置开箱即用不了 | 3 个 cfg | `arc_axc001/002/003_hs36.cfg` 需要的 `arc600`/`arc700` 来自未接入的 `arc32.c` 一族 |
-| 无运行时验证 | 全部 | 校验全是静态的，未在真机上 `source` 过 |
+| 无真机验证 | 全部 | 静态校验之外，只用 CI 产物跑过 `adapter list`、`target types` 和批量 `source [find ...]`（验证配置能被解析、驱动/target type/flash 驱动都在）；没有接真实探针与目标板跑过调试会话 |
 | `-chain-position` 旧写法 | 192 个文件 / 219 处 | 上游 `tcl/` 已清零；机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
 | 三组导入候选被上游阻塞 | 14 个文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows） |

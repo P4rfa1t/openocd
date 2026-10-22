@@ -50,40 +50,39 @@ git merge upstream/master
 
 | | 数量 | 说明 |
 |---|---:|---|
-| `tcl/` 脚本文件 | 487 | 472 个 `.cfg` + 15 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
+| `tcl/` 脚本文件 | 739 | 722 个 `.cfg` + 17 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
 | `src/` C 源码 | 76 | 40 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，29 个已就位但未注册 |
 | 折叠掉的重复副本 | 6910 | 每条路径只保留一个胜出版本 |
 | 与官方重复而剔除 | 7376 | 上游已经收编，或上游已把它挪到子目录 |
 | 判定不可用而排除 | 621 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
 
-扫描识别出的 1298 条唯一路径里，**557 条进了树**，741 条没进。
+扫描识别出的 1298 条唯一路径里，**809 条进了树**，489 条没进。
 
 没进来的 328 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
-是照着旧版 OpenOCD 的 API 写的。其中 `src/flash/nor` 最大（96 个），其次是
-`src/target`（52 个）和 `src/jtag/drivers`（19 个）。
+是照着旧版 OpenOCD 的 API 写的。其中 `src/target` 最大（133 个），其次是
+`src/flash`（125 个）、`src/jtag`（68 个）和 `src/server`（2 个）。
 
-没进来的 413 个 TCL 文件分这样：
+没进来的 161 个 TCL 文件分这样：
 
 | | 数量 | 原因 |
 |---|---:|---|
-| 上游已经收编 | 73 | 上游把它们挪进了子目录 —— 其中 15 个除 `source [find ...]` 路径外完全一致，另外 58 个上游后来又改过 |
-| 树里已有同内容文件 | 3 | 某个 fork 拷贝了一份这里已经有的文件，只是换了名字 |
-| **原样就能导入** | **253** | 它们的 `source [find ...]` 引用全部可解析，且所需的驱动、target type、flash 算法树里都已经有了 |
-| 缺一个树里没有的后端 | 42 | 它们驱动的是 C 代码从未公开的探针或芯片族 —— ST-LINK 外部加载器家族、Infineon TriCore、WCH RISC-V、ESP32 GPIO 探针、Anlogic `al_link` 探针之类 |
-| 依赖上面那 42 个 | 34 | 架在那种后端之上的板级配置 |
-| 其它 | 8 | 四份目标定义从未公开的 Synopsys bring-up 板级配置，以及四份上游西里尔字母配置被转码错乱后的副本 |
+| 上游已经收编 | 73 | 上游把它们挪进了子目录，扫描只看到扁平名字 |
+| 缺一个树里没有的后端 | 46 | 它们驱动的是 C 代码从未公开的探针或芯片族 —— Infineon TriCore、Anlogic `al_link` 探针、WCH RISC-V、ESP32 GPIO 探针、ST-LINK 外部加载器家族之类 |
+| 依赖的文件本身没进树 | 25 | 某条 `source [find ...]` 指向的配置没有导入 |
+| **原样就能导入** | **12** | 它们的 `source [find ...]` 引用全部可解析，且所需的驱动、target type、flash 算法树里都已经有了 |
+| 扫描缓存里没有文件体 | 5 | 扫描记下了路径，但从未抓取文件内容 |
 
-另外两组补齐了 **563 个文件**这个数，每个都有自己的来源记录：
+另外两组补齐了 **815 个文件**这个数，每个都有自己的来源记录：
 
-- **25 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
+- **5 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
   文件会一起被带进来；manifest 里标为 `imported_as: dependency`。
 - **1 个文件上游也有同名版本** —— `tcl/target/adspsc58x.cfg`，内容与上游的
   `tcl/target/adsp-sc58x.cfg` 不同。树里保留第三方版本，
   `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
 
-上游共 2203 个文件，本树 2822 个。
+上游共 2203 个文件，本树 3077 个。
 
-**全部 563 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+**全部 815 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -95,7 +94,7 @@ print(entry["source_repo"], entry["source_branch"], entry["source_commit"], entr
 PY
 ```
 
-本次扫描覆盖 **53 个不同的来源仓库**。
+本次扫描覆盖 **688 个候选仓库**，其中 58 个至少贡献了一个最终进树的文件。
 
 ### `tcl/` 文件立即可用
 
@@ -223,8 +222,8 @@ jimtcl、libyaml、zlib）和构建配方都是上游的。
 这个区分是必要的。本仓库的某一版曾对自己的完整性检查报出 543 处不匹配 —— 那
 棵树是在 Windows 上以文本模式重建的，每个导入文件都被悄悄存成了 CRLF，而
 manifest 描述的是 LF 原件。门禁分不清"这个文件被改过"和"这个文件是在 Windows
-上检出的"。现在两边都修好了：树里全是 LF，523 个文件与发布方摘要逐字节吻合，
-2 个被标为仅行尾符差异，38 个带真实本地编辑 —— target API 移植、重定位后的
+上检出的"。现在两边都修好了：树里全是 LF，769 个文件与发布方摘要逐字节吻合，
+4 个被标为仅行尾符差异，42 个带真实本地编辑 —— target API 移植、重定位后的
 `source [find ...]` 路径修正、第三方驱动的修复，以及 `rvmax` / `rv32m1` 两个后端。
 
 被有意移除的文件仍留在 manifest 的 `removed_from_tree` 段里，连同移除原因和
@@ -237,8 +236,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 563
-on disk  : 563
+recorded : 815
+on disk  : 815
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -293,7 +292,7 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 563 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 815 个导入文件的机器可读来源记录 |
 
 ---
 
@@ -302,11 +301,11 @@ GitHub 解析不出许可证的文件。
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 563 个文件里，GitHub 解析出
-139 个为 GPL-2.0，398 个为 `NOASSERTION`（意思是*GitHub 判定不出许可证*，不是
-说它宽松），25 个无法解析。有些 `NOASSERTION` 文件自带专有声明，例如 Analog
-Devices 的 flash 算法，写着 "This software is proprietary to Analog Devices,
-Inc."。
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 815 个文件里，GitHub 解析出
+141 个为 GPL-2.0、1 个为 GPL-2.0-or-later、648 个为 `NOASSERTION`（意思是
+*GitHub 判定不出许可证*，不是说它宽松），25 个无法解析。有些 `NOASSERTION` 文件
+自带专有声明，例如 Analog Devices 的 flash 算法，写着 "This software is
+proprietary to Analog Devices, Inc."。
 
 因此本仓库**没有单一的属于自己的许可**。如果你打算再分发，请先读
 `manifest/licenses.csv` 与 `docs/03-LICENSES.md`。`LICENSE` 文件把这件事写全
@@ -316,12 +315,14 @@ Inc."。
 
 ## 已知限制
 
-- **253 个 TCL 文件原样就能导入，但还没导。** 补齐扫描的子目录盲区之后重新评估了
-  全部候选：有 253 个配置文件的 `source [find ...]` 引用全部可解析，所需的驱动、
-  target type、flash 算法树里也都已经有了，一个 C 文件都不用改，只要把文件本身放
-  进来。另有 42 个需要树里还没有的后端，34 个架在它们之上。逐项分类见
-  `manifest/consolidated.json` 的 `not_imported` 段，文件级分析见
-  `manifest/nor-driver-scan.json`。
+- **12 个 TCL 文件原样就能导入，但还没导。** 补齐扫描的子目录盲区、又导入了 252
+  个配置之后，对剩下 161 个还没有文件的配置重新评估了一遍：有 12 个的
+  `source [find ...]` 引用全部可解析，所需的驱动、target type、flash 算法树里
+  也都已经有了，一个 C 文件都不用改，只要把文件本身放进来。另有 46 个需要树里
+  还没有的后端（Infineon TriCore、Anlogic `al_link`、WCH RISC-V、ESP32 GPIO
+  探针、ST-LINK 外部加载器家族），25 个依赖的配置本身没进树，5 个在扫描缓存里
+  没有文件体。逐项分类见 `manifest/consolidated.json` 的 `not_imported` 段，
+  缺失 C 后端的文件级分析见 `manifest/nor-driver-scan.json`。
 - **76 个新 C 源文件与头文件里有 29 个没被编译。** 它们带着完整来源记录躺在树里，
   但针对的是已经改过接口的上游 API。要注册需要逐个后端做移植。
 - **四份 Synopsys 板级配置没导入。** `board/synopsys_amla3.cfg`、
@@ -391,6 +392,6 @@ Inc."。
 
 ## 致谢
 
-这棵树之所以存在，是因为 53 个别人的仓库发布了上游不肯收的芯片支持。他们的
+这棵树之所以存在，是因为 58 个别人的仓库发布了上游不肯收的芯片支持。他们的
 提交、代码和许可声明都保留在 `manifest/` 里。上游 OpenOCD 的作者们打下了这棵
 树所依赖的全部基础。
