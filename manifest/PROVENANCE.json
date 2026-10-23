@@ -4730,7 +4730,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "cd9288f599077f04f411cd48985e7223ec4a9cdf4b47855157947f21b2cb4af6"
+      "sha256": "b3a04c0b012206df12839488e91a0d7a7fc8172665c5cd8c60674c711ed7bd62",
+      "pristine_sha256": "cd9288f599077f04f411cd48985e7223ec4a9cdf4b47855157947f21b2cb4af6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/arm-usb-ocd.cfg": {
       "source_repo": "hikob/openocd",
@@ -4744,7 +4748,11 @@
         "kevinmehall/openOCD",
         "zhao0079/openocd"
       ],
-      "sha256": "25e3ff7e577b6412e4688e122a5a117bf88586b9b804518f978d0edd22ff9ea6"
+      "sha256": "f0920f6fd31b44fe660f73890b368f7df0b54837c9745e32c3380ab1c0949637",
+      "pristine_sha256": "25e3ff7e577b6412e4688e122a5a117bf88586b9b804518f978d0edd22ff9ea6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/atlink.cfg": {
       "source_repo": "vllogic/openocd_cmsis-dap_v2",
@@ -4799,7 +4807,11 @@
         "sysprogs/esp8266-openocd",
         "watr-li/OpenOCD"
       ],
-      "sha256": "a078eaf49bbf444e62fafc1880299c52dd4d0ab313daa1fa1bc9548ff0a1dc23"
+      "sha256": "748721b0eca7c6194faa09f89ce68b57baab9cf59be0732e3df72d6905b716e7",
+      "pristine_sha256": "a078eaf49bbf444e62fafc1880299c52dd4d0ab313daa1fa1bc9548ff0a1dc23",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/c20-swd.cfg": {
       "source_repo": "kvth/openocd-swd-in-out",
@@ -4838,7 +4850,11 @@
         "watr-li/OpenOCD",
         "zhao0079/openocd"
       ],
-      "sha256": "1cc54f2f89c10b5132f10a48ae3f6f19bc7c0c387d67414bccb0435e5622dd6b"
+      "sha256": "1c1a3e18c7b6d290f3d6d85638194ba6cd82103c6e69abeabd65335bce6e0242",
+      "pristine_sha256": "1cc54f2f89c10b5132f10a48ae3f6f19bc7c0c387d67414bccb0435e5622dd6b",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/calao-usb-a9260-c02.cfg": {
       "source_repo": "OpenNuvoton/OpenOCD-Nuvoton",
@@ -4867,7 +4883,11 @@
         "watr-li/OpenOCD",
         "zhao0079/openocd"
       ],
-      "sha256": "ab8e428506cc1c691b6cb437e307833c8c806ad352eb523714a39eec91b48e9b"
+      "sha256": "d1112cd608590684f6fa0f38950019f13ab1732411c3c81cfa577ea74b8d363c",
+      "pristine_sha256": "ab8e428506cc1c691b6cb437e307833c8c806ad352eb523714a39eec91b48e9b",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/cc3200lp.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -4877,7 +4897,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "14483e91e70a9d909541cac02fad785e830e43946dabb0932811a306eb14510b"
+      "sha256": "c19ae765050ab3bf2e777db7e5a668f380796acb5e776085e0871ca2aae4cbac",
+      "pristine_sha256": "14483e91e70a9d909541cac02fad785e830e43946dabb0932811a306eb14510b",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/ch347.cfg": {
       "source_repo": "zuyih/openocd",
@@ -4943,7 +4967,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 1,
       "also_present_in": [],
-      "sha256": "ce9c0e26e98dbbcd8fae59a768b8faceec7bb2f5591e998a0217254293e18b6b"
+      "sha256": "117e4f6400697b0b06226a60a1f60db12968433eb91df59a35399c852e649586",
+      "pristine_sha256": "ce9c0e26e98dbbcd8fae59a768b8faceec7bb2f5591e998a0217254293e18b6b",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/dirtyjtag.cfg": {
       "source_repo": "stache3000/openocd-dirtyjtag",
@@ -5278,8 +5306,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "6b02a292cebb062e22ef482f23d29c5804900747c1be3e8abeed65c277c29374",
-      "imported_as": "dependency"
+      "sha256": "5fe59eb828376812e8450cac1bade2539d5d33703d7871639f9182692832cf87",
+      "imported_as": "dependency",
+      "pristine_sha256": "6b02a292cebb062e22ef482f23d29c5804900747c1be3e8abeed65c277c29374",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/matrix-creator.cfg": {
       "source_repo": "matrix-io/matrix-creator-openocd",
@@ -5384,7 +5416,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 5,
       "also_present_in": [],
-      "sha256": "eb70a0adb2974a319745db4a7de658cc6500af029274101f83c44e66467d986f"
+      "sha256": "d90fc972fda8346a0c5b56a99b2907cf50cb8d95a7f578519554573f43ca6bff",
+      "pristine_sha256": "eb70a0adb2974a319745db4a7de658cc6500af029274101f83c44e66467d986f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/picoprobe.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -5435,7 +5471,11 @@
         "watr-li/OpenOCD",
         "zhao0079/openocd"
       ],
-      "sha256": "1a9fb96552153a6da2b13e0541ed024be0d6f1fc27bddfe879629a2c954273b8"
+      "sha256": "9835cfbde4a76ca359e4853e4b45d6009bdc7e10c1353668fc704a55f13d0835",
+      "pristine_sha256": "1a9fb96552153a6da2b13e0541ed024be0d6f1fc27bddfe879629a2c954273b8",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/signalyzer-h4.cfg": {
       "source_repo": "OpenNuvoton/OpenOCD-Nuvoton",
@@ -5464,7 +5504,11 @@
         "watr-li/OpenOCD",
         "zhao0079/openocd"
       ],
-      "sha256": "f5021f1bb0f01d73e07cfdedc69d18302b7e2ca3b0b9ee3f50035ea0681b08f9"
+      "sha256": "9dae9425502f2db90e7dd9755b3d8508230d4fdd458913fc519d70e8682ab1c5",
+      "pristine_sha256": "f5021f1bb0f01d73e07cfdedc69d18302b7e2ca3b0b9ee3f50035ea0681b08f9",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/snps_sdp.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -5474,8 +5518,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "4967b6e0b39df5c4191019f5a20669700d423fb541baa9e3667305a44f4504fc",
-      "imported_as": "dependency"
+      "sha256": "f0f24bc0f35434591d1d28b21b262449723b4f2f9093dce0ef503b5dff82830b",
+      "imported_as": "dependency",
+      "pristine_sha256": "4967b6e0b39df5c4191019f5a20669700d423fb541baa9e3667305a44f4504fc",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/stlink-usb.cfg": {
       "source_repo": "hikob/openocd",
@@ -5598,7 +5646,11 @@
         "watr-li/OpenOCD",
         "zhao0079/openocd"
       ],
-      "sha256": "85f1717d3da020a0378a8abf561b1bf4a7607846c7e9afdcc14d10f3e1b954e2"
+      "sha256": "412a6f6d65663eeeb6a915e001eedbb33adbc1d98a9bd60bc2131fdc2b2fcc5c",
+      "pristine_sha256": "85f1717d3da020a0378a8abf561b1bf4a7607846c7e9afdcc14d10f3e1b954e2",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/1986Be1T.cfg": {
       "source_repo": "OlivierVanWassenhove-Dekimo/openocd",
@@ -5874,7 +5926,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 55,
       "also_present_in": [],
-      "sha256": "d877696990540f69cdc9e3d05eb4279d32da8e0e4067eb1b36e0c8162ca23601"
+      "sha256": "7b8f0c73a6b107fc4e29571bda1cc6f8c773be809a79ba563b59b50e0bdc6db2",
+      "pristine_sha256": "d877696990540f69cdc9e3d05eb4279d32da8e0e4067eb1b36e0c8162ca23601",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/aic8800m40.cfg": {
       "source_repo": "vllogic/openocd_cmsis-dap_v2",
@@ -5884,7 +5940,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 55,
       "also_present_in": [],
-      "sha256": "6bb216685fd03f7e39b5ba0b5c29245071bd3e6a6f9f9c18eea8bfa9b70227da"
+      "sha256": "a26cf296d06b0de40d10654f3635a2775911a2472c02f132e82561bd49366038",
+      "pristine_sha256": "6bb216685fd03f7e39b5ba0b5c29245071bd3e6a6f9f9c18eea8bfa9b70227da",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/aic8800mc.cfg": {
       "source_repo": "vllogic/openocd_cmsis-dap_v2",
@@ -5894,7 +5954,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 55,
       "also_present_in": [],
-      "sha256": "3ea37879797418d5334f584cfa97167724dfb417b0fcb4ba3075aaab0934944a"
+      "sha256": "316a9c126f43aa8ef7ae9f88ea22a3260cd9fcc2886b95f7b6df3283e84f3589",
+      "pristine_sha256": "3ea37879797418d5334f584cfa97167724dfb417b0fcb4ba3075aaab0934944a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/air001.cfg": {
       "source_repo": "HalfSweet/openocd",
@@ -6004,7 +6068,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "326fe7c05397518a01e3fc8a29e81bd1c790f2b12d9191ccc456f753f0a26c0a"
+      "sha256": "cda7f0a4c50e1ed39b6fcb9916574a3f361d0f7a57d6a7e44e7825960fe2f154",
+      "pristine_sha256": "326fe7c05397518a01e3fc8a29e81bd1c790f2b12d9191ccc456f753f0a26c0a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_axc002.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6014,7 +6082,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "ab2437cec4110e251c59785aa4b0dc2881b413bae465ec69290154ba8353dfa0"
+      "sha256": "a62ff3c6820833b30769d41eee6afdd07a085d204ca5af0d5327ff0a73de569b",
+      "pristine_sha256": "ab2437cec4110e251c59785aa4b0dc2881b413bae465ec69290154ba8353dfa0",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_axc003_hs36.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6024,7 +6096,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "56f6b6a248f420b7504dc4c929c78985c8bab707b181549546007883799822ca"
+      "sha256": "ed2098dd3ced6ff1f927cbab2887c29a908c18dceb1ed000ca61b8238c03cc63",
+      "pristine_sha256": "56f6b6a248f420b7504dc4c929c78985c8bab707b181549546007883799822ca",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_axc003_hs38.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6034,7 +6110,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "99d04a12b62ef3709fc22db583bce149c838ee22eb211b0aec37e6c835391761"
+      "sha256": "bbc4877aabb8b512ea0a7ba737047ba0531f2c61f54bfce5a9a61f6af65f2a5d",
+      "pristine_sha256": "99d04a12b62ef3709fc22db583bce149c838ee22eb211b0aec37e6c835391761",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_axc003_hs47D.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6044,7 +6124,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "66a8a2f76de5272a60dbef58bd4f55f3042f17c0b5bd190c6d07c2cf5941687d"
+      "sha256": "93013f12c5b3a0e6e1bffa61f8b4066b78a1400e3a00cc7a724c44f768599d00",
+      "pristine_sha256": "66a8a2f76de5272a60dbef58bd4f55f3042f17c0b5bd190c6d07c2cf5941687d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_axc003_hs48.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6054,7 +6138,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "ad4df5561fbdd055c915da207ac2af858ab8a92964ae6cda16ae452a12f77ce4"
+      "sha256": "18c196a21cfdc867623136d3eb41dcf8eb141521e61811d874f7e0d5b936a329",
+      "pristine_sha256": "ad4df5561fbdd055c915da207ac2af858ab8a92964ae6cda16ae452a12f77ce4",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_em_sk_fpga.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6064,7 +6152,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "7631db0dcd706498b09efc437b45010c121ef0d008bb2d0702b3d6e5b4f72745"
+      "sha256": "38245838ec0390ce2031658da9d727031243ddba49fbe2335467b9cc35c03477",
+      "pristine_sha256": "7631db0dcd706498b09efc437b45010c121ef0d008bb2d0702b3d6e5b4f72745",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_hsdk.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6074,7 +6166,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "e8044b5793df3853ccaacc73c459729b15a0f65e7fadeca5f52b0b67b7ed1d6e"
+      "sha256": "2854dcde2c156b35b725854d7f05d01873e72da2da2160acf67bde4c180c4ff7",
+      "pristine_sha256": "e8044b5793df3853ccaacc73c459729b15a0f65e7fadeca5f52b0b67b7ed1d6e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arc_hsdk_4xd.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -6094,7 +6190,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "05e345356ea69fafef5c5e42253d409eb948474f3a497d9b2d9d5e4eb0002e52"
+      "sha256": "31cb5d531ca49866b83e7eae47b290bf2e4de8aff3403de21732467807d15a83",
+      "pristine_sha256": "05e345356ea69fafef5c5e42253d409eb948474f3a497d9b2d9d5e4eb0002e52",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arty7_linux.cfg": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -6875,7 +6975,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 471,
       "also_present_in": [],
-      "sha256": "0a2ac930d8889466345133059c75824b2fd9e667e894273258706ac8475cb26d"
+      "sha256": "58088711057155a441e6e71e5a5b8af40c859f7a7c8da63b29b5d6e87fe76dea",
+      "pristine_sha256": "0a2ac930d8889466345133059c75824b2fd9e667e894273258706ac8475cb26d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/esp32c6-lpcore.cfg": {
       "source_repo": "espressif/openocd-esp32",
@@ -6895,7 +6999,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 471,
       "also_present_in": [],
-      "sha256": "12ae94f1e350b1d132cb2bdc5811ac388178bf068acb014a6b06c124be4ac9a9"
+      "sha256": "88a829e7a9ed5217369f5b43e88478c9dd0c157cfc2d665c476e515e1b6ee442",
+      "pristine_sha256": "12ae94f1e350b1d132cb2bdc5811ac388178bf068acb014a6b06c124be4ac9a9",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/esp32h21.cfg": {
       "source_repo": "espressif/openocd-esp32",
@@ -6905,7 +7013,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 471,
       "also_present_in": [],
-      "sha256": "014e75dbabb63f2cefc639f844e9c8b3d200a5314050d1a7dddf2ca1a50c08d6"
+      "sha256": "c73c173f39c4176be92ff0a29978f96a19219b37dea69064918c94fb1c580f66",
+      "pristine_sha256": "014e75dbabb63f2cefc639f844e9c8b3d200a5314050d1a7dddf2ca1a50c08d6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/esp32h4.cfg": {
       "source_repo": "espressif/openocd-esp32",
@@ -6995,7 +7107,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "a400a58faca9c02429767a9337253f6fde886d4c12dd613ccf4ef8129ef5b595"
+      "sha256": "ad6dd5c08f6d97b368df7b1f50a71d20b257dc2cebdbe0919004c5eeab67be27",
+      "pristine_sha256": "a400a58faca9c02429767a9337253f6fde886d4c12dd613ccf4ef8129ef5b595",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/imx6q-2gb.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -7005,7 +7121,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "f92a68f2534a9d139c469329d97d2858a65ff2f308febdd4bd02cd4efc0105ed"
+      "sha256": "02433cb7904988c99ff6f958333e4039fb87d344184a23d8bbd10a96179927ef",
+      "pristine_sha256": "f92a68f2534a9d139c469329d97d2858a65ff2f308febdd4bd02cd4efc0105ed",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/imx7d-1gb.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -7015,7 +7135,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "43e7f854a293dbb942fe9ebda11aede069e0257355ea52b33faa7eec175b988c"
+      "sha256": "3e18bdd215bc3286b1430797f21e8832bafd80b997b939ea22b40f009b1f9618",
+      "pristine_sha256": "43e7f854a293dbb942fe9ebda11aede069e0257355ea52b33faa7eec175b988c",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/imx8-ngb.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -7025,7 +7149,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "6c980196a67ce52773e6d3bcfc19d59d75e23a3eec4066afdca4490779deebfe"
+      "sha256": "328be85084094398ad8e74eaf861a6b16818e60f0ae2278db39471388f09b046",
+      "pristine_sha256": "6c980196a67ce52773e6d3bcfc19d59d75e23a3eec4066afdca4490779deebfe",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/imx8.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -7045,7 +7173,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "34f8b489c7014c16122d7cba93f3e8fe9070d36d3076b4c044fd92467acd1022"
+      "sha256": "5dee61cb209f068b04a7ae7c7049d8989f1431c5c3fc21e0b6a2353f24e9bd59",
+      "pristine_sha256": "34f8b489c7014c16122d7cba93f3e8fe9070d36d3076b4c044fd92467acd1022",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/imxrt.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -7109,7 +7241,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "35e46fe744f816a65c13fa129c5d21dad0e4f88f5177cfdc9f4e9dc879e90820"
+      "sha256": "4542cd64e36a361b22f020432fed32444984d064e1f36c4aa6b6edb732c7259f",
+      "pristine_sha256": "35e46fe744f816a65c13fa129c5d21dad0e4f88f5177cfdc9f4e9dc879e90820",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/k1921vk028.cfg": {
       "source_repo": "DCVostok/openocd-k1921vk",
@@ -7606,7 +7742,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "1ef910bbe74ce7587402365620b1635eb02e0ba63da1248423ab4697048ab93d"
+      "sha256": "bbebff370a6a3d991d4e7f8dcbdb4e6fc702d86f196346326af6c64711761a4d",
+      "pristine_sha256": "1ef910bbe74ce7587402365620b1635eb02e0ba63da1248423ab4697048ab93d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/max32570.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -7854,7 +7994,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 1,
       "also_present_in": [],
-      "sha256": "2131300040e4bf7af64a48f5f0de089db565005cd5a982fa1444af8685379f1f"
+      "sha256": "89fdf693335431acad2691800f386aa5cd739a976674ad40d5d440ec05e1ba4b",
+      "pristine_sha256": "2131300040e4bf7af64a48f5f0de089db565005cd5a982fa1444af8685379f1f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/mediatek/mt7629.cfg": {
       "source_repo": "hackpascal/openocd",
@@ -8528,7 +8672,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "82ffc4df0c1c0e8881c993d256502b1ce6c9a98b5dea0800c909e2cb61ed1f81"
+      "sha256": "ad197f48c2423d476d58f02181845269fdb15c4579bbaeef48284089172c8dc7",
+      "pristine_sha256": "82ffc4df0c1c0e8881c993d256502b1ce6c9a98b5dea0800c909e2cb61ed1f81",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/rv1106-mcu.cfg": {
       "source_repo": "luyi1888/openocd",
@@ -8632,7 +8780,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "dc28f0530115f203a830d470cdb3f7206bc27107f5565ef018c7420cdfcc0b10"
+      "sha256": "7b80b9fc8582d7320c49e1fd169661d61813b08c3b1c6d0fa91626ff39ce2696",
+      "pristine_sha256": "dc28f0530115f203a830d470cdb3f7206bc27107f5565ef018c7420cdfcc0b10",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/snps_axc002.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -8642,7 +8794,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "4a4c442ff2a20706b127a742e6715ac594606e026d10bbc62b043762b945b043"
+      "sha256": "952ac0e1c54712fa2f2defed30a60445b0332b36d62d13f1b019a2b519e2ae7e",
+      "pristine_sha256": "4a4c442ff2a20706b127a742e6715ac594606e026d10bbc62b043762b945b043",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/snps_em_sk_lx45.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -8652,7 +8808,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "968dcb945a865f457667758aa7c65c2e4669b54da7304eebf1d6ec2ba668277a"
+      "sha256": "e4eac32898655e75ae08c641be85db288e38f011211cf4e1cc032817e81cf8fb",
+      "pristine_sha256": "968dcb945a865f457667758aa7c65c2e4669b54da7304eebf1d6ec2ba668277a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/snps_hsdk_smp.cfg": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -8662,7 +8822,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 47,
       "also_present_in": [],
-      "sha256": "b05d30773caaab02d859bcb9bdaa2904736740779a75417f38bd33551f449cc8"
+      "sha256": "aecd734787467cb488733d969d2c5e2267df42b1973e8fdcf08249d52f0733f3",
+      "pristine_sha256": "b05d30773caaab02d859bcb9bdaa2904736740779a75417f38bd33551f449cc8",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/snps_ml509_arc600.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -8672,7 +8836,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "1d0719c9faa85cae14617ce8f87595f0a335afa414093e1d9f0fb4a2d64d38bf"
+      "sha256": "dc0038ee3a7733aabffcb0e40f8ddd079ad96f2615234e27cc9858e35e76bf52",
+      "pristine_sha256": "1d0719c9faa85cae14617ce8f87595f0a335afa414093e1d9f0fb4a2d64d38bf",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/snps_ml509_arc700.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -8682,7 +8850,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "708ff114b52673d93c39fefda9e143d6cdcfd0cb9d76a197254347cf9ed6d0ae"
+      "sha256": "88d70b1796f75a83146386502fbc109208137c2e384db3570f9688c6bab9264b",
+      "pristine_sha256": "708ff114b52673d93c39fefda9e143d6cdcfd0cb9d76a197254347cf9ed6d0ae",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/snps_starter_kit_arc-em.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -8692,7 +8864,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "f00def4cb44e49a8d7817135c90395a772b66428bc11ce682b5caaccb968a85b"
+      "sha256": "bd76dd3e03fd24b44da3a113ce3c3159d47f707d85b648d7ab70a189dc581091",
+      "pristine_sha256": "f00def4cb44e49a8d7817135c90395a772b66428bc11ce682b5caaccb968a85b",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/snps_starter_kit_arc-em_eb.cfg": {
       "source_repo": "intel/OpenOCD",
@@ -8702,7 +8878,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "a68dd66c5dd91829a6ce2d580b182405a6bf031bb0e9eb0f98fd2ec55c59f7ab"
+      "sha256": "c0c5053156e4c47d68f4f0ec9bf410d05da17287d66fab8c2ac50f94c88a3514",
+      "pristine_sha256": "a68dd66c5dd91829a6ce2d580b182405a6bf031bb0e9eb0f98fd2ec55c59f7ab",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/stellaris_icdi.cfg": {
       "source_repo": "ciniml/openocd",
@@ -8811,7 +8991,11 @@
       "also_present_in": [
         "STMicroelectronics/OpenOCD"
       ],
-      "sha256": "d1d5da63197092a5df7841c3cef33bf36e2b2f44c18dfbb3d3e20ad06b4c450d"
+      "sha256": "9ae862c315fd30526812313f2a7a54ec17cb15450dd796d9be4389ad972cf4e1",
+      "pristine_sha256": "d1d5da63197092a5df7841c3cef33bf36e2b2f44c18dfbb3d3e20ad06b4c450d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/stm32f0x_stlink.cfg": {
       "source_repo": "ciniml/openocd",
@@ -9061,7 +9245,11 @@
         "galippi/openocd.STM32.Win7",
         "scmrtos/openocd-scmrtos"
       ],
-      "sha256": "73954af9cd7294c1faadd713bd78651856c8e4fee0821c61877897cc6d94ffd9"
+      "sha256": "7ed3106f717ff65dc18a3454ac4d621f259735dcb0cefc2976dac899cb3382b9",
+      "pristine_sha256": "73954af9cd7294c1faadd713bd78651856c8e4fee0821c61877897cc6d94ffd9",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/stm32h7rx.cfg": {
       "source_repo": "STMicroelectronics/OpenOCD",
