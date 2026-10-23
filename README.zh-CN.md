@@ -51,7 +51,7 @@ git merge upstream/master
 | | 数量 | 说明 |
 |---|---:|---|
 | `tcl/` 脚本文件 | 739 | 722 个 `.cfg` + 17 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
-| `src/` C 源码 | 76 | 40 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，29 个已就位但未注册 |
+| `src/` C 源码 | 73 | 37 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，26 个已就位但未注册 |
 | 折叠掉的重复副本 | 6910 | 每条路径只保留一个胜出版本 |
 | 与官方重复而剔除 | 7376 | 上游已经收编，或上游已把它挪到子目录 |
 | 判定不可用而排除 | 621 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
@@ -110,7 +110,7 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 
 ### `src/` 文件分两种状态
 
-76 个新 C 源文件与头文件里有 47 个已接入构建 —— 24 个能注册出可用的
+73 个新 C 源文件与头文件里有 47 个已接入构建 —— 24 个能注册出可用的
 `target_type` 或 `adapter_driver` 的 `.c`，加上它们需要的头文件：
 
 | 组 | 后端 | 构建开关 |
@@ -129,8 +129,9 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 后注册的会沿用前一个的 handler。如果不加前缀，第二个后端就会被第一个的 handler
 接管。加上前缀之后，三者可以共存。
 
-剩下 29 个 —— `arc32` 家族、`adi_v5_cmsis_dap`、`aarch64_coproc_reg`、
-`blackmagic` / `ch347_jtag` / `cmsis_dap_usb` / `jtag_tcp` 驱动，以及几个头文件
+剩下 26 个 —— 13 个 `.c` 和 13 个 `.h`：`arc32` 家族、`adi_v5_cmsis_dap`、
+`aarch64_coproc_reg`，以及 `arc_ftdi_cjtag` / `cmsis_dap_wch` /
+`jtag_esp_remote` / `jtag_tcp` 驱动，加上只有它们 include 的头文件
 —— **在树里，但没被编译**。它们针对的是上游已经改过接口的 API，要注册它们，
 得先做下面说的那套移植。故意这样交付：代码在树里、可见、可审阅，在接上之前
 完全无害。
@@ -323,8 +324,9 @@ proprietary to Analog Devices, Inc."。
   探针、ST-LINK 外部加载器家族），25 个依赖的配置本身没进树，5 个在扫描缓存里
   没有文件体。逐项分类见 `manifest/consolidated.json` 的 `not_imported` 段，
   缺失 C 后端的文件级分析见 `manifest/nor-driver-scan.json`。
-- **76 个新 C 源文件与头文件里有 29 个没被编译。** 它们带着完整来源记录躺在树里，
-  但针对的是已经改过接口的上游 API。要注册需要逐个后端做移植。
+- **73 个新 C 源文件与头文件里有 26 个没被编译**（13 个 `.c`、13 个 `.h`）。
+  它们带着完整来源记录躺在树里，但针对的是已经改过接口的上游 API。
+  要注册需要逐个后端做移植。
 - **四份 Synopsys 板级配置没导入。** `board/synopsys_amla3.cfg`、
   `board/synopsys_angel4.cfg`、`board/synopsys_haps51.cfg`、
   `board/synopsys_ml509.cfg` 发布在 `intel/OpenOCD` 里，但任何公开仓库都没有

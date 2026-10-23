@@ -7,8 +7,8 @@
 副本后，得到 **812 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
 - **739 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
-- **73 个 `src/` C 源文件与头文件** —— 已就位，其中 **54 个已接入构建**，
-  其余 19 个仍需按上游现有 API 改写后才能注册。
+- **73 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
+  其余 26 个仍需按上游现有 API 改写后才能注册。
 
 另有 **7376 个与官方重复的文件已剔除**，**6910 个跨仓重复副本被折叠**
 （详见「已处理的重复问题」）。
@@ -126,8 +126,8 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 
 ## C 驱动的接入状态
 
-`src/` 下 73 个第三方文件里（37 个 `.c` + 36 个 `.h`），**54 个已经接入构建系统**，
-其余 19 个仍是「代码就位、未注册」的状态。
+`src/` 下 73 个第三方文件里（37 个 `.c` + 36 个 `.h`），**47 个已经接入构建系统**，
+其余 26 个（13 个 `.c` + 13 个 `.h`）仍是「代码就位、未注册」的状态。
 
 ### 已接入的适配器（5 个文件，6 个探针名）
 
@@ -260,7 +260,7 @@ ice1500        { jtag }
    （`src/helper/command.c` 的 `register_command()` 命中已有名字就复用它），
    所以无前缀的第二个后端会被前一个的 handler 接管。加前缀后三者可共存。
 
-### 仍是「代码就位、未注册」（其余 19 个文件）
+### 仍是「代码就位、未注册」（其余 26 个文件）
 
 13 个 `.c`：
 
@@ -269,9 +269,11 @@ ice1500        { jtag }
 - `src/target/`：`aarch64_coproc_reg.c`、`adi_v5_cmsis_dap.c`、`arc32.c`、
   `arc_core.c`、`arc_dbg.c`、`arc_mntr.c`、`arc_ocd.c`、`arc_regs.c`、`arc_trgt.c`
 
-6 个 `.h` 只被上面这些文件 include，主树没有任何引用，因此也没有进
-`*_SOURCES`：`arc_ftdi_cjtag.h`、`jtag_usb_common.h`、`arc_core.h`、
-`arc_trgt.h`、`altera_virtual_jtag.h`、`stm8.h`。
+13 个 `.h` 只被上面这些文件 include，主树没有任何引用，因此也没有进
+`*_SOURCES`：`arc32.h`、`arc_core.h`、`arc_dbg.h`、`arc_mntr.h`、`arc_ocd.h`、
+`arc_regs.h`、`arc_trgt.h`、`arc_ftdi_cjtag.h`、`jtag_usb_common.h`、
+`aarch64_system_registers.h`、`aarch64_system_registers_defs.h`、
+`altera_virtual_jtag.h`、`stm8.h`。
 
 > `src/jtag/drivers/OpenULINK/src/` 下的 4 个 `.c` 不算在内 —— 那是 OpenULINK
 > 固件子工程，自带独立 `Makefile`，不参与主构建。

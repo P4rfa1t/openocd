@@ -56,7 +56,7 @@ and stripped of files that are equivalent to what upstream already ships.
 | | count | notes |
 |---|---:|---|
 | `tcl/` script files | 739 | 722 `.cfg` plus 17 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
-| `src/` C sources | 76 | 40 `.c` plus 36 `.h`; **47 wired into the build**, 29 staged but not yet registered |
+| `src/` C sources | 73 | 37 `.c` plus 36 `.h`; **47 wired into the build**, 26 staged but not yet registered |
 | duplicate copies collapsed | 6910 | one winner kept per path |
 | files dropped as upstream-equivalent | 7376 | upstream already ships them, or ships them under another path |
 | candidates rejected as unusable | 621 | build-system files, non-C payloads and core internals that exist upstream under the same name |
@@ -123,7 +123,7 @@ exist.
 
 ### The `src/` files are split
 
-47 of the 76 new C sources and headers are wired into the build — 24 `.c`
+47 of the 73 new C sources and headers are wired into the build — 24 `.c`
 files that register a working `target_type` or `adapter_driver`, plus the
 headers they need:
 
@@ -145,13 +145,14 @@ ignores a second registration of an existing command name, so an unprefixed
 second backend would have been driven by the first one's handler. With the
 prefixes, all three coexist.
 
-The remaining 29 — the `arc32` family, `adi_v5_cmsis_dap`,
-`aarch64_coproc_reg`, the `blackmagic` / `ch347_jtag` / `cmsis_dap_usb` /
-`jtag_tcp` drivers, and a few headers — are **present in the tree but not
-compiled**. They target upstream APIs that have since moved, and registering
-them would need the same porting work described below. Shipping them
-unregistered is deliberate: the code is there, visible, reviewable, and
-harmless until it is wired up.
+The remaining 26 — 13 `.c` and 13 `.h`: the `arc32` family,
+`adi_v5_cmsis_dap`, `aarch64_coproc_reg`, and the `arc_ftdi_cjtag` /
+`cmsis_dap_wch` / `jtag_esp_remote` / `jtag_tcp` drivers, plus the headers
+only those files include — are **present in the tree but not compiled**. They
+target upstream APIs that have since moved, and registering them would need
+the same porting work described below. Shipping them unregistered is
+deliberate: the code is there, visible, reviewable, and harmless until it is
+wired up.
 
 ### The ST-LINK external loader driver
 
@@ -349,9 +350,10 @@ first. The `LICENSE` file spells this out in full.
 
 ## Known limitations
 
-- **29 of the 76 new C sources and headers are not compiled.** They are staged
-  in the tree with their provenance intact, but they target upstream APIs that
-  have moved. Registering them needs per-backend porting work.
+- **26 of the 73 new C sources and headers are not compiled** (13 `.c`, 13
+  `.h`). They are staged in the tree with their provenance intact, but they
+  target upstream APIs that have moved. Registering them needs per-backend
+  porting work.
 - **12 further TCL files are ready to import but have not been.** After the
   subdirectory blind spot was fixed and 252 configs were imported, a fresh
   pass over the 161 configs that still have no file in the tree found 12 whose
