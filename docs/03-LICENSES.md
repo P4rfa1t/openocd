@@ -11,7 +11,7 @@
 | UNRESOLVED | 25 |
 | GPL-2.0-or-later | 1 |
 
-**673 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
+**672 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
 > 已知事实：OpenOCD 上游是 GPL-2.0-or-later，大多数 fork 继承该许可，所以实务上大概率都是 GPL。但 `NOASSERTION` 只表示「GitHub 没能解析出来」，**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。逐文件清单见 `manifest/licenses.csv` 与下方折叠区。
 
@@ -914,7 +914,7 @@
 
 ## src/ C 源码（需在构建系统注册）
 
-文件数：**76**
+文件数：**73**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
@@ -922,22 +922,19 @@
 | [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | GPL-2.0(13) | 13 |
 | [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | GPL-2.0(8) | 8 |
 | [`xsession/openocd`](https://github.com/xsession/openocd) | NOASSERTION(8) | 8 |
-| [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | NOASSERTION(7) | 7 |
 | [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | NOASSERTION(7) | 7 |
+| [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | NOASSERTION(7) | 7 |
 | [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(4) | 4 |
 | [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(4) | 4 |
 | [`yottatsa/openocd`](https://github.com/yottatsa/openocd) | NOASSERTION(2) | 2 |
 | [`STMicroelectronics/OpenOCD`](https://github.com/STMicroelectronics/OpenOCD) | GPL-2.0-or-later(1) | 1 |
-| [`walmis/openocd-blackmagic`](https://github.com/walmis/openocd-blackmagic) | GPL-2.0(1) | 1 |
-| [`meriac/openocd`](https://github.com/meriac/openocd) | NOASSERTION(1) | 1 |
-| [`dynm/openocd-starbleed`](https://github.com/dynm/openocd-starbleed) | GPL-2.0(1) | 1 |
-| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(1) | 1 |
-| [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
 | [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(1) | 1 |
 | [`intel/aji_openocd`](https://github.com/intel/aji_openocd) | NOASSERTION(1) | 1 |
 | [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | GPL-2.0(1) | 1 |
+| [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
+| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(1) | 1 |
 
-### ⚠️ 需人工审计（51 个文件无许可证信息）
+### ⚠️ 需人工审计（50 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
 

@@ -25,7 +25,6 @@ src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax_du_adv.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax_tap.h,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
 src/ C 源码（需在构建系统注册）,analogdevicesinc/openocd,NOASSERTION,src/target/rvmax/rvmax_tap_mohor.c,release/0.12.0-1.4.0,ad75bfb79b509634b92646b9e65b958f3ea1d8bf
-src/ C 源码（需在构建系统注册）,dynm/openocd-starbleed,GPL-2.0,src/jtag/drivers/cmsis_dap_usb.c,master,25c1d0466e04d905ece5c653fc6d11fb6d139650
 src/ C 源码（需在构建系统注册）,espressif/openocd-esp32,NOASSERTION,src/jtag/drivers/jtag_esp_remote.c,master,a585825d4d0bbd5b8aff83e01816d2f2c04ffd84
 src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.c,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 src/ C 源码（需在构建系统注册）,foss-for-mips-arc-processors/openocd,GPL-2.0,src/jtag/drivers/arc_ftdi_cjtag.h,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
@@ -54,9 +53,7 @@ src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/ta
 src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
 src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/aarch64_system_registers_defs.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
 src/ C 源码（需在构建系统注册）,linux-msm/openocd,NOASSERTION,src/target/stm8.h,eud-rebased,880c11c56b5bc5e8acd2adef5c97ab37b3ca9349
-src/ C 源码（需在构建系统注册）,meriac/openocd,NOASSERTION,src/jtag/drivers/ch347_jtag.c,ch347,eeede198cdbc586cbe11041776d07589e1d5b5e6
 src/ C 源码（需在构建系统注册）,stache3000/openocd-dirtyjtag,NOASSERTION,src/jtag/drivers/dirtyjtag.c,master,d07856f7bfbac0c0f95ae0c9d91a82626cb394d8
-src/ C 源码（需在构建系统注册）,walmis/openocd-blackmagic,GPL-2.0,src/jtag/drivers/blackmagic.c,master,c9914b494085252d5938cd9192f90026fd4ffe47
 src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/c28x.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/c28x.h,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 src/ C 源码（需在构建系统注册）,xsession/openocd,NOASSERTION,src/target/mchp_ri4_bridge.c,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
