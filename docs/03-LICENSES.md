@@ -6,8 +6,8 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 648 |
-| GPL-2.0 | 141 |
+| NOASSERTION | 647 |
+| GPL-2.0 | 139 |
 | UNRESOLVED | 25 |
 | GPL-2.0-or-later | 1 |
 
@@ -922,17 +922,17 @@
 | [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | GPL-2.0(13) | 13 |
 | [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | GPL-2.0(8) | 8 |
 | [`xsession/openocd`](https://github.com/xsession/openocd) | NOASSERTION(8) | 8 |
-| [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | NOASSERTION(7) | 7 |
 | [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | NOASSERTION(7) | 7 |
+| [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | NOASSERTION(7) | 7 |
 | [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(4) | 4 |
 | [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(4) | 4 |
 | [`yottatsa/openocd`](https://github.com/yottatsa/openocd) | NOASSERTION(2) | 2 |
 | [`STMicroelectronics/OpenOCD`](https://github.com/STMicroelectronics/OpenOCD) | GPL-2.0-or-later(1) | 1 |
+| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(1) | 1 |
+| [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
 | [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(1) | 1 |
 | [`intel/aji_openocd`](https://github.com/intel/aji_openocd) | NOASSERTION(1) | 1 |
 | [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | GPL-2.0(1) | 1 |
-| [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
-| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(1) | 1 |
 
 ### ⚠️ 需人工审计（50 个文件无许可证信息）
 
@@ -996,12 +996,6 @@
 - `src/target/aarch64_system_registers.h`
 - `src/target/aarch64_system_registers_defs.h`
 - `src/target/stm8.h`
-
-</details>
-
-<details><summary><code>meriac/openocd</code> (1 个)</summary>
-
-- `src/jtag/drivers/ch347_jtag.c`
 
 </details>
 

@@ -7,8 +7,8 @@
 副本后，得到 **812 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
 - **739 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
-- **73 个 `src/` C 源文件与头文件** —— 已就位，其中 **50 个已接入构建**，
-  其余 23 个仍需按上游现有 API 改写后才能注册。
+- **73 个 `src/` C 源文件与头文件** —— 已就位，其中 **54 个已接入构建**，
+  其余 19 个仍需按上游现有 API 改写后才能注册。
 
 另有 **7376 个与官方重复的文件已剔除**，**6910 个跨仓重复副本被折叠**
 （详见「已处理的重复问题」）。
@@ -126,8 +126,8 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 
 ## C 驱动的接入状态
 
-`src/` 下 73 个第三方文件里（37 个 `.c` + 36 个 `.h`），**50 个已经接入构建系统**，
-其余 23 个仍是「代码就位、未注册」的状态。
+`src/` 下 73 个第三方文件里（37 个 `.c` + 36 个 `.h`），**54 个已经接入构建系统**，
+其余 19 个仍是「代码就位、未注册」的状态。
 
 ### 已接入的适配器（5 个文件，6 个探针名）
 
@@ -260,14 +260,21 @@ ice1500        { jtag }
    （`src/helper/command.c` 的 `register_command()` 命中已有名字就复用它），
    所以无前缀的第二个后端会被前一个的 handler 接管。加前缀后三者可共存。
 
-### 仍是「代码就位、未注册」（其余 23 个文件）
+### 仍是「代码就位、未注册」（其余 19 个文件）
 
-- `configure.ac` —— 没有对应的特性检测；
-- `src/jtag/drivers/Makefile.am`、`src/target/Makefile.am`、
-  `src/server/Makefile.am` —— 没有源文件条目；
-- `src/jtag/interface.h` / `src/jtag/interfaces.c` —— 没有声明与注册项；
-- `config.h` —— 没有 `BUILD_*` 开关；
-- `doc/manual/` —— 没有手册章节。
+13 个 `.c`：
+
+- `src/jtag/drivers/`：`arc_ftdi_cjtag.c`、`cmsis_dap_wch.c`、
+  `jtag_esp_remote.c`、`jtag_tcp.c`
+- `src/target/`：`aarch64_coproc_reg.c`、`adi_v5_cmsis_dap.c`、`arc32.c`、
+  `arc_core.c`、`arc_dbg.c`、`arc_mntr.c`、`arc_ocd.c`、`arc_regs.c`、`arc_trgt.c`
+
+6 个 `.h` 只被上面这些文件 include，主树没有任何引用，因此也没有进
+`*_SOURCES`：`arc_ftdi_cjtag.h`、`jtag_usb_common.h`、`arc_core.h`、
+`arc_trgt.h`、`altera_virtual_jtag.h`、`stm8.h`。
+
+> `src/jtag/drivers/OpenULINK/src/` 下的 4 个 `.c` 不算在内 —— 那是 OpenULINK
+> 固件子工程，自带独立 `Makefile`，不参与主构建。
 
 没接入的原因不是遗漏，而是**这些驱动依赖上游已删除或改名的 API**，
 直接编译会失败。逐个看：
@@ -288,11 +295,26 @@ ice1500        { jtag }
 `tools/patch_target_groups.py` 与 `tools/patch_makefile.py`、
 `tools/patch_interfaces.py`、`tools/patch_interface_h.py` 可以作模板。
 
-代价是两份接口配置目前指向不存在的驱动：`tcl/interface/jtag_tcp.cfg` 的
-`interface jtag_tcp` 和 `tcl/interface/jtag_esp_remote.cfg` 的
-`adapter driver jtag_esp_remote` 都会在加载时报找不到驱动。两份文件留着，
-是因为它们描述的是驱动接入后应有的用法；驱动一旦按上面那条路接通，它们
-不需要改。
+**悬空的接口配置。** 扫全部 `tcl/`，有 6 个 `adapter driver` / `interface`
+指令指向源码里不存在的驱动名，共 8 处：
+
+| 配置 | 指令 | 驱动名 |
+|---|---|---|
+| `tcl/interface/jtag_tcp.cfg:7` | `interface jtag_tcp` | `jtag_tcp`（上面未接入） |
+| `tcl/interface/jtag_esp_remote.cfg:5` | `adapter driver jtag_esp_remote` | `jtag_esp_remote`（上面未接入） |
+| `tcl/interface/picoprobe.cfg:2` | `adapter driver picoprobe` | `picoprobe` |
+| `tcl/interface/colobus.cfg:1` | `interface colobus` | `colobus` |
+| `tcl/interface/tamarin.cfg:1`、`tcl/interface/faultier.cfg:1` | `interface tamarin` | `tamarin` |
+| `tcl/interface/tas_client.cfg:7` | `adapter driver tas_client` | `tas_client` |
+| `tcl/interface/nds32-aice.cfg:9` | `adapter driver aice` | `aice` |
+| `tcl/board/altera_arria10__aji_client.cfg:8`、`tcl/board/altera_arria10_niosv__aji_client.cfg:15` | `adapter driver aji_client` | `aji_client` |
+
+后 6 个（`picoprobe`、`colobus`、`tamarin`、`tas_client`、`aice`、`aji_client`）
+在**上游同样没有驱动实现**，配置是各 fork 单独加的，属于上游本身的悬空；
+`nds32-aice.cfg` 依赖的 `nds32_aice.c` 已被本 fork 从树里移除
+（见 `removed_from_tree`）。这些配置加载时会报 `Can't find adapter driver`。
+`jtag_tcp`/`jtag_esp_remote` 两份是给上面那两个待接入驱动预留的用法说明，
+驱动一旦按上面那条路接通就不需要改。
 
 
 ## 4 份 Synopsys 板级配置未导入
@@ -314,9 +336,9 @@ target 在任何公开仓库里都不存在（属于 Synopsys 内部交付）：
 
 ## 许可证提醒
 
-- `GPL-2.0`：141 个文件，来源明确。
+- `GPL-2.0`：139 个文件，来源明确。
 - `GPL-2.0-or-later`：1 个文件（`src/flash/nor/stldr_driver.c`，来自 STMicroelectronics/OpenOCD）。
-- `NOASSERTION`：648 个文件，GitHub 未能解析 SPDX。
+- `NOASSERTION`：647 个文件，GitHub 未能解析 SPDX。
 - `UNRESOLVED`：25 个文件，即依赖闭包补充的文件，来源已知但未单独解析。
 
 后两类在商用前需人工审计头部声明 —— `NOASSERTION` **不等于**宽松许可，
@@ -362,18 +384,18 @@ python tools/pipeline.py --apply
 
 | 缺口 | 规模 | 说明 |
 |---|---|---|
-| C 驱动未注册进构建 | 23 | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API |
+| C 驱动未注册进构建 | 19（13 个 `.c` + 6 个 `.h`） | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API。另有 `OpenULINK/src/` 4 个固件源文件，独立 Makefile，不参与主构建 |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
 | 无许可证信息 | 672 / 812（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
-| 烧录器只有配置没有驱动 | 4 个 | `aji_client`、`tas_client`、`ddmi_usb`、`aice`（`dbgagent`/`ice2000` 已随本次接入进产物） |
+| 烧录器只有配置没有驱动 | 6 个驱动名 / 8 处引用 | `aji_client`、`tas_client`、`aice`、`picoprobe`、`colobus`、`tamarin`；前 4 个上游也没有实现，后 2 个是 fork 单独加的配置。逐条见「悬空的接口配置」表 |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；`arc32.c` 一族缺 `arc_mem.c` 无法接入，全树 22 个 ARC 配置现在都只用 `arcv2` |
 | 无真机验证 | 全部 | 静态校验之外，只用 CI 产物跑过 `adapter list`、`target types` 和批量 `source [find ...]`（验证配置能被解析、驱动/target type/flash 驱动都在）；没有接真实探针与目标板跑过调试会话 |
-| `-chain-position` 旧写法 | 192 个文件 / 219 处 | 上游 `tcl/` 已清零；机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
+| `-chain-position` 旧写法 | 408 个文件 / 504 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 504 处全在导入的第三方配置里（`target create` 373 处、`dap create` 122 处、`vjtag create` 1 处，其余为变量拼接）。机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
 | 三组导入候选被上游阻塞 | 14 个文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows） |
 | `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |
-| 扫描漏掉了子目录里的文件 | 97 个 NOR 驱动 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里是看不见的。`tools/expand_subtrees.py` 已补上；补出来的 97 个驱动（`esp32*.c` 18 个、`stm32h5x.c`、`tc3xx.c`、`wcharm.c` 等）**尚未逐个做 API 漂移分析，因此还没接进构建** |
+| 扫描漏掉了子目录里的文件 | 已补扫，0 个待接入 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里看不见。`tools/expand_subtrees.py` 已补上；补出来的文件经 API 漂移分析后确认与上游 `src/flash/nor/` 的 85 个驱动重合，本树实际只多 `rv32m1.c` 与 `stldr_driver.c`（均已接入），NOR 目录 87/87 全部在 `Makefile.am` 里 |
 
 ## 已处理的重复问题
 
