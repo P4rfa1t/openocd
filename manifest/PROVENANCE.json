@@ -11758,28 +11758,10 @@
       "sha256_at_removal": "f198c92f63e7e02262c1eb7342e5d51d3c4695d5704c0e4da55bc8495b36fec3"
     },
     {
-      "path": "tcl/target/1986Be1T.cfg",
-      "reason": "upstream ships this file as tcl/target/1986ве1т.cfg; the mangled copy was dropped",
-      "upstream_path": "tcl/target/1986ве1т.cfg",
-      "sha256_at_removal": "598b3d8d7d074438ba68c4e86cfc5ca670df862ef9c2404fcd11bd2d1d18143d"
-    },
-    {
       "path": "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
       "reason": "upstream ships this file as tcl/target/1986ве1т.cfg; the mangled copy was dropped",
       "upstream_path": "tcl/target/1986ве1т.cfg",
       "sha256_at_removal": "a51092764d7db9d226d6ea8ec7ba27d84f1c56330259d0042431868701f62b80"
-    },
-    {
-      "path": "tcl/target/k1879h61ya.cfg",
-      "reason": "upstream ships this file as tcl/target/к1879xб1я.cfg; the mangled copy was dropped",
-      "upstream_path": "tcl/target/к1879xб1я.cfg",
-      "sha256_at_removal": "71e40bf1d38629287eb5438a04d0557452498f861efe54b4e1e745e9645f192f"
-    },
-    {
-      "path": "tcl/target/k1879x61R.cfg",
-      "reason": "upstream ships this file as tcl/target/к1879xб1я.cfg; the mangled copy was dropped",
-      "upstream_path": "tcl/target/к1879xб1я.cfg",
-      "sha256_at_removal": "3887108538c2903a3191c0ac305de0262426a04cae33f75d6693c1ade49c639d"
     },
     {
       "path": "tcl/target/Ðº1879xÐ±1Ñ.cfg",
