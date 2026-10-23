@@ -104,8 +104,8 @@ print(entry["source_repo"], entry["source_branch"], entry["source_commit"], entr
 PY
 ```
 
-The survey covered **688 candidate repositories**; 58 of them
-contributed at least one file that ended up in the tree.
+The survey covered **688 candidate repositories**; 56 of them
+contributed at least one file that is still in the tree.
 
 ### The `tcl/` files work immediately
 
@@ -450,7 +450,7 @@ Pull requests are welcome, and the bar is specific:
 
 ## Acknowledgements
 
-This tree exists because 58 repositories of other people published chip
+This tree exists because 56 repositories of other people published chip
 support that upstream would not take. Their commits, their code and their
 license statements are preserved in `manifest/`. The original authors of
 upstream OpenOCD did the work this fork is built on.
