@@ -274,14 +274,15 @@ ice1500        { jtag }
 
 | 未接入的文件 | 卡点 |
 |---|---|
-| `src/jtag/drivers/jtag_tcp.c`、`ch347_jtag.c`、`cmsis_dap_usb.c` | `.transports` 字段 —— 上游已改成 `unsigned int transport_ids` |
-| `src/target/arc32.c` + `arc_core.c` + `arc_dbg.c` + `arc_mntr.c` + `arc_ocd.c` + `arc_regs.c` + `arc_trgt.c` | 与上游 `src/target/arc.c` 的 `arcv2_target` **重复定义**，且它是旧式 ARC 整体实现，上游已重写 |
+| `src/jtag/drivers/jtag_tcp.c`、`cmsis_dap_wch.c` | `.transports` 字段 —— 上游已改成 `unsigned int transport_ids` |
+| `src/target/arc32.c` + `arc_core.c` + `arc_dbg.c` + `arc_mntr.c` + `arc_ocd.c` + `arc_regs.c` + `arc_trgt.c` | 与上游 `src/target/arc.c` 的 `arcv2_target` **重复定义**，且 `arc32.c` 调用的 9 个 `arc_mem_*` 入口只存在于它自己那份 `arc_mem.c`；本树的 `arc_mem.c` 是上游精简版，只有 `arc_mem_read`/`arc_mem_write`，链接必然失败（CI 已验证） |
 | `src/target/adi_v5_cmsis_dap.c`、`aarch64_coproc_reg.c` | 依赖上游未公开的私有 API |
-| `src/jtag/drivers/blackmagic.c`、`cmsis_dap_wch.c`、`jtag_esp_remote.c`、`arc_ftdi_cjtag.c` | SDI 传输层（`struct sdi_driver`）整个传输层已从上游删除 |
+| `src/jtag/drivers/arc_ftdi_cjtag.c`、`cmsis_dap_wch.c` | SDI 传输层（`struct sdi_driver`）整个传输层已从上游删除 |
 
-> `tcl/target/arc_axc001.cfg` 等 ARC 板级配置在树里，但它们 `target create` 的是
-> `arc600` / `arc700` / `arcv2` —— 这三个名字上游 `arc.c` 只提供 `arcv2`，
-> 所以那几份配置目前**开箱即用不了**。要修就得先把 `arc32.c` 一族接进构建。
+> `tcl/target/arc_axc001.cfg` 等 ARC 板级配置在树里。上游 `arc.c` 只注册 `arcv2`
+> 一个 target type，而 `arc32.c` 一族因为依赖它自己那份 `arc_mem.c`（本树里是
+> 上游的精简版，只有 `arc_mem_read`/`arc_mem_write`）接不进构建，所以这些配置
+> 统一改用 `arcv2`。代价是它们描述的 ARC600/ARC700 内核只能按 ARCv2 访问。
 
 要接入某个驱动，得先按上游现有 API 重写，逐个验证能编译后再提交。
 `tools/patch_target_groups.py` 与 `tools/patch_makefile.py`、
@@ -360,7 +361,7 @@ python tools/pipeline.py --apply
 | 无许可证信息 | 672 / 812（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 4 个 | `aji_client`、`tas_client`、`ddmi_usb`、`aice`（`dbgagent`/`ice2000` 已随本次接入进产物） |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
-| ARC 板级配置开箱即用不了 | 3 个 cfg | `arc_axc001/002/003_hs36.cfg` 需要的 `arc600`/`arc700` 来自未接入的 `arc32.c` 一族 |
+| ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；`arc32.c` 一族缺 `arc_mem.c` 无法接入，全树 22 个 ARC 配置现在都只用 `arcv2` |
 | 无真机验证 | 全部 | 静态校验之外，只用 CI 产物跑过 `adapter list`、`target types` 和批量 `source [find ...]`（验证配置能被解析、驱动/target type/flash 驱动都在）；没有接真实探针与目标板跑过调试会话 |
 | `-chain-position` 旧写法 | 192 个文件 / 219 处 | 上游 `tcl/` 已清零；机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
