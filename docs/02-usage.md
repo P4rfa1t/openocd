@@ -398,7 +398,7 @@ python tools/pipeline.py --apply
 
 | 缺口 | 规模 | 说明 |
 |---|---|---|
-| C 驱动未注册进构建 | 19（13 个 `.c` + 6 个 `.h`） | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API。另有 `OpenULINK/src/` 4 个固件源文件，独立 Makefile，不参与主构建 |
+| C 驱动未注册进构建 | 26（13 个 `.c` + 13 个 `.h`） | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API。另有 `OpenULINK/src/` 4 个固件源文件，独立 Makefile，不参与主构建 |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
 | 无许可证信息 | 672 / 812（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 6 个驱动名 / 8 处引用 | `aji_client`、`tas_client`、`aice`、`picoprobe`、`colobus`、`tamarin`；前 4 个上游也没有实现，后 2 个是 fork 单独加的配置。逐条见「悬空的接口配置」表 |
@@ -408,6 +408,8 @@ python tools/pipeline.py --apply
 | `-chain-position` 旧写法 | 408 个文件 / 504 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 504 处全在导入的第三方配置里（`target create` 373 处、`dap create` 122 处、`vjtag create` 1 处，其余为变量拼接）。机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
 | 三组导入候选被上游阻塞 | 14 个文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows） |
+| TI XDS100 包装配置缺失 | 9 份板级配置 | 这 9 份 `tcl/board/ti/*-xds100v2.cfg` / `-xds100v3.cfg` 都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，树里只有 `interface/ftdi/xds100v2.cfg`；补两个三行包装文件即可，无需 C 改动 |
+| 两个非 ASCII 文件名 | 2 个 | `tcl/target/1986ве1т.cfg`、`tcl/target/к1879xб1я.cfg` 是上游自己带的西里尔字母名（与 `upstream/master` 逐字节一致），不是本 fork 引入；Windows 上部分工具链会处理异常 |
 | `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |
 | 扫描漏掉了子目录里的文件 | 已补扫，0 个待接入 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里看不见。`tools/expand_subtrees.py` 已补上；补出来的文件经 API 漂移分析后确认与上游 `src/flash/nor/` 的 85 个驱动重合，本树实际只多 `rv32m1.c` 与 `stldr_driver.c`（均已接入），NOR 目录 87/87 全部在 `Makefile.am` 里 |
 
