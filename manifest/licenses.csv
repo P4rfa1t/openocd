@@ -550,7 +550,6 @@ tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/pic1
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/pic32mz-ri4.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/ti/c2000-icepick-scan.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/ti/cc35x1e.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
-tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/ti/lpf3.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/ti/mspm0c1103.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/ti/tms320-generic-scan.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183
 tcl/ 配置（随树直接可用）,xsession/openocd,NOASSERTION,tcl/target/ti/tms320/family/c55xx.cfg,master,abe382d0a803f6ad34c9d47b6941ec20eb082183

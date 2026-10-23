@@ -55,16 +55,16 @@ and stripped of files that are equivalent to what upstream already ships.
 
 | | count | notes |
 |---|---:|---|
-| `tcl/` script files | 713 | 697 `.cfg` plus 16 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
+| `tcl/` script files | 712 | 696 `.cfg` plus 16 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
 | `src/` C sources | 73 | 37 `.c` plus 36 `.h`; **47 wired into the build**, 26 staged but not yet registered |
 | duplicate copies collapsed | 6910 | one winner kept per path |
 | files dropped as upstream-equivalent | 7376 | upstream already ships them, or ships them under another path |
 | candidates rejected as unusable | 621 | build-system files, non-C payloads and core internals that exist upstream under the same name |
 
 Of the 1298 unique paths the survey identified, **795 landed in the tree** at the
-time of the survey. Since then 23 of those were removed on purpose — see the
+time of the survey. Since then 11 of those were removed on purpose — see the
 last row of the table below — while a handful of further files came in as
-dependencies of landed configs, leaving **786 tracked third-party files**
+dependencies of landed configs, leaving **785 tracked third-party files**
 today.
 
 The 331 C sources that did not land all need per-backend porting: they are
@@ -81,12 +81,12 @@ The 172 TCL files that did not land break down as:
 | depends on a file that is itself missing | 25 | a `source [find ...]` line points at a config that did not land |
 | not retrievable from the survey cache | 5 | the survey recorded the path but the file body was never fetched |
 | the 12 candidates once called "ready to import" | 12 | none holds; 9 need `interface/ti/xds100v2.cfg` or `xds100v3.cfg` first, 3 were path confusion |
-| dropped from the tree after import | 23 | 11 redundant TI `swd_native` boards, `target/nrf_common.cfg`, `interface/stlink-usb.cfg`, both `interface/calao-usb-a9260-c0*.cfg`, plus 12 shadow copies that duplicated an upstream file under a second name (`board/omap2420_h4.cfg`, `board/stm32mp13x_dk.cfg`, the three `ti_beagle*` boards, `cpld/altera-max10.cfg`, `cpld/xilinx-xcr3256.cfg`, `fpga/xilinx-dna.cfg`, `interface/jtagkey.cfg`, `interface/snps_sdp.cfg`, `target/wch_min.cfg`, `target/ch32x035.txt`) |
+| dropped from the tree after import | 11 | 7 redundant TI `swd_native` boards, `target/nrf_common.cfg`, `interface/stlink-usb.cfg`, both `interface/calao-usb-a9260-c0*.cfg` |
 
 There is no "ready to import" group any more. Every one of the 172 either
 needs a wrapper file, needs a C backend, or was removed on purpose.
 
-Two more groups complete the count of **786 files**, each with its own
+Two more groups complete the count of **785 files**, each with its own
 provenance entry:
 
 - **21 files pulled in as dependencies** — a config that `source`s another
@@ -97,9 +97,9 @@ provenance entry:
   `tcl/target/adsp-sc58x.cfg`. The tree keeps the third-party version and
   `tools/verify_tree.py` reports the collision as a warning.
 
-Upstream ships 2203 files; this tree ships 3048.
+Upstream ships 2203 files; this tree ships 3047.
 
-**All 786 imported files are pinned to the exact commit they came from.** Any
+**All 785 imported files are pinned to the exact commit they came from.** Any
 file can be traced back to the fork and the commit that published it:
 
 ```bash
@@ -259,11 +259,11 @@ integrity check with 543 mismatches, because the tree had been rebuilt in
 text mode on Windows and every imported file was silently stored with CRLF
 while the manifest described the LF original. The gate could not tell "this
 was edited" from "this was checked out on a Windows host". Both are fixed now:
-the tree is LF everywhere, 624 files match their published digest byte for
-byte, 28 are labelled as terminator-only differences, and 134 carry real local
-edits (24 of those also had their terminators normalised) — the target API
-ports, the relocated `source [find ...]` paths, the third-party driver fixes
-and the `rvmax` / `rv32m1` backends.
+the tree is LF everywhere, 647 of the 785 imported files still match their
+published digest byte for byte, none is now a terminator-only difference, and
+134 carry real local edits (24 of those also had their terminators normalised)
+— the target API ports, the relocated `source [find ...]` paths, the
+third-party driver fixes and the `rvmax` / `rv32m1` backends.
 
 Files that were deliberately removed stay in the manifests under
 `removed_from_tree`, with the reason and the commit that removed them. The
@@ -276,8 +276,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 786
-on disk  : 786
+recorded : 785
+on disk  : 785
 errors   : 0
 warns    : 23
 VERIFY: PASS
@@ -334,7 +334,7 @@ every block it owns so the script can find and replace its own work.
 | [`docs/01-inventory.md`](docs/01-inventory.md) | the inventory: how many repositories, how many files, where they came from |
 | [`docs/02-usage.md`](docs/02-usage.md) | usage notes, and the list of known limitations |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | per-file license table |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 786 imported files |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 785 imported files |
 
 ---
 
@@ -344,7 +344,7 @@ The OpenOCD sources inherited from upstream are GPL-2.0-or-later; the
 documentation is GFDL-1.2-no-invariants-or-later. See `COPYING` and `LICENSES/`.
 
 **The imported third-party files are not covered by that blanket statement.**
-Of 786 files, GitHub resolved 135 as GPL-2.0, 1 as GPL-2.0-or-later, 628 as
+Of 785 files, GitHub resolved 135 as GPL-2.0, 1 as GPL-2.0-or-later, 627 as
 `NOASSERTION` (which means *GitHub could not determine a license* — not that it
 is permissive) and 22 as unresolvable. Some `NOASSERTION` files carry their own
 proprietary notices, for example the Analog Devices flash algorithms, which

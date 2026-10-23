@@ -1,11 +1,11 @@
 {
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
-  "file_count": 786,
+  "file_count": 785,
   "integrity": {
-    "recorded": 786,
-    "on_disk": 786,
-    "pinned": 786,
+    "recorded": 785,
+    "on_disk": 785,
+    "pinned": 785,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "unresolved_references": {
@@ -8642,16 +8642,6 @@
         "content edited in this fork; digest refreshed"
       ]
     },
-    "tcl/target/ti/lpf3.cfg": {
-      "source_repo": "xsession/openocd",
-      "source_branch": "master",
-      "source_commit": "abe382d0a803f6ad34c9d47b6941ec20eb082183",
-      "source_path": "tcl/target/ti/lpf3.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [],
-      "sha256": "bbd5c020c258196ac733deb8db3fa5cfa40692d0f5298f9fb71b6d75af066ca0"
-    },
     "tcl/target/ti/mspm0c1103.cfg": {
       "source_repo": "xsession/openocd",
       "source_branch": "master",
@@ -11175,6 +11165,11 @@
       "path": "tcl/target/wch_min.cfg",
       "reason": "removed on purpose in 889bf3f6ea29 (tcl: drop shadow copies, unreferenced duplicates and broken configs)",
       "sha256_at_removal": "3f5a641c2e34c305840220cc4a81fc08896c418d4cd5f4f8103d3ca653ea6d02"
+    },
+    {
+      "path": "tcl/target/ti/lpf3.cfg",
+      "reason": "removed on purpose in d5f3c6517 (chore(tcl): drop unreferenced duplicate tcl/target/ti/lpf3.cfg)",
+      "sha256_at_removal": "bbd5c020c258196ac733deb8db3fa5cfa40692d0f5298f9fb71b6d75af066ca0"
     },
     {
       "path": "src/target/cortex_a8.c",

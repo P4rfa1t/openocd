@@ -6,22 +6,22 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 628 |
+| NOASSERTION | 627 |
 | GPL-2.0 | 135 |
 | UNRESOLVED | 22 |
 | GPL-2.0-or-later | 1 |
 
-**650 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
+**649 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
 > 已知事实：OpenOCD 上游是 GPL-2.0-or-later，大多数 fork 继承该许可，所以实务上大概率都是 GPL。但 `NOASSERTION` 只表示「GitHub 没能解析出来」，**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。逐文件清单见 `manifest/licenses.csv` 与下方折叠区。
 
 ## tcl/ 配置（随树直接可用）
 
-文件数：**713**
+文件数：**712**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
-| [`xsession/openocd`](https://github.com/xsession/openocd) | NOASSERTION(227) | 227 |
+| [`xsession/openocd`](https://github.com/xsession/openocd) | NOASSERTION(226) | 226 |
 | [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | NOASSERTION(58), UNRESOLVED(10) | 68 |
 | [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | NOASSERTION(48), UNRESOLVED(1) | 49 |
 | [`rxmnjke/openocd`](https://github.com/rxmnjke/openocd) | NOASSERTION(47) | 47 |
@@ -76,7 +76,7 @@
 | [`nmenon/openocd`](https://github.com/nmenon/openocd) | NOASSERTION(1) | 1 |
 | [`padhialuo0426/openocd`](https://github.com/padhialuo0426/openocd) | NOASSERTION(1) | 1 |
 
-### ⚠️ 需人工审计（600 个文件无许可证信息）
+### ⚠️ 需人工审计（599 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
 
@@ -608,7 +608,7 @@
 
 </details>
 
-<details><summary><code>xsession/openocd</code> (227 个)</summary>
+<details><summary><code>xsession/openocd</code> (226 个)</summary>
 
 - `tcl/board/ti/cc35x1e-launchpad.cfg`
 - `tcl/board/ti/mspm0c1103-cmsis-dap.cfg`
@@ -632,7 +632,6 @@
 - `tcl/target/pic32mz-ri4.cfg`
 - `tcl/target/ti/c2000-icepick-scan.cfg`
 - `tcl/target/ti/cc35x1e.cfg`
-- `tcl/target/ti/lpf3.cfg`
 - `tcl/target/ti/mspm0c1103.cfg`
 - `tcl/target/ti/tms320-generic-scan.cfg`
 - `tcl/target/ti/tms320/family/c55xx.cfg`

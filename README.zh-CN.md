@@ -50,15 +50,15 @@ git merge upstream/master
 
 | | 数量 | 说明 |
 |---|---:|---|
-| `tcl/` 脚本文件 | 713 | 697 个 `.cfg` + 16 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
+| `tcl/` 脚本文件 | 712 | 696 个 `.cfg` + 16 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
 | `src/` C 源码 | 73 | 37 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，26 个已就位但未注册 |
 | 折叠掉的重复副本 | 6910 | 每条路径只保留一个胜出版本 |
 | 与官方重复而剔除 | 7376 | 上游已经收编，或上游已把它挪到子目录 |
 | 判定不可用而排除 | 621 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
 
 扫描识别出的 1298 条唯一路径里，**795 条在扫描当时进了树**，503 条没进。此后
-其中 23 条被有意移除（见下表最后一行），另有少量文件作为已进树配置的依赖被带了
-进来，所以**今天树里的第三方文件是 786 个**。
+其中 11 条被有意移除（见下表最后一行），另有少量文件作为已进树配置的依赖被带了
+进来，所以**今天树里的第三方文件是 785 个**。
 
 没进来的 331 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
 是照着旧版 OpenOCD 的 API 写的。其中 `src/target` 最大（133 个），其次是
@@ -73,12 +73,12 @@ git merge upstream/master
 | 依赖的文件本身没进树 | 25 | 某条 `source [find ...]` 指向的配置没有导入 |
 | 扫描缓存里没有文件体 | 5 | 扫描记下了路径，但从未抓取文件内容 |
 | 曾判为「原样就能导入」的 12 个 | 12 | 复核后全都不成立：9 个要先补 `interface/ti/xds100v2.cfg` 或 `xds100v3.cfg`，3 个是路径误判 |
-| 导入后又从树里删掉 | 23 | 11 个冗余的 TI `swd_native` 板级配置、`target/nrf_common.cfg`、`interface/stlink-usb.cfg`、两个 `interface/calao-usb-a9260-c0*.cfg`，另加 12 个以第二个名字重复上游文件的影子副本（`board/omap2420_h4.cfg`、`board/stm32mp13x_dk.cfg`、三个 `ti_beagle*` 板级、`cpld/altera-max10.cfg`、`cpld/xilinx-xcr3256.cfg`、`fpga/xilinx-dna.cfg`、`interface/jtagkey.cfg`、`interface/snps_sdp.cfg`、`target/wch_min.cfg`、`target/ch32x035.txt`） |
+| 导入后又从树里删掉 | 11 | 7 个冗余的 TI `swd_native` 板级配置、`target/nrf_common.cfg`、`interface/stlink-usb.cfg`、两个 `interface/calao-usb-a9260-c0*.cfg` |
 
 「原样就能导入」这一类已经不存在了。这 172 个要么缺包装文件，要么缺 C 后端，
 要么是有意删掉的。
 
-另外两组补齐了 **786 个文件**这个数，每个都有自己的来源记录：
+另外两组补齐了 **785 个文件**这个数，每个都有自己的来源记录：
 
 - **21 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
   文件会一起被带进来；manifest 里标为 `imported_as: dependency`。
@@ -86,9 +86,9 @@ git merge upstream/master
   `tcl/target/adsp-sc58x.cfg` 不同。树里保留第三方版本，
   `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
 
-上游共 2203 个文件，本树 3048 个。
+上游共 2203 个文件，本树 3047 个。
 
-**全部 786 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+**全部 785 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -229,10 +229,10 @@ jimtcl、libyaml、zlib）和构建配方都是上游的。
 这个区分是必要的。本仓库的某一版曾对自己的完整性检查报出 543 处不匹配 —— 那
 棵树是在 Windows 上以文本模式重建的，每个导入文件都被悄悄存成了 CRLF，而
 manifest 描述的是 LF 原件。门禁分不清"这个文件被改过"和"这个文件是在 Windows
-上检出的"。现在两边都修好了：树里全是 LF，624 个文件与发布方摘要逐字节吻合，
-28 个被标为仅行尾符差异，134 个带真实本地编辑（其中 24 个同时做了行尾符规整）
-—— target API 移植、重定位后的 `source [find ...]` 路径修正、第三方驱动的修复，
-以及 `rvmax` / `rv32m1` 两个后端。
+上检出的"。现在两边都修好了：树里全是 LF，785 个导入文件中有 647 个与发布方摘要
+逐字节吻合，已经没有任何一个只剩行尾符差异，134 个带真实本地编辑（其中 24 个
+同时做了行尾符规整）—— target API 移植、重定位后的 `source [find ...]` 路径修正、
+第三方驱动的修复，以及 `rvmax` / `rv32m1` 两个后端。
 
 被有意移除的文件仍留在 manifest 的 `removed_from_tree` 段里，连同移除原因和
 移除它的那次提交。审计链是双向的。
@@ -244,8 +244,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 786
-on disk  : 786
+recorded : 785
+on disk  : 785
 errors   : 0
 warns    : 23
 VERIFY: PASS
@@ -300,7 +300,7 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 786 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 785 个导入文件的机器可读来源记录 |
 
 ---
 
@@ -309,8 +309,8 @@ GitHub 解析不出许可证的文件。
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 786 个文件里，GitHub 解析出
-135 个为 GPL-2.0、1 个为 GPL-2.0-or-later、628 个为 `NOASSERTION`（意思是
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 785 个文件里，GitHub 解析出
+135 个为 GPL-2.0、1 个为 GPL-2.0-or-later、627 个为 `NOASSERTION`（意思是
 *GitHub 判定不出许可证*，不是说它宽松），22 个无法解析。有些 `NOASSERTION` 文件
 自带专有声明，例如 Analog Devices 的 flash 算法，写着 "This software is
 proprietary to Analog Devices, Inc."。
