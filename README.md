@@ -256,10 +256,11 @@ integrity check with 543 mismatches, because the tree had been rebuilt in
 text mode on Windows and every imported file was silently stored with CRLF
 while the manifest described the LF original. The gate could not tell "this
 was edited" from "this was checked out on a Windows host". Both are fixed now:
-the tree is LF everywhere, 769 files match their published digest byte for
-byte, 4 are labelled as terminator-only differences, and 42 carry real local
-edits — the target API ports, the relocated `source [find ...]` paths, the
-third-party driver fixes and the `rvmax` / `rv32m1` backends.
+the tree is LF everywhere, 660 files match their published digest byte for
+byte, 4 are labelled as terminator-only differences, and 137 carry real local
+edits (24 of those also had their terminators normalised) — the target API
+ports, the relocated `source [find ...]` paths, the third-party driver fixes
+and the `rvmax` / `rv32m1` backends.
 
 Files that were deliberately removed stay in the manifests under
 `removed_from_tree`, with the reason and the commit that removed them. The

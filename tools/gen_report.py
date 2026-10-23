@@ -55,6 +55,8 @@ def main():
         contrib[r["winner"]]["t1" if r["tier"] == 1 else "t2"] += 1
 
     lic = Counter((r.get("winner_license") or "unknown") for r in recs)
+    imported = [r for r in recs if r.get("imported")]
+    lic_imp = Counter((r.get("winner_license") or "unknown") for r in imported)
     behind = Counter()
     for r in recs:
         m = repos.get(r["winner"], {}).get("missing_core_count", 0)
@@ -106,17 +108,24 @@ def main():
           + ", ".join(f"`{r}`({n})" for r, n in top) + " |")
     A("")
 
+    # Two scopes, kept apart on purpose: `lic` covers every candidate in
+    # consolidated.json (imported or not), while `lic_imp` covers only the
+    # ones that actually landed in the tree. Printing one table without
+    # saying which scope it is made the numbers look like they contradicted
+    # the 801-file figure elsewhere in this document.
     A("## 4. 许可证分布\n")
-    A("| SPDX | 文件数 |")
-    A("|---|---:|")
+    A(f"下表覆盖去重后的全部 **{len(recs)} 个候选路径**"
+      f"（其中 {len(imported)} 个已导入本树）。\n")
+    A("| SPDX | 候选文件数 | 已导入文件数 |")
+    A("|---|---:|---:|")
     for k, v in lic.most_common():
-        A(f"| {k} | {v} |")
+        A(f"| {k} | {v} | {lic_imp.get(k, 0)} |")
     A("")
-    unresolved = sum(v for k, v in lic.items()
+    unresolved = sum(v for k, v in lic_imp.items()
                       if k in ("unknown", "NOASSERTION", "other"))
     if unresolved:
-        A(f"> ⚠️ **{unresolved} 个文件**来自 GitHub 未解析出 SPDX 的仓库，"
-          f"导入前需人工审计头部许可声明。\n")
+        A(f"> ⚠️ 已导入的 **{unresolved} 个文件**来自 GitHub 未解析出 SPDX 的仓库，"
+          f"头部许可声明需人工审计。\n")
 
     A("## 5. 排除项说明\n")
     A(f"共排除 {consol['excluded_from_import']['count']} 个路径，原因：\n")
@@ -161,7 +170,10 @@ def main():
           f"{repos.get(r['winner'], {}).get('missing_core_count', 0)} |")
     A("")
 
-    with open(OUT_MD, "w", encoding="utf-8") as f:
+    # newline="" keeps the blob LF on every host. Without it, a Windows
+    # checkout writes CRLF into the file, the blob stays LF, and the tree
+    # silently stops being "LF everywhere" while git reports no diff.
+    with open(OUT_MD, "w", encoding="utf-8", newline="") as f:
         f.write("\n".join(lines) + "\n")
     print(f"wrote {OUT_MD} ({len(lines)} lines)")
     print(f"  tier1={consol['tier1_drop_in_tcl']} tier2={consol['tier2_needs_c_patch']}")
