@@ -316,6 +316,13 @@ ice1500        { jtag }
 `jtag_tcp`/`jtag_esp_remote` 两份是给上面那两个待接入驱动预留的用法说明，
 驱动一旦按上面那条路接通就不需要改。
 
+来源（`manifest/PROVENANCE.json`）：`picoprobe` ← `sysprogs/openocd`，
+`colobus` ← `tihmstar/openocd_colobus`，`tamarin`/`faultier` ←
+`stacksmashing/openocd-tamarin`，`tas_client` ← `zuyih/openocd`，
+`nds32-aice` ← `zephyrproject-rtos/openocd`，`aji_client` ←
+`OlivierVanWassenhove-Dekimo/openocd`。这些 fork 都带自己的驱动实现，
+但实现没进本树，所以配置是悬空的。
+
 
 ## 4 份 Synopsys 板级配置未导入
 
