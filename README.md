@@ -416,6 +416,13 @@ first. The `LICENSE` file spells this out in full.
   would provide the other two was staged, found unbuildable and removed in
   `7ffeda047` — so those two configs name a backend this tree does not carry.
   (`arc_axc003_hs36.cfg` only needs `arcv2` and works.)
+- **Eight TCL commands called by imported configs are defined nowhere in this
+  tree.** `pmmw` (62 uses), `mem_ap_write_reg` (59), `mem_ap_read_reg` (26),
+  `reg_set` (24), `reg_clear` (19), `memap_mmw` (4), `hla_close` (3) and
+  `stm32n6x_boot1` (1) are commands the source forks patched into their own
+  OpenOCD (Analog Devices, Espressif, Nuvoton); upstream and this tree both lack
+  them, so the configs that call them stop at that line. The rest of each file
+  works.
 - **401 imported config files still use the deprecated `-chain-position`
   option.** Upstream's `tcl/` has already migrated to `-dap` / `-tap` (0 hits
   there); all 493 hits here are in imported third-party configs —

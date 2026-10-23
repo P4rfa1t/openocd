@@ -35,6 +35,11 @@ First tagged release of this fork. Everything below is measured against the tree
 
 ### Known gaps
 
+- Eight TCL commands used by imported configs (`pmmw`, `mem_ap_write_reg`,
+  `mem_ap_read_reg`, `reg_set`, `reg_clear`, `memap_mmw`, `hla_close`,
+  `stm32n6x_boot1`; 198 uses) are defined neither here nor upstream: the source
+  forks patched them into their own OpenOCD. Configs that call them fail at that
+  line.
 - 18 imported C files are not registered in the build (they need upstream APIs
   that were renamed or that never existed upstream); `OpenULINK/src/` ships 6
   firmware sources with its own Makefile, outside the main build.
