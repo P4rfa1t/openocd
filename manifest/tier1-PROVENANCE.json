@@ -5211,7 +5211,7 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "cda7f0a4c50e1ed39b6fcb9916574a3f361d0f7a57d6a7e44e7825960fe2f154",
+      "sha256": "34592c2d02d0205068f610842f7d4788cbdc913f10dc9e163d6dc5af89aed5b5",
       "pristine_sha256": "326fe7c05397518a01e3fc8a29e81bd1c790f2b12d9191ccc456f753f0a26c0a",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -5225,7 +5225,7 @@
       "license": "GPL-2.0",
       "stars_at_import": 16,
       "also_present_in": [],
-      "sha256": "a62ff3c6820833b30769d41eee6afdd07a085d204ca5af0d5327ff0a73de569b",
+      "sha256": "3df3cb9c4cd00dbdfc08567d7c38175f4ce35827deb14bc25a3e318e32be4f76",
       "pristine_sha256": "ab2437cec4110e251c59785aa4b0dc2881b413bae465ec69290154ba8353dfa0",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -8041,7 +8041,7 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "69f20f4e108e2f00d279995d72f41dca78722f1dc6b51ea2a9d2f9c4eef8b69f",
+      "sha256": "0600fe425aa1f4a5dcd671482604b89c3e8bf6c420de6571d03aea5817e2f7f6",
       "pristine_sha256": "dc28f0530115f203a830d470cdb3f7206bc27107f5565ef018c7420cdfcc0b10",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -8097,7 +8097,7 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "18e325523876847892fd0ae5df4d46660360fe6212403751225624d5ecc1f118",
+      "sha256": "4aecdd17b2a650f981427bd8d89850e92060ca8b11ad0814ce35654167f5d81e",
       "pristine_sha256": "1d0719c9faa85cae14617ce8f87595f0a335afa414093e1d9f0fb4a2d64d38bf",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -8111,7 +8111,7 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "a11ddd08576b3de8cc7117fd780d7871d0a9f517a106cbaf1d89ccaf52408d44",
+      "sha256": "650428d0c6df5910208abfd35eff4ef21b4254add0bff8929dc9f677654ce60e",
       "pristine_sha256": "708ff114b52673d93c39fefda9e143d6cdcfd0cb9d76a197254347cf9ed6d0ae",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
