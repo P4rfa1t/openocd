@@ -50,29 +50,33 @@ git merge upstream/master
 
 | | 数量 | 说明 |
 |---|---:|---|
-| `tcl/` 脚本文件 | 739 | 722 个 `.cfg` + 17 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
+| `tcl/` 脚本文件 | 728 | 711 个 `.cfg` + 17 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
 | `src/` C 源码 | 73 | 37 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，26 个已就位但未注册 |
 | 折叠掉的重复副本 | 6910 | 每条路径只保留一个胜出版本 |
 | 与官方重复而剔除 | 7376 | 上游已经收编，或上游已把它挪到子目录 |
 | 判定不可用而排除 | 621 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
 
-扫描识别出的 1298 条唯一路径里，**809 条进了树**，489 条没进。
+扫描识别出的 1298 条唯一路径里，**795 条进了树**，503 条没进。
 
-没进来的 328 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
+没进来的 331 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
 是照着旧版 OpenOCD 的 API 写的。其中 `src/target` 最大（133 个），其次是
-`src/flash`（125 个）、`src/jtag`（68 个）和 `src/server`（2 个）。
+`src/flash`（125 个）、`src/jtag`（71 个）和 `src/server`（2 个）。
 
-没进来的 161 个 TCL 文件分这样：
+没进来的 172 个 TCL 文件分这样：
 
 | | 数量 | 原因 |
 |---|---:|---|
 | 上游已经收编 | 73 | 上游把它们挪进了子目录，扫描只看到扁平名字 |
 | 缺一个树里没有的后端 | 46 | 它们驱动的是 C 代码从未公开的探针或芯片族 —— Infineon TriCore、Anlogic `al_link` 探针、WCH RISC-V、ESP32 GPIO 探针、ST-LINK 外部加载器家族之类 |
 | 依赖的文件本身没进树 | 25 | 某条 `source [find ...]` 指向的配置没有导入 |
-| **原样就能导入** | **12** | 它们的 `source [find ...]` 引用全部可解析，且所需的驱动、target type、flash 算法树里都已经有了 |
 | 扫描缓存里没有文件体 | 5 | 扫描记下了路径，但从未抓取文件内容 |
+| 曾判为「原样就能导入」的 12 个 | 12 | 复核后全都不成立：9 个要先补 `interface/ti/xds100v2.cfg` 或 `xds100v3.cfg`，3 个是路径误判 |
+| 导入后又从树里删掉 | 11 | 7 个重复的 TI 板级配置、`target/nrf_common.cfg`、`interface/stlink-usb.cfg`、两个 `interface/calao-usb-a9260-c0*.cfg` |
 
-另外两组补齐了 **812 个文件**这个数，每个都有自己的来源记录：
+「原样就能导入」这一类已经不存在了。这 172 个要么缺包装文件，要么缺 C 后端，
+要么是有意删掉的。
+
+另外两组补齐了 **801 个文件**这个数，每个都有自己的来源记录：
 
 - **5 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
   文件会一起被带进来；manifest 里标为 `imported_as: dependency`。
@@ -80,9 +84,9 @@ git merge upstream/master
   `tcl/target/adsp-sc58x.cfg` 不同。树里保留第三方版本，
   `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
 
-上游共 2203 个文件，本树 3074 个。
+上游共 2203 个文件，本树 3063 个。
 
-**全部 812 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+**全部 801 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -237,8 +241,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 812
-on disk  : 812
+recorded : 801
+on disk  : 801
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -293,7 +297,7 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 812 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 801 个导入文件的机器可读来源记录 |
 
 ---
 
@@ -302,8 +306,8 @@ GitHub 解析不出许可证的文件。
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 812 个文件里，GitHub 解析出
-141 个为 GPL-2.0、1 个为 GPL-2.0-or-later、648 个为 `NOASSERTION`（意思是
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 801 个文件里，GitHub 解析出
+136 个为 GPL-2.0、1 个为 GPL-2.0-or-later、639 个为 `NOASSERTION`（意思是
 *GitHub 判定不出许可证*，不是说它宽松），25 个无法解析。有些 `NOASSERTION` 文件
 自带专有声明，例如 Analog Devices 的 flash 算法，写着 "This software is
 proprietary to Analog Devices, Inc."。
@@ -317,7 +321,7 @@ proprietary to Analog Devices, Inc."。
 ## 已知限制
 
 - **「12 个原样就能导入」的候选经完整路径复核后全都不成立。** 补齐扫描的子目录
-  盲区、又导入了 252 个配置之后，对剩下 161 个还没有文件的配置重新评估了一遍，
+  盲区、又导入了 252 个配置之后，对剩下还没有文件的配置重新评估了一遍，
   挑出 12 个 `source [find ...]` 看似可解析的候选。按完整路径逐条核对：其中 3 个
   （`interface/ftdi/calao-usb-a9260-c01.cfg`、`-c02.cfg`、`cc3200lp.cfg`）早就在
   树里，只是落在 `tcl/interface/` 而不是 `tcl/interface/ftdi/`；剩下 9 个 TI 板级

@@ -1,11 +1,11 @@
 {
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
-  "file_count": 812,
+  "file_count": 801,
   "integrity": {
-    "recorded": 812,
-    "on_disk": 812,
-    "pinned": 812,
+    "recorded": 801,
+    "on_disk": 801,
+    "pinned": 801,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "unresolved_references": {
@@ -2702,131 +2702,6 @@
       "also_present_in": [],
       "sha256": "437461651741f723687daf8e568c37d21e0918d3df24e6d372a556bf7058003d"
     },
-    "tcl/board/ti_am625_swd_native.cfg": {
-      "source_repo": "zuyih/openocd",
-      "source_branch": "master",
-      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
-      "source_path": "tcl/board/ti_am625_swd_native.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "DCVostok/openocd-k1921vk",
-        "David-lau/openocd-geehy",
-        "Essenceia/openocd_ultrascale_plus",
-        "HalfSweet/openocd",
-        "LeeScenic/openocd",
-        "OlegGalizin/openocd-for-py32f0xx",
-        "STMicroelectronics/OpenOCD",
-        "TexasInstruments/ti-openocd",
-        "aesc-silicon/elements-openocd",
-        "emard/openocd",
-        "encryptize/openocd-at32",
-        "flipperdevices/openocd",
-        "go2sh/aurix-openocd",
-        "hackpascal/openocd",
-        "linux-msm/openocd",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "luyi1888/openocd",
-        "marisusis/openocd_hc32",
-        "mengfanyuc/openocd",
-        "meriac/openocd",
-        "nalajcie/openocd",
-        "neonkore/openocd",
-        "nmenon/openocd",
-        "os-fpga/openocd",
-        "raspberrypi/openocd",
-        "riscv-collab/riscv-openocd",
-        "tihmstar/openocd_colobus",
-        "tokuden/openocd-win-ftd2xx",
-        "tom-van/openocd-rp2350-riscv",
-        "transcelestial/openocd"
-      ],
-      "sha256": "566d386ca9edf2a837cba435effdb8eb02b522193d6a56f74f665f13d52953a9",
-      "pristine_sha256": "48e14a329b16796cf774a374f73e521bc3ae5703bea2ad821bfc2daea51af0d5",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed"
-      ]
-    },
-    "tcl/board/ti_am62a7_swd_native.cfg": {
-      "source_repo": "zuyih/openocd",
-      "source_branch": "master",
-      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
-      "source_path": "tcl/board/ti_am62a7_swd_native.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "Essenceia/openocd_ultrascale_plus",
-        "LeeScenic/openocd",
-        "OlegGalizin/openocd-for-py32f0xx",
-        "aesc-silicon/elements-openocd",
-        "emard/openocd",
-        "go2sh/aurix-openocd",
-        "linux-msm/openocd",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "nalajcie/openocd",
-        "nmenon/openocd",
-        "raspberrypi/openocd",
-        "riscv-collab/riscv-openocd",
-        "tihmstar/openocd_colobus",
-        "tokuden/openocd-win-ftd2xx",
-        "tom-van/openocd-rp2350-riscv"
-      ],
-      "sha256": "79a1f8291f5e12718686a8a2a13778b04c532ab04b7d6333686ebc4c5c01e4b0",
-      "pristine_sha256": "698959394a20a9757035d868f623cde7099c2b66677b6a40550b87e0e4a088d7",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed"
-      ]
-    },
-    "tcl/board/ti_am62p_swd_native.cfg": {
-      "source_repo": "zuyih/openocd",
-      "source_branch": "master",
-      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
-      "source_path": "tcl/board/ti_am62p_swd_native.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "Essenceia/openocd_ultrascale_plus",
-        "LeeScenic/openocd",
-        "OlegGalizin/openocd-for-py32f0xx",
-        "aesc-silicon/elements-openocd",
-        "emard/openocd",
-        "go2sh/aurix-openocd",
-        "linux-msm/openocd",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "nalajcie/openocd",
-        "nmenon/openocd",
-        "raspberrypi/openocd",
-        "riscv-collab/riscv-openocd",
-        "tihmstar/openocd_colobus",
-        "tokuden/openocd-win-ftd2xx",
-        "tom-van/openocd-rp2350-riscv"
-      ],
-      "sha256": "509bbe80185b54734b4e0c8d25a45e641e24a65f88d63aebe22f472844748f0f",
-      "pristine_sha256": "560a5aa8615456325803a558c935d54f4d676c60108cce109229dbacae3fb943",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed"
-      ]
-    },
-    "tcl/board/ti_am64xx_swd_native.cfg": {
-      "source_repo": "nmenon/openocd",
-      "source_branch": "master",
-      "source_commit": "ab22b0bf8f23924d8c76d3affd9e11528ba18438",
-      "source_path": "tcl/board/ti_am64xx_swd_native.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 5,
-      "also_present_in": [
-        "LeeScenic/openocd",
-        "OlegGalizin/openocd-for-py32f0xx"
-      ],
-      "sha256": "e93fe01d2d106877b094e229625f04e07c5a12dadb72a55862622c63047f8dc9",
-      "pristine_sha256": "b15025cad61ffbaec0cdbb24fa54a5818baba5f095383c345edcc5426813936f",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed"
-      ]
-    },
     "tcl/board/ti_beagleboard.cfg": {
       "source_repo": "zuyih/openocd",
       "source_branch": "master",
@@ -3270,100 +3145,6 @@
       "stars_at_import": 9,
       "also_present_in": [],
       "sha256": "b309cfe3a61a604850f4a2cc07bbef5eeac8163a431d53c8173c5207940d252f"
-    },
-    "tcl/board/ti_j721e_swd_native.cfg": {
-      "source_repo": "zuyih/openocd",
-      "source_branch": "master",
-      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
-      "source_path": "tcl/board/ti_j721e_swd_native.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "DCVostok/openocd-k1921vk",
-        "David-lau/openocd-geehy",
-        "Essenceia/openocd_ultrascale_plus",
-        "HalfSweet/openocd",
-        "LeeScenic/openocd",
-        "OlegGalizin/openocd-for-py32f0xx",
-        "STMicroelectronics/OpenOCD",
-        "TexasInstruments/ti-openocd",
-        "aesc-silicon/elements-openocd",
-        "emard/openocd",
-        "encryptize/openocd-at32",
-        "flipperdevices/openocd",
-        "go2sh/aurix-openocd",
-        "hackpascal/openocd",
-        "linux-msm/openocd",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "luyi1888/openocd",
-        "marisusis/openocd_hc32",
-        "mengfanyuc/openocd",
-        "meriac/openocd",
-        "nalajcie/openocd",
-        "neonkore/openocd",
-        "nmenon/openocd",
-        "os-fpga/openocd",
-        "raspberrypi/openocd",
-        "riscv-collab/riscv-openocd",
-        "tihmstar/openocd_colobus",
-        "tokuden/openocd-win-ftd2xx",
-        "tom-van/openocd-rp2350-riscv",
-        "transcelestial/openocd"
-      ],
-      "sha256": "0b71b2d0dbc9f3ad3880d16aaa53b4055ad81fd2bc666dc141e62850af7f1640",
-      "pristine_sha256": "acb4e6a8370397fd1da3823dc3bd8afc823c9120a77477ea7b664ca32535a4d7",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed"
-      ]
-    },
-    "tcl/board/ti_j722s_swd_native.cfg": {
-      "source_repo": "zuyih/openocd",
-      "source_branch": "master",
-      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
-      "source_path": "tcl/board/ti_j722s_swd_native.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "Essenceia/openocd_ultrascale_plus",
-        "LeeScenic/openocd",
-        "OlegGalizin/openocd-for-py32f0xx",
-        "aesc-silicon/elements-openocd",
-        "emard/openocd",
-        "go2sh/aurix-openocd",
-        "linux-msm/openocd",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "nalajcie/openocd",
-        "nmenon/openocd",
-        "raspberrypi/openocd",
-        "riscv-collab/riscv-openocd",
-        "tihmstar/openocd_colobus",
-        "tokuden/openocd-win-ftd2xx",
-        "tom-van/openocd-rp2350-riscv"
-      ],
-      "sha256": "6df8515a37aba812bea7a2d40ba197602bd06e616e7e0063601f9f6cb13924cd",
-      "pristine_sha256": "9d068c903d9ad8dd9c81384e363de76e8b0859d049a1b40879cd576d681a6d81",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed"
-      ]
-    },
-    "tcl/board/ti_j784s4_swd_native.cfg": {
-      "source_repo": "nmenon/openocd",
-      "source_branch": "master",
-      "source_commit": "ab22b0bf8f23924d8c76d3affd9e11528ba18438",
-      "source_path": "tcl/board/ti_j784s4_swd_native.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 5,
-      "also_present_in": [
-        "LeeScenic/openocd",
-        "OlegGalizin/openocd-for-py32f0xx"
-      ],
-      "sha256": "d2ab08a708f5651b5849b2d2b711cd28cd19ee6f546fc1d35f293523089e93e5",
-      "pristine_sha256": "edfc119757c46db23d6fb017a7f5abc8c118806285fa5723eed9b23e184318db",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed"
-      ]
     },
     "tcl/board/ti_lp_em_cc2340r5.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -4818,74 +4599,6 @@
       "also_present_in": [],
       "sha256": "497a849c32d3f03e605eaf6dd4c291a78e1133b238e7bc552913c90fbeae286b"
     },
-    "tcl/interface/calao-usb-a9260-c01.cfg": {
-      "source_repo": "OpenNuvoton/OpenOCD-Nuvoton",
-      "source_branch": "master",
-      "source_commit": "2bcbea8556fdcc5765b1893fd6e8a8625ff089c4",
-      "source_path": "tcl/interface/calao-usb-a9260-c01.cfg",
-      "license": "GPL-2.0",
-      "stars_at_import": 56,
-      "also_present_in": [
-        "Broadcom/WICED-OpenOCD",
-        "MotorolaMobilityLLC/openocd",
-        "TheShed/OpenOCD-CMSIS-DAP",
-        "corecode/openocd-swd",
-        "daniel-k/openocd",
-        "esden/openocd",
-        "foss-for-mips-arc-processors/openocd",
-        "hikob/openocd",
-        "intel/OpenOCD",
-        "kevinmehall/openOCD",
-        "mabl/openocd_chibios",
-        "matrix-io/matrix-creator-openocd",
-        "pebble/openocd",
-        "sandeepmistry/openocd-code-nrf5",
-        "snowcap-electronics/OpenOCD",
-        "sysprogs/esp8266-openocd",
-        "watr-li/OpenOCD",
-        "zhao0079/openocd"
-      ],
-      "sha256": "b324f39adc388553ec195196a6d22e09212719450c0ba06d64e57a65dff8e0ae",
-      "pristine_sha256": "1cc54f2f89c10b5132f10a48ae3f6f19bc7c0c387d67414bccb0435e5622dd6b",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed",
-        "line endings normalised to LF; content byte-identical to the published file"
-      ]
-    },
-    "tcl/interface/calao-usb-a9260-c02.cfg": {
-      "source_repo": "OpenNuvoton/OpenOCD-Nuvoton",
-      "source_branch": "master",
-      "source_commit": "2bcbea8556fdcc5765b1893fd6e8a8625ff089c4",
-      "source_path": "tcl/interface/calao-usb-a9260-c02.cfg",
-      "license": "GPL-2.0",
-      "stars_at_import": 56,
-      "also_present_in": [
-        "Broadcom/WICED-OpenOCD",
-        "MotorolaMobilityLLC/openocd",
-        "TheShed/OpenOCD-CMSIS-DAP",
-        "corecode/openocd-swd",
-        "daniel-k/openocd",
-        "esden/openocd",
-        "foss-for-mips-arc-processors/openocd",
-        "hikob/openocd",
-        "intel/OpenOCD",
-        "kevinmehall/openOCD",
-        "mabl/openocd_chibios",
-        "matrix-io/matrix-creator-openocd",
-        "pebble/openocd",
-        "sandeepmistry/openocd-code-nrf5",
-        "snowcap-electronics/OpenOCD",
-        "sysprogs/esp8266-openocd",
-        "watr-li/OpenOCD",
-        "zhao0079/openocd"
-      ],
-      "sha256": "0cd5f6d5754b7d2d793b63079cb433961a9c77a491f86ee498331f65cb1c4329",
-      "pristine_sha256": "ab8e428506cc1c691b6cb437e307833c8c806ad352eb523714a39eec91b48e9b",
-      "local_modifications": [
-        "content edited in this fork; digest refreshed",
-        "line endings normalised to LF; content byte-identical to the published file"
-      ]
-    },
     "tcl/interface/cc3200lp.cfg": {
       "source_repo": "sysprogs/openocd",
       "source_branch": "master",
@@ -5526,16 +5239,6 @@
       "local_modifications": [
         "content edited in this fork; digest refreshed"
       ]
-    },
-    "tcl/interface/stlink-usb.cfg": {
-      "source_repo": "hikob/openocd",
-      "source_branch": "master",
-      "source_commit": "80df024c806014885ce1a6524ba05352651c0ac3",
-      "source_path": "tcl/interface/stlink-usb.cfg",
-      "license": "GPL-2.0",
-      "stars_at_import": 18,
-      "also_present_in": [],
-      "sha256": "85788b0b6e5620200d78a8f11d2db09a83ea5fc81209a967d61496dc31803854"
     },
     "tcl/interface/tamarin.cfg": {
       "source_repo": "stacksmashing/openocd-tamarin",
@@ -8431,25 +8134,6 @@
       "local_modifications": [
         "content edited in this fork; digest refreshed"
       ]
-    },
-    "tcl/target/nrf_common.cfg": {
-      "source_repo": "riscv-collab/riscv-openocd",
-      "source_branch": "riscv",
-      "source_commit": "10b7a647da03cb64fd25db76261712c388ad6468",
-      "source_path": "tcl/target/nrf_common.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 517,
-      "also_present_in": [
-        "emard/openocd",
-        "go2sh/aurix-openocd",
-        "linux-msm/openocd",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "nalajcie/openocd",
-        "tihmstar/openocd_colobus",
-        "tom-van/openocd-rp2350-riscv"
-      ],
-      "sha256": "8a76dec69bb2dc18241d23f9c4f47cd5bcefd46d7ed91482dad7c4832bb3668a"
     },
     "tcl/target/nt98528-ngb.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -12102,6 +11786,61 @@
       "reason": "upstream ships this file as tcl/target/к1879xб1я.cfg; the mangled copy was dropped",
       "upstream_path": "tcl/target/к1879xб1я.cfg",
       "sha256_at_removal": "71e40bf1d38629287eb5438a04d0557452498f861efe54b4e1e745e9645f192f"
+    },
+    {
+      "path": "tcl/board/ti_am625_swd_native.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "566d386ca9edf2a837cba435effdb8eb02b522193d6a56f74f665f13d52953a9"
+    },
+    {
+      "path": "tcl/board/ti_am62a7_swd_native.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "79a1f8291f5e12718686a8a2a13778b04c532ab04b7d6333686ebc4c5c01e4b0"
+    },
+    {
+      "path": "tcl/board/ti_am62p_swd_native.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "509bbe80185b54734b4e0c8d25a45e641e24a65f88d63aebe22f472844748f0f"
+    },
+    {
+      "path": "tcl/board/ti_am64xx_swd_native.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "e93fe01d2d106877b094e229625f04e07c5a12dadb72a55862622c63047f8dc9"
+    },
+    {
+      "path": "tcl/board/ti_j721e_swd_native.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "0b71b2d0dbc9f3ad3880d16aaa53b4055ad81fd2bc666dc141e62850af7f1640"
+    },
+    {
+      "path": "tcl/board/ti_j722s_swd_native.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "6df8515a37aba812bea7a2d40ba197602bd06e616e7e0063601f9f6cb13924cd"
+    },
+    {
+      "path": "tcl/board/ti_j784s4_swd_native.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "d2ab08a708f5651b5849b2d2b711cd28cd19ee6f546fc1d35f293523089e93e5"
+    },
+    {
+      "path": "tcl/interface/calao-usb-a9260-c01.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "b324f39adc388553ec195196a6d22e09212719450c0ba06d64e57a65dff8e0ae"
+    },
+    {
+      "path": "tcl/interface/calao-usb-a9260-c02.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "0cd5f6d5754b7d2d793b63079cb433961a9c77a491f86ee498331f65cb1c4329"
+    },
+    {
+      "path": "tcl/interface/stlink-usb.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "85788b0b6e5620200d78a8f11d2db09a83ea5fc81209a967d61496dc31803854"
+    },
+    {
+      "path": "tcl/target/nrf_common.cfg",
+      "reason": "removed on purpose in abd0ccef2093 (tcl: drop 11 redundant or unloadable configs)",
+      "sha256_at_removal": "8a76dec69bb2dc18241d23f9c4f47cd5bcefd46d7ed91482dad7c4832bb3668a"
     },
     {
       "path": "src/target/cortex_a8.c",

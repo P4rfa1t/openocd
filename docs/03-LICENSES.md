@@ -6,18 +6,18 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 647 |
-| GPL-2.0 | 139 |
+| NOASSERTION | 639 |
+| GPL-2.0 | 136 |
 | UNRESOLVED | 25 |
 | GPL-2.0-or-later | 1 |
 
-**672 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
+**664 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
 > 已知事实：OpenOCD 上游是 GPL-2.0-or-later，大多数 fork 继承该许可，所以实务上大概率都是 GPL。但 `NOASSERTION` 只表示「GitHub 没能解析出来」，**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。逐文件清单见 `manifest/licenses.csv` 与下方折叠区。
 
 ## tcl/ 配置（随树直接可用）
 
-文件数：**739**
+文件数：**728**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
@@ -28,28 +28,27 @@
 | [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | NOASSERTION(44) | 44 |
 | [`foss-for-mips-arc-processors/openocd`](https://github.com/foss-for-mips-arc-processors/openocd) | GPL-2.0(34), UNRESOLVED(2) | 36 |
 | [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | GPL-2.0(29), UNRESOLVED(1) | 30 |
-| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(26), UNRESOLVED(2) | 28 |
+| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(21), UNRESOLVED(2) | 23 |
 | [`TexasInstruments/ti-openocd`](https://github.com/TexasInstruments/ti-openocd) | NOASSERTION(19) | 19 |
 | [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(16) | 16 |
 | [`ciniml/openocd`](https://github.com/ciniml/openocd) | GPL-2.0(13) | 13 |
 | [`zephyrproject-rtos/openocd`](https://github.com/zephyrproject-rtos/openocd) | NOASSERTION(11) | 11 |
-| [`OpenNuvoton/OpenOCD-Nuvoton`](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) | GPL-2.0(10), UNRESOLVED(1) | 11 |
 | [`vllogic/openocd_cmsis-dap_v2`](https://github.com/vllogic/openocd_cmsis-dap_v2) | NOASSERTION(10) | 10 |
 | [`Icey7122/openocd`](https://github.com/Icey7122/openocd) | NOASSERTION(10) | 10 |
 | [`fatalfeel/openocd_integrated`](https://github.com/fatalfeel/openocd_integrated) | NOASSERTION(10) | 10 |
 | [`hackpascal/openocd`](https://github.com/hackpascal/openocd) | NOASSERTION(10) | 10 |
 | [`ut2or1/openocd`](https://github.com/ut2or1/openocd) | NOASSERTION(7), UNRESOLVED(2) | 9 |
+| [`OpenNuvoton/OpenOCD-Nuvoton`](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) | GPL-2.0(8), UNRESOLVED(1) | 9 |
 | [`MotorolaMobilityLLC/openocd`](https://github.com/MotorolaMobilityLLC/openocd) | GPL-2.0(4), UNRESOLVED(4) | 8 |
-| [`riscv-collab/riscv-openocd`](https://github.com/riscv-collab/riscv-openocd) | NOASSERTION(7) | 7 |
+| [`riscv-collab/riscv-openocd`](https://github.com/riscv-collab/riscv-openocd) | NOASSERTION(6) | 6 |
 | [`esden/openocd`](https://github.com/esden/openocd) | GPL-2.0(6) | 6 |
 | [`walmis/openocd-blackmagic`](https://github.com/walmis/openocd-blackmagic) | GPL-2.0(5) | 5 |
 | [`DCVostok/openocd-k1921vk`](https://github.com/DCVostok/openocd-k1921vk) | NOASSERTION(4), UNRESOLVED(1) | 5 |
 | [`AnlogicInfo/al_openocd`](https://github.com/AnlogicInfo/al_openocd) | NOASSERTION(5) | 5 |
 | [`OlivierVanWassenhove-Dekimo/openocd`](https://github.com/OlivierVanWassenhove-Dekimo/openocd) | NOASSERTION(4) | 4 |
-| [`hikob/openocd`](https://github.com/hikob/openocd) | GPL-2.0(4) | 4 |
 | [`David-lau/openocd-geehy`](https://github.com/David-lau/openocd-geehy) | NOASSERTION(4) | 4 |
 | [`sony/openocd-nuttx`](https://github.com/sony/openocd-nuttx) | GPL-2.0(2), UNRESOLVED(1) | 3 |
-| [`nmenon/openocd`](https://github.com/nmenon/openocd) | NOASSERTION(3) | 3 |
+| [`hikob/openocd`](https://github.com/hikob/openocd) | GPL-2.0(3) | 3 |
 | [`raspberrypi/openocd`](https://github.com/raspberrypi/openocd) | NOASSERTION(3) | 3 |
 | [`ImproperCatGirl/openocd`](https://github.com/ImproperCatGirl/openocd) | NOASSERTION(3) | 3 |
 | [`luyi1888/openocd`](https://github.com/luyi1888/openocd) | NOASSERTION(2) | 2 |
@@ -74,9 +73,10 @@
 | [`transcelestial/openocd`](https://github.com/transcelestial/openocd) | NOASSERTION(1) | 1 |
 | [`pebble/openocd`](https://github.com/pebble/openocd) | GPL-2.0(1) | 1 |
 | [`go2sh/aurix-openocd`](https://github.com/go2sh/aurix-openocd) | NOASSERTION(1) | 1 |
+| [`nmenon/openocd`](https://github.com/nmenon/openocd) | NOASSERTION(1) | 1 |
 | [`padhialuo0426/openocd`](https://github.com/padhialuo0426/openocd) | NOASSERTION(1) | 1 |
 
-### ⚠️ 需人工审计（622 个文件无许可证信息）
+### ⚠️ 需人工审计（614 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
 
@@ -423,10 +423,8 @@
 
 </details>
 
-<details><summary><code>nmenon/openocd</code> (3 个)</summary>
+<details><summary><code>nmenon/openocd</code> (1 个)</summary>
 
-- `tcl/board/ti_am64xx_swd_native.cfg`
-- `tcl/board/ti_j784s4_swd_native.cfg`
 - `tcl/target/stm32wbax.cfg`
 
 </details>
@@ -451,7 +449,7 @@
 
 </details>
 
-<details><summary><code>riscv-collab/riscv-openocd</code> (7 个)</summary>
+<details><summary><code>riscv-collab/riscv-openocd</code> (6 个)</summary>
 
 - `tcl/board/sifive-e31arty-cjtag.cfg`
 - `tcl/board/sifive-e31arty-onboard-ftdi.cfg`
@@ -459,7 +457,6 @@
 - `tcl/board/stm32mp15x_dk2.cfg`
 - `tcl/interface/ftdi/arty-onboard-ftdi.cfg`
 - `tcl/interface/ftdi/digilent-hs2-cjtag.cfg`
-- `tcl/target/nrf_common.cfg`
 
 </details>
 
@@ -879,23 +876,18 @@
 
 </details>
 
-<details><summary><code>zuyih/openocd</code> (28 个)</summary>
+<details><summary><code>zuyih/openocd</code> (23 个)</summary>
 
 - `tcl/board/art_pi2.cfg`
 - `tcl/board/atk_cnn647b.cfg`
 - `tcl/board/omap2420_h4.cfg`
 - `tcl/board/st_nucleo_c5.cfg`
 - `tcl/board/st_nucleo_h5.cfg`
-- `tcl/board/ti_am625_swd_native.cfg`
-- `tcl/board/ti_am62a7_swd_native.cfg`
-- `tcl/board/ti_am62p_swd_native.cfg`
 - `tcl/board/ti_beagleboard.cfg`
 - `tcl/board/ti_beagleboard_xm.cfg`
 - `tcl/board/ti_beaglebone-base.cfg`
 - `tcl/board/ti_beaglebone.cfg`
 - `tcl/board/ti_beaglebone_black.cfg`
-- `tcl/board/ti_j721e_swd_native.cfg`
-- `tcl/board/ti_j722s_swd_native.cfg`
 - `tcl/gdb_helper.tcl`
 - `tcl/interface/ch347.cfg`
 - `tcl/interface/tas_client.cfg`

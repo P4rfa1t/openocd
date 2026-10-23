@@ -4,9 +4,9 @@
 
 本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **688 个** OpenOCD
 相关仓库（499 个官方 fork + 搜索命中的 189 个独立仓），跨仓去重、剔除与官方等价的
-副本后，得到 **812 个文件**的第三方支持，全部合并在**它们本该在的位置**：
+副本后，得到 **801 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
-- **739 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
+- **728 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
 - **73 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
   其余 26 个仍需按上游现有 API 改写后才能注册。
 
@@ -16,43 +16,43 @@
 ## 目录结构
 
 ```
-tcl/                     ← OpenOCD 配置树：官方配置 + 739 个第三方配置
-  target/                     914  芯片目标配置（含 vendor 子目录）
-  board/                      611  开发板配置（含 flash_algorithms/）
-  interface/                  227  调试器接口
+tcl/                     ← OpenOCD 配置树：官方配置 + 728 个第三方配置
+  target/                     913  芯片目标配置（含 vendor 子目录）
+  board/                      604  开发板配置（含 flash_algorithms/）
+  interface/                  224  调试器接口
   cpld/                        23  CPLD 配置
   fpga/                        35  FPGA bitstream
   chip/                        28  芯片公共片段
   cpu/                         10  架构公共片段
 
 src/                     ← C 源码：官方源码 + 73 个第三方驱动/目标
-  target/                     109  顶层 .c（其中 20 个是第三方新架构：ARC32 / LoongArch / C28x / TMS320 / Vortex86 / VexRiscv / Quark / Microchip RI4 ...）
-  target/rvmax/                3  .c（ADI RVMAX 后端）
-  target/rv32m1/               3  .c（SiFive RV32M1 后端）
-  jtag/drivers/                65  顶层 .c（其中 13 个是第三方适配器）
+  target/                     149  顶层 .c（其中 20 个是第三方新架构：ARC32 / LoongArch / C28x / TMS320 / Vortex86 / VexRiscv / Quark / Microchip RI4 ...）
+  target/rvmax/                9  文件，3 个 .c（ADI RVMAX 后端）
+  target/rv32m1/               6  文件，3 个 .c（SiFive RV32M1 后端）
+  jtag/drivers/                76  顶层 .c（其中 9 个是第三方适配器）
   flash/nor/                    2  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）
 
 manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            812  个文件的来源仓库/分支/commit/SHA-256/许可证
+  PROVENANCE.json            801  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
   repos.csv / repos.json      688 个候选仓库排名
-  licenses.csv               812  行许可证索引（逐文件）
+  licenses.csv               801  行许可证索引（逐文件）
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本
 ```
 
-> **894 vs 739**：`manifest/consolidated.json` 里有 894 条 tier-1 记录（上游确实没有的
-> 独立 TCL 支持项），其中 **733 条进了树**，161 条没进（分类见下）。
+> **894 vs 728**：`manifest/consolidated.json` 里有 894 条 tier-1 记录（上游确实没有的
+> 独立 TCL 支持项），其中 **722 条进了树**，172 条没进（分类见下）。
 > 一个配置 `source` 另一个配置时，被引用的文件会一起被带进来
 > （如 `tcl/interface/ftdi/*.cfg`、`tcl/board/flash_algorithms/*.cfg`）。
-> 所以 `tcl/` 下的第三方文件数是 733 + 5 个「只作为依赖进来、不在 imported 记录里」
-> + 1 个与上游同名的 `tcl/target/adspsc58x.cfg` = **739**。
+> 所以 `tcl/` 下的第三方文件数是 722 + 5 个「只作为依赖进来、不在 imported 记录里」
+> + 1 个与上游同名的 `tcl/target/adspsc58x.cfg` = **728**。
 >
 > **那 12 个「原样就能导入」的候选经复核并不成立。** 补齐子目录盲区并导入
-> 252 个配置之后，对剩下 161 个还没进树的配置重新评估，其中 12 个曾判定为
+> 252 个配置之后，对剩下还没进树的配置重新评估，其中 12 个曾判定为
 > `source [find ...]` 引用全部可解析。按完整路径复核后，12 个全都不成立：
 > 3 个（`interface/ftdi/calao-usb-a9260-c01.cfg`、`-c02.cfg`、`cc3200lp.cfg`）
 > 早已在树里，只是落在 `tcl/interface/` 而不是 `tcl/interface/ftdi/`；
@@ -62,11 +62,13 @@ tools/                   全部工具脚本
 > 要导入那 9 个，得先补两个包装文件。另有 46 个需要树里还没有的后端
 > （Infineon TriCore、Anlogic `al_link`、WCH RISC-V、ESP32 GPIO 探针、
 > ST-LINK 外部加载器家族等），25 个依赖的配置本身没进树，5 个在扫描缓存里
-> 没有文件体。逐项清单见 `.audit/cls161.out`。
+> 没有文件体。另有 11 个导入后又从树里删掉：7 个重复的 TI 板级配置、
+> `target/nrf_common.cfg`、`interface/stlink-usb.cfg`、两个
+> `interface/calao-usb-a9260-c0*.cfg`。
 > 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
 > 不会把已剔除的副本再拉回来。
 >
-> **全部 812 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
+> **全部 801 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
 
 ## 为什么直接合并，而不是外挂一层
 
@@ -350,9 +352,9 @@ target 在任何公开仓库里都不存在（属于 Synopsys 内部交付）：
 
 ## 许可证提醒
 
-- `GPL-2.0`：139 个文件，来源明确。
+- `GPL-2.0`：136 个文件，来源明确。
 - `GPL-2.0-or-later`：1 个文件（`src/flash/nor/stldr_driver.c`，来自 STMicroelectronics/OpenOCD）。
-- `NOASSERTION`：647 个文件，GitHub 未能解析 SPDX。
+- `NOASSERTION`：639 个文件，GitHub 未能解析 SPDX。
 - `UNRESOLVED`：25 个文件，即依赖闭包补充的文件，来源已知但未单独解析。
 
 后两类在商用前需人工审计头部声明 —— `NOASSERTION` **不等于**宽松许可，
@@ -400,7 +402,7 @@ python tools/pipeline.py --apply
 |---|---|---|
 | C 驱动未注册进构建 | 26（13 个 `.c` + 13 个 `.h`） | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API。另有 `OpenULINK/src/` 4 个固件源文件，独立 Makefile，不参与主构建 |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
-| 无许可证信息 | 672 / 812（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
+| 无许可证信息 | 664 / 801（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 6 个驱动名 / 8 处引用 | `aji_client`、`tas_client`、`aice`、`picoprobe`、`colobus`、`tamarin`；前 4 个上游也没有实现，后 2 个是 fork 单独加的配置。逐条见「悬空的接口配置」表 |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；`arc32.c` 一族缺 `arc_mem.c` 无法接入，全树 22 个 ARC 配置现在都只用 `arcv2` |
