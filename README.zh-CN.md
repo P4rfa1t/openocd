@@ -72,7 +72,7 @@ git merge upstream/master
 | **原样就能导入** | **12** | 它们的 `source [find ...]` 引用全部可解析，且所需的驱动、target type、flash 算法树里都已经有了 |
 | 扫描缓存里没有文件体 | 5 | 扫描记下了路径，但从未抓取文件内容 |
 
-另外两组补齐了 **815 个文件**这个数，每个都有自己的来源记录：
+另外两组补齐了 **812 个文件**这个数，每个都有自己的来源记录：
 
 - **5 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
   文件会一起被带进来；manifest 里标为 `imported_as: dependency`。
@@ -80,9 +80,9 @@ git merge upstream/master
   `tcl/target/adsp-sc58x.cfg` 不同。树里保留第三方版本，
   `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
 
-上游共 2203 个文件，本树 3077 个。
+上游共 2203 个文件，本树 3074 个。
 
-**全部 815 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+**全部 812 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -237,8 +237,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 815
-on disk  : 815
+recorded : 812
+on disk  : 812
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -293,7 +293,7 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 815 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 812 个导入文件的机器可读来源记录 |
 
 ---
 
@@ -302,7 +302,7 @@ GitHub 解析不出许可证的文件。
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 815 个文件里，GitHub 解析出
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 812 个文件里，GitHub 解析出
 141 个为 GPL-2.0、1 个为 GPL-2.0-or-later、648 个为 `NOASSERTION`（意思是
 *GitHub 判定不出许可证*，不是说它宽松），25 个无法解析。有些 `NOASSERTION` 文件
 自带专有声明，例如 Analog Devices 的 flash 算法，写着 "This software is

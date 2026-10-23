@@ -79,7 +79,7 @@ The 161 TCL files that did not land break down as:
 | **ready to import as they stand** | **12** | their `source [find ...]` references all resolve and every driver, target type and flash algorithm they need is already in the tree |
 | not retrievable from the survey cache | 5 | the survey recorded the path but the file body was never fetched |
 
-Two more groups complete the count of **815 files**, each with its own
+Two more groups complete the count of **812 files**, each with its own
 provenance entry:
 
 - **5 files pulled in as dependencies** — a config that `source`s another
@@ -90,9 +90,9 @@ provenance entry:
   `tcl/target/adsp-sc58x.cfg`. The tree keeps the third-party version and
   `tools/verify_tree.py` reports the collision as a warning.
 
-Upstream ships 2203 files; this tree ships 3077.
+Upstream ships 2203 files; this tree ships 3074.
 
-**All 815 imported files are pinned to the exact commit they came from.** Any
+**All 812 imported files are pinned to the exact commit they came from.** Any
 file can be traced back to the fork and the commit that published it:
 
 ```bash
@@ -268,8 +268,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 815
-on disk  : 815
+recorded : 812
+on disk  : 812
 errors   : 0
 warns    : 26
 VERIFY: PASS
@@ -326,7 +326,7 @@ every block it owns so the script can find and replace its own work.
 | [`docs/01-inventory.md`](docs/01-inventory.md) | the inventory: how many repositories, how many files, where they came from |
 | [`docs/02-usage.md`](docs/02-usage.md) | usage notes, and the list of known limitations |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | per-file license table |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 815 imported files |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 812 imported files |
 
 ---
 
@@ -336,7 +336,7 @@ The OpenOCD sources inherited from upstream are GPL-2.0-or-later; the
 documentation is GFDL-1.2-no-invariants-or-later. See `COPYING` and `LICENSES/`.
 
 **The imported third-party files are not covered by that blanket statement.**
-Of 815 files, GitHub resolved 141 as GPL-2.0, 1 as GPL-2.0-or-later, 648 as
+Of 812 files, GitHub resolved 139 as GPL-2.0, 1 as GPL-2.0-or-later, 647 as
 `NOASSERTION` (which means *GitHub could not determine a license* — not that it
 is permissive) and 25 as unresolvable. Some `NOASSERTION` files carry their own
 proprietary notices, for example the Analog Devices flash algorithms, which
@@ -364,7 +364,8 @@ first. The `LICENSE` file spells this out in full.
   ST-LINK external loader family), 25 sit on a config that itself did not land,
   and 5 were never fetched from the survey cache. The full breakdown is in
   `manifest/consolidated.json` under `not_imported`; the per-file analysis of
-  the missing C backends is in `manifest/nor-driver-scan.json`.- **Four Synopsys board configs were left out.** `board/synopsys_amla3.cfg`,
+  the missing C backends is in `manifest/nor-driver-scan.json`.
+- **Four Synopsys board configs were left out.** `board/synopsys_amla3.cfg`,
   `board/synopsys_angel4.cfg`, `board/synopsys_haps51.cfg` and
   `board/synopsys_ml509.cfg` are published in `intel/OpenOCD` but have no
   matching target file in any public repository — they are bring-up boards
