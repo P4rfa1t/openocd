@@ -316,10 +316,14 @@ proprietary to Analog Devices, Inc."。
 
 ## 已知限制
 
-- **12 个 TCL 文件原样就能导入，但还没导。** 补齐扫描的子目录盲区、又导入了 252
-  个配置之后，对剩下 161 个还没有文件的配置重新评估了一遍：有 12 个的
-  `source [find ...]` 引用全部可解析，所需的驱动、target type、flash 算法树里
-  也都已经有了，一个 C 文件都不用改，只要把文件本身放进来。另有 46 个需要树里
+- **「12 个原样就能导入」的候选经完整路径复核后全都不成立。** 补齐扫描的子目录
+  盲区、又导入了 252 个配置之后，对剩下 161 个还没有文件的配置重新评估了一遍，
+  挑出 12 个 `source [find ...]` 看似可解析的候选。按完整路径逐条核对：其中 3 个
+  （`interface/ftdi/calao-usb-a9260-c01.cfg`、`-c02.cfg`、`cc3200lp.cfg`）早就在
+  树里，只是落在 `tcl/interface/` 而不是 `tcl/interface/ftdi/`；剩下 9 个 TI 板级
+  配置都 `source [find interface/ti/xds100v2.cfg]` 或 `xds100v3.cfg`，而这两个
+  包装文件树里没有（树里只有 `ftdi/xds100v2.cfg`）。原判定按文件名而非路径比对。
+  要导入那 9 个，得先补两个包装文件。另有 46 个需要树里
   还没有的后端（Infineon TriCore、Anlogic `al_link`、WCH RISC-V、ESP32 GPIO
   探针、ST-LINK 外部加载器家族），25 个依赖的配置本身没进树，5 个在扫描缓存里
   没有文件体。逐项分类见 `manifest/consolidated.json` 的 `not_imported` 段，

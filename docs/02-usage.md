@@ -51,13 +51,18 @@ tools/                   全部工具脚本
 > 所以 `tcl/` 下的第三方文件数是 733 + 5 个「只作为依赖进来、不在 imported 记录里」
 > + 1 个与上游同名的 `tcl/target/adspsc58x.cfg` = **739**。
 >
-> **还有 12 个 TCL 候选原样就能导入。** 补齐子目录盲区并导入 252 个配置之后，
-> 对剩下 161 个还没进树的配置重新评估：12 个文件的 `source [find ...]` 引用全部
-> 可解析，且它们依赖的驱动、target type、flash 算法树里都已有，不需要任何 C 代码
-> 改动。另有 46 个需要树里还没有的后端（Infineon TriCore、Anlogic `al_link`、
-> WCH RISC-V、ESP32 GPIO 探针、ST-LINK 外部加载器家族等），25 个依赖的配置本身
-> 没进树，5 个在扫描缓存里没有文件体。
-> 详细的分类与逐项清单见 `manifest/nor-driver-scan.json` 与本文件的「已知缺口」一节。
+> **那 12 个「原样就能导入」的候选经复核并不成立。** 补齐子目录盲区并导入
+> 252 个配置之后，对剩下 161 个还没进树的配置重新评估，其中 12 个曾判定为
+> `source [find ...]` 引用全部可解析。按完整路径复核后，12 个全都不成立：
+> 3 个（`interface/ftdi/calao-usb-a9260-c01.cfg`、`-c02.cfg`、`cc3200lp.cfg`）
+> 早已在树里，只是落在 `tcl/interface/` 而不是 `tcl/interface/ftdi/`；
+> 另外 9 个 TI 板级配置都 `source [find interface/ti/xds100v2.cfg]` 或
+> `ti/xds100v3.cfg`，而这两个包装文件树里没有（树里只有 `ftdi/xds100v2.cfg`）。
+> 原来的判定按文件名而非路径比对，把 `ftdi/xds100v2.cfg` 当成了 `ti/xds100v2.cfg`。
+> 要导入那 9 个，得先补两个包装文件。另有 46 个需要树里还没有的后端
+> （Infineon TriCore、Anlogic `al_link`、WCH RISC-V、ESP32 GPIO 探针、
+> ST-LINK 外部加载器家族等），25 个依赖的配置本身没进树，5 个在扫描缓存里
+> 没有文件体。逐项清单见 `.audit/cls161.out`。
 > 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
 > 不会把已剔除的副本再拉回来。
 >

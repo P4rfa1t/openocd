@@ -354,12 +354,17 @@ first. The `LICENSE` file spells this out in full.
   `.h`). They are staged in the tree with their provenance intact, but they
   target upstream APIs that have moved. Registering them needs per-backend
   porting work.
-- **12 further TCL files are ready to import but have not been.** After the
-  subdirectory blind spot was fixed and 252 configs were imported, a fresh
-  pass over the 161 configs that still have no file in the tree found 12 whose
-  `source [find ...]` references all resolve and whose drivers, target types
-  and flash algorithms are already here. They need no C changes at all, only
-  the files themselves. Another 46 need a backend this tree does not have
+- **The 12 "ready to import" TCL candidates do not survive a path check.**
+  After the subdirectory blind spot was fixed and 252 configs were imported, a
+  pass over the 161 configs that still have no file in the tree flagged 12
+  whose `source [find ...]` references appeared to resolve. Checked against
+  full paths, none of them holds: 3 (`interface/ftdi/calao-usb-a9260-c01.cfg`,
+  `-c02.cfg`, `cc3200lp.cfg`) are already in the tree, just under
+  `tcl/interface/` rather than `tcl/interface/ftdi/`, and the 9 TI board
+  configs all `source [find interface/ti/xds100v2.cfg]` or `xds100v3.cfg`,
+  two wrappers this tree does not carry (it has `ftdi/xds100v2.cfg`). The
+  original pass matched basenames instead of paths. Importing those 9 needs
+  the two wrappers added first. Another 46 need a backend this tree does not have
   (Infineon TriCore, Anlogic `al_link`, WCH RISC-V, the ESP32 GPIO probe, the
   ST-LINK external loader family), 25 sit on a config that itself did not land,
   and 5 were never fetched from the survey cache. The full breakdown is in
