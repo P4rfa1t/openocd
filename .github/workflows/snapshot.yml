@@ -179,6 +179,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Install a TCL interpreter
         run: sudo apt-get update && sudo apt-get install -y tcl
+      - name: Fetch the pinned upstream branch when it is reachable
+        # sync_doc_numbers.py prefers the real upstream tree over the committed
+        # index; without this step it falls back to manifest/upstream-index.txt,
+        # which is fine but weaker. A network failure must not fail the gate.
+        continue-on-error: true
+        run: |
+          git remote add upstream https://github.com/openocd-org/openocd.git
+          git fetch --no-tags --depth 1 upstream master:refs/remotes/upstream/master
       - name: Verify the imported overlay against manifest/PROVENANCE.json
         run: python3 tools/verify_tree.py
       - name: Check every published number for drift

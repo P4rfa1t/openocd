@@ -166,8 +166,17 @@ N_UNWIRED_H = N_SRC_H - N_WIRED_H
 TREE = set(subprocess.run(["git", "ls-files"], capture_output=True,
                           text=True).stdout.split())
 N_TREE = len(TREE)
-N_UP = len(subprocess.run(["git", "ls-tree", "-r", "--name-only", "upstream/master"],
-                          capture_output=True, text=True).stdout.split())
+# The upstream record of record is the committed index: CI checks out this
+# repository only, so it has no upstream remote, "upstream/master" resolves to
+# nothing there, and an empty ref would silently turn every upstream count into
+# 0. Use the ref when it is present (it is the stronger check) and fall back to
+# manifest/upstream-index.txt otherwise.
+N_UPSTREAM_INDEX = len(pathlib.Path("manifest/upstream-index.txt")
+                       .read_bytes().decode("utf-8", "replace").splitlines())
+_UP_REF_FILES = subprocess.run(["git", "ls-tree", "-r", "--name-only", "upstream/master"],
+                               capture_output=True, text=True).stdout.split()
+N_UP_REF = len(_UP_REF_FILES) or None
+N_UP = N_UP_REF or N_UPSTREAM_INDEX
 
 cons = json.load(open("manifest/consolidated.json", encoding="utf-8"))
 N_UNIQUE = cons["unique_paths"]
@@ -270,9 +279,16 @@ if N_CSV_UNLICENSED != N_UNLICENSED:
     problem("the licence index disagrees with the manifest about unresolved "
             f"licences: csv {N_CSV_UNLICENSED} vs provenance {N_UNLICENSED}")
 
-N_UPSTREAM_INDEX = len(pathlib.Path("manifest/upstream-index.txt")
-                       .read_bytes().decode("utf-8", "replace").splitlines())
-if N_UPSTREAM_INDEX != N_UP:
+# Tie the index to the commit the manifest pinned, so the fallback above cannot
+# publish numbers from a file that has drifted away from manifest/upstream.json.
+_UP_RECORDED = json.load(open("manifest/upstream.json", encoding="utf-8")).get("file_count")
+if _UP_RECORDED is not None and _UP_RECORDED != N_UPSTREAM_INDEX:
+    problem(f"manifest/upstream.json records {_UP_RECORDED} upstream files but "
+            f"manifest/upstream-index.txt lists {N_UPSTREAM_INDEX}")
+if N_UP_REF is None:
+    print("note: upstream/master is not fetched; manifest/upstream-index.txt is "
+          "the upstream record")
+elif N_UPSTREAM_INDEX != N_UP:
     problem(f"manifest/upstream-index.txt has {N_UPSTREAM_INDEX} lines but "
             f"upstream/master trees {N_UP} files")
 
