@@ -85,7 +85,7 @@ TI 板级配置需要的那两个包装文件（`interface/ti/xds100v2.cfg`、`x
   `verify_tree` 报的 25 条 warning 之一。
   `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
 
-上游共 2203 个文件，本树 3030 个。
+上游共 2203 个文件，本树 3032 个。
 
 **全部 767 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：

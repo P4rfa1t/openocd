@@ -97,7 +97,7 @@ entry:
   `tcl/target/adsp-sc58x.cfg`. The tree keeps the third-party version, and the
   collision is one of the 25 warnings `verify_tree` reports.
 
-Upstream ships 2203 files; this tree ships 3030.
+Upstream ships 2203 files; this tree ships 3032.
 
 **All 767 imported files are pinned to the exact commit they came from.** Any
 file can be traced back to the fork and the commit that published it:

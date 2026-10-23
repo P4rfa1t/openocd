@@ -17,6 +17,9 @@
 发布前必须重跑；`README.md`、`README.zh-CN.md`、`docs/00-findings.md`、`docs/02-usage.md`
 里的数字由 `tools/sync_doc_numbers.py` 就地同步。
 
+> `tools/sync_doc_numbers.py` 统计的「本树文件数」取自 `git ls-files`（索引），
+> 所以**新增文件要先 `git add` 再跑**，否则它会数不到新文件、发布出去的数字少几份。
+
 ```bash
 python3 tools/gen_report.py       # -> docs/01-inventory.md + manifest/consolidated.csv
 python3 tools/gen_licenses.py     # -> docs/03-LICENSES.md + manifest/licenses.csv

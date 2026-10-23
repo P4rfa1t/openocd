@@ -159,6 +159,10 @@ N_WIRED_H = sum(1 for p in _src_paths if is_wired(p) and p.endswith(".h"))
 N_UNWIRED_C = N_SRC_C - N_WIRED_C
 N_UNWIRED_H = N_SRC_H - N_WIRED_H
 
+# NOTE: this is the index, not the working tree. A file that exists but is
+# not staged is invisible here, so stage new documents before running this
+# script - otherwise the published tree count is off by the number of untracked
+# files and the CI gate fails on the commit that finally tracks them.
 TREE = set(subprocess.run(["git", "ls-files"], capture_output=True,
                           text=True).stdout.split())
 N_TREE = len(TREE)
@@ -481,7 +485,7 @@ EDITS = [
      f"{N_WARNS}"
      ' warnings `verify_tree` reports.'),
     ('README.md',
-     'Upstream ships 2203 files; this tree ships 3029.',
+     'Upstream ships 2203 files; this tree ships 3030.',
           'Upstream ships '
      f"{N_UP}"
      ' files; this tree ships '
@@ -719,7 +723,7 @@ EDITS = [
      f"{N_WARNS}"
      ' 条 warning 之一。'),
     ('README.zh-CN.md',
-     '上游共 2203 个文件，本树 3029 个。',
+     '上游共 2203 个文件，本树 3030 个。',
           '上游共 '
      f"{N_UP}"
      ' 个文件，本树 '
