@@ -2,11 +2,11 @@
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
   "tier": 2,
-  "file_count": 76,
+  "file_count": 73,
   "integrity": {
-    "recorded": 59,
-    "on_disk": 59,
-    "pinned": 59,
+    "recorded": 73,
+    "on_disk": 73,
+    "pinned": 73,
     "unpinned": 0,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
@@ -68,62 +68,6 @@
       "stars_at_import": 16,
       "also_present_in": [],
       "sha256": "352a4d444db646340abe41f619d0035539d9924e0499b02c1cd09ecc0e1704e1"
-    },
-    "src/jtag/drivers/blackmagic.c": {
-      "source_repo": "walmis/openocd-blackmagic",
-      "source_branch": "master",
-      "source_commit": "c9914b494085252d5938cd9192f90026fd4ffe47",
-      "source_path": "src/jtag/drivers/blackmagic.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 15,
-      "also_present_in": [],
-      "sha256": "7d40c4d9b82ee5a72f2a46d6b06b22b2c7c523bc4d64d09cd9682e8590d12ddf"
-    },
-    "src/jtag/drivers/ch347_jtag.c": {
-      "source_repo": "meriac/openocd",
-      "source_branch": "ch347",
-      "source_commit": "eeede198cdbc586cbe11041776d07589e1d5b5e6",
-      "source_path": "src/jtag/drivers/ch347_jtag.c",
-      "license": "NOASSERTION",
-      "stars_at_import": 1,
-      "also_present_in": [],
-      "sha256": "e28d35540c25e3c4f59a40786c881e9c8f7accadeb9fd613be3fb52d901a6865"
-    },
-    "src/jtag/drivers/cmsis_dap_usb.c": {
-      "source_repo": "dynm/openocd-starbleed",
-      "source_branch": "master",
-      "source_commit": "25c1d0466e04d905ece5c653fc6d11fb6d139650",
-      "source_path": "src/jtag/drivers/cmsis_dap_usb.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 6,
-      "also_present_in": [
-        "Broadcom/WICED-OpenOCD",
-        "Lichee-Pi/LicheeTang_openocd",
-        "MotorolaMobilityLLC/openocd",
-        "OpenNuvoton/OpenOCD-Nuvoton",
-        "arduino/OpenOCD",
-        "bluespec/riscv-openocd",
-        "daniel-k/openocd",
-        "erwango/openocd-stm32",
-        "foss-for-mips-arc-processors/openocd",
-        "ilg-archived/openocd",
-        "intel/OpenOCD",
-        "jeanthom/openocd-dirtyjtag",
-        "kendryte/openocd-kendryte",
-        "marcelobarrosufu/openocd_nrf52",
-        "matrix-io/matrix-creator-openocd",
-        "pebble/openocd",
-        "sanchox/openocd",
-        "sandeepmistry/openocd-code-nrf5",
-        "satoshinm/openocd",
-        "snowcap-electronics/OpenOCD",
-        "sony/openocd-nuttx",
-        "stacksmashing/openocd",
-        "sysprogs/esp8266-openocd",
-        "walmis/openocd-blackmagic",
-        "watr-li/OpenOCD"
-      ],
-      "sha256": "b91c1d01e28c1015b3dabf679015838d136cafc191ce059305472e028b112658"
     },
     "src/jtag/drivers/cmsis_dap_wch.c": {
       "source_repo": "zuyih/openocd",
@@ -1119,6 +1063,21 @@
       "path": "src/target/or1k_jtag_adv.h",
       "reason": "removed on purpose in a7432d7b7540 (target: fix the third-party target integration after the file-by-file audit)",
       "sha256_at_removal": "991a06bed42f95c390b66f09bb5a33e23ffa6af49fc506f6ca06a505f8691ee8"
+    },
+    {
+      "path": "src/jtag/drivers/blackmagic.c",
+      "reason": "removed on purpose in ea8f9dbafbf4 (fix(target,jtag,tcl): finish the third-party integration the survey promised)",
+      "sha256_at_removal": "7d40c4d9b82ee5a72f2a46d6b06b22b2c7c523bc4d64d09cd9682e8590d12ddf"
+    },
+    {
+      "path": "src/jtag/drivers/ch347_jtag.c",
+      "reason": "removed on purpose in ea8f9dbafbf4 (fix(target,jtag,tcl): finish the third-party integration the survey promised)",
+      "sha256_at_removal": "e28d35540c25e3c4f59a40786c881e9c8f7accadeb9fd613be3fb52d901a6865"
+    },
+    {
+      "path": "src/jtag/drivers/cmsis_dap_usb.c",
+      "reason": "removed on purpose in ea8f9dbafbf4 (fix(target,jtag,tcl): finish the third-party integration the survey promised)",
+      "sha256_at_removal": "b91c1d01e28c1015b3dabf679015838d136cafc191ce059305472e028b112658"
     }
   ]
 }
