@@ -216,25 +216,11 @@ endif
 if CH347
 DRIVERFILES += %D%/ch347.c
 endif
-# cJTAG (OScan1/JScan3) tunnelling through MPSSE. configure.ac has always
-# offered --enable-ftdi-cjtag and ftdi.c has always carried BUILD_FTDI_CJTAG
-# code paths, but no Makefile.am ever named the translation unit, so the switch
-# selected dead code and arc_ftdi_cjtag.c was compiled into nothing. Wire it up.
-if FTDI_CJTAG
-DRIVERFILES += %D%/arc_ftdi_cjtag.c
-endif
 if CKLINK
 DRIVERFILES += %D%/cklink.c
 endif
 if XVC
 DRIVERFILES += %D%/xvc.c
-endif
-# Raw JTAG-over-socket adapters contributed by third-party forks.
-if JTAG_TCP
-DRIVERFILES += %D%/jtag_tcp.c
-endif
-if JTAG_ESP_REMOTE
-DRIVERFILES += %D%/jtag_esp_remote.c
 endif
 
 # Third-party adapters merged into this tree (see configure.ac).

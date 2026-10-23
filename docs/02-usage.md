@@ -274,10 +274,10 @@ ice1500        { jtag }
 
 | 未接入的文件 | 卡点 |
 |---|---|
-| `src/jtag/drivers/jtag_tcp.c`、`cmsis_dap_wch.c` | `.transports` 字段 —— 上游已改成 `unsigned int transport_ids` |
+| `src/jtag/drivers/jtag_tcp.c`、`cmsis_dap_wch.c` | `.transports` 字段 —— 上游已改成 `unsigned int transport_ids`，`jtag_only` 常量也不存在了；`jtag_tcp.c` 还在调用 `jtag_vpi_tms`/`jtag_vpi_path_move`，而这两个是 `jtag_vpi.c` 里的 `static` |
 | `src/target/arc32.c` + `arc_core.c` + `arc_dbg.c` + `arc_mntr.c` + `arc_ocd.c` + `arc_regs.c` + `arc_trgt.c` | 与上游 `src/target/arc.c` 的 `arcv2_target` **重复定义**，且 `arc32.c` 调用的 9 个 `arc_mem_*` 入口只存在于它自己那份 `arc_mem.c`；本树的 `arc_mem.c` 是上游精简版，只有 `arc_mem_read`/`arc_mem_write`，链接必然失败（CI 已验证） |
 | `src/target/adi_v5_cmsis_dap.c`、`aarch64_coproc_reg.c` | 依赖上游未公开的私有 API |
-| `src/jtag/drivers/arc_ftdi_cjtag.c`、`cmsis_dap_wch.c` | SDI 传输层（`struct sdi_driver`）整个传输层已从上游删除 |
+| `src/jtag/drivers/arc_ftdi_cjtag.c`、`cmsis_dap_wch.c` | 依赖 `mpsse_read`/`mpsse_write`，本树的 `mpsse.h`/`mpsse.c` 里这两个函数不存在（只有 `mpsse_read_data_bits_low_byte` 一族）；`cmsis_dap_wch.c` 另需已删除的 SDI 传输层 |
 
 > `tcl/target/arc_axc001.cfg` 等 ARC 板级配置在树里。上游 `arc.c` 只注册 `arcv2`
 > 一个 target type，而 `arc32.c` 一族因为依赖它自己那份 `arc_mem.c`（本树里是
@@ -287,6 +287,12 @@ ice1500        { jtag }
 要接入某个驱动，得先按上游现有 API 重写，逐个验证能编译后再提交。
 `tools/patch_target_groups.py` 与 `tools/patch_makefile.py`、
 `tools/patch_interfaces.py`、`tools/patch_interface_h.py` 可以作模板。
+
+代价是两份接口配置目前指向不存在的驱动：`tcl/interface/jtag_tcp.cfg` 的
+`interface jtag_tcp` 和 `tcl/interface/jtag_esp_remote.cfg` 的
+`adapter driver jtag_esp_remote` 都会在加载时报找不到驱动。两份文件留着，
+是因为它们描述的是驱动接入后应有的用法；驱动一旦按上面那条路接通，它们
+不需要改。
 
 
 ## 4 份 Synopsys 板级配置未导入
