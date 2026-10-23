@@ -88,7 +88,6 @@ tcl/ 配置（随树直接可用）,David-lau/openocd-geehy,NOASSERTION,tcl/targ
 tcl/ 配置（随树直接可用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32f0xx.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
 tcl/ 配置（随树直接可用）,David-lau/openocd-geehy,NOASSERTION,tcl/target/apm32s1x.cfg,master,d0e757444c3a696df14010b9442e65ff2b49fae1
 tcl/ 配置（随树直接可用）,HalfSweet/openocd,NOASSERTION,tcl/target/air001.cfg,master,149c98b73d16c92f775dfec96bd67a40d7242cee
-tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/altera-max10.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
 tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc3s.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
 tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc4v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
 tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc4vfx_40_60_100_140.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
@@ -98,9 +97,7 @@ tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx
 tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xc6v.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
 tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/cpld/xilinx-xcu.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
 tcl/ 配置（随树直接可用）,Icey7122/openocd,NOASSERTION,tcl/target/loongson2k300.cfg,master,987f9a1b553fbe70940ac28a642af7a740df21dd
-tcl/ 配置（随树直接可用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/ch32x035.txt,master,1f625f720c778900b393d23dc3b0eaa4549227af
 tcl/ 配置（随树直接可用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/rp2350-riscv.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
-tcl/ 配置（随树直接可用）,ImproperCatGirl/openocd,NOASSERTION,tcl/target/wch_min.cfg,master,1f625f720c778900b393d23dc3b0eaa4549227af
 tcl/ 配置（随树直接可用）,Lichee-Pi/LicheeTang_openocd,GPL-2.0,tcl/target/cc26xx.cfg,riscv,3e52078a084bc4b645c3e7e9a3d4f9aaf2a7b510
 tcl/ 配置（随树直接可用）,Lichee-Pi/LicheeTang_openocd,GPL-2.0,tcl/target/xilinx_ultrascale.cfg,riscv,3e52078a084bc4b645c3e7e9a3d4f9aaf2a7b510
 tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,GPL-2.0,tcl/board/moto_mdk_hsb.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
@@ -113,11 +110,8 @@ tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/i
 tcl/ 配置（随树直接可用）,MotorolaMobilityLLC/openocd,UNRESOLVED,tcl/interface/ftdi/moto_mdk_swd_reset.cfg,master,c2ee7b2cbed977e23870e75c2740d5e17404d732
 tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
 tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/board/altera_arria10_niosv__aji_client.cfg,master,89788eb29026fc67691fa463876e64d097219371
-tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/1986Be1T.cfg,master,89788eb29026fc67691fa463876e64d097219371
-tcl/ 配置（随树直接可用）,OlivierVanWassenhove-Dekimo/openocd,NOASSERTION,tcl/target/k1879x61R.cfg,master,89788eb29026fc67691fa463876e64d097219371
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/busblaster.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/jtagkey-tiny.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
-tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,UNRESOLVED,tcl/interface/jtagkey.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/signalyzer-h2.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/signalyzer-h4.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
 tcl/ 配置（随树直接可用）,OpenNuvoton/OpenOCD-Nuvoton,GPL-2.0,tcl/interface/turtelizer2.cfg,master,2bcbea8556fdcc5765b1893fd6e8a8625ff089c4
@@ -341,7 +335,6 @@ tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_hsdk_4xd.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/arc_iotdk.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
-tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/k1879h61ya.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32l.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,foss-for-mips-arc-processors/openocd,GPL-2.0,tcl/target/stm32lx_dual_bank.cfg,arc-2026.09,2185cc4e04ecd937a56696778ef07c88c57ef3d9
 tcl/ 配置（随树直接可用）,go2sh/aurix-openocd,NOASSERTION,tcl/target/renesas_rz_g2.cfg,aurix_support,4fbdce8e2aa7270f2b2953bbb333b635effa1607
@@ -363,7 +356,6 @@ tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_d2000_
 tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/quark_se.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
 tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/snps_axs101.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
 tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/board/snps_axs102.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
-tcl/ 配置（随树直接可用）,intel/OpenOCD,UNRESOLVED,tcl/interface/snps_sdp.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
 tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc11uxx.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
 tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1751.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
 tcl/ 配置（随树直接可用）,intel/OpenOCD,GPL-2.0,tcl/target/lpc1752.cfg,master,728ddf7eb96106f917804a1174fb4e9bdb078293
@@ -408,11 +400,9 @@ tcl/ 配置（随树直接可用）,raspberrypi/openocd,NOASSERTION,tcl/target/r
 tcl/ 配置（随树直接可用）,raspberrypi/openocd,NOASSERTION,tcl/target/rp2350-rescue.cfg,rpi-common,acff23ffd100479d6481a1155123774b79a990b9
 tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/sifive-e31arty-cjtag.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
 tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/sifive-e31arty-onboard-ftdi.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/stm32mp13x_dk.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
 tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/board/stm32mp15x_dk2.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
 tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/interface/ftdi/arty-onboard-ftdi.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
 tcl/ 配置（随树直接可用）,riscv-collab/riscv-openocd,NOASSERTION,tcl/interface/ftdi/digilent-hs2-cjtag.cfg,riscv,10b7a647da03cb64fd25db76261712c388ad6468
-tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/cpld/xilinx-xcr3256.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
 tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32a403axx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
 tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32a423xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
 tcl/ 配置（随树直接可用）,rxmnjke/openocd,NOASSERTION,tcl/target/at32f011xx.cfg,master,8e1fa27e1e8fde74cbc2a71d7c1819dca7fd4d45
@@ -521,7 +511,6 @@ tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-x
 tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7v.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
 tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7vh580t.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
 tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/cpld/xilinx-xc7vh870t.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
-tcl/ 配置（随树直接可用）,ut2or1/openocd,UNRESOLVED,tcl/fpga/xilinx-dna.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
 tcl/ 配置（随树直接可用）,ut2or1/openocd,UNRESOLVED,tcl/fpga/xilinx-xc3s.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
 tcl/ 配置（随树直接可用）,ut2or1/openocd,NOASSERTION,tcl/target/zynq_7000.cfg,master,da3920b0a52dc2d394afb222c688dac7e57acc1b
 tcl/ 配置（随树直接可用）,vllogic/openocd_cmsis-dap_v2,NOASSERTION,tcl/board/st_nucleo_l5.cfg,support_3rd_chip,0e0f415b6f1f7e9997e4b30206cfb3fcf5287e52
@@ -779,12 +768,8 @@ tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/t
 tcl/ 配置（随树直接可用）,zephyrproject-rtos/openocd,NOASSERTION,tcl/target/vd_xtensa_jtag.cfg,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
 tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/art_pi2.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/atk_cnn647b.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/omap2420_h4.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/st_nucleo_c5.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/st_nucleo_h5.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beagleboard.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beagleboard_xm.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
-tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone-base.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,zuyih/openocd,NOASSERTION,tcl/board/ti_beaglebone_black.cfg,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,zuyih/openocd,UNRESOLVED,tcl/gdb_helper.tcl,master,5422b51c81253e7d212c36775ded24f525f4c783

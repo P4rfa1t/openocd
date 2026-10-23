@@ -4,9 +4,9 @@
 
 本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **688 个** OpenOCD
 相关仓库（499 个官方 fork + 搜索命中的 189 个独立仓），跨仓去重、剔除与官方等价的
-副本后，得到 **801 个文件**的第三方支持，全部合并在**它们本该在的位置**：
+副本后，得到 **786 个文件**的第三方支持，全部合并在**它们本该在的位置**：
 
-- **728 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
+- **713 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
 - **73 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
   其余 26 个仍需按上游现有 API 改写后才能注册。
 
@@ -33,12 +33,12 @@ src/                     ← C 源码：官方源码 + 73 个第三方驱动/目
   flash/nor/                    2  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）
 
 manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            801  个文件的来源仓库/分支/commit/SHA-256/许可证
+  PROVENANCE.json            786  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
   repos.csv / repos.json      688 个候选仓库排名
-  licenses.csv               801  行许可证索引（逐文件）
+  licenses.csv               786  行许可证索引（逐文件）
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本
@@ -68,7 +68,7 @@ tools/                   全部工具脚本
 > 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
 > 不会把已剔除的副本再拉回来。
 >
-> **全部 801 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
+> **全部 786 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
 
 ## 为什么直接合并，而不是外挂一层
 
@@ -402,7 +402,7 @@ python tools/pipeline.py --apply
 |---|---|---|
 | C 驱动未注册进构建 | 26（13 个 `.c` + 13 个 `.h`） | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API。另有 `OpenULINK/src/` 4 个固件源文件，独立 Makefile，不参与主构建 |
 | 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
-| 无许可证信息 | 664 / 801（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
+| 无许可证信息 | 650 / 786（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
 | 烧录器只有配置没有驱动 | 6 个驱动名 / 8 处引用 | `aji_client`、`tas_client`、`aice`、`picoprobe`、`colobus`、`tamarin`；前 4 个上游也没有实现，后 2 个是 fork 单独加的配置。逐条见「悬空的接口配置」表 |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；`arc32.c` 一族缺 `arc_mem.c` 无法接入，全树 22 个 ARC 配置现在都只用 `arcv2` |

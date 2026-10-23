@@ -33,6 +33,9 @@ N_SRC = sum(1 for p in prov if p.startswith("src/"))
 N_SRC_C = sum(1 for p in prov if p.startswith("src/") and p.endswith(".c"))
 N_SRC_H = sum(1 for p in prov if p.startswith("src/") and p.endswith(".h"))
 
+N_TCL_CFG = sum(1 for p in prov if p.startswith("tcl/") and p.endswith(".cfg"))
+N_TCL_OTHER = N_TCL - N_TCL_CFG
+
 lic = {}
 for v in prov.values():
     k = v.get("license") or "UNRESOLVED"
@@ -44,13 +47,29 @@ N_UNRESOLVED = lic.get("UNRESOLVED", 0)
 N_UNLICENSED = N_NOASSERT + N_UNRESOLVED
 
 notes = {}
+edited_only = eol_only = both = untouched = 0
 for v in prov.values():
-    for n in (v.get("local_modifications") or []):
-        key = n.split(";")[0].strip()
+    ms = [n.split(";")[0].strip() for n in (v.get("local_modifications") or [])]
+    for key in ms:
         notes[key] = notes.get(key, 0) + 1
-N_EDITED = notes.get("content edited in this fork", 0)
-N_EOL = notes.get("line endings normalised to LF", 0)
-N_IDENTICAL = N_FILES - N_EDITED - N_EOL
+    has_edit = "content edited in this fork" in ms
+    has_eol = "line endings normalised to LF" in ms
+    if has_edit and has_eol:
+        both += 1
+    elif has_edit:
+        edited_only += 1
+    elif has_eol:
+        eol_only += 1
+    else:
+        untouched += 1
+
+# N_IDENTICAL: digest already matches the published one and no note at all.
+# N_EDITED: entries carrying a real content edit (24 of them also had EOL normalised).
+# N_EOL: entries whose ONLY difference is the line terminator.
+N_EDITED = edited_only + both
+N_EOL = eol_only
+N_IDENTICAL = untouched
+N_EDITED_BOTH = both
 
 # wired / unwired, resolved against the build-system %D% entries
 WIRED = set()
@@ -99,7 +118,8 @@ N_TIER2 = cons["tier2_needs_c_patch"]
 N_SRC_NOTIMPORTED = sum(1 for r in cons["records"]
                          if not r.get("imported") and r["path"].startswith("src/"))
 N_TCL_NOTIMPORTED = N_NOTIMPORTED - N_SRC_NOTIMPORTED
-N_DEPENDENCY = N_FILES - N_IMPORTED - N_TCL_NOTIMPORTED
+N_DEPENDENCY = sum(1 for v in prov.values() if v.get("imported_as") == "dependency")
+N_REMOVED_SINCE = 23
 
 survey = json.load(open("manifest/survey.json", encoding="utf-8"))
 N_REPOS = survey["repo_count"]
@@ -118,65 +138,80 @@ print(f"unique={N_UNIQUE} imported={N_IMPORTED} not_imported={N_NOTIMPORTED} "
 # ---------------------------------------------------------------- edits
 
 EDITS = [
-    # (file, old, new)
-    ("README.md", "the tree holds 562 files in total", f"the tree holds {N_FILES} files in total"),
-    ("README.md", "**All 562 imported files are pinned", f"**All {N_FILES} imported files are pinned"),
-    ("README.md", "recorded : 562", f"recorded : {N_FILES}"),
-    ("README.md", "on disk  : 562", f"on disk  : {N_FILES}"),
-    ("README.md", "provenance for all 562 imported files", f"provenance for all {N_FILES} imported files"),
-    ("README.md", "Of 562 files, GitHub resolved 139 as GPL-2.0, 398 as `NOASSERTION`",
-     f"Of {N_FILES} files, GitHub resolved {N_GPL2} as GPL-2.0, {N_NOASSERT} as `NOASSERTION`"),
-    ("README.md", "Upstream ships 2203 files; this tree ships 2799.",
+    # (file, old, new) — the `old` side must match the current document text.
+    ("README.md", "the tree holds 786 files in total", f"the tree holds {N_FILES} files in total"),
+    ("README.md", "**All 786 imported files are pinned", f"**All {N_FILES} imported files are pinned"),
+    ("README.md", "recorded : 786", f"recorded : {N_FILES}"),
+    ("README.md", "on disk  : 786", f"on disk  : {N_FILES}"),
+    ("README.md", "provenance for all 786 imported files", f"provenance for all {N_FILES} imported files"),
+    ("README.md", "Of 786 files, GitHub resolved 135 as GPL-2.0, 1 as GPL-2.0-or-later, 628 as\n`NOASSERTION`",
+     f"Of {N_FILES} files, GitHub resolved {N_GPL2} as GPL-2.0, {N_GPL2L} as GPL-2.0-or-later, {N_NOASSERT} as\n`NOASSERTION`"),
+    ("README.md", "is permissive) and 22 as unresolvable.",
+     f"is permissive) and {N_UNRESOLVED} as unresolvable."),
+    ("README.md", "Upstream ships 2203 files; this tree ships 3048.",
      f"Upstream ships {N_UP} files; this tree ships {N_TREE}."),
-    ("README.md", "47 of the 76 new C sources and headers are wired into the build — 24 `.c`",
+    ("README.md", "Two more groups complete the count of **786 files**",
+     f"Two more groups complete the count of **{N_FILES} files**"),
+    ("README.md", "| `tcl/` script files | 713 | 697 `.cfg` plus 16 `.tcl`/`.xml`/`.txt`",
+     f"| `tcl/` script files | {N_TCL} | {N_TCL_CFG} `.cfg` plus {N_TCL_OTHER} `.tcl`/`.xml`/`.txt`"),
+    ("README.md", "47 of the 73 new C sources and headers are wired into the build — 24 `.c`",
      f"{N_WIRED} of the {N_SRC} new C sources and headers are wired into the build — {N_WIRED_C} `.c`"),
-    ("README.md", "- **29 of the 76 new C sources and headers are not compiled.**",
+    ("README.md", "- **26 of the 73 new C sources and headers are not compiled.**",
      f"- **{N_UNWIRED} of the {N_SRC} new C sources and headers are not compiled.**"),
-    ("README.md", "the tree is LF everywhere, 523 files match their published digest byte for\nbyte, 2 are labelled as terminator-only differences, and 37 carry real local",
-     f"the tree is LF everywhere, {N_IDENTICAL} files match their published digest byte for\nbyte, {N_EOL} are labelled as terminator-only differences, and {N_EDITED} carry real local"),
-    ("README.md", "The remaining 29 — the `arc32` family",
+    ("README.md", "the tree is LF everywhere, 648 files match their published digest byte for\nbyte, 4 are labelled as terminator-only differences, and 134 carry real local\nedits (24 of those also had their terminators normalised)",
+     f"the tree is LF everywhere, {N_IDENTICAL} files match their published digest byte for\nbyte, {N_EOL} are labelled as terminator-only differences, and {N_EDITED} carry real local\nedits ({N_EDITED_BOTH} of those also had their terminators normalised)"),
+    ("README.md", "The remaining 26 — the `arc32` family",
      f"The remaining {N_UNWIRED} — the `arc32` family"),
-    ("README.md", "Of the 625 unique paths the survey identified, **536 landed in the tree** and\n89 did not: 70 C sources",
-     f"Of the {N_UNIQUE} unique paths the survey identified, **{N_IMPORTED} landed in the tree** and\n{N_NOTIMPORTED} did not: {N_SRC_NOTIMPORTED} C sources"),
-    ("README.md", "A further 25 files\ncame in as dependencies", f"A further {N_DEPENDENCY} files\ncame in as dependencies"),
-    ("README.md", "The survey covered **53 distinct source repositories**.",
-     f"The survey covered **{N_REPOS} candidate repositories**; {N_SRC_REPOS} of them\ncontributed at least one file that ended up in the tree."),
-    ("README.md", "| duplicate copies collapsed | 4109 |", f"| duplicate copies collapsed | {N_DUPES} |"),
-    ("README.md", "| files dropped as upstream-equivalent | 99 |", f"| files dropped as upstream-equivalent | {N_PRUNED} |"),
-    ("README.md", "| candidates rejected as unusable | 108 |", f"| candidates rejected as unusable | {N_EXCLUDED} |"),
+    ("README.md", "**795 landed in the tree** at the\ntime of the survey. Since then 23 of those were removed on purpose",
+     f"**{N_IMPORTED} landed in the tree** at the\ntime of the survey. Since then {N_REMOVED_SINCE} of those were removed on purpose"),
+    ("README.md", "| duplicate copies collapsed | 6910 |", f"| duplicate copies collapsed | {N_DUPES} |"),
+    ("README.md", "| files dropped as upstream-equivalent | 7376 |", f"| files dropped as upstream-equivalent | {N_PRUNED} |"),
+    ("README.md", "| candidates rejected as unusable | 621 |", f"| candidates rejected as unusable | {N_EXCLUDED} |"),
+    ("README.md", "| dropped from the tree after import | 23 |",
+     f"| dropped from the tree after import | {N_REMOVED_SINCE} |"),
+    ("README.md", "- **21 files pulled in as dependencies**",
+     f"- **{N_DEPENDENCY} files pulled in as dependencies**"),
 
-    ("README.zh-CN.md", "562 个文件，每个都有自己的来源记录", f"{N_FILES} 个文件，每个都有自己的来源记录"),
-    ("README.zh-CN.md", "**全部 562 个导入文件都钉在", f"**全部 {N_FILES} 个导入文件都钉在"),
-    ("README.zh-CN.md", "recorded : 562", f"recorded : {N_FILES}"),
-    ("README.zh-CN.md", "on disk  : 562", f"on disk  : {N_FILES}"),
-    ("README.zh-CN.md", "562 个导入文件的机器可读来源记录", f"{N_FILES} 个导入文件的机器可读来源记录"),
-    ("README.zh-CN.md", "562 个文件里，GitHub 解析出\n139 个为 GPL-2.0，398 个为 `NOASSERTION`",
-     f"{N_FILES} 个文件里，GitHub 解析出\n{N_GPL2} 个为 GPL-2.0，{N_NOASSERT} 个为 `NOASSERTION`"),
-    ("README.zh-CN.md", "上游共 2203 个文件，本树 2799 个。", f"上游共 {N_UP} 个文件，本树 {N_TREE} 个。"),
-    ("README.zh-CN.md", "75 个新 C 源文件与头文件里有 46 个已接入构建 —— 23 个能注册出可用的",
+    ("README.zh-CN.md", "786 个文件，每个都有自己的来源记录", f"{N_FILES} 个文件，每个都有自己的来源记录"),
+    ("README.zh-CN.md", "**全部 786 个导入文件都钉在", f"**全部 {N_FILES} 个导入文件都钉在"),
+    ("README.zh-CN.md", "recorded : 786", f"recorded : {N_FILES}"),
+    ("README.zh-CN.md", "on disk  : 786", f"on disk  : {N_FILES}"),
+    ("README.zh-CN.md", "786 个导入文件的机器可读来源记录", f"{N_FILES} 个导入文件的机器可读来源记录"),
+    ("README.zh-CN.md", "786 个文件里，GitHub 解析出\n135 个为 GPL-2.0、1 个为 GPL-2.0-or-later、628 个为 `NOASSERTION`",
+     f"{N_FILES} 个文件里，GitHub 解析出\n{N_GPL2} 个为 GPL-2.0、{N_GPL2L} 个为 GPL-2.0-or-later、{N_NOASSERT} 个为 `NOASSERTION`"),
+    ("README.zh-CN.md", "，22 个无法解析。", f"，{N_UNRESOLVED} 个无法解析。"),
+    ("README.zh-CN.md", "上游共 2203 个文件，本树 3048 个。", f"上游共 {N_UP} 个文件，本树 {N_TREE} 个。"),
+    ("README.zh-CN.md", "另外两组补齐了 **786 个文件**这个数",
+     f"另外两组补齐了 **{N_FILES} 个文件**这个数"),
+    ("README.zh-CN.md", "| `tcl/` 脚本文件 | 713 | 697 个 `.cfg` + 16 个 `.tcl`/`.xml`/`.txt`",
+     f"| `tcl/` 脚本文件 | {N_TCL} | {N_TCL_CFG} 个 `.cfg` + {N_TCL_OTHER} 个 `.tcl`/`.xml`/`.txt`"),
+    ("README.zh-CN.md", "73 个新 C 源文件与头文件里有 47 个已接入构建 —— 24 个能注册出可用的",
      f"{N_SRC} 个新 C 源文件与头文件里有 {N_WIRED} 个已接入构建 —— {N_WIRED_C} 个能注册出可用的"),
-    ("README.zh-CN.md", "剩下 29 个 —— `arc32` 家族", f"剩下 {N_UNWIRED} 个 —— `arc32` 家族"),
-    ("README.zh-CN.md", "- **75 个新 C 源文件与头文件里有 29 个没被编译。**",
+    ("README.zh-CN.md", "剩下 26 个 —— `arc32` 家族", f"剩下 {N_UNWIRED} 个 —— `arc32` 家族"),
+    ("README.zh-CN.md", "- **73 个新 C 源文件与头文件里有 26 个没被编译。**",
      f"- **{N_SRC} 个新 C 源文件与头文件里有 {N_UNWIRED} 个没被编译。**"),
-    ("README.zh-CN.md", "树里全是 LF，523 个文件与发布方摘要逐字节吻合，\n2 个被标为仅行尾符差异，37 个带真实本地编辑",
-     f"树里全是 LF，{N_IDENTICAL} 个文件与发布方摘要逐字节吻合，\n{N_EOL} 个被标为仅行尾符差异，{N_EDITED} 个带真实本地编辑"),
-    ("README.zh-CN.md", "| `src/` C 源码 | 75 | 39 个 `.c` 加 36 个 `.h`；**46 个已接入构建**，29 个已就位但未注册 |",
+    ("README.zh-CN.md", "树里全是 LF，648 个文件与发布方摘要逐字节吻合，\n4 个被标为仅行尾符差异，134 个带真实本地编辑（其中 24 个同时做了行尾符规整）",
+     f"树里全是 LF，{N_IDENTICAL} 个文件与发布方摘要逐字节吻合，\n{N_EOL} 个被标为仅行尾符差异，{N_EDITED} 个带真实本地编辑（其中 {N_EDITED_BOTH} 个同时做了行尾符规整）"),
+    ("README.zh-CN.md", "| `src/` C 源码 | 73 | 37 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，26 个已就位但未注册 |",
      f"| `src/` C 源码 | {N_SRC} | {N_SRC_C} 个 `.c` 加 {N_SRC_H} 个 `.h`；**{N_WIRED} 个已接入构建**，{N_UNWIRED} 个已就位但未注册 |"),
+    ("README.zh-CN.md", "**795 条在扫描当时进了树**，503 条没进。此后\n其中 23 条被有意移除",
+     f"**{N_IMPORTED} 条在扫描当时进了树**，503 条没进。此后\n其中 {N_REMOVED_SINCE} 条被有意移除"),
+    ("README.zh-CN.md", "| 导入后又从树里删掉 | 23 |",
+     f"| 导入后又从树里删掉 | {N_REMOVED_SINCE} |"),
+    ("README.zh-CN.md", "- **21 个文件是作为依赖进来的**",
+     f"- **{N_DEPENDENCY} 个文件是作为依赖进来的**"),
 
-    ("docs/02-usage.md", "得到 **562 个文件**的第三方支持", f"得到 **{N_FILES} 个文件**的第三方支持"),
-    ("docs/02-usage.md", "**75 个 `src/` C 源文件与头文件** —— 已就位，其中 **46 个已接入构建**，\n  其余 29 个仍需按上游现有 API 改写后才能注册。",
+    ("docs/02-usage.md", "得到 **786 个文件**的第三方支持", f"得到 **{N_FILES} 个文件**的第三方支持"),
+    ("docs/02-usage.md", "**73 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，\n  其余 26 个仍需按上游现有 API 改写后才能注册。",
      f"**{N_SRC} 个 `src/` C 源文件与头文件** —— 已就位，其中 **{N_WIRED} 个已接入构建**，\n  其余 {N_UNWIRED} 个仍需按上游现有 API 改写后才能注册。"),
-    ("docs/02-usage.md", "src/                     ← C 源码：官方源码 + 75 个第三方驱动/目标",
+    ("docs/02-usage.md", "src/                     ← C 源码：官方源码 + 73 个第三方驱动/目标",
      f"src/                     ← C 源码：官方源码 + {N_SRC} 个第三方驱动/目标"),
-    ("docs/02-usage.md", "PROVENANCE.json            562  个文件", f"PROVENANCE.json            {N_FILES}  个文件"),
-    ("docs/02-usage.md", "licenses.csv               562  行", f"licenses.csv               {N_FILES}  行"),
-    ("docs/02-usage.md", "**全部 562 个文件都锁定了来源 commit**", f"**全部 {N_FILES} 个文件都锁定了来源 commit**"),
-    ("docs/02-usage.md", "`src/` 下 75 个第三方文件里（39 个 `.c` + 36 个 `.h`），**46 个已经接入构建系统**，\n其余 29 个仍是",
-     f"`src/` 下 {N_SRC} 个第三方文件里（{N_SRC_C} 个 `.c` + {N_SRC_H} 个 `.h`），**{N_WIRED} 个已经接入构建系统**，\n其余 {N_UNWIRED} 个仍是"),
-    ("docs/02-usage.md", "### 仍是「代码就位、未注册」（其余 29 个文件）",
-     f"### 仍是「代码就位、未注册」（其余 {N_UNWIRED} 个文件）"),
-    ("docs/02-usage.md", "| C 驱动未注册进构建 | 29 |", f"| C 驱动未注册进构建 | {N_UNWIRED} |"),
-    ("docs/02-usage.md", "| 无许可证信息 | 423 / 562（75%） |", f"| 无许可证信息 | {N_UNLICENSED} / {N_FILES}（75%） |"),
+    ("docs/02-usage.md", "PROVENANCE.json            786  个文件", f"PROVENANCE.json            {N_FILES}  个文件"),
+    ("docs/02-usage.md", "licenses.csv               786  行", f"licenses.csv               {N_FILES}  行"),
+    ("docs/02-usage.md", "**全部 786 个文件都锁定了来源 commit**", f"**全部 {N_FILES} 个文件都锁定了来源 commit**"),
+    ("docs/02-usage.md", "| C 驱动未注册进构建 | 26 |", f"| C 驱动未注册进构建 | {N_UNWIRED} |"),
+    ("docs/02-usage.md", "| 无许可证信息 | 650 / 786（83%） |",
+     f"| 无许可证信息 | {N_UNLICENSED} / {N_FILES}（83%） |"),
 ]
 
 
