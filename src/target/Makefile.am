@@ -148,11 +148,29 @@ ESIRISC_SRC = \
 	%D%/esirisc_jtag.c \
 	%D%/esirisc_trace.c
 
+# The third-party ARC backend (foss-for-mips-arc-processors/openocd,
+# branch arc-2026.09) is a superset of upstream's single-type arc.c: it
+# registers the arc600, arc700 AND arcv2 target types, and it is the only
+# implementation that registers the "arc jtag" command group that every
+# tcl/cpu/arc/*.tcl script drives. Upstream arc.c registers no commands at all,
+# so the tcl layer cannot work against it.
+#
+# The two implementations both define arcv2_target, so exactly one may be
+# compiled. The fork keeps the upstream files in the tree for reference but
+# builds the third-party backend.
+#
+# arc_core.c and arc_trgt.c also came with that import, but nothing in the
+# backend or the tree calls the three functions they export
+# (arc_core_soft_reset_halt, arc_core_type_info, arc_trgt_request_data) and
+# they include the upstream arc.h rather than arc32.h, so they are left out of
+# the build instead of being silently linked into nothing.
 ARC_SRC = \
-        %D%/arc.c \
-        %D%/arc_cmd.c \
+        %D%/arc32.c \
+        %D%/arc_dbg.c \
         %D%/arc_jtag.c \
-        %D%/arc_mem.c
+        %D%/arc_mntr.c \
+        %D%/arc_ocd.c \
+        %D%/arc_regs.c
 
 %C%_libtarget_la_SOURCES += \
 	%D%/algorithm.h \

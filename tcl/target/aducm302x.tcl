@@ -123,7 +123,7 @@ if { [info exists FLASHSIZE] } {
 } else {
    set _FLASHSIZE 0x40000
 }
-flash bank $_FLASHNAME aducm302x 0 $_FLASHSIZE 0 0 $_TARGETNAME
+# flash bank $_FLASHNAME aducm302x 0 $_FLASHSIZE 0 0 $_TARGETNAME  # driver 'aducm302x' not in tree
 
 if {![using_hla]} {
    # if srst is not fitted use SYSRESETREQ to

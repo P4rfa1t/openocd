@@ -208,7 +208,13 @@ m4_define([PARALLEL_PORT_ADAPTER],
 	[[[parport], [PC Parallel Port], [PARPORT]]])
 
 m4_define([NETWORK_ADAPTERS],
-	[[[xvc], [Xilinx XVC TCP], [XVC]]])
+	[[[xvc], [Xilinx XVC TCP], [XVC]],
+	[[jtag_tcp], [Raw JTAG-over-TCP adapter], [JTAG_TCP]]])
+
+# Espressif remote JTAG speaks a framed command protocol over either USB or TCP
+# and needs libusb for the USB transport, so it belongs with the USB1 adapters.
+m4_define([ESP_REMOTE_ADAPTERS],
+	[[[jtag_esp_remote], [Espressif remote JTAG (USB/TCP)], [JTAG_ESP_REMOTE]]])
 
 m4_define([LINUXSPIDEV_ADAPTER],
 	[[[linuxspidev], [Linux spidev driver], [LINUXSPIDEV]]])
@@ -323,6 +329,7 @@ AC_ARG_ADAPTERS([
   LIBJAYLINK_ADAPTERS,
   CMSIS_DAP_TCP_ADAPTER,
   NETWORK_ADAPTERS,
+  ESP_REMOTE_ADAPTERS,
   DIRTYJTAG_ADAPTER,
   ADI_ADAPTERS,
   ADI_USBMUX_HELPER
@@ -707,6 +714,7 @@ PROCESS_ADAPTERS([LIBGPIOD_ADAPTERS], ["x$use_libgpiod" = "xyes"], [Linux libgpi
 PROCESS_ADAPTERS([DMEM_ADAPTER], ["x$is_linux" = "xyes" -a "x$ac_cv_header_sys_mman_h" = "xyes"], [Linux /dev/mem])
 PROCESS_ADAPTERS([SYSFSGPIO_ADAPTER], ["x$is_linux" = "xyes"], [Linux sysfs])
 PROCESS_ADAPTERS([REMOTE_BITBANG_ADAPTER], [true], [unused])
+
 # Third-party adapters merged into this tree.
 # DIRTYJTAG has no extra prerequisites beyond the base toolchain.
 # ADI_* need libusb-1.x (they talk to the probe through libusb).
@@ -714,6 +722,8 @@ PROCESS_ADAPTERS([REMOTE_BITBANG_ADAPTER], [true], [unused])
 # on Windows.  Note that the ADI adapter drivers above do NOT require it: they
 # use the plain libusb path unless _ADI_USB_MUX_ is explicitly defined.
 PROCESS_ADAPTERS([DIRTYJTAG_ADAPTER], [true], [unused])
+# The Espressif remote JTAG driver links libusb for its USB transport.
+PROCESS_ADAPTERS([ESP_REMOTE_ADAPTERS], ["x$use_libusb1" = "xyes"], [libusb-1.x])
 PROCESS_ADAPTERS([ADI_ADAPTERS], ["x$use_libusb1" = "xyes"], [libusb-1.x])
 PROCESS_ADAPTERS([ADI_USBMUX_HELPER], ["x$is_win32" = "xyes"], [inherited Windows host support])
 PROCESS_ADAPTERS([CMSIS_DAP_TCP_ADAPTER], [true], [unused])
