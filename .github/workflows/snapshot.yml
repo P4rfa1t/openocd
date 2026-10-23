@@ -8,10 +8,25 @@
 #  * upstream packages an i686 (32-bit) build; this fork targets x86_64, so
 #    HOST is x86_64-w64-mingw32 and g++-mingw-w64-x86-64 replaces ...-i686.
 #  * upstream also creates a GitHub Release and deletes the previous 'latest'
-#    one. That is removed here: a Release needs a tag and would push to this
-#    fork's own Releases, which is not wanted for a CI smoke build.
+#    one. This fork keeps the Release but changes when it happens: the release
+#    job runs only for a pushed v* tag (see the 'release' job below), and the
+#    'latest' juggling is dropped - fork releases are numbered v0.12.0-fork.N
+#    and must stay addressable by tag.
 #  * trigger is workflow_dispatch + push instead of upstream's bare `on: push`,
 #    so a run can be started by hand without a commit.
+#
+# Two jobs were added on top of upstream's single package job:
+#
+#  * gate   - runs the repository's own integrity checks: verify_tree.py,
+#             sync_doc_numbers.py --check and check_tcl_syntax.py, so a commit
+#             that leaves the manifest stale, a published number drifting or a
+#             configuration unparsable fails CI instead of rotting. The
+#             dangling-reference scan runs last for the log; it is advisory
+#             because five known-harmless references are expected.
+#  * release - only for a pushed v* tag: it takes the package job's artifact and
+#             creates the GitHub Release with gh, which is preinstalled on the
+#             runner. The release therefore needs no local gh, no token and no
+#             manual upload.
 #
 # Everything else - the download list, all versions, every *_CONFIG, the
 # cross-build.sh invocation and the DLL fix-ups - is upstream's, unchanged.
@@ -152,4 +167,52 @@ jobs:
       - name: Publish OpenOCD packaged for windows
         uses: actions/upload-artifact@v4
         with:
+          name: openocd-windows
           path: ${{ env.ARTIFACT_PATH }}
+
+  # The repository ships its own gates; run them here so a stale manifest or a
+  # stale published number is a CI failure rather than a silent regression.
+  gate:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Install a TCL interpreter
+        run: sudo apt-get update && sudo apt-get install -y tcl
+      - name: Verify the imported overlay against manifest/PROVENANCE.json
+        run: python3 tools/verify_tree.py
+      - name: Check every published number for drift
+        run: python3 tools/sync_doc_numbers.py --check
+      - name: Parse every shipped TCL configuration
+        run: python3 tools/check_tcl_syntax.py
+      - name: Report dangling [find ...] references without failing on the known five
+        run: python3 tools/audit_dangling_refs.py
+
+  release:
+    needs: package
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: [ubuntu-latest]
+    permissions:
+      contents: write
+    steps:
+      - name: Download the windows package
+        uses: actions/download-artifact@v4
+        with:
+          name: openocd-windows
+      - name: Create or update the GitHub Release for this tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # No checkout in this job, so gh cannot discover the repository from a
+          # git remote; name it explicitly or every gh call fails.
+          GH_REPO: ${{ github.repository }}
+        run: |
+          ls -l
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            # A re-run of the same tag: replace the asset instead of failing.
+            gh release upload "$GITHUB_REF_NAME" ./openocd-*.tar.gz --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" ./openocd-*.tar.gz \
+              --title "$GITHUB_REF_NAME" \
+              --verify-tag \
+              --generate-notes
+          fi
