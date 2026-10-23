@@ -405,7 +405,7 @@ python tools/pipeline.py --apply
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；`arc32.c` 一族缺 `arc_mem.c` 无法接入，全树 22 个 ARC 配置现在都只用 `arcv2` |
 | 无真机验证 | 全部 | 静态校验之外，只用 CI 产物跑过 `adapter list`、`target types` 和批量 `source [find ...]`（验证配置能被解析、驱动/target type/flash 驱动都在）；没有接真实探针与目标板跑过调试会话 |
-| `-chain-position` 旧写法 | 408 个文件 / 504 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 504 处全在导入的第三方配置里（`target create` 373 处、`dap create` 122 处、`vjtag create` 1 处，其余为变量拼接）。机械替换只能自动解出 49 处，其余需人工判断 TAP 名 |
+| `-chain-position` 旧写法 | 408 个文件 / 504 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 504 处全在导入的第三方配置里（`target create` 373 处、`dap create` 122 处、`vjtag create` 1 处，其余为变量拼接）。机械替换只能自动解出 70 处（对象名与取值同行且完全相同），其余 434 处需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
 | 三组导入候选被上游阻塞 | 14 个文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows） |
 | TI XDS100 包装配置缺失 | 9 份板级配置 | 这 9 份 `tcl/board/ti/*-xds100v2.cfg` / `-xds100v3.cfg` 都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，树里只有 `interface/ftdi/xds100v2.cfg`；补两个三行包装文件即可，无需 C 改动 |

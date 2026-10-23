@@ -390,15 +390,16 @@ first. The `LICENSE` file spells this out in full.
   `arc700` and `arcv2`. Upstream's rewritten `src/target/arc.c` only provides
   `arcv2`; the other two come from the `arc32` family that is staged but not
   compiled. Wiring that family up is what fixes these three configs.
-- **192 imported config files still use the deprecated `-chain-position`
+- **408 imported config files still use the deprecated `-chain-position`
   option.** Upstream has no occurrence left in `tcl/`; it prints
   `DEPRECATED! '-chain-position' will be removed in the future, use '-tap'
   instead` from `src/target/arm_dap.c` and `src/target/target.c`, and the PLD
   drivers warn as well. The imported files kept the spelling their fork
-  published. A mechanical rewrite only resolves 49 of the 219 occurrences
-  automatically, because most files define their TAP in another config and
-  the right `-tap` name has to be read off that file; the rest need a human
-  pass. Nothing is broken today — the option still works — but it is the
+  published. There are 504 occurrences; a mechanical rewrite resolves only
+  70 of them — the cases where the object's own name equals the
+  `-chain-position` value on the same line. The other 434 need a human pass,
+  because most files define their TAP in another config and the right `-tap`
+  name has to be read off that file. Nothing is broken today — the option still works — but it is the
   first thing to fix when a config is touched.
 - **The `adi-usbmux` switch is inert.** `src/jtag/drivers/usbmux.c` is a
   Win32 named-pipe helper, not an adapter driver, but it is currently wired

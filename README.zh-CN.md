@@ -346,12 +346,13 @@ proprietary to Analog Devices, Inc."。
   `arc_axc003_hs36.cfg` 创建的是 `arc600`、`arc700`、`arcv2` 三种 target。
   上游重写过的 `src/target/arc.c` 只提供 `arcv2`，另外两个来自那族已就位但
   未接线的 `arc32` 源码。把那族接进构建，这三份配置就能用了。
-- **192 个导入的配置还在用已废弃的 `-chain-position`。** 上游的 `tcl/` 里已经
+- **408 个导入的配置还在用已废弃的 `-chain-position`。** 上游的 `tcl/` 里已经
   一处不剩；`src/target/arm_dap.c` 和 `src/target/target.c` 都会打印
   `DEPRECATED! '-chain-position' will be removed in the future, use '-tap'
   instead`，PLD 驱动那边也会警告。导入的文件保留了它们各自 fork 里发布的
-  写法。机械替换只能自动处理 219 处里的 49 处 —— 多数文件的 TAP 是在另一个
-  配置里定义的，对应的 `-tap` 名字得从那个文件里读出来，剩下的要人工过一遍。
+  写法。全树共 504 处，机械替换只能自动解掉其中 70 处 —— 也就是对象名与
+  `-chain-position` 取值在同一行且完全相同的情况。剩下 434 处要人工过一遍：
+  多数文件的 TAP 是在另一个配置里定义的，对应的 `-tap` 名字得从那个文件里读出来。
   目前不影响使用，这个选项还有效，但改到哪个配置就顺手改掉哪个。
 - **`adi-usbmux` 开关是空的。** `src/jtag/drivers/usbmux.c` 是 Win32 命名管道
   helper，不是 adapter driver，但它现在被挂在 `PROCESS_ADAPTERS` 上，于是
