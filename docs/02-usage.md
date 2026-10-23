@@ -398,11 +398,11 @@ python tools/pipeline.py --apply
 | `-chain-position` 旧写法 | 401 个文件 / 493 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 493 处全在导入的第三方配置里（`target create` 366 处、`dap create` 119 处、`pld create` 6 处，其余为变量拼接）。机械替换只能自动解出 69 处（对象名与取值同行且完全相同），其余 424 处需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
 | 三组导入候选被上游阻塞 | 9 个文件（tcl）+ 树内 18 个未接线 C 文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows）；三组 C 代码都已在树里，只是没法注册。仍被上游挡住的导入候选只剩 9 份 `tcl/target/anlogic/*_al_link.cfg` |
-| 配置里调用的 Tcl 命令树上没有定义 | 8 个命令名 / 198 处 | `pmmw`(62)、`mem_ap_write_reg`(59)、`mem_ap_read_reg`(26)、`reg_set`(24)、`reg_clear`(19)、`memap_mmw`(4)、`hla_close`(3)、`stm32n6x_boot1`(1)。这些是源 fork 自己给 OpenOCD 打的补丁命令（ADI 的 `pmmw`/`mem_ap_*_reg`、Espressif 的 `reg_set`/`reg_clear`、Nuvoton 的 `hla_close`），本树与上游都没有定义，所以调用它们的那几份配置（`tcl/board/adspsc5xx_ezbrd.tcl`、`tcl/target/adspsc5*.cfg`、`tcl/target/esp32c*-lpcore.cfg`、`tcl/target/numicroM2*.cfg` 等）执行到那一行会报 unknown command；配置里其余部分正常 |
 | TI XDS100 包装配置缺失 | 9 份板级配置 | 这 9 份 `tcl/board/ti/*-xds100v2.cfg` / `-xds100v3.cfg` 都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，树里只有 `interface/ftdi/xds100v2.cfg`；补两个三行包装文件即可，无需 C 改动 |
 | 两个非 ASCII 文件名 | 2 个 | `tcl/target/1986ве1т.cfg`、`tcl/target/к1879xб1я.cfg` 是上游自己带的西里尔字母名（与 `upstream/master` 逐字节一致），不是本 fork 引入；Windows 上部分工具链会处理异常 |
 | `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |
 | 扫描漏掉了子目录里的文件 | 已补扫，0 个待接入 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里看不见。`tools/expand_subtrees.py` 已补上；补出来的文件经 API 漂移分析后确认与上游 `src/flash/nor/` 的 85 个驱动重合，本树实际只多 `rv32m1.c` 与 `stldr_driver.c`（均已接入），NOR 目录 87/87 全部在 `Makefile.am` 里 |
+| 配置里调用的 Tcl 命令树上没有定义 | 8 个命令名 / 198 处 | `pmmw`(62)、`mem_ap_write_reg`(59)、`mem_ap_read_reg`(26)、`reg_set`(24)、`reg_clear`(19)、`memap_mmw`(4)、`hla_close`(3)、`stm32n6x_boot1`(1)。这些是源 fork 自己给 OpenOCD 打的补丁命令（ADI 的 `pmmw`/`mem_ap_*_reg`、Espressif 的 `reg_set`/`reg_clear`、Nuvoton 的 `hla_close`），本树与上游都没有定义，所以调用它们的那几份配置（`tcl/board/adspsc5xx_ezbrd.tcl`、`tcl/target/adspsc5*.cfg`、`tcl/target/esp32c*-lpcore.cfg`、`tcl/target/numicroM2*.cfg` 等）执行到那一行会报 unknown command；配置里其余部分正常 |
 
 ## 已处理的重复问题
 
