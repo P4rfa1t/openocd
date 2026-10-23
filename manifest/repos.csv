@@ -8,7 +8,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 506.5,ilg-archived/openocd,independent,240,2019-09-27T18:59:19Z,GPL-2.0,1,76,37,38,230,The GNU MCU Eclipse OpenOCD
 487.7,AnlogicInfo/al_openocd,independent,6,2026-10-17T01:29:09Z,NOASSERTION,1,79,40,38,122,OpenOCD Debugger fork by Anlogic.
 469.3,MotorolaMobilityLLC/openocd,independent,6,2017-12-20T21:28:32Z,GPL-2.0,1,86,47,37,318,
-466.6,walmis/openocd-blackmagic,independent,15,2020-10-27T09:23:58Z,GPL-2.0,1,76,38,37,216,OpenOCD fork with blackmagic HLA support. Allows using blackmagic probe for debugging using OpenOCD. 
+466.6,walmis/openocd-blackmagic,independent,15,2020-10-27T09:23:58Z,GPL-2.0,1,76,38,37,216,OpenOCD fork with blackmagic HLA support. Allows using blackmagic probe for debugging using OpenOCD.
 462.4,arduino/OpenOCD,independent,133,2024-07-17T08:59:41Z,GPL-2.0,1,72,36,35,304,Fork of OpenOCD
 462.0,Lichee-Pi/LicheeTang_openocd,independent,24,2021-10-18T03:04:07Z,GPL-2.0,1,76,39,36,260,"forked from https://github.com/riscv/riscv-openocd.git,and add falsh support for LicheeTang"
 456.0,matrix-io/matrix-creator-openocd,independent,5,2021-09-13T17:34:21Z,GPL-2.0,1,82,43,37,320,The GNU ARM Eclipse OpenOCD.  Used to program the EM3588 SoC and the SAM3S microcontroller of the MATRIX Creator via Raspberry Pi.
@@ -100,7 +100,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 130.0,Adancurusul/embedded-debugger-mcp,independent,205,2026-07-16T12:50:13Z,MIT,1,8,0,8,0,"MCP server + CLI + Codex/Claude skill for embedded debugging via probe-rs or OpenOCD — ARM Cortex-M, RISC-V, and Xtensa (ESP32), with AI crash diagnos"
 129.7,transcelestial/openocd,fork,1,2024-05-28T05:40:58Z,NOASSERTION,1,37,32,4,49,Official OpenOCD Read-Only Mirror (no pull requests)
 129.1,HalfSweet/openocd,fork,1,2024-01-03T12:07:48Z,NOASSERTION,1,37,32,4,53,Official OpenOCD Read-Only Mirror (no pull requests)
-129.1,mengfanyuc/openocd,fork,1,2023-11-26T14:05:07Z,NOASSERTION,1,37,32,4,53,openocd，ch32f205，fast write erase/read flash，write/read protect，write/read option data。 
+129.1,mengfanyuc/openocd,fork,1,2023-11-26T14:05:07Z,NOASSERTION,1,37,32,4,53,openocd，ch32f205，fast write erase/read flash，write/read protect，write/read option data。
 128.7,MarkFlickers/openocd_idm51,fork,0,2025-05-12T13:38:02Z,NOASSERTION,0,49,49,0,122,OpenOCD fork with idm51 support
 128.4,lopple/openocd-wch-ch32v003-bootfix,independent,0,2026-06-24T19:27:48Z,NOASSERTION,0,51,51,0,164,OpenOCD WCH CH32V003 BOOT write fix hard fork
 128.1,seeseemelk/openocd,independent,0,2021-03-11T14:48:15Z,GPL-2.0,0,52,52,0,186,A fork of OpenOCD that includes support for RIOT
@@ -178,7 +178,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 122.0,radovano-xlnx/openocd,fork,0,2024-11-20T17:16:29Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
 122.0,gedicke-dev/openocd,fork,0,2024-11-18T19:52:35Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
 122.0,JL2010/openocd,fork,0,2024-11-16T14:29:51Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)
-122.0,wtf3505/openocd,fork,0,2024-11-02T21:10:53Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)开放式片上调试器 
+122.0,wtf3505/openocd,fork,0,2024-11-02T21:10:53Z,NOASSERTION,0,47,47,0,127,Official OpenOCD Read-Only Mirror (no pull requests)开放式片上调试器
 121.5,deGerard/openocd,fork,0,2025-10-28T15:03:29Z,NOASSERTION,0,47,47,0,130,OpenOCD Fork with stm32h5 support
 121.5,philgweber/openocd,fork,0,2024-09-11T16:26:34Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
 121.5,DSrinivasaReddy/openocd,fork,0,2024-09-07T11:46:30Z,NOASSERTION,0,47,47,0,130,Official OpenOCD Read-Only Mirror (no pull requests)
@@ -242,7 +242,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 116.2,paaull/openocd,independent,0,2022-05-04T10:24:22Z,NOASSERTION,0,47,47,0,165,openocd 0.11.0 fork with nrf91 flash driver
 115.3,barty78/openocd-nrf9160,fork,0,2024-05-15T05:39:20Z,NOASSERTION,0,45,45,0,131,Fork of openocd for purpose of adding nRF9160 support
 115.3,Hotakus/openocd,fork,0,2024-05-01T08:08:59Z,NOASSERTION,0,45,45,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
-115.3,shianehao/openocd,fork,0,2024-03-12T12:17:16Z,NOASSERTION,0,45,45,0,131,Merge STM32 openOCD to Official OpenOCD 
+115.3,shianehao/openocd,fork,0,2024-03-12T12:17:16Z,NOASSERTION,0,45,45,0,131,Merge STM32 openOCD to Official OpenOCD
 115.2,lopsided98/openocd-nrf53,fork,0,2024-03-30T02:54:27Z,NOASSERTION,0,45,45,0,132,OpenOCD with Nordic NRF53 support
 114.8,nickfox-taterli/openocd-v0.6.1-old,fork,0,2025-11-05T05:25:10Z,NOASSERTION,0,44,44,0,115,Official OpenOCD Read-Only Mirror (no pull requests)
 114.5,thomas-coding/openocd,fork,0,2023-03-21T01:39:17Z,NOASSERTION,0,46,46,0,157,Official OpenOCD Read-Only Mirror (no pull requests)
@@ -308,7 +308,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 112.3,luyaocf/openocd,fork,0,2024-02-04T02:59:59Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
 112.3,Cooler1989/openocd_custom,fork,0,2024-02-02T17:08:25Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
 112.3,IridiumXOR/openocd,fork,0,2024-01-31T18:44:39Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror (no pull requests)
-112.3,10Ngg/openocd,fork,0,2024-01-28T14:23:35Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror 
+112.3,10Ngg/openocd,fork,0,2024-01-28T14:23:35Z,NOASSERTION,0,44,44,0,131,Official OpenOCD Read-Only Mirror
 112.3,codepainters/openocd,fork,0,2024-01-15T11:39:30Z,NOASSERTION,0,44,44,0,131,OpenOCD fork - APM32F support on apm32 branch
 112.3,microcai/openocd-eg32,fork,0,2024-01-13T14:55:25Z,NOASSERTION,0,44,44,0,131,openocd fork to support EG6832
 112.2,lumagi/openocd,fork,0,2026-03-03T09:08:32Z,NOASSERTION,0,44,44,0,132,Official OpenOCD Read-Only Mirror (no pull requests)
@@ -460,7 +460,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 53.7,ut2or1/openocd,fork,0,2026-10-16T21:19:46Z,NOASSERTION,1,18,18,0,2,Official OpenOCD Read-Only Mirror (no pull requests)
 51.9,OlivierVanWassenhove-Dekimo/openocd,fork,0,2026-10-06T16:04:42Z,NOASSERTION,1,15,14,1,1,OpenOCD fork suited for Altera Agilex HPS development
 50.0,xpack-dev-tools/openocd-xpack,independent,525,2026-10-17T19:00:57Z,MIT,1,0,0,0,0,A binary distribution of OpenOCD
-50.0,zszszszsz/.config,independent,363,2023-10-05T22:52:42Z,MIT,1,0,0,0,0,# # Automatically generated file; DO NOT EDIT. # OpenWrt Configuration # CONFIG_MODULES=y CONFIG_HAVE_DOT_CONFIG=y # CONFIG_TARGET_sunxi is not set # 
+50.0,zszszszsz/.config,independent,363,2023-10-05T22:52:42Z,MIT,1,0,0,0,0,# # Automatically generated file; DO NOT EDIT. # OpenWrt Configuration # CONFIG_MODULES=y CONFIG_HAVE_DOT_CONFIG=y # CONFIG_TARGET_sunxi is not set #
 50.0,elmot/clion-embedded-arm,independent,171,2019-03-25T11:12:33Z,NOASSERTION,1,0,0,0,0,OpenOCD + STM32CubeMX support for CLion
 50.0,wuxx/openocd-toolbox,independent,151,2026-06-25T08:05:23Z,GPL-3.0,1,0,0,0,0,OpenOCD工具箱 （温馨提示：请点击本页面右侧绿色按钮处下载zip压缩包）
 50.0,espressif/openocd-on-esp32,independent,105,2025-04-23T14:34:36Z,Apache-2.0,1,0,0,0,0,OpenOCD port running on ESP32-S3 microcontrollers
@@ -474,7 +474,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 50.0,rdiez/DebugDue,independent,52,2026-09-23T17:08:40Z,,1,0,0,0,0,Emulates a Bus Pirate OpenOCD JTAG adapter with an Arduino Due
 46.0,Klievan/jlink-mcp,independent,36,2026-10-09T19:05:32Z,MIT,1,1,0,1,0,"Give AI hands to touch silicon — an MCP server for SEGGER J-Link, OpenOCD and Black Magic probes. Flash, halt, step, stream RTT logs and decode ARM Co"
 44.0,adafruit/Adafruit_nRF51822_Flasher,independent,44,2016-08-02T05:10:01Z,,1,0,0,0,0,Wrapper for the Segger J-Link or STLink/V2 (via OpenOCD) to flash nRF51822 MCUs
-43.0,robertlong13/SWO-Parser,independent,43,2024-07-15T23:34:59Z,WTFPL,1,0,0,0,0,Simple parser for OpenOCD ITM trace messages on the 
+43.0,robertlong13/SWO-Parser,independent,43,2024-07-15T23:34:59Z,WTFPL,1,0,0,0,0,Simple parser for OpenOCD ITM trace messages on the
 42.0,bkuschak/cmsis_dap_tcp_esp32,independent,42,2026-10-16T00:40:59Z,Apache-2.0,1,0,0,0,0,CMSIS-DAP programmer using TCP/IP rather than USB connection to the host.  Runs on ESP32 and connects over WiFi to OpenOCD using the cmsis-dap-tcp bac
 41.0,bbrown1867/stm32-makefile,independent,41,2026-01-03T17:35:15Z,BSD-3-Clause,1,0,0,0,0,"A small, simple example project demonstrating how to use an STM32 microcontroller with GNU Make, ARM GCC, and ST-Link/OpenOCD"
 40.0,MuratovAS/VScode_Docker_Stm32,independent,40,2023-02-26T20:34:16Z,Apache-2.0,1,0,0,0,0,"VScode и Docker, мощный набор для разработки под embedded system или VSCode + Docker (GCC-ARM + CMake + OpenOCD) = STM32 IDE"
@@ -545,7 +545,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 7.0,nopeppermint/OpenOCD_EmBlocks_with_EFM32WG_STK3800,independent,7,2014-06-16T21:51:34Z,,1,0,0,0,0,"OpenOCD example with ST-Link/V2, EmBlocks and EFM32WG_STK3800"
 6.0,zw9629/OpenOCD-GUI-mod,independent,6,2024-04-21T16:24:41Z,GPL-3.0,1,0,0,0,0,OpenOCD的图形化界面
 6.0,emhlb/openocd-ch341a-patch,independent,6,2023-10-30T04:43:38Z,GPL-2.0,1,0,0,0,0,openocd ch341a port patch
-6.0,leech001/OpenOCD-CS32,independent,6,2020-01-11T16:58:22Z,,1,0,0,0,0,OpenOCD config for CS32F103C8T6 (CKSF103C8T6) 
+6.0,leech001/OpenOCD-CS32,independent,6,2020-01-11T16:58:22Z,,1,0,0,0,0,OpenOCD config for CS32F103C8T6 (CKSF103C8T6)
 6.0,sandeepmistry/rtl8710-openocd,independent,6,2017-03-01T02:16:39Z,GPL-2.0,1,0,0,0,0,Unofficial mirror of https://bitbucket.org/rebane/rtl8710_openocd
 5.4,amoxu/tool-openocd-at32,independent,6,2026-07-10T11:41:25Z,,1,0,0,0,4,Crossplatform Binary Releases for at32-dev branch of https://github.com/amoxu/openocd
 5.0,HonzaMat/PyOpenocdClient,independent,5,2026-10-17T10:36:09Z,NOASSERTION,1,0,0,0,0,Python library for controlling OpenOCD
@@ -587,7 +587,7 @@ score,repo,kind,stars,pushed_at,license,deep,added,core,src,missing_core,descrip
 -3.1,tms320/openocd,fork,0,2026-07-06T08:30:03Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
 -3.1,giraf-fe/openocd,fork,0,2026-07-03T02:29:19Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
 -3.1,CHERI-Alliance/openocd,fork,0,2026-07-02T10:37:08Z,NOASSERTION,0,4,4,0,101,
--3.1,saravalkyrie2/openocd,fork,0,2026-06-26T02:23:16Z,NOASSERTION,0,4,4,0,101,OpenOCD Fork with Nations series chip support 
+-3.1,saravalkyrie2/openocd,fork,0,2026-06-26T02:23:16Z,NOASSERTION,0,4,4,0,101,OpenOCD Fork with Nations series chip support
 -3.1,kripticni/openocd,fork,0,2026-06-22T01:45:39Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)
 -3.1,YCH8899/openocd,fork,0,2026-06-21T18:45:32Z,NOASSERTION,0,4,4,0,101,Official OpenOCD fork
 -3.1,Futhark1393/openocd,fork,0,2026-06-21T18:45:32Z,NOASSERTION,0,4,4,0,101,Official OpenOCD Read-Only Mirror (no pull requests)

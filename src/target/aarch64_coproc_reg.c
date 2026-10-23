@@ -1,7 +1,7 @@
 /**************************************************************************
 *	Copyright (c) 2023 Qualcomm Innovation Center, Inc.                   *
-*   All rights reserved.                                                  * 
-*   SPDX-License-Identifier: GPL-2.0-or-later                             * 
+*   All rights reserved.                                                  *
+*   SPDX-License-Identifier: GPL-2.0-or-later                             *
 *																		  *
 ***************************************************************************/
 
@@ -158,10 +158,10 @@ COMMAND_HANDLER(aarch64_handle_msr_command)
     case 6:
         COMMAND_PARSE_NUMBER(u64, CMD_ARGV[5], value);
         retval = get_aarch64_system_register_encoding_from_command_arguments(cmd, &encoding);
-        
+
         if (retval != ERROR_OK)
             return ERROR_COMMAND_SYNTAX_ERROR;
-        
+
         break;
 
     case 2:
@@ -187,7 +187,7 @@ COMMAND_HANDLER(aarch64_handle_msr_command)
     /* rt is implictly 0 below in order to get this from arguments,
         * dpm should be modified as well */
     retval = dpm->instr_write_data_r0_64(dpm, ARMV8_MSR_GP(encoding, 0), value);
-    /* (void) */ 
+    /* (void) */
     dpm->finish(dpm);
     return retval;
 }
@@ -297,7 +297,7 @@ COMMAND_HANDLER(aarch64_handle_mrs_command)
         }
     }
 
-    /* (void) */ 
+    /* (void) */
     dpm->finish(dpm);
     return retval;
 }

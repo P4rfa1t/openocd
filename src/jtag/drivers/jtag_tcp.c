@@ -271,7 +271,7 @@ static int jtag_tcp_runtest(int num_cycles)
 	jtag_tcp_end_state(TAP_IDLE);
 	if (jtag_tcp_state_move(0) != ERROR_OK)
 		return ERROR_FAIL;
-	
+
 	/* send num_cycles clocks onto the cable and stay in run-test */
 	for (i = 0; i < num_cycles; i++) {
 		txBuffer[i*2 + 0] = 0;
@@ -281,9 +281,9 @@ static int jtag_tcp_runtest(int num_cycles)
 	/* Send the cycles */
 	if(send(clientSocket,(char*)txBuffer,num_cycles*2, 0) <= 0)
 		return ERROR_FAIL;
-  
+
 	return ERROR_OK;
-	
+
 }
 
 int jtag_tcp_execute_queue(void)
@@ -321,7 +321,7 @@ int jtag_tcp_execute_queue(void)
 			break;
 		case JTAG_RUNTEST:
 		        retval = jtag_tcp_runtest(cmd->cmd.runtest->num_cycles);
-		  
+
 			break;
                         /*
 		case JTAG_PATHMOVE:
@@ -403,7 +403,7 @@ struct adapter_driver jtag_tcp_adapter_driver = {
 
 		.commands = jtag_tcp_command_handlers,
 		.transports = jtag_only,
-		
+
 		.reset = jtag_tcp_streset,
 
 		.speed = &jtag_tcp_speed,

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 /***************************************************************************
  *   Copyright (C) 2015 by Esben Haabendal                                 *
  *   eha@deif.com                                                          *
@@ -274,7 +276,7 @@ static int vexriscv_get_core_reg(struct reg *reg)
 			vexriscv_readInstructionResult32(target, true, reg->value);
 		}else if (vexriscv_reg->is_csr) {
 			// Perform a CSRRW which does a Read/Write.  If rs1 is $x0, then the write
-			// is ignored and side-effect free.  Set rd to $x1 to make the read 
+			// is ignored and side-effect free.  Set rd to $x1 to make the read
 			// not side-effect free.
 			vexriscv_pushInstruction(target, false, 0
 				| ((vexriscv_reg->csr_num & 0x1fff) << 20)
@@ -316,9 +318,9 @@ static int vexriscv_set_core_reg(struct reg *reg, uint8_t *buf)
 
 	if (vexriscv_reg->is_csr) {
 		// Perform a CSRRW which does a Read/Write.  If rd is $x0, then the read
-		// is ignored and side-effect free.  Set rs1 to $x1 to make the write 
+		// is ignored and side-effect free.  Set rs1 to $x1 to make the write
 		// not side-effect free.
-		// 
+		//
 		// cccc cccc cccc ssss s fff ddddd ooooooo
 		// c: CSR number
 		// s: rs1 (source register)
@@ -825,11 +827,11 @@ int vexriscv_semihosting(struct target *target, int *retval)
 		return 0;
 
     uint32_t pc = 0xdeadbeef;
-    
+
     vexriscv_get_core_reg(&vexriscv->core_cache->reg_list[32]);
     pc = buf_get_u32((uint8_t *)vexriscv->core_cache->reg_list[32].value, 0, 32);
 
-    
+
     LOG_DEBUG("semihosting pc: %08x", pc);
     // todo proper error handling
     if (pc == 0xdeadbeef) {
@@ -870,16 +872,16 @@ int vexriscv_semihosting(struct target *target, int *retval)
 		/* RISC-V uses A0 and A1 to pass function arguments */
         uint32_t r0;
         uint32_t r1;
-        
+
         vexriscv_get_core_reg(&vexriscv->core_cache->reg_list[10]);
         r0 = buf_get_u32((uint8_t *)vexriscv->core_cache->reg_list[10].value, 0, 32);
-        
+
         vexriscv_get_core_reg(&vexriscv->core_cache->reg_list[11]);
         r1 = buf_get_u32((uint8_t *)vexriscv->core_cache->reg_list[11].value, 0, 32);
-        
+
         LOG_DEBUG("semihosting  r0: %08x", r0);
         LOG_DEBUG("semihosting  r1: %08x", r1);
-        
+
 		semihosting->op = r0;
 		semihosting->param = r1;
 		semihosting->word_size_bytes = sizeof(uint32_t);//riscv_xlen(target) / 8;
@@ -1456,7 +1458,7 @@ static int vexriscv_semihosting_setup(struct target *target, int enable)
 static int vexriscv_semihosting_post_result(struct target *target)
 {
 	struct vexriscv_common *vexriscv = target_to_vexriscv(target);
-    
+
 	struct semihosting *semihosting = target->semihosting;
 	if (!semihosting) {
 		/* If not enabled, silently ignored. */
@@ -1466,7 +1468,7 @@ static int vexriscv_semihosting_post_result(struct target *target)
 	LOG_DEBUG("0x%" PRIx64, semihosting->result);
 
     vexriscv_set_core_reg(&vexriscv->core_cache->reg_list[10], (uint8_t*) &semihosting->result);
-        
+
 	return 0;
 }
 
@@ -2051,7 +2053,7 @@ const struct command_registration vexriscv_command_handlers[] = {
 		.help = "ARM Command Group",
 		.usage = "",
 		.chain = semihosting_common_handlers
-	},    
+	},
 	COMMAND_REGISTRATION_DONE
 };
 

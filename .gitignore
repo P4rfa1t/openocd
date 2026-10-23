@@ -139,3 +139,12 @@ Thumbs.db
 # Scratch files left behind by file-editing tooling.
 .dsh-ops-update-*.lock
 *.lock
+
+# The broad `*.in` and `Makefile` rules further up also match files that ARE
+# tracked in this repository; git would silently drop them from the index on a
+# fresh `git add`. Re-include exactly those tracked sources instead of
+# loosening the build-product rules themselves.
+!/Doxyfile.in
+!contrib/firmware/angie/c/Makefile
+!contrib/firmware/angie/hdl/Makefile
+!src/jtag/drivers/OpenULINK/Makefile

@@ -1,7 +1,7 @@
 /**************************************************************************
 *   Copyright (c) 2023 Qualcomm Innovation Center, Inc.                   *
-*   All rights reserved.                                                  * 
-*   SPDX-License-Identifier: GPL-2.0-or-later                             * 
+*   All rights reserved.                                                  *
+*   SPDX-License-Identifier: GPL-2.0-or-later                             *
 *								          *
 ***************************************************************************/
 

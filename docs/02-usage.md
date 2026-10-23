@@ -18,8 +18,8 @@
 ```
 tcl/                     ← OpenOCD 配置树：官方配置 + 712 个第三方配置
   target/                     907  芯片目标配置（含 vendor 子目录）
-  board/                      599  开发板配置（含 flash_algorithms/）
-  interface/                  222  调试器接口
+  board/                      597  开发板配置（含 flash_algorithms/）
+  interface/                  217  调试器接口
   cpld/                        21  CPLD 配置
   fpga/                        34  FPGA bitstream
   chip/                        28  芯片公共片段

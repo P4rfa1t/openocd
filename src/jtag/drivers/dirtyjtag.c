@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 /***************************************************************************
  *   Copyright (C) 2020 Jean THOMAS                                        *
  *   pub0@git.jeanthomas.me                                                *
@@ -105,7 +107,7 @@ static void dirtyjtag_buffer_flush(void)
 	}
 
 	dirtyjtag_buffer[dirtyjtag_buffer_use] = '\0';
-	
+
 	res = jtag_libusb_bulk_write(usb_handle, ep_write, (char*)dirtyjtag_buffer,
 		dirtyjtag_buffer_use+1, DIRTYJTAG_USB_TIMEOUT, &sent);
 	assert(res == ERROR_OK);
@@ -377,7 +379,7 @@ static void syncbb_scan(bool ir_scan, enum scan_type type, uint8_t *buffer, int 
 	uint8_t getsig = CMD_GETSIG;
 	char dummy;
 	int dummy_read = 0;
-	
+
 	int pos_last_byte = (scan_size-1)/8;
 	int pos_last_bit = (scan_size-1)%8;
 	bool last_bit = !!(buffer[pos_last_byte] & (1 << pos_last_bit));
