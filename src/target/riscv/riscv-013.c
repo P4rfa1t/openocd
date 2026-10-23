@@ -1304,6 +1304,7 @@ static int scratch_read64(struct target *target, scratch_mem_t *scratch,
 			uint8_t buffer[8] = {0};
 			const struct riscv_mem_access_args args = {
 				.address = scratch->debug_address,
+				.mode = RISCV_MODE_M,
 				.read_buffer = buffer,
 				.size = 4,
 				.count = 2,
@@ -1346,6 +1347,7 @@ static int scratch_write64(struct target *target, scratch_mem_t *scratch,
 			};
 			const struct riscv_mem_access_args args = {
 				.address = scratch->debug_address,
+				.mode = RISCV_MODE_M,
 				.write_buffer = buffer,
 				.size = 4,
 				.count = 2,
@@ -3253,65 +3255,94 @@ static int read_sbcs_nonbusy(struct target *target, uint32_t *sbcs)
 	}
 }
 
-/* TODO: return struct mem_access_result */
-static int modify_privilege_for_virt2phys_mode(struct target *target, riscv_reg_t *mstatus, riscv_reg_t *mstatus_old,
-		riscv_reg_t *dcsr, riscv_reg_t *dcsr_old)
+static int set_mpp_mpv(struct target *target, riscv_reg_t *mstatus,
+		riscv_reg_t *mstatus_old, riscv_reg_t *mstatush,
+		riscv_reg_t *mstatush_old, enum riscv_priv_mode mode)
 {
 	assert(mstatus);
 	assert(mstatus_old);
-	assert(dcsr);
-	assert(dcsr_old);
-	if (!riscv_virt2phys_mode_is_hw(target))
-		return ERROR_OK;
+	assert(mstatush);
+	assert(mstatush_old);
 
-	/* Read and save DCSR */
-	if (riscv_reg_get(target, dcsr, GDB_REGNO_DCSR) != ERROR_OK)
-		return ERROR_FAIL;
-	*dcsr_old = *dcsr;
-
-	/* Read and save MSTATUS */
 	if (riscv_reg_get(target, mstatus, GDB_REGNO_MSTATUS) != ERROR_OK)
 		return ERROR_FAIL;
 	*mstatus_old = *mstatus;
 
-	/* If we come from m-mode with mprv set, we want to keep mpp */
-	if (get_field(*dcsr, CSR_DCSR_PRV) == PRV_M)
-		return ERROR_OK;
-
-	/* mstatus.mpp <- dcsr.prv */
-	*mstatus = set_field(*mstatus, MSTATUS_MPP, get_field(*dcsr, CSR_DCSR_PRV));
-
-	/* mstatus.mprv <- 1 */
 	*mstatus = set_field(*mstatus, MSTATUS_MPRV, 1);
+	*mstatus = set_field(*mstatus, MSTATUS_MPP, riscv_priv_mode_to_prv(mode));
 
-	/* Write MSTATUS */
+	/* The caller refuses a guest access, so MPV is cleared. */
+	if (riscv_supports_extension(target, 'H')) {
+		if (riscv_xlen(target) == 32) {
+			if (riscv_reg_get(target, mstatush, GDB_REGNO_MSTATUSH) != ERROR_OK)
+				return ERROR_FAIL;
+			*mstatush_old = *mstatush;
+			*mstatush = set_field(*mstatush, MSTATUSH_MPV, 0);
+		} else {
+			*mstatus = set_field(*mstatus, MSTATUS_MPV, 0);
+		}
+	}
+
 	if (*mstatus != *mstatus_old &&
 			riscv_reg_set(target, GDB_REGNO_MSTATUS, *mstatus) != ERROR_OK)
 		return ERROR_FAIL;
 
-	/* dcsr.mprven <- 1 */
-	*dcsr = set_field(*dcsr, CSR_DCSR_MPRVEN, CSR_DCSR_MPRVEN_ENABLED);
-
-	/* Write DCSR */
-	if (*dcsr != *dcsr_old &&
-			riscv_reg_set(target, GDB_REGNO_DCSR, *dcsr) != ERROR_OK)
+	if (*mstatush != *mstatush_old &&
+			riscv_reg_set(target, GDB_REGNO_MSTATUSH, *mstatush) != ERROR_OK)
 		return ERROR_FAIL;
 
 	return ERROR_OK;
 }
 
-static int restore_privilege_from_virt2phys_mode(struct target *target, riscv_reg_t mstatus, riscv_reg_t mstatus_old,
-		riscv_reg_t dcsr, riscv_reg_t dcsr_old)
+static int restore_mpp_mpv(struct target *target, riscv_reg_t mstatus,
+		riscv_reg_t mstatus_old, riscv_reg_t mstatush, riscv_reg_t mstatush_old)
 {
-	if (!riscv_virt2phys_mode_is_hw(target))
-		return ERROR_OK;
-
-	/* Restore MSTATUS */
 	if (mstatus != mstatus_old &&
 			riscv_reg_set(target, GDB_REGNO_MSTATUS, mstatus_old) != ERROR_OK)
 		return ERROR_FAIL;
 
-	/* Restore DCSR */
+	if (mstatush != mstatush_old &&
+			riscv_reg_set(target, GDB_REGNO_MSTATUSH, mstatush_old) != ERROR_OK)
+		return ERROR_FAIL;
+
+	return ERROR_OK;
+}
+
+/* TODO: return struct mem_access_result */
+static int modify_privilege_progbuf(struct target *target, riscv_reg_t *mstatus,
+		riscv_reg_t *mstatus_old, riscv_reg_t *mstatush, riscv_reg_t *mstatush_old,
+		riscv_reg_t *dcsr, riscv_reg_t *dcsr_old, enum riscv_priv_mode mode)
+{
+	assert(mstatus);
+	assert(mstatus_old);
+	assert(mstatush);
+	assert(mstatush_old);
+	assert(dcsr);
+	assert(dcsr_old);
+
+	if (riscv_reg_get(target, dcsr, GDB_REGNO_DCSR) != ERROR_OK)
+		return ERROR_FAIL;
+	*dcsr_old = *dcsr;
+
+	*dcsr = set_field(*dcsr, CSR_DCSR_MPRVEN, mode == RISCV_MODE_M ?
+			CSR_DCSR_MPRVEN_DISABLED : CSR_DCSR_MPRVEN_ENABLED);
+
+	if (*dcsr != *dcsr_old &&
+			riscv_reg_set(target, GDB_REGNO_DCSR, *dcsr) != ERROR_OK)
+		return ERROR_FAIL;
+
+	if (mode == RISCV_MODE_M)
+		return ERROR_OK;
+
+	return set_mpp_mpv(target, mstatus, mstatus_old, mstatush, mstatush_old, mode);
+}
+
+static int restore_privilege_progbuf(struct target *target, riscv_reg_t mstatus, riscv_reg_t mstatus_old,
+		riscv_reg_t mstatush, riscv_reg_t mstatush_old, riscv_reg_t dcsr, riscv_reg_t dcsr_old)
+{
+	if (restore_mpp_mpv(target, mstatus, mstatus_old, mstatush, mstatush_old) != ERROR_OK)
+		return ERROR_FAIL;
+
 	if (dcsr != dcsr_old &&
 			riscv_reg_set(target, GDB_REGNO_DCSR, dcsr_old) != ERROR_OK)
 		return ERROR_FAIL;
@@ -3627,6 +3658,8 @@ enum mem_access_result_type {
 			SKIPPED, "skipped (abstract command argument write failed)") \
 	MEM_ACCESS_RESULT_HANDLER(MEM_ACCESS_SKIPPED_PRIV_MOD_FAILED, \
 			SKIPPED, "skipped (privilege modification failed)") \
+	MEM_ACCESS_RESULT_HANDLER(MEM_ACCESS_SKIPPED_NO_HW_TRANSLATION, \
+			SKIPPED, "skipped (backend cannot translate a virtual address)") \
 	MEM_ACCESS_RESULT_HANDLER(MEM_ACCESS_FAILED, FAILED, "failed") \
 	MEM_ACCESS_RESULT_HANDLER(MEM_ACCESS_FAILED_DM_ACCESS_FAILED, \
 			FAILED, "failed (DM register access failed)") \
@@ -3778,6 +3811,12 @@ mem_should_skip_sysbus(struct target *target, const struct riscv_mem_access_args
 	const bool is_read = riscv_mem_access_is_read(args);
 	const char *const access_type = is_read ? "read" : "write";
 
+	if (args.mode != RISCV_MODE_M) {
+		LOG_TARGET_DEBUG(target, "Skipping mem %s via system bus - "
+				"no hardware address translation for a virtual address", access_type);
+		return mem_access_result(MEM_ACCESS_SKIPPED_NO_HW_TRANSLATION);
+	}
+
 	if (!sba_supports_access(target, args.size)) {
 		LOG_TARGET_DEBUG(target, "Skipping mem %s via system bus - "
 				"unsupported size.", access_type);
@@ -3809,6 +3848,12 @@ mem_should_skip_abstract(struct target *target, const struct riscv_mem_access_ar
 
 	const bool is_read = riscv_mem_access_is_read(args);
 	const char *const access_type = is_read ? "read" : "write";
+	if (args.mode != RISCV_MODE_M) {
+		/* Temporary, until aamvirtual support lands. */
+		LOG_TARGET_DEBUG(target, "Skipping mem %s via abstract access - "
+				"virtual access (aamvirtual) not implemented yet", access_type);
+		return mem_access_result(MEM_ACCESS_SKIPPED_NO_HW_TRANSLATION);
+	}
 	if (args.size > 8) {
 		/* TODO: Add 128b support if it's ever used. Involves modifying
 				 read/write_abstract_arg() to work on two 64b values. */
@@ -4542,18 +4587,20 @@ access_memory_progbuf(struct target *target, const struct riscv_mem_access_args 
 
 	riscv_reg_t mstatus = 0;
 	riscv_reg_t mstatus_old = 0;
+	riscv_reg_t mstatush = 0;
+	riscv_reg_t mstatush_old = 0;
 	riscv_reg_t dcsr = 0;
 	riscv_reg_t dcsr_old = 0;
-	if (modify_privilege_for_virt2phys_mode(target,
-			&mstatus, &mstatus_old, &dcsr, &dcsr_old) != ERROR_OK)
+	if (modify_privilege_progbuf(target, &mstatus, &mstatus_old, &mstatush,
+			&mstatush_old, &dcsr, &dcsr_old, args.mode) != ERROR_OK)
 		return mem_access_result(MEM_ACCESS_SKIPPED_PRIV_MOD_FAILED);
 
 	struct mem_access_result result = is_read ?
 			read_memory_progbuf(target, args) :
 			write_memory_progbuf(target, args);
 
-	if (restore_privilege_from_virt2phys_mode(target,
-			mstatus, mstatus_old, dcsr, dcsr_old) != ERROR_OK)
+	if (restore_privilege_progbuf(target, mstatus, mstatus_old,
+			mstatush, mstatush_old, dcsr, dcsr_old) != ERROR_OK)
 		return mem_access_result(MEM_ACCESS_FAILED_PRIV_MOD_FAILED);
 
 	return result;
@@ -4618,6 +4665,10 @@ riscv013_access_memory(struct target *target, const struct riscv_mem_access_args
 
 	const bool is_read = riscv_mem_access_is_read(args);
 	const char *const access_type = is_read ? "read" : "write";
+	LOG_TARGET_DEBUG(target, "Memory %s: addr=0x%" TARGET_PRIxADDR
+			" (%s), size=%" PRIu32 ", count=%" PRIu32 ", increment=%" PRIu32,
+			access_type, args.address, args.mode == RISCV_MODE_M ? "physical" : "virtual",
+			args.size, args.count, args.increment);
 	if (!is_read && args.increment != args.size) {
 		LOG_TARGET_ERROR(target, "Write increment size has to be equal to element size");
 		return ERROR_NOT_IMPLEMENTED;

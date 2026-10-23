@@ -142,18 +142,24 @@ struct tdata1_cache {
 	struct list_head elem_tdata1;
 };
 
-bool riscv_virt2phys_mode_is_hw(const struct target *target)
+static bool riscv_virt2phys_mode_is_hw(const struct target *target)
 {
 	assert(target);
 	RISCV_INFO(r);
 	return r->virt2phys_mode == RISCV_VIRT2PHYS_MODE_HW;
 }
 
-bool riscv_virt2phys_mode_is_sw(const struct target *target)
+static bool riscv_virt2phys_mode_is_sw(const struct target *target)
 {
 	assert(target);
 	RISCV_INFO(r);
 	return r->virt2phys_mode == RISCV_VIRT2PHYS_MODE_SW;
+}
+
+static bool riscv_virt2phys_mode_is_off(const struct target *target)
+{
+	assert(target);
+	return riscv_info(target)->virt2phys_mode == RISCV_VIRT2PHYS_MODE_OFF;
 }
 
 const char *riscv_virt2phys_mode_to_str(enum riscv_virt2phys_mode mode)
@@ -3021,59 +3027,115 @@ static int riscv_target_resume(struct target *target, bool current,
 			debug_execution, false);
 }
 
-static int riscv_effective_privilege_mode(struct target *target, int *v_mode, int *effective_mode)
+static const char *riscv_priv_mode_to_str(enum riscv_priv_mode mode)
 {
+	switch (mode) {
+	case RISCV_MODE_M:
+		return "M";
+	case RISCV_MODE_S:
+		return "S";
+	case RISCV_MODE_U:
+		return "U";
+	case RISCV_MODE_VS:
+		return "VS";
+	case RISCV_MODE_VU:
+		return "VU";
+	case N_RISCV_MODE:
+		break;
+	}
+	assert(false && "Unknown privilege mode");
+	return "?";
+}
+
+static bool riscv_priv_mode_is_guest(enum riscv_priv_mode mode)
+{
+	return mode == RISCV_MODE_VS || mode == RISCV_MODE_VU;
+}
+
+static int riscv_effective_privilege_mode(struct target *target, enum riscv_priv_mode *mode)
+{
+	assert(target);
+	assert(mode);
+
 	riscv_reg_t priv;
 	if (riscv_reg_get(target, &priv, GDB_REGNO_PRIV) != ERROR_OK) {
 		LOG_TARGET_ERROR(target, "Failed to read priv register.");
 		return ERROR_FAIL;
 	}
-	*v_mode = get_field(priv, VIRT_PRIV_V);
 
-	riscv_reg_t mstatus;
-	if (riscv_reg_get(target, &mstatus, GDB_REGNO_MSTATUS) != ERROR_OK) {
+	unsigned int dcsr_prv = get_field(priv, VIRT_PRIV_PRV);
+	bool halted_in_m = dcsr_prv == PRV_M;
+
+	/* MPRV only applies in Machine mode, so below it mstatus says nothing
+	 * about the mode an access runs in. */
+	riscv_reg_t mstatus = 0;
+	if (halted_in_m
+			&& riscv_reg_get(target, &mstatus, GDB_REGNO_MSTATUS) != ERROR_OK) {
 		LOG_TARGET_ERROR(target, "Failed to read mstatus register.");
 		return ERROR_FAIL;
 	}
 
-	if (get_field(mstatus, MSTATUS_MPRV))
-		*effective_mode = get_field(mstatus, MSTATUS_MPP);
-	else
-		*effective_mode = get_field(priv, VIRT_PRIV_PRV);
+	bool mprv = halted_in_m && get_field(mstatus, MSTATUS_MPRV);
+	unsigned int prv = mprv ? get_field(mstatus, MSTATUS_MPP) : dcsr_prv;
 
-	LOG_TARGET_DEBUG(target, "Effective mode=%d; v=%d", *effective_mode, *v_mode);
-
-	return ERROR_OK;
-}
-
-static int riscv_mmu(struct target *target, bool *enabled)
-{
-	*enabled = false;
-
-	if (!riscv_virt2phys_mode_is_sw(target))
+	/* MPV is ignored where MPP names Machine mode, so v is not read there. */
+	if (prv == PRV_M) {
+		*mode = RISCV_MODE_M;
+		LOG_TARGET_DEBUG(target, "Effective privilege mode: %s", riscv_priv_mode_to_str(*mode));
 		return ERROR_OK;
+	}
 
-	/* Don't use MMU in explicit or effective M (machine) mode */
-	riscv_reg_t priv;
-	if (riscv_reg_get(target, &priv, GDB_REGNO_PRIV) != ERROR_OK) {
-		LOG_TARGET_ERROR(target, "Failed to read priv register.");
+	bool v = false;
+	if (!mprv) {
+		v = get_field(priv, VIRT_PRIV_V);
+	} else if (!riscv_supports_extension(target, 'H')) {
+		v = false;
+	} else if (riscv_xlen(target) != 32) {
+		v = get_field(mstatus, MSTATUS_MPV);
+	} else {
+		riscv_reg_t mstatush;
+		if (riscv_reg_get(target, &mstatush, GDB_REGNO_MSTATUSH) != ERROR_OK) {
+			LOG_TARGET_ERROR(target, "Failed to read mstatush register");
+			return ERROR_FAIL;
+		}
+		v = get_field(mstatush, MSTATUSH_MPV);
+	}
+
+	if (prv == PRV_S) {
+		*mode = v ? RISCV_MODE_VS : RISCV_MODE_S;
+	} else if (prv == PRV_U) {
+		*mode = v ? RISCV_MODE_VU : RISCV_MODE_U;
+	} else {
+		LOG_TARGET_ERROR(target, "Hart reports a reserved privilege mode %u in %s, "
+				"which is a hardware bug", prv, mprv ? "mstatus.MPP" : "dcsr.prv");
 		return ERROR_FAIL;
 	}
 
-	int effective_mode;
-	int v_mode;
-	if (riscv_effective_privilege_mode(target, &v_mode, &effective_mode) != ERROR_OK)
-		return ERROR_FAIL;
+	LOG_TARGET_DEBUG(target, "Effective privilege mode: %s", riscv_priv_mode_to_str(*mode));
+	return ERROR_OK;
+}
+
+static int riscv_mmu_impl(struct target *target,
+		enum riscv_priv_mode mode, bool *enabled)
+{
+	assert(target);
+	assert(enabled);
+
+	*enabled = false;
+
+	if (mode == RISCV_MODE_M) {
+		LOG_TARGET_DEBUG(target, "SATP/MMU ignored in Machine mode");
+		return ERROR_OK;
+	}
 
 	unsigned int xlen = riscv_xlen(target);
 
-	if (v_mode) {
+	if (riscv_priv_mode_is_guest(mode)) {
 		/* In VU or VS mode, MMU is considered enabled when
 		 * either hgatp or vsatp mode is not OFF */
 		riscv_reg_t vsatp;
 		if (riscv_reg_get(target, &vsatp, GDB_REGNO_VSATP) != ERROR_OK) {
-			LOG_TARGET_ERROR(target, "Failed to read vsatp register; priv=0x%" PRIx64,
-					priv);
+			LOG_TARGET_ERROR(target, "Failed to read vsatp register");
 			return ERROR_FAIL;
 		}
 		/* vsatp is identical to satp, so we can use the satp macros. */
@@ -3085,8 +3147,7 @@ static int riscv_mmu(struct target *target, bool *enabled)
 
 		riscv_reg_t hgatp;
 		if (riscv_reg_get(target, &hgatp, GDB_REGNO_HGATP) != ERROR_OK) {
-			LOG_TARGET_ERROR(target, "Failed to read hgatp register; priv=0x%" PRIx64,
-					priv);
+			LOG_TARGET_ERROR(target, "Failed to read hgatp register");
 			return ERROR_FAIL;
 		}
 		if (get_field(hgatp, RISCV_HGATP_MODE(xlen)) != HGATP_MODE_OFF) {
@@ -3096,12 +3157,6 @@ static int riscv_mmu(struct target *target, bool *enabled)
 			LOG_TARGET_DEBUG(target, "No V-mode address translation enabled.");
 		}
 
-		return ERROR_OK;
-	}
-
-	/* Don't use MMU in explicit or effective M (machine) mode */
-	if (effective_mode == PRV_M) {
-		LOG_TARGET_DEBUG(target, "SATP/MMU ignored in Machine mode.");
 		return ERROR_OK;
 	}
 
@@ -3120,6 +3175,23 @@ static int riscv_mmu(struct target *target, bool *enabled)
 	}
 
 	return ERROR_OK;
+}
+
+static int riscv_mmu(struct target *target, bool *enabled)
+{
+	assert(target);
+	assert(enabled);
+
+	*enabled = false;
+
+	if (!riscv_virt2phys_mode_is_sw(target))
+		return ERROR_OK;
+
+	enum riscv_priv_mode mode = RISCV_MODE_M;
+	if (riscv_effective_privilege_mode(target, &mode) != ERROR_OK)
+		return ERROR_FAIL;
+
+	return riscv_mmu_impl(target, mode, enabled);
 }
 
 /* Translate address from virtual to physical, using info and ppn.
@@ -3165,6 +3237,7 @@ static int riscv_address_translate(struct target *target,
 		assert(info->pte_shift <= 3);
 		const struct riscv_mem_access_args args = {
 			.address = pte_address,
+			.mode = RISCV_MODE_M,
 			.read_buffer = buffer,
 			.size = 4,
 			.increment = 4,
@@ -3332,8 +3405,20 @@ static int riscv_virt2phys_v(struct target *target, target_addr_t virtual, targe
 
 static int riscv_virt2phys(struct target *target, target_addr_t virtual, target_addr_t *physical)
 {
-	bool enabled;
-	if (riscv_mmu(target, &enabled) != ERROR_OK)
+	/* TODO: translate the address in the other modes as well. */
+	if (!riscv_virt2phys_mode_is_sw(target)) {
+		*physical = virtual;
+		LOG_TARGET_DEBUG(target, "Address translation is off. 0x%" TARGET_PRIxADDR
+				" -> 0x%" TARGET_PRIxADDR, virtual, *physical);
+		return ERROR_OK;
+	}
+
+	enum riscv_priv_mode mode = RISCV_MODE_M;
+	if (riscv_effective_privilege_mode(target, &mode) != ERROR_OK)
+		return ERROR_FAIL;
+
+	bool enabled = false;
+	if (riscv_mmu_impl(target, mode, &enabled) != ERROR_OK)
 		return ERROR_FAIL;
 	if (!enabled) {
 		*physical = virtual;
@@ -3341,13 +3426,7 @@ static int riscv_virt2phys(struct target *target, target_addr_t virtual, target_
 		return ERROR_OK;
 	}
 
-	riscv_reg_t priv;
-	if (riscv_reg_get(target, &priv, GDB_REGNO_PRIV) != ERROR_OK) {
-		LOG_TARGET_ERROR(target, "Failed to read priv register.");
-		return ERROR_FAIL;
-	}
-
-	if (priv & VIRT_PRIV_V)
+	if (riscv_priv_mode_is_guest(mode))
 		return riscv_virt2phys_v(target, virtual, physical);
 
 	riscv_reg_t satp_value;
@@ -3408,6 +3487,7 @@ static int riscv_read_phys_memory(struct target *target, target_addr_t phys_addr
 {
 	const struct riscv_mem_access_args args = {
 		.address = phys_address,
+		.mode = RISCV_MODE_M,
 		.read_buffer = buffer,
 		.size = size,
 		.count = count,
@@ -3422,6 +3502,7 @@ static int riscv_write_phys_memory(struct target *target, target_addr_t phys_add
 {
 	const struct riscv_mem_access_args args = {
 		.address = phys_address,
+		.mode = RISCV_MODE_M,
 		.write_buffer = buffer,
 		.size = size,
 		.count = count,
@@ -3432,7 +3513,7 @@ static int riscv_write_phys_memory(struct target *target, target_addr_t phys_add
 	return r->access_memory(target, args);
 }
 
-static int riscv_rw_memory(struct target *target, const struct riscv_mem_access_args args)
+static int riscv_rw_memory(struct target *target, struct riscv_mem_access_args args)
 {
 	assert(riscv_mem_access_is_valid(args));
 
@@ -3443,12 +3524,34 @@ static int riscv_rw_memory(struct target *target, const struct riscv_mem_access_
 		return ERROR_OK;
 	}
 
-	bool mmu_enabled;
-	int result = riscv_mmu(target, &mmu_enabled);
+	struct riscv_info *r = riscv_info(target);
+
+	args.mode = RISCV_MODE_M;
+
+	if (riscv_virt2phys_mode_is_off(target))
+		return r->access_memory(target, args);
+
+	enum riscv_priv_mode mode = RISCV_MODE_M;
+	if (riscv_effective_privilege_mode(target, &mode) != ERROR_OK)
+		return ERROR_FAIL;
+
+	if (riscv_virt2phys_mode_is_hw(target)) {
+		if (riscv_priv_mode_is_guest(mode)) {
+			LOG_TARGET_ERROR(target, "Cannot translate a guest access in "
+					"hardware: OpenOCD does not set mstatus.MPV yet. "
+					"Use 'riscv virt2phys_mode sw'.");
+			return ERROR_FAIL;
+		}
+
+		args.mode = mode;
+		return r->access_memory(target, args);
+	}
+
+	bool mmu_enabled = false;
+	int result = riscv_mmu_impl(target, mode, &mmu_enabled);
 	if (result != ERROR_OK)
 		return result;
 
-	RISCV_INFO(r);
 	if (!mmu_enabled)
 		return r->access_memory(target, args);
 
@@ -5297,6 +5400,7 @@ COMMAND_HANDLER(handle_repeat_read)
 	}
 	const struct riscv_mem_access_args args = {
 		.address = address,
+		.mode = RISCV_MODE_M,
 		.read_buffer = buffer,
 		.size = size,
 		.count = count,
@@ -5693,7 +5797,7 @@ static const struct command_registration riscv_exec_command_handlers[] = {
 		.handler = handle_repeat_read,
 		.mode = COMMAND_ANY,
 		.usage = "count address [size=4]",
-		.help = "Repeatedly read the value at address."
+		.help = "Repeatedly read the value at the given physical address."
 	},
 	{
 		.name = "set_command_timeout_sec",
