@@ -49,57 +49,57 @@ silently keep serving a stale duplicate from a shadowed search path.
 
 ## What was merged
 
-688 candidate repositories were surveyed — 499 forks of upstream plus 189
+689 candidate repositories were surveyed — 500 forks of upstream plus 189
 independent repositories found by search — deduplicated across repositories,
 and stripped of files that are equivalent to what upstream already ships.
 
 | | count | notes |
 |---|---:|---|
-| `tcl/` script files | 712 | 696 `.cfg` plus 16 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
-| `src/` C sources | 73 | 37 `.c` plus 36 `.h`; **47 wired into the build**, 26 staged but not yet registered |
+| `tcl/` script files | 702 | 686 `.cfg` plus 16 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
+| `src/` C sources | 65 | 35 `.c` plus 30 `.h`; **47 wired into the build**, 18 staged but not yet registered |
 | duplicate copies collapsed | 6910 | one winner kept per path |
 | files dropped as upstream-equivalent | 7376 | upstream already ships them, or ships them under another path |
 | candidates rejected as unusable | 621 | build-system files, non-C payloads and core internals that exist upstream under the same name |
 
-Of the 1298 unique paths the survey identified, **795 landed in the tree** at the
-time of the survey. Since then 11 of those were removed on purpose — see the
-last row of the table below — while a handful of further files came in as
-dependencies of landed configs, leaving **785 tracked third-party files**
-today.
+Of the 1298 unique paths the survey identified, 747 tier-1 records were
+marked imported and 697 of them are still in the tree today; 50 were dropped
+on purpose after import and 147 never landed. A further 5 files came in as
+dependencies of landed configs without a tier-1 record of their own, leaving
+**767 tracked third-party files** today — 702 under `tcl/` plus 65 under `src/`. The
+ledger closes: 697 + 5 = 702.
 
-The 331 C sources that did not land all need per-backend porting: they are
-complete implementations of a driver or an architecture, but written against
-an older OpenOCD API. `src/target` holds the largest group (133 files),
-then `src/flash` (125), `src/jtag` (71) and `src/server` (2).
+The 260 C sources that did not land all need per-backend porting: they are
+published forks of drivers that still call an older OpenOCD API. `src/flash` holds
+the largest group (125 files), then `src/target` (85) and `src/jtag`
+(50).
 
-The 172 TCL files that did not land break down as:
+The 147 tier-1 TCL paths that never landed are, mechanically, the tier-1 records
+that are neither in the tree nor listed in `removed_from_tree`. The old "ready to
+import / needs a backend / depends on a missing file / not retrievable" split was a
+hand classification of an earlier snapshot that no tool reproduces any more, so it
+has been dropped from this README. What is reproducible is the tier-1 ledger:
+894 candidates, 747 marked imported, 697 still in the tree,
+50 removed after import, 147 never landed.
 
-| | count | why |
-|---|---:|---|
-| upstream already ships them | 73 | upstream moved them into a subdirectory, so the survey saw them under a flat name |
-| needs a backend this tree does not have | 46 | they drive a probe or a chip family whose C code was never published — Infineon TriCore, the Anlogic `al_link` probe, WCH RISC-V, the ESP32 GPIO probe, the ST-LINK external loader family, and similar |
-| depends on a file that is itself missing | 25 | a `source [find ...]` line points at a config that did not land |
-| not retrievable from the survey cache | 5 | the survey recorded the path but the file body was never fetched |
-| the 12 candidates once called "ready to import" | 12 | none holds; 9 need `interface/ti/xds100v2.cfg` or `xds100v3.cfg` first, 3 were path confusion |
-| dropped from the tree after import | 11 | 7 redundant TI `swd_native` boards, `target/nrf_common.cfg`, `interface/stlink-usb.cfg`, both `interface/calao-usb-a9260-c0*.cfg` |
+The two wrappers the TI boards need (`interface/ti/xds100v2.cfg`, `xds100v3.cfg`),
+the 3 paths that were already in the tree under a flat-spelling parent, and the
+9 TI board configs that depend on those wrappers are all listed per file
+in `manifest/consolidated.json` under `not_imported` (407 paths in total).
 
-There is no "ready to import" group any more. Every one of the 172 either
-needs a wrapper file, needs a C backend, or was removed on purpose.
-
-Two more groups complete the count of **785 files**, each with its own
-provenance entry:
+Two more groups complete the count of **767 files**, each with its own provenance
+entry:
 
 - **21 files pulled in as dependencies** — a config that `source`s another
   config brings the referenced file along with it. They are marked
   `imported_as: dependency` in the manifest.
 - **1 file that upstream also ships under the same name** —
   `tcl/target/adspsc58x.cfg`, whose content differs from upstream's
-  `tcl/target/adsp-sc58x.cfg`. The tree keeps the third-party version and
-  `tools/verify_tree.py` reports the collision as a warning.
+  `tcl/target/adsp-sc58x.cfg`. The tree keeps the third-party version, and the
+  collision is one of the 25 warnings `verify_tree` reports.
 
-Upstream ships 2203 files; this tree ships 3047.
+Upstream ships 2203 files; this tree ships 3030.
 
-**All 785 imported files are pinned to the exact commit they came from.** Any
+**All 767 imported files are pinned to the exact commit they came from.** Any
 file can be traced back to the fork and the commit that published it:
 
 ```bash
@@ -111,7 +111,7 @@ print(entry["source_repo"], entry["source_branch"], entry["source_commit"], entr
 PY
 ```
 
-The survey covered **688 candidate repositories**; 56 of them
+The survey covered **689 candidate repositories**; 53 of them
 contributed at least one file that is still in the tree.
 
 ### The `tcl/` files work immediately
@@ -130,7 +130,7 @@ exist.
 
 ### The `src/` files are split
 
-47 of the 73 new C sources and headers are wired into the build — 24 `.c`
+47 of the 65 new C sources and headers are wired into the build — 24 `.c`
 files that register a working `target_type` or `adapter_driver`, plus the
 headers they need:
 
@@ -152,14 +152,22 @@ ignores a second registration of an existing command name, so an unprefixed
 second backend would have been driven by the first one's handler. With the
 prefixes, all three coexist.
 
-The remaining 26 — 13 `.c` and 13 `.h`: the `arc32` family,
-`adi_v5_cmsis_dap`, `aarch64_coproc_reg`, and the `arc_ftdi_cjtag` /
-`cmsis_dap_wch` / `jtag_esp_remote` / `jtag_tcp` drivers, plus the headers
-only those files include — are **present in the tree but not compiled**. They
-target upstream APIs that have since moved, and registering them would need
-the same porting work described below. Shipping them unregistered is
-deliberate: the code is there, visible, reviewable, and harmless until it is
-wired up.
+The remaining 18 — 11 `.c` and 7 `.h` — are **present in the tree but not
+compiled**: `al_link.c` and `al_link_cyusb.c`, `cmsis_dap_wch.c`, `esp_gpio.c`,
+`jtag_esp_remote.c`, `jtag_tcp.c`, `wlinke.c`, `rbb_server.c`,
+`aarch64_coproc_reg.c`, `wch_riscv.c` and `wch_riscv-013.c`, plus the headers
+only those files include (`al_link_cyusb.h`, `esp_gpio.h`, `rbb_server.h`,
+`aarch64_system_registers.h`, `aarch64_system_registers_defs.h`,
+`altera_virtual_jtag.h`, `wch_riscv.h`). The reasons differ per file — the `arc32`
+family that used to sit here was staged, found unbuildable and dropped in
+`7ffeda047` — and registering each one needs the porting work described below.
+Shipping them unregistered is deliberate: the code is there, visible, reviewable,
+and harmless until it is wired up.
+
+The per-file reasons are in `docs/02-usage.md`. The old claim that all of them
+"target upstream APIs that have moved" is not true for `jtag_tcp.c`,
+`jtag_esp_remote.c`, `cmsis_dap_wch.c` and `aarch64_coproc_reg.c`, which never
+existed upstream, nor for the 11 files newly staged in `21ab67574`.
 
 ### The ST-LINK external loader driver
 
@@ -255,15 +263,15 @@ things:
   fork published; only the terminators differ.
 
 The distinction matters. An earlier revision of this repository failed its own
-integrity check with 543 mismatches, because the tree had been rebuilt in
-text mode on Windows and every imported file was silently stored with CRLF
-while the manifest described the LF original. The gate could not tell "this
-was edited" from "this was checked out on a Windows host". Both are fixed now:
-the tree is LF everywhere, 646 of the 785 imported files still match their
-published digest byte for byte, 4 are now a terminator-only difference, and
-135 carry real local edits (24 of those also had their terminators normalised)
-— the target API ports, the relocated `source [find ...]` paths, the
-third-party driver fixes and the `rvmax` / `rv32m1` backends.
+integrity check with 543 mismatches, because the tree had been rebuilt in text
+mode on Windows and every imported file was silently stored with CRLF while the
+manifest described the LF original. The gate could not tell "this was edited"
+from "this was checked out on a Windows host". Both are fixed now: the tree is
+LF everywhere, 548 of the 767 imported files still match their published
+digest byte for byte, 2 are a terminator-only difference, and 217 carry real
+local edits (26 of those also had their terminators normalised) — the target
+API ports, the relocated `source [find ...]` paths, the third-party driver fixes
+and the `rvmax` / `rv32m1` backends.
 
 Files that were deliberately removed stay in the manifests under
 `removed_from_tree`, with the reason and the commit that removed them. The
@@ -276,15 +284,15 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 785
-on disk  : 785
+recorded : 767
+on disk  : 767
 errors   : 0
-warns    : 23
+warns    : 25
 VERIFY: PASS
 ```
 
-The 23 warnings are one file whose name collides with an upstream file but
-whose content differs (kept, deliberately) and 22 files whose license GitHub
+The 25 warnings are one file whose name collides with an upstream file but
+whose content differs (kept, deliberately) and 24 files whose license GitHub
 could not resolve.
 
 ### Other tools
@@ -334,9 +342,19 @@ every block it owns so the script can find and replace its own work.
 | [`docs/01-inventory.md`](docs/01-inventory.md) | the inventory: how many repositories, how many files, where they came from |
 | [`docs/02-usage.md`](docs/02-usage.md) | usage notes, and the list of known limitations |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | per-file license table |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 785 imported files |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 767 imported files |
 
 ---
+
+## Releases
+
+Fork releases are tagged `v<upstream>-fork.<n>` — an upstream `developer` point
+release plus a fork sequence number — and built by
+[`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml). Pushing a tag
+produces `openocd-<tag>-x86_64-w64-mingw32.tar.gz` and the Release itself is
+created by CI with `gh`; nothing is published from a local machine. See
+[`docs/04-release.md`](docs/04-release.md) for the process and for the checklist
+to run before the next tag, and [`CHANGELOG.md`](CHANGELOG.md) for what changed.
 
 ## License
 
@@ -344,9 +362,9 @@ The OpenOCD sources inherited from upstream are GPL-2.0-or-later; the
 documentation is GFDL-1.2-no-invariants-or-later. See `COPYING` and `LICENSES/`.
 
 **The imported third-party files are not covered by that blanket statement.**
-Of 785 files, GitHub resolved 135 as GPL-2.0, 1 as GPL-2.0-or-later, 627 as
+Of 767 files, GitHub resolved 123 as GPL-2.0, 5 as GPL-2.0-or-later, 615 as
 `NOASSERTION` (which means *GitHub could not determine a license* — not that it
-is permissive) and 22 as unresolvable. Some `NOASSERTION` files carry their own
+is permissive) and 24 as unresolvable. Some `NOASSERTION` files carry their own
 proprietary notices, for example the Analog Devices flash algorithms, which
 state that the software is proprietary to Analog Devices, Inc.
 
@@ -358,26 +376,25 @@ first. The `LICENSE` file spells this out in full.
 
 ## Known limitations
 
-- **26 of the 73 new C sources and headers are not compiled** (13 `.c`, 13
-  `.h`). They are staged in the tree with their provenance intact, but they
-  target upstream APIs that have moved. Registering them needs per-backend
-  porting work.
-- **The 12 "ready to import" TCL candidates do not survive a path check.**
-  After the subdirectory blind spot was fixed and 252 configs were imported, a
-  pass over the configs that still had no file in the tree flagged 12
-  whose `source [find ...]` references appeared to resolve. Checked against
-  full paths, none of them holds: 3 (`interface/ftdi/calao-usb-a9260-c01.cfg`,
-  `-c02.cfg`, `cc3200lp.cfg`) are already in the tree, just under
-  `tcl/interface/` rather than `tcl/interface/ftdi/`, and the 9 TI board
-  configs all `source [find interface/ti/xds100v2.cfg]` or `xds100v3.cfg`,
-  two wrappers this tree does not carry (it has `ftdi/xds100v2.cfg`). The
-  original pass matched basenames instead of paths. Importing those 9 needs
-  the two wrappers added first. Another 46 need a backend this tree does not have
-  (Infineon TriCore, Anlogic `al_link`, WCH RISC-V, the ESP32 GPIO probe, the
-  ST-LINK external loader family), 25 sit on a config that itself did not land,
-  and 5 were never fetched from the survey cache. The full breakdown is in
-  `manifest/consolidated.json` under `not_imported`; the per-file analysis of
-  the missing C backends is in `manifest/nor-driver-scan.json`.
+- **18 of the 65 new C sources and headers are not compiled** (11 `.c`,
+  7 `.h`). They are staged in the tree with their provenance intact, but they
+  target APIs that have moved — or, for the 11 files staged in `21ab67574` and for
+  `jtag_tcp.c` / `jtag_esp_remote.c` / `cmsis_dap_wch.c` / `aarch64_coproc_reg.c`,
+  upstream APIs that never existed. Registering them needs per-backend porting work.
+- **The “ready to import” TCL label was wrong.** After the subdirectory blind spot
+  was fixed, a pass over the configs whose `source [find ...]` targets appeared to
+  resolve flagged 12 candidates. Checked against full paths, none of them holds:
+  3 (`interface/ftdi/calao-usb-a9260-c01.cfg`, `-c02.cfg`, `cc3200lp.cfg`) are
+  already in the tree, just under `tcl/interface/` rather than
+  `tcl/interface/ftdi/`, and the 9 TI board configs all `source [find
+  interface/ti/xds100v2.cfg]` or `xds100v3.cfg`, two wrappers this tree does not
+  carry (it has `ftdi/xds100v2.cfg`). Importing those 9 needs the two wrappers
+  added first. The old "46 need a backend / 25 depend on a missing file / 5 were
+  never fetched" split came from the same hand classification and is not
+  reproduced by any tool, so it is gone. The verifiable record is
+  `manifest/consolidated.json` under `not_imported` — 407 paths, each with its
+  source commit — and the per-file analysis of the missing C backends is in
+  `manifest/nor-driver-scan.json`.
 - **Four Synopsys board configs were left out.** `board/synopsys_amla3.cfg`,
   `board/synopsys_angel4.cfg`, `board/synopsys_haps51.cfg` and
   `board/synopsys_ml509.cfg` are published in `intel/OpenOCD` but have no
@@ -393,22 +410,22 @@ first. The `LICENSE` file spells this out in full.
 - **The upstream baseline is pinned.** `manifest/upstream.json` records the
   upstream commit the tree was forked from. `tools/sync_upstream.py` reports
   the delta against any other ref.
-- **Three ARC board configs will not work yet.** `arc_axc001.cfg`,
-  `arc_axc002.cfg` and `arc_axc003_hs36.cfg` create targets named `arc600`,
-  `arc700` and `arcv2`. Upstream's rewritten `src/target/arc.c` only provides
-  `arcv2`; the other two come from the `arc32` family that is staged but not
-  compiled. Wiring that family up is what fixes these three configs.
-- **408 imported config files still use the deprecated `-chain-position`
-  option.** Upstream has no occurrence left in `tcl/`; it prints
-  `DEPRECATED! '-chain-position' will be removed in the future, use '-tap'
-  instead` from `src/target/arm_dap.c` and `src/target/target.c`, and the PLD
-  drivers warn as well. The imported files kept the spelling their fork
-  published. There are 504 occurrences; a mechanical rewrite resolves only
-  70 of them — the cases where the object's own name equals the
-  `-chain-position` value on the same line. The other 434 need a human pass,
-  because most files define their TAP in another config and the right `-tap`
-  name has to be read off that file. Nothing is broken today — the option still works — but it is the
-  first thing to fix when a config is touched.
+- **Two ARC board configs will not work yet.** `arc_axc001.cfg` and
+  `arc_axc002.cfg` create targets named `arc600` and `arc700`. Upstream's
+  rewritten `src/target/arc.c` only provides `arcv2`, and the `arc32` family that
+  would provide the other two was staged, found unbuildable and removed in
+  `7ffeda047` — so those two configs name a backend this tree does not carry.
+  (`arc_axc003_hs36.cfg` only needs `arcv2` and works.)
+- **401 imported config files still use the deprecated `-chain-position`
+  option.** Upstream's `tcl/` has already migrated to `-dap` / `-tap` (0 hits
+  there); all 493 hits here are in imported third-party configs —
+  `target create` 366, `dap create` 119, `pld create` 6, the rest via
+  variable expansion. A mechanical rewrite resolves 69 of them, the cases where
+  the object's own name equals the `-chain-position` value on the same line. The
+  other 424 need a human pass, because most files define their TAP in another
+  config and the right `-tap` name has to be read off that file. Nothing is broken
+  today — the option still works — but it is the first thing to fix when a config
+  is touched.
 - **The `adi-usbmux` switch is inert.** `src/jtag/drivers/usbmux.c` is a
   Win32 named-pipe helper, not an adapter driver, but it is currently wired
   through `PROCESS_ADAPTERS`, so `--enable-adi-usbmux` exists without there
@@ -418,23 +435,25 @@ first. The `LICENSE` file spells this out in full.
   and the `use_usbmux` command is a no-op. The source fork treats it as a
   plain `AC_ARG_ENABLE([usbmux])` helper guarded by `USE_USBMUX`; that is
   the shape this should go back to.
-- **Three import candidates are blocked on upstream, not on this tree.**
-  The survey found support for the ESP32 GPIO bit-bang probe, the WCH
-  RISC-V debug probe and the Anlogic AL-Link probe, and they were fetched
-  and analysed. None of them can be dropped in as-is:
+- **Three staged driver sets are blocked on upstream, not on this tree.** The
+  survey found support for the ESP32 GPIO bit-bang probe, the WCH RISC-V debug
+  probe and the Anlogic AL-Link probe. All three sets are in the tree (see the
+  unwired list above), but none can be registered as-is:
   - `esp_gpio.c` / `esp_gpio.h` need the ESP-IDF GPIO and dedicated-GPIO HAL
-    (`driver/gpio.h`, `hal/gpio_ll.h`), which is not part of the OpenOCD
-    tree at all.
+    (`driver/gpio.h`, `hal/gpio_ll.h`), which is not part of the OpenOCD tree
+    at all.
   - `wlinke.c` needs a whole SDI transport layer — an `sdi.c` / `sdi.h` pair
-    under `src/jtag/` and an `sdi_ops` member on `struct adapter_driver` —
-    that upstream does not have, and `wch_riscv.c` is a private fork of
-    upstream's `riscv.c` that expects symbols upstream keeps `static`.
-  - `al_link.c` needs a `JTAG_TDI` command type, a `DEBUG_CAP_TDI_SEQ`
-    capability bit and `jtag_add_tdi_seq()` — upstream has none of them —
-    and the CyUSB backend it uses is Windows-only.
+    under `src/jtag/` and an `sdi_ops` member on `struct adapter_driver` — that
+    upstream does not have, and `wch_riscv.c` is a private fork of upstream's
+    `riscv.c` that expects symbols upstream keeps `static`.
+  - `al_link.c` needs a `JTAG_TDI` command type, a `DEBUG_CAP_TDI_SEQ` capability
+    bit and `jtag_add_tdi_seq()` — upstream has none of them — and the CyUSB
+    backend it uses is Windows-only.
 
-  They stay in `manifest/consolidated.json` under `not_imported`, with the
-  commits they came from, so the work is not lost.
+  The only import candidates still blocked on missing upstream code are the
+  9 Anlogic AL-Link target configs (`tcl/target/anlogic/*_al_link.cfg`).
+  Everything stays in `manifest/consolidated.json` under `not_imported`, with the
+  commits it came from, so the work is not lost.
 
 ---
 
@@ -458,7 +477,7 @@ Pull requests are welcome, and the bar is specific:
 
 ## Acknowledgements
 
-This tree exists because 56 repositories of other people published chip
+This tree exists because 53 repositories of other people published chip
 support that upstream would not take. Their commits, their code and their
 license statements are preserved in `manifest/`. The original authors of
 upstream OpenOCD did the work this fork is built on.

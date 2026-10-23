@@ -2,13 +2,15 @@
 
 ## 一句话结论
 
-本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **688 个** OpenOCD
-相关仓库（499 个官方 fork + 搜索命中的 189 个独立仓），跨仓去重、剔除与官方等价的
-副本后，得到 **785 个文件**的第三方支持，全部合并在**它们本该在的位置**：
+本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **689 个** OpenOCD
+相关仓库（500 个官方 fork + 搜索命中的 189 个独立仓；排名表含本 fork 自身，
+`manifest/survey.json` 记 688），跨仓去重、剔除与官方等价的
+副本后，得到 **767 个文件**的第三方支持（`tcl/` 702 个 + `src/` 65 个），
+全部合并在**它们本该在的位置**：
 
-- **713 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
-- **73 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
-  其余 26 个仍需按上游现有 API 改写后才能注册。
+- **702 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
+- **65 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
+  其余 18 个仍需按上游现有 API 改写后才能注册。
 
 另有 **7376 个与官方重复的文件已剔除**，**6910 个跨仓重复副本被折叠**
 （详见「已处理的重复问题」）。
@@ -16,65 +18,58 @@
 ## 目录结构
 
 ```
-tcl/                     ← OpenOCD 配置树：官方配置 + 712 个第三方配置
-  target/                     907  芯片目标配置（含 vendor 子目录）
-  board/                      597  开发板配置（含 flash_algorithms/）
-  interface/                  217  调试器接口
+tcl/                     ← OpenOCD 配置树：官方配置 + 702 个第三方配置
+  target/                      907  芯片目标配置（含 vendor 子目录）
+  board/                       597  开发板配置（含 flash_algorithms/）
+  interface/                   214  调试器接口
   cpld/                        21  CPLD 配置
   fpga/                        34  FPGA bitstream
   chip/                        28  芯片公共片段
   cpu/                         10  架构公共片段
 
-src/                     ← C 源码：官方源码 + 73 个第三方驱动/目标
-  target/                     149  顶层 .c（其中 20 个是第三方新架构：ARC32 / LoongArch / C28x / TMS320 / Vortex86 / VexRiscv / Quark / Microchip RI4 ...）
+src/                     ← C 源码：官方源码 + 65 个第三方驱动/目标
+  target/                      0  顶层 .c（其中 0 个是第三方新架构：LoongArch / C28x / TMS320 / Vortex86 / VexRiscv / Quark / Microchip RI4 / WCH RISC-V …）
   target/rvmax/                9  文件，3 个 .c（ADI RVMAX 后端）
   target/rv32m1/               6  文件，3 个 .c（SiFive RV32M1 后端）
-  jtag/drivers/                76  顶层 .c（其中 9 个是第三方适配器）
-  flash/nor/                    2  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）
+  jtag/drivers/                10  顶层 .c（其中 0 个是第三方适配器）
+  flash/nor/                   2  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）
 
 manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            785  个文件的来源仓库/分支/commit/SHA-256/许可证
+  PROVENANCE.json            767  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
-  repos.csv / repos.json      688 个候选仓库排名
-  licenses.csv               785  行许可证索引（逐文件）
+| `repos.csv` / `repos.json` | 689 行候选仓库排名（500 个上游 fork + 189 个独立仓；含本 fork 自身，`survey.json` 的 688 不含自身）|
+| `licenses.csv` | 767  行许可证索引（逐文件）|
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本
 ```
 
-> **894 vs 712**：`manifest/consolidated.json` 里有 894 条 tier-1 记录（上游确实没有的
-> 独立 TCL 支持项），其中 **722 条进了树**，172 条没进（分类见下）。
-> 这 722 条里有 **15 条后来被有意移除**（7 个冗余的 TI `swd_native` 板级配置、
-> 5 个上游已用 ASCII 名提供的西里尔名配置等，见下表最后一行），余下 707 条在树。
-> 一个配置 `source` 另一个配置时，被引用的文件会一起被带进来
-> （如 `tcl/interface/ftdi/*.cfg`、`tcl/board/flash_algorithms/*.cfg`），
-> 这类「只作为依赖进来、不在 imported 记录里」的文件共 5 个
-> （`tcl/chip/motorola/hsb.cfg`、`tcl/cpu/arc/arcompact.tcl`、
-> `tcl/fpga/xilinx-xc3s.cfg`、`tcl/gdb_helper.tcl`、
-> `tcl/target/adspsc58x.cfg`）。
-> 所以 `tcl/` 下的第三方文件数是 722 − 15 + 5 = **712**，与
-> `manifest/PROVENANCE.json` 核对一致（该文件的 `tcl/` 条目数也是 712）。
+> **894 vs 702**：`manifest/consolidated.json` 里有 894 条 tier-1 记录（上游确实没有的
+> 独立 TCL 支持项），其中 **747 条被标为已导入**，697 条今天还在树里，
+> 50 条导入后被有意移除（见下表最后一行），147 条从未落地（既不在树里，
+> 也不在 `removed_from_tree` 里）。
 >
-> **那 12 个「原样就能导入」的候选经复核并不成立。** 补齐子目录盲区并导入
-> 252 个配置之后，对剩下还没进树的配置重新评估，其中 12 个曾判定为
-> `source [find ...]` 引用全部可解析。按完整路径复核后，12 个全都不成立：
-> 3 个（`interface/ftdi/calao-usb-a9260-c01.cfg`、`-c02.cfg`、`cc3200lp.cfg`）
-> 早已在树里，只是落在 `tcl/interface/` 而不是 `tcl/interface/ftdi/`；
-> 另外 9 个 TI 板级配置都 `source [find interface/ti/xds100v2.cfg]` 或
-> `ti/xds100v3.cfg`，而这两个包装文件树里没有（树里只有 `ftdi/xds100v2.cfg`）。
-> 原来的判定按文件名而非路径比对，把 `ftdi/xds100v2.cfg` 当成了 `ti/xds100v2.cfg`。
-> 要导入那 9 个，得先补两个包装文件。另有 46 个需要树里还没有的后端
-> （Infineon TriCore、Anlogic `al_link`、WCH RISC-V、ESP32 GPIO 探针、
-> ST-LINK 外部加载器家族等），25 个依赖的配置本身没进树，5 个在扫描缓存里
-> 没有文件体。另有 11 个导入后又从树里删掉：7 个重复的 TI 板级配置、
-> `target/nrf_common.cfg`、`interface/stlink-usb.cfg`、两个
-> `interface/calao-usb-a9260-c0*.cfg`。
-> 与官方重复的文件在 `consolidate.py` **写 manifest 时**就剔除了，所以重跑抓取器
-> 不会把已剔除的副本再拉回来。
+> 另有 5 个文件「只作为依赖进来、不在 imported 记录里」
+> （`tcl/chip/motorola/hsb.cfg`、`tcl/cpu/arc/arcompact.tcl`、`tcl/fpga/xilinx-xc3s.cfg`、
+> `tcl/gdb_helper.tcl`、`tcl/target/adspsc58x.cfg`）。所以 `tcl/` 下的第三方文件数是
+> 697 + 5 = **702**，与 `manifest/PROVENANCE.json` 核对一致
+> （该文件的 `tcl/` 条目数也是 702）。
 >
-> **全部 785 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
+> **那 12 个「原样就能导入」的候选经复核并不成立。** 补齐子目录盲区之后，对剩下还没进树的
+> 配置重新评估，其中 12 个曾判定为 `source [find ...]` 引用全部可解析。按完整路径复核后，
+> 12 个全都不成立：3 个（`interface/ftdi/calao-usb-a9260-c01.cfg`、`-c02.cfg`、
+> `cc3200lp.cfg`）早就在树里，只是落在 `tcl/interface/` 而不是 `tcl/interface/ftdi/`；
+> 另外 9 个 TI 板级配置都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，
+> 而这两个包装文件树里没有（树里只有 `ftdi/xds100v2.cfg`）。原来的判定按文件名而非路径比对。
+> 要导入那 9 个，得先补两个包装文件。
+>
+> 旧版这里还写了一套「46 需要后端 / 25 依赖没进树 / 5 没文件体」的手工分类，来自更早的快照，
+> 现在没有任何工具能复现，已删除。可复现的是 tier-1 账本与 `manifest/consolidated.json`
+> 的 `not_imported`（407 条，逐文件可查）。
+>
+> **全部 767 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
 
 ## 为什么直接合并，而不是外挂一层
 
@@ -139,8 +134,8 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 
 ## C 驱动的接入状态
 
-`src/` 下 73 个第三方文件里（37 个 `.c` + 36 个 `.h`），**47 个已经接入构建系统**，
-其余 26 个（13 个 `.c` + 13 个 `.h`）仍是「代码就位、未注册」的状态。
+`src/` 下 65 个第三方文件里（35 个 `.c` + 30 个 `.h`），**47 个已经接入构建系统**，
+其余 18 个（11 个 `.c` + 7 个 `.h`）仍是「代码就位、未注册」的状态。
 
 ### 已接入的适配器（5 个文件，6 个探针名）
 
@@ -273,22 +268,21 @@ ice1500        { jtag }
    （`src/helper/command.c` 的 `register_command()` 命中已有名字就复用它），
    所以无前缀的第二个后端会被前一个的 handler 接管。加前缀后三者可共存。
 
-### 仍是「代码就位、未注册」（其余 26 个文件）
+### 仍是「代码就位、未注册」（其余 18 个文件）
 
-13 个 `.c`：
+11 个 `.c`：
 
-- `src/jtag/drivers/`：`arc_ftdi_cjtag.c`、`cmsis_dap_wch.c`、
-  `jtag_esp_remote.c`、`jtag_tcp.c`
-- `src/target/`：`aarch64_coproc_reg.c`、`adi_v5_cmsis_dap.c`、`arc32.c`、
-  `arc_core.c`、`arc_dbg.c`、`arc_mntr.c`、`arc_ocd.c`、`arc_regs.c`、`arc_trgt.c`
+- `src/jtag/drivers/`：`al_link.c`、`al_link_cyusb.c`、`cmsis_dap_wch.c`、`esp_gpio.c`、
+  `jtag_esp_remote.c`、`jtag_tcp.c`、`wlinke.c`
+- `src/server/`：`rbb_server.c`
+- `src/target/`：`aarch64_coproc_reg.c`、`wch_riscv.c`、`wch_riscv-013.c`
 
-13 个 `.h` 只被上面这些文件 include，主树没有任何引用，因此也没有进
-`*_SOURCES`：`arc32.h`、`arc_core.h`、`arc_dbg.h`、`arc_mntr.h`、`arc_ocd.h`、
-`arc_regs.h`、`arc_trgt.h`、`arc_ftdi_cjtag.h`、`jtag_usb_common.h`、
+7 个 `.h` 只被上面这些文件 include，主树没有任何引用，因此也没有进
+`*_SOURCES`：`al_link_cyusb.h`、`esp_gpio.h`、`rbb_server.h`、
 `aarch64_system_registers.h`、`aarch64_system_registers_defs.h`、
-`altera_virtual_jtag.h`、`stm8.h`。
+`altera_virtual_jtag.h`、`wch_riscv.h`。
 
-> `src/jtag/drivers/OpenULINK/src/` 下的 4 个 `.c` 不算在内 —— 那是 OpenULINK
+> `src/jtag/drivers/OpenULINK/src/` 下的 6 个 `.c` 不算在内 —— 那是 OpenULINK
 > 固件子工程，自带独立 `Makefile`，不参与主构建。
 
 没接入的原因不是遗漏，而是**这些驱动依赖上游已删除或改名的 API**，
@@ -297,46 +291,32 @@ ice1500        { jtag }
 | 未接入的文件 | 卡点 |
 |---|---|
 | `src/jtag/drivers/jtag_tcp.c`、`cmsis_dap_wch.c` | `.transports` 字段 —— 上游已改成 `unsigned int transport_ids`，`jtag_only` 常量也不存在了；`jtag_tcp.c` 还在调用 `jtag_vpi_tms`/`jtag_vpi_path_move`，而这两个是 `jtag_vpi.c` 里的 `static` |
-| `src/target/arc32.c` + `arc_core.c` + `arc_dbg.c` + `arc_mntr.c` + `arc_ocd.c` + `arc_regs.c` + `arc_trgt.c` | 与上游 `src/target/arc.c` 的 `arcv2_target` **重复定义**，且 `arc32.c` 调用的 9 个 `arc_mem_*` 入口只存在于它自己那份 `arc_mem.c`；本树的 `arc_mem.c` 是上游精简版，只有 `arc_mem_read`/`arc_mem_write`，链接必然失败（CI 已验证） |
-| `src/target/adi_v5_cmsis_dap.c`、`aarch64_coproc_reg.c` | 依赖上游未公开的私有 API |
-| `src/jtag/drivers/arc_ftdi_cjtag.c`、`cmsis_dap_wch.c` | 依赖 `mpsse_read`/`mpsse_write`，本树的 `mpsse.h`/`mpsse.c` 里这两个函数不存在（只有 `mpsse_read_data_bits_low_byte` 一族）；`cmsis_dap_wch.c` 另需已删除的 SDI 传输层 |
+| `src/target/aarch64_coproc_reg.c`、`src/jtag/drivers/esp_gpio.c`、`jtag_esp_remote.c`、`wlinke.c`、`al_link.c`、`al_link_cyusb.c`、`src/target/wch_riscv.c`、`wch_riscv-013.c`、`src/server/rbb_server.c` | 上游从未有过这些文件和它们依赖的 API：ESP-IDF GPIO HAL、SDI transport 层、`JTAG_TDI` / `DEBUG_CAP_TDI_SEQ` / `jtag_add_tdi_seq()`。见下面「被上游阻塞」一节 |
 
 > `tcl/target/arc_axc001.cfg` 等 ARC 板级配置在树里。上游 `arc.c` 只注册 `arcv2`
-> 一个 target type，而 `arc32.c` 一族因为依赖它自己那份 `arc_mem.c`（本树里是
-> 上游的精简版，只有 `arc_mem_read`/`arc_mem_write`）接不进构建，所以这些配置
-> 统一改用 `arcv2`。代价是它们描述的 ARC600/ARC700 内核只能按 ARCv2 访问。
+> 一个 target type；本该提供 `arc600`/`arc700` 的 `arc32` 家族（连同它自己那份
+> `arc_mem.c`）已就位但接不进构建，并已在 `7ffeda047` 里删除。所以这些配置
+> 只能按 `arcv2` 访问，代价是 ARC600/ARC700 内核的细节访问不可用。
 
 要接入某个驱动，得先按上游现有 API 重写，逐个验证能编译后再提交。
 `tools/patch_target_groups.py` 与 `tools/patch_makefile.py`、
 `tools/patch_interfaces.py`、`tools/patch_interface_h.py` 可以作模板。
 
-**悬空的接口配置。** 扫全部 `tcl/`，有 6 个 `adapter driver` / `interface`
-指令指向源码里不存在的驱动名，共 8 处：
+**悬空引用扫描。** `tools/audit_dangling_refs.py` 扫全部 `tcl/`（1771 个 `.cfg` + 47 个 `.tcl`），
+解析出 1942 条 `source [find ...]` 引用，其中 5 条无法解析，全部无害：
 
-| 配置 | 指令 | 驱动名 |
+| 无法解析的引用 | 出现位置 | 说明 |
 |---|---|---|
-| `tcl/interface/jtag_tcp.cfg:7` | `interface jtag_tcp` | `jtag_tcp`（上面未接入） |
-| `tcl/interface/jtag_esp_remote.cfg:5` | `adapter driver jtag_esp_remote` | `jtag_esp_remote`（上面未接入） |
-| `tcl/interface/picoprobe.cfg:2` | `adapter driver picoprobe` | `picoprobe` |
-| `tcl/interface/colobus.cfg:1` | `interface colobus` | `colobus` |
-| `tcl/interface/tamarin.cfg:1`、`tcl/interface/faultier.cfg:1` | `interface tamarin` | `tamarin` |
-| `tcl/interface/tas_client.cfg:7` | `adapter driver tas_client` | `tas_client` |
-| `tcl/interface/nds32-aice.cfg:9` | `adapter driver aice` | `aice` |
-| `tcl/board/altera_arria10__aji_client.cfg:8`、`tcl/board/altera_arria10_niosv__aji_client.cfg:15` | `adapter driver aji_client` | `aji_client` |
+| `tcl/aic8800.cfg`、`tcl/aic8800m40.cfg`、`tcl/aic8800mc.cfg` | `tcl/interface/cmsis-dap_v2_aic8800*.cfg` | 注释行里的路径 |
+| `tcl/target/...cfg` | 5 个板级配置 | 上游自带的文档模板占位符 |
+| `tcl/tcl/tools/memtest.tcl` | `tcl/target/saxon_xip.cfg` | 注释行里多写了一级 |
 
-后 6 个（`picoprobe`、`colobus`、`tamarin`、`tas_client`、`aice`、`aji_client`）
-在**上游同样没有驱动实现**，配置是各 fork 单独加的，属于上游本身的悬空；
-`nds32-aice.cfg` 依赖的 `nds32_aice.c` 已被本 fork 从树里移除
-（见 `removed_from_tree`）。这些配置加载时会报 `Can't find adapter driver`。
-`jtag_tcp`/`jtag_esp_remote` 两份是给上面那两个待接入驱动预留的用法说明，
-驱动一旦按上面那条路接通就不需要改。
-
-来源（`manifest/PROVENANCE.json`）：`picoprobe` ← `sysprogs/openocd`，
-`colobus` ← `tihmstar/openocd_colobus`，`tamarin`/`faultier` ←
-`stacksmashing/openocd-tamarin`，`tas_client` ← `zuyih/openocd`，
-`nds32-aice` ← `zephyrproject-rtos/openocd`，`aji_client` ←
-`OlivierVanWassenhove-Dekimo/openocd`。这些 fork 都带自己的驱动实现，
-但实现没进本树，所以配置是悬空的。
+> 更早的一版这里列过一张「悬空的接口配置」表（`jtag_tcp.cfg`、`jtag_esp_remote.cfg`、
+> `picoprobe.cfg`、`colobus.cfg`、`tamarin.cfg`、`faultier.cfg`、`tas_client.cfg`、
+> `nds32-aice.cfg`、`altera_arria10__aji_client.cfg`、`altera_arria10_niosv__aji_client.cfg`）。
+> 那 10 个配置文件已经不在树里（都记在 `manifest/PROVENANCE.json` 的 `removed_from_tree` 里），
+> 所以那张表连同它引用的 6 个驱动名一起删掉了 —— 树里已经没有这种悬空。
+> 逐条证据用 `python tools/audit_dangling_refs.py` 复跑。
 
 
 ## 4 份 Synopsys 板级配置未导入
@@ -358,10 +338,13 @@ target 在任何公开仓库里都不存在（属于 Synopsys 内部交付）：
 
 ## 许可证提醒
 
-- `GPL-2.0`：136 个文件，来源明确。
-- `GPL-2.0-or-later`：1 个文件（`src/flash/nor/stldr_driver.c`，来自 STMicroelectronics/OpenOCD）。
-- `NOASSERTION`：639 个文件，GitHub 未能解析 SPDX。
-- `UNRESOLVED`：25 个文件，即依赖闭包补充的文件，来源已知但未单独解析。
+- `GPL-2.0`：123 个文件，来源明确。
+- `GPL-2.0-or-later`：5 个文件（含 `src/flash/nor/stldr_driver.c`，来自 STMicroelectronics/OpenOCD）。
+- `NOASSERTION`：615 个文件，GitHub 未能解析 SPDX。
+- `UNRESOLVED`：24 个文件，即依赖闭包补充的文件，来源已知但未单独解析。
+
+四项合计 767，与 `manifest/licenses.csv` 的行数一致。无许可证信息的（`NOASSERTION` +
+`UNRESOLVED`）一共 639 个，占 83%。
 
 后两类在商用前需人工审计头部声明 —— `NOASSERTION` **不等于**宽松许可，
 部分文件带明确的专有声明（例如 `analogdevicesinc/openocd` 的 flash 算法写着
@@ -375,7 +358,7 @@ target 在任何公开仓库里都不存在（属于 Synopsys 内部交付）：
 export GH_TOKEN=<你的 token>      # 仅从环境变量读取，绝不写入文件
 export PYTHONIOENCODING=utf-8    # 部分文件名含非 GBK 字符
 
-bash tools/run_mine.sh            # 1. 扫描 688 个仓库
+bash tools/run_mine.sh            # 1. 扫描 689 个仓库
 python tools/refine_survey.py     # 2. 过滤噪声、排除自身仓库
 python tools/consolidate.py       # 3. 跨仓去重、选定来源
 bash tools/run_fetch.sh           # 4. 抓取文件 + 自动校验
@@ -406,16 +389,15 @@ python tools/pipeline.py --apply
 
 | 缺口 | 规模 | 说明 |
 |---|---|---|
-| C 驱动未注册进构建 | 26（13 个 `.c` + 13 个 `.h`） | 见「C 驱动的接入状态」；卡点是它们依赖上游已删/已改名的 API。另有 `OpenULINK/src/` 4 个固件源文件，独立 Makefile，不参与主构建 |
-| 未深挖的仓库 | 488 个（688 − 200） | 全部做过 `tcl/target` 粗筛（688/688），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
-| 无许可证信息 | 649 / 785（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
-| 烧录器只有配置没有驱动 | 6 个驱动名 / 8 处引用 | `aji_client`、`tas_client`、`aice`、`picoprobe`、`colobus`、`tamarin`；前 4 个上游也没有实现，后 2 个是 fork 单独加的配置。逐条见「悬空的接口配置」表 |
+| C 驱动未注册进构建 | 18（11 个 `.c` + 7 个 `.h`） | 见「C 驱动的接入状态」；卡点分两类：依赖上游已改名的 API，或（`jtag_tcp.c`、`jtag_esp_remote.c`、`cmsis_dap_wch.c`、`aarch64_coproc_reg.c` 与 `21ab67574` 新导入的 11 个文件）上游从未有过这些 API。另有 `OpenULINK/src/` 6 个固件源文件，独立 Makefile，不参与主构建 |
+| 未深挖的仓库 | 489 个（689 − 200） | 全部做过 `tcl/target` 粗筛（689/689），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
+| 无许可证信息 | 639 / 767（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
+| 烧录器只有配置没有驱动 | 0 个驱动名 / 0 处引用 | 旧版这里写「6 个驱动名 / 8 处引用」，指的是已经不在树里的 10 个配置文件（见「悬空引用扫描」）；当前树里 5 条 unresolved 引用全是注释或占位符 |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
-| ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；`arc32.c` 一族缺 `arc_mem.c` 无法接入，全树 22 个 ARC 配置现在都只用 `arcv2` |
-| 无真机验证 | 全部 | 静态校验之外，只用 CI 产物跑过 `adapter list`、`target types` 和批量 `source [find ...]`（验证配置能被解析、驱动/target type/flash 驱动都在）；没有接真实探针与目标板跑过调试会话 |
-| `-chain-position` 旧写法 | 408 个文件 / 504 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 504 处全在导入的第三方配置里（`target create` 373 处、`dap create` 122 处、`vjtag create` 1 处，其余为变量拼接）。机械替换只能自动解出 70 处（对象名与取值同行且完全相同），其余 434 处需人工判断 TAP 名 |
+| ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；提供另外两个 target 的 `arc32` 家族缺 `arc_mem.c` 接不进来且已在 `7ffeda047` 删除，全树 22 个 ARC 配置现在都只用 `arcv2` |
+| `-chain-position` 旧写法 | 401 个文件 / 493 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 493 处全在导入的第三方配置里（`target create` 366 处、`dap create` 119 处、`pld create` 6 处，其余为变量拼接）。机械替换只能自动解出 69 处（对象名与取值同行且完全相同），其余 424 处需人工判断 TAP 名 |
 | `adi-usbmux` 开关为空 | 1 个 | 它是 Win32 命名管道 helper 而非 adapter driver；`_ADI_USB_MUX_` 从未定义，mux 代码被编译掉 |
-| 三组导入候选被上游阻塞 | 14 个文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows） |
+| 三组导入候选被上游阻塞 | 9 个文件（tcl）+ 树内 18 个未接线 C 文件 | ESP32 GPIO 探针（需 ESP-IDF HAL）、WCH RISC-V 探针（需整套 SDI transport 层）、AL-Link 探针（需 `JTAG_TDI` + `DEBUG_CAP_TDI_SEQ`，且后端仅 Windows）；三组 C 代码都已在树里，只是没法注册。仍被上游挡住的导入候选只剩 9 份 `tcl/target/anlogic/*_al_link.cfg` |
 | TI XDS100 包装配置缺失 | 9 份板级配置 | 这 9 份 `tcl/board/ti/*-xds100v2.cfg` / `-xds100v3.cfg` 都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，树里只有 `interface/ftdi/xds100v2.cfg`；补两个三行包装文件即可，无需 C 改动 |
 | 两个非 ASCII 文件名 | 2 个 | `tcl/target/1986ве1т.cfg`、`tcl/target/к1879xб1я.cfg` 是上游自己带的西里尔字母名（与 `upstream/master` 逐字节一致），不是本 fork 引入；Windows 上部分工具链会处理异常 |
 | `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |

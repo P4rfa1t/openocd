@@ -32,7 +32,7 @@
 | [`xsession/openocd`](https://github.com/xsession/openocd) | 259 | 20 | 5 | NOASSERTION |
 | [`analogdevicesinc/openocd`](https://github.com/analogdevicesinc/openocd) | 67 | 32 | 6 | NOASSERTION |
 | [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | 51 | 40 | 1 | NOASSERTION |
-| [`zuyih/openocd`](https://github.com/zuyih/openocd) | 67 | 23 | 0 | NOASSERTION |
+| [`zuyih/openocd`](https://github.com/zuyih/openocd) | 67 | 22 | 0 | NOASSERTION |
 | [`OpenNuvoton/OpenOCD-Nuvoton`](https://github.com/OpenNuvoton/OpenOCD-Nuvoton) | 54 | 2 | 312 | GPL-2.0 |
 | [`sysprogs/openocd`](https://github.com/sysprogs/openocd) | 45 | 10 | 9 | NOASSERTION |
 | [`rxmnjke/openocd`](https://github.com/rxmnjke/openocd) | 48 | 5 | 0 | NOASSERTION |
@@ -81,14 +81,15 @@
 
 ## 4. 许可证分布
 
-下表覆盖去重后的全部 **1298 个候选路径**（其中 795 个已导入本树）。
+下表覆盖去重后的全部 **1298 个候选路径**（其中 891 个已导入本树）。
 
 | SPDX | 候选文件数 | 已导入文件数 |
 |---|---:|---:|
-| NOASSERTION | 1064 | 652 |
-| GPL-2.0 | 234 | 143 |
+| NOASSERTION | 1063 | 726 |
+| GPL-2.0 | 234 | 164 |
+| GPL-2.0-or-later | 1 | 1 |
 
-> ⚠️ 已导入的 **652 个文件**来自 GitHub 未解析出 SPDX 的仓库，头部许可声明需人工审计。
+> ⚠️ 已导入的 **726 个文件**来自 GitHub 未解析出 SPDX 的仓库，头部许可声明需人工审计。
 
 ## 5. 排除项说明
 

@@ -23,11 +23,15 @@ TCL_FILES = find $(srcdir)/tcl -name '*.cfg' -o -name '*.tcl' -o -name '*.txt' |
 
 > ⚠️ 下表是按子目录枚举所得，**不可信**。上游实际把 TCL 重组进了厂商子目录
 > （`tcl/target/ti/`、`tcl/target/st/`、`tcl/target/nordic/` …），
-> 子目录枚举会把它们漏掉。正确基线是全量递归索引：**2199 个 blob**。
+> 子目录枚举会把它们漏掉。正确基线是全量递归索引：**2203 个 blob**。
 > 详见 `manifest/upstream-index.txt`。
 
 在全部 `tcl/` 中**搜索不到**以下关键字，即对应支持确实尚未上游化：
-`ch32`、`py32`、`puya`、`nuvoton`、`aurix`、`tamarin`、`at32`、`aic88`。
+`ch32`、`py32`、`puya`、`nuvoton`、`aurix`、`tamarin`、`aic88`。
+
+> 这份清单原先还列了 `at32`，那是**错的**：上游 `upstream/master` 的 `tcl/` 里已经有
+> `tcl/target/artery/at32f4x.cfg`（`git grep -c at32 upstream/master -- tcl/` 命中 1 个文件），
+> 所以 `at32` 不能算「搜索不到」。其余 7 个关键字的复核结果都是 0 命中。
 
 ## 2. 分层结论：什么能直接覆盖，什么必须打补丁
 
@@ -47,6 +51,9 @@ OpenOCD fork 新增的内容只落在两个桶里。
 按文件数计，多数价值在桶一；但**所有阻塞性工作都在桶二**。
 
 ## 3. 各厂商现状（已上游 vs 仍 fork-only）
+
+> 下表的文件计数来自扫描阶段的原始数据（`raw/` 池），**不可从当前树复算**；
+> 「已上游 / 仍 fork-only」的判定已用 `git grep upstream/master` 复核过。
 
 | 厂商 / 仓库 | TCL | C | 结论 |
 |---|---|---|---|
@@ -142,12 +149,16 @@ GitHub 的 forks 接口返回了 `P4rfa1t/openocd`（即当前工作目录对应
 |---|---|---|
 | `tcl/target/ti/cc13x0.cfg` | `tcl/target/ti_cc13x0.cfg` | `tcl/target/ti/cc13x0.cfg` |
 
+> 注：中列那个扁平名 `tcl/target/ti_cc13x0.cfg` 在本树里**不存在** —— 它作为与上游等价的
+> 重复项被剔除了（记在 `manifest/consolidated.json` 的 `excluded` 口径里）。本树里只有
+> 上游形态 `tcl/target/ti/cc13x0.cfg`。
+
 **一个上游文件对应两个 fork 路径，且与其中两个都没有相同的 basename。**
 逐字节比对确认：fork 版内容与上游一致，唯一差别是内部引用写成了
 `source [find target/ti_cc26x0.cfg]` 而上游是 `source [find target/ti/cc26x0.cfg]`。
 
 只按 basename 比对会漏掉 `ti_cc13x0.cfg`，
-把它误判成新增，**凭空多出 26 个假的 TI 支持文件**。
+把它误判成新增，**凭空多出 26 个假的 TI 支持文件**（那是当时那次错误比对的结果；26 这个数字不可从当前树复算）。
 最终规则是三级判定：
 
 1. 路径完全相同 → 上游已有

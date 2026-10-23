@@ -45,50 +45,49 @@ git merge upstream/master
 
 ## 合并了什么
 
-扫描了 688 个候选仓库 —— 499 个上游 fork + 搜索命中的 189 个独立仓 —— 跨仓
+扫描了 689 个候选仓库 —— 500 个上游 fork + 搜索命中的 189 个独立仓 —— 跨仓
 去重，并剔除与官方等价的文件。
 
 | | 数量 | 说明 |
 |---|---:|---|
-| `tcl/` 脚本文件 | 712 | 696 个 `.cfg` + 16 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
-| `src/` C 源码 | 73 | 37 个 `.c` 加 36 个 `.h`；**47 个已接入构建**，26 个已就位但未注册 |
+| `tcl/` 脚本文件 | 702 | 686 个 `.cfg` + 16 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
+| `src/` C 源码 | 65 | 35 个 `.c` 加 30 个 `.h`；**47 个已接入构建**，18 个已就位但未注册 |
 | 折叠掉的重复副本 | 6910 | 每条路径只保留一个胜出版本 |
 | 与官方重复而剔除 | 7376 | 上游已经收编，或上游已把它挪到子目录 |
 | 判定不可用而排除 | 621 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
 
-扫描识别出的 1298 条唯一路径里，**795 条在扫描当时进了树**，503 条没进。此后
-其中 11 条被有意移除（见下表最后一行），另有少量文件作为已进树配置的依赖被带了
-进来，所以**今天树里的第三方文件是 785 个**。
+扫描识别出的 1298 条唯一路径里，有 747 条 tier-1 记录被标为已导入，其中 697 条至今
+仍在树里；50 条导入后被有意移除，147 条从未落地。另有 5 个文件作为已进树配置的
+依赖被带了进来（它们没有自己的 tier-1 记录），所以**今天树里的第三方文件是 767 个** ——
+`tcl/` 702 个 + `src/` 65 个。账本闭合：697 + 5 = 702。
 
-没进来的 331 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
-是照着旧版 OpenOCD 的 API 写的。其中 `src/target` 最大（133 个），其次是
-`src/flash`（125 个）、`src/jtag`（71 个）和 `src/server`（2 个）。
+没进来的 260 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
+是照着旧版 OpenOCD 的 API 写的。其中 `src/flash` 最大（125 个），其次是
+`src/target`（85 个）和 `src/jtag`（50 个）。
 
-没进来的 172 个 TCL 文件分这样：
+没落地的 tier-1 TCL 路径是 147 条 —— 机械地说，就是那些既不在树里、也没记进
+`removed_from_tree` 的 tier-1 记录。旧版这里还有一套「上游已收编 73 / 缺后端 46 /
+依赖缺失 25 / 缓存无文件体 5 / 原样可导入 12 / 导入后删除 11」的手工分类，来自更早的快照，
+现在没有任何工具能复现，已从 README 删除。可复现的是 tier-1 账本：894 条候选、
+747 条标为已导入、697 条仍在树里、50 条导入后移除、147 条从未落地。
 
-| | 数量 | 原因 |
-|---|---:|---|
-| 上游已经收编 | 73 | 上游把它们挪进了子目录，扫描只看到扁平名字 |
-| 缺一个树里没有的后端 | 46 | 它们驱动的是 C 代码从未公开的探针或芯片族 —— Infineon TriCore、Anlogic `al_link` 探针、WCH RISC-V、ESP32 GPIO 探针、ST-LINK 外部加载器家族之类 |
-| 依赖的文件本身没进树 | 25 | 某条 `source [find ...]` 指向的配置没有导入 |
-| 扫描缓存里没有文件体 | 5 | 扫描记下了路径，但从未抓取文件内容 |
-| 曾判为「原样就能导入」的 12 个 | 12 | 复核后全都不成立：9 个要先补 `interface/ti/xds100v2.cfg` 或 `xds100v3.cfg`，3 个是路径误判 |
-| 导入后又从树里删掉 | 11 | 7 个冗余的 TI `swd_native` 板级配置、`target/nrf_common.cfg`、`interface/stlink-usb.cfg`、两个 `interface/calao-usb-a9260-c0*.cfg` |
-
-「原样就能导入」这一类已经不存在了。这 172 个要么缺包装文件，要么缺 C 后端，
+TI 板级配置需要的那两个包装文件（`interface/ti/xds100v2.cfg`、`xds100v3.cfg`）、
+3 条早就在树里、只是落在扁平名父目录下的路径，以及依赖这两个包装文件的 9 份 TI 板级配置，
+都在 `manifest/consolidated.json` 的 `not_imported` 里逐文件列出（共 407 条）。
 要么是有意删掉的。
 
-另外两组补齐了 **785 个文件**这个数，每个都有自己的来源记录：
+另外两组补齐了 **767 个文件**这个数，每个都有自己的来源记录：
 
 - **21 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
-  文件会一起被带进来；manifest 里标为 `imported_as: dependency`。
+  文件跟着一起进树。它们在 manifest 里标为 `imported_as: dependency`。
 - **1 个文件上游也有同名版本** —— `tcl/target/adspsc58x.cfg`，内容与上游的
-  `tcl/target/adsp-sc58x.cfg` 不同。树里保留第三方版本，
+  `tcl/target/adsp-sc58x.cfg` 不同。树里保留第三方版本，这个同名冲突就是
+  `verify_tree` 报的 25 条 warning 之一。
   `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
 
-上游共 2203 个文件，本树 3047 个。
+上游共 2203 个文件，本树 3030 个。
 
-**全部 785 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+**全部 767 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -100,7 +99,7 @@ print(entry["source_repo"], entry["source_branch"], entry["source_commit"], entr
 PY
 ```
 
-本次扫描覆盖 **688 个候选仓库**，其中 56 个至少贡献了一个至今仍在树里的文件。
+本次扫描覆盖 **689 个候选仓库**，其中 53 个至少贡献了一个至今仍在树里的文件。
 
 ### `tcl/` 文件立即可用
 
@@ -116,7 +115,7 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 
 ### `src/` 文件分两种状态
 
-73 个新 C 源文件与头文件里有 47 个已接入构建 —— 24 个能注册出可用的
+65 个新 C 源文件与头文件里有 47 个已接入构建 —— 24 个能注册出可用的
 `target_type` 或 `adapter_driver` 的 `.c`，加上它们需要的头文件：
 
 | 组 | 后端 | 构建开关 |
@@ -135,12 +134,16 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 后注册的会沿用前一个的 handler。如果不加前缀，第二个后端就会被第一个的 handler
 接管。加上前缀之后，三者可以共存。
 
-剩下 26 个 —— 13 个 `.c` 和 13 个 `.h`：`arc32` 家族、`adi_v5_cmsis_dap`、
-`aarch64_coproc_reg`，以及 `arc_ftdi_cjtag` / `cmsis_dap_wch` /
-`jtag_esp_remote` / `jtag_tcp` 驱动，加上只有它们 include 的头文件
-—— **在树里，但没被编译**。它们针对的是上游已经改过接口的 API，要注册它们，
-得先做下面说的那套移植。故意这样交付：代码在树里、可见、可审阅，在接上之前
-完全无害。
+剩下 18 个 —— 11 个 `.c` 和 7 个 `.h` —— 是**代码就位、未注册**：
+`al_link.c`、`al_link_cyusb.c`、`cmsis_dap_wch.c`、`esp_gpio.c`、`jtag_esp_remote.c`、
+`jtag_tcp.c`、`wlinke.c`、`rbb_server.c`、`aarch64_coproc_reg.c`、`wch_riscv.c`、
+`wch_riscv-013.c`，加上只被这些文件 include 的头文件（`al_link_cyusb.h`、`esp_gpio.h`、
+`rbb_server.h`、`aarch64_system_registers.h`、`aarch64_system_registers_defs.h`、
+`altera_virtual_jtag.h`、`wch_riscv.h`）。每个文件卡在哪都不一样 —— 原先列在这里的
+`arc32` 家族因为接不进构建，已在 `7ffeda047` 里删除。旧版把这 18 个文件
+统一归因成「依赖上游已改名的 API」，那是错的：`jtag_tcp.c`、`jtag_esp_remote.c`、
+`cmsis_dap_wch.c`、`aarch64_coproc_reg.c` 在上游从未出现过，`21ab67574` 新导入的 11 个
+文件同样如此。`docs/02-usage.md` 里有逐文件的卡点表。
 
 ### ST-LINK 外部加载器驱动
 
@@ -227,12 +230,11 @@ jimtcl、libyaml、zlib）和构建配方都是上游的。
   尾符不同。
 
 这个区分是必要的。本仓库的某一版曾对自己的完整性检查报出 543 处不匹配 —— 那
-棵树是在 Windows 上以文本模式重建的，每个导入文件都被悄悄存成了 CRLF，而
-manifest 描述的是 LF 原件。门禁分不清"这个文件被改过"和"这个文件是在 Windows
-上检出的"。现在两边都修好了：树里全是 LF，785 个导入文件中有 646 个与发布方摘要
-逐字节吻合，4 个只剩行尾符差异，135 个带真实本地编辑（其中 24 个
-同时做了行尾符规整）—— target API 移植、重定位后的 `source [find ...]` 路径修正、
-第三方驱动的修复，以及 `rvmax` / `rv32m1` 两个后端。
+是因为树在 Windows 上以文本模式重建，每个导入文件都被悄悄存成 CRLF，而 manifest
+描述的是 LF 原件；门禁分不清「被改过」和「在 Windows 上检出的」。现在两边都修好了：
+树里全是 LF，767 个导入文件中有 548 个与发布方摘要逐字节吻合，2 个只剩行尾符差异，
+217 个带真实本地编辑（其中 26 个同时做了行尾符规整）—— 目标 API 移植、
+`source [find ...]` 路径搬移、第三方驱动的修复，以及 `rvmax` / `rv32m1` 两个后端。
 
 被有意移除的文件仍留在 manifest 的 `removed_from_tree` 段里，连同移除原因和
 移除它的那次提交。审计链是双向的。
@@ -244,14 +246,14 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 785
-on disk  : 785
+recorded : 767
+on disk  : 767
 errors   : 0
-warns    : 23
+warns    : 25
 VERIFY: PASS
 ```
 
-23 条 warning 是：一个文件名与上游同名但内容不同（有意保留），以及 22 个
+25 条 warning 是：一个文件名与上游同名但内容不同（有意保留），以及 24 个
 GitHub 解析不出许可证的文件。
 
 ### 其它工具
@@ -300,18 +302,26 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 785 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 767 个导入文件的机器可读来源记录 |
 
 ---
+
+## 发布
+
+本 fork 的发布 tag 形如 `v<上游版本>-fork.<n>` —— 上游 `developer` 线上的一个点版本
+加 fork 序号 —— 由 [`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml)
+构建。推一个 tag 会产出 `openocd-<tag>-x86_64-w64-mingw32.tar.gz`，Release 本体由 CI
+用 `gh` 生成；本机不发布任何东西。流程与打下一个 tag 前必须跑的清单见
+[`docs/04-release.md`](docs/04-release.md)，改了什么见 [`CHANGELOG.md`](CHANGELOG.md)。
 
 ## 许可
 
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 785 个文件里，GitHub 解析出
-135 个为 GPL-2.0、1 个为 GPL-2.0-or-later、627 个为 `NOASSERTION`（意思是
-*GitHub 判定不出许可证*，不是说它宽松），22 个无法解析。有些 `NOASSERTION` 文件
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 767 个文件里，GitHub 解析出
+123 个为 GPL-2.0、5 个为 GPL-2.0-or-later、615 个为 `NOASSERTION`（意思是
+*GitHub 判定不出许可证*，不是说它宽松），24 个无法解析。这些 `NOASSERTION` 文件
 自带专有声明，例如 Analog Devices 的 flash 算法，写着 "This software is
 proprietary to Analog Devices, Inc."。
 
@@ -324,20 +334,22 @@ proprietary to Analog Devices, Inc."。
 ## 已知限制
 
 - **「12 个原样就能导入」的候选经完整路径复核后全都不成立。** 补齐扫描的子目录
-  盲区、又导入了 252 个配置之后，对剩下还没有文件的配置重新评估了一遍，
-  挑出 12 个 `source [find ...]` 看似可解析的候选。按完整路径逐条核对：其中 3 个
+  盲区之后，对剩下还没有文件的配置重新评估了一遍，挑出 12 个 `source [find ...]`
+  看似可解析的候选。按完整路径逐条核对：其中 3 个
   （`interface/ftdi/calao-usb-a9260-c01.cfg`、`-c02.cfg`、`cc3200lp.cfg`）早就在
   树里，只是落在 `tcl/interface/` 而不是 `tcl/interface/ftdi/`；剩下 9 个 TI 板级
   配置都 `source [find interface/ti/xds100v2.cfg]` 或 `xds100v3.cfg`，而这两个
   包装文件树里没有（树里只有 `ftdi/xds100v2.cfg`）。原判定按文件名而非路径比对。
-  要导入那 9 个，得先补两个包装文件。另有 46 个需要树里
-  还没有的后端（Infineon TriCore、Anlogic `al_link`、WCH RISC-V、ESP32 GPIO
-  探针、ST-LINK 外部加载器家族），25 个依赖的配置本身没进树，5 个在扫描缓存里
-  没有文件体。逐项分类见 `manifest/consolidated.json` 的 `not_imported` 段，
-  缺失 C 后端的文件级分析见 `manifest/nor-driver-scan.json`。
-- **73 个新 C 源文件与头文件里有 26 个没被编译**（13 个 `.c`、13 个 `.h`）。
-  它们带着完整来源记录躺在树里，但针对的是已经改过接口的上游 API。
-  要注册需要逐个后端做移植。
+  要导入那 9 个，得先补两个包装文件。
+
+  旧版这里还有一段「46 个需要后端 / 25 个依赖没进树 / 5 个缓存里没文件体」的手工分类，
+  来自同一份更早的快照，已删除。可查的权威记录是 `manifest/consolidated.json` 的
+  `not_imported`（407 条，逐文件带来源 commit），缺 C 后端的逐文件分析在
+  `manifest/nor-driver-scan.json`。
+- **65 个新 C 源文件与头文件里有 18 个没被编译**（11 个 `.c`、7 个 `.h`）。
+  它们带着完整来源记录留在树里，但依赖已经变动的上游 API —— 或者（`21ab67574` 新导入的
+  11 个文件，以及 `jtag_tcp.c`、`jtag_esp_remote.c`、`cmsis_dap_wch.c`、`aarch64_coproc_reg.c`）
+  依赖上游从未有过的 API。要注册它们，得逐后端移植。
 - **四份 Synopsys 板级配置没导入。** `board/synopsys_amla3.cfg`、
   `board/synopsys_angel4.cfg`、`board/synopsys_haps51.cfg`、
   `board/synopsys_ml509.cfg` 发布在 `intel/OpenOCD` 里，但任何公开仓库都没有
@@ -349,18 +361,16 @@ proprietary to Analog Devices, Inc."。
   `manifest/consolidated.json` 的 `path_spellings` 里。
 - **上游基线是钉住的。** `manifest/upstream.json` 记录树是从哪个上游 commit
   分叉的，`tools/sync_upstream.py` 能报告相对任意 ref 的差异。
-- **三份 ARC 板级配置目前还用不了。** `arc_axc001.cfg`、`arc_axc002.cfg`、
-  `arc_axc003_hs36.cfg` 创建的是 `arc600`、`arc700`、`arcv2` 三种 target。
-  上游重写过的 `src/target/arc.c` 只提供 `arcv2`，另外两个来自那族已就位但
-  未接线的 `arc32` 源码。把那族接进构建，这三份配置就能用了。
-- **408 个导入的配置还在用已废弃的 `-chain-position`。** 上游的 `tcl/` 里已经
-  一处不剩；`src/target/arm_dap.c` 和 `src/target/target.c` 都会打印
-  `DEPRECATED! '-chain-position' will be removed in the future, use '-tap'
-  instead`，PLD 驱动那边也会警告。导入的文件保留了它们各自 fork 里发布的
-  写法。全树共 504 处，机械替换只能自动解掉其中 70 处 —— 也就是对象名与
-  `-chain-position` 取值在同一行且完全相同的情况。剩下 434 处要人工过一遍：
-  多数文件的 TAP 是在另一个配置里定义的，对应的 `-tap` 名字得从那个文件里读出来。
-  目前不影响使用，这个选项还有效，但改到哪个配置就顺手改掉哪个。
+- **两份 ARC 板级配置目前还用不了。** `arc_axc001.cfg`、`arc_axc002.cfg` 创建的是
+  `arc600`、`arc700` 两种 target。上游重写过的 `src/target/arc.c` 只提供 `arcv2`，
+  而本该提供另外两个的 `arc32` 家族已就位、被判定接不进构建并在 `7ffeda047` 里删除 ——
+  所以这两份配置指向的后端本树根本没有。（`arc_axc003_hs36.cfg` 只需要 `arcv2`，可用。）
+- **401 个导入的配置还在用已废弃的 `-chain-position`。** 上游的 `tcl/` 里已经是
+  0 处（全部改用 `-dap` / `-tap`）；这 493 处全在导入的第三方配置里 —— `target create`
+  366 处、`dap create` 119 处、`pld create` 6 处，其余靠变量拼接。机械替换只能
+  自动解掉 69 处（对象名与取值在同一行且完全相同），其余 424 处要人工过一遍：
+  多数文件在别的配置里定义 TAP，正确的 `-tap` 名得从那个文件里读出来。今天这不算坏 ——
+  选项仍然可用 —— 但下次动某个配置时，这是第一件该修的事。
 - **`adi-usbmux` 开关是空的。** `src/jtag/drivers/usbmux.c` 是 Win32 命名管道
   helper，不是 adapter driver，但它现在被挂在 `PROCESS_ADAPTERS` 上，于是
   `--enable-adi-usbmux` 存在，而树里根本没有叫 `usbmux` 的 `adapter_driver`。
@@ -369,22 +379,20 @@ proprietary to Analog Devices, Inc."。
   掉了，`use_usbmux` 命令实际是空操作。源 fork 的做法是把它当成普通的
   `AC_ARG_ENABLE([usbmux])` helper，用 `USE_USBMUX` 包起来 —— 应该改回那个
   形态。
-- **三组导入候选被卡在上游，而不是被卡在这棵树上。** 扫描发现了 ESP32 GPIO
-  bit-bang 探针、WCH RISC-V 调试探针和 Anlogic AL-Link 探针的支持，文件也已经
-  取回来分析过，但三组都没法原样落地：
-  - `esp_gpio.c` / `esp_gpio.h` 依赖整套 ESP-IDF 的 GPIO 与 dedicated-GPIO
-    HAL（`driver/gpio.h`、`hal/gpio_ll.h`），OpenOCD 树里根本不存在。
-  - `wlinke.c` 需要一整套 SDI transport 层 —— `src/jtag/` 下的 `sdi.c` /
-    `sdi.h` 一对文件，外加 `struct adapter_driver` 上的 `sdi_ops` 成员，
-    上游没有；
-    而 `wch_riscv.c` 是上游 `riscv.c` 的私有分叉，依赖上游标成 `static`
-    的符号。
+- **三组已就位的驱动被卡在上游，而不是被卡在这棵树上。** 扫描发现了 ESP32 GPIO
+  bit-bang 探针、WCH RISC-V 调试探针和 Anlogic AL-Link 探针的支持。三组代码都在
+  树里（见上面的未接线清单），但没有一组能原样注册：
+  - `esp_gpio.c` / `esp_gpio.h` 需要 ESP-IDF 的 GPIO 与 dedicated-GPIO HAL
+    （`driver/gpio.h`、`hal/gpio_ll.h`），那根本不在 OpenOCD 树里。
+  - `wlinke.c` 需要整套 SDI transport 层 —— `src/jtag/` 下的 `sdi.c` / `sdi.h`
+    和 `struct adapter_driver` 上的 `sdi_ops` 成员 —— 上游都没有；`wch_riscv.c`
+    则是上游 `riscv.c` 的私有分支，期望上游保持 `static` 的符号。
   - `al_link.c` 需要 `JTAG_TDI` 命令类型、`DEBUG_CAP_TDI_SEQ` 能力位和
-    `jtag_add_tdi_seq()` —— 上游一个都没有 —— 而且它用的 CyUSB 后端只支持
-    Windows。
+    `jtag_add_tdi_seq()` —— 上游一个都没有 —— 而它用的 CyUSB 后端仅限 Windows。
 
-  它们仍然记录在 `manifest/consolidated.json` 的 `not_imported` 里，连同来源
-  commit，工作不会白做。
+  仍然因为上游缺代码而挡住导入的，只剩 9 份 Anlogic AL-Link 目标配置
+  （`tcl/target/anlogic/*_al_link.cfg`）。所有记录都留在 `manifest/consolidated.json`
+  的 `not_imported` 里，带来源 commit，工作不会丢。
 
 ---
 
@@ -406,6 +414,6 @@ proprietary to Analog Devices, Inc."。
 
 ## 致谢
 
-这棵树之所以存在，是因为 56 个别人的仓库发布了上游不肯收的芯片支持。他们的
+这棵树之所以存在，是因为 53 个别人的仓库发布了上游不肯收的芯片支持。他们的
 提交、代码和许可声明都保留在 `manifest/` 里。上游 OpenOCD 的作者们打下了这棵
 树所依赖的全部基础。
