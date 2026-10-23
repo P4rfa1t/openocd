@@ -10,6 +10,11 @@
 - 标签一旦推送就不再移动：每个 `v*` 标签在 GitHub Release 上必须始终可取。
 - 打包流水线只在推送 `v*` 标签时才创建 Release
   （`.github/workflows/snapshot.yml` 的 `release` job，`if: startsWith(github.ref, 'refs/tags/v')`）。
+- **标签发布前必须先在 `CHANGELOG.md` 写好 `## <标签>` 那一节**：`release` job 检出标签树后，
+  取这一节作为 Release 正文，再把产物的大小与 sha256 附在末尾，然后 `gh release edit` 覆盖
+  `gh release create --generate-notes` 生成的空正文。标签在 CHANGELOG 里找不到对应节时
+  job 直接失败（awk 退出 3）——发一个正文空白的正式版比发一个红叉更糟。
+- 同一个标签重跑该 job 不会失败：产物用 `--clobber` 覆盖、正文重新生成。
 
 ## 2. 发布前：重生成生成物
 
