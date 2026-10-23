@@ -148,29 +148,26 @@ ESIRISC_SRC = \
 	%D%/esirisc_jtag.c \
 	%D%/esirisc_trace.c
 
-# The third-party ARC backend (foss-for-mips-arc-processors/openocd,
-# branch arc-2026.09) is a superset of upstream's single-type arc.c: it
-# registers the arc600, arc700 AND arcv2 target types, and it is the only
-# implementation that registers the "arc jtag" command group that every
-# tcl/cpu/arc/*.tcl script drives. Upstream arc.c registers no commands at all,
-# so the tcl layer cannot work against it.
+# Upstream's ARC backend. The third-party backend from
+# foss-for-mips-arc-processors/openocd (arc32.c and friends) was imported with
+# this fork but cannot be built: its arc32.c calls nine arc_mem_* entry points
+# (arc_mem_checksum, arc_mem_blank_check, arc_mem_run_algorithm,
+# arc_mem_start_algorithm, arc_mem_wait_algorithm, arc_mem_virt, arc_mem_mmu,
+# arc_mem_read_phys_memory, arc_mem_write_phys_memory) that exist only in that
+# fork's own arc_mem.c. The arc_mem.c in this tree is upstream's 300-line
+# version, which defines arc_mem_read and arc_mem_write and nothing else, so
+# linking arc32.c against it fails. Both backends also define arcv2_target, so
+# they cannot be built side by side either.
 #
-# The two implementations both define arcv2_target, so exactly one may be
-# compiled. The fork keeps the upstream files in the tree for reference but
-# builds the third-party backend.
-#
-# arc_core.c and arc_trgt.c also came with that import, but nothing in the
-# backend or the tree calls the three functions they export
-# (arc_core_soft_reset_halt, arc_core_type_info, arc_trgt_request_data) and
-# they include the upstream arc.h rather than arc32.h, so they are left out of
-# the build instead of being silently linked into nothing.
+# Upstream's arc.c registers only the arcv2 type and registers no commands,
+# while the tcl/cpu/arc/*.tcl scripts drive an "arc jtag" command group. That
+# gap is a property of the import and cannot be fixed from this Makefile; the
+# affected configs state it in their headers instead.
 ARC_SRC = \
-        %D%/arc32.c \
-        %D%/arc_dbg.c \
+        %D%/arc.c \
+        %D%/arc_cmd.c \
         %D%/arc_jtag.c \
-        %D%/arc_mntr.c \
-        %D%/arc_ocd.c \
-        %D%/arc_regs.c
+        %D%/arc_mem.c
 
 %C%_libtarget_la_SOURCES += \
 	%D%/algorithm.h \

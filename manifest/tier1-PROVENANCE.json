@@ -5101,7 +5101,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "82eacbbf4a116b5499e751313a9ce009ee1270a5398defb6f43906f7face6286"
+      "sha256": "9ba1963b4753d504824e4af6791d771e22fc2a9164e3b6911c01cadbf55c188d",
+      "pristine_sha256": "82eacbbf4a116b5499e751313a9ce009ee1270a5398defb6f43906f7face6286",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/anlogic/init.cfg": {
       "source_repo": "AnlogicInfo/al_openocd",
@@ -7351,7 +7355,11 @@
         "xpack-dev-tools/openocd",
         "yottatsa/openocd"
       ],
-      "sha256": "ecd1afeaa2ba8e1c9685e45d8f75f28a4726872a47e58e442786783343a6f418"
+      "sha256": "86004d5249437ae52137b69df52c4bcbfcf6112c8313a7d998b0f0693d42a851",
+      "pristine_sha256": "ecd1afeaa2ba8e1c9685e45d8f75f28a4726872a47e58e442786783343a6f418",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/nds32v3.cfg": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -7406,7 +7414,11 @@
         "xpack-dev-tools/openocd",
         "yottatsa/openocd"
       ],
-      "sha256": "f8764f3a1483282393e597fabbbca644c839170c4120e557355c32d00417f71b"
+      "sha256": "bfc02de5db2e894ba984ec26cca5ab7f64c4181a03c93f53191a4a2d03411cf2",
+      "pristine_sha256": "f8764f3a1483282393e597fabbbca644c839170c4120e557355c32d00417f71b",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/nds32v3m.cfg": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -7461,7 +7473,11 @@
         "xpack-dev-tools/openocd",
         "yottatsa/openocd"
       ],
-      "sha256": "7428ac394167eac04b2532d9e79cb4def89fc1216ac1444aa829b040f1d61cba"
+      "sha256": "20bed1f25e8b66057da833af65621187ed277306f167621fef918f1435b70a58",
+      "pristine_sha256": "7428ac394167eac04b2532d9e79cb4def89fc1216ac1444aa829b040f1d61cba",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/netx500.cfg": {
       "source_repo": "esden/openocd",
