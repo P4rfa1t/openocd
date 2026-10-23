@@ -203,6 +203,12 @@ jobs:
     permissions:
       contents: write
     steps:
+      # Check out first: actions/checkout cleans untracked files by default, so a
+      # checkout after the download would delete the artifact it just fetched.
+      - name: Check out the tagged tree for the release notes
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Download the windows package
         uses: actions/download-artifact@v4
         with:
@@ -210,8 +216,8 @@ jobs:
       - name: Create or update the GitHub Release for this tag
         env:
           GH_TOKEN: ${{ github.token }}
-          # No checkout in this job, so gh cannot discover the repository from a
-          # git remote; name it explicitly or every gh call fails.
+          # This job starts in a fresh workspace, so name the repository
+          # explicitly rather than relying on a git remote for discovery.
           GH_REPO: ${{ github.repository }}
         run: |
           ls -l
@@ -224,3 +230,35 @@ jobs:
               --verify-tag \
               --generate-notes
           fi
+      - name: Publish the changelog section as the release notes
+        # --generate-notes only diffs against the previous tag, which is empty for
+        # a first release, so replace the body with the CHANGELOG entry for this
+        # version plus the checksum of the asset that was just attached. A missing
+        # CHANGELOG section is a hard failure: a release without notes is worse
+        # than a red job.
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          awk -v ver="$GITHUB_REF_NAME" '
+            $0 == "## " ver { found = 1; next }
+            found && /^## / { exit }
+            found { print }
+            END { if (!found) exit 3 }
+          ' CHANGELOG.md > /tmp/changelog-section.md
+          {
+            echo "Windows x86_64 (mingw-w64) cross build, produced by the package job of this tag."
+            echo
+            cat /tmp/changelog-section.md
+            echo
+            echo "### Asset"
+            echo
+            echo '```'
+            ls -l ./openocd-*.tar.gz
+            sha256sum ./openocd-*.tar.gz
+            echo '```'
+            echo
+            echo "Release process and post-release checks: docs/04-release.md."
+          } > /tmp/notes.md
+          gh release edit "$GITHUB_REF_NAME" --notes-file /tmp/notes.md
