@@ -2,11 +2,11 @@
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
   "tier": 1,
-  "file_count": 712,
+  "file_count": 702,
   "integrity": {
-    "recorded": 712,
-    "on_disk": 712,
-    "pinned": 712,
+    "recorded": 702,
+    "on_disk": 702,
+    "pinned": 702,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "files": {
@@ -18,7 +18,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "7a52b0df74fe3dd164ce2df76a70c03dac1697dabc3f07992376d1265aab34a8",
+      "sha256": "5f2dba6fd60512caaa2c72411d7b402f869ed21830cc1f1a171e430bd39ac282",
       "pristine_sha256": "b1650e25c0dd02505830699f5eb76906a534c791974788533572929a91eb4dc5",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -32,7 +32,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "68a6d50e03e902df4159bba95b659c3cd95640a7c6349c38779b19811d93bab8",
+      "sha256": "abca7ba7cd55b3aa25686bc115d857b442eef3329b7dca8a6a31f7138d22c8e5",
       "pristine_sha256": "8cda54a847d68b1c3b49b40dd2813aa738ca86f1bb2087e3342ebf32617955c6",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -122,7 +122,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "95f105c22832c54d79b16f7f529770deb1a14eb67e6c4b5a7c2c814336e9b718"
+      "sha256": "d58e423e22ab6233ec5a26db4af89465fc4c89e4c5e830bc19314e570194c0dc",
+      "pristine_sha256": "95f105c22832c54d79b16f7f529770deb1a14eb67e6c4b5a7c2c814336e9b718",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/adspsc835w_ev_som.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -132,7 +136,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "556b9d3ef3b7c7374778e275a216e4f66ac001291aadadab14370361d5432f07"
+      "sha256": "62b5b276a3497ab6dba2837a97c27e282581fbd94ecca7a135368f10662db66b",
+      "pristine_sha256": "556b9d3ef3b7c7374778e275a216e4f66ac001291aadadab14370361d5432f07",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/adspsc846w_ev_som.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -142,7 +150,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "29d1ba185aa61ca398e73884e3b548e84a73136a5dc3a9b8ba53aba4b43e937a"
+      "sha256": "cf77928f945320fabacc919d076170b63c74fa6dfcb0f447bfe88c156f32e661",
+      "pristine_sha256": "29d1ba185aa61ca398e73884e3b548e84a73136a5dc3a9b8ba53aba4b43e937a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/adspsc846w_mp_ezkit.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -153,32 +165,6 @@
       "stars_at_import": 29,
       "also_present_in": [],
       "sha256": "004131741edec3c99cf9143bea788ad976b1b655d79556d2939f3cf60fab360d"
-    },
-    "tcl/board/altera_arria10__aji_client.cfg": {
-      "source_repo": "OlivierVanWassenhove-Dekimo/openocd",
-      "source_branch": "master",
-      "source_commit": "89788eb29026fc67691fa463876e64d097219371",
-      "source_path": "tcl/board/altera_arria10__aji_client.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "ManniMetzger/openocd",
-        "intel/aji_openocd"
-      ],
-      "sha256": "0f367350b66b8a466471c33270706d03614b241bd919708679996e8bb996654f"
-    },
-    "tcl/board/altera_arria10_niosv__aji_client.cfg": {
-      "source_repo": "OlivierVanWassenhove-Dekimo/openocd",
-      "source_branch": "master",
-      "source_commit": "89788eb29026fc67691fa463876e64d097219371",
-      "source_path": "tcl/board/altera_arria10_niosv__aji_client.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "ManniMetzger/openocd",
-        "intel/aji_openocd"
-      ],
-      "sha256": "8fb89dda600d56af3e8212c9956d72b9df7650fd4fca56cec92af139eed937f9"
     },
     "tcl/board/arc_axs101.cfg": {
       "source_repo": "foss-for-mips-arc-processors/openocd",
@@ -827,7 +813,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "7f54ca50d784ec6e3ec9cf272f2ffafd1a7497df48264ae77b76e7b37432eaaf",
+      "sha256": "fbc20867759b5b3c5cb1a8a53069b968168ead66f5f085ff5a09ebed9ac8258c",
       "pristine_sha256": "1c0c1a24ec19b7425a47b4cab66948cba93408038ceb70b719c2245f388bd6de",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -855,8 +841,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "ffe0b1178f276968dfd2157d884a6884bc0568afa147742e730fac154f7b2206",
-      "imported_as": "dependency"
+      "sha256": "bca4c8bf231cddc12c04dcf30bfe2fcb4c9d43ab5b3cff698e985591d18431ac",
+      "imported_as": "dependency",
+      "pristine_sha256": "ffe0b1178f276968dfd2157d884a6884bc0568afa147742e730fac154f7b2206",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/flash_algorithms/2184x_otp.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -866,8 +856,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "e7223fbd3dda881cc57fd3495c1fa8b47c4b4296c5d2c6158881422f754f049e",
-      "imported_as": "dependency"
+      "sha256": "1b608f9674ef93aaa2947cd923413b1be2b826bcf087d4b156ceeb17f0195893",
+      "imported_as": "dependency",
+      "pristine_sha256": "e7223fbd3dda881cc57fd3495c1fa8b47c4b4296c5d2c6158881422f754f049e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/flash_algorithms/algoFileFinder.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -877,8 +871,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "becc36f27a88059608d4f5f1288c074f0dfd1769e4490495915cd4d1a4bdf0ac",
-      "imported_as": "dependency-resolved"
+      "sha256": "93992fbd3d89fb4122e689382aad3b8021696f4afba637d3a5794cc4e3842739",
+      "imported_as": "dependency-resolved",
+      "pristine_sha256": "becc36f27a88059608d4f5f1288c074f0dfd1769e4490495915cd4d1a4bdf0ac",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/flash_algorithms/is25wp02gg.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -888,8 +886,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "9644005c18f472b9cf2dc114853998d86d95368ada5a696c5743e3f73bd3fca1",
-      "imported_as": "dependency"
+      "sha256": "e33dfb25edd01d3864e903652b877ba625be46ce4f36b005c4482f0a9c3096a0",
+      "imported_as": "dependency",
+      "pristine_sha256": "9644005c18f472b9cf2dc114853998d86d95368ada5a696c5743e3f73bd3fca1",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/flash_algorithms/is72wvo32m8Awo256.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -899,8 +901,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "a3bdccaa0762bcd763f3d160cfe2f773c02a159c42403da98ea052a80663c629",
-      "imported_as": "dependency"
+      "sha256": "eaa1099b73bad65d0681ab4f6750ada6ed56a246e96bafdf9aeae5cb5d9503ae",
+      "imported_as": "dependency",
+      "pristine_sha256": "a3bdccaa0762bcd763f3d160cfe2f773c02a159c42403da98ea052a80663c629",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/flash_algorithms/issi22tf16g.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -921,8 +927,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "d258f91893d50f744e8837d5c4898f95edf395ee3aaa8ee58b68345355fe3636",
-      "imported_as": "dependency"
+      "sha256": "c987c0ef2ea9fc1d9aa121a9964b880cc7e0b2d3724502bb6bf2f545c6b45c99",
+      "imported_as": "dependency",
+      "pristine_sha256": "d258f91893d50f744e8837d5c4898f95edf395ee3aaa8ee58b68345355fe3636",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/flash_algorithms/mx66u1g45g.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -943,8 +953,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "ded8d184b12d092cd89d00b87db937e680c149bdea3681bb7b6298f339a49ff7",
-      "imported_as": "dependency"
+      "sha256": "b732a7429c22916149ffefb96ebc0645d65a4cdf8f0e36c1a9f53419692c79df",
+      "imported_as": "dependency",
+      "pristine_sha256": "ded8d184b12d092cd89d00b87db937e680c149bdea3681bb7b6298f339a49ff7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/flash_algorithms/w25q128fv.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -954,8 +968,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "be8aa8c77f5c8e32543360d528351e9019cf8480e9b30af2d9fa4887f77adafe",
-      "imported_as": "dependency"
+      "sha256": "a8cc667aa28d9b1589e405ad68bdef48822ee972438801acf7990a986247a92f",
+      "imported_as": "dependency",
+      "pristine_sha256": "be8aa8c77f5c8e32543360d528351e9019cf8480e9b30af2d9fa4887f77adafe",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/gemini.cfg": {
       "source_repo": "os-fpga/openocd",
@@ -1276,7 +1294,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "68d34e31e06651df8ebd245d3c749a4dc73f8f4060c6a0a4e9cd204b0d9ff8f9"
+      "sha256": "41bdee29f4c2200fb5612ba8e8202210b4326053f473aa9ecfad77cd54c43950",
+      "pristine_sha256": "68d34e31e06651df8ebd245d3c749a4dc73f8f4060c6a0a4e9cd204b0d9ff8f9",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/sifive-e31arty-cjtag.cfg": {
       "source_repo": "riscv-collab/riscv-openocd",
@@ -1841,7 +1863,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "02ededafd5a54b1ca80b031d2708e09a1e41c1af4ddd102e01654756f6309fa5"
+      "sha256": "ea3c2e4cf2d669422f52a49a5f03ba8302b0a48d2ce2a91f22c9256c19713900",
+      "pristine_sha256": "02ededafd5a54b1ca80b031d2708e09a1e41c1af4ddd102e01654756f6309fa5",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2340r53.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1861,7 +1887,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "e17b953c5e21a1222aa2f32bf593fc9535d891444eeb8de44f19ea97fc68dc37"
+      "sha256": "bfa6be2886d298bfa65dad316a3bc1d21bdb02a7594afdd8f913b8d0cfb4ba51",
+      "pristine_sha256": "e17b953c5e21a1222aa2f32bf593fc9535d891444eeb8de44f19ea97fc68dc37",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2745P10.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1871,7 +1901,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f"
+      "sha256": "64b684df13e4dba2632ee1ad4b80bd2ff86f1dae6cc1f5a584f1a333856bbf63",
+      "pristine_sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2745R74.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1881,7 +1915,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f"
+      "sha256": "64b684df13e4dba2632ee1ad4b80bd2ff86f1dae6cc1f5a584f1a333856bbf63",
+      "pristine_sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2745r10.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1901,7 +1939,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f"
+      "sha256": "64b684df13e4dba2632ee1ad4b80bd2ff86f1dae6cc1f5a584f1a333856bbf63",
+      "pristine_sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2755P20.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1911,7 +1953,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f"
+      "sha256": "64b684df13e4dba2632ee1ad4b80bd2ff86f1dae6cc1f5a584f1a333856bbf63",
+      "pristine_sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2755R10.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1921,7 +1967,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f"
+      "sha256": "64b684df13e4dba2632ee1ad4b80bd2ff86f1dae6cc1f5a584f1a333856bbf63",
+      "pristine_sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2755R74.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1931,7 +1981,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f"
+      "sha256": "64b684df13e4dba2632ee1ad4b80bd2ff86f1dae6cc1f5a584f1a333856bbf63",
+      "pristine_sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_lp_em_cc2765R10.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1941,7 +1995,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f"
+      "sha256": "64b684df13e4dba2632ee1ad4b80bd2ff86f1dae6cc1f5a584f1a333856bbf63",
+      "pristine_sha256": "76f59e408b14961539e8ae5d8985c7eecf8964015bf4423bbd732c8943ec667f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/ti_mspm33_launchpad.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -1951,7 +2009,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "6ff56a0992ccb40f93ca5b061b22e77ae7dbbdb714f4ee5a75e86ea1c5115587"
+      "sha256": "f8db9b6a91f022bc689346c9150cc57f37b8ac1259f8da3ef62c3fc9cabf0d84",
+      "pristine_sha256": "6ff56a0992ccb40f93ca5b061b22e77ae7dbbdb714f4ee5a75e86ea1c5115587",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/twr-k40.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -1971,7 +2033,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "5ba8532ac2fe49acb047ad973159bc098bca0a4fa030fc34fca6c98668b29ee1"
+      "sha256": "743c494d0cb01acd999a5a3cc46b2f9fc00692f4e0c2b41a02660275e4a4c86e",
+      "pristine_sha256": "5ba8532ac2fe49acb047ad973159bc098bca0a4fa030fc34fca6c98668b29ee1",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/board/zy1000.cfg": {
       "source_repo": "Blinkinlabs/OpenOCD",
@@ -2966,7 +3032,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "4306dd9ee2b310542794c929aa4d24063a9bd1706f94aa9e23c7a691ce37a664"
+      "sha256": "3928b0f295d21e2870ddf229ce30d63b0594e1aa5ae3b39b7736f0d15fc5e681",
+      "pristine_sha256": "4306dd9ee2b310542794c929aa4d24063a9bd1706f94aa9e23c7a691ce37a664",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/adi-mpdbgagent.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -3143,16 +3213,6 @@
         "line endings normalised to LF; content byte-identical to the published file"
       ]
     },
-    "tcl/interface/colobus.cfg": {
-      "source_repo": "tihmstar/openocd_colobus",
-      "source_branch": "master",
-      "source_commit": "7eab5ac160296c988b06ea058955030a99599025",
-      "source_path": "tcl/interface/colobus.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 1,
-      "also_present_in": [],
-      "sha256": "b46bd67644cc42bb30934b957f50c2ac6935e174b8614c38398d27ee6c39cae5"
-    },
     "tcl/interface/dirtyjtag-cjtag.cfg": {
       "source_repo": "luyi1888/openocd",
       "source_branch": "master",
@@ -3179,7 +3239,11 @@
         "jeanthom/openocd-dirtyjtag",
         "luyi1888/openocd"
       ],
-      "sha256": "8570af215248b22d0c9780c6dad0a54df8e0ad5ad8371ab289dbe5e6f4957e60"
+      "sha256": "d8fb90cd40c8024995a775cfbe6d1ad7c304e958f08ae42d7076d91b787cfaa5",
+      "pristine_sha256": "8570af215248b22d0c9780c6dad0a54df8e0ad5ad8371ab289dbe5e6f4957e60",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/eud.cfg": {
       "source_repo": "linux-msm/openocd",
@@ -3189,21 +3253,12 @@
       "license": "NOASSERTION",
       "stars_at_import": 26,
       "also_present_in": [],
-      "sha256": "4d8138d15bd6051697316574d566d53c9560f6345d1c909eb01ccf4312729c80",
+      "sha256": "ddb5c81ce7eca153d46828bf36655531e344e2ed7406c5657cd6c24135b6c6ff",
       "pristine_sha256": "77ef7f660f6b12d17479972f587eab2adc3fb78904f1fb4913cf0ebb837b984c",
       "local_modifications": [
-        "line endings normalised to LF; content byte-identical to the published file"
+        "line endings normalised to LF; content byte-identical to the published file",
+        "content edited in this fork; digest refreshed"
       ]
-    },
-    "tcl/interface/faultier.cfg": {
-      "source_repo": "stacksmashing/openocd-tamarin",
-      "source_branch": "tamarin",
-      "source_commit": "eb5d44390a1e3d3fca72e67db94786598432432f",
-      "source_path": "tcl/interface/faultier.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 18,
-      "also_present_in": [],
-      "sha256": "9c1ec9255bb2a10284a19bf88536072c9772ad1fafd7df6c16b7846c80ad526e"
     },
     "tcl/interface/ftdi/alinx.cfg": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -3399,8 +3454,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "f4d080a5253f4af9148361ce32ef476cf95c54ec5a966ea57e683cbaa3c75079",
-      "imported_as": "dependency"
+      "sha256": "2355188c3b36161505b5d19dea72568a8c45ec040964b2bb27d952c71302d22c",
+      "imported_as": "dependency",
+      "pristine_sha256": "f4d080a5253f4af9148361ce32ef476cf95c54ec5a966ea57e683cbaa3c75079",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/interface/ftdi/xds100.cfg": {
       "source_repo": "xsession/openocd",
@@ -3441,28 +3500,6 @@
       "stars_at_import": 29,
       "also_present_in": [],
       "sha256": "16193b419ee89855afc9241d2c202082e900703e72b04fdbfa8577bd7f31eba8"
-    },
-    "tcl/interface/jtag_esp_remote.cfg": {
-      "source_repo": "espressif/openocd-esp32",
-      "source_branch": "master",
-      "source_commit": "a585825d4d0bbd5b8aff83e01816d2f2c04ffd84",
-      "source_path": "tcl/interface/jtag_esp_remote.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 471,
-      "also_present_in": [],
-      "sha256": "d93b56f71cc480e63f002068690d046a55d9d7d58e8d19e8a4bc9d32c297c32a"
-    },
-    "tcl/interface/jtag_tcp.cfg": {
-      "source_repo": "aesc-silicon/elements-openocd",
-      "source_branch": "main",
-      "source_commit": "c888d1cf4b1f12d40cabc4cca813dcd03802ef21",
-      "source_path": "tcl/interface/jtag_tcp.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 1,
-      "also_present_in": [
-        "AnlogicInfo/al_openocd"
-      ],
-      "sha256": "ba204eca3ca0469292c08cade762054354a4a6b720498472feccac10117ac722"
     },
     "tcl/interface/jtagkey-tiny.cfg": {
       "source_repo": "OpenNuvoton/OpenOCD-Nuvoton",
@@ -3537,61 +3574,6 @@
       "also_present_in": [],
       "sha256": "c867295c1557decf8cd9b279a33666b44449b19764b3fb5b49f16a489f291ddc"
     },
-    "tcl/interface/nds32-aice.cfg": {
-      "source_repo": "zephyrproject-rtos/openocd",
-      "source_branch": "zephyr-20250213",
-      "source_commit": "18de08775561b2b4bf13abb4ce4953c8dd08ad70",
-      "source_path": "tcl/interface/nds32-aice.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 47,
-      "also_present_in": [
-        "AnlogicInfo/al_openocd",
-        "Blinkinlabs/OpenOCD",
-        "Broadcom/WICED-OpenOCD",
-        "Devilbinder/openocd",
-        "KilyannBrault/openocd",
-        "Lichee-Pi/LicheeTang_openocd",
-        "MotorolaMobilityLLC/openocd",
-        "OpenNuvoton/OpenOCD-Nuvoton",
-        "Seneral/riscv-openocd-wch",
-        "andestech/nds-openocd",
-        "arduino/OpenOCD",
-        "bluespec/riscv-openocd",
-        "ciniml/openocd",
-        "cjacker/wch-openocd",
-        "daniel-k/openocd",
-        "dynm/openocd-starbleed",
-        "erwango/openocd-stm32",
-        "fatalfeel/openocd_integrated",
-        "foss-for-mips-arc-processors/openocd",
-        "fxsheep/openocd_wchlink-rv",
-        "ilg-archived/openocd",
-        "intel/OpenOCD",
-        "intel/aji_openocd",
-        "jeanthom/openocd-dirtyjtag",
-        "karlp/openocd-hacks",
-        "kendryte/openocd-kendryte",
-        "kprasadvnsi/riscv-openocd-wch",
-        "l0ud/openocd-puya",
-        "marcelobarrosufu/openocd_nrf52",
-        "matrix-io/matrix-creator-openocd",
-        "newbrain/riscv-openocd-wch",
-        "pebble/openocd",
-        "sanchox/openocd",
-        "sandeepmistry/openocd-code-nrf5",
-        "satoshinm/openocd",
-        "snowcap-electronics/OpenOCD",
-        "sony/openocd-nuttx",
-        "stacksmashing/openocd",
-        "stacksmashing/openocd-tamarin",
-        "sysprogs/esp8266-openocd",
-        "walmis/openocd-blackmagic",
-        "watr-li/OpenOCD",
-        "xpack-dev-tools/openocd",
-        "yottatsa/openocd"
-      ],
-      "sha256": "3120f23ab455bd4f1066dde63de8eb976223d4581aefe1ecabc1c24eddb89153"
-    },
     "tcl/interface/orsoc-jtag.cfg": {
       "source_repo": "kevinmehall/openOCD",
       "source_branch": "master",
@@ -3606,18 +3588,6 @@
         "content edited in this fork; digest refreshed",
         "line endings normalised to LF; content byte-identical to the published file"
       ]
-    },
-    "tcl/interface/picoprobe.cfg": {
-      "source_repo": "sysprogs/openocd",
-      "source_branch": "master",
-      "source_commit": "6bb1477098889a29b8c53620763dacf1c61a0695",
-      "source_path": "tcl/interface/picoprobe.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 102,
-      "also_present_in": [
-        "stacksmashing/openocd"
-      ],
-      "sha256": "25b3f7509da2db5807c86db8f0260e26a4b97cd8d7295752a55c7ea27da5c053"
     },
     "tcl/interface/raspberrypi-swd.cfg": {
       "source_repo": "raspberrypi/openocd",
@@ -3696,30 +3666,6 @@
         "content edited in this fork; digest refreshed",
         "line endings normalised to LF; content byte-identical to the published file"
       ]
-    },
-    "tcl/interface/tamarin.cfg": {
-      "source_repo": "stacksmashing/openocd-tamarin",
-      "source_branch": "tamarin",
-      "source_commit": "eb5d44390a1e3d3fca72e67db94786598432432f",
-      "source_path": "tcl/interface/tamarin.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 18,
-      "also_present_in": [
-        "stacksmashing/openocd"
-      ],
-      "sha256": "9c1ec9255bb2a10284a19bf88536072c9772ad1fafd7df6c16b7846c80ad526e"
-    },
-    "tcl/interface/tas_client.cfg": {
-      "source_repo": "zuyih/openocd",
-      "source_branch": "master",
-      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
-      "source_path": "tcl/interface/tas_client.cfg",
-      "license": "NOASSERTION",
-      "stars_at_import": 0,
-      "also_present_in": [
-        "go2sh/aurix-openocd"
-      ],
-      "sha256": "0fd0baabc1f627d0af3f70f4d7ca6256e2261bb9e8c2f1934ee058d8b4ffb3d8"
     },
     "tcl/interface/ti-icdi-auto.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -3823,7 +3769,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "f1f56d994b3c443f05c7adbdb9bc5260774f74c2e33215c68260d3c2346b9a77"
+      "sha256": "a50c476a3020076d5b543e7bc24fc9abae8b4aac788983f752aab627d0ade4f2",
+      "pristine_sha256": "f1f56d994b3c443f05c7adbdb9bc5260774f74c2e33215c68260d3c2346b9a77",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/adsp2183x.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -3847,7 +3797,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "50ac7fe2a057b2afb10ac18b2e3b750e20a5175e2954ad420626c91dff8cb5a6",
+      "sha256": "ab7f071ce7e862a7c2e6ed642de38417d83d505321f3809da5f2278a0f4d4bdf",
       "pristine_sha256": "d33c9fb744ae695761320d6ab502f4e3b6a0ac5e3756eff02b59cd8288e26c37",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -3861,7 +3811,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "63bbc5d79d30f192bacf7c62e320f1a693aeaba44d04fdd125aa43ba3e41d2c0"
+      "sha256": "4874d3b26d8faacee6e91b2fca9b620b2a574b724c8fc21598b3d43860b1ff49",
+      "pristine_sha256": "63bbc5d79d30f192bacf7c62e320f1a693aeaba44d04fdd125aa43ba3e41d2c0",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/adspsc57x_memory_map.xml": {
       "source_repo": "analogdevicesinc/openocd",
@@ -3881,7 +3835,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "f7cb9fca23457fdf7cf316cdd4202a6df43bd3907d356c1fef982ec078818970"
+      "sha256": "43008f1d12c442839e371fbdf9462a0f4d64f253127aa917cf684789913ba912",
+      "pristine_sha256": "f7cb9fca23457fdf7cf316cdd4202a6df43bd3907d356c1fef982ec078818970",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/adspsc58x.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -3891,8 +3849,12 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "ab59264d8ff1ee2f30101aa2f5860ec79d8a920098fb36e339e7278f091b4a49",
-      "note": "re-fetched: required by tcl/board/adspsc589_minibrd.cfg"
+      "sha256": "fd09a999823f540634af3a1cd6c4ecb9b10df1a2900cfe4a40435e8359cca045",
+      "note": "re-fetched: required by tcl/board/adspsc589_minibrd.cfg",
+      "pristine_sha256": "ab59264d8ff1ee2f30101aa2f5860ec79d8a920098fb36e339e7278f091b4a49",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/adspsc58x_memory_map.xml": {
       "source_repo": "analogdevicesinc/openocd",
@@ -3912,7 +3874,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "ad00fbcb88ff66a159b6bea74f97ca831759fc586e6a212a00d4ea215778747f"
+      "sha256": "aedc9b5737685172dddfef1d995de8370e918e72768ae7c1102d37fd19ad7445",
+      "pristine_sha256": "ad00fbcb88ff66a159b6bea74f97ca831759fc586e6a212a00d4ea215778747f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/adspsc59x.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -3922,7 +3888,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "f95d91ef4debeb58abef5ac74c184aeeb62a5d9cc2aea865b7f60f5f85bf3a54"
+      "sha256": "3668435729d355234e1d29d65b40020fc6f2415eeb8230c187fd9b921dc31af7",
+      "pristine_sha256": "f95d91ef4debeb58abef5ac74c184aeeb62a5d9cc2aea865b7f60f5f85bf3a54",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/adspsc59x_a55.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -3952,7 +3922,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "1b086c0045b9d46b8eb61e18e612fe22a6a77e1dff0ab9705b9c16a488629050"
+      "sha256": "d251923d61ae6ae9e2f28f62de7455e8b9012b91997e5b476ff8eed392721f78",
+      "pristine_sha256": "1b086c0045b9d46b8eb61e18e612fe22a6a77e1dff0ab9705b9c16a488629050",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/adspsc5xx.tcl": {
       "source_repo": "analogdevicesinc/openocd",
@@ -4002,7 +3976,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "9046025fe11110c6d82a568ce1edf265c90c0c9fec6bcea131f4bf8ce0caa826"
+      "sha256": "87faeb6a92e6ac7ed948f842fb3225d5b2f66e4086f4633629ad081ee503737d",
+      "pristine_sha256": "9046025fe11110c6d82a568ce1edf265c90c0c9fec6bcea131f4bf8ce0caa826",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/aducm3027.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -4139,7 +4117,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "9ba1963b4753d504824e4af6791d771e22fc2a9164e3b6911c01cadbf55c188d",
+      "sha256": "eddf37de5570fe58afdc7ee5948d9719e0daf8fc5645c2e8f8d57b0583b56fa3",
       "pristine_sha256": "82eacbbf4a116b5499e751313a9ce009ee1270a5398defb6f43906f7face6286",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4173,7 +4151,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "24e271af6e82f04feba67be8dc6edab8f84954fe52ff3d7125d4fd4dcd6f30b4"
+      "sha256": "90660147c898af8eea40916247a51a279d0cd61818f998abbc2be6863e0fe254",
+      "pristine_sha256": "24e271af6e82f04feba67be8dc6edab8f84954fe52ff3d7125d4fd4dcd6f30b4",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/anlogic/softcore_direct.cfg": {
       "source_repo": "AnlogicInfo/al_openocd",
@@ -4387,7 +4369,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "7efbd876a17b754840e6c0653d81d13eed357a800f01fe99a43578f5871da0e4"
+      "sha256": "1a6a8cea76781ff944cd7a3033224bfdb3967f8143402cf29c4c53eab09ffbc9",
+      "pristine_sha256": "7efbd876a17b754840e6c0653d81d13eed357a800f01fe99a43578f5871da0e4",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/arty7_uboot.cfg": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -4399,7 +4385,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "59ac0aef6eff9589e2022055d079bf1cbdb03ff4a72313d42bfdf72db305074a"
+      "sha256": "eb7fa03bff1bb54359ee8c227832bc3beebd0418febf5ca125a8384453213cab",
+      "pristine_sha256": "59ac0aef6eff9589e2022055d079bf1cbdb03ff4a72313d42bfdf72db305074a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32a403axx.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4457,7 +4447,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "e6ca964acdacc590b9b5d7fb48328de88a2e253460bb624e786357c560e39c97",
+      "sha256": "1a7287846180ce22a30359c129fca18d9499c24d765fa924e2cddefa761816c1",
       "pristine_sha256": "367b8adabb9d30bbb72379ee9c279a55d4db660d294be057b63a9a7d481e96b9",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4473,7 +4463,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "d7acb7f2fb9da2eb091cdabec42e9ae9094dd19c1f43ac34514e85339093fa5f"
+      "sha256": "1cc5750b0da438471d5280873e4436738a4e09efe86ee94aa5d55e2b54d2d488",
+      "pristine_sha256": "d7acb7f2fb9da2eb091cdabec42e9ae9094dd19c1f43ac34514e85339093fa5f",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f403_spim_type2_remap0.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4485,7 +4479,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "f20a1719b39ce5ee463cf3b50e0dcc9facafa36c5a776a9c5ade5b2f5b8ee7bc"
+      "sha256": "6f2cc39c40165e346755eff075e312477c32dd1d1c27be69d1472f4869c8f82f",
+      "pristine_sha256": "f20a1719b39ce5ee463cf3b50e0dcc9facafa36c5a776a9c5ade5b2f5b8ee7bc",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f403a_407_spim_type1_remap0.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4497,7 +4495,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "149c0d50538044ed19d6073e07cb101536bacef5109f37c15651688beba418b2"
+      "sha256": "7cc33ab94277d4d85a9096f3bf4d0bd8679ee970a2f801f43224a6e79786a204",
+      "pristine_sha256": "149c0d50538044ed19d6073e07cb101536bacef5109f37c15651688beba418b2",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f403a_407_spim_type1_remap1.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4509,7 +4511,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "d353132895b3b60f43cd35bd309e6ee933aa3d144b0c0f556962ee5426067d0e"
+      "sha256": "5cee1eeabbb5d33068d184e98f8d9cc0961e48fe3996c80a28ae9d2224830ec5",
+      "pristine_sha256": "d353132895b3b60f43cd35bd309e6ee933aa3d144b0c0f556962ee5426067d0e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f403a_407_spim_type2_remap0.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4521,7 +4527,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "2aef270814fc604f1aaa947c7ee429a575e17c56f027ce22e040bbfd65a17966"
+      "sha256": "0965b4b029321cfabaed750a23e904fac0fb602ed35b7892b86156f9a0709a7a",
+      "pristine_sha256": "2aef270814fc604f1aaa947c7ee429a575e17c56f027ce22e040bbfd65a17966",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f403a_407_spim_type2_remap1.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4533,7 +4543,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "6623e6b0d3c9b4243965ef816252d5f42b95d92bae4a402aee964e73a0152d90"
+      "sha256": "b2f47257be7813d16e3f4a7d091d8e03315ce44b10fde72823164b7b33648ba5",
+      "pristine_sha256": "6623e6b0d3c9b4243965ef816252d5f42b95d92bae4a402aee964e73a0152d90",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f403axG.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4605,7 +4619,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "e6ca964acdacc590b9b5d7fb48328de88a2e253460bb624e786357c560e39c97",
+      "sha256": "1a7287846180ce22a30359c129fca18d9499c24d765fa924e2cddefa761816c1",
       "pristine_sha256": "367b8adabb9d30bbb72379ee9c279a55d4db660d294be057b63a9a7d481e96b9",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4645,7 +4659,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "b6d706f5c7d4d984d303f0598a4bc71c6cb120a1bc8e6c3d6fc04e21e110492d"
+      "sha256": "77fba45c1a63585422af2aaf9efad25f549ea91c126c1382759c7c59d40a15d5",
+      "pristine_sha256": "b6d706f5c7d4d984d303f0598a4bc71c6cb120a1bc8e6c3d6fc04e21e110492d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f413_spim_type1_remap1.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4657,7 +4675,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "348ba5dc150690f1e32e27adcf08bc840719587733a4d83ab87878f0e1667448"
+      "sha256": "4de61cb45e85420c7cf811edccb3f4b8892239eda54c387136f5706a9bc0193a",
+      "pristine_sha256": "348ba5dc150690f1e32e27adcf08bc840719587733a4d83ab87878f0e1667448",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f413_spim_type2_remap0.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4669,7 +4691,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "5c342a9254f0a53bf9a4345e9a162efc5a4bdfc069ace2aa3087a7f462091e77"
+      "sha256": "f8f3b74c12c230b6330c04deea47482d724026359dcfb21b26d43946d531aa79",
+      "pristine_sha256": "5c342a9254f0a53bf9a4345e9a162efc5a4bdfc069ace2aa3087a7f462091e77",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f413_spim_type2_remap1.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4681,7 +4707,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "a855cbe6edd48cc124b5e450ba8e887a61d36161b34901b9cb85aec643e3ac01"
+      "sha256": "f8ab69dd3ffa79fc87920c0a685746783c0e06a309b9a611d7284d33d4a77378",
+      "pristine_sha256": "a855cbe6edd48cc124b5e450ba8e887a61d36161b34901b9cb85aec643e3ac01",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f413xx.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4741,7 +4771,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "f441769dcc59715e06b549802a1f5ed222de4528b0c4727acd82262211274980"
+      "sha256": "2caa0021289a001329df24b21c69ccf384c1cda1163daa83dbaef6d47261e06b",
+      "pristine_sha256": "f441769dcc59715e06b549802a1f5ed222de4528b0c4727acd82262211274980",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/at32f425xx.cfg": {
       "source_repo": "rxmnjke/openocd",
@@ -4789,7 +4823,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "e0328c98896931cce27c3279fca24c21a97ccb7ab6c92392f1758e0d2e54eb63",
+      "sha256": "302afefe1eac3055b262b81bb8b2da57058b225ebf58c5a878bcbf51a0b5da01",
       "pristine_sha256": "fb1618fd754a0105fe1e78785be13801c04d106a48383d97fe00149413ad663f",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4817,7 +4851,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "806159b675cf108ce8a2267b1965067414241c7216aa95bd48a85a063923abdd",
+      "sha256": "d946baa0141bd6686ddfcae2360e76eed79384cc431f94da368a7418a4b1a547",
       "pristine_sha256": "e387f718a156da9c7d3bc78a9985c204f8e0d9beb1e2eb27cebbf7e7447ef52e",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4845,7 +4879,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "b9087487f210cf41b5d6d005ab3ae0d1ddbeb4b4194f7c39c0ee617a9e6b8082",
+      "sha256": "5aba95f4fbcacd9c8a68e94eb19c8bd1e95c3862bafc1cd57b124c7d2502a022",
       "pristine_sha256": "13f3d7969d8fbf3ba419d6c63709885ad1c6ea97658bbe8ff63ffb347b9a81de",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4873,7 +4907,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "25580d46033ccf6d9712ffc8fdfacf03e8e05ddc5dfa4c4bad74faeb832ef63e",
+      "sha256": "96c95fd5b46ed3dbb4c7c34fc11dc06db471acbc7856bcbef23dd906eca81767",
       "pristine_sha256": "cad7c2674e15470663d2f32e3ec4ddb0a166d7d1e472124807f69a254cf16707",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4901,7 +4935,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "5245d15e06eeb3dfcaec7444f9acb1f6f6a8f4ead51fbb2384ff1433d3681a17",
+      "sha256": "dd01efd311c203a40af150a24480dea0bf54b3bad3dfddb401d28623ed660386",
       "pristine_sha256": "9e5745f3dd4e3a15acb91b6822068fd511030c7d9585bad8a07f54525c557f17",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4929,7 +4963,7 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "fba74b4029c9f5a796a49dbf5ced11352cba35ee63cc0147b86ea2165aa83c7c",
+      "sha256": "b1ea25e453aff10339a83b0152f5117f53b9807aca400d906926b13832ce1d17",
       "pristine_sha256": "41ad871dda5abfd65af2acab3dd5ea5993b41b52c591eeac9f1dd677232b05fa",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -4993,7 +5027,11 @@
       "also_present_in": [
         "vllogic/openocd_cmsis-dap_v2"
       ],
-      "sha256": "261579eb51eeec5488e6a71ec050506c10599daab1dbd9c62187128c35fafa7a"
+      "sha256": "3ad71885bf84e2e758731170d738ba62a00d02aa7ba00977444f321bf5fa70ab",
+      "pristine_sha256": "261579eb51eeec5488e6a71ec050506c10599daab1dbd9c62187128c35fafa7a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/bluenrg-lp.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -5015,7 +5053,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "19bed4ace3197c30f9f4c0642a696bd9e96346bf4cf69049065588eb4de65b5c"
+      "sha256": "9bd4e9a8f0eeef9a9652a04f27c0e503f3684862fa3cd86895622d0a14b511e9",
+      "pristine_sha256": "19bed4ace3197c30f9f4c0642a696bd9e96346bf4cf69049065588eb4de65b5c",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/cc26xx.cfg": {
       "source_repo": "Lichee-Pi/LicheeTang_openocd",
@@ -5074,7 +5116,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 1,
       "also_present_in": [],
-      "sha256": "ddc26de5b7641138103468c58862ee18670b02627b9bef7a5e408d06860e51e9",
+      "sha256": "b0fcbaf79f3da7988d3cfb56b44913a4a60f699337aad52d5fa1c54e9866b508",
       "pristine_sha256": "a3bc1ac60a0e548834f20aa26000bc83e8f3801ecdb9368f7cf15197b2cef134",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -5174,7 +5216,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 471,
       "also_present_in": [],
-      "sha256": "5220581da0eae846a981462c20ddfcdead3c44ee7c183733b221b22863c3de73"
+      "sha256": "b80bdbf36fdea3adaa55182b3a2d5b7437c2449e2384519550490ad2ff2fa0ef",
+      "pristine_sha256": "5220581da0eae846a981462c20ddfcdead3c44ee7c183733b221b22863c3de73",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/esp32c5-lpcore.cfg": {
       "source_repo": "espressif/openocd-esp32",
@@ -5309,7 +5355,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "89b13a9b3201722be763efc459b14bd0ae476c367556197bd246868fbeb6bbfc"
+      "sha256": "e33389dbc71b9526166da4adb720996b2354bf24257831031626550f3d203779",
+      "pristine_sha256": "89b13a9b3201722be763efc459b14bd0ae476c367556197bd246868fbeb6bbfc",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/imx6_quad.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -5319,7 +5369,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "f12c1810a5a9170b3c4681412f52bb018cabae03f7256d352fcd340af51774a4"
+      "sha256": "c90653618e08788b2f1f63ee46427748696c18e6370ccce9a5bb5a8c7bb4db33",
+      "pristine_sha256": "f12c1810a5a9170b3c4681412f52bb018cabae03f7256d352fcd340af51774a4",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/imx6d-1gb.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -5329,7 +5383,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "161164a4f8e57e6e5ab9fc04eb843bf960df3f94d012652fc90a6aa9008c08f5",
+      "sha256": "8ab27b85093ac68a5067e8d7caf173963d026707acb56503e33ffbedc554a317",
       "pristine_sha256": "a400a58faca9c02429767a9337253f6fde886d4c12dd613ccf4ef8129ef5b595",
       "local_modifications": [
         "content edited in this fork; digest refreshed",
@@ -5344,7 +5398,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "b6271968e3d333049ce62e076e2199ba75fd602e68c04bef40a5625936aa5a62",
+      "sha256": "13a6149347dd0a33c64dea20a7887125eea0b14641cf142af1a69c54854cdd9b",
       "pristine_sha256": "f92a68f2534a9d139c469329d97d2858a65ff2f308febdd4bd02cd4efc0105ed",
       "local_modifications": [
         "content edited in this fork; digest refreshed",
@@ -5359,7 +5413,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "f8143c24fc8ac796a32e9e3d449e93b9c2fe6f7a1d6b5001014e4a5fd09ddfbf",
+      "sha256": "9d0e006473cc9ab09a33c2e17d5f4d1989fa37537ab3fd497eb17439b592e483",
       "pristine_sha256": "43e7f854a293dbb942fe9ebda11aede069e0257355ea52b33faa7eec175b988c",
       "local_modifications": [
         "content edited in this fork; digest refreshed",
@@ -5374,7 +5428,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "9e1fcc01e9815609ba2fefa4d99f29bffbef5833707fec84157fdca4f1414386",
+      "sha256": "02e7ae1aa474646b906ce77f41a5dbc5e6f21e53329997dbece2abaf51175302",
       "pristine_sha256": "6c980196a67ce52773e6d3bcfc19d59d75e23a3eec4066afdca4490779deebfe",
       "local_modifications": [
         "content edited in this fork; digest refreshed",
@@ -5399,7 +5453,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "2236e8c09e5bd5d17da504aa502a8be0ae4ff297602784a400b75bf5b26fdcde",
+      "sha256": "57a173b425a49f093ce5901f6d646a98df0378a5e245c115138aa05b18f37169",
       "pristine_sha256": "34f8b489c7014c16122d7cba93f3e8fe9070d36d3076b4c044fd92467acd1022",
       "local_modifications": [
         "content edited in this fork; digest refreshed",
@@ -5414,7 +5468,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "36dbb5dbd408530c978fc4c2cc4033d0f0a928d86eddd1e1a6a4106b381dad87"
+      "sha256": "104c4b9e117cf25f5d0e7f75141b4f4b5ffdbcc9cb406d31c6051ede6aae2630",
+      "pristine_sha256": "36dbb5dbd408530c978fc4c2cc4033d0f0a928d86eddd1e1a6a4106b381dad87",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/infineon/aurix_program.tcl": {
       "source_repo": "zuyih/openocd",
@@ -5435,7 +5493,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "48bfa65731eb07bfa92cbe226f6db87c861ef4be965861f67a7f1560a7710d2f",
+      "sha256": "50b7c2968163869db065467ea606451e857a181ba987ed020df25bc805f72f37",
       "pristine_sha256": "35e46fe744f816a65c13fa129c5d21dad0e4f88f5177cfdc9f4e9dc879e90820",
       "local_modifications": [
         "content edited in this fork; digest refreshed",
@@ -5586,7 +5644,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "e217801f5ec74f740b3b1cc8ee676c67bd85ca38d2e2bb651c89b2504211aa58"
+      "sha256": "44f7eff6222626266c44f3cd55ac5d817dd58346d2f636173ebf10b674f1a3ef",
+      "pristine_sha256": "e217801f5ec74f740b3b1cc8ee676c67bd85ca38d2e2bb651c89b2504211aa58",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/kinetis_64k.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -5981,7 +6043,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "6f5c4c584859212d203768f9acbb3b0e045191b34cc2fdc8bc78956171805e61"
+      "sha256": "3c14461d6bc0839d5409a1f122302cf0c9715e76f258199abdfe3995aefd53b4",
+      "pristine_sha256": "6f5c4c584859212d203768f9acbb3b0e045191b34cc2fdc8bc78956171805e61",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/max32655_riscv.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -6001,7 +6067,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "2f143b50ac125036c465b46af50e3685c16ecb0a11847ae3842f75c7189c8f53"
+      "sha256": "1f8808d72d1d4b5e35c1223e7dcdcb06f768a68de31bc0df6ebb374983dfbba9",
+      "pristine_sha256": "2f143b50ac125036c465b46af50e3685c16ecb0a11847ae3842f75c7189c8f53",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/max32658.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -6011,7 +6081,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "45fb70ec4c352a537c4aff113e22198b27409dd3cd4640da4b1707cf4befe0a2"
+      "sha256": "5fee14790e86c445f10f3556b7ef0197dc2b730dbdb67cbe3c74b9317d863927",
+      "pristine_sha256": "45fb70ec4c352a537c4aff113e22198b27409dd3cd4640da4b1707cf4befe0a2",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/max32665.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -6075,7 +6149,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "2a8cb2ece22f82fc955af7bf48245bbca37adcb104b30aababaf0d28335722a1"
+      "sha256": "d153bddef4dd884189422dcedee7843ba3c08d6e45a07579a582d3ef0227f1a7",
+      "pristine_sha256": "2a8cb2ece22f82fc955af7bf48245bbca37adcb104b30aababaf0d28335722a1",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/max78000.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -6115,7 +6193,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "026ea9f4379bfb0da12241f46b6a72ab414e7e6f856c6e5c4acd885b1fd972a4"
+      "sha256": "ed88db848df96a3ab2cd59c5dcc4d589003b5b58895ae83d8ef6a88f174fafa6",
+      "pristine_sha256": "026ea9f4379bfb0da12241f46b6a72ab414e7e6f856c6e5c4acd885b1fd972a4",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/max78002_riscv.cfg": {
       "source_repo": "analogdevicesinc/openocd",
@@ -6279,7 +6361,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "18382332ac126683f3a9a9cf0e38c22f12af2df3f56dc91b0a4bf96c158b1963"
+      "sha256": "087cca15e9b8d2b811305c053770a680219eb44dcaeef7f2329d078908fb7ada",
+      "pristine_sha256": "18382332ac126683f3a9a9cf0e38c22f12af2df3f56dc91b0a4bf96c158b1963",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/murax_xip.cfg": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -6291,7 +6377,7 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "3ecf6132e519115b90fa418b2efa095196e6806d4639c614cd6277b2497df382",
+      "sha256": "43af1e177973772448d6bd3e700d00264177651ec0e5d4a7043061a34df01d14",
       "pristine_sha256": "f59be1bba72b16b8a5e8ead2abca5b3cf8f0a472eb7c69de8d0db65446226c93",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -6532,7 +6618,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "3d0b2b76fe9e00e11fa50a20bd7e6b5db2833e4405a39a0b62d15df81717079a"
+      "sha256": "6daec4ffb54fe26f5d6356eb54201feaded5b446a2e124f513572277adf0ef91",
+      "pristine_sha256": "3d0b2b76fe9e00e11fa50a20bd7e6b5db2833e4405a39a0b62d15df81717079a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/nt98528.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -6592,7 +6682,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "07d92941bad1a5f1d9f24e5d347f4ccbe948ee5094403a81c1b35a3c0d030c41",
+      "sha256": "bac9df073ca7ed4cb094edf70effb9a8929f4506f830971fad4f6611d471e52e",
       "pristine_sha256": "9547b60b29fe73c47679b8a99a1b201bed80b283fd08427496435444cc943100",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -6618,7 +6708,7 @@
       "also_present_in": [
         "OlegGalizin/openocd-for-py32f0xx"
       ],
-      "sha256": "a0a917981ad844e478bf94e553f8f559b0f01be9368ad62445fcb486b5957ac8",
+      "sha256": "09f09d62663771925f8d0f1d6b8b62b841b949dfbbd6975f3958fd5f2df5370a",
       "pristine_sha256": "6b33b90a288bf4482567e888b5e7a8ecba83baa81ec4a2be0bffdef344eda258",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -6632,10 +6722,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 26,
       "also_present_in": [],
-      "sha256": "ed5788ad5992c23df97b3bae1813ff40ee04bd467e0f5443d6d2dce954f44d9a",
+      "sha256": "9820c8f66323addc7008d26bdef8e64444e25b08ca2413ef3212ec130ab08b2d",
       "pristine_sha256": "795bff16258bc5694f555cb37b3f6420af08886a508fdcd5162b14810a510c8d",
       "local_modifications": [
-        "line endings normalised to LF; content byte-identical to the published file"
+        "line endings normalised to LF; content byte-identical to the published file",
+        "content edited in this fork; digest refreshed"
       ]
     },
     "tcl/target/quark_d2000.cfg": {
@@ -6670,7 +6761,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "0b757cb8deb93a62073584bb743314e8a6d06baf9b7ad2a92af4440d37e37dc2"
+      "sha256": "d00df950665b13cdd13e332b0ce69571b6060f8cc393a7894828ef83771d5828",
+      "pristine_sha256": "0b757cb8deb93a62073584bb743314e8a6d06baf9b7ad2a92af4440d37e37dc2",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/raspberrypi2.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -6680,7 +6775,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "3aea8fc97200675e29e969288dbe18b164a41bfb977413ba776d604fa781b3df"
+      "sha256": "45803317b35ca3aaa20cd06288a16fbabed5d1bdadeb395c2453257903f6e2a4",
+      "pristine_sha256": "3aea8fc97200675e29e969288dbe18b164a41bfb977413ba776d604fa781b3df",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/raspberrypi3.cfg": {
       "source_repo": "sysprogs/openocd",
@@ -6710,7 +6809,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "1e1e1155ad59687efc7e36614a34379938692d6d3c21ecbdd5eea3279987359a"
+      "sha256": "c878c07acf77e580581a5ae05f9d17989a4ea4a6697ea6b9edd0db172dfedb2f",
+      "pristine_sha256": "1e1e1155ad59687efc7e36614a34379938692d6d3c21ecbdd5eea3279987359a",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/renesas_r8a7790.cfg": {
       "source_repo": "walmis/openocd-blackmagic",
@@ -6807,7 +6910,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "c530d5ef17f997b2fc5d8d4d3db589e89a012c10d52878dd6ac9644d86ee18c0"
+      "sha256": "6aefdd83262512ff4649f6e05dc76f1ee69b8b28ca849a39d5ad52dfa144b63a",
+      "pristine_sha256": "c530d5ef17f997b2fc5d8d4d3db589e89a012c10d52878dd6ac9644d86ee18c0",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/rk3566.cfg": {
       "source_repo": "fatalfeel/openocd_integrated",
@@ -6827,7 +6934,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 102,
       "also_present_in": [],
-      "sha256": "795bac73b6efd6b4089afbf87a02475ecd1beef72cd3df380873bf65d52c24e2",
+      "sha256": "b7b726ca6f066a281ad3a154dbdb371d1c30c58737439e0739aea8c6dbb22c27",
       "pristine_sha256": "3b9f69409166f39134bcde9396707ce6d2a21e96713dc17af3041b1b3910cd74",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -6979,7 +7086,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "1f1da479f271b147f2794f85d1e4dc6438052f6f1ff60e7b91b3ea9407f08b4e"
+      "sha256": "ba0562a8896786cbf220d5a6bd5f9bf43b159bb6432aa4c3e4a7671cb3429a9e",
+      "pristine_sha256": "1f1da479f271b147f2794f85d1e4dc6438052f6f1ff60e7b91b3ea9407f08b4e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/saxon_linux.cfg": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -6991,7 +7102,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "3fc6cc437e04cd9e633b7c98219ff84357b454cfe32bb6cdc26f656ff0f48267"
+      "sha256": "0c4168045d162387c8ed9aed13d642f37560ef0d5e347978fb7ff2b0fa63a21e",
+      "pristine_sha256": "3fc6cc437e04cd9e633b7c98219ff84357b454cfe32bb6cdc26f656ff0f48267",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/saxon_xip.cfg": {
       "source_repo": "aesc-silicon/elements-openocd",
@@ -7003,7 +7118,7 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "7722a7b874941740ceeda1c4a677d2a1c88c7087b5433120c8b7793961afd9e5",
+      "sha256": "cfff73eee2a09387fc54f1063d63d426c4c8b72cb489f07487a7158c770433ed",
       "pristine_sha256": "676d86d7a5e0c6a9e1ee6c567218363fe8994d851385ce9aa960ad58eb961439",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -7522,7 +7637,11 @@
         "intel/OpenOCD",
         "mabl/openocd_chibios"
       ],
-      "sha256": "1278eddd4c1c59eb8771ffc8ba9659a614b44dc4c08b7b606890cdebbec2c15e"
+      "sha256": "0ed3123492f05ac7dd45f09369d0eca1e76fb93800906b5fcd59103aaded1956",
+      "pristine_sha256": "1278eddd4c1c59eb8771ffc8ba9659a614b44dc4c08b7b606890cdebbec2c15e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/stm32l4plusx.cfg": {
       "source_repo": "zuyih/openocd",
@@ -9795,7 +9914,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "c25d465f2cdb4bd028c45962efd12e852f7229fa03ef6df718acd6aac1b720f7"
+      "sha256": "601057fea2812ffe6c3221accdbe41397fdfb1b641a7bf590a97ec87ec3e6ac4",
+      "pristine_sha256": "c25d465f2cdb4bd028c45962efd12e852f7229fa03ef6df718acd6aac1b720f7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/ti_cc23xx.cfg": {
       "source_repo": "TexasInstruments/ti-openocd",
@@ -9805,7 +9928,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "358e507ddd06dc2445248efe5235d5ce223ad3df962f320c8f5a64dab4322326",
+      "sha256": "fece1f1e2859349ad78d6031bbe8db14e2e1ccc407702c6f1c9dc00006a16076",
       "pristine_sha256": "0d5ddda6206a9c4e77bad9f40905ddc9899e5b3ff37bb66ab6164d057adeb179",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -9833,7 +9956,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "8f01edd1dbfd6b781203e291d36f51fa684560370c4436a1195ba4bb5fe80690",
+      "sha256": "118ab5c1dddd02994f5a7a598c93a75de3697cb19f3326430f3d087948bc868d",
       "pristine_sha256": "dc5ea9d9e1e56d647412d34df1df22760c738c224a67239547d7e16ce6a7a1d8",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -9880,7 +10003,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 9,
       "also_present_in": [],
-      "sha256": "a09d92495cb6a66d27b79556ada330ae310f763ff6507186260f586c54a18625",
+      "sha256": "4b8befb7abf07754598a50c5f512d2b523ccaa022b1ee522c64fffb9ecf56aab",
       "pristine_sha256": "73dad4dd2df142d9afb0c6fc882413ce0122b9a6f3ecd875edaab4059bd0ea18",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -9928,7 +10051,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "2b45e194e8d6f1224676cd64082bc821526313ac4130647200e575b722d74bb7"
+      "sha256": "7f8fcde7a630ad30cc93b7c11a1d6ee44808f40e1e50baf61bc54cd45298a04c",
+      "pristine_sha256": "2b45e194e8d6f1224676cd64082bc821526313ac4130647200e575b722d74bb7",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/target/vjtag.cfg": {
       "source_repo": "kevinmehall/openOCD",
@@ -10289,6 +10416,56 @@
       "path": "tcl/target/ti/lpf3.cfg",
       "reason": "removed on purpose in d5f3c6517 (chore(tcl): drop unreferenced duplicate tcl/target/ti/lpf3.cfg)",
       "sha256_at_removal": "bbd5c020c258196ac733deb8db3fa5cfa40692d0f5298f9fb71b6d75af066ca0"
+    },
+    {
+      "path": "tcl/board/altera_arria10__aji_client.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "0f367350b66b8a466471c33270706d03614b241bd919708679996e8bb996654f"
+    },
+    {
+      "path": "tcl/board/altera_arria10_niosv__aji_client.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "8fb89dda600d56af3e8212c9956d72b9df7650fd4fca56cec92af139eed937f9"
+    },
+    {
+      "path": "tcl/interface/colobus.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "b46bd67644cc42bb30934b957f50c2ac6935e174b8614c38398d27ee6c39cae5"
+    },
+    {
+      "path": "tcl/interface/faultier.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "9c1ec9255bb2a10284a19bf88536072c9772ad1fafd7df6c16b7846c80ad526e"
+    },
+    {
+      "path": "tcl/interface/jtag_esp_remote.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "d93b56f71cc480e63f002068690d046a55d9d7d58e8d19e8a4bc9d32c297c32a"
+    },
+    {
+      "path": "tcl/interface/jtag_tcp.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "ba204eca3ca0469292c08cade762054354a4a6b720498472feccac10117ac722"
+    },
+    {
+      "path": "tcl/interface/nds32-aice.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "3120f23ab455bd4f1066dde63de8eb976223d4581aefe1ecabc1c24eddb89153"
+    },
+    {
+      "path": "tcl/interface/picoprobe.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "25b3f7509da2db5807c86db8f0260e26a4b97cd8d7295752a55c7ea27da5c053"
+    },
+    {
+      "path": "tcl/interface/tamarin.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "9c1ec9255bb2a10284a19bf88536072c9772ad1fafd7df6c16b7846c80ad526e"
+    },
+    {
+      "path": "tcl/interface/tas_client.cfg",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "0fd0baabc1f627d0af3f70f4d7ca6256e2261bb9e8c2f1934ee058d8b4ffb3d8"
     }
   ]
 }

@@ -2,11 +2,11 @@
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
   "tier": 2,
-  "file_count": 73,
+  "file_count": 65,
   "integrity": {
-    "recorded": 73,
-    "on_disk": 73,
-    "pinned": 73,
+    "recorded": 65,
+    "on_disk": 65,
+    "pinned": 65,
     "unpinned": 0,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
@@ -19,7 +19,7 @@
       "license": "NOASSERTION",
       "stars_at_import": 47,
       "also_present_in": [],
-      "sha256": "e017d1478554bad885161f3c851e226040b54b9d630425665ce559df2460d99a",
+      "sha256": "689f8a24d01b76649e9946d2fab026ab5827c40917b6376fe9df2efb4822628d",
       "pristine_sha256": "52cdab6c3a3a813bd98bde9e4292afaeea6ebe106ab9a8848dca9bbcee0ee732",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -49,25 +49,35 @@
       "also_present_in": [],
       "sha256": "8706fc6cbe9e6bc1548c64c4c91d5597eef50bf499cc4a096e2f6a213bef4ed3"
     },
-    "src/jtag/drivers/arc_ftdi_cjtag.c": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/jtag/drivers/arc_ftdi_cjtag.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
+    "src/jtag/drivers/al_link.c": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "src/jtag/drivers/al_link.c",
+      "license": "",
+      "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "56fb4bcb42b982da2dc6e3d901d76c67d547cf28f87703ccf108a472a2cca4ab"
+      "sha256": "863f87acc0c762b7fc9af1c3596a15925373c339bdda43a86ca02f759e5aed50"
     },
-    "src/jtag/drivers/arc_ftdi_cjtag.h": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/jtag/drivers/arc_ftdi_cjtag.h",
+    "src/jtag/drivers/al_link_cyusb.c": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "src/jtag/drivers/al_link_cyusb.c",
       "license": "GPL-2.0",
-      "stars_at_import": 16,
+      "stars_at_import": 6,
       "also_present_in": [],
-      "sha256": "352a4d444db646340abe41f619d0035539d9924e0499b02c1cd09ecc0e1704e1"
+      "sha256": "f1c167a82f9cbfe13337c7af98ec32f469bc61cc57bea6c2e273391ea3bded27"
+    },
+    "src/jtag/drivers/al_link_cyusb.h": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "src/jtag/drivers/al_link_cyusb.h",
+      "license": "GPL-2.0",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "39b74bb723e74a361a71fc5bc1620596604f73fcc668a0c7c8e62703aa72956d"
     },
     "src/jtag/drivers/cmsis_dap_wch.c": {
       "source_repo": "zuyih/openocd",
@@ -90,11 +100,31 @@
         "jeanthom/openocd-dirtyjtag",
         "luyi1888/openocd"
       ],
-      "sha256": "65c90c9d09bb4bd0ae48a9d619b373830d0732a25b5b49bb977537dea2a29119",
+      "sha256": "9b7e6a47e7cc36feb07b12cf406a71024f14563c147eb6832cc075718dbaf825",
       "pristine_sha256": "0b7440181fd6bbbe3c72e23a4def477a92e35e11a0f282b765319447acaed6a2",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
       ]
+    },
+    "src/jtag/drivers/esp_gpio.c": {
+      "source_repo": "espressif/openocd-esp32",
+      "source_branch": "master",
+      "source_commit": "a585825d4d0bbd5b8aff83e01816d2f2c04ffd84",
+      "source_path": "src/jtag/drivers/esp_gpio.c",
+      "license": "GPL-2.0-or-later",
+      "stars_at_import": 471,
+      "also_present_in": [],
+      "sha256": "9aef7abbd0e4bcc6f6f2781d7eb5fac97e9ccc56847cd85196fa9a08d012df40"
+    },
+    "src/jtag/drivers/esp_gpio.h": {
+      "source_repo": "espressif/openocd-esp32",
+      "source_branch": "master",
+      "source_commit": "a585825d4d0bbd5b8aff83e01816d2f2c04ffd84",
+      "source_path": "src/jtag/drivers/esp_gpio.h",
+      "license": "GPL-2.0-or-later",
+      "stars_at_import": 471,
+      "also_present_in": [],
+      "sha256": "0d0cea979989a1381d946a28ab2ab9fb280d0f78169c23e9cffab4a4ee86fcc7"
     },
     "src/jtag/drivers/ice1000.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -140,25 +170,11 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "b529ae24d02e529558d48bf569bd12917da2c8ed979c3d6b77d3a6860fa034df"
-    },
-    "src/jtag/drivers/jtag_usb_common.h": {
-      "source_repo": "intel/aji_openocd",
-      "source_branch": "main",
-      "source_commit": "5173047ae18e8149e985856000c5bc4d20a2e6c8",
-      "source_path": "src/jtag/drivers/jtag_usb_common.h",
-      "license": "NOASSERTION",
-      "stars_at_import": 12,
-      "also_present_in": [
-        "Blinkinlabs/OpenOCD",
-        "ciniml/openocd",
-        "dynm/openocd-starbleed",
-        "ilg-archived/openocd",
-        "jeanthom/openocd-dirtyjtag",
-        "stacksmashing/openocd",
-        "walmis/openocd-blackmagic"
-      ],
-      "sha256": "b8a7a96701c20a52ee252e9c1ab0b7504f24226822cd9ab1d4e0329299b05492"
+      "sha256": "58f800c3c25a08d4d640b7de7b88086e7bb3e2d5114087a9cb5125682aa1a169",
+      "pristine_sha256": "b529ae24d02e529558d48bf569bd12917da2c8ed979c3d6b77d3a6860fa034df",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/jtag/drivers/usbmux.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -184,6 +200,38 @@
       "also_present_in": [],
       "sha256": "1c4c08060ef2dc483e339a61ad13cee27820696c548e00b926a14bb43af9bbdb"
     },
+    "src/jtag/drivers/wlinke.c": {
+      "source_repo": "Seneral/riscv-openocd-wch",
+      "source_branch": "wch-linke-sdi",
+      "source_commit": "bde507c1e98514162bdbe4275662027a46b98e55",
+      "source_path": "src/jtag/drivers/wlinke.c",
+      "license": "GPL-2.0",
+      "stars_at_import": 18,
+      "also_present_in": [
+        "cjacker/wch-openocd"
+      ],
+      "sha256": "c346223a33cd9eeb7c8e933ae897ba951429289417d0ac0448826e115762aa5d"
+    },
+    "src/server/rbb_server.c": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "src/server/rbb_server.c",
+      "license": "GPL-2.0",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "6319aebf5e88d03f28029b2e1baeea752dfd3fe6063a5ec55b899e4869a5aa9d"
+    },
+    "src/server/rbb_server.h": {
+      "source_repo": "AnlogicInfo/al_openocd",
+      "source_branch": "master",
+      "source_commit": "3580f4327d61a5a8d78462c8caa96ee8e28ca4d4",
+      "source_path": "src/server/rbb_server.h",
+      "license": "GPL-2.0",
+      "stars_at_import": 6,
+      "also_present_in": [],
+      "sha256": "84fbf50a26cf7036ce591f6151293578425adb04ce32670afa42e927417638a3"
+    },
     "src/target/aarch64_coproc_reg.c": {
       "source_repo": "linux-msm/openocd",
       "source_branch": "eud-rebased",
@@ -192,7 +240,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 26,
       "also_present_in": [],
-      "sha256": "63531aab740bec8037e214c868db59c76cba4353919bfa2aed63385fbd4b5bdf"
+      "sha256": "7c2cb9d150bd92dc9c5cc9c571f78886ecbd6f9469d12cc4199ca36beb9e361d",
+      "pristine_sha256": "63531aab740bec8037e214c868db59c76cba4353919bfa2aed63385fbd4b5bdf",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/aarch64_system_registers.h": {
       "source_repo": "linux-msm/openocd",
@@ -202,7 +254,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 26,
       "also_present_in": [],
-      "sha256": "3e9c15146ffcd7f2bdebb82e72d1767d14d84cc23a44343d3cda04c96a1d026e"
+      "sha256": "f7a7eb814ef4f943cd0fa20e9c38c42b5c0f2b8acc392118ac56e3f875edce14",
+      "pristine_sha256": "3e9c15146ffcd7f2bdebb82e72d1767d14d84cc23a44343d3cda04c96a1d026e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/aarch64_system_registers_defs.h": {
       "source_repo": "linux-msm/openocd",
@@ -212,19 +268,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 26,
       "also_present_in": [],
-      "sha256": "ec7913ea8495a789d8d6e4e98cb6948c2aa5a0b0798c7a00465786c5697e75f6"
-    },
-    "src/target/adi_v5_cmsis_dap.c": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/adi_v5_cmsis_dap.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "65454793d2e58ab49224f800751acb96c72890b6f3f048a45dabd01cdb69985c"
+      "sha256": "261bd4241e1724f72db5787643d958595d6d95eae75210fb73d22719a4eb1a3e",
+      "pristine_sha256": "ec7913ea8495a789d8d6e4e98cb6948c2aa5a0b0798c7a00465786c5697e75f6",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/altera_virtual_jtag.h": {
       "source_repo": "kevinmehall/openOCD",
@@ -235,166 +283,6 @@
       "stars_at_import": 5,
       "also_present_in": [],
       "sha256": "a30d263a941dae1eb27c489c5e1bd87d537904a027c1ffa53e44d4f2c4960519"
-    },
-    "src/target/arc32.c": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc32.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "f053122b88468460fbc34b6e87a0dc81ffcc618d75c2e40eb9d9cf6145a9d52f"
-    },
-    "src/target/arc32.h": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc32.h",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "66aad02ce24dc3d51d49d5a606f2e76bcd2f3d95b729df61d4b228c65a732e54"
-    },
-    "src/target/arc_core.c": {
-      "source_repo": "intel/OpenOCD",
-      "source_branch": "master",
-      "source_commit": "728ddf7eb96106f917804a1174fb4e9bdb078293",
-      "source_path": "src/target/arc_core.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 12,
-      "also_present_in": [],
-      "sha256": "6b458f47df8c75f262159e99019b93f4424a85e6f6f9d198a38670d1d28c3703"
-    },
-    "src/target/arc_core.h": {
-      "source_repo": "intel/OpenOCD",
-      "source_branch": "master",
-      "source_commit": "728ddf7eb96106f917804a1174fb4e9bdb078293",
-      "source_path": "src/target/arc_core.h",
-      "license": "GPL-2.0",
-      "stars_at_import": 12,
-      "also_present_in": [],
-      "sha256": "13867fa6892a916da71f7527c56fb0481fca027dbaa6a0d4c454170f991b10d1"
-    },
-    "src/target/arc_dbg.c": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_dbg.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "e44869c083e4e549095612648518ff73721b20e2c709f69fe9dc62d5703ff029"
-    },
-    "src/target/arc_dbg.h": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_dbg.h",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "a2e62812246543ab5cca802f7f07a8e8989f0b7b27782a31c654443346a1af3c"
-    },
-    "src/target/arc_mntr.c": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_mntr.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "02542e0825ad9ebd348835edbac6fafd36ced9eba61b6b1ada42963605d7f3c2"
-    },
-    "src/target/arc_mntr.h": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_mntr.h",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "f4911a05759527edf44baaa1eb2d7c59337bf76986ac359ab0f9eb69af340d2a"
-    },
-    "src/target/arc_ocd.c": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_ocd.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "8e2d43e61ccceca9db9d13a57947328ef56ea5c1a6d12d4db04a57f0231c84d9"
-    },
-    "src/target/arc_ocd.h": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_ocd.h",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "1ebfd81f5febc1fedefc5b0ce2f18c96648f6f0db17b542f639ce25a171bec82"
-    },
-    "src/target/arc_regs.c": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_regs.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "f17eab5f4bb867f3c47d5ebb2fcae62b01d343d4ee3ff3a11cb6e6b03bf7e3e9"
-    },
-    "src/target/arc_regs.h": {
-      "source_repo": "foss-for-mips-arc-processors/openocd",
-      "source_branch": "arc-2026.09",
-      "source_commit": "2185cc4e04ecd937a56696778ef07c88c57ef3d9",
-      "source_path": "src/target/arc_regs.h",
-      "license": "GPL-2.0",
-      "stars_at_import": 16,
-      "also_present_in": [
-        "intel/OpenOCD"
-      ],
-      "sha256": "54be5cb5e2f19e766e477904bbde5ecaeb95b870a0c5d138a2c99a6721ead50d"
-    },
-    "src/target/arc_trgt.c": {
-      "source_repo": "intel/OpenOCD",
-      "source_branch": "master",
-      "source_commit": "728ddf7eb96106f917804a1174fb4e9bdb078293",
-      "source_path": "src/target/arc_trgt.c",
-      "license": "GPL-2.0",
-      "stars_at_import": 12,
-      "also_present_in": [],
-      "sha256": "a273f291dc2e7739499f414d05ea0dd492144a39972a47428e34cd9221132129"
-    },
-    "src/target/arc_trgt.h": {
-      "source_repo": "intel/OpenOCD",
-      "source_branch": "master",
-      "source_commit": "728ddf7eb96106f917804a1174fb4e9bdb078293",
-      "source_path": "src/target/arc_trgt.h",
-      "license": "GPL-2.0",
-      "stars_at_import": 12,
-      "also_present_in": [],
-      "sha256": "216e958860c6d01dfa327a765feefe388680e72839ac6fa52650fbe3cc21c1f2"
     },
     "src/target/c28x.c": {
       "source_repo": "xsession/openocd",
@@ -542,7 +430,7 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "73c4569b9ce689d8134243caaf58f29cb90497be09479bfe544b7856e6122567",
+      "sha256": "4eb7091ca8b0a486221bb90d66f5e063955fc03db36c1c16633baf905888f34f",
       "pristine_sha256": "9bd5625fd4d1d9924f4e1ee126ca8aacff5fad2758cc62fa6c5a3c7877854401",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -556,7 +444,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "9341c28dac29259052b1d47a183150c2cba89c055010598b308fc1d563587265"
+      "sha256": "9b70cf86eb5ebf030511c4f645b3ac0ac4b84a066bc82726ae20280b6dfb2da4",
+      "pristine_sha256": "9341c28dac29259052b1d47a183150c2cba89c055010598b308fc1d563587265",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/quark_se.c": {
       "source_repo": "intel/OpenOCD",
@@ -566,7 +458,7 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "830b6007bc8b9c55684d94537c2868a9d16b392058db8fce9bdf2f1a726cd519",
+      "sha256": "af456102a21513b8217c26f2aa7d5162e7dba0a492c4c097209b03e1ecf55f8e",
       "pristine_sha256": "ec07f40e6c5be8d31e7f0805d63ca56eaa17238b3b8129837f2aa39cf0e38bcc",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -580,7 +472,11 @@
       "license": "GPL-2.0",
       "stars_at_import": 12,
       "also_present_in": [],
-      "sha256": "6f83b2ce34c511ae3a920e2b04b331ab96e167163e54c457688be34ffbdcf936"
+      "sha256": "a3ed3ed86a7b3b6e9350fe019ee726ef66f92efcbc417ceac5faa82d71b13e95",
+      "pristine_sha256": "6f83b2ce34c511ae3a920e2b04b331ab96e167163e54c457688be34ffbdcf936",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/rv32m1/rv32m1.c": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -604,7 +500,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 47,
       "also_present_in": [],
-      "sha256": "fae7287ef169b5215ae5dc94e6383c68fd6fd30a8fdc9806fa44e616448c3e1e"
+      "sha256": "9cd30ca714fdf2efd4863a49967b0f6a9034acd59253954ff857b9174fa66458",
+      "pristine_sha256": "fae7287ef169b5215ae5dc94e6383c68fd6fd30a8fdc9806fa44e616448c3e1e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/rv32m1/rv32m1_du.h": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -614,7 +514,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 47,
       "also_present_in": [],
-      "sha256": "2271097b0b37115ee4a2e1f5f646a63d1e9c6b3cf381e929ba21c4b020033040"
+      "sha256": "a86a44fe1951b022896d14e2142944f3522f6cc574871a1bddeae789f4444ef5",
+      "pristine_sha256": "2271097b0b37115ee4a2e1f5f646a63d1e9c6b3cf381e929ba21c4b020033040",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/rv32m1/rv32m1_du_adv.c": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -634,7 +538,11 @@
       "license": "NOASSERTION",
       "stars_at_import": 47,
       "also_present_in": [],
-      "sha256": "4d598a82874b086547e9744ce2b1f7ca5d4c0c5bbfc762d99200bc55ac8ac90e"
+      "sha256": "08ffc04b0078cf6d16bb3cf7ed9edd5f49b01fee3d8d18b0a299fbb5589061b3",
+      "pristine_sha256": "4d598a82874b086547e9744ce2b1f7ca5d4c0c5bbfc762d99200bc55ac8ac90e",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "src/target/rv32m1/rv32m1_tap_mohor.c": {
       "source_repo": "zephyrproject-rtos/openocd",
@@ -752,67 +660,6 @@
       "also_present_in": [],
       "sha256": "21b250a77fe10f99b3b6c2eca8bf4a72d51c9d4eb178b272ec46c57d9d003943"
     },
-    "src/target/stm8.h": {
-      "source_repo": "linux-msm/openocd",
-      "source_branch": "eud-rebased",
-      "source_commit": "880c11c56b5bc5e8acd2adef5c97ab37b3ca9349",
-      "source_path": "src/target/stm8.h",
-      "license": "NOASSERTION",
-      "stars_at_import": 26,
-      "also_present_in": [
-        "AnlogicInfo/al_openocd",
-        "Blinkinlabs/OpenOCD",
-        "DCVostok/openocd-k1921vk",
-        "David-lau/openocd-geehy",
-        "Devilbinder/openocd",
-        "HalfSweet/openocd",
-        "KilyannBrault/openocd",
-        "Lichee-Pi/LicheeTang_openocd",
-        "STMicroelectronics/OpenOCD",
-        "Seneral/riscv-openocd-wch",
-        "TexasInstruments/ti-openocd",
-        "andestech/nds-openocd",
-        "bluespec/riscv-openocd",
-        "ciniml/openocd",
-        "cjacker/wch-openocd",
-        "dynm/openocd-starbleed",
-        "emard/openocd",
-        "encryptize/openocd-at32",
-        "fatalfeel/openocd_integrated",
-        "flipperdevices/openocd",
-        "fxsheep/openocd_wchlink-rv",
-        "go2sh/aurix-openocd",
-        "hackpascal/openocd",
-        "ilg-archived/openocd",
-        "intel/aji_openocd",
-        "jeanthom/openocd-dirtyjtag",
-        "karlp/openocd-hacks",
-        "kendryte/openocd-kendryte",
-        "kprasadvnsi/riscv-openocd-wch",
-        "l0ud/openocd-puya",
-        "lnls-dig/openocd",
-        "loopj/openocd-efm32s2",
-        "luyi1888/openocd",
-        "marisusis/openocd_hc32",
-        "mengfanyuc/openocd",
-        "meriac/openocd",
-        "nalajcie/openocd",
-        "neonkore/openocd",
-        "newbrain/riscv-openocd-wch",
-        "os-fpga/openocd",
-        "sanchox/openocd",
-        "satoshinm/openocd",
-        "stacksmashing/openocd",
-        "stacksmashing/openocd-tamarin",
-        "tihmstar/openocd_colobus",
-        "transcelestial/openocd",
-        "walmis/openocd-blackmagic",
-        "xpack-dev-tools/openocd",
-        "yottatsa/openocd",
-        "zephyrproject-rtos/openocd"
-      ],
-      "sha256": "29d98f9a3da954e33c7bad05ee623d4ca46ca2592ca8320eed2d4f01099a7463"
-    },
     "src/target/tms320.c": {
       "source_repo": "xsession/openocd",
       "source_branch": "master",
@@ -855,7 +702,7 @@
       "also_present_in": [
         "AnlogicInfo/al_openocd"
       ],
-      "sha256": "cc8c51b53f95b67c6643186e83ed3302c777001b40f4117480c7443dd84d1d89",
+      "sha256": "18611b3eb5194095f264b9e3818305fb83d10cab443fb6a4e2999403a0ded1e1",
       "pristine_sha256": "af62d1e6758df493a0c49d1e9e6830ca9b5f977bfd4ee092f0c9e090d6c51fa1",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
@@ -896,6 +743,42 @@
       "stars_at_import": 1,
       "also_present_in": [],
       "sha256": "5dbb934922e276796c8196e897d49d22b2477900a9384bb85691e2bc5954d0a7"
+    },
+    "src/target/wch_riscv-013.c": {
+      "source_repo": "Seneral/riscv-openocd-wch",
+      "source_branch": "wch-linke-sdi",
+      "source_commit": "bde507c1e98514162bdbe4275662027a46b98e55",
+      "source_path": "src/target/wch_riscv-013.c",
+      "license": "GPL-2.0-or-later",
+      "stars_at_import": 18,
+      "also_present_in": [
+        "cjacker/wch-openocd"
+      ],
+      "sha256": "1efb9a860e566aed645c2256033f3e2ac421d1cdfc241c3fa9a70c0ddfa50afc"
+    },
+    "src/target/wch_riscv.c": {
+      "source_repo": "Seneral/riscv-openocd-wch",
+      "source_branch": "wch-linke-sdi",
+      "source_commit": "bde507c1e98514162bdbe4275662027a46b98e55",
+      "source_path": "src/target/wch_riscv.c",
+      "license": "GPL-2.0-or-later",
+      "stars_at_import": 18,
+      "also_present_in": [
+        "cjacker/wch-openocd"
+      ],
+      "sha256": "508da251aa9f59e290c427fe5cb2b79070bcf76033e35b90f924cd9448e09fec"
+    },
+    "src/target/wch_riscv.h": {
+      "source_repo": "Seneral/riscv-openocd-wch",
+      "source_branch": "wch-linke-sdi",
+      "source_commit": "bde507c1e98514162bdbe4275662027a46b98e55",
+      "source_path": "src/target/wch_riscv.h",
+      "license": "",
+      "stars_at_import": 18,
+      "also_present_in": [
+        "cjacker/wch-openocd"
+      ],
+      "sha256": "b0e881161514c53746e2759e2b9b87b886314c9f580f24989cd5a89ccaf2963d"
     }
   },
   "removed_from_tree": [
@@ -1078,6 +961,101 @@
       "path": "src/jtag/drivers/cmsis_dap_usb.c",
       "reason": "removed on purpose in ea8f9dbafbf4 (fix(target,jtag,tcl): finish the third-party integration the survey promised)",
       "sha256_at_removal": "b91c1d01e28c1015b3dabf679015838d136cafc191ce059305472e028b112658"
+    },
+    {
+      "path": "src/jtag/drivers/arc_ftdi_cjtag.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "56fb4bcb42b982da2dc6e3d901d76c67d547cf28f87703ccf108a472a2cca4ab"
+    },
+    {
+      "path": "src/jtag/drivers/arc_ftdi_cjtag.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "352a4d444db646340abe41f619d0035539d9924e0499b02c1cd09ecc0e1704e1"
+    },
+    {
+      "path": "src/jtag/drivers/jtag_usb_common.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "b8a7a96701c20a52ee252e9c1ab0b7504f24226822cd9ab1d4e0329299b05492"
+    },
+    {
+      "path": "src/target/adi_v5_cmsis_dap.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "65454793d2e58ab49224f800751acb96c72890b6f3f048a45dabd01cdb69985c"
+    },
+    {
+      "path": "src/target/arc32.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "f053122b88468460fbc34b6e87a0dc81ffcc618d75c2e40eb9d9cf6145a9d52f"
+    },
+    {
+      "path": "src/target/arc32.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "66aad02ce24dc3d51d49d5a606f2e76bcd2f3d95b729df61d4b228c65a732e54"
+    },
+    {
+      "path": "src/target/arc_core.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "6b458f47df8c75f262159e99019b93f4424a85e6f6f9d198a38670d1d28c3703"
+    },
+    {
+      "path": "src/target/arc_core.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "13867fa6892a916da71f7527c56fb0481fca027dbaa6a0d4c454170f991b10d1"
+    },
+    {
+      "path": "src/target/arc_dbg.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "e44869c083e4e549095612648518ff73721b20e2c709f69fe9dc62d5703ff029"
+    },
+    {
+      "path": "src/target/arc_dbg.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "a2e62812246543ab5cca802f7f07a8e8989f0b7b27782a31c654443346a1af3c"
+    },
+    {
+      "path": "src/target/arc_mntr.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "02542e0825ad9ebd348835edbac6fafd36ced9eba61b6b1ada42963605d7f3c2"
+    },
+    {
+      "path": "src/target/arc_mntr.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "f4911a05759527edf44baaa1eb2d7c59337bf76986ac359ab0f9eb69af340d2a"
+    },
+    {
+      "path": "src/target/arc_ocd.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "8e2d43e61ccceca9db9d13a57947328ef56ea5c1a6d12d4db04a57f0231c84d9"
+    },
+    {
+      "path": "src/target/arc_ocd.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "1ebfd81f5febc1fedefc5b0ce2f18c96648f6f0db17b542f639ce25a171bec82"
+    },
+    {
+      "path": "src/target/arc_regs.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "f17eab5f4bb867f3c47d5ebb2fcae62b01d343d4ee3ff3a11cb6e6b03bf7e3e9"
+    },
+    {
+      "path": "src/target/arc_regs.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "54be5cb5e2f19e766e477904bbde5ecaeb95b870a0c5d138a2c99a6721ead50d"
+    },
+    {
+      "path": "src/target/arc_trgt.c",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "a273f291dc2e7739499f414d05ea0dd492144a39972a47428e34cd9221132129"
+    },
+    {
+      "path": "src/target/arc_trgt.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "216e958860c6d01dfa327a765feefe388680e72839ac6fa52650fbe3cc21c1f2"
+    },
+    {
+      "path": "src/target/stm8.h",
+      "reason": "removed on purpose in 7ffeda0479a0 (fix(tree): drop 19 unbuildable sources and 10 configs for unregistered adapters)",
+      "sha256_at_removal": "29d98f9a3da954e33c7bad05ee623d4ca46ca2592ca8320eed2d4f01099a7463"
     }
   ]
 }

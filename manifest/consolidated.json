@@ -2,8 +2,8 @@
  "upstream": "openocd-org/openocd",
  "upstream_branch": "master",
  "unique_paths": 1298,
- "imported_paths": 795,
- "not_imported_paths": 503,
+ "imported_paths": 891,
+ "not_imported_paths": 407,
  "not_imported": [
   "src/flash/nor/adsp/adsp218xx.c",
   "src/flash/nor/adsp/adsp218xx.h",
@@ -130,7 +130,6 @@
   "src/flash/nor/wchriscv.c",
   "src/flash/nor/ws63.c",
   "src/flash/nor/xmc7xxx.c",
-  "src/jtag/drivers/OpenULINK/include/shorttypes.h",
   "src/jtag/drivers/aji_client/aji/aji.h",
   "src/jtag/drivers/aji_client/aji/c_aji.h",
   "src/jtag/drivers/aji_client/aji/c_jtag_client_gnuaji.c",
@@ -143,21 +142,9 @@
   "src/jtag/drivers/aji_client/aji_client_tcl.c",
   "src/jtag/drivers/aji_client/jtagservice.c",
   "src/jtag/drivers/aji_client/jtagservice.h",
-  "src/jtag/drivers/al_link.c",
-  "src/jtag/drivers/al_link_cyusb.c",
-  "src/jtag/drivers/al_link_cyusb.h",
   "src/jtag/drivers/angie/include/msgtypes.h",
-  "src/jtag/drivers/blackmagic.c",
-  "src/jtag/drivers/bonobo.c",
-  "src/jtag/drivers/ch347_jtag.c",
-  "src/jtag/drivers/cmsis_dap_usb.c",
-  "src/jtag/drivers/colobus.c",
-  "src/jtag/drivers/ddmi_demo.c",
-  "src/jtag/drivers/esp_gpio.c",
-  "src/jtag/drivers/esp_gpio.h",
-  "src/jtag/drivers/ftd2xx/WinTypes.h",
   "src/jtag/drivers/ftd2xx/ftd2xx.h",
-  "src/jtag/drivers/ftdi_rvswd.c",
+  "src/jtag/drivers/ftd2xx/WinTypes.h",
   "src/jtag/drivers/libjaylink/config.h",
   "src/jtag/drivers/libjaylink/libjaylink/buffer.c",
   "src/jtag/drivers/libjaylink/libjaylink/core.c",
@@ -184,11 +171,7 @@
   "src/jtag/drivers/libjaylink/libjaylink/util.c",
   "src/jtag/drivers/libjaylink/libjaylink/version.c",
   "src/jtag/drivers/libjaylink/libjaylink/version.h",
-  "src/jtag/drivers/mpsse-d2xx.c",
-  "src/jtag/drivers/mpsse-libusb.c",
-  "src/jtag/drivers/mpsse-private.h",
-  "src/jtag/drivers/stlink_usb_hla_multicore.c",
-  "src/jtag/drivers/tamarin.c",
+  "src/jtag/drivers/OpenULINK/include/shorttypes.h",
   "src/jtag/drivers/tas_client/tas_am15_am14.h",
   "src/jtag/drivers/tas_client/tas_client.c",
   "src/jtag/drivers/tas_client/tas_device_family.h",
@@ -197,12 +180,6 @@
   "src/jtag/drivers/tas_client/tas_protocol.h",
   "src/jtag/drivers/usb_blaster.c",
   "src/jtag/drivers/usb_blaster/ublast_access_ftd2xx.c",
-  "src/jtag/drivers/wlink.c",
-  "src/jtag/drivers/wlink.h",
-  "src/jtag/drivers/wlinke.c",
-  "src/jtag/drivers/xlnx-pcie-xvc.c",
-  "src/server/rbb_server.c",
-  "src/server/rbb_server.h",
   "src/target/anlogic/at0012.c",
   "src/target/anlogic/dwcphy.c",
   "src/target/anlogic/jtag2apb.c",
@@ -218,10 +195,6 @@
   "src/target/aurix/tricore.c",
   "src/target/aurix/tricore.h",
   "src/target/aurix/tricore_register.h",
-  "src/target/cortex_a8.c",
-  "src/target/cortex_a8.h",
-  "src/target/cortex_m3.c",
-  "src/target/cortex_m3.h",
   "src/target/espressif/esp32c2.c",
   "src/target/espressif/esp32c3.c",
   "src/target/espressif/esp32c5.c",
@@ -239,20 +212,6 @@
   "src/target/espressif/esp_riscv_apptrace.c",
   "src/target/espressif/esp_riscv_apptrace.h",
   "src/target/espressif/esp_ui_dispatcher.c",
-  "src/target/hexagon.c",
-  "src/target/hexagon.h",
-  "src/target/hla_target_hla_multicore.c",
-  "src/target/jsmn.h",
-  "src/target/nds32.c",
-  "src/target/nds32.h",
-  "src/target/nds32_aice.c",
-  "src/target/nds32_aice.h",
-  "src/target/nds32_cmd.c",
-  "src/target/nds32_cmd.h",
-  "src/target/nds32_disassembler.c",
-  "src/target/nds32_disassembler.h",
-  "src/target/nds32_edm.h",
-  "src/target/nds32_insn.h",
   "src/target/nds32_new/bytecode-ax.c",
   "src/target/nds32_new/bytecode-ax.h",
   "src/target/nds32_new/gdb_fileio.h",
@@ -283,33 +242,8 @@
   "src/target/nds32_new/nds32_v3_common.h",
   "src/target/nds32_new/nds32_v3m.c",
   "src/target/nds32_new/nds32_v3m.h",
-  "src/target/nds32_reg.c",
-  "src/target/nds32_reg.h",
-  "src/target/nds32_tlb.c",
-  "src/target/nds32_tlb.h",
-  "src/target/nds32_v2.c",
-  "src/target/nds32_v2.h",
-  "src/target/nds32_v3.c",
-  "src/target/nds32_v3.h",
-  "src/target/nds32_v3_common.c",
-  "src/target/nds32_v3_common.h",
-  "src/target/nds32_v3m.c",
-  "src/target/nds32_v3m.h",
-  "src/target/nds_vtarget.c",
-  "src/target/nds_vtarget.h",
-  "src/target/nds_vtarget_cmd.c",
-  "src/target/nds_vtarget_common.h",
-  "src/target/ndsv5_ace.c",
-  "src/target/ndsv5_ace.h",
-  "src/target/ndsv5_burner_server.c",
-  "src/target/ndsv5_cmd.c",
-  "src/target/ndsv5_profiling.c",
   "src/target/or1k.c",
   "src/target/or1k.h",
-  "src/target/or1k_jtag.c",
-  "src/target/or1k_jtag.h",
-  "src/target/or1k_jtag_adv.c",
-  "src/target/or1k_jtag_adv.h",
   "src/target/riscv/asm.h",
   "src/target/riscv/debug_defines_ncetrace.h",
   "src/target/riscv/dmi.c",
@@ -328,11 +262,6 @@
   "src/target/riscv/ndsv5_encoding.h",
   "src/target/riscv/ws63_insn.h",
   "src/target/rvmax/debug_defines.h",
-  "src/target/stm32_stlink.c",
-  "src/target/stm8_hla_multicore.c",
-  "src/target/wch_riscv-013.c",
-  "src/target/wch_riscv.c",
-  "src/target/wch_riscv.h",
   "src/target/xscale/protocol.h",
   "src/target/xtensa.c",
   "src/target/xtensa.h",
@@ -367,10 +296,6 @@
   "tcl/board/pic-p32mx.cfg",
   "tcl/board/redbee-econotag.cfg",
   "tcl/board/redbee-usb.cfg",
-  "tcl/board/synopsys_amla3.cfg",
-  "tcl/board/synopsys_angel4.cfg",
-  "tcl/board/synopsys_haps51.cfg",
-  "tcl/board/synopsys_ml509.cfg",
   "tcl/board/ti/launchxl-f28069m-xds100v2.cfg",
   "tcl/board/ti/lp-em-cc2340r5.cfg",
   "tcl/board/ti/lp-em-cc2340r53.cfg",
@@ -392,27 +317,14 @@
   "tcl/board/ti/tms320f28m35x-dual-core-xds100v3.cfg",
   "tcl/board/ti/tms320f28m35x-xds100v2.cfg",
   "tcl/board/ti/tms320f28m35x-xds100v3.cfg",
-  "tcl/board/ti_am625_swd_native.cfg",
-  "tcl/board/ti_am62a7_swd_native.cfg",
-  "tcl/board/ti_am62p_swd_native.cfg",
-  "tcl/board/ti_am64xx_swd_native.cfg",
-  "tcl/board/ti_j721e_swd_native.cfg",
-  "tcl/board/ti_j722s_swd_native.cfg",
-  "tcl/board/ti_j784s4_swd_native.cfg",
-  "tcl/interface/al_link.cfg",
   "tcl/interface/axm0432.cfg",
-  "tcl/interface/calao-usb-a9260-c01.cfg",
-  "tcl/interface/calao-usb-a9260-c02.cfg",
   "tcl/interface/calao-usb-a9260.cfg",
   "tcl/interface/chameleon.cfg",
   "tcl/interface/cortino.cfg",
-  "tcl/interface/ddmi_demo.cfg",
   "tcl/interface/digilent-hs1.cfg",
   "tcl/interface/digilent-hs2.cfg",
   "tcl/interface/dlp-usb1232h.cfg",
   "tcl/interface/dp_busblaster.cfg",
-  "tcl/interface/esp_gpio_jtag.cfg",
-  "tcl/interface/esp_gpio_swd.cfg",
   "tcl/interface/flashlink.cfg",
   "tcl/interface/flossjtag-noeeprom.cfg",
   "tcl/interface/flossjtag.cfg",
@@ -455,7 +367,6 @@
   "tcl/interface/sheevaplug.cfg",
   "tcl/interface/signalyzer-lite.cfg",
   "tcl/interface/signalyzer.cfg",
-  "tcl/interface/stlink-usb.cfg",
   "tcl/interface/stm32-stick.cfg",
   "tcl/interface/ti/cmsis-dap.cfg",
   "tcl/interface/ti/ti-icdi.cfg",
@@ -463,11 +374,7 @@
   "tcl/interface/ti/xds100v3.cfg",
   "tcl/interface/ti/xds110.cfg",
   "tcl/interface/vpaclink.cfg",
-  "tcl/interface/wlink.cfg",
   "tcl/interface/xds100v2.cfg",
-  "tcl/target/#U043a1879x#U04311#U044f.cfg",
-  "tcl/target/1986#U0432#U04351#U0442.cfg",
-  "tcl/target/1986Ð²Ðµ1Ñ‚.cfg",
   "tcl/target/anlogic/dr1m35.cfg",
   "tcl/target/anlogic/dr1m350.cfg",
   "tcl/target/anlogic/dr1m350_al_link.cfg",
@@ -500,14 +407,11 @@
   "tcl/target/infineon/tc48x.cfg",
   "tcl/target/infineon/tc49x.cfg",
   "tcl/target/infineon/tc4dx.cfg",
-  "tcl/target/nrf_common.cfg",
   "tcl/target/smdk6410.cfg",
   "tcl/target/ti/cc2341.cfg",
   "tcl/target/ti/cc23xx.cfg",
   "tcl/target/ti/cc27xx.cfg",
-  "tcl/target/ti/mspm33.cfg",
-  "tcl/target/wch-riscv.cfg",
-  "tcl/target/Ðº1879xÐ±1Ñ.cfg"
+  "tcl/target/ti/mspm33.cfg"
  ],
  "tier1_drop_in_tcl": 894,
  "tier2_needs_c_patch": 404,
@@ -32388,12 +32292,12 @@
    "path": "src/flash/nor/stldr_driver.c",
    "tier": 2,
    "kind": "src",
-   "winner": "zuyih/openocd",
-   "winner_branch": "master",
-   "winner_license": "NOASSERTION",
-   "winner_stars": 0,
+   "winner": "STMicroelectronics/OpenOCD",
+   "winner_branch": "openocd-cubeide-r7",
+   "winner_license": "GPL-2.0-or-later",
+   "winner_stars": 29,
    "also_in": [
-    "STMicroelectronics/OpenOCD"
+    "zuyih/openocd"
    ],
    "sources": 2,
    "path_spellings": [],
@@ -32947,7 +32851,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/al_link_cyusb.c",
@@ -32960,7 +32864,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/al_link_cyusb.h",
@@ -32973,7 +32877,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/angie/include/msgtypes.h",
@@ -33052,7 +32956,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/bonobo.c",
@@ -33065,7 +32969,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/ch347_jtag.c",
@@ -33078,7 +32982,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/cmsis_dap_usb.c",
@@ -33117,7 +33021,7 @@
    ],
    "sources": 26,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/cmsis_dap_wch.c",
@@ -33143,7 +33047,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/ddmi_demo.c",
@@ -33156,7 +33060,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/dirtyjtag.c",
@@ -33185,7 +33089,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/esp_gpio.h",
@@ -33198,7 +33102,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/ftd2xx/ftd2xx.h",
@@ -33237,7 +33141,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/ice1000.c",
@@ -33759,7 +33663,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/mpsse-libusb.c",
@@ -33772,7 +33676,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/mpsse-private.h",
@@ -33785,7 +33689,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/OpenULINK/include/shorttypes.h",
@@ -33811,7 +33715,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/tamarin.c",
@@ -33826,7 +33730,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/tas_client/tas_am15_am14.h",
@@ -34000,7 +33904,7 @@
    ],
    "sources": 4,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/wlink.h",
@@ -34013,7 +33917,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/wlinke.c",
@@ -34028,7 +33932,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/jtag/drivers/xlnx-pcie-xvc.c",
@@ -34088,7 +33992,7 @@
    ],
    "sources": 47,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/server/rbb_server.c",
@@ -34101,7 +34005,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/server/rbb_server.h",
@@ -34114,7 +34018,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/aarch64_coproc_reg.c",
@@ -34617,7 +34521,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/cortex_a8.h",
@@ -34630,7 +34534,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/cortex_m3.c",
@@ -34646,7 +34550,7 @@
    ],
    "sources": 3,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/cortex_m3.h",
@@ -34662,7 +34566,7 @@
    ],
    "sources": 3,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/espressif/esp32c2.c",
@@ -34896,7 +34800,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/hexagon.h",
@@ -34909,7 +34813,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/hla_target_hla_multicore.c",
@@ -34922,7 +34826,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/jsmn.h",
@@ -34935,7 +34839,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/loongarch.c",
@@ -35136,7 +35040,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32.h",
@@ -35194,7 +35098,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_aice.c",
@@ -35252,7 +35156,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_aice.h",
@@ -35310,7 +35214,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_cmd.c",
@@ -35368,7 +35272,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_cmd.h",
@@ -35426,7 +35330,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_disassembler.c",
@@ -35484,7 +35388,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_disassembler.h",
@@ -35542,7 +35446,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_edm.h",
@@ -35600,7 +35504,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_insn.h",
@@ -35658,7 +35562,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_new/bytecode-ax.c",
@@ -36106,7 +36010,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_reg.h",
@@ -36164,7 +36068,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_tlb.c",
@@ -36222,7 +36126,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_tlb.h",
@@ -36280,7 +36184,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v2.c",
@@ -36338,7 +36242,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v2.h",
@@ -36396,7 +36300,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v3.c",
@@ -36454,7 +36358,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v3.h",
@@ -36512,7 +36416,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v3_common.c",
@@ -36570,7 +36474,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v3_common.h",
@@ -36628,7 +36532,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v3m.c",
@@ -36686,7 +36590,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds32_v3m.h",
@@ -36744,7 +36648,7 @@
    ],
    "sources": 45,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds_vtarget.c",
@@ -36757,7 +36661,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds_vtarget.h",
@@ -36770,7 +36674,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds_vtarget_cmd.c",
@@ -36783,7 +36687,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/nds_vtarget_common.h",
@@ -36796,7 +36700,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/ndsv5_ace.c",
@@ -36809,7 +36713,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/ndsv5_ace.h",
@@ -36822,7 +36726,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/ndsv5_burner_server.c",
@@ -36835,7 +36739,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/ndsv5_cmd.c",
@@ -36848,7 +36752,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/ndsv5_profiling.c",
@@ -36861,7 +36765,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/or1k.c",
@@ -36900,7 +36804,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/or1k_jtag.h",
@@ -36913,7 +36817,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/or1k_jtag_adv.c",
@@ -36926,7 +36830,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/or1k_jtag_adv.h",
@@ -36939,7 +36843,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/quark_d2000.c",
@@ -37492,7 +37396,7 @@
    ],
    "sources": 3,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/stm8.h",
@@ -37569,7 +37473,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/tms320.c",
@@ -37681,7 +37585,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/wch_riscv.c",
@@ -37696,7 +37600,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/wch_riscv.h",
@@ -37711,7 +37615,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "src/target/xscale/protocol.h",
@@ -41609,7 +41513,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/synopsys_angel4.cfg",
@@ -41622,7 +41526,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/synopsys_haps51.cfg",
@@ -41635,7 +41539,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/synopsys_ml509.cfg",
@@ -41648,7 +41552,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti/cc35x1e-launchpad.cfg",
@@ -42044,7 +41948,7 @@
    ],
    "sources": 32,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_am62a7_swd_native.cfg",
@@ -42074,7 +41978,7 @@
    ],
    "sources": 17,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_am62p_swd_native.cfg",
@@ -42104,7 +42008,7 @@
    ],
    "sources": 17,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_am64xx_swd_native.cfg",
@@ -42120,7 +42024,7 @@
    ],
    "sources": 3,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_beagleboard.cfg",
@@ -42615,7 +42519,7 @@
    ],
    "sources": 32,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_j722s_swd_native.cfg",
@@ -42645,7 +42549,7 @@
    ],
    "sources": 17,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_j784s4_swd_native.cfg",
@@ -42661,7 +42565,7 @@
    ],
    "sources": 3,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/board/ti_lp_em_cc2340r5.cfg",
@@ -44061,7 +43965,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/arc_sdp.cfg",
@@ -44235,7 +44139,7 @@
    ],
    "sources": 19,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/calao-usb-a9260-c02.cfg",
@@ -44267,7 +44171,7 @@
    ],
    "sources": 19,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/calao-usb-a9260.cfg",
@@ -44551,7 +44455,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/digilent-hs1.cfg",
@@ -44678,7 +44582,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/esp_gpio_swd.cfg",
@@ -44691,7 +44595,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/eud.cfg",
@@ -46716,7 +46620,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/stm32-stick.cfg",
@@ -46998,7 +46902,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/interface/xds100v2.cfg",
@@ -47042,7 +46946,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/1986#U0432#U04351#U0442.cfg",
@@ -47055,7 +46959,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/1986Be1T.cfg",
@@ -47099,7 +47003,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/adi_proc_tracker.tcl",
@@ -50649,7 +50553,7 @@
    ],
    "sources": 9,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/nt98528-ngb.cfg",
@@ -54896,7 +54800,7 @@
    ],
    "sources": 2,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   },
   {
    "path": "tcl/target/wch_min.cfg",
@@ -55102,7 +55006,7 @@
    "also_in": [],
    "sources": 1,
    "path_spellings": [],
-   "imported": false
+   "imported": true
   }
  ]
 }
