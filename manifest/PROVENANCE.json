@@ -3843,8 +3843,12 @@
       "license": null,
       "stars_at_import": 0,
       "also_present_in": [],
-      "sha256": "4fc095596b511130d615bab684c7592fd0406ab6564434423e39a05ee693b94d",
-      "imported_as": "dependency"
+      "sha256": "85cdc42f6c6ef8887956d869a83f2f5b200f67c853c2f259a270f413794124a1",
+      "imported_as": "dependency",
+      "pristine_sha256": "4fc095596b511130d615bab684c7592fd0406ab6564434423e39a05ee693b94d",
+      "local_modifications": [
+        "content edited in this fork; digest refreshed"
+      ]
     },
     "tcl/gdb_helper.tcl": {
       "source_repo": "zuyih/openocd",

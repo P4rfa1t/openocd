@@ -259,9 +259,9 @@ integrity check with 543 mismatches, because the tree had been rebuilt in
 text mode on Windows and every imported file was silently stored with CRLF
 while the manifest described the LF original. The gate could not tell "this
 was edited" from "this was checked out on a Windows host". Both are fixed now:
-the tree is LF everywhere, 647 of the 785 imported files still match their
-published digest byte for byte, none is now a terminator-only difference, and
-134 carry real local edits (24 of those also had their terminators normalised)
+the tree is LF everywhere, 646 of the 785 imported files still match their
+published digest byte for byte, 4 are now a terminator-only difference, and
+135 carry real local edits (24 of those also had their terminators normalised)
 — the target API ports, the relocated `source [find ...]` paths, the
 third-party driver fixes and the `rvmax` / `rv32m1` backends.
 
