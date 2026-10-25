@@ -143,7 +143,16 @@ if [ -d $LIBFTDI_SRC ] ; then
   sed -i -E "s/(SET\(CMAKE_FIND_ROOT_PATH\s+).+\)/\1${ESCAPED_SYSROOT})/" \
     ${LIBFTDI_SRC}/cmake/Toolchain-${HOST_TRIPLET}.cmake
 
+  # libftdi1-1.5/CMakeLists.txt:15 declares cmake_minimum_required(VERSION 2.6),
+  # and CMake >= 4 refuses anything below 3.5:
+  #   CMake Error at CMakeLists.txt:15 (cmake_minimum_required):
+  #     Compatibility with CMake < 3.5 has been removed from CMake.
+  # This is the variable CMake's own error message tells you to set.  It only
+  # raises the floor for the policies CMake evaluates; it is not an override of
+  # the project's declared minimum, and a CMake 3.x that still accepts 2.6
+  # simply ignores the unused -D entry.
   cmake $LIBFTDI_CONFIG \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DCMAKE_TOOLCHAIN_FILE=${LIBFTDI_SRC}/cmake/Toolchain-${HOST_TRIPLET}.cmake \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DPKG_CONFIG_EXECUTABLE=`which pkg-config` \
