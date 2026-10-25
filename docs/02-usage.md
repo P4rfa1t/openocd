@@ -5,11 +5,11 @@
 本仓库是 `openocd-org/openocd` 的 fork。扫描 GitHub 上 **689 个** OpenOCD
 相关仓库（500 个官方 fork + 搜索命中的 189 个独立仓；排名表含本 fork 自身，
 `manifest/survey.json` 记 688），跨仓去重、剔除与官方等价的
-副本后，得到 **767 个文件**的第三方支持（`tcl/` 702 个 + `src/` 65 个），
+副本后，得到 **769 个文件**的第三方支持（`tcl/` 702 个 + `src/` 67 个），
 全部合并在**它们本该在的位置**：
 
 - **702 个 `tcl/` 配置** —— 零修改、零重编译即可使用；
-- **65 个 `src/` C 源文件与头文件** —— 已就位，其中 **47 个已接入构建**，
+- **67 个 `src/` C 源文件与头文件** —— 已就位，其中 **49 个已接入构建**，
   其余 18 个仍需按上游现有 API 改写后才能注册。
 
 另有 **7376 个与官方重复的文件已剔除**，**6910 个跨仓重复副本被折叠**
@@ -27,20 +27,19 @@ tcl/                     ← OpenOCD 配置树：官方配置 + 702 个第三方
   chip/                        28  芯片公共片段
   cpu/                         10  架构公共片段
 
-src/                     ← C 源码：官方源码 + 65 个第三方驱动/目标
+src/                     ← C 源码：官方源码 + 67 个第三方驱动/目标
   target/                      0  顶层 .c（其中 0 个是第三方新架构：LoongArch / C28x / TMS320 / Vortex86 / VexRiscv / Quark / Microchip RI4 / WCH RISC-V …）
   target/rvmax/                9  文件，3 个 .c（ADI RVMAX 后端）
   target/rv32m1/               6  文件，3 个 .c（SiFive RV32M1 后端）
   jtag/drivers/                10  顶层 .c（其中 0 个是第三方适配器）
-  flash/nor/                   2  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）
+  flash/nor/                   4  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr、stm32h5x 驱动与头文件）
 
-manifest/                ← 合并过程的可审计产物（唯一事实来源）
-  PROVENANCE.json            767  个文件的来源仓库/分支/commit/SHA-256/许可证
+manifest/                ← 合并过程的可审计产物（唯一事实来源）  PROVENANCE.json            769  个文件的来源仓库/分支/commit/SHA-256/许可证
   consolidated.json           去重决策：胜出者、被折叠的重复、上游重复项
   upstream.json               本 fork 所基于的上游 commit
   upstream-index.txt          该 commit 的全量文件清单，去重判定基准
 | `repos.csv` / `repos.json` | 689 行候选仓库排名（500 个上游 fork + 189 个独立仓；含本 fork 自身，`survey.json` 的 688 不含自身）|
-| `licenses.csv` | 767  行许可证索引（逐文件）|
+| `licenses.csv` | 769  行许可证索引（逐文件）|
 
 docs/                    调研结论 / 清单报告 / 使用说明 / 许可证清单
 tools/                   全部工具脚本
@@ -54,7 +53,7 @@ tools/                   全部工具脚本
 > 另有 5 个文件「只作为依赖进来、不在 imported 记录里」
 > （`tcl/chip/motorola/hsb.cfg`、`tcl/cpu/arc/arcompact.tcl`、`tcl/fpga/xilinx-xc3s.cfg`、
 > `tcl/gdb_helper.tcl`、`tcl/target/adspsc58x.cfg`）。所以 `tcl/` 下的第三方文件数是
-> 697 + 5 = **702**，与 `manifest/PROVENANCE.json` 核对一致
+> 697 + 7 = **702**，与 `manifest/PROVENANCE.json` 核对一致
 > （该文件的 `tcl/` 条目数也是 702）。
 >
 > **那 12 个「原样就能导入」的候选经复核并不成立。** 补齐子目录盲区之后，对剩下还没进树的
@@ -69,7 +68,7 @@ tools/                   全部工具脚本
 > 现在没有任何工具能复现，已删除。可复现的是 tier-1 账本与 `manifest/consolidated.json`
 > 的 `not_imported`（407 条，逐文件可查）。
 >
-> **全部 767 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
+> **全部 769 个文件都锁定了来源 commit**，可逐文件追溯到具体 fork 的具体提交。
 
 ## 为什么直接合并，而不是外挂一层
 
@@ -134,7 +133,7 @@ openocd -f interface/xxx.cfg -f target/xxx.cfg -f board/xxx.cfg
 
 ## C 驱动的接入状态
 
-`src/` 下 65 个第三方文件里（35 个 `.c` + 30 个 `.h`），**47 个已经接入构建系统**，
+`src/` 下 67 个第三方文件里（36 个 `.c` + 31 个 `.h`），**49 个已经接入构建系统**，
 其余 18 个（11 个 `.c` + 7 个 `.h`）仍是「代码就位、未注册」的状态。
 
 ### 已接入的适配器（5 个文件，6 个探针名）
@@ -183,12 +182,13 @@ ice1500        { jtag }
 > `find` proc 去磁盘里找文件，写成 `-f "adapter driver dirtyjtag"` 会报
 > `Can't find adapter driver`，看起来像驱动没编进去，其实是参数用错了。
 
-### 已接入的 flash 驱动（2 个文件）
+### 已接入的 flash 驱动（3 个文件）
 
 | 驱动名 | 源文件 | 说明 |
 |---|---|---|
 | `rv32m1` | `src/flash/nor/rv32m1.c` | SiFive RV32M1 内部 flash |
 | `stldr` | `src/flash/nor/stldr_driver.c` | STMicroelectronics 外部加载器（ST-LINK 固件 blob） |
+| `stm32h5x` | `src/flash/nor/stm32h5x.c` | STM32H5 系列（TrustZone、选项字节、OBK），见「stm32h5x flash 驱动补导」 |
 
 `stldr` 来自 `STMicroelectronics/OpenOCD` 的 `openocd-cubeide-r7` 分支。
 它让一个 flash bank 由 ST-LINK 固件 blob 烧写，而不是靠专用 flash 算法 ——
@@ -221,6 +221,69 @@ ice1500        { jtag }
 > | `tcl/board/atk_cnn647b.cfg` | `loaders/stldr/MX25UM25645G_ATK-CNN647B_ExtMemLoader.stldr` |
 >
 > 把需要的加载器复制到 `openocd` 可执行文件旁边的 share 目录，再让配置指过去。
+
+### stm32h5x flash 驱动补导
+
+`tcl/target/stm32h5x.cfg:73`–`:74` 一直在用 `flash bank ... stm32h5x`，
+但 `src/flash/nor/stm32h5x.c` 从来没有导入过：配置能解析、驱动表里没有，
+直到运行时才在配置第 73 行报 `Error: flash driver 'stm32h5x' not found`。
+2026-10-25 补齐，按同一份代码补进来四处：
+
+| 文件 | 作用 |
+|---|---|
+| `src/flash/nor/stm32h5x.c` + `.h` | 驱动本体（`zuyih/openocd@5422b51c`） |
+| `contrib/loaders/flash/stm32/stm32h5x.c` + `.inc` | 写 flash 的算法，驱动在 `src/flash/nor/stm32h5x.c:791` 里 `#include` 进来 |
+
+接线四处，与 `stldr` 同一套写法：
+
+- `src/flash/nor/Makefile.am` 的 `NOR_DRIVERS` 与 `NORHEADERS`；
+- `src/flash/nor/driver.h` 的 `extern const struct flash_driver ...` 声明表；
+- `src/flash/nor/drivers.c` 的 `flash_drivers[]` 数组；
+- `contrib/loaders/flash/stm32/Makefile`（新增 `stm32h5x.inc` 与
+  `stm32h5x.elf` 规则，`-mcpu=cortex-m33`）。
+
+驱动暴露的命令：`stm32h5x_mass_erase`、`stm32h5x_option_read`、
+`stm32h5x_option_write`、`stm32h5x_trustzone`、`stm32h5x_option_load`、
+`stm32h5x_write_obk`、`stm32h5x_write_obk_options` —— 带 TrustZone 的 H5
+要动选项字节 / OBK 靠它们。
+
+> 这些命令只在「用该驱动的 bank 建起来之后」才注册。空跑
+> `-c "stm32h5x_option_read"` 会报 `invalid command name`，
+> 拿 `stm32l4x` 试同样如此 —— 不是驱动没编进去。
+
+怎么确认它真的进去了（发布二进制没有，本地构建有）：
+
+```bash
+strings src/openocd.exe | grep -c stm32h5x     # 105；发布版 0.12 是 0
+./src/openocd.exe -s <tree>/tcl -c "adapter driver dummy" \
+    -f target/stm32h5x.cfg -c shutdown         # 只剩 -chain-position 过时警告
+```
+
+补导之前，`tcl/target/stm32h5x.cfg:73`–`:74` 曾被加上 `# driver 'stm32h5x' not in tree`
+注释掉（`e1e45ebf8`，2026-10-23，同一提交里一共注释了 7 份「驱动不在树里」的配置）：
+这样配置能起来、能挂载调试，但没有 flash bank，`flash probe` 什么都不打印。
+驱动进来之后两行已经恢复，文件与上游逐字节一致（行尾规范化后
+`sha256 73954af9…`），provenance 记录里的 sha256 也跟着回到 pristine 值，
+不再声称「在本 fork 里改过」。
+
+真机上验证过一遍（STLINK V2J46S7 → STM32H50xx）：
+
+```
+#0 : stm32h5x.flash_ns (stm32h5x) at 0x08000000, size 0x00000000, buswidth 0, chipwidth 0
+#1 : stm32h5x.flash_alias_s (stm32h5x) at 0x0c000000, size 0x00000000, buswidth 0, chipwidth 0
+flash 'stm32h5x' found at 0x08000000
+device idcode = 0x10036474 (STM32H50xx - Rev Y : 0x1003)
+Product State = 0xED : 'Open'   flash size = 128kbytes   flash mode : dual-bank
+```
+
+同一个提交里另外 6 份配置的 `flash bank` 行还注释着 ——
+`aic8800`（3 份）、`k1921vg015`、`rs14100`、`stm32c5x` —— 对应的驱动都还没导入，
+等各自的驱动补进来再逐份恢复。
+
+这条线现在由 `tools/audit_flash_drivers.py` 盯 ——它从
+`src/flash/nor/drivers.c` 与 `src/flash/nor/*.c` 反解出编译好的驱动名，
+再扫 `tcl/**/*.{cfg,tcl}` 里的 `flash bank` 引用，缺了就报 `file:line` 并退出 1。
+（注释掉的 `flash bank` 不算引用，所以这 6 份现在不会被误报。）
 
 ### 已接入的芯片架构（10 个 target_type）
 
@@ -340,11 +403,11 @@ target 在任何公开仓库里都不存在（属于 Synopsys 内部交付）：
 
 - `GPL-2.0`：123 个文件，来源明确。
 - `GPL-2.0-or-later`：5 个文件（含 `src/flash/nor/stldr_driver.c`，来自 STMicroelectronics/OpenOCD）。
-- `NOASSERTION`：615 个文件，GitHub 未能解析 SPDX。
+- `NOASSERTION`：617 个文件，GitHub 未能解析 SPDX。
 - `UNRESOLVED`：24 个文件，即依赖闭包补充的文件，来源已知但未单独解析。
 
-四项合计 767，与 `manifest/licenses.csv` 的行数一致。无许可证信息的（`NOASSERTION` +
-`UNRESOLVED`）一共 639 个，占 83%。
+四项合计 769，与 `manifest/licenses.csv` 的行数一致。无许可证信息的（`NOASSERTION` +
+`UNRESOLVED`）一共 641 个，占 83%。
 
 后两类在商用前需人工审计头部声明 —— `NOASSERTION` **不等于**宽松许可，
 部分文件带明确的专有声明（例如 `analogdevicesinc/openocd` 的 flash 算法写着
@@ -391,8 +454,8 @@ python tools/pipeline.py --apply
 |---|---|---|
 | C 驱动未注册进构建 | 18（11 个 `.c` + 7 个 `.h`） | 见「C 驱动的接入状态」；卡点分两类：依赖上游已改名的 API，或（`jtag_tcp.c`、`jtag_esp_remote.c`、`cmsis_dap_wch.c`、`aarch64_coproc_reg.c` 与 `21ab67574` 新导入的 11 个文件）上游从未有过这些 API。另有 `OpenULINK/src/` 6 个固件源文件，独立 Makefile，不参与主构建 |
 | 未深挖的仓库 | 489 个（689 − 200） | 全部做过 `tcl/target` 粗筛（689/689），但只深挖了 star 靠前的 200 个；提高 `DIFF_BUDGET` 可扩展 |
-| 无许可证信息 | 639 / 767（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
-| 烧录器只有配置没有驱动 | 0 个驱动名 / 0 处引用 | 旧版这里写「6 个驱动名 / 8 处引用」，指的是已经不在树里的 10 个配置文件（见「悬空引用扫描」）；当前树里 5 条 unresolved 引用全是注释或占位符 |
+| 无许可证信息 | 641 / 769（83%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |
+| 烧录器只有配置没有驱动 | 0 个驱动名 / 0 处引用 | 旧版这里写「6 个驱动名 / 8 处引用」，指的是已经不在树里的 10 个配置文件（见「悬空引用扫描」）；当前树里 5 条 unresolved 引用全是注释或占位符。**但这个扫描看不见 `flash bank` 的驱动名** —— 2026-10-25 就漏过一次：`tcl/target/stm32h5x.cfg` 的 `flash bank` 引用了一个从未导入的 `stm32h5x` 驱动，配置能解析、驱动表里没有，直到运行时才报 `flash driver not found`（见「stm32h5x flash 驱动补导」）。这类检查现在由 `tools/audit_flash_drivers.py` 承担 |
 | Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |
 | ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；提供另外两个 target 的 `arc32` 家族缺 `arc_mem.c` 接不进来且已在 `7ffeda047` 删除，全树 22 个 ARC 配置现在都只用 `arcv2` |
 | `-chain-position` 旧写法 | 401 个文件 / 493 处 | 上游 `tcl/` 已是 0 处（全部改用 `-dap` / `-tap`）；这 493 处全在导入的第三方配置里（`target create` 366 处、`dap create` 119 处、`pld create` 6 处，其余为变量拼接）。机械替换只能自动解出 69 处（对象名与取值同行且完全相同），其余 424 处需人工判断 TAP 名 |
@@ -401,7 +464,7 @@ python tools/pipeline.py --apply
 | TI XDS100 包装配置缺失 | 9 份板级配置 | 这 9 份 `tcl/board/ti/*-xds100v2.cfg` / `-xds100v3.cfg` 都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，树里只有 `interface/ftdi/xds100v2.cfg`；补两个三行包装文件即可，无需 C 改动 |
 | 两个非 ASCII 文件名 | 2 个 | `tcl/target/1986ве1т.cfg`、`tcl/target/к1879xб1я.cfg` 是上游自己带的西里尔字母名（与 `upstream/master` 逐字节一致），不是本 fork 引入；Windows 上部分工具链会处理异常 |
 | `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |
-| 扫描漏掉了子目录里的文件 | 已补扫，0 个待接入 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里看不见。`tools/expand_subtrees.py` 已补上；补出来的文件经 API 漂移分析后确认与上游 `src/flash/nor/` 的 85 个驱动重合，本树实际只多 `rv32m1.c` 与 `stldr_driver.c`（均已接入），NOR 目录 87/87 全部在 `Makefile.am` 里 |
+| 扫描漏掉了子目录里的文件 | 已补扫，0 个待接入 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里看不见。`tools/expand_subtrees.py` 已补上；补出来的文件经 API 漂移分析后确认与上游 `src/flash/nor/` 的 85 个驱动重合，本树实际只多 `rv32m1.c`、`stldr_driver.c` 与 `stm32h5x.c`（均已接入），NOR 目录 88/88 全部在 `Makefile.am` 里 |
 | 配置里调用的 Tcl 命令树上没有定义 | 8 个命令名 / 198 处 | `pmmw`(62)、`mem_ap_write_reg`(59)、`mem_ap_read_reg`(26)、`reg_set`(24)、`reg_clear`(19)、`memap_mmw`(4)、`hla_close`(3)、`stm32n6x_boot1`(1)。这些是源 fork 自己给 OpenOCD 打的补丁命令（ADI 的 `pmmw`/`mem_ap_*_reg`、Espressif 的 `reg_set`/`reg_clear`、Nuvoton 的 `hla_close`），本树与上游都没有定义，所以调用它们的那几份配置（`tcl/board/adspsc5xx_ezbrd.tcl`、`tcl/target/adspsc5*.cfg`、`tcl/target/esp32c*-lpcore.cfg`、`tcl/target/numicroM2*.cfg` 等）执行到那一行会报 unknown command；配置里其余部分正常 |
 
 ## 已处理的重复问题

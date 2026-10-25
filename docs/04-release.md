@@ -41,10 +41,11 @@ python3 tools/sync_doc_numbers.py --check     # 任何已发布数字漂移都�
 `verify_tree.py` 必须打印 `VERIFY: PASS`；`--check` 必须打印
 `sync_doc_numbers: OK (0 pending)` 并以 0 退出。任何一条不满足就不打标签。
 
-## 4. 发布后必须复跑的 4 条命令
+## 4. 发布后必须复跑的 5 条命令
 
 标签推上去、打包完成后，在干净检出（`git clone` + `git checkout vX`）里复跑下面
-4 条。它们分别覆盖：清单完整性、已发布数字、配置文件互相引用的可达性、TCL 可解析性。
+5 条。它们分别覆盖：清单完整性、已发布数字、配置文件互相引用的可达性、TCL 可解析性、
+`flash bank` 驱动名是否真的编进了树。
 
 ```bash
 # 1) 清单完整性：每个第三方文件都有来源记录，且摘要一致
@@ -59,16 +60,21 @@ python3 tools/audit_dangling_refs.py
 # 4) TCL 可解析性：每个 .cfg/.tcl 的括号与引号在解释器眼里都是完整的
 #    需要 tclsh（Debian/Ubuntu：apt-get install tcl）；没有解释器时该脚本打印 SKIP 并退 0
 python3 tools/check_tcl_syntax.py
+
+# 5) 驱动名可达性：每个 flash bank 的驱动名都在 src/flash/nor/drivers.c 的表里
+#    文件级引用由第 3 条管，驱动名由这条管 —— 2026-10-25 的 stm32h5x 就漏在这里
+python3 tools/audit_flash_drivers.py
 ```
 
 当前树上的期望输出：
 
 | 命令 | 期望 |
 |---|---|
-| `verify_tree.py` | `recorded : 767` / `on disk : 767` / `errors : 0` / `warns : 25` / `VERIFY: PASS` |
+| `verify_tree.py` | `recorded : 769` / `on disk : 769` / `errors : 0` / `warns : 25` / `VERIFY: PASS` |
 | `sync_doc_numbers.py --check` | `sync_doc_numbers: OK (0 pending)`，退出码 0 |
 | `audit_dangling_refs.py` | 扫描 1771 个 `.cfg` + 47 个 `.tcl`，解析 1942 条引用，`unresolved references: 5`（全部无害：3 条注释行、1 个上游占位符、1 条注释路径多写了一级目录） |
 | `check_tcl_syntax.py` | `check_tcl_syntax: OK (1818 files parsed, 0 problems)` |
+| `audit_flash_drivers.py` | `audit_flash_drivers: OK (n=86 compiled drivers, 452 flash bank invocations, 0 missing)`，退出码 0；75 处 `$_CHIPNAME` 动态驱动名只上报、不计缺失 |
 
 上游继承来的文件（`upstream/master` 里同名同内容）不在这些检查的范围内：
 `verify_tree.py` 只核对导入清单里的文件，`sync_doc_numbers.py` 只复算文档里

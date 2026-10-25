@@ -1,11 +1,11 @@
 {
   "upstream": "openocd-org/openocd",
   "upstream_branch": "master",
-  "file_count": 767,
+  "file_count": 769,
   "integrity": {
-    "recorded": 767,
-    "on_disk": 767,
-    "pinned": 767,
+    "recorded": 769,
+    "on_disk": 769,
+    "pinned": 769,
     "note": "recorded == on_disk; pinned == recorded means fully traceable"
   },
   "unresolved_references": {
@@ -54,6 +54,38 @@
       "local_modifications": [
         "content edited in this fork; digest refreshed"
       ]
+    },
+    "src/flash/nor/stm32h5x.c": {
+      "source_repo": "zuyih/openocd",
+      "source_branch": "master",
+      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
+      "source_path": "src/flash/nor/stm32h5x.c",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [
+        "STMicroelectronics/OpenOCD",
+        "galippi/openocd.STM32.Win7",
+        "scmrtos/openocd-scmrtos"
+      ],
+      "sha256": "04f04997fcc01de941e1528291a7af94daae66784d099abf9ba8ad412a5a9f40",
+      "pristine_sha256": "04f04997fcc01de941e1528291a7af94daae66784d099abf9ba8ad412a5a9f40",
+      "local_modifications": []
+    },
+    "src/flash/nor/stm32h5x.h": {
+      "source_repo": "zuyih/openocd",
+      "source_branch": "master",
+      "source_commit": "5422b51c81253e7d212c36775ded24f525f4c783",
+      "source_path": "src/flash/nor/stm32h5x.h",
+      "license": "NOASSERTION",
+      "stars_at_import": 0,
+      "also_present_in": [
+        "STMicroelectronics/OpenOCD",
+        "galippi/openocd.STM32.Win7",
+        "scmrtos/openocd-scmrtos"
+      ],
+      "sha256": "ee3ce3a55c366d75c49b06cc65a3d49c080ab2580af2a4176523c64404675fbf",
+      "pristine_sha256": "ee3ce3a55c366d75c49b06cc65a3d49c080ab2580af2a4176523c64404675fbf",
+      "local_modifications": []
     },
     "src/jtag/drivers/adi_dbg_agent.c": {
       "source_repo": "analogdevicesinc/openocd",
@@ -8392,10 +8424,9 @@
         "galippi/openocd.STM32.Win7",
         "scmrtos/openocd-scmrtos"
       ],
-      "sha256": "bf59d9fe305aa09983ef55ede6b3cf318613c3b9ccfc7b98048f6bce687dbcac",
+      "sha256": "73954af9cd7294c1faadd713bd78651856c8e4fee0821c61877897cc6d94ffd9",
       "pristine_sha256": "73954af9cd7294c1faadd713bd78651856c8e4fee0821c61877897cc6d94ffd9",
       "local_modifications": [
-        "content edited in this fork; digest refreshed",
         "line endings normalised to LF; content byte-identical to the published file"
       ]
     },

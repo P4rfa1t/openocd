@@ -18,11 +18,12 @@
 # Two jobs were added on top of upstream's single package job:
 #
 #  * gate   - runs the repository's own integrity checks: verify_tree.py,
-#             sync_doc_numbers.py --check and check_tcl_syntax.py, so a commit
-#             that leaves the manifest stale, a published number drifting or a
-#             configuration unparsable fails CI instead of rotting. The
-#             dangling-reference scan runs last for the log; it is advisory
-#             because five known-harmless references are expected.
+#             sync_doc_numbers.py --check, check_tcl_syntax.py and
+#             audit_flash_drivers.py, so a commit that leaves the manifest stale,
+#             a published number drifting, a configuration unparsable or a
+#             `flash bank` naming an uncompiled driver fails CI instead of
+#             rotting. The dangling-reference scan runs last for the log; it is
+#             advisory because five known-harmless references are expected.
 #  * release - only for a pushed v* tag: it takes the package job's artifact and
 #             creates the GitHub Release with gh, which is preinstalled on the
 #             runner. The release therefore needs no local gh, no token and no
@@ -193,6 +194,12 @@ jobs:
         run: python3 tools/sync_doc_numbers.py --check
       - name: Parse every shipped TCL configuration
         run: python3 tools/check_tcl_syntax.py
+      - name: Check every flash bank driver name against the compiled NOR table
+        # A config can source every file it names and still abort at run time
+        # because the driver string it hands to `flash bank` was never imported
+        # (stm32h5x did exactly that on 2026-10-25). File-level resolution is
+        # audit_dangling_refs.py's job; this is name-level.
+        run: python3 tools/audit_flash_drivers.py
       - name: Report dangling [find ...] references without failing on the known five
         run: python3 tools/audit_dangling_refs.py
 

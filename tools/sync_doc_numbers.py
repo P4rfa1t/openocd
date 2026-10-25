@@ -217,12 +217,12 @@ N_TIER1_IMPORTED = len(_tier1_imported)
 N_TIER1_ABSENT = len(_tier1 - TREE)
 N_TIER1_REMOVED = len([p for p in _tier1_imported if p not in TREE])
 N_TIER1_PRESENT = N_TIER1_IMPORTED - N_TIER1_REMOVED
-# EXTRA is every provenance entry the survey never marked imported, and such
-# entries can live under any tree: this tree has five under tcl/ and, once a
-# src/ file is imported from the tier-2 candidates without a survey import
-# record, more under src/.  Only the tcl/ ones can close the tier-1 ledger, so
-# this check counts the tcl/ subset; the chain check above keeps using all of
-# them, because it spans the whole tree.
+# EXTRA is every provenance entry the survey never marked imported - this tree
+# has five such files under tcl/ and, since stm32h5x was imported from the
+# tier-2 candidates without a survey import record, two under src/.  Only the
+# tcl/ ones can close the tier-1 ledger, so the published sentences and the
+# ledger check below use the tcl-scoped count; the chain check above uses all
+# of them.
 N_EXTRA_TCL = len([p for p in EXTRA if p.startswith("tcl/")])
 if N_TIER1_PRESENT + N_EXTRA_TCL != N_TCL:
     problem(f"tcl/ does not close: {N_TIER1_PRESENT} tier-1 files in the tree plus "
@@ -454,7 +454,7 @@ EDITS = [
      ' were dropped\non purpose after import and '
      f"{N_TIER1_NEVER}"
      ' never landed. A further '
-     f"{N_EXTRA}"
+     f"{N_EXTRA_TCL}"
      ' files came in as\ndependencies of landed configs without a tier-1 record of their own, leaving\n**'
      f"{N_FILES}"
      ' tracked third-party files** today — '
@@ -464,7 +464,7 @@ EDITS = [
      ' under `src/`. The\nledger closes: '
      f"{N_TIER1_PRESENT}"
      ' + '
-     f"{N_EXTRA}"
+     f"{N_EXTRA_TCL}"
      ' = '
      f"{N_TCL}"
      '.'),
@@ -692,7 +692,7 @@ EDITS = [
      ' 条导入后被有意移除，'
      f"{N_TIER1_NEVER}"
      ' 条从未落地。另有 '
-     f"{N_EXTRA}"
+     f"{N_EXTRA_TCL}"
      ' 个文件作为已进树配置的\n依赖被带了进来（它们没有自己的 tier-1 记录），所以**今天树里的第三方文件是 '
      f"{N_FILES}"
      ' 个** ——\n`tcl/` '
@@ -702,7 +702,7 @@ EDITS = [
      ' 个。账本闭合：'
      f"{N_TIER1_PRESENT}"
      ' + '
-     f"{N_EXTRA}"
+     f"{N_EXTRA_TCL}"
      ' = '
      f"{N_TCL}"
      '。'),
@@ -963,7 +963,7 @@ EDITS = [
      f"{N_JD_TOPC_TP}"
      ' 个是第三方适配器）\n  flash/nor/                   '
      f"{N_FLASH_NOR_TP}"
-     '  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr）'),
+     '  第三方 NOR 驱动（rv32m1、ST-LINK 外部加载器 stldr、stm32h5x 驱动与头文件）'),
     ('docs/02-usage.md',
      '  PROVENANCE.json            785  个文件的来源仓库/分支/commit/SHA-256/许可证',
           '  PROVENANCE.json            '
@@ -999,7 +999,7 @@ EDITS = [
      ' 条导入后被有意移除（见下表最后一行），'
      f"{N_TIER1_NEVER}"
      ' 条从未落地（既不在树里，\n> 也不在 `removed_from_tree` 里）。\n>\n> 另有 '
-     f"{N_EXTRA}"
+     f"{N_EXTRA_TCL}"
      ' 个文件「只作为依赖进来、不在 imported 记录里」\n> （`tcl/chip/motorola/hsb.cfg`、`tcl/cpu/arc/arcompact.tcl`、`tcl/fpga/xilinx-xc3s.cfg`、\n> `tcl/gdb_helper.tcl`、`tcl/target/adspsc58x.cfg`）。所以 `tcl/` 下的第三方文件数是\n> '
      f"{N_TIER1_PRESENT}"
      ' + '
@@ -1107,7 +1107,7 @@ EDITS = [
      f"{PCT_UNLICENSED}"
      '%） | 商用前必须人工审计，见 [03-LICENSES.md](03-LICENSES.md) |\n| 烧录器只有配置没有驱动 | 0 个驱动名 / 0 处引用 | 旧版这里写「6 个驱动名 / 8 处引用」，指的是已经不在树里的 10 个配置文件（见「悬空引用扫描」）；当前树里 '
      f"{N_DANGLING}"
-     ' 条 unresolved 引用全是注释或占位符 |\n| Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |\n| ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；提供另外两个 target 的 `arc32` 家族缺 `arc_mem.c` 接不进来且已在 `7ffeda047` 删除，全树 22 个 ARC 配置现在都只用 `arcv2` |\n| `-chain-position` 旧写法 | '
+     ' 条 unresolved 引用全是注释或占位符。**但这个扫描看不见 `flash bank` 的驱动名** —— 2026-10-25 就漏过一次：`tcl/target/stm32h5x.cfg` 的 `flash bank` 引用了一个从未导入的 `stm32h5x` 驱动，配置能解析、驱动表里没有，直到运行时才报 `flash driver not found`（见「stm32h5x flash 驱动补导」）。这类检查现在由 `tools/audit_flash_drivers.py` 承担 |\n| Synopsys 板级 | 4 个未导入 | 依赖厂商内部构建产物 |\n| ARC 配置只能按 ARCv2 访问 | 5 个 cfg | 原先写 `arc600`/`arc700`/`arc32` 的 `arc_axc001.cfg`、`arc_axc002.cfg`、`snps_axc001.cfg`、`snps_ml509_arc600.cfg`、`snps_ml509_arc700.cfg` 统一改成 `arcv2`；提供另外两个 target 的 `arc32` 家族缺 `arc_mem.c` 接不进来且已在 `7ffeda047` 删除，全树 22 个 ARC 配置现在都只用 `arcv2` |\n| `-chain-position` 旧写法 | '
      f"{N_CPOS_FILES}"
      ' 个文件 / '
      f"{N_CPOS_HITS}"
@@ -1133,7 +1133,7 @@ EDITS = [
      f"{N_XDS100_BOARD}"
      ' 份板级配置 | 这 '
      f"{N_XDS100_BOARD}"
-     ' 份 `tcl/board/ti/*-xds100v2.cfg` / `-xds100v3.cfg` 都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，树里只有 `interface/ftdi/xds100v2.cfg`；补两个三行包装文件即可，无需 C 改动 |\n| 两个非 ASCII 文件名 | 2 个 | `tcl/target/1986ве1т.cfg`、`tcl/target/к1879xб1я.cfg` 是上游自己带的西里尔字母名（与 `upstream/master` 逐字节一致），不是本 fork 引入；Windows 上部分工具链会处理异常 |\n| `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |\n| 扫描漏掉了子目录里的文件 | 已补扫，0 个待接入 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里看不见。`tools/expand_subtrees.py` 已补上；补出来的文件经 API 漂移分析后确认与上游 `src/flash/nor/` 的 85 个驱动重合，本树实际只多 `rv32m1.c` 与 `stldr_driver.c`（均已接入），NOR 目录 87/87 全部在 `Makefile.am` 里 |'),
+     ' 份 `tcl/board/ti/*-xds100v2.cfg` / `-xds100v3.cfg` 都 `source [find interface/ti/xds100v2.cfg]` 或 `ti/xds100v3.cfg`，树里只有 `interface/ftdi/xds100v2.cfg`；补两个三行包装文件即可，无需 C 改动 |\n| 两个非 ASCII 文件名 | 2 个 | `tcl/target/1986ве1т.cfg`、`tcl/target/к1879xб1я.cfg` 是上游自己带的西里尔字母名（与 `upstream/master` 逐字节一致），不是本 fork 引入；Windows 上部分工具链会处理异常 |\n| `.stldr` 加载器二进制不在仓库 | 4 份配置 | ST 发布的专有 blob，需用户自备并放到 `loaders/stldr/`；驱动本身已接入 |\n| 扫描漏掉了子目录里的文件 | 已补扫，0 个待接入 | `/git/trees/<ref>:<subdir>` 对子目录**不递归**，`src/flash/nor/`、`src/target/rvmax/` 这类路径在粗扫里看不见。`tools/expand_subtrees.py` 已补上；补出来的文件经 API 漂移分析后确认与上游 `src/flash/nor/` 的 85 个驱动重合，本树实际只多 `rv32m1.c`、`stldr_driver.c` 与 `stm32h5x.c`（均已接入），NOR 目录 88/88 全部在 `Makefile.am` 里 |'),
     # The dangling-reference count is printed by tools/audit_dangling_refs.py and
     # quoted in three documents.  It was 5 all along; the first draft of these
     # lines said 4, which is exactly the drift this script exists to catch.

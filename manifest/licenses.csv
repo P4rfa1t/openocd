@@ -63,6 +63,8 @@ src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTI
 src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1_du_adv.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
 src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1_tap.h,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
 src/ C 源码（需在构建系统注册）,zephyrproject-rtos/openocd,NOASSERTION,src/target/rv32m1/rv32m1_tap_mohor.c,zephyr-20250213,18de08775561b2b4bf13abb4ce4953c8dd08ad70
+src/ C 源码（需在构建系统注册）,zuyih/openocd,NOASSERTION,src/flash/nor/stm32h5x.c,master,5422b51c81253e7d212c36775ded24f525f4c783
+src/ C 源码（需在构建系统注册）,zuyih/openocd,NOASSERTION,src/flash/nor/stm32h5x.h,master,5422b51c81253e7d212c36775ded24f525f4c783
 src/ C 源码（需在构建系统注册）,zuyih/openocd,NOASSERTION,src/jtag/drivers/cmsis_dap_wch.c,master,5422b51c81253e7d212c36775ded24f525f4c783
 tcl/ 配置（随树直接可用）,AnlogicInfo/al_openocd,NOASSERTION,tcl/target/anlogic/al_fpga.cfg,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4
 tcl/ 配置（随树直接可用）,AnlogicInfo/al_openocd,NOASSERTION,tcl/target/anlogic/init.cfg,master,3580f4327d61a5a8d78462c8caa96ee8e28ca4d4

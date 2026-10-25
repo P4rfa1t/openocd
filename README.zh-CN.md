@@ -51,15 +51,15 @@ git merge upstream/master
 | | 数量 | 说明 |
 |---|---:|---|
 | `tcl/` 脚本文件 | 702 | 686 个 `.cfg` + 16 个 `.tcl`/`.xml`/`.txt`；**零构建改动即生效** |
-| `src/` C 源码 | 65 | 35 个 `.c` 加 30 个 `.h`；**47 个已接入构建**，18 个已就位但未注册 |
+| `src/` C 源码 | 67 | 36 个 `.c` 加 31 个 `.h`；**49 个已接入构建**，18 个已就位但未注册 |
 | 折叠掉的重复副本 | 6910 | 每条路径只保留一个胜出版本 |
 | 与官方重复而剔除 | 7376 | 上游已经收编，或上游已把它挪到子目录 |
 | 判定不可用而排除 | 621 | 构建系统文件、非 C 负载，以及上游已同名的核心内部文件 |
 
 扫描识别出的 1298 条唯一路径里，有 747 条 tier-1 记录被标为已导入，其中 697 条至今
 仍在树里；50 条导入后被有意移除，147 条从未落地。另有 5 个文件作为已进树配置的
-依赖被带了进来（它们没有自己的 tier-1 记录），所以**今天树里的第三方文件是 767 个** ——
-`tcl/` 702 个 + `src/` 65 个。账本闭合：697 + 5 = 702。
+依赖被带了进来（它们没有自己的 tier-1 记录），所以**今天树里的第三方文件是 769 个** ——
+`tcl/` 702 个 + `src/` 67 个。账本闭合：697 + 5 = 702。
 
 没进来的 260 个 C 源码全部需要逐后端移植：它们是某个驱动或架构的完整实现，但
 是照着旧版 OpenOCD 的 API 写的。其中 `src/flash` 最大（125 个），其次是
@@ -76,7 +76,7 @@ TI 板级配置需要的那两个包装文件（`interface/ti/xds100v2.cfg`、`x
 都在 `manifest/consolidated.json` 的 `not_imported` 里逐文件列出（共 407 条）。
 要么是有意删掉的。
 
-另外两组补齐了 **767 个文件**这个数，每个都有自己的来源记录：
+另外两组补齐了 **769 个文件**这个数，每个都有自己的来源记录：
 
 - **21 个文件是作为依赖进来的** —— 一个配置 `source` 另一个配置时，被引用的
   文件跟着一起进树。它们在 manifest 里标为 `imported_as: dependency`。
@@ -85,9 +85,9 @@ TI 板级配置需要的那两个包装文件（`interface/ti/xds100v2.cfg`、`x
   `verify_tree` 报的 25 条 warning 之一。
   `tools/verify_tree.py` 会把这次同名冲突报成一条 warning。
 
-上游共 2203 个文件，本树 3032 个。
+上游共 2203 个文件，本树 3038 个。
 
-**全部 767 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
+**全部 769 个导入文件都钉在它被发布时的那个 commit 上。** 任何一个文件都能回溯
 到具体的 fork 和具体的提交：
 
 ```bash
@@ -115,7 +115,7 @@ TCL_FILES = find $(srcdir)/$(TCL_PATH) -name '*.cfg' -o -name '*.tcl' -o -name '
 
 ### `src/` 文件分两种状态
 
-65 个新 C 源文件与头文件里有 47 个已接入构建 —— 24 个能注册出可用的
+67 个新 C 源文件与头文件里有 49 个已接入构建 —— 25 个能注册出可用的
 `target_type` 或 `adapter_driver` 的 `.c`，加上它们需要的头文件：
 
 | 组 | 后端 | 构建开关 |
@@ -232,8 +232,8 @@ jimtcl、libyaml、zlib）和构建配方都是上游的。
 这个区分是必要的。本仓库的某一版曾对自己的完整性检查报出 543 处不匹配 —— 那
 是因为树在 Windows 上以文本模式重建，每个导入文件都被悄悄存成 CRLF，而 manifest
 描述的是 LF 原件；门禁分不清「被改过」和「在 Windows 上检出的」。现在两边都修好了：
-树里全是 LF，767 个导入文件中有 548 个与发布方摘要逐字节吻合，2 个只剩行尾符差异，
-217 个带真实本地编辑（其中 26 个同时做了行尾符规整）—— 目标 API 移植、
+树里全是 LF，769 个导入文件中有 551 个与发布方摘要逐字节吻合，3 个只剩行尾符差异，
+216 个带真实本地编辑（其中 25 个同时做了行尾符规整）—— 目标 API 移植、
 `source [find ...]` 路径搬移、第三方驱动的修复，以及 `rvmax` / `rv32m1` 两个后端。
 
 被有意移除的文件仍留在 manifest 的 `removed_from_tree` 段里，连同移除原因和
@@ -246,8 +246,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 767
-on disk  : 767
+recorded : 769
+on disk  : 769
 errors   : 0
 warns    : 25
 VERIFY: PASS
@@ -284,6 +284,7 @@ GitHub 解析不出许可证的文件。
 | `tools/fix_target_apis.py`、`tools/fix_driver_apis.py` | 把导入的后端移植过上游 API 漂移 |
 | `tools/fix_relocated_sources.py` | 修复仍指向旧扁平路径的 `source [find ...]` 引用 |
 | `tools/audit_dangling_refs.py` | 只读：找出解析不到任何文件的 `source [find X]` 引用 |
+| `tools/audit_flash_drivers.py` | 只读：找出 `flash bank` 用到的、树里没有编进去的驱动名 |
 | `tools/audit_target_headers.py` | 只读：核对每个第三方 target 的 include 在树里是否成立 |
 | `tools/fetch_third_party.py`、`tools/fetch_missing_tcl.py` | 从钉住的 commit 重新拉取导入文件 |
 | `tools/mine_github.py`、`tools/refine_survey.py`、`tools/resolve_deps.py`、`tools/pin_commits.py` | 扫描阶段：发现、分类、钉住候选仓库 |
@@ -302,7 +303,7 @@ GitHub 解析不出许可证的文件。
 | [`docs/01-inventory.md`](docs/01-inventory.md) | 清单：扫了多少仓库、多少文件、来自哪里 |
 | [`docs/02-usage.md`](docs/02-usage.md) | 使用说明与已知限制清单 |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | 逐文件许可证表 |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 767 个导入文件的机器可读来源记录 |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | 769 个导入文件的机器可读来源记录 |
 
 ---
 
@@ -319,8 +320,8 @@ GitHub 解析不出许可证的文件。
 继承自上游的 OpenOCD 源码为 GPL-2.0-or-later；文档为
 GFDL-1.2-no-invariants-or-later。见 `COPYING` 与 `LICENSES/`。
 
-**导入的第三方文件不在这个总括声明的覆盖范围内。** 767 个文件里，GitHub 解析出
-123 个为 GPL-2.0、5 个为 GPL-2.0-or-later、615 个为 `NOASSERTION`（意思是
+**导入的第三方文件不在这个总括声明的覆盖范围内。** 769 个文件里，GitHub 解析出
+123 个为 GPL-2.0、5 个为 GPL-2.0-or-later、617 个为 `NOASSERTION`（意思是
 *GitHub 判定不出许可证*，不是说它宽松），24 个无法解析。这些 `NOASSERTION` 文件
 自带专有声明，例如 Analog Devices 的 flash 算法，写着 "This software is
 proprietary to Analog Devices, Inc."。
@@ -346,7 +347,7 @@ proprietary to Analog Devices, Inc."。
   来自同一份更早的快照，已删除。可查的权威记录是 `manifest/consolidated.json` 的
   `not_imported`（407 条，逐文件带来源 commit），缺 C 后端的逐文件分析在
   `manifest/nor-driver-scan.json`。
-- **65 个新 C 源文件与头文件里有 18 个没被编译**（11 个 `.c`、7 个 `.h`）。
+- **67 个新 C 源文件与头文件里有 18 个没被编译**（11 个 `.c`、7 个 `.h`）。
   它们带着完整来源记录留在树里，但依赖已经变动的上游 API —— 或者（`21ab67574` 新导入的
   11 个文件，以及 `jtag_tcp.c`、`jtag_esp_remote.c`、`cmsis_dap_wch.c`、`aarch64_coproc_reg.c`）
   依赖上游从未有过的 API。要注册它们，得逐后端移植。

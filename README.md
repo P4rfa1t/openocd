@@ -56,7 +56,7 @@ and stripped of files that are equivalent to what upstream already ships.
 | | count | notes |
 |---|---:|---|
 | `tcl/` script files | 702 | 686 `.cfg` plus 16 `.tcl`/`.xml`/`.txt`; **work with no build changes at all** |
-| `src/` C sources | 65 | 35 `.c` plus 30 `.h`; **47 wired into the build**, 18 staged but not yet registered |
+| `src/` C sources | 67 | 36 `.c` plus 31 `.h`; **49 wired into the build**, 18 staged but not yet registered |
 | duplicate copies collapsed | 6910 | one winner kept per path |
 | files dropped as upstream-equivalent | 7376 | upstream already ships them, or ships them under another path |
 | candidates rejected as unusable | 621 | build-system files, non-C payloads and core internals that exist upstream under the same name |
@@ -65,7 +65,7 @@ Of the 1298 unique paths the survey identified, 747 tier-1 records were
 marked imported and 697 of them are still in the tree today; 50 were dropped
 on purpose after import and 147 never landed. A further 5 files came in as
 dependencies of landed configs without a tier-1 record of their own, leaving
-**767 tracked third-party files** today — 702 under `tcl/` plus 65 under `src/`. The
+**769 tracked third-party files** today — 702 under `tcl/` plus 67 under `src/`. The
 ledger closes: 697 + 5 = 702.
 
 The 260 C sources that did not land all need per-backend porting: they are
@@ -86,7 +86,7 @@ the 3 paths that were already in the tree under a flat-spelling parent, and the
 9 TI board configs that depend on those wrappers are all listed per file
 in `manifest/consolidated.json` under `not_imported` (407 paths in total).
 
-Two more groups complete the count of **767 files**, each with its own provenance
+Two more groups complete the count of **769 files**, each with its own provenance
 entry:
 
 - **21 files pulled in as dependencies** — a config that `source`s another
@@ -97,9 +97,9 @@ entry:
   `tcl/target/adsp-sc58x.cfg`. The tree keeps the third-party version, and the
   collision is one of the 25 warnings `verify_tree` reports.
 
-Upstream ships 2203 files; this tree ships 3032.
+Upstream ships 2203 files; this tree ships 3038.
 
-**All 767 imported files are pinned to the exact commit they came from.** Any
+**All 769 imported files are pinned to the exact commit they came from.** Any
 file can be traced back to the fork and the commit that published it:
 
 ```bash
@@ -130,7 +130,7 @@ exist.
 
 ### The `src/` files are split
 
-47 of the 65 new C sources and headers are wired into the build — 24 `.c`
+49 of the 67 new C sources and headers are wired into the build — 25 `.c`
 files that register a working `target_type` or `adapter_driver`, plus the
 headers they need:
 
@@ -267,9 +267,9 @@ integrity check with 543 mismatches, because the tree had been rebuilt in text
 mode on Windows and every imported file was silently stored with CRLF while the
 manifest described the LF original. The gate could not tell "this was edited"
 from "this was checked out on a Windows host". Both are fixed now: the tree is
-LF everywhere, 548 of the 767 imported files still match their published
-digest byte for byte, 2 are a terminator-only difference, and 217 carry real
-local edits (26 of those also had their terminators normalised) — the target
+LF everywhere, 551 of the 769 imported files still match their published
+digest byte for byte, 3 are a terminator-only difference, and 216 carry real
+local edits (25 of those also had their terminators normalised) — the target
 API ports, the relocated `source [find ...]` paths, the third-party driver fixes
 and the `rvmax` / `rv32m1` backends.
 
@@ -284,8 +284,8 @@ python tools/verify_tree.py
 ```
 
 ```
-recorded : 767
-on disk  : 767
+recorded : 769
+on disk  : 769
 errors   : 0
 warns    : 25
 VERIFY: PASS
@@ -323,6 +323,7 @@ could not resolve.
 | `tools/fix_target_apis.py`, `tools/fix_driver_apis.py` | port the imported backends across upstream API drift |
 | `tools/fix_relocated_sources.py` | repair `source [find ...]` references left pointing at a flat path upstream has since reorganised |
 | `tools/audit_dangling_refs.py` | read-only: find `source [find X]` references that resolve to nothing |
+| `tools/audit_flash_drivers.py` | read-only: find `flash bank` driver names that no compiled NOR driver provides |
 | `tools/audit_target_headers.py` | read-only: check every third-party target's includes against the tree |
 | `tools/fetch_third_party.py`, `tools/fetch_missing_tcl.py` | re-fetch imported files from their pinned commits |
 | `tools/mine_github.py`, `tools/refine_survey.py`, `tools/resolve_deps.py`, `tools/pin_commits.py` | the survey stage: discover, classify and pin the candidate repositories |
@@ -342,7 +343,7 @@ every block it owns so the script can find and replace its own work.
 | [`docs/01-inventory.md`](docs/01-inventory.md) | the inventory: how many repositories, how many files, where they came from |
 | [`docs/02-usage.md`](docs/02-usage.md) | usage notes, and the list of known limitations |
 | [`docs/03-LICENSES.md`](docs/03-LICENSES.md) | per-file license table |
-| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 767 imported files |
+| [`manifest/PROVENANCE.json`](manifest/PROVENANCE.json) | machine-readable provenance for all 769 imported files |
 
 ---
 
@@ -362,7 +363,7 @@ The OpenOCD sources inherited from upstream are GPL-2.0-or-later; the
 documentation is GFDL-1.2-no-invariants-or-later. See `COPYING` and `LICENSES/`.
 
 **The imported third-party files are not covered by that blanket statement.**
-Of 767 files, GitHub resolved 123 as GPL-2.0, 5 as GPL-2.0-or-later, 615 as
+Of 769 files, GitHub resolved 123 as GPL-2.0, 5 as GPL-2.0-or-later, 617 as
 `NOASSERTION` (which means *GitHub could not determine a license* — not that it
 is permissive) and 24 as unresolvable. Some `NOASSERTION` files carry their own
 proprietary notices, for example the Analog Devices flash algorithms, which
@@ -376,7 +377,7 @@ first. The `LICENSE` file spells this out in full.
 
 ## Known limitations
 
-- **18 of the 65 new C sources and headers are not compiled** (11 `.c`,
+- **18 of the 67 new C sources and headers are not compiled** (11 `.c`,
   7 `.h`). They are staged in the tree with their provenance intact, but they
   target APIs that have moved — or, for the 11 files staged in `21ab67574` and for
   `jtag_tcp.c` / `jtag_esp_remote.c` / `cmsis_dap_wch.c` / `aarch64_coproc_reg.c`,

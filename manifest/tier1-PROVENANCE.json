@@ -7606,10 +7606,9 @@
         "galippi/openocd.STM32.Win7",
         "scmrtos/openocd-scmrtos"
       ],
-      "sha256": "bf59d9fe305aa09983ef55ede6b3cf318613c3b9ccfc7b98048f6bce687dbcac",
+      "sha256": "73954af9cd7294c1faadd713bd78651856c8e4fee0821c61877897cc6d94ffd9",
       "pristine_sha256": "73954af9cd7294c1faadd713bd78651856c8e4fee0821c61877897cc6d94ffd9",
       "local_modifications": [
-        "content edited in this fork; digest refreshed",
         "line endings normalised to LF; content byte-identical to the published file"
       ]
     },

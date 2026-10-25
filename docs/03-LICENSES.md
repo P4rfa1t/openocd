@@ -6,12 +6,12 @@
 
 | SPDX | 文件数 |
 |---|---:|
-| NOASSERTION | 615 |
+| NOASSERTION | 617 |
 | GPL-2.0 | 123 |
 | UNRESOLVED | 24 |
 | GPL-2.0-or-later | 5 |
 
-**639 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
+**641 个文件（83%）没有可用的许可证信息**，必须逐个审计文件头部的版权声明后才能商用。
 
 > 已知事实：OpenOCD 上游是 GPL-2.0-or-later，大多数 fork 继承该许可，所以实务上大概率都是 GPL。但 `NOASSERTION` 只表示「GitHub 没能解析出来」，**不等于宽松许可** —— 在少数 fork 里它对应的是专有许可。逐文件清单见 `manifest/licenses.csv` 与下方折叠区。
 
@@ -853,7 +853,7 @@
 
 ## src/ C 源码（需在构建系统注册）
 
-文件数：**65**
+文件数：**67**
 
 | 来源仓库 | SPDX | 文件数 |
 |---|---|---:|
@@ -865,15 +865,15 @@
 | [`aesc-silicon/elements-openocd`](https://github.com/aesc-silicon/elements-openocd) | NOASSERTION(4) | 4 |
 | [`Seneral/riscv-openocd-wch`](https://github.com/Seneral/riscv-openocd-wch) | GPL-2.0-or-later(2), GPL-2.0(1), UNRESOLVED(1) | 4 |
 | [`intel/OpenOCD`](https://github.com/intel/OpenOCD) | GPL-2.0(4) | 4 |
+| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(3) | 3 |
 | [`espressif/openocd-esp32`](https://github.com/espressif/openocd-esp32) | GPL-2.0-or-later(2), NOASSERTION(1) | 3 |
 | [`linux-msm/openocd`](https://github.com/linux-msm/openocd) | NOASSERTION(3) | 3 |
 | [`yottatsa/openocd`](https://github.com/yottatsa/openocd) | NOASSERTION(2) | 2 |
 | [`STMicroelectronics/OpenOCD`](https://github.com/STMicroelectronics/OpenOCD) | GPL-2.0-or-later(1) | 1 |
-| [`zuyih/openocd`](https://github.com/zuyih/openocd) | NOASSERTION(1) | 1 |
 | [`stache3000/openocd-dirtyjtag`](https://github.com/stache3000/openocd-dirtyjtag) | NOASSERTION(1) | 1 |
 | [`kevinmehall/openOCD`](https://github.com/kevinmehall/openOCD) | GPL-2.0(1) | 1 |
 
-### ⚠️ 需人工审计（50 个文件无许可证信息）
+### ⚠️ 需人工审计（52 个文件无许可证信息）
 
 这些文件的来源仓库在 GitHub 上未解析出许可证，商用前必须逐个查看文件头部的版权声明。
 
@@ -981,8 +981,10 @@
 
 </details>
 
-<details><summary><code>zuyih/openocd</code> (1 个)</summary>
+<details><summary><code>zuyih/openocd</code> (3 个)</summary>
 
+- `src/flash/nor/stm32h5x.c`
+- `src/flash/nor/stm32h5x.h`
 - `src/jtag/drivers/cmsis_dap_wch.c`
 
 </details>
