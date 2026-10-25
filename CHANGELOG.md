@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v0.12.0-fork.2
+
+Second tagged release of this fork: a native Linux package next to the Windows
+one, the `stm32h5x` flash driver this tree's own target config was missing, and
+the first hardware-verified flash bank.
+
 ### Fixed
 
 - `stm32h5x`: `tcl/target/stm32h5x.cfg:73` used a flash driver that had never
