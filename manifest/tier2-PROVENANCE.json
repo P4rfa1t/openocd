@@ -33,7 +33,7 @@
       "license": "GPL-2.0-or-later",
       "stars_at_import": 29,
       "also_present_in": [],
-      "sha256": "c3ccb672633fee69cafb882c5b3ea77ac5672f16b348fd960f9586dc88f450fa",
+      "sha256": "e5aeac65f36ecddcac0fb535b612b91374044af791a1cc473a89e2c310322bb9",
       "pristine_sha256": "2ef5869423f23490f37b503f712563c13c6c400aab4ce07a300dd17099c6e92b",
       "local_modifications": [
         "content edited in this fork; digest refreshed"
