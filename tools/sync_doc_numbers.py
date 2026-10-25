@@ -217,9 +217,16 @@ N_TIER1_IMPORTED = len(_tier1_imported)
 N_TIER1_ABSENT = len(_tier1 - TREE)
 N_TIER1_REMOVED = len([p for p in _tier1_imported if p not in TREE])
 N_TIER1_PRESENT = N_TIER1_IMPORTED - N_TIER1_REMOVED
-if N_TIER1_PRESENT + N_EXTRA != N_TCL:
+# EXTRA is every provenance entry the survey never marked imported, and such
+# entries can live under any tree: this tree has five under tcl/ and, once a
+# src/ file is imported from the tier-2 candidates without a survey import
+# record, more under src/.  Only the tcl/ ones can close the tier-1 ledger, so
+# this check counts the tcl/ subset; the chain check above keeps using all of
+# them, because it spans the whole tree.
+N_EXTRA_TCL = len([p for p in EXTRA if p.startswith("tcl/")])
+if N_TIER1_PRESENT + N_EXTRA_TCL != N_TCL:
     problem(f"tcl/ does not close: {N_TIER1_PRESENT} tier-1 files in the tree plus "
-            f"{N_EXTRA} dependency files != {N_TCL} tcl/ provenance entries")
+            f"{N_EXTRA_TCL} dependency files != {N_TCL} tcl/ provenance entries")
 
 
 def is_mangled_name(path):
