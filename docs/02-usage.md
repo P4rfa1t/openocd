@@ -110,12 +110,19 @@ TCL_FILES = find $(srcdir)/tcl -name '*.cfg' -o -name '*.tcl' -o -name '*.txt'
 `--disable-third-party-targets` 会把它们从构建里完全拿掉（`src/target/Makefile.am`
 整块包在 `if TARGETS_ALL` 里，所以是真的关，不是摆设）。
 
-**预编译 Windows 包**：每次 push 由 GitHub Actions 打出
-`openocd-<tag>-x86_64-w64-mingw32.tar.gz`（含 openocd.exe、所需 DLL 与
-`share/openocd/scripts` 全套 TCL 配置），从 Actions 页面的 artifact 下载即可。
-构建流程是上游自带的 `contrib/cross-build.sh`，本仓库额外编了 libyaml 与 zlib
-这两个静态依赖，以及 `--enable-dirtyjtag --enable-adi-ice1000 --enable-adi-ice1500
---enable-adi-dbgagent --enable-adi-usbmux` 一组驱动开关。
+**预编译包**：每次 push 由 GitHub Actions 打出两份，都在 Actions 页面的 artifact 里下载。
+
+- Windows：`openocd-<tag>-x86_64-w64-mingw32.tar.gz`（含 openocd.exe、所需 DLL 与
+  `share/openocd/scripts` 全套 TCL 配置）。构建流程是上游自带的 `contrib/cross-build.sh`，
+  本仓库额外编了 libyaml 与 zlib 这两个静态依赖，以及 `--enable-dirtyjtag
+  --enable-adi-ice1000 --enable-adi-ice1500 --enable-adi-dbgagent --enable-adi-usbmux`
+  一组驱动开关。
+- Linux：`openocd-<tag>-x86_64-linux-gnu.tar.gz`（runner 上原生编译，含二进制、
+  `lib/` 里除 glibc 以外的全部动态库与 `share/openocd/scripts`；二进制带
+  `$ORIGIN/../lib` 的 rpath，所以解包即可运行）。构建跑在 `ubuntu-latest`
+  （glibc 2.39），成品适用于 glibc ≥ 2.39 的发行版。驱动开关与 Windows 相同，只少
+  `--enable-adi-usbmux` —— 它在 `configure.ac` 里被 `x$is_win32 = xyes` 挡住，
+  Linux 上打开会直接报错。上游没有 Linux job，这份是本 fork 加的。
 
 Windows 手动编译见上游 `README.Windows.md`（本仓库未改动）。
 

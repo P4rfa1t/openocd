@@ -234,13 +234,17 @@ removes the group that needs it; `configure` never fails because of them.
 
 Windows: see upstream's `README.Windows.md`. This fork does not change it.
 
-### CI: prebuilt Windows package
+### CI: prebuilt packages
 
-`.github/workflows/snapshot.yml` cross-compiles an x86_64 Windows package with
-MinGW and uploads it as a workflow artifact. It is upstream's own workflow with
-the target triplet and the release-publishing step adjusted; the dependency
-list (libusb1, hidapi, libftdi, capstone, libjaylink, jimtcl, libyaml, zlib)
-and the build recipe are upstream's.
+`.github/workflows/snapshot.yml` builds two packages and uploads them as workflow
+artifacts. The Windows one is upstream's own job: an x86_64 MinGW cross build
+whose dependency list (libusb1, hidapi, libftdi, capstone, libjaylink, jimtcl,
+libyaml, zlib) and build recipe are upstream's, unchanged. The Linux one is this
+fork's addition — upstream has no Linux job at all — and builds natively with the
+runner's toolchain against the distribution's `-dev` packages, then copies the
+non-glibc libraries it linked against into the package, so the unpacked tree runs
+on a host that has nothing but the C library. It is built on `ubuntu-latest`
+(glibc 2.39), so the binary wants glibc ≥ 2.39 — Ubuntu 24.04 and newer.
 
 ---
 
@@ -352,8 +356,9 @@ every block it owns so the script can find and replace its own work.
 Fork releases are tagged `v<upstream>-fork.<n>` — an upstream `developer` point
 release plus a fork sequence number — and built by
 [`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml). Pushing a tag
-produces `openocd-<tag>-x86_64-w64-mingw32.tar.gz` and the Release itself is
-created by CI with `gh`; nothing is published from a local machine. See
+produces `openocd-<tag>-x86_64-w64-mingw32.tar.gz` and
+`openocd-<tag>-x86_64-linux-gnu.tar.gz`, and the Release itself is created by CI
+with `gh`; nothing is published from a local machine. See
 [`docs/04-release.md`](docs/04-release.md) for the process and for the checklist
 to run before the next tag, and [`CHANGELOG.md`](CHANGELOG.md) for what changed.
 

@@ -204,12 +204,14 @@ configure 不会因此失败：
 
 Windows 见上游的 `README.Windows.md`，本 fork 没有改动它。
 
-### CI：预编译的 Windows 包
+### CI：预编译的包
 
-`.github/workflows/snapshot.yml` 用 MinGW 交叉编译 x86_64 Windows 包并作为
-workflow artifact 上传。它就是上游自己的 workflow，只改了目标三元组和去掉
-发布 Release 那一步；依赖清单（libusb1、hidapi、libftdi、capstone、libjaylink、
-jimtcl、libyaml、zlib）和构建配方都是上游的。
+`.github/workflows/snapshot.yml` 构建两个包并作为 workflow artifact 上传。Windows
+包走上游自己的 job：MinGW 交叉编译，依赖清单（libusb1、hidapi、libftdi、capstone、
+libjaylink、jimtcl、libyaml、zlib）和构建配方都是上游原样。Linux 包是本 fork 加的
+—— 上游没有 Linux job —— 它在 runner 上原生编译、链发行版的 `-dev` 包，并把除
+C 运行库以外的动态库一并打进包里，所以解包后在只有 glibc 的机器上也能跑。构建跑在
+`ubuntu-latest`（glibc 2.39），因此成品适用于 glibc ≥ 2.39 的发行版（Ubuntu 24.04 起）。
 
 ---
 
@@ -311,7 +313,8 @@ GitHub 解析不出许可证的文件。
 
 本 fork 的发布 tag 形如 `v<上游版本>-fork.<n>` —— 上游 `developer` 线上的一个点版本
 加 fork 序号 —— 由 [`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml)
-构建。推一个 tag 会产出 `openocd-<tag>-x86_64-w64-mingw32.tar.gz`，Release 本体由 CI
+构建。推一个 tag 会产出 `openocd-<tag>-x86_64-w64-mingw32.tar.gz` 与
+`openocd-<tag>-x86_64-linux-gnu.tar.gz` 两个产物，Release 本体由 CI
 用 `gh` 生成；本机不发布任何东西。流程与打下一个 tag 前必须跑的清单见
 [`docs/04-release.md`](docs/04-release.md)，改了什么见 [`CHANGELOG.md`](CHANGELOG.md)。
 

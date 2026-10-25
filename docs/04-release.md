@@ -10,6 +10,13 @@
 - 标签一旦推送就不再移动：每个 `v*` 标签在 GitHub Release 上必须始终可取。
 - 打包流水线只在推送 `v*` 标签时才创建 Release
   （`.github/workflows/snapshot.yml` 的 `release` job，`if: startsWith(github.ref, 'refs/tags/v')`）。
+- 两个 `package` job 各自出一份产物，`release` job 等的是两个：
+  `package`（MinGW 交叉编译）→ `openocd-<tag>-x86_64-w64-mingw32.tar.gz`；
+  `package-linux`（runner 上原生编译）→ `openocd-<tag>-x86_64-linux-gnu.tar.gz`
+  —— Linux 包把除 glibc 以外的动态库一起打进 `lib/`，二进制带
+  `$ORIGIN/../lib` 的 rpath，解包后在只有 glibc 的机器上直接可用。构建跑在
+  `ubuntu-latest`（glibc 2.39），成品适用于 glibc ≥ 2.39 的发行版。上游没有
+  Linux job，这一份是本 fork 加的。
 - **标签发布前必须先在 `CHANGELOG.md` 写好 `## <标签>` 那一节**：`release` job 检出标签树后，
   取这一节作为 Release 正文，再把产物的大小与 sha256 附在末尾，然后 `gh release edit` 覆盖
   `gh release create --generate-notes` 生成的空正文。标签在 CHANGELOG 里找不到对应节时
@@ -90,7 +97,7 @@ python3 tools/audit_flash_drivers.py
 
 ## 6. 本地没有发布环境时的替代验证
 
-本地没有 `gcc`/`make`/`autoconf` 时，编译只能由 CI 的 `package` job 覆盖；本地可以做的是
+本地没有 `gcc`/`make`/`autoconf` 时，编译只能由 CI 的两个 `package` job 覆盖；本地可以做的是
 静态接线检查：
 
 ```bash

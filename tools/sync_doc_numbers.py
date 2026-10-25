@@ -647,7 +647,7 @@ EDITS = [
      ' repositories'),
     ('README.md',
      '## License',
-     '## Releases\n\nFork releases are tagged `v<upstream>-fork.<n>` — an upstream `developer` point\nrelease plus a fork sequence number — and built by\n[`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml). Pushing a tag\nproduces `openocd-<tag>-x86_64-w64-mingw32.tar.gz` and the Release itself is\ncreated by CI with `gh`; nothing is published from a local machine. See\n[`docs/04-release.md`](docs/04-release.md) for the process and for the checklist\nto run before the next tag, and [`CHANGELOG.md`](CHANGELOG.md) for what changed.\n\n## License'),
+     '## Releases\n\nFork releases are tagged `v<upstream>-fork.<n>` — an upstream `developer` point\nrelease plus a fork sequence number — and built by\n[`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml). Pushing a tag\nproduces `openocd-<tag>-x86_64-w64-mingw32.tar.gz` and\n`openocd-<tag>-x86_64-linux-gnu.tar.gz`, and the Release itself is created by CI\nwith `gh`; nothing is published from a local machine. See\n[`docs/04-release.md`](docs/04-release.md) for the process and for the checklist\nto run before the next tag, and [`CHANGELOG.md`](CHANGELOG.md) for what changed.\n\n## License'),
     ('README.zh-CN.md',
      '扫描了 688 个候选仓库 —— 499 个上游 fork + 搜索命中的 189 个独立仓 —— 跨仓',
           '扫描了 '
@@ -880,7 +880,7 @@ EDITS = [
      ' 个别人的仓库'),
     ('README.zh-CN.md',
      '## 许可',
-     '## 发布\n\n本 fork 的发布 tag 形如 `v<上游版本>-fork.<n>` —— 上游 `developer` 线上的一个点版本\n加 fork 序号 —— 由 [`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml)\n构建。推一个 tag 会产出 `openocd-<tag>-x86_64-w64-mingw32.tar.gz`，Release 本体由 CI\n用 `gh` 生成；本机不发布任何东西。流程与打下一个 tag 前必须跑的清单见\n[`docs/04-release.md`](docs/04-release.md)，改了什么见 [`CHANGELOG.md`](CHANGELOG.md)。\n\n## 许可'),
+     '## 发布\n\n本 fork 的发布 tag 形如 `v<上游版本>-fork.<n>` —— 上游 `developer` 线上的一个点版本\n加 fork 序号 —— 由 [`.github/workflows/snapshot.yml`](.github/workflows/snapshot.yml)\n构建。推一个 tag 会产出 `openocd-<tag>-x86_64-w64-mingw32.tar.gz` 与\n`openocd-<tag>-x86_64-linux-gnu.tar.gz` 两个产物，Release 本体由 CI\n用 `gh` 生成；本机不发布任何东西。流程与打下一个 tag 前必须跑的清单见\n[`docs/04-release.md`](docs/04-release.md)，改了什么见 [`CHANGELOG.md`](CHANGELOG.md)。\n\n## 许可'),
     ('docs/00-findings.md',
      '**2199 个 blob**',
           '**'

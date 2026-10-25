@@ -24,6 +24,11 @@
 - The `tcl/` ledger closure in `tools/sync_doc_numbers.py` now counts the
   dependency files that are actually under `tcl/` instead of extras from every
   tree, so a `src/` addition no longer breaks the `tcl/` identity.
+- Six `calloc(sizeof(T), 1)` call sites in `src/jtag/drivers/linuxgpiod.c` and
+  `src/flash/nor/stldr_driver.c` became `calloc(1, sizeof(T))`. gcc ≥ 14 turns
+  the old argument order into `-Werror=calloc-transposed-args`, which is what
+  stopped the first native Linux build; both files now compile warning-free under
+  `-Werror` again (the mingw cross build had the same landmine waiting).
 
 ### Added
 
@@ -31,6 +36,14 @@
   `src/flash/nor/drivers.c` and `src/flash/nor/*.c`, then scans
   `tcl/**/*.{cfg,tcl}` for `flash bank` driver references. A config-only driver
   reference now fails the gate instead of the user's session.
+- Linux package job in the same workflow (`package-linux`, artifact
+  `openocd-linux`): native x86_64 build against the current runner's `-dev`
+  packages, installed into one relocatable tree, published with every non-glibc
+  library it linked against bundled in `lib/` and an `$ORIGIN/../lib` rpath, so
+  the unpacked tree runs on a host that has nothing but the C library. Built on
+  `ubuntu-latest` (glibc 2.39), so the binary wants glibc ≥ 2.39. Upstream has no
+  Linux job. The `release` job now waits for both package jobs and attaches both
+  archives to a `v*` tag.
 
 ## v0.12.0-fork.1
 
@@ -46,7 +59,7 @@ First tagged release of this fork. Everything below is measured against the tree
 - Windows package pipeline (`.github/workflows/snapshot.yml`, derived from
   upstream's workflow): `package` builds the x86_64 mingw cross build, `gate`
   runs `tools/verify_tree.py` and `tools/sync_doc_numbers.py --check`, `release`
-  attaches the artifact to a `v*` tag with `gh`.
+  attaches both artifacts to a `v*` tag with `gh`.
 - Audit trail: `docs/00-findings.md`, `docs/01-inventory.md`, `docs/02-usage.md`,
   `docs/03-LICENSES.md`, `docs/04-release.md`.
 

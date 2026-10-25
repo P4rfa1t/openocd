@@ -15,8 +15,11 @@
 #  * trigger is workflow_dispatch + push instead of upstream's bare `on: push`,
 #    so a run can be started by hand without a commit.
 #
-# Two jobs were added on top of upstream's single package job:
+# Three jobs were added or reshaped on top of upstream's package job:
 #
+#  * package-linux - a native x86_64 Linux build of the same feature set,
+#             installed into one relocatable tree and published as
+#             openocd-linux. Upstream has no Linux job at all.
 #  * gate   - runs the repository's own integrity checks: verify_tree.py,
 #             sync_doc_numbers.py --check, check_tcl_syntax.py and
 #             audit_flash_drivers.py, so a commit that leaves the manifest stale,
@@ -24,13 +27,16 @@
 #             `flash bank` naming an uncompiled driver fails CI instead of
 #             rotting. The dangling-reference scan runs last for the log; it is
 #             advisory because five known-harmless references are expected.
-#  * release - only for a pushed v* tag: it takes the package job's artifact and
-#             creates the GitHub Release with gh, which is preinstalled on the
-#             runner. The release therefore needs no local gh, no token and no
-#             manual upload.
+#  * release - only for a pushed v* tag: it takes both package jobs' artifacts
+#             and creates the GitHub Release with gh, which is preinstalled on
+#             the runner. The release therefore needs no local gh, no token and
+#             no manual upload.
 #
 # Everything else - the download list, all versions, every *_CONFIG, the
 # cross-build.sh invocation and the DLL fix-ups - is upstream's, unchanged.
+# The Linux job is the one place that does not reuse upstream's recipe, because
+# upstream has none to reuse: it links against the distribution's -dev packages
+# and copies the non-glibc libraries into the package itself.
 
 on:
   push:
@@ -171,6 +177,135 @@ jobs:
           name: openocd-windows
           path: ${{ env.ARTIFACT_PATH }}
 
+  # Upstream has no Linux job: its release only ever carried the Windows cross
+  # build. This one builds natively with the runner's own x86_64 toolchain and
+  # ships the same feature set, except for adi-usbmux - configure.ac guards that
+  # adapter with "x$is_win32 = xyes" and aborts configure everywhere else.
+  package-linux:
+    runs-on: [ubuntu-latest]
+    env:
+      PREFIX: /opt/openocd
+      # Not libjim-dev: the package would then depend on the distributor's
+      # version and extension set. Built from the same tarball with the same
+      # options as the mingw job, so both packages carry one jimtcl.
+      JIMTCL_PREFIX: ${{ runner.temp }}/jimtcl-install
+    steps:
+      - name: Install needed packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y autotools-dev autoconf automake libtool pkg-config texinfo \
+            libusb-1.0-0-dev libhidapi-dev libftdi1-dev libjaylink-dev libyaml-dev \
+            zlib1g-dev libcapstone-dev libgpiod-dev patchelf
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - run: ./bootstrap
+      - name: Build jimtcl with the extensions the windows package uses
+        # Upstream would take jimtcl from the submodule through
+        # --enable-internal-jimtcl, but this fork does not register that gitlink
+        # in its index, so a checkout has an empty jimtcl/ directory. The
+        # installed prefix is found through PKG_CONFIG_PATH instead.
+        env:
+          JIMTCL_VER: 0.83
+        run: |
+          mkdir -p $RUNNER_TEMP/dl && cd $RUNNER_TEMP/dl
+          # -O: github.com redirects to codeload, whose last path element is the
+          # version, so letting wget pick the name would write a file called 0.83.
+          wget -O jimtcl-${JIMTCL_VER}.tar.gz "https://github.com/msteveb/jimtcl/archive/refs/tags/${JIMTCL_VER}.tar.gz"
+          tar -xzf jimtcl-${JIMTCL_VER}.tar.gz
+          cd jimtcl-${JIMTCL_VER}
+          ./configure --prefix=$JIMTCL_PREFIX --with-ext=json --minimal --disable-ssl
+          make -j $(nproc)
+          make install
+          echo "PKG_CONFIG_PATH=$JIMTCL_PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}" >> $GITHUB_ENV
+      - name: Configure and build OpenOCD
+        env:
+          # Same adapter set as the windows package minus adi-usbmux; the
+          # libgpiod/sysfsgpio adapters switch themselves on when their headers
+          # are present, which they are.
+          OPENOCD_CONFIG: --enable-dirtyjtag --enable-adi-ice1000 --enable-adi-ice1500 --enable-adi-dbgagent --enable-adi-mpdbgagent
+        run: |
+          ./configure $OPENOCD_CONFIG --prefix=$PREFIX
+          make -j $(nproc)
+      - name: Stage the install tree and bundle the runtime libraries
+        run: |
+          set -euo pipefail
+          make install DESTDIR=$PWD/stage
+          cd stage$PREFIX
+          # The rpath is set after the install rather than through configure's
+          # LDFLAGS: libtool re-evaluates the flags, so $ORIGIN survives at most
+          # one escaping layer and the recorded RUNPATH came out as "RIGIN/../lib"
+          # and then as "/../lib". patchelf takes the string verbatim, and without
+          # the rpath the libraries copied below would never be found.
+          patchelf --set-rpath '$ORIGIN/../lib' bin/openocd
+          mkdir -p lib
+          # Everything ldd resolves outside glibc travels with the package;
+          # glibc and the loader stay the host's. libjim is only in the build
+          # prefix, which is not in the runner's search path.
+          LD_LIBRARY_PATH="$JIMTCL_PREFIX/lib" ldd bin/openocd > /tmp/ldd.txt
+          cat /tmp/ldd.txt
+          if grep -q "not found" /tmp/ldd.txt; then
+            echo "the freshly staged binary already has unresolved libraries" >&2
+            exit 1
+          fi
+          LD_LIBRARY_PATH="$JIMTCL_PREFIX/lib" ldd bin/openocd | awk '/=>/ {print $3}' | grep '^/' | while read lib; do
+            case "$(basename "$lib")" in
+              libc.so*|libm.so*|libpthread.so*|libdl.so*|librt.so*|ld-linux*) ;;
+              *) cp -L "$lib" lib/ ;;
+            esac
+          done || true
+          cp -L $JIMTCL_PREFIX/lib/libjim.so* lib/ 2>/dev/null || true
+          # Without the rpath the copies above would never be found.
+          readelf -d bin/openocd | grep -qiE '(runpath|rpath).*\$ORIGIN/\.\./lib' || {
+            echo "openocd carries no \$ORIGIN/../lib rpath; the bundled libraries would be ignored" >&2
+            readelf -d bin/openocd | grep -i 'path'
+            exit 1
+          }
+          # And now the staged tree has to resolve everything by itself.
+          ldd bin/openocd > /tmp/ldd-staged.txt
+          cat /tmp/ldd-staged.txt
+          if grep -q "not found" /tmp/ldd-staged.txt; then
+            echo "the staged tree is not self-contained" >&2
+            exit 1
+          fi
+      - name: Smoke-test the staged tree
+        # The stm32h5x configuration is the regression this fork imported that
+        # driver for: without it, sourcing the file aborts with "flash driver
+        # 'stm32h5x' not found", so this is a real acceptance check rather than
+        # a --version print. The dummy adapter stands in for a probe, which a
+        # runner does not have.
+        run: |
+          set -euo pipefail
+          P=$PWD/stage$PREFIX
+          $P/bin/openocd --version
+          run="$($P/bin/openocd -s $P/share/openocd/scripts -c "adapter driver dummy" -f target/stm32h5x.cfg -c shutdown 2>&1 || true)"
+          printf '%s\n' "$run"
+          case "$run" in
+            *"flash driver 'stm32h5x' not found"*)
+              echo "the staged openocd does not provide the stm32h5x driver" >&2
+              exit 1 ;;
+          esac
+          printf '%s\n' "$run" | grep -q "shutdown command invoked"
+          count=$(strings $P/bin/openocd | grep -c stm32h5x || true)
+          echo "stm32h5x strings in the binary: $count"
+          [ "$count" -gt 0 ]
+      - name: Prepare the artifact
+        run: |
+          set -euo pipefail
+          # check if there is tag pointing at HEAD, otherwise take the HEAD SHA-1 as OPENOCD_TAG
+          OPENOCD_TAG="$(git tag --points-at HEAD)"
+          if [ -z "$OPENOCD_TAG" ]; then OPENOCD_TAG="$(git rev-parse --short HEAD)"; fi
+          HOST="$(gcc -dumpmachine)"
+          ARTIFACT="openocd-${OPENOCD_TAG}-${HOST}.tar.gz"
+          ARTIFACT_DIR=$PWD
+          # Same layout as the windows package: bin/, lib/ and share/ at the root.
+          ( cd "$ARTIFACT_DIR/stage$PREFIX" && tar -czf "$ARTIFACT_DIR/$ARTIFACT" . )
+          echo "ARTIFACT_PATH=$ARTIFACT_DIR/$ARTIFACT" >> $GITHUB_ENV
+      - name: Publish OpenOCD packaged for linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: openocd-linux
+          path: ${{ env.ARTIFACT_PATH }}
+
   # The repository ships its own gates; run them here so a stale manifest or a
   # stale published number is a CI failure rather than a silent regression.
   gate:
@@ -204,7 +339,7 @@ jobs:
         run: python3 tools/audit_dangling_refs.py
 
   release:
-    needs: package
+    needs: [package, package-linux]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: [ubuntu-latest]
     permissions:
@@ -216,10 +351,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Download the windows package
+      - name: Download the packages
         uses: actions/download-artifact@v4
         with:
-          name: openocd-windows
+          # No name: both packages are wanted, and each lands in dist/<artifact
+          # name>/. Their file names already carry the target triplet.
+          path: dist
       - name: Create or update the GitHub Release for this tag
         env:
           GH_TOKEN: ${{ github.token }}
@@ -227,12 +364,12 @@ jobs:
           # explicitly rather than relying on a git remote for discovery.
           GH_REPO: ${{ github.repository }}
         run: |
-          ls -l
+          ls -l dist/*/
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            # A re-run of the same tag: replace the asset instead of failing.
-            gh release upload "$GITHUB_REF_NAME" ./openocd-*.tar.gz --clobber
+            # A re-run of the same tag: replace the assets instead of failing.
+            gh release upload "$GITHUB_REF_NAME" ./dist/*/openocd-*.tar.gz --clobber
           else
-            gh release create "$GITHUB_REF_NAME" ./openocd-*.tar.gz \
+            gh release create "$GITHUB_REF_NAME" ./dist/*/openocd-*.tar.gz \
               --title "$GITHUB_REF_NAME" \
               --verify-tag \
               --generate-notes
@@ -255,15 +392,15 @@ jobs:
             END { if (!found) exit 3 }
           ' CHANGELOG.md > /tmp/changelog-section.md
           {
-            echo "Windows x86_64 (mingw-w64) cross build, produced by the package job of this tag."
+            echo "Windows x86_64 (mingw-w64) cross build and native Linux x86_64 build, produced by the package jobs of this tag."
             echo
             cat /tmp/changelog-section.md
             echo
-            echo "### Asset"
+            echo "### Assets"
             echo
             echo '```'
-            ls -l ./openocd-*.tar.gz
-            sha256sum ./openocd-*.tar.gz
+            ls -l ./dist/*/openocd-*.tar.gz
+            sha256sum ./dist/*/openocd-*.tar.gz
             echo '```'
             echo
             echo "Release process and post-release checks: docs/04-release.md."
