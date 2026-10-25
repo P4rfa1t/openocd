@@ -54,7 +54,12 @@ jobs:
       - name: Install needed packages
         run: |
           sudo apt-get update
-          sudo apt-get install autotools-dev autoconf automake libtool pkg-config cmake texinfo texlive g++-mingw-w64-x86-64
+          # -y plus a non-interactive frontend: without them apt can sit on a
+          # prompt of a daemon the runner image grew, which is how the
+          # v0.12.0-fork.2 run spent 45 minutes inside this one step. The linux
+          # job below already installed this way.
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            autotools-dev autoconf automake libtool pkg-config cmake texinfo texlive g++-mingw-w64-x86-64
       - name: Checkout Code
         uses: actions/checkout@v4
         # Upstream does not pass --recursive here; it builds its own jimtcl from
