@@ -185,10 +185,6 @@ jobs:
     runs-on: [ubuntu-latest]
     env:
       PREFIX: /opt/openocd
-      # Not libjim-dev: the package would then depend on the distributor's
-      # version and extension set. Built from the same tarball with the same
-      # options as the mingw job, so both packages carry one jimtcl.
-      JIMTCL_PREFIX: ${{ runner.temp }}/jimtcl-install
     steps:
       - name: Install needed packages
         run: |
@@ -204,9 +200,16 @@ jobs:
         # --enable-internal-jimtcl, but this fork does not register that gitlink
         # in its index, so a checkout has an empty jimtcl/ directory. The
         # installed prefix is found through PKG_CONFIG_PATH instead.
+        # Not libjim-dev: the package would then depend on the distributor's
+        # version and extension set. Built from the same tarball with the same
+        # options as the mingw job, so both packages carry one jimtcl.
+        # JIMTCL_PREFIX cannot live in the job-level env: that block has no
+        # runner context, so it is exported here and passed on through $GITHUB_ENV.
         env:
           JIMTCL_VER: 0.83
         run: |
+          export JIMTCL_PREFIX="$RUNNER_TEMP/jimtcl-install"
+          echo "JIMTCL_PREFIX=$JIMTCL_PREFIX" >> $GITHUB_ENV
           mkdir -p $RUNNER_TEMP/dl && cd $RUNNER_TEMP/dl
           # -O: github.com redirects to codeload, whose last path element is the
           # version, so letting wget pick the name would write a file called 0.83.
