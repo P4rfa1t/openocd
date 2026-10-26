@@ -52,14 +52,29 @@ jobs:
       BUILD_DIR: ../build
     steps:
       - name: Install needed packages
+        # Bounded on purpose. This step has twice eaten the whole job: once on a
+        # prompt (fixed with -y), and once on a stalling mirror - see the texlive
+        # note below. A timeout turns the next such stall into a fast, named
+        # failure instead of a 45-minute silence.
+        timeout-minutes: 15
         run: |
-          sudo apt-get update
+          sudo apt-get update -o Acquire::Retries=3 -o Acquire::http::Timeout=30
           # -y plus a non-interactive frontend: without them apt can sit on a
           # prompt of a daemon the runner image grew, which is how the
           # v0.12.0-fork.2 run spent 45 minutes inside this one step. The linux
           # job below already installed this way.
+          #
+          # No texlive, deliberately. It is a 299 MB metapackage (1.2 GB
+          # installed) that drags in ghostscript, dvisvgm and a pile of font
+          # packages, and nothing here builds a PDF: `make all` needs only
+          # makeinfo, which is in texinfo, and doc/openocd.1 is a checked-in
+          # file. The doxygen PDF target is what would want LaTeX, and this job
+          # never runs it. The 2026-10-27 run sat for 30 minutes inside this
+          # step retrying fonts-urw-base35 from the Azure mirror; the linux job,
+          # which never asked for texlive, finished its install in seconds.
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
-            autotools-dev autoconf automake libtool pkg-config cmake texinfo texlive g++-mingw-w64-x86-64
+            -o Acquire::Retries=3 -o Acquire::http::Timeout=30 \
+            autotools-dev autoconf automake libtool pkg-config cmake texinfo g++-mingw-w64-x86-64
       - name: Checkout Code
         uses: actions/checkout@v4
         # Upstream does not pass --recursive here; it builds its own jimtcl from
@@ -192,9 +207,12 @@ jobs:
       PREFIX: /opt/openocd
     steps:
       - name: Install needed packages
+        timeout-minutes: 15
         run: |
-          sudo apt-get update
-          sudo apt-get install -y autotools-dev autoconf automake libtool pkg-config texinfo \
+          sudo apt-get update -o Acquire::Retries=3 -o Acquire::http::Timeout=30
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            -o Acquire::Retries=3 -o Acquire::http::Timeout=30 \
+            autotools-dev autoconf automake libtool pkg-config texinfo \
             libusb-1.0-0-dev libhidapi-dev libftdi1-dev libjaylink-dev libyaml-dev \
             zlib1g-dev libcapstone-dev libgpiod-dev patchelf
       - name: Checkout Code

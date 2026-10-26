@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+### Fixed
+
+- The `package` job no longer installs `texlive`. It is a 299 MB metapackage
+  (1.2 GB installed) pulling in ghostscript, dvisvgm and a dozen font packages,
+  and nothing in this workflow builds a PDF: `make all` needs only `makeinfo`
+  from `texinfo`, and `doc/openocd.1` is a checked-in file. The 2026-10-27 run
+  spent 30 minutes inside the install step retrying `fonts-urw-base35` from the
+  Azure mirror, which is why the whole job looked hung; the `package-linux` job,
+  which never asked for texlive, finished its install in seconds on the same
+  runner. Both install steps now also carry `timeout-minutes: 15` and
+  `Acquire::Retries=3 -o Acquire::http::Timeout=30`, so a stalling mirror fails
+  fast and by name instead of silently eating the job.
+
 ## v0.12.0-fork.2
 
 Second tagged release of this fork: a native Linux package next to the Windows
